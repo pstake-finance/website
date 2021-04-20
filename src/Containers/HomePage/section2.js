@@ -1,7 +1,7 @@
 import React from 'react';
-import feactureone from '../../../assets/feacture-1.svg';
-import feacturetwo from '../../../assets/feacture-2.svg';
-import feacturethree from '../../../assets/feacture-3.svg';
+import feactureone from '../../assets/feacture-1.svg';
+import feacturetwo from '../../assets/feacture-2.svg';
+import feacturethree from '../../assets/feacture-3.svg';
 const sectionTwo = () => {
     return (
         <React.Fragment>

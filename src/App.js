@@ -4,8 +4,8 @@ import offline from "./assets/offline.svg";
 import './css/style.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../src/pages/components/header';
-import RouteNotFound from '../src/pages/components/RouteNotFound';
+import Header from './components/header';
+import RouteNotFound from './components/RouteNotFound';
 import HomePage from './pages/homePage';
 
 

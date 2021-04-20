@@ -1,5 +1,5 @@
 import React from 'react';
-import heroimg from '../../../assets/hero.svg';
+import heroimg from '../../assets/hero.svg';
 const sectionOne = () => {
     return (
         <React.Fragment>
