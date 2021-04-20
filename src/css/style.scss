@@ -1,0 +1,113 @@
+body {
+    background-color: #1d1d22 !important;
+    font-family: "Poppins", sans-serif !important;
+}
+.navbar-expand-lg {
+    .navbar-nav .nav-link {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    button {
+        color: #fff;
+        background: #e50913;
+        border-radius: 0;
+    }
+    li.nav-item {
+        margin: 0 33px;
+    }
+}
+.banner-section {
+    background: url(../assets/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0;
+    height: 100%;
+    .banner-heading {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 1.5;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+    .caption {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: 0.17em;
+        color: #dbd6d6;
+        margin-bottom: 35px;
+    }
+    .banner-buttons {
+        display: flex;
+        .white-paper {
+            background: #313238 !important;
+        }
+        .button {
+            border-radius: 0px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+            border: 0px solid;
+            width: auto;
+            padding: 15px 1.75rem;
+            box-shadow: none !important;
+        }
+        .xprt {
+            background: #e50913 !important;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px #e50913 !important;
+        }
+    }
+}
+
+.second-section {
+    padding: 200px 0 100px 0;
+    .icon-feacture {
+        width:90px;
+        height: 75px;
+    }
+    .section-title {
+        color: #ffffff;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+  
+    .feactures-card {
+        background: #232327;
+        color: #fff;
+        padding: 65px 30px;
+        height: 380px;
+       
+        h5 {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 2;
+        }
+        p {
+            line-height: 2;
+            font-size: 14px;
+            color: #a49e9e;
+        }
+    }
+}
+.navbar.navbar-expand-lg {
+    background: #1d1d22;
+    padding: 30px 0;
+}
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1340px !important;
+    }
+}
