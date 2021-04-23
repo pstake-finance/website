@@ -10,16 +10,16 @@ const sectionOne = () => {
                             <h3 className="banner-heading">Unlocking liquidity of Staked Assets</h3>
                             <p className="caption">Stake PoS tokens through pSTAKE to earn staking rewards and receive 1:1 pegged stkToken which can be used in DeFi to generate additional yield</p>
                             <div className="banner-buttons">
-                                <a rel="noopener noreferrer" target="_blank" className="button xprt" href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt">
+                                <a rel="noopener noreferrer" target="_blank" className="button xprt" href="https://demo.pstake.persistence.one/">
 
                                     Go to App
                                 </a>
-                                <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://medium.com/persistence-blog">Join Telegram Group</a>
+                                <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://discord.com/invite/SaBKpjbnhH">Join Discord</a>
                             </div>
 
 
                         </div>
-                        <div className="col-md-6 text-center">
+                        <div className="col-md-6 text-center aside-section">
                             <img src={heroimg} alt="pStake"/>
                         </div>
                     </div>

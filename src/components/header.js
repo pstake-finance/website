@@ -35,9 +35,9 @@ class Header extends Component {
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display : this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">   
                                     <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
                                         <li className="nav-item"><Link className="nav-link" to="/about">WHITEPAPER</Link></li>
-                                        <li className="nav-item"><Link className="nav-link" to="/validators">DOCS</Link></li>
+                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link pophover tooltip-multiline"  data-tooltip="Coming Soon!">DOCS </a></li>
                                         <li className="nav-item"><Link className="nav-link" to="/ecosystem">FORUM</Link></li>
-                                        <li className="nav-item"><button type="button" className="btn btn-custom navbar-btn btn-rounded waves-effect waves-light">APP</button></li>        
+                                        <li className="nav-item"><a className="" href="https://demo.pstake.persistence.one/" target="_blank" rel="noopener noreferrer"> <button type="button" className="btn btn-custom navbar-btn btn-rounded waves-effect waves-light">APP</button></a></li>        
                                     </ul>
                             </div>
                         </div>

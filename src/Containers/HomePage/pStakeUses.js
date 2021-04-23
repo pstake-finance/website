@@ -6,7 +6,7 @@ const PStakeUses = () => {
             <section className="uses-section">
                 <div className="container">
                     <h3 className="heading">Using pSTAKE</h3>
-                    <div className="box-list row1">
+                    <div className="col-lg-12 box-list row1">
                         <div className="box">
                             <div className="number">
                                 <p>01</p>
@@ -27,7 +27,7 @@ const PStakeUses = () => {
                             <p className="content">Receive stkATOM</p>
                         </div>
                     </div>
-                    <div className="box-list row1">
+                    <div className="col-lg-12 box-list row1">
                         <div className="box">
                             <div className="number">
                                 <p>04</p>
