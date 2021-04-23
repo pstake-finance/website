@@ -4,7 +4,7 @@ import SectionTwo from '../Containers/HomePage/section2';
 import InfoSection from "../Containers/HomePage/InfoSection";
 import PStakeUses from "../Containers/HomePage/pStakeUses";
 import Footer from "../Containers/HomePage/Footer";
-import Contact from "../Containers/HomePage/contact";
+// import Contact from "../Containers/HomePage/contact";
 const homePage = () => {
         return (
             <React.Fragment>
@@ -13,7 +13,7 @@ const homePage = () => {
                     <InfoSection/>
                     <SectionTwo />
                     <PStakeUses/>
-                    <Contact/>
+                    {/* <Contact/> */}
                     <Footer/>
                 </div>
             </React.Fragment >

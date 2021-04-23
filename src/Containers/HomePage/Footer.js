@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="container">
                         <div className="icon-list">
                             <div className="icon-box">
-                                <Icon viewClass="social_icon_img" icon="twitter-logo"/>
+                                <a href="https://twitter.com/pStakeFinance" target="_blank" rel="noopener noreferrer" ><Icon viewClass="social_icon_img" icon="twitter-logo"/></a>
                             </div>
                             <div className="icon-box">
                                 <Icon viewClass="social_icon_ig" icon="telegram-plane"/>
