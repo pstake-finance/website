@@ -8,7 +8,7 @@ const sectionTwo = () => {
         <React.Fragment>
             <section className="second-section aos-init aos-animate">
                 <div className="container">
-                <h3 class="section-title">Feactures</h3>
+                <h3 class="section-title">Features</h3>
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-12">
                            <img src={feactureone} className="text-left icon-feacture" alt="feacture" title="feacture"/>

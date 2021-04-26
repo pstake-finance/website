@@ -58,6 +58,9 @@ body {
         letter-spacing: 0;
         color: #dbd6d6;
         margin-bottom: 35px;
+        span {
+            display: block;
+        }
     }
     .banner-buttons {
         display: flex;
@@ -88,8 +91,11 @@ body {
 .icon {
     width: 18px;
 }
+.icon.heart{
+    width: 12px;
+}
 .second-section {
-    padding: 100px 0 150px 0;
+    padding: 150px 0 150px 0;
     background: url(../assets/texture2.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,6 +127,7 @@ body {
         color: #fff;
         padding: 30px 40px;
         height: 250px;
+        backdrop-filter: blur(10px);
 
         h5 {
             font-size: 18px;
@@ -218,7 +225,7 @@ body {
     }
 }
 .info-section {
-    padding: 100px 0;
+    padding: 150px 0;
     .heading {
         font-weight: bold;
         font-size: 28px;
@@ -242,6 +249,7 @@ body {
         }
         img {
             width: 100%;
+            backdrop-filter: blur(10px);
         }
     }
 }
@@ -432,7 +440,7 @@ body {
 
 [data-tooltip]:before {
     content: attr(data-tooltip);
-    background: #333;
+    background: #313238;
     color: #eee;
     padding: 8px 12px;
     white-space: nowrap;
@@ -445,7 +453,7 @@ body {
     content: "";
     background: transparent;
     border: 8px solid transparent;
-    border-top-color: #333;
+    border-top-color: #313238;
     top: 24px;
     transform: rotate(-179deg);
     left: 14px;
@@ -638,7 +646,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 .pos-section {
-    padding: 150px 0;
+    padding: 150px 0 65px 0;
     border-bottom: 1px solid #313238;
     border-top: 1px solid #313238;
     .section-title {
