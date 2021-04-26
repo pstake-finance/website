@@ -2,6 +2,8 @@ import React from 'react';
 import feactureone from '../../assets/feacture-1.svg';
 import feacturetwo from '../../assets/feacture-2.svg';
 import feacturethree from '../../assets/feacture-3.svg';
+import feacturegradient from '../../assets/feacture-gradient.svg';
+import feacturegradient2 from '../../assets/feacture-gradent2.svg';
 const sectionTwo = () => {
     return (
         <React.Fragment>
@@ -10,28 +12,33 @@ const sectionTwo = () => {
                 <h3 class="section-title">Feactures</h3>
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-12">
-                           <img src={feactureone} className="text-left icon-feacture" alt="feacture" title="feacture"/>
+                         
                             <div className="feactures-card">
-                                <h5>Mirrors what happens on the underlying blockchain network</h5>
-                                <p>pSTAKE is the only liquid staking protocol that mirrors the exact staking mechanism of the underlying network to provide its users with the best staking experience</p>
+                            <img src={feactureone} className="text-left icon-feacture" alt="feacture" title="feacture"/>
+                                <h5>Liquidity</h5>
+                                <p>Unlocks liquidity of staked assets by issuing staked representatives.</p>
+                                
                             </div>
-
+                            <img src={feacturegradient} className="feacturegradient" alt="feacture"/>
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12">
-                           <img src={feacturetwo} className="text-left icon-feacture" alt="feacture" title="feacture"/>
-                            <div className="feactures-card">
-                                <h5>Liquidity and Instant Redemptions</h5>
-                                <p>pSTAKE not only unlocks liquidity of staked assets but also unlocks liquidity of unstaking/unbonding assets. pSTAKE’s redemption pool is a unique component that enables users to instantly exit their staking positions by swapping their unbonding tokens for unstaked tokens</p>
-                            </div>
-
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-12">
-                           <img src={feacturethree} className="text-left icon-feacture" alt="feacture" title="feacture"/>
-                            <div className="feactures-card">
+                          
+                        <div className="feactures-card">
+                            <img src={feacturetwo} className="text-left icon-feacture" alt="feacture" title="feacture"/>
                                 <h5>Network Security</h5>
-                                <p>pSTAKE does not affect the security of its underlying network. Users staking their tokens through pSTAKE are able to stake their tokens to a wide set of top validators which have been carefully chosen to be a part of pSTAKE</p>
+                                <p>Assets will be delegated to a set of whitelisted validators of the underlying network to decentralise voting power.</p>
+                                
                             </div>
 
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12">
+                        <div className="feactures-card">
+                            <img src={feacturethree} className="text-left icon-feacture" alt="feacture" title="feacture"/>
+                                <h5>Fungibility</h5>
+                                <p>Assets are delegated to a set of validators in a pre-determined proportion at all times.</p>
+                                
+                            </div>
+                            <img src={feacturegradient2} className="feacturegradient2" alt="feacture"/>
                         </div>
                         
                     </div>

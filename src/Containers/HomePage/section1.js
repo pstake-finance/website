@@ -1,5 +1,6 @@
 import React from 'react';
 import heroimg from '../../assets/hero.svg';
+import Icon from "../../components/Icon";
 const sectionOne = () => {
     return (
         <React.Fragment>
@@ -7,16 +8,32 @@ const sectionOne = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-sm-12">
-                            <h3 className="banner-heading">Unlocking liquidity of Staked Assets</h3>
-                            <p className="caption">Stake PoS tokens through pSTAKE to earn staking rewards and receive 1:1 pegged stkToken which can be used in DeFi to generate additional yield</p>
+                            <h3 className="banner-heading">Unlocking liquidity of <span>Staked Assets</span></h3>
+                            <p className="caption">Earn rewards and recieve liquid tokens for your staked assets to be used in DeFi ecosystem for higher yield.</p>
                             <div className="banner-buttons">
                                 <a rel="noopener noreferrer" target="_blank" className="button xprt" href="https://demo.pstake.persistence.one/">
 
                                     Go to App
                                 </a>
-                                <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://discord.com/invite/SaBKpjbnhH">Join Discord</a>
+                                <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://discord.com/invite/SaBKpjbnhH"><Icon viewClass="social_icon_imgg" icon="discord"/>&nbsp;Join Discord</a>
                             </div>
-
+                            <div className="social-icons">
+                            <ul className="list-unstyled first-section-social-icons">
+                                <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank"
+                                   title="Twitter">
+                                    <li><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></li>
+                                </a>
+                               
+                                <a href="https://t.me/PersistenceOneChat" rel="noopener noreferrer" target="_blank"
+                                   title="Community Chat">
+                                    <li><Icon viewClass="social_icon_imgg" icon="telegram-plane"/></li>
+                                </a>
+                                <a href="https://medium.com/persistence-blog" rel="noopener noreferrer" target="_blank"
+                                   title="Youtube">
+                                    <Icon viewClass="social_icon_img" icon="medium-m"/>
+                                </a>
+                            </ul>
+                        </div>
 
                         </div>
                         <div className="col-md-6 text-center aside-section">

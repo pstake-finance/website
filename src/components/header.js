@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
+import Icon from "../components/Icon";
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +13,25 @@ class Header extends Component {
     toggleMenu = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
-
+    componentDidMount() {
+        document.body.classList = "";
+        window.addEventListener("scroll", this.scrollNavigation, true);
+      }
+  
+      scrollNavigation = () => {
+          var doc = document.documentElement;
+          var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+          if(top > 80)
+          {
+               document.getElementById('nav-bar').classList.add('sticky-dark');
+               document.getElementById('is-sticky').classList.add('is-sticky');
+          }
+          else
+          {
+              document.getElementById('nav-bar').classList.remove('sticky-dark');
+              document.getElementById('is-sticky').classList.remove('is-sticky');
+          }
+      }
     /**
      * Sets active tab
      */
@@ -30,14 +49,15 @@ class Header extends Component {
                             <Link className="navbar-brand logo text-uppercase" to="/">
                             <img src={logo} alt="logo" title="logo"/></Link>
                             <button className="navbar-toggler" onClick={this.toggleMenu} type="button">
-                                <i className="mdi mdi-menu"></i>
+                            <Icon viewClass="social_icon_img" icon="hamberger"/>
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display : this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">   
                                     <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                        <li className="nav-item"><Link className="nav-link" to="/about">WHITEPAPER</Link></li>
-                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link pophover tooltip-multiline"  data-tooltip="Coming Soon!">DOCS </a></li>
-                                        <li className="nav-item"><Link className="nav-link" to="/ecosystem">FORUM</Link></li>
-                                        <li className="nav-item"><a className="" href="https://demo.pstake.persistence.one/" target="_blank" rel="noopener noreferrer"> <button type="button" className="btn btn-custom navbar-btn btn-rounded waves-effect waves-light">APP</button></a></li>        
+                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">WHITEPAPER </a></li>
+                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link">DOCS</a></li>
+                                        
+                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link">FORUM</a></li>
+                                        <li className="nav-item"><a className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</a></li>        
                                     </ul>
                             </div>
                         </div>
