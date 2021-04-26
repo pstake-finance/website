@@ -1,6 +1,6 @@
 import React from 'react';
 import heroimg from '../../assets/info-image.svg';
-import ellipsegraident from '../../assets/Ellipse-graident.svg';
+import ellipsegraident from '../../assets/Ellipse-graidentone.svg';
 const InfoSection = () => {
     return (
         <React.Fragment>
