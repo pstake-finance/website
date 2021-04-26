@@ -11,7 +11,7 @@ const sectionOne = () => {
                             <h3 className="banner-heading">Unlocking liquidity of <span>Staked Assets</span></h3>
                             <p className="caption">Earn rewards and recieve liquid tokens for your staked assets to be used in DeFi ecosystem for higher yield.</p>
                             <div className="banner-buttons">
-                                <a rel="noopener noreferrer" target="_blank" className="button xprt" href="https://demo.pstake.persistence.one/">
+                                <a rel="noopener noreferrer" target="_blank" className="button xprt" href="/">
 
                                     Go to App
                                 </a>
