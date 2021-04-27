@@ -74,9 +74,8 @@ body {
             text-align: center;
             color: #ffffff;
             border: 0px solid;
-            width: auto;
-            padding: 15px 1.75rem;
-            box-shadow: none !important;
+            width: 180px;
+            padding: 15px 1.5rem;
         }
         .xprt {
             background: #e50913 !important;
@@ -91,7 +90,7 @@ body {
 .icon {
     width: 18px;
 }
-.icon.heart{
+.icon.heart {
     width: 12px;
 }
 .second-section {
@@ -117,9 +116,9 @@ body {
     }
     .feacturegradient2 {
         position: absolute;
-    top: -70px;
-    right: 22px;
-    z-index: -2;
+        top: -70px;
+        right: 22px;
+        z-index: -2;
     }
     .feactures-card {
         background: linear-gradient(180deg, #232327 0%, rgba(35, 35, 39, 0.29) 100%);
@@ -193,8 +192,23 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                &:hover p span {
-                    background: #E50913;
+                &:hover .content-section span {
+                    background: #e50913;
+                }
+                .content-section {
+                    display: flex;
+                    align-items: center;
+                    span {
+                        background: #515257;
+                        border-radius: 50%;
+                        display: inline-block;
+                        color: #fff;
+                        margin-right: 15px;
+                        width: 40px;
+                        height: 40px;
+                        transition: all 0.5s ease-in-out;
+                        padding: 10px 9px;
+                    }
                 }
                 p {
                     margin: 0;
@@ -202,6 +216,9 @@ body {
                     font-size: 14px;
                     line-height: 2;
                     color: #ffffff;
+                    span.content-span {
+                        display: block;
+                    }
                     span {
                         background: #515257;
                         border-radius: 50%;
@@ -645,6 +662,23 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         margin-top: -6px;
     }
 }
+.aside-section {
+    img {
+        width: 100%;
+        padding: 0 10%;
+    }
+}
+.button.xprt {
+    span.hidetwo {
+        display: none;
+    }
+    &:hover span.hideone {
+        display: none;
+    }
+    &:hover span.hidetwo {
+        display: block;
+    }
+}
 .pos-section {
     padding: 150px 0 65px 0;
     border-bottom: 1px solid #313238;
@@ -660,7 +694,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .row {
         display: flex;
         margin: 75px 0;
-        justify-content: space-between;
+        justify-content: center;
     }
     p {
         color: #fff;
@@ -714,12 +748,39 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 991px) {
+    .navbar-expand-lg .navbar-nav .nav-link.app-btn {
+        padding: 10px 15px;
+        background: #e50913;
+        width: 53px;
+    }
+    .banner-section .banner-buttons .button {
+        font-size: 14px;
+    }
+    .banner-section .banner-heading {
+        font-size: 28px;
+    }
+    .banner-section .caption span {
+        display: inline;
+    }
+    .pos-section .posmarketcap p {
+        font-size: 14px;
+    }
+    .pos-section .section-title {
+        width: auto;
+    }
+    .pos-section .row {
+        justify-content: center;
+    }
+    .banner-section {
+        padding: 150px 0 150px 0;
+    }
     .info-section {
         .row {
             padding: 0 15px;
         }
     }
-    .second-section .feacturegradient, .second-section .feacturegradient2 {
+    .second-section .feacturegradient,
+    .second-section .feacturegradient2 {
         display: none;
     }
     .is-sticky .navbar.navbar-custom {

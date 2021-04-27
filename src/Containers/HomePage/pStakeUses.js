@@ -33,20 +33,22 @@ const PStakeUses = () => {
                             <Accordion>
                                 <Card>
                                     <Card.Header>
-
-                                        <p className="content"><span>01</span>&emsp;Deposit ATOM</p>
-
+                                    <div className="content-section">
+                                            <span>01</span>
+                                        <p className="content">Deposit ATOM</p>
+</div>
                                         <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey="0">
-                                        <Card.Body>Deposit ATOM to wrap it and bring it on to the Ethereum chain through the pSTAKE Cosmos-hub wallet address provided to the user.</Card.Body>
+                                        <Card.Body>Deposit ATOM to wrap it and bring it on to the Ethereum chain through the pSTAKE Cosmos-hub wallet address provided to the user</Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
                                 <Card>
                                     <Card.Header>
-
-                                        <p className="content"><span>02</span>&emsp;Receive ustkATOM </p>
-
+                                        <div className="content-section">
+                                            <span>02</span>
+                                            <p className="content">Receive ustkATOM </p>
+                                        </div>
                                         <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey="1">
@@ -58,39 +60,43 @@ const PStakeUses = () => {
                                 </Card>
                                 <Card>
                                     <Card.Header>
-
-                                        <p className="content"><span>03</span>&emsp;Stake ustkATOM & Receive stkATOM</p>
-
+                                    <div className="content-section">
+                                            <span>03</span>
+                                        <p className="content">Stake ustkATOM & Receive stkATOM</p>
+</div>
                                         <ContextAwareToggle eventKey="2">Click me!</ContextAwareToggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey="2">
                                         <Card.Body>
-                                            <p>ustkATOM holders can burn their ustkATOM to mint stkATOM and stake their deposited ATOMs with pSTAKE's trusted validators set.
+                                            <p>ustkATOM holders can burn their ustkATOM to mint stkATOM and stake their deposited ATOMs with pSTAKE's trusted validators set
                                         </p>
                                         </Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
                                 <Card>
                                     <Card.Header>
-
-                                        <p className="content"><span>04</span>&emsp;Earn ustATOM as staking rewards
+                                    <div className="content-section">
+                                            <span>04</span>
+                                        <p className="content">Earn ustATOM as staking rewards
 </p>
+</div>
 
                                         <ContextAwareToggle eventKey="3">Click me!</ContextAwareToggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey="3">
                                         <Card.Body>
-                                            <p>The staking rewards are accrued on a real time basis that can be claimed in the form of ustkATOM.
+                                            <p>The staking rewards are accrued on a real time basis that can be claimed in the form of ustkATOM
                                         </p>
                                         </Card.Body>
                                     </Accordion.Collapse>
                                 </Card>
                                 <Card>
                                     <Card.Header>
-
-                                        <p className="content"><span>05</span>&emsp;Use stkATOM
+                                    <div className="content-section">
+                                            <span>05</span>
+                                        <p className="content">Use stkATOM
 </p>
-
+</div>
                                         <ContextAwareToggle eventKey="4">Click me!</ContextAwareToggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey="4">
@@ -102,16 +108,18 @@ const PStakeUses = () => {
                                 </Card>
                                 <Card>
                                     <Card.Header>
-
-                                        <p className="content"><span>06</span>&emsp;Unstake stkATOM 
+                                    <div className="content-section">
+                                            <span>06</span>
+                                        <p className="content">Unstake stkATOM
 
 </p>
+</div>
 
                                         <ContextAwareToggle eventKey="5">Click me!</ContextAwareToggle>
                                     </Card.Header>
                                     <Accordion.Collapse eventKey="5">
                                         <Card.Body>
-                                            <p>Users can burn their stkATOM to mint ustkATOM. After unstaking, the user has to wait for 21 days before she gets her ustkATOM back.
+                                            <p>Users can burn their stkATOM to mint ustkATOM. After unstaking, the user has to wait for 21 days before she gets her ustkATOM back
 
                                         </p>
                                         </Card.Body>
@@ -119,11 +127,13 @@ const PStakeUses = () => {
                                 </Card>
                                 <Card>
                                     <Card.Header>
-
-                                        <p className="content"><span>07</span>&emsp;Withdraw ustkATOM
+                                    <div className="content-section">
+                                            <span>07</span>
+                                        <p className="content">Withdraw ustkATOM
 
 
 </p>
+</div>
 
                                         <ContextAwareToggle eventKey="6">Click me!</ContextAwareToggle>
                                     </Card.Header>

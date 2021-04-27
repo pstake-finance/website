@@ -47,7 +47,7 @@ const leadingPOS = () => {
                             </div>
                         </div>
                       <div className="posmarketcap text-center">
-                        <p className="text-center">Total Addressable PoS Market Cap is <span>$490B+</span></p>
+                        <p className="text-center">pSTAKE's Total Addressable Market <span>~$500B+</span></p>
                         </div>
                     </div>
                 </div>

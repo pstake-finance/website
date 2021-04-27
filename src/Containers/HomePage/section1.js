@@ -1,5 +1,5 @@
 import React from 'react';
-import heroimg from '../../assets/hero.svg';
+import heroimg from '../../assets/hero.png';
 import Icon from "../../components/Icon";
 const sectionOne = () => {
     return (
@@ -9,12 +9,13 @@ const sectionOne = () => {
                     <div className="row">
                         <div className="col-md-6 col-sm-12">
                             <h3 className="banner-heading">Unlocking liquidity of <span>Staked Assets</span></h3>
-                            <p className="caption">Earn rewards and recieve liquid tokens for your staked <span>assets to be used in DeFi ecosystem for higher yield.</span></p>
+                            <p className="caption">Earn staking rewards and receive liquid staked representative tokens <span>to be used in DeFi to generate additional yield</span></p>
                             <div className="banner-buttons">
-                                <a rel="noopener noreferrer" target="_blank" className="button xprt" href="/">
+                                <span rel="noopener noreferrer" target="_blank" className="button xprt" href="/">
 
-                                    Go to App
-                                </a>
+                                   <span className="hideone">Go to App</span> 
+                                   <span className="hidetwo">Coming Soon!</span> 
+                                </span>
                                 <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://discord.com/invite/SaBKpjbnhH"><Icon viewClass="social_icon_imgg" icon="discord"/>&nbsp;Join Discord</a>
                             </div>
                             <div className="social-icons">

@@ -53,11 +53,12 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display : this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">   
                                     <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">WHITEPAPER </a></li>
-                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link">DOCS</a></li>
+                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">WHITEPAPER </span></li>
+                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">DOCS </span></li>
+                                     
                                         
-                                        <li className="nav-item"><a href="/" target="_blank" rel="noopener noreferrer" className="nav-link">FORUM</a></li>
-                                        <li className="nav-item"><a className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</a></li>        
+                                        <li className="nav-item"><a href="https://discord.com/invite/SaBKpjbnhH" target="_blank" rel="noopener noreferrer" className="nav-link">DISCORD</a></li>
+                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li>        
                                     </ul>
                             </div>
                         </div>
