@@ -1,6 +1,7 @@
 import React from 'react';
-import heroimg from '../../assets/hero.png';
+// import heroimg from '../../assets/hero.png';
 import Icon from "../../components/Icon";
+import pStake from "../../assets/pstake.mp4";
 const sectionOne = () => {
     return (
         <React.Fragment>
@@ -11,7 +12,7 @@ const sectionOne = () => {
                             <h3 className="banner-heading">Unlocking liquidity of <span>Staked Assets</span></h3>
                             <p className="caption">Earn staking rewards and receive liquid staked representative tokens <span>to be used in DeFi to generate additional yield</span></p>
                             <div className="banner-buttons">
-                                <span rel="noopener noreferrer" target="_blank" className="button xprt" href="/">
+                                <span className="button xprt">
 
                                    <span className="hideone">Go to App</span> 
                                    <span className="hidetwo">Coming Soon!</span> 
@@ -38,7 +39,13 @@ const sectionOne = () => {
 
                         </div>
                         <div className="col-md-6 text-center aside-section">
-                            <img src={heroimg} alt="pStake"/>
+                            {/* <img src={heroimg} alt="pStake"/> */}
+                            <video className="banner-video" autoPlay="autoplay" preload="true" loop="loop"
+                               muted src={pStake}>
+                            <source type="video/webm" src={pStake}/>
+                            <source type="video/mp4" src={pStake}/>
+                            <source type="video/ogg" src={pStake}/>
+                        </video>
                         </div>
                     </div>
                 </div>

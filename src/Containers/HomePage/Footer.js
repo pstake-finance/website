@@ -22,7 +22,7 @@ const Footer = () => {
                             <a href="https://www.reddit.com/r/PersistenceOne/" target="_blank" rel="noopener noreferrer" > <Icon viewClass="social_icon_img" icon="reddit-round"/></a>
                             </div>
                         </div>
-                    <p className="terms">{new Date().getFullYear()} | Built with  <Icon viewClass="social_icon_ig heart" icon="footerheart"/> by Persistence.</p>
+                    <p className="terms">{new Date().getFullYear()} | Built with  <Icon viewClass="social_icon_ig heart" icon="footerheart"/> by <a href="https://persistence.one/" target="_blank" rel="noopener noreferrer">Persistence.</a></p>
                 </div>
             </section>
         </React.Fragment >

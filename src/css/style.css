@@ -38,12 +38,16 @@ body {
 }
 
 .banner-section {
-  background: url(../assets/texture.svg);
+  background: #1D1D22;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 250px 0 150px 0;
   height: 100%;
+}
+
+.banner-section .banner-video {
+  width: 100%;
 }
 
 .banner-section .banner-heading {
@@ -514,6 +518,10 @@ body {
   color: #70747c;
 }
 
+.footer-section .terms a {
+  color: #70747c;
+}
+
 .btn.btn-custom:hover {
   color: #fff;
   text-decoration: none;
@@ -882,7 +890,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 30px;
+  margin: 20px;
 }
 
 .pos-section .pos-cards .asideposcount {
@@ -910,6 +918,9 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
+  .second-section {
+    padding: 0 0 150px 0;
+  }
   .navbar-expand-lg .navbar-nav .nav-link.app-btn {
     padding: 10px 15px;
     background: #e50913;
@@ -972,6 +983,12 @@ body {
     cursor: pointer;
     width: 100%;
     margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .second-section {
+    padding: 0 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -28,128 +28,120 @@ const PStakeUses = () => {
             <section className="uses-section xprt-banner-ecosystem ecosystem-faq-section">
                 <div className="container">
                     <h3 className="heading">Using pSTAKE</h3>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <Accordion>
-                                <Card>
-                                    <Card.Header>
-                                    <div className="content-section">
-                                            <span>01</span>
-                                        <p className="content">Deposit ATOM</p>
-</div>
-                                        <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="0">
-                                        <Card.Body>Deposit ATOM to wrap it and bring it on to the Ethereum chain through the pSTAKE Cosmos-hub wallet address provided to the user</Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                                <Card>
-                                    <Card.Header>
-                                        <div className="content-section">
-                                            <span>02</span>
-                                            <p className="content">Receive ustkATOM </p>
-                                        </div>
-                                        <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="1">
-                                        <Card.Body>
-                                            <p>Wrapped ATOM is represented as ustkATOM (unstaked ATOM) on pStake
+
+                    <div className="col-lg-12">
+
+                        <Accordion className="col-lg-12">
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <Card>
+                                        <Card.Header>
+                                            <div className="content-section">
+                                                <span>01</span>
+                                                <p className="content">Wrap native tokens</p>
+                                            </div>
+                                            <ContextAwareToggle eventKey="0">Click me!</ContextAwareToggle>
+                                        </Card.Header>
+                                        <Accordion.Collapse eventKey="0">
+                                            <Card.Body>Deposit native tokens on pSTAKE to mint and receive an equivalent amount of 1:1 pegged ERC-20 ustkTOKENs which can be used within the Ethereum DeFi ecosystem or used to stake the deposited tokens through pSTAKE</Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                    <Card>
+                                        <Card.Header>
+                                            <div className="content-section">
+                                                <span>02</span>
+                                                <p className="content">Stake ustkTOKENs </p>
+                                            </div>
+                                            <ContextAwareToggle eventKey="1">Click me!</ContextAwareToggle>
+                                        </Card.Header>
+                                        <Accordion.Collapse eventKey="1">
+                                            <Card.Body>
+                                                <p>Stake ustkTOKENs to bond underlying native tokens through a set of trusted validator set on pSTAKE. ustkTOKENs are burned and ERC-20 based 1:1 pegged stkTOKENs are issued to the staker
                                         </p>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                                <Card>
-                                    <Card.Header>
-                                    <div className="content-section">
-                                            <span>03</span>
-                                        <p className="content">Stake ustkATOM & Receive stkATOM</p>
-</div>
-                                        <ContextAwareToggle eventKey="2">Click me!</ContextAwareToggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="2">
-                                        <Card.Body>
-                                            <p>ustkATOM holders can burn their ustkATOM to mint stkATOM and stake their deposited ATOMs with pSTAKE's trusted validators set
+                                            </Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                    <Card>
+                                        <Card.Header>
+                                            <div className="content-section">
+                                                <span>03</span>
+                                                <p className="content">Earn and claim staking rewards</p>
+                                            </div>
+                                            <ContextAwareToggle eventKey="2">Click me!</ContextAwareToggle>
+                                        </Card.Header>
+                                        <Accordion.Collapse eventKey="2">
+                                            <Card.Body>
+                                                <p>Staking rewards are accrued on the staked assets in form of ustkTOKENs in real time and can be claimed at any point in time
                                         </p>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                                <Card>
-                                    <Card.Header>
-                                    <div className="content-section">
-                                            <span>04</span>
-                                        <p className="content">Earn ustATOM as staking rewards
+                                            </Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+
+
+                                </div>
+                                <div className="col-lg-6">
+
+                                    <Card>
+                                        <Card.Header>
+                                            <div className="content-section">
+                                                <span>04</span>
+                                                <p className="content">Use stkTOKEN to generate additional yield
 </p>
-</div>
+                                            </div>
 
-                                        <ContextAwareToggle eventKey="3">Click me!</ContextAwareToggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="3">
-                                        <Card.Body>
-                                            <p>The staking rewards are accrued on a real time basis that can be claimed in the form of ustkATOM
+                                            <ContextAwareToggle eventKey="3">Click me!</ContextAwareToggle>
+                                        </Card.Header>
+                                        <Accordion.Collapse eventKey="3">
+                                            <Card.Body>
+                                                <p>stkTOKENs can be used in the ever growing Ethereum DeFi Ecosystem to maximise yield and unlock the true potential of staked assets
                                         </p>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                                <Card>
-                                    <Card.Header>
-                                    <div className="content-section">
-                                            <span>05</span>
-                                        <p className="content">Use stkATOM
+                                            </Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                    <Card>
+                                        <Card.Header>
+                                            <div className="content-section">
+                                                <span>05</span>
+                                                <p className="content">Unstake stkTOKENs
 </p>
-</div>
-                                        <ContextAwareToggle eventKey="4">Click me!</ContextAwareToggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="4">
-                                        <Card.Body>
-                                            <p>One can use the stkATOMs (ERC20) in the ever growing DeFi ecosystem to earn higher yield
+                                            </div>
+                                            <ContextAwareToggle eventKey="4">Click me!</ContextAwareToggle>
+                                        </Card.Header>
+                                        <Accordion.Collapse eventKey="4">
+                                            <Card.Body>
+                                                <p>stkTOKENs are burned and ustkTOKENs are minted to represent unstaking of native chain tokens. Users can redeem their ustkTOKENs after a 21-day unbonding period
                                         </p>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                                <Card>
-                                    <Card.Header>
-                                    <div className="content-section">
-                                            <span>06</span>
-                                        <p className="content">Unstake stkATOM
-
-</p>
-</div>
-
-                                        <ContextAwareToggle eventKey="5">Click me!</ContextAwareToggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="5">
-                                        <Card.Body>
-                                            <p>Users can burn their stkATOM to mint ustkATOM. After unstaking, the user has to wait for 21 days before she gets her ustkATOM back
-
-                                        </p>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                                <Card>
-                                    <Card.Header>
-                                    <div className="content-section">
-                                            <span>07</span>
-                                        <p className="content">Withdraw ustkATOM
-
+                                            </Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                    <Card>
+                                        <Card.Header>
+                                            <div className="content-section">
+                                                <span>06</span>
+                                                <p className="content">Withdraw native tokens
 
 </p>
-</div>
+                                            </div>
 
-                                        <ContextAwareToggle eventKey="6">Click me!</ContextAwareToggle>
-                                    </Card.Header>
-                                    <Accordion.Collapse eventKey="6">
-                                        <Card.Body>
-                                            <p>ustkATOM tokens are required to withdraw the deposited ATOM
-
+                                            <ContextAwareToggle eventKey="5">Click me!</ContextAwareToggle>
+                                        </Card.Header>
+                                        <Accordion.Collapse eventKey="5">
+                                            <Card.Body>
+                                                <p>ustkTOKENs are burned and an equivalent amount of native tokens are transferred to the user's native token wallet address
 
                                         </p>
-                                        </Card.Body>
-                                    </Accordion.Collapse>
-                                </Card>
-                            </Accordion>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                </div>
 
 
-                        </div>
+
+                            </div>
+                        </Accordion>
+
+
+
                     </div>
 
                 </div>

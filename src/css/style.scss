@@ -33,13 +33,17 @@ body {
     }
 }
 .banner-section {
-    background: url(../assets/texture.svg);
+    // background-image: url(../assets/texture.svg);
+    background: #1D1D22;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 250px 0 150px 0;
 
     height: 100%;
+    .banner-video {
+        width: 100%;
+    }
     .banner-heading {
         font-family: "Poppins", sans-serif;
         font-weight: bold;
@@ -401,6 +405,9 @@ body {
         line-height: 131.4%;
         text-align: center;
         color: #70747c;
+        a{
+            color: #70747c;
+        }
     }
 }
 .btn.btn-custom:hover {
@@ -724,7 +731,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .pos-cards {
         display: flex;
         align-items: center;
-        margin: 30px;
+        margin: 20px;
         .asideposcount {
             margin-left: 10px;
             h4 {
@@ -748,6 +755,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 991px) {
+    .second-section {
+        padding: 0 0 150px 0;
+    }
     .navbar-expand-lg .navbar-nav .nav-link.app-btn {
         padding: 10px 15px;
         background: #e50913;
@@ -812,5 +822,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         cursor: pointer;
         width: 100%;
         margin-top: 25px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .second-section {
+        padding:0 0;
     }
 }
