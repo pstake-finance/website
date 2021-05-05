@@ -34,7 +34,7 @@ body {
 }
 .banner-section {
     // background-image: url(../assets/texture.svg);
-    background: #1D1D22;
+    background: #1E1C23;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -42,7 +42,7 @@ body {
 
     height: 100%;
     .banner-video {
-        width: 85%;
+        width: 80%;
     }
     .aside-section {
         display: flex;
@@ -50,7 +50,7 @@ body {
     justify-content: center;
     }
     .banner-main-section {
-        padding: 300px 0;
+        padding: 230px 0;
     }
     .banner-heading {
         font-family: "Poppins", sans-serif;
@@ -203,6 +203,7 @@ body {
                 background-color: #313134;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 justify-content: space-between;
                 &:hover .content-section span {
                     background: #e50913;
@@ -768,6 +769,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 991px) {
+    .banner-section .banner-video {
+        width: 80%;
+    }
     .second-section {
         padding: 0 0 150px 0;
     }

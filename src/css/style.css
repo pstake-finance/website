@@ -38,7 +38,7 @@ body {
 }
 
 .banner-section {
-  background: #1D1D22;
+  background: #1E1C23;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -46,7 +46,7 @@ body {
 }
 
 .banner-section .banner-video {
-  width: 85%;
+  width: 80%;
 }
 
 .banner-section .aside-section {
@@ -62,7 +62,7 @@ body {
 }
 
 .banner-section .banner-main-section {
-  padding: 300px 0;
+  padding: 230px 0;
 }
 
 .banner-section .banner-heading {
@@ -259,6 +259,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -945,6 +946,9 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
+  .banner-section .banner-video {
+    width: 80%;
+  }
   .second-section {
     padding: 0 0 150px 0;
   }
