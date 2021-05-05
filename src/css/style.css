@@ -42,12 +42,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 250px 0 150px 0;
   height: 100%;
 }
 
 .banner-section .banner-video {
-  width: 100%;
+  width: 85%;
+}
+
+.banner-section .aside-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.banner-section .banner-main-section {
+  padding: 300px 0;
 }
 
 .banner-section .banner-heading {
@@ -329,7 +344,7 @@ body {
 }
 
 .info-section .image-section img.ellipse-gradient {
-  width: auto;
+  width: 345px;
   position: absolute;
   bottom: 0;
   left: -200px;
@@ -520,6 +535,13 @@ body {
 
 .footer-section .terms a {
   color: #70747c;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-section .terms a:hover {
+  color: #e50913;
+  text-decoration: none;
 }
 
 .btn.btn-custom:hover {
@@ -811,6 +833,12 @@ body {
   margin-top: -6px;
 }
 
+.aside-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .aside-section img {
   width: 100%;
   padding: 0 10%;
@@ -831,7 +859,6 @@ body {
 .pos-section {
   padding: 150px 0 65px 0;
   border-bottom: 1px solid #313238;
-  border-top: 1px solid #313238;
 }
 
 .pos-section .section-title {
@@ -890,7 +917,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px;
+  margin: 40px;
 }
 
 .pos-section .pos-cards .asideposcount {
@@ -947,7 +974,11 @@ body {
             justify-content: center;
   }
   .banner-section {
-    padding: 150px 0 150px 0;
+    padding: 15px;
+    padding-bottom: 100px;
+  }
+  .banner-section .banner-main-section {
+    padding: 150px 0 50px 0;
   }
   .info-section .row {
     padding: 0 15px;

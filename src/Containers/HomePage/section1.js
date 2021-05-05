@@ -8,8 +8,8 @@ const sectionOne = () => {
             <section className="banner-section aos-init aos-animate" data-image-src="assets/bg.svg">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 col-sm-12">
-                            <h3 className="banner-heading">Unlocking liquidity of <span>Staked Assets</span></h3>
+                        <div className="col-md-6 col-sm-12 banner-main-section">
+                            <h3 className="banner-heading ">Unlocking liquidity of <span>Staked Assets</span></h3>
                             <p className="caption">Earn staking rewards and receive liquid staked representative tokens <span>to be used in DeFi to generate additional yield</span></p>
                             <div className="banner-buttons">
                                 <span className="button xprt">

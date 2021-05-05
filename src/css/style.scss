@@ -38,11 +38,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 250px 0 150px 0;
+    
 
     height: 100%;
     .banner-video {
-        width: 100%;
+        width: 85%;
+    }
+    .aside-section {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .banner-main-section {
+        padding: 300px 0;
     }
     .banner-heading {
         font-family: "Poppins", sans-serif;
@@ -262,7 +270,7 @@ body {
     .image-section {
         position: relative;
         img.ellipse-gradient {
-            width: auto;
+            width: 345px;
             position: absolute;
             bottom: 0;
             left: -200px;
@@ -407,6 +415,11 @@ body {
         color: #70747c;
         a{
             color: #70747c;
+            transition: all 0.5s ease-in-out;
+        &:hover {
+            color:#e50913;
+            text-decoration: none;
+        }
         }
     }
 }
@@ -670,6 +683,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 .aside-section {
+    display: flex;
     img {
         width: 100%;
         padding: 0 10%;
@@ -689,7 +703,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 .pos-section {
     padding: 150px 0 65px 0;
     border-bottom: 1px solid #313238;
-    border-top: 1px solid #313238;
     .section-title {
         color: #ffffff;
         text-align: center;
@@ -731,7 +744,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .pos-cards {
         display: flex;
         align-items: center;
-        margin: 20px;
+        margin: 40px;
         .asideposcount {
             margin-left: 10px;
             h4 {
@@ -782,7 +795,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         justify-content: center;
     }
     .banner-section {
-        padding: 150px 0 150px 0;
+        padding: 15px;
+        padding-bottom: 100px;
+    }
+    .banner-section .banner-main-section {
+        padding: 150px 0 50px 0;
     }
     .info-section {
         .row {
@@ -813,6 +830,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         display: unset;
     }
     .aside-section {
+        
         img {
             width: 100%;
             margin-top: 40px;
