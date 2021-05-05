@@ -771,6 +771,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .second-section {
         padding: 0 0 150px 0;
     }
+    .info-section .image-section img.ellipse-gradient {
+        display: none;
+    }
     .navbar-expand-lg .navbar-nav .nav-link.app-btn {
         padding: 10px 15px;
         background: #e50913;
