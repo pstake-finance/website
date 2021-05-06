@@ -38,7 +38,7 @@ body {
 }
 
 .banner-section {
-  background: #1E1C23;
+  background: #1e1c23;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -364,6 +364,36 @@ body {
 
 .uses-section {
   padding: 100px 0;
+}
+
+.uses-section .card {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.uses-section .card .show {
+  opacity: 0;
+  height: 0;
+}
+
+.uses-section .card .show .card-body {
+  opacity: 0;
+}
+
+.uses-section .card:hover .show {
+  opacity: 1;
+  background: #232327;
+  height: auto;
+}
+
+.uses-section .card:hover .show .card-body {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  z-index: 24;
+  background: #232327;
 }
 
 .uses-section .heading {
