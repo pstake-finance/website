@@ -10,7 +10,7 @@ const sectionOne = () => {
                     <div className="row">
                         <div className="col-md-6 col-sm-12 banner-main-section">
                             <h3 className="banner-heading ">Unlocking liquidity of <span>Staked Assets</span></h3>
-                            <p className="caption">Earn staking rewards and receive liquid staked representative tokens <span>to be used in DeFi to generate additional yield</span></p>
+                            <p className="caption">Securely stake your assets to earn staking rewards and receive 1:1 pegged staked representative tokens which can be used in DeFi to generate additional yield</p>
                             <div className="banner-buttons">
                                 <span className="button xprt">
 

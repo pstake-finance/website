@@ -1,8 +1,13 @@
 import React from "react";
 import { Accordion, Card } from "react-bootstrap";
+import {STAKEDTOKENS, UNSTAKEDTOKENS, STAKEDTOKEN} from "../../constants/config";
 
 const PStakeUses = () => {
-   
+
+    const stakedTOKENS = STAKEDTOKENS;
+    const unstakedTOKENS = UNSTAKEDTOKENS;
+    const stakedTOKEN = STAKEDTOKEN;
+
     return (
         <React.Fragment>
             <section className="uses-section xprt-banner-ecosystem ecosystem-faq-section">
@@ -24,7 +29,7 @@ const PStakeUses = () => {
                                         </Card.Header>
                                        
                                         <Accordion.Collapse className="show" >
-                                            <Card.Body>Deposit native tokens on pSTAKE to mint and receive an equivalent amount of 1:1 pegged ERC-20 ustkTOKENs which can be used within the Ethereum DeFi ecosystem or used to stake the deposited tokens through pSTAKE</Card.Body>
+                                            <Card.Body>Deposit native tokens on pSTAKE to mint and receive an equivalent amount of 1:1 pegged ERC-20 {unstakedTOKENS} which can be used within the Ethereum DeFi ecosystem or used to stake the deposited tokens through pSTAKE</Card.Body>
                                         </Accordion.Collapse>
                                         
                                     </Card>
@@ -32,14 +37,14 @@ const PStakeUses = () => {
                                         <Card.Header>
                                             <div className="content-section">
                                                 <span>02</span>
-                                                <p className="content">Stake ustkTOKENs </p>
+                                                <p className="content">Stake {unstakedTOKENS} </p>
                                             </div>
                                           
                                         </Card.Header>
                                         
                                         <Accordion.Collapse className="show">
                                             <Card.Body>
-                                                <p>Stake ustkTOKENs to bond underlying native tokens through a set of trusted validator set on pSTAKE. ustkTOKENs are burned and ERC-20 based 1:1 pegged stkTOKENs are issued to the staker
+                                                <p>Stake {unstakedTOKENS} to bond underlying native tokens through a set of trusted validator set on pSTAKE. {unstakedTOKENS} are burned and ERC-20 based 1:1 pegged {stakedTOKENS} are issued to the staker
                                         </p>
                                             </Card.Body>
                                         </Accordion.Collapse>
@@ -56,7 +61,7 @@ const PStakeUses = () => {
                                       
                                         <Accordion.Collapse className="show">
                                             <Card.Body>
-                                                <p>Staking rewards are accrued on the staked assets in form of ustkTOKENs in real time and can be claimed at any point in time
+                                                <p>Staking rewards are accrued on the staked assets in form of {unstakedTOKENS} in real time and can be claimed at any point in time
                                         </p>
                                             </Card.Body>
                                         </Accordion.Collapse>
@@ -71,8 +76,7 @@ const PStakeUses = () => {
                                         <Card.Header>
                                             <div className="content-section">
                                                 <span>04</span>
-                                                <p className="content">Use stkTOKEN to generate additional yield
-</p>
+                                                <p className="content">Use {stakedTOKEN} to generate additional yield</p>
                                             </div>
 
                                             
@@ -80,7 +84,7 @@ const PStakeUses = () => {
                                       
                                         <Accordion.Collapse className="show">
                                             <Card.Body>
-                                                <p>stkTOKENs can be used in the ever growing Ethereum DeFi Ecosystem to maximise yield and unlock the true potential of staked assets
+                                                <p>{stakedTOKENS} can be used in the ever growing Ethereum DeFi Ecosystem to maximise yield and unlock the true potential of staked assets
                                         </p>
                                             </Card.Body>
                                         </Accordion.Collapse>
@@ -90,7 +94,7 @@ const PStakeUses = () => {
                                         <Card.Header>
                                             <div className="content-section">
                                                 <span>05</span>
-                                                <p className="content">Unstake stkTOKENs
+                                                <p className="content">Unstake {stakedTOKENS}
 </p>
                                             </div>
                                             
@@ -98,7 +102,7 @@ const PStakeUses = () => {
                                        
                                         <Accordion.Collapse className="show">
                                             <Card.Body>
-                                                <p>stkTOKENs are burned and ustkTOKENs are minted to represent unstaking of native chain tokens. Users can redeem their ustkTOKENs after a 21-day unbonding period
+                                                <p>{stakedTOKENS} are burned and {unstakedTOKENS} are minted to represent unstaking of native chain tokens. Users can redeem their {unstakedTOKENS} after a 21-day unbonding period
                                         </p>
                                             </Card.Body>
                                         </Accordion.Collapse>
@@ -118,7 +122,7 @@ const PStakeUses = () => {
                                        
                                         <Accordion.Collapse className="show">
                                             <Card.Body>
-                                                <p>ustkTOKENs are burned and an equivalent amount of native tokens are transferred to the user's native token wallet address
+                                                <p>{unstakedTOKENS} are burned and an equivalent amount of native tokens are transferred to the user's native token wallet address
 
                                         </p>
                                             </Card.Body>

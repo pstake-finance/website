@@ -53,7 +53,7 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display : this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">   
                                     <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">WHITEPAPER </span></li>
+                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">BLOG </span></li>
                                         <li className="nav-item"><span className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">DOCS </span></li>
                                      
                                         
