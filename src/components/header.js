@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Alert from 'react-bootstrap/Alert';
 import logo from '../assets/logo.svg';
+import rightarrow from '../assets/right-arrow.png';
+import vectorarrow from '../assets/Vector.png';
 import Icon from "../components/Icon";
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = { Tab: '', isOpen: false };
+        this.state = { 
+            Tab: '', 
+            isOpen: false,
+            bannerInfo: true
+
+        };
 
         this.toggleMenu = this.toggleMenu.bind(this);
+        this.closeBanner = this.closeBanner.bind(this);
     }
-
+    closeBanner = () => {
+        this.setState({ bannerInfo: false });
+    }
     toggleMenu = () => {
         this.setState({ isOpen: !this.state.isOpen });
     }
@@ -45,7 +56,23 @@ class Header extends Component {
             <React.Fragment>
                 <div id="is-sticky">
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
-                        <div className="container">
+                    <div className="container-fluid bannernav-section">
+                        {this.state.bannerInfo ?
+                            <div className="container">
+                                <Alert className="nav-banner" dismissible onClick={this.closeBanner}>
+                                    <p>
+                                        <a href="https://ascendex.com/en/basic/cashtrade-spottrading/usdt/xprt" rel="noopener noreferrer"
+                                           target="_blank">
+                                            <span><img src={vectorarrow} alt="arrow"/>&nbsp; Learn more about the highly anticipated alpha release of pSTAKE scheduled for 15th June, 2021</span>&nbsp;
+                                            <img src={rightarrow} alt="arrow"/></a>
+                                    </p>
+                                </Alert>
+                            </div>
+                            : null}
+
+
+                    </div>
+                        <div className="container mb-pad">
                             <Link className="navbar-brand logo text-uppercase" to="/">
                             <img src={logo} alt="logo" title="logo"/></Link>
                             <button className="navbar-toggler" onClick={this.toggleMenu} type="button">
@@ -53,12 +80,12 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display : this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">   
                                     <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">BLOG </span></li>
-                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline" data-tooltip="Coming Soon!">DOCS </span></li>
+                                        <li className="nav-item"><a href="https://buff.ly/3zaI9w2" target="_blank" rel="noopener noreferrer" className="nav-link">BLOG </a></li>
+                                        <li className="nav-item"><a href="https://discord.com/invite/SaBKpjbnhH" target="_blank" rel="noopener noreferrer" className="nav-link">DOCS </a></li>
                                      
                                         
                                         <li className="nav-item"><a href="https://discord.com/invite/SaBKpjbnhH" target="_blank" rel="noopener noreferrer" className="nav-link">DISCORD</a></li>
-                                        <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li>        
+                                        <li className="nav-item"><a style={{ padding: '0' }} href="https://discord.com/invite/SaBKpjbnhH" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
                                     </ul>
                             </div>
                         </div>

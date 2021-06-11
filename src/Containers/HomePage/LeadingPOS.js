@@ -9,45 +9,45 @@ const leadingPOS = () => {
         <React.Fragment>
             <section className="pos-section aos-init aos-animate">
                 <div className="container">
-                <h3 class="section-title">Total Addressable Market</h3>
+                    <h3 class="section-title">Some of the leading PoS Ecosystems and their Market Caps</h3>
                     <div className="row">
                         <div className="pos-cards">
-                            <img src={cosmospos} alt="cosmos" title="Cosmos"/>
+                            <img src={cosmospos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
-                                <h4>$108B+</h4>
+                                <h4>$76B+</h4>
                                 <p>Cosmos</p>
                             </div>
                         </div>
                         <div className="pos-cards">
-                            <img src={ethpos} alt="cosmos" title="Cosmos"/>
+                            <img src={ethpos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
-                                <h4>$266B+</h4>
+                                <h4>$250B+</h4>
                                 <p>Ethereum</p>
                             </div>
                         </div>
                         <div className="pos-cards">
-                            <img src={polkadotpos} alt="cosmos" title="Cosmos"/>
+                            <img src={polkadotpos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
-                                <h4>$70B+</h4>
+                                <h4>$67B+</h4>
                                 <p>Polkadot</p>
                             </div>
                         </div>
                         <div className="pos-cards">
-                            <img src={solanapos} alt="cosmos" title="Cosmos"/>
+                            <img src={solanapos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
-                                <h4>$12B+</h4>
+                                <h4>$5B+</h4>
                                 <p>Solana</p>
                             </div>
                         </div>
-                       {/* <div className="pos-cards">
-                            <img src={cordanapos} alt="cosmos" title="Cosmos"/>
-                            <div className="asideposcount">
-                                <h4>$36B+</h4>
-                                <p>Cardano</p>
+                        <div className="posmarketcap text-center">
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <h3 class="section-title">Total Addressable Market</h3>
+                                </div>
+                                <div className="col-lg-6">
+                                    <p className="text-center">pSTAKE’s Total Addressable Market is <span>~$500B+</span>, with the following PoS ecosystems holding the lion’s share of value.</p>
+                                </div>
                             </div>
-                        </div>*/}
-                      <div className="posmarketcap text-center">
-                        <p className="text-center">pSTAKE’s Total Addressable Market is <span>~$500B+</span>, with the following PoS ecosystems holding the lion’s share of value.</p>
                         </div>
                     </div>
                 </div>

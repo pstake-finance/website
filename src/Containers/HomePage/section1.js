@@ -1,5 +1,4 @@
 import React from 'react';
-// import heroimg from '../../assets/hero.png';
 import Icon from "../../components/Icon";
 import pStake from "../../assets/pstake.mp4";
 const sectionOne = () => {
@@ -12,17 +11,17 @@ const sectionOne = () => {
                             <h3 className="banner-heading ">Unlocking liquidity of <span>Staked Assets</span></h3>
                             <p className="caption">Securely stake your assets to earn staking rewards and receive 1:1 pegged staked representative tokens which can be used in DeFi to generate additional yield</p>
                             <div className="banner-buttons">
-                                <span className="button xprt">
+                                <a rel="noopener noreferrer" target="_blank" href="https://www.google.com/"><span className="button xprt">
 
-                                   <span className="hideone">Go to App</span> 
-                                   <span className="hidetwo">Coming Soon!</span> 
-                                </span>
+                                  Launch pSTake
+                                  
+                                </span></a>
                                 <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://discord.com/invite/SaBKpjbnhH"><Icon viewClass="social_icon_imgg" icon="discord"/>&nbsp;Join Discord</a>
                             </div>
                             <div className="social-icons">
                             <ul className="list-unstyled first-section-social-icons">
                                 <a href="https://twitter.com/pStakeFinance" rel="noopener noreferrer" target="_blank"
-                                   title="Twitter">
+                                   title="Twitter"> 
                                     <li><Icon viewClass="social_icon_imgg" icon="twitter-logo"/></li>
                                 </a>
                                
