@@ -60,7 +60,7 @@ const sectionOne = () => {
                                         title="Community Chat">
                                         <li><Icon viewClass="social_icon_imgg" icon="telegram-plane" /></li>
                                     </a>
-                                    <a href="https://medium.com/persistence-blog" onClick={clickOnMedium} rel="noopener noreferrer" target="_blank"
+                                    <a href="https://medium.com/@pstakefinance" onClick={clickOnMedium} rel="noopener noreferrer" target="_blank"
                                         title="Youtube">
                                         <Icon viewClass="social_icon_img" icon="medium-m" />
                                     </a>
