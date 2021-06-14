@@ -5,7 +5,7 @@ const FeactureBlog = () => {
         <React.Fragment>
              <section className="stay-updated">
             <div className="title-line-section">
-                <h3 className="section-title">Featured Blogs</h3>
+                <h3 className="section-title">Feacture Blog</h3>
             </div>
             <div className="container">
                 <div className="row">
@@ -17,7 +17,7 @@ const FeactureBlog = () => {
                                     <div className="custom-card mb-10" data-aos="fade-up">
                                         <div className="blog-image">
                                             <img className="card-img-top" alt="blog2"
-                                                 src="https://miro.medium.com/max/2880/1*rIhcjoAWd7pvh_qqQw9w8g.png"/>
+                                                 src="https://miro.medium.com/max/2880/1*CkXNjocOSl7i2HeUEpcFwA.png"/>
                                         </div>
 
                                         <div className="custom-card-body">
