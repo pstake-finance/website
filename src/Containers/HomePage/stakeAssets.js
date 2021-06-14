@@ -13,17 +13,21 @@ const StakeAssets = () => {
                             <Card.Body>
                                 <div className="text-center">
                                 <img className="pt-4 pb-4" src={asset1} title="Asset" alt="Asset"/>
-                                <Card.Title>Cosmos</Card.Title>
+                                <Card.Title>Cosmos Network</Card.Title>
                                 </div>
                                
                                 <Card.Text>
-                                Stake your ATOM to receive 1:1 pegged pATOM on the Ethereum network to be used in DeFi for additional yield
+                                Stake ATOM using pSTAKE to receive pATOM which can be used in DeFi to generate yield while you earn staking rewards on your staked ATOM
                                 </Card.Text>
                                
                             </Card.Body>
-                            <div className="apr">
+                            {/* <div className="apr">
                                 <h1>9.32% <span>APR</span></h1>
                                 <h5>Stake Now</h5>
+                            </div> */}
+                             <div className="apr apr2">
+                                <h1>9.32%  <span>APR</span></h1>
+                                <h5>Coming Soon!</h5>
                             </div>
                         </Card>
                         <Card className="col-md-4  col-xs-6">
@@ -34,7 +38,7 @@ const StakeAssets = () => {
                                 </div>
                                
                                 <Card.Text>
-                                Stake your XPRT to receive liquid 1:1 pegged pXPRT and put it to use in DeFi while retaining staking rewards and exposure to the Persistence ecosystem.
+                                Stake XPRT using pSTAKE to receive pXPRT which can be used in DeFi to generate yield while you earn staking rewards on your staked XPRT
                                 </Card.Text>
                                
                             </Card.Body>

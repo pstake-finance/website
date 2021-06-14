@@ -228,8 +228,8 @@ body a:hover {
 }
 
 .second-section .feactures-card {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2C2C30), to(#232328));
-  background: linear-gradient(180deg, #2C2C30 0%, #232328 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2c2c30), to(#232328));
+  background: linear-gradient(180deg, #2c2c30 0%, #232328 100%);
   opacity: 0.9;
   color: #fff;
   padding: 30px 40px;
@@ -408,14 +408,14 @@ body a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding: 20px 0px;
   margin-bottom: 25px;
   margin-top: 25px;
 }
 
 .stake-section .apr h1 {
-  color: #E50913;
+  color: #24B574;
   font-size: 24px;
   font-weight: 600;
   margin: 0;
@@ -430,9 +430,12 @@ body a:hover {
 .stake-section .apr h5 {
   font-size: 14px;
   background: #e50913;
-  padding: 15px 25px;
+  padding: 15px 35px;
   cursor: pointer;
   color: #fff;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-weight: bold;
 }
 
 .stake-section .card-title {
@@ -484,6 +487,7 @@ body a:hover {
   font-size: 15px;
   line-height: 200%;
   color: #dbd6d6;
+  text-align: center;
 }
 
 .info-section .image-section {
@@ -991,6 +995,18 @@ body a:hover {
   padding: 0 10%;
 }
 
+.button.xprt span.hidetwo {
+  display: none;
+}
+
+.button.xprt:hover span.hideone {
+  display: none;
+}
+
+.button.xprt:hover span.hidetwo {
+  display: block;
+}
+
 .pos-section {
   padding: 150px 0 65px 0;
   border-bottom: 1px solid #313238;
@@ -1044,7 +1060,7 @@ body a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px;
+  margin: 0 40px;
 }
 
 .pos-section .pos-cards .asideposcount {
@@ -1062,12 +1078,12 @@ body a:hover {
 }
 
 .stay-updated {
-  background: #1C1C21;
+  background: #1c1c21;
   padding: 0px 0 115px 0;
 }
 
 .stay-updated .section-title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .stay-updated .col-md-5 {
@@ -1102,22 +1118,22 @@ body a:hover {
 }
 
 .stay-updated .blog-section .text1 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   font-size: 14px;
   line-height: 1.775;
-  color: #C4C4C4;
+  color: #c4c4c4;
   padding: 20px 0 30px 0;
   font-weight: normal;
 }
 
 .stay-updated .blog-section .learn-more {
-  border-bottom: 2px solid #E50913;
+  border-bottom: 2px solid #e50913;
   padding-bottom: 5px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.8;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   display: inline-block;
 }
@@ -1202,12 +1218,12 @@ body a:hover {
 }
 
 .stay-updated .blog-articles .custom-card .custom-card-body .learn-more {
-  border-bottom: 2px solid #E50913;
+  border-bottom: 2px solid #e50913;
   padding-bottom: 5px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.8;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   display: inline-block;
 }

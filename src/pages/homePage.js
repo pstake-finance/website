@@ -2,7 +2,7 @@ import React from 'react';
 import SectionOne from '../Containers/HomePage/section1';
 import SectionTwo from '../Containers/HomePage/section2';
 import InfoSection from "../Containers/HomePage/InfoSection";
-import PStakeUses from "../Containers/HomePage/pStakeUses";
+// import PStakeUses from "../Containers/HomePage/pStakeUses";
 import LeadingPOS from '../Containers/HomePage/LeadingPOS';
 import FeactureBlog from '../Containers/HomePage/feactureBlog';
 import StakeAssets from '../Containers/HomePage/stakeAssets';
@@ -19,7 +19,7 @@ const homePage = () => {
                    
                     <SectionTwo />
                     <FeactureBlog />
-                    <PStakeUses/>
+                    {/* <PStakeUses/> */}
                     {/* <Contact/> */}
                     <Footer/>
                 </div>
