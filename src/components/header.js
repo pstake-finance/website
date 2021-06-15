@@ -101,7 +101,7 @@ class Header extends Component {
                                         <p>
                                             <a href="https://medium.com/@pstakefinance/pstake-alpha-release-bug-bounty-full-details-837b52fcdee5" rel="noopener noreferrer"
                                                 target="_blank">
-                                                <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; Learn more about the highly anticipated pSTAKE Alpha Release scheduled for 15th June, 2021</span>&nbsp;
+                                                <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; Participate in pSTAKE's bug bounty program to earn upto $25k worth of rewards</span>&nbsp;
                                                 <img src={rightarrow} alt="arrow" /></a>
                                         </p>
                                     </Alert>
@@ -123,8 +123,8 @@ class Header extends Component {
 
 
                                     <li className="nav-item"><a href="https://discord.com/invite/SaBKpjbnhH" target="_blank" onClick={this.onClickDiscord} rel="noopener noreferrer" className="nav-link">DISCORD</a></li>
-                                    <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li>
-                                    {/* <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://discord.com/invite/SaBKpjbnhH" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>         */}
+                                    {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
+                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="http://alpha.pstake.finance" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
                                 </ul>
                             </div>
                         </div>

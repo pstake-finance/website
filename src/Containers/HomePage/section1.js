@@ -33,20 +33,20 @@ const sectionOne = () => {
                             <h3 className="banner-heading ">Unlocking Liquidity of <span>Staked Assets</span></h3>
                             <p className="caption">Securely stake your assets to earn staking rewards and receive 1:1 pegged staked representative tokens which can be used in DeFi to generate additional yield</p>
                             <div className="banner-buttons">
-                                {/* <a rel="noopener noreferrer" target="_blank" href="https://www.google.com/">
+                                <a rel="noopener noreferrer" target="_blank" href="http://alpha.pstake.finance">
                                     <span className="button xprt">
 
                                       
                                         <span className="hideone">Launch pSTAKE</span> 
-                                        <span className="hidetwo">Coming Soon!</span>
+                                       
                                     </span>
 
 
-                               </a> */}
-                                <span className="button xprt">
+                               </a>
+                                {/* <span className="button xprt">
                                     <span className="hideone">Launch pSTAKE</span>
                                     <span className="hidetwo">Coming Soon!</span>
-                                </span>
+                                </span> */}
                                 <a rel="noopener noreferrer" target="_blank" className="button white-paper" href="https://discord.com/invite/SaBKpjbnhH"><Icon viewClass="social_icon_imgg" icon="discord" />&nbsp;Join Discord</a>
                             </div>
                             <div className="social-icons">

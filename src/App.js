@@ -38,12 +38,13 @@ const App = () => {
 
   useEffect(() => {
       const page = location.pathname;
+      console.log(page)
       document.body.classList.add('is-loaded')
       trackPage(page);
   }, [location]);
   return (
       <>
-          {
+          {/* {
               !isOnline ?
                   <div className="network-check">
                       <div className="center">
@@ -52,7 +53,7 @@ const App = () => {
                       </div>
                   </div>
                   : ""
-          }
+          } */}
           <div className="container-fluid app-nav">
               <div className="container">
                   <Header/>

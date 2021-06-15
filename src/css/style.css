@@ -38,9 +38,9 @@ body a:hover {
 
 .bannernav-section .alert-dismissible .close {
   position: absolute;
-  top: -4px;
+  top: -2px;
   right: -25px;
-  padding: 0.75rem 1.25rem;
+  padding: 0.65rem 1.25rem;
   color: inherit;
   color: #fff;
   opacity: 1;
@@ -415,7 +415,7 @@ body a:hover {
 }
 
 .stake-section .apr h1 {
-  color: #24B574;
+  color: #24b574;
   font-size: 24px;
   font-weight: 600;
   margin: 0;
@@ -504,8 +504,6 @@ body a:hover {
 
 .info-section .image-section img {
   width: 100%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
 .play-section .play-icon {
@@ -995,18 +993,6 @@ body a:hover {
   padding: 0 10%;
 }
 
-.button.xprt span.hidetwo {
-  display: none;
-}
-
-.button.xprt:hover span.hideone {
-  display: none;
-}
-
-.button.xprt:hover span.hidetwo {
-  display: block;
-}
-
 .pos-section {
   padding: 150px 0 65px 0;
   border-bottom: 1px solid #313238;
@@ -1376,6 +1362,12 @@ body a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  .bannernav-section .nav-banner {
+    width: 95%;
+  }
+  .bannernav-section .alert-dismissible .close {
+    right: -35px;
+  }
   .uses-section {
     padding: 65px 0;
   }

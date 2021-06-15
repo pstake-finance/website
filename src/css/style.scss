@@ -29,9 +29,9 @@ body a {
     top: -25px;
     .alert-dismissible .close {
         position: absolute;
-        top: -4px;
+        top: -2px;
         right: -25px;
-        padding: 0.75rem 1.25rem;
+        padding: 0.65rem 1.25rem;
         color: inherit;
         color: #fff;
         opacity: 1;
@@ -113,7 +113,7 @@ body a {
         letter-spacing: 0;
         color: #dbd6d6;
         margin-bottom: 35px;
-       
+
         span {
             display: block;
         }
@@ -323,7 +323,7 @@ body a {
         margin-bottom: 25px;
         margin-top: 25px;
         h1 {
-            color: #24B574;
+            color: #24b574;
             font-size: 24px;
             font-weight: 600;
             margin: 0;
@@ -395,7 +395,6 @@ body a {
         }
         img {
             width: 100%;
-            backdrop-filter: blur(10px);
         }
     }
 }
@@ -807,17 +806,17 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         padding: 0 10%;
     }
 }
-.button.xprt {
-    span.hidetwo {
-        display: none;
-    }
-    &:hover span.hideone {
-        display: none;
-    }
-    &:hover span.hidetwo {
-        display: block;
-    }
-}
+// .button.xprt {
+//     span.hidetwo {
+//         display: none;
+//     }
+//     &:hover span.hideone {
+//         display: none;
+//     }
+//     &:hover span.hidetwo {
+//         display: block;
+//     }
+// }
 .pos-section {
     padding: 150px 0 65px 0;
     border-bottom: 1px solid #313238;
@@ -854,7 +853,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .pos-cards {
         display: flex;
         align-items: center;
-        margin:0 40px;
+        margin: 0 40px;
         .asideposcount {
             margin-left: 10px;
             h4 {
@@ -1159,6 +1158,12 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 767px) {
+    .bannernav-section .nav-banner {
+        width: 95%;
+    }
+    .bannernav-section .alert-dismissible .close {
+        right: -35px;
+    }
     .uses-section {
         padding: 65px 0;
         .heading {

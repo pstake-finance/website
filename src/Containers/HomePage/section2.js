@@ -51,14 +51,14 @@ const sectionTwo = () => {
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12">
-                            <div className="feactures-card">
+                            <div className="feactures-card mb-4">
                                 <img src={feacturethree} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>Insurance Fund</h5>
                                 <p>Assets delegated to pSTAKE’s whitelisted validators are safeguarded against the slashing risks by an insurance pool which covers a portion or all of the slashed amount, based on the severity of the slashing event</p>
 
                             </div>
                             <img src={feacturegradient2} className="feacturegradient2" alt="feacture" />
-                            <div className="feactures-card m-none">
+                            <div className="feactures-card m-none mb-4">
                                 <img src={feacturesix} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>Generate Additional Yield</h5>
                                 <p>pTOKENs can be used across various DeFi protocols in the Ethereum ecosystem to generate additional yield. This can be in the form of trading fees earned by supplying liquidity to a DEX, or more complex use cases such as borrowing and lending</p>
@@ -67,7 +67,7 @@ const sectionTwo = () => {
 
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12 ">
-                        <div className="feactures-card dd-none">
+                        <div className="feactures-card dd-none mb-4">
                                 <img src={feacturesix} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>Generate Additional Yield</h5>
                                 <p>pTOKENs can be used across various DeFi protocols in the Ethereum ecosystem to generate additional yield. This can be in the form of trading fees earned by supplying liquidity to a DEX, or more complex use cases such as borrowing and lending</p>

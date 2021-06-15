@@ -1,5 +1,5 @@
 import React from 'react';
-import heroimg from '../../assets/info-image.svg';
+import heroimg from '../../assets/info-image.png';
 import ellipsegraident from '../../assets/Ellipse-graidentone.png';
 const InfoSection = () => {
     return (
