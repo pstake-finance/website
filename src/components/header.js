@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
 import Alert from 'react-bootstrap/Alert';
 import logo from '../assets/logo.svg';
+import close from '../assets/close_icon.png';
 import rightarrow from '../assets/right-arrow.png';
 import vectorarrow from '../assets/Vector.png';
 import Icon from "../components/Icon";
@@ -97,13 +98,14 @@ class Header extends Component {
                         <div className="container-fluid bannernav-section">
                             {this.state.bannerInfo ?
                                 <div className="container">
-                                    <Alert className="nav-banner" dismissible onClick={this.closeBanner}>
+                                    <Alert className="nav-banner alert-dismissible">
                                         <p>
                                             <a href="https://medium.com/@pstakefinance/pstake-alpha-release-bug-bounty-full-details-837b52fcdee5" rel="noopener noreferrer"
                                                 target="_blank">
                                                 <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; Participate in pSTAKE's bug bounty program to earn upto $25k worth of rewards</span>&nbsp;
                                                 <img src={rightarrow} alt="arrow" /></a>
                                         </p>
+                                        <img src={close} alt="close" className="close" onClick={this.closeBanner}/>
                                     </Alert>
                                 </div>
                                 : null}

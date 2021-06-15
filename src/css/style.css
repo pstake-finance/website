@@ -38,7 +38,8 @@ body a:hover {
 
 .bannernav-section .alert-dismissible .close {
   position: absolute;
-  top: -2px;
+  top: 3px;
+  cursor: pointer;
   right: -25px;
   padding: 0.65rem 1.25rem;
   color: inherit;
