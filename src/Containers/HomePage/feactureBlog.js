@@ -5,7 +5,7 @@ const FeactureBlog = () => {
         <React.Fragment>
              <section className="stay-updated">
             <div className="title-line-section">
-                <h3 className="section-title">Feacture Blog</h3>
+                <h3 className="section-title">Featured Blogs</h3>
             </div>
             <div className="container">
                 <div className="row">

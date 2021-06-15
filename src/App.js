@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Route, Switch, withRouter, useLocation} from "react-router-dom";
 import ReactGA from 'react-ga';
-import offline from "./assets/offline.svg";
+// import offline from "./assets/offline.svg";
 import './css/style.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,16 +44,16 @@ const App = () => {
   }, [location]);
   return (
       <>
-          {/* {
+          {
               !isOnline ?
                   <div className="network-check">
-                      <div className="center">
+                      {/* <div className="center">
                           <img src={offline} alt="offline"/>
                           <p>Network Disconnected. Check your data or wifi connection.</p>
-                      </div>
+                      </div> */}
                   </div>
                   : ""
-          } */}
+          }
           <div className="container-fluid app-nav">
               <div className="container">
                   <Header/>
