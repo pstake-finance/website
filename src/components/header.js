@@ -100,9 +100,9 @@ class Header extends Component {
                                 <div className="container">
                                     <Alert className="nav-banner alert-dismissible">
                                         <p>
-                                            <a href="https://medium.com/@pstakefinance/pstake-alpha-release-bug-bounty-full-details-837b52fcdee5" rel="noopener noreferrer"
+                                            <a href="https://register.pstake.finance/" rel="noopener noreferrer"
                                                 target="_blank">
-                                                <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; Participate in pSTAKE's bug bounty program to earn upto $25k worth of rewards</span>&nbsp;
+                                                <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; Unlock the liquidity for your staked assets with pSTAKE. Participate in the Staking Gala to win from the prize pool of $20,000. Register now!</span>&nbsp;
                                                 <img src={rightarrow} alt="arrow" /></a>
                                         </p>
                                         <img src={close} alt="close" className="close" onClick={this.closeBanner}/>
