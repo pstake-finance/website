@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactGa from 'react-ga';
 import Icon from "../../components/Icon";
+import {Link} from 'react-router-dom';
 
 const clickOnTwitter = () => {
     ReactGa.event({
@@ -60,6 +61,9 @@ const Footer = () => {
                             </div>
                         </div>
                     <p className="terms">{new Date().getFullYear()} | Built with  <Icon viewClass="social_icon_ig heart" icon="footerheart"/> by <a href="https://persistence.one/" target="_blank" rel="noopener noreferrer">Persistence.</a></p>
+                    <div className="privacy-terms">
+                        <Link to='/terms' target='_blank'>Terms of Service </Link> <Link to='/privacy' target='_blank'>Privacy Policy</Link>
+                    </div>
                 </div>
             </section>
         </React.Fragment >
