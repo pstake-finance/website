@@ -19,7 +19,7 @@ const sectionTwo = () => {
                             <div className="feactures-card mb-4">
                                 <img src={feactureone} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>Wrap</h5>
-                                <p>pSTAKE wraps your native tokens into 1:1 pegged ERC-20 wTOKENs for you to use your PoS assets in the Ethereum ecosystem</p>
+                                <p>pSTAKE wraps your native tokens into 1:1 pegged ERC-20 stkTOKENs for you to use your PoS assets in the Ethereum ecosystem</p>
                             </div>
                             <div className="inner-feacture">
                                 <div className="feactures-card mb-4">

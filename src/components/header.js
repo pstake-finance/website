@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
-// import Alert from 'react-bootstrap/Alert';
+import Alert from 'react-bootstrap/Alert';
 import logo from '../assets/logo.svg';
-// import close from '../assets/close_icon.png';
-// import rightarrow from '../assets/right-arrow.png';
-// import vectorarrow from '../assets/Vector.png';
+import close from '../assets/close_icon.png';
+import rightarrow from '../assets/right-arrow.png';
+import vectorarrow from '../assets/Vector.png';
 import Icon from "../components/Icon";
 class Header extends Component {
     constructor(props) {
@@ -95,7 +95,7 @@ class Header extends Component {
             <React.Fragment>
                 <div id="is-sticky">
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
-                        {/* <div className="container-fluid bannernav-section">
+                        <div className="container-fluid bannernav-section">
                             {this.state.bannerInfo ?
                                 <div className="container">
                                     <Alert className="nav-banner alert-dismissible">
@@ -111,7 +111,7 @@ class Header extends Component {
                                 : null}
 
 
-                        </div> */}
+                        </div>
                         <div className="container mb-pad">
                             <Link className="navbar-brand logo text-uppercase" to="/">
                                 <img src={logo} alt="logo" title="logo" /></Link>
@@ -120,13 +120,13 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                                 <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                    <li className="nav-item"><a href="https://medium.com/@pstakefinance" target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOGS </a></li>
+                                    <li className="nav-item"><a href="https://pstake.medium.com/" target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOGS </a></li>
                                     <li className="nav-item"><a href="https://docs.pstake.finance" target="_blank" onClick={this.onClickDocs} rel="noopener noreferrer" className="nav-link">DOCS </a></li>
 
 
-                                    <li className="nav-item"><a href="https://discord.com/invite/SaBKpjbnhH" target="_blank" onClick={this.onClickDiscord} rel="noopener noreferrer" className="nav-link">DISCORD</a></li>
+                                    <li className="nav-item"><a href="https://forum.pstake.finance/" target="_blank" onClick={this.onClickDiscord} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
                                     {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
-                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
+                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://gala.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
                                 </ul>
                             </div>
                         </div>
