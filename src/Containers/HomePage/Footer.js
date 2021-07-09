@@ -51,7 +51,7 @@ const Footer = () => {
                             <a href="https://t.me/PersistenceOneChat" target="_blank" rel="noopener noreferrer" onClick={clickOnTelegram}><Icon viewClass="social_icon_ig" icon="telegram-plane"/></a>
                             </div>
                             <div className="icon-box">
-                            <a href="https://medium.com/@pstakefinance" target="_blank" rel="noopener noreferrer" onClick={clickOnMedium}> <Icon viewClass="social_icon_img" icon="medium-m"/></a>
+                            <a href="https://pstake.medium.com/" target="_blank" rel="noopener noreferrer" onClick={clickOnMedium}> <Icon viewClass="social_icon_img" icon="medium-m"/></a>
                             </div>
                             <div className="icon-box">
                             <a href="https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured" target="_blank" rel="noopener noreferrer" onClick={clickOnYoutube}> <Icon viewClass="social_icon_img" icon="youtube"/></a>

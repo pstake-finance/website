@@ -32,7 +32,7 @@ const sectionOne = () => {
                             <h3 className="banner-heading ">Unlocking Liquidity of <span>Staked Assets</span></h3>
                             <p className="caption">Securely stake your assets to earn staking rewards and receive 1:1 pegged staked representative tokens which can be used in DeFi to generate additional yield</p>
                             <div className="banner-buttons">
-                                <a rel="noopener noreferrer" target="_blank" href="https://app.pstake.finance/">
+                                <a rel="noopener noreferrer" target="_blank" href="https://gala.pstake.finance/">
                                     <span className="button xprt">
 
                                       
@@ -56,11 +56,11 @@ const sectionOne = () => {
                                     </a>
 
                                     <a href="https://t.me/PersistenceOneChat" onClick={clickOnTelegram} rel="noopener noreferrer" target="_blank"
-                                        title="Community Chat">
+                                        title="Telegram">
                                         <li><Icon viewClass="social_icon_imgg" icon="telegram-plane" /></li>
                                     </a>
-                                    <a href="https://medium.com/@pstakefinance" onClick={clickOnMedium} rel="noopener noreferrer" target="_blank"
-                                        title="Youtube">
+                                    <a href="https://pstake.medium.com/" onClick={clickOnMedium} rel="noopener noreferrer" target="_blank"
+                                        title="Medium">
                                         <Icon viewClass="social_icon_img" icon="medium-m" />
                                     </a>
                                     <a href="https://discord.com/invite/SaBKpjbnhH" onClick={clickOnMedium} rel="noopener noreferrer" target="_blank"

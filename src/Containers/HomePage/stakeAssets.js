@@ -9,43 +9,44 @@ const StakeAssets = () => {
                 <div className="container">
                     <div className="row">
                         <h3 class="section-title">Stake Your Assets Now</h3>
-                        <p className="text-center mt-3"> Stake Assets using pSTAKE to receive pASSETS which can be used in DeFi to generate yield while
-                            you earn staking rewards on your staked Assets</p>
-                     
-                            <Card className="col-md-5 col-xs-6">
-                                <Card.Body>
-                                    <div className="text-center">
-                                        <img className="pt-4 pb-4" src={asset1} title="Asset" alt="Asset" />
-                                        <Card.Title>Cosmos Network</Card.Title>
-                                    </div>
-
-
-
-                                </Card.Body>
-                                <div className="apr">
-                                    <h1>9.32% <span>APR</span></h1>
-                                    <a href="http://alpha.pstake.finance" rel="noopener noreferrer" target="_blank"><h5>Launch pSTAKE</h5></a>
+                        <Card className="col-md-4 col-xs-6">
+                            <Card.Body>
+                                <div className="text-center">
+                                <img className="pt-4 pb-4" src={asset1} title="Asset" alt="Asset"/>
+                                <Card.Title>Cosmos Network</Card.Title>
                                 </div>
-                                {/* <div className="apr apr2">
+                               
+                                <Card.Text>
+                                Stake ATOM using pSTAKE to receive pATOM which can be used in DeFi to generate yield while you earn rewards on your staked ATOM
+                                </Card.Text>
+                               
+                            </Card.Body>
+                            <div className="apr">
+                                <h1>9.32% <span>APR</span></h1>
+                                <a href="https://gala.pstake.finance/"rel="noopener noreferrer" target="_blank"><h5>Launch pSTAKE</h5></a>
+                            </div>
+                             {/* <div className="apr apr2">
                                 <h1>9.32%  <span>APR</span></h1>
                                 <h5>Coming Soon!</h5>
                             </div> */}
-                            </Card>
-                            <Card className="col-md-5 col-xs-6">
-                                <Card.Body>
-                                    <div className="text-center">
-                                        <img className="pt-4 pb-4" src={asset2} title="Asset" alt="Asset" />
-                                        <Card.Title>Persistence</Card.Title>
-                                    </div>
-
-
-                                </Card.Body>
-                                <div className="apr apr2">
-                                    <h1>30.62% <span>APR</span></h1>
-                                    <h5>Coming Soon!</h5>
+                        </Card>
+                        <Card className="col-md-4  col-xs-6">
+                            <Card.Body>
+                                <div className="text-center">
+                                <img className="pt-4 pb-4" src={asset2} title="Asset" alt="Asset"/>
+                                <Card.Title>Persistence</Card.Title>
                                 </div>
-                            </Card>
-                       
+                               
+                                <Card.Text>
+                                Stake XPRT using pSTAKE to receive pXPRT which can be used in DeFi to generate yield while you earn rewards on your staked XPRT
+                                </Card.Text>
+                               
+                            </Card.Body>
+                            <div className="apr apr2">
+                                <h1>30.62% <span>APR</span></h1>
+                                <h5>Coming Soon!</h5>
+                            </div>
+                        </Card>
                     </div>
                 </div>
             </section>
