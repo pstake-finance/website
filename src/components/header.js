@@ -100,8 +100,8 @@ class Header extends Component {
                                 <div className="container">
                                     <Alert className="nav-banner alert-dismissible">
                                         <p>
-                                            <a href="https://register.pstake.finance/" rel="noopener noreferrer"
-                                                target="_blank">
+                                            <a href="/" rel="noopener noreferrer"
+                                                >
                                                 <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; Unlock the liquidity for your staked assets with pSTAKE. Participate in the Staking Gala to win from the prize pool of $20,000. Register now!</span>&nbsp;
                                                 <img src={rightarrow} alt="arrow" /></a>
                                         </p>
@@ -120,13 +120,13 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                                 <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                    <li className="nav-item"><a href="https://medium.com/@pstakefinance" target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOG </a></li>
+                                    <li className="nav-item"><a href="https://medium.com/@pstakefinance" target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOGS </a></li>
                                     <li className="nav-item"><a href="https://docs.pstake.finance" target="_blank" onClick={this.onClickDocs} rel="noopener noreferrer" className="nav-link">DOCS </a></li>
 
 
                                     <li className="nav-item"><a href="https://discord.com/invite/SaBKpjbnhH" target="_blank" onClick={this.onClickDiscord} rel="noopener noreferrer" className="nav-link">DISCORD</a></li>
                                     {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
-                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="http://alpha.pstake.finance" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
+                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
                                 </ul>
                             </div>
                         </div>
