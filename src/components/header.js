@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
-import Alert from 'react-bootstrap/Alert';
+// import Alert from 'react-bootstrap/Alert';
 import logo from '../assets/logo.svg';
-import close from '../assets/close_icon.png';
-import rightarrow from '../assets/right-arrow.png';
-import vectorarrow from '../assets/Vector.png';
+// import close from '../assets/close_icon.png';
+// import rightarrow from '../assets/right-arrow.png';
+// import vectorarrow from '../assets/Vector.png';
 import Icon from "../components/Icon";
 class Header extends Component {
     constructor(props) {
@@ -39,7 +39,7 @@ class Header extends Component {
     scrollNavigation = () => {
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-        if (top > 80) {
+        if (top > 50) {
             document.getElementById('nav-bar').classList.add('sticky-dark');
             document.getElementById('is-sticky').classList.add('is-sticky');
         }
@@ -95,7 +95,7 @@ class Header extends Component {
             <React.Fragment>
                 <div id="is-sticky">
                     <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
-                        <div className="container-fluid bannernav-section">
+                        {/* <div className="container-fluid bannernav-section">
                             {this.state.bannerInfo ?
                                 <div className="container">
                                     <Alert className="nav-banner alert-dismissible">
@@ -111,7 +111,7 @@ class Header extends Component {
                                 : null}
 
 
-                        </div>
+                        </div> */}
                         <div className="container mb-pad">
                             <Link className="navbar-brand logo text-uppercase" to="/">
                                 <img src={logo} alt="logo" title="logo" /></Link>
