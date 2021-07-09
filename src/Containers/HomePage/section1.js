@@ -63,6 +63,10 @@ const sectionOne = () => {
                                         title="Youtube">
                                         <Icon viewClass="social_icon_img" icon="medium-m" />
                                     </a>
+                                    <a href="https://discord.com/invite/SaBKpjbnhH" onClick={clickOnMedium} rel="noopener noreferrer" target="_blank"
+                                        title="Discord">
+                                        <Icon viewClass="social_icon_img" icon="discord" />
+                                    </a>
                                 </ul>
                             </div>
 
