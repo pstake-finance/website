@@ -22,7 +22,7 @@ class Header extends Component {
         this.onClickBlog = this.onClickBlog.bind(this);
         this.onClickTopBar = this.onClickTopBar.bind(this);
         this.onClickDocs = this.onClickDocs.bind(this);
-        this.onClickDiscord = this.onClickDiscord.bind(this);
+        this.onClickForum = this.onClickForum.bind(this);
         this.onClickNavApp = this.onClickNavApp.bind(this);
     }
     closeBanner = () => {
@@ -68,10 +68,10 @@ class Header extends Component {
         })
 
     }
-    onClickDiscord = () => {
+    onClickForum = () => {
         ReactGa.event({
-            category: 'Discord',
-            action: 'Clicked on Discord'
+            category: 'Forum',
+            action: 'Clicked on Forum'
         })
 
     }
@@ -100,9 +100,9 @@ class Header extends Component {
                                 <div className="container">
                                     <Alert className="nav-banner alert-dismissible">
                                         <p>
-                                            <a href="/" rel="noopener noreferrer"
+                                            <a href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer"
                                                 >
-                                                <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; Unlock the liquidity for your staked assets with pSTAKE. Participate in the Staking Gala to win from the prize pool of $20,000. Register now!</span>&nbsp;
+                                                <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; pSTAKE Beta is live. Stake your ATOM now!</span>&nbsp;
                                                 <img src={rightarrow} alt="arrow" /></a>
                                         </p>
                                         <img src={close} alt="close" className="close" onClick={this.closeBanner}/>
@@ -124,9 +124,11 @@ class Header extends Component {
                                     <li className="nav-item"><a href="https://docs.pstake.finance" target="_blank" onClick={this.onClickDocs} rel="noopener noreferrer" className="nav-link">DOCS </a></li>
 
 
-                                    <li className="nav-item"><a href="https://forum.pstake.finance/" target="_blank" onClick={this.onClickDiscord} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
+                                    <li className="nav-item"><a href="https://forum.pstake.finance/" target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
+                                    <li className="nav-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform" target="_blank" rel="noopener noreferrer" className="nav-link">RAISE A TICKET</a></li>
+                                    
                                     {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
-                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://gala.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
+                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
                                 </ul>
                             </div>
                         </div>
