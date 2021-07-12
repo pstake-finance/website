@@ -120,7 +120,7 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                                 <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                    <li className="nav-item"><a href="https://pstake.medium.com/" target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOGS </a></li>
+                                    <li className="nav-item"><a href="https://pstake.medium.com/" target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOG </a></li>
                                     <li className="nav-item"><a href="https://docs.pstake.finance" target="_blank" onClick={this.onClickDocs} rel="noopener noreferrer" className="nav-link">DOCS </a></li>
 
 
