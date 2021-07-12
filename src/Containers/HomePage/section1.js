@@ -29,7 +29,7 @@ const sectionOne = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 col-sm-12 banner-main-section">
-                            <h3 className="banner-heading ">Unlocking Liquidity of <span>Staked Assets</span></h3>
+                            <h3 className="banner-heading "> Unlocking Liquidity for <span>Staked Assets</span></h3>
                             <p className="caption">Securely stake your assets to earn staking rewards and receive 1:1 pegged staked representative tokens which can be used in DeFi to generate additional yield</p>
                             <div className="banner-buttons">
                                 <a rel="noopener noreferrer" target="_blank" href="https://app.pstake.finance/">

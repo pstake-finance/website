@@ -17,7 +17,7 @@ const StakeAssets = () => {
                                 </div>
                                
                                 <Card.Text>
-                                Stake ATOM using pSTAKE to receive pATOM which can be used in DeFi to generate yield while you earn rewards on your staked ATOM
+                                Stake ATOM using pSTAKE to receive stkATOM which can be used in DeFi to generate yield while you earn rewards on your staked ATOM
                                 </Card.Text>
                                
                             </Card.Body>
@@ -38,7 +38,7 @@ const StakeAssets = () => {
                                 </div>
                                
                                 <Card.Text>
-                                Stake XPRT using pSTAKE to receive pXPRT which can be used in DeFi to generate yield while you earn rewards on your staked XPRT
+                                Stake XPRT using pSTAKE to receive stkXPRT which can be used in DeFi to generate yield while you earn rewards on your staked XPRT
                                 </Card.Text>
                                
                             </Card.Body>
