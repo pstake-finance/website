@@ -9,9 +9,8 @@ const leadingPOS = () => {
         <React.Fragment>
             <section className="pos-section aos-init aos-animate">
                 <div className="container">
-                    <h3 class="section-title">Total Addressable Market</h3>
-                    <p className="text-center mt-3">pSTAKE’s Total Addressable Market is <span>~$500B+</span>, with the following PoS ecosystems holding the lion’s share of value</p>
-                    <div className="row">
+                <h3 className="info-banner-heading "> Ecosystems and their <span>Market Caps</span></h3>
+                   <div className="row">
                         <div className="pos-cards">
                             <img src={cosmospos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
@@ -51,6 +50,9 @@ const leadingPOS = () => {
                             </div>
                         </div> */}
                     </div>
+                    <h3 class="section-title">Total Addressable Market</h3>
+                    <p className="text-center mt-2">pSTAKE’s Total Addressable Market is ~$500B+, with the <span>following PoS ecosystems holding the lion’s share of value</span></p>
+                   
                 </div>
 
             </section>

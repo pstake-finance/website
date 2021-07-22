@@ -9,6 +9,8 @@ const StakeAssets = () => {
                 <div className="container">
                     <div className="row">
                         <h3 class="section-title">Stake Your Assets Now</h3>
+                    <p className="text-center mt-2">Stake Assets using pSTAKE to receive pASSETS which can be used in DeFi to generate yield while <span>you earn staking rewards on your staked Assets</span></p>
+
                         <Card className="col-md-4 col-xs-6">
                             <Card.Body>
                                 <div className="text-center">
@@ -16,10 +18,7 @@ const StakeAssets = () => {
                                 <Card.Title>Cosmos Network</Card.Title>
                                 </div>
                                
-                                <Card.Text>
-                                Stake ATOM using pSTAKE to receive stkATOM which can be used in DeFi to generate yield while you earn rewards on your staked ATOM
-                                </Card.Text>
-                               
+                              
                             </Card.Body>
                             <div className="apr">
                                 <h1>9.32% <span>APR</span></h1>
@@ -37,10 +36,7 @@ const StakeAssets = () => {
                                 <Card.Title>Persistence</Card.Title>
                                 </div>
                                
-                                <Card.Text>
-                                Stake XPRT using pSTAKE to receive stkXPRT which can be used in DeFi to generate yield while you earn rewards on your staked XPRT
-                                </Card.Text>
-                               
+                             
                             </Card.Body>
                             <div className="apr apr2">
                                 <h1>30.62% <span>APR</span></h1>

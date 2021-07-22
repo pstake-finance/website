@@ -1,5 +1,5 @@
 body {
-  background: #232327 !important;
+  background: #1d1d22 !important;
   font-family: "Poppins", sans-serif !important;
 }
 
@@ -68,8 +68,32 @@ body a:hover {
   font-weight: 600;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand-lg.sticky-dark .navbar-brand.logo {
+  background: url(../assets/logo.svg);
+}
+
+.navbar-expand-lg.sticky-dark .navbar-nav .nav-link {
   color: #fff;
+}
+
+.navbar-expand-lg.sticky-dark .navbar-nav .nav-link.app-btn {
+  background: #e50913;
+}
+
+.navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-expand-lg .navbar-brand.logo {
+  background: url(../assets/darklogo.svg);
+  width: 105px;
+  height: 26px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: #322d3e;
   font-size: 12px;
   font-weight: 600;
 }
@@ -93,11 +117,13 @@ body a:hover {
 }
 
 .banner-section {
-  background: #1d1d22;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: radial-gradient(100% 311.1% at 97.81% 0%, #fff8f8 0%, #f0fdff 100%, #f0fdff 100%);
   height: 100%;
+}
+
+.banner-section .background-gradient {
+  background: url(../assets/bg.svg);
+  background-repeat: no-repeat;
 }
 
 .banner-section .banner-video {
@@ -117,17 +143,17 @@ body a:hover {
 }
 
 .banner-section .banner-main-section {
-  padding: 230px 0;
+  padding: 230px 0 0;
 }
 
 .banner-section .banner-heading {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 4rem;
-  line-height: 1.5;
+  line-height: 1.3;
   text-align: center;
-  color: #fff;
-  margin-bottom: 30px;
+  color: #1d1d22;
+  margin-bottom: 0px;
 }
 
 .banner-section .banner-heading span {
@@ -139,7 +165,7 @@ body a:hover {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0;
-  color: #dbd6d6;
+  color: #393939;
   margin-bottom: 35px;
   text-align: center;
 }
@@ -182,15 +208,20 @@ body a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 200px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0 0 10px #e50913 !important;
-          box-shadow: 0 0 10px #e50913 !important;
+  margin: auto;
+}
+
+.banner-section .banner-buttons .xprt .hideone {
+  padding-right: 30px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .icon {
@@ -215,6 +246,8 @@ body a:hover {
 
 .second-section .section-title {
   color: #ffffff;
+  font-size: 4rem;
+  font-weight: bold;
   text-align: center;
   padding: 0;
   margin-bottom: 80px;
@@ -425,11 +458,11 @@ body a:hover {
 
 .stake-section .card {
   margin: 15px;
-  margin-top: 75px;
+  margin-top: 20px;
 }
 
 .stake-section .apr.apr2 h5 {
-  background: rgba(229, 9, 19, 0.3);
+  background: #636974;
   cursor: no-drop;
 }
 
@@ -443,7 +476,7 @@ body a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #f5f5f5;
+  background: #EDEDED;
   padding: 20px 0px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -464,7 +497,7 @@ body a:hover {
 
 .stake-section .apr h5 {
   font-size: 14px;
-  background: #e50913;
+  background: #1D1D22;
   padding: 15px 35px;
   cursor: pointer;
   color: #fff;
@@ -477,7 +510,7 @@ body a:hover {
   color: #1d1d22;
   font-weight: bold;
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .stake-section .card-text {
@@ -489,7 +522,7 @@ body a:hover {
 
 .stake-section .section-title {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 4rem;
   line-height: 131.4%;
   color: #ffffff;
   text-align: center;
@@ -498,10 +531,25 @@ body a:hover {
 
 .stake-section p {
   color: #dbd6d6;
+  width: 100%;
+}
+
+.stake-section p span {
+  display: block;
 }
 
 .info-section {
-  padding: 150px 0;
+  padding: 0;
+  margin-top: 50px;
+  position: relative;
+}
+
+.info-section .bglane-gradient {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  height: 100%;
 }
 
 .info-section .title-stake {
@@ -780,7 +828,8 @@ body a:hover {
 
 .navbar-expand-lg .navbar-nav .nav-link.app-btn {
   padding: 10px 25px;
-  background: #e50913;
+  background: #1d1d22;
+  color: #fff;
 }
 
 [data-tooltip] {
@@ -1059,14 +1108,30 @@ body a:hover {
 }
 
 .pos-section {
+  position: relative;
   padding: 150px 0 65px 0;
   border-bottom: 1px solid #313238;
+}
+
+.pos-section .info-banner-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.pos-section .info-banner-heading span {
+  display: block;
 }
 
 .pos-section .section-title {
   color: #ffffff;
   text-align: center;
   padding: 0;
+  font-size: 24px;
   width: 500px;
   margin: auto;
   font-weight: bold;
@@ -1088,6 +1153,12 @@ body a:hover {
 
 .pos-section p {
   color: #dbd6d6;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.pos-section p span {
+  display: block;
 }
 
 .pos-section .posmarketcap {
@@ -1111,7 +1182,7 @@ body a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 40px;
+  margin: 10px 40px;
 }
 
 .pos-section .pos-cards .asideposcount {
@@ -1386,6 +1457,9 @@ body a:hover {
 }
 
 @media only screen and (max-width: 991px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    color: #fff;
+  }
   .banner-section .banner-buttons a {
     width: 50%;
   }
@@ -1414,12 +1488,15 @@ body a:hover {
   .navbar-expand-lg .navbar-nav .nav-link.app-btn {
     padding: 10px 15px;
     background: #e50913;
-    width: 53px;
+    width: auto;
+  }
+  .navbar-nav {
+    margin-top: 5px;
   }
   .banner-section .banner-buttons .button {
     font-size: 14px;
   }
-  .banner-section .banner-heading {
+  .banner-section .banner-heading, .pos-section .info-banner-heading, .stake-section .section-title, .second-section .section-title {
     font-size: 28px;
   }
   .banner-section .caption span {
@@ -1437,11 +1514,14 @@ body a:hover {
             justify-content: center;
   }
   .banner-section {
-    padding: 15px;
-    padding-bottom: 100px;
+    padding: 0 15px;
   }
   .banner-section .banner-main-section {
-    padding: 160px 0 50px 0;
+    padding: 160px 0 0px 0;
+  }
+  .info-section {
+    margin-left: -15px;
+    margin-right: -15px;
   }
   .info-section .row {
     padding: 0 15px;
@@ -1482,6 +1562,15 @@ body a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  .banner-section .banner-heading, .pos-section .info-banner-heading, .stake-section .section-title, .second-section .section-title {
+    font-size: 24px;
+  }
+  .pos-section p span, .stake-section p span {
+    display: inline;
+  }
+  .stake-section p {
+    font-size: 14px;
+  }
   .main-banner-section {
     padding: 210px 0 0;
     margin: auto;
@@ -1490,8 +1579,9 @@ body a:hover {
     font-size: 3rem;
     text-align: center;
   }
-  body .table td, .table th {
-    padding: .40rem;
+  body .table td,
+  .table th {
+    padding: 0.4rem;
     vertical-align: top;
     font-size: 12px;
   }
@@ -1518,7 +1608,9 @@ body a:hover {
     margin-bottom: 0;
   }
   .info-section {
-    padding: 65px 0;
+    padding: 0;
+    margin-left: -15px;
+    margin-right: -15px;
   }
   .stake-section {
     padding: 65px 0;

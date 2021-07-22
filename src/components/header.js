@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
 import Alert from 'react-bootstrap/Alert';
-import logo from '../assets/logo.svg';
 import close from '../assets/close_icon.png';
 import rightarrow from '../assets/right-arrow.png';
 import vectorarrow from '../assets/Vector.png';
@@ -114,7 +113,7 @@ class Header extends Component {
                         </div>
                         <div className="container mb-pad">
                             <Link className="navbar-brand logo text-uppercase" to="/">
-                                <img src={logo} alt="logo" title="logo" /></Link>
+                               </Link>
                             <button className="navbar-toggler" onClick={this.toggleMenu} type="button">
                                 <Icon viewClass="social_icon_img" icon="hamberger" />
                             </button>
@@ -128,7 +127,7 @@ class Header extends Component {
                                     <li className="nav-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform" target="_blank" rel="noopener noreferrer" className="nav-link">RAISE A TICKET</a></li>
                                     
                                     {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
-                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> APP</span></a></li>        
+                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Go to App</span></a></li>        
                                 </ul>
                             </div>
                         </div>
