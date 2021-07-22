@@ -21,7 +21,7 @@ const StakeAssets = () => {
                               
                             </Card.Body>
                             <div className="apr">
-                                <h1>9.32% <span>APR</span></h1>
+                                <h1>7% <span>APR</span></h1>
                                 <a href="https://app.pstake.finance/"rel="noopener noreferrer" target="_blank"><h5>Launch pSTAKE</h5></a>
                             </div>
                              {/* <div className="apr apr2">
