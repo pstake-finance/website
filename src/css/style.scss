@@ -360,6 +360,8 @@ body a {
         justify-content: center;
     }
     .card {
+        max-width: 400px;
+        flex: 0 0 360px;
         margin: 15px;
         margin-top: 20px;
     }
