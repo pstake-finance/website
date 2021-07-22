@@ -54,7 +54,7 @@ jobs:
             rm -r build.zip
           # then uploads these 2 files
           scp: |
-            build.zip ${{ secrets.STAGING_USERNAME }}@${{ secrets.STAGING_HOST }}:~/build.zip
+            build.zip ${{ secrets.STAGING_USERNAME }}@${{ secrets.STAGING_HOST }}:~/
           # then run these commands
           ssh_after: |
             ${{ secrets.STAGING_SCRIPT_PATH }}
