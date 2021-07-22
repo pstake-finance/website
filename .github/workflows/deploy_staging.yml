@@ -1,0 +1,60 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Build react project
+        run: npm run build --if-present
+        env:
+          CI: false
+      - name: zip up the build
+        uses: montudor/action-zip@v0.1.0
+        with:
+          args: zip -qq -r build.zip build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build.zip
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build.zip    
+      - name: Deploy
+        uses: alinz/ssh-scp-action@master
+        with:
+          key: ${{ secrets.STAGING_SSH_KEY }}
+          host: ${{ secrets.STAGING_HOST }}
+          port: 22
+          user: ${{ secrets.STAGING_USERNAME }}
+          # runs this on remove server
+          ssh_before: |
+            rm -r build.zip
+          # then uploads these 2 files
+          scp: |
+            build.zip ${{ secrets.STAGING_USERNAME }}@${{ secrets.STAGING_HOST }}:~/
+          # then run these commands
+          ssh_after: |
+            ${{ secrets.STAGING_SCRIPT_PATH }}
