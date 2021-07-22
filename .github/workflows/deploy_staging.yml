@@ -34,8 +34,7 @@ jobs:
           name: build
           path: build.zip
 
-jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
