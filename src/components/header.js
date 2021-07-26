@@ -125,9 +125,11 @@ class Header extends Component {
 
                                     <li className="nav-item"><a href="https://forum.pstake.finance/" target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
                                     <li className="nav-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform" target="_blank" rel="noopener noreferrer" className="nav-link">RAISE A TICKET</a></li>
+                                    <li className="nav-item">  <Link className="nav-link" to="/stakeDropXPRT">STAKEDROP</Link></li>
                                     
                                     {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
                                     <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Go to App</span></a></li>        
+                               
                                 </ul>
                             </div>
                         </div>

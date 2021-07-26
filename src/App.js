@@ -11,11 +11,15 @@ import RouteNotFound from './components/RouteNotFound';
 import HomePage from './pages/homePage';
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import XPRTStakedrop from "./components/StakeDrop/XPRTStakedrop";
+
 ReactGA.initialize(ANALYTICS)
+
 const trackPage = page => {
     ReactGA.set({ page });
     ReactGA.pageview(page);
   };
+
 const App = () => {
   const routes = [{
       path: '/',
@@ -26,12 +30,16 @@ const App = () => {
   },{
       path: '/privacy',
       component: Privacy,
+  },{
+      path: '/stakeDropXPRT',
+      component: XPRTStakedrop,
   }];
 
   const [isOnline, setNetwork] = useState(window.navigator.onLine);
   const updateNetwork = () => {
       setNetwork(window.navigator.onLine);
   };
+
   useEffect(() => {
       window.addEventListener("offline", updateNetwork);
       window.addEventListener("online", updateNetwork);
