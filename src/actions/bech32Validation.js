@@ -1,5 +1,3 @@
-import { CURRENCY } from "../constants/config";
-
 const ALPHABET = "qpzry9x8gf2tvdw0s3jn54khce6mua7l";
 
 var ALPHABET_MAP = {};
@@ -37,7 +35,40 @@ function prefixChk(prefix) {
   return chk;
 }
 
-export function checkbech32(str, nativeChain) {
+export function checkbech32 (str) {
+  let LIMIT = 90;
+  if (str.length < 8) return false;
+  if (str.length > LIMIT) return false;
+
+
+  let split = str.lastIndexOf('1')
+  if (split === -1) return false;
+  if (split === 0) return false;
+
+  let prefix = str.slice(0, split)
+  let wordChars = str.slice(split + 1)
+  if (wordChars.length < 6) return false;
+
+  let chk = prefixChk(prefix);
+  if (typeof chk === 'string') return false;
+
+  let words = []
+  for (let i = 0; i < wordChars.length; ++i) {
+    let c = wordChars.charAt(i)
+    let v = ALPHABET_MAP[c]
+    if (v === undefined) return false;
+    chk = polymodStep(chk) ^ v
+
+    // not in the checksum?
+    if (i + 6 >= wordChars.length) continue
+    words.push(v)
+  }
+
+  if (chk !== 1) return false;
+  return true;
+}
+/*
+export function checkbech32(str, nativeChain = "cosmos") {
   let LIMIT = 90;
   console.log("str: ", str);
   if (str.length < 8) return false;
@@ -49,10 +80,10 @@ export function checkbech32(str, nativeChain) {
 
   let prefix = str.slice(0, split);
   console.log("prefix: ", prefix);
-  if (prefix != CURRENCY[nativeChain].bech32Prefix) return false;
+  if (prefix !== CURRENCY[nativeChain].bech32Prefix) return false;
   let wordChars = str.slice(split + 1);
   console.log("wordChars: ", wordChars);
-  if (wordChars.length != CURRENCY[nativeChain].bech32Length) return false;
+  if (wordChars.length !== CURRENCY[nativeChain].bech32Length) return false;
 
   let chk = prefixChk(prefix);
   if (typeof chk === "string") return false;
@@ -72,4 +103,4 @@ export function checkbech32(str, nativeChain) {
 
   if (chk !== 1) return false;
   return true;
-}
+}*/

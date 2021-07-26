@@ -20,6 +20,8 @@ const XPRTStakedrop = () => {
     const [metamaskShow, setMetamaskShow] = useState(false);
 
     const handleCancelTerms = () => {
+        setMetamaskShow(false);
+        setNotParticipantAddress(false);
         this.setState({ tcShow: false });
         this.setState({ metamaskShow: false });
         this.setState({ disableBtn: true });
@@ -38,23 +40,13 @@ const XPRTStakedrop = () => {
         setShowDelegateCliModal(false);
 
     };
-    const handleCalculate = (e) => {
-        function numberWithCommas(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-        e.preventDefault();
-     
-        setNotParticipantAddress(false);
 
-        const calAddress = e.target.maticAddress.value;
-        var addressPrefix = calAddress.startsWith("0x");
-
-    };
     useEffect(() => {
         window.scrollTo(0, 0);
         ReactGa.pageview(window.location.pathname + window.location.search);
         return () => { };
     });
+
     return (
         <div className="section-participate">
             <section className="participate-stakedrop">
@@ -65,88 +57,6 @@ const XPRTStakedrop = () => {
                                 <RecordXPRTAddress
                                     notParticipantAddress={notParticipantAddress}
                                 />
-                                                     <div className="col-lg-12 stakerow">
-                                    <div className="col-lg-12  header-section">
-                                        <h5 className="heading-participate">
-                                            Calculate Your Estimated Rewards
-                                        </h5>
-                                    </div>
-                                    <div className="body-section">
-                                        <form onSubmit={handleCalculate}>
-                                            <div className="inputstaking">
-                                                <h5>Staking Address</h5>
-                                                <input
-                                                    type="text"
-                                                    name="maticAddress"
-                                                    id="maticAddress"
-                                                    value=""
-                                                    //onChange={handleAddressChange}
-                                                    placeholder="Enter Address"
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="inputstaking left-align-calculate">
-                                                <h5>&nbsp;</h5>
-                                                <div className="btn-calculate">
-                                                    <button type="submit" className="btn">
-                                                        Calculate
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            {/* {errorAddress ? (
-                                                <h6 className="valid-add">Enter Valid Address</h6>
-                                            ) : (
-                                                ""
-                                            )}
-                                            {notParticipantAddress ? (
-                                                <h6 className="valid-add">
-                                                    Not a StakeDrop participant address, please send the
-                                                    magic transaction
-                                                </h6>
-                                            ) : (
-                                                ""
-                                            )} */}
-                                        </form>
-
-                                        <div className="">
-                                            <div className="inputstaking justify-start">
-                                                <h5>Start Checkpoint</h5>
-                                                <h5 className="text-color">
-                                                    
-                                                </h5>
-                                            </div>
-                                        </div>
-                                        <div className="row common-cards">
-                                            <div className="inputstaking bottom">
-                                                <h5>Total Staked</h5>
-                                                <h5 className="value">
-                                                     MATIC
-                                                </h5>
-                                            </div>
-
-                                            <div className="inputstaking bottom">
-                                                <h5>Total Staked on AUDIT.one</h5>
-                                                <h5 className="value">
-                                                     MATIC
-                                                </h5>
-                                            </div>
-
-                                            <div className="inputstaking bottom">
-                                                <h5>Total Rewards</h5>
-                                                <h5 className="value">
-                                                    XPRT
-                                                </h5>
-                                            </div>
-                                            <div className="inputstaking bottom">
-                                                <h5>Estimated Rewards</h5>
-                                                <h5 className="value">
-                                                    XPRT
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
