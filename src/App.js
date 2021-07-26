@@ -11,7 +11,7 @@ import RouteNotFound from './components/RouteNotFound';
 import HomePage from './pages/homePage';
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
-import MaticStakedrop from "./components/StakeDrop/MaticStakedrop";
+import XPRTStakedrop from "./components/StakeDrop/XPRTStakedrop";
 
 ReactGA.initialize(ANALYTICS)
 
@@ -32,7 +32,7 @@ const App = () => {
       component: Privacy,
   },{
       path: '/stakeDropXPRT',
-      component: MaticStakedrop,
+      component: XPRTStakedrop,
   }];
 
   const [isOnline, setNetwork] = useState(window.navigator.onLine);

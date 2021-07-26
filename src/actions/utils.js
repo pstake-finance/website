@@ -7,12 +7,13 @@ import {
 var web3 = null;
 
 export const getWeb3 = () => {
+    const web3 = new Web3(Web3.givenProvider)
     return web3;
-    // temporarily set it as the browser's injected web3
-    /* const myWeb3 = new Web3(window.ethereum);
-    return myWeb3; */
 };
 
+export const setWeb3 = (web3Object) => {
+    web3 = web3Object;
+};
 export const isWeb3Unlocked = async () => {
     const provider = await detectEthereumProvider();
     if (provider === window.ethereum) {

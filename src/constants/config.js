@@ -3,7 +3,7 @@ export const STAKEDTOKENS = "pTOKENs";
 export const STAKEDTOKEN = "pTOKEN";
 export const ANALYTICS = "UA-199452342-1";
 
-export const NETWORK_ID = 3;
+export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
 
 const MATIC_API_URL = process.env.REACT_APP_MATIC_API_KEY;
@@ -19,6 +19,8 @@ export const CURRENCY = {
         ustkToken: "ustkSOL",
         stkToken: "stkSOL",
         nameInCaps: "SOLANA",
+        bech32Prefix: "cosmos",
+        bech32Length: 38
     },
     polkadot: {
         name: "polkadot",
@@ -26,6 +28,8 @@ export const CURRENCY = {
         ustkToken: "ustkDOT",
         stkToken: "stkDOT",
         nameInCaps: "POLKADOT",
+        bech32Prefix: "cosmos",
+        bech32Length: 38
     },
     cosmos: {
         name: "cosmos",
@@ -42,5 +46,7 @@ export const CURRENCY = {
         ustkToken: "ustkETH2",
         stkToken: "stkETH2",
         nameInCaps: "ETH2",
+        bech32Prefix: "cosmos",
+        bech32Length: 38
     },
 };
