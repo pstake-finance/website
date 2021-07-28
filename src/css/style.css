@@ -1585,6 +1585,7 @@ body a:hover {
 
 .participate-stakedrop .staking-second-section .stakerow .body-section .note-text {
   font-size: 12px;
+  line-height: 1.5;
   font-weight: 600;
   color: #231f20;
 }

@@ -261,9 +261,7 @@ const RecordXPRTAddress = ({ notParticipantAddress }) => {
         </div>
         <div className="body-section">
           <h6 className="note-text mt-4">
-            <span>Note:</span> Submit your Persistence Address (XPRT) and
-            Staking Address (ETH) you used for MATIC Staking, to receive XPRT
-            StakeDrop
+            <span>Note:</span>Connect your ethereum wallet and provide your Persistence (XPRT) address to receive your pSTAKE staking incentive as per eligibility
           </h6>
 
           <form onSubmit={handleXPRTAddressSubmit}>
