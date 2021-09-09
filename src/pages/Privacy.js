@@ -1,6 +1,11 @@
 import React from 'react';
 import {Table} from "react-bootstrap";
 import Footer from "../Containers/HomePage/Footer";
+import {
+    PSTAKE_WEB_URL,CHORME_URL,
+    FIREFOX_URL,
+    SAFARI_URL,
+    IE_URL } from '../constants/config';
 const Privacy = () => {
     return (
         <React.Fragment>
@@ -20,7 +25,7 @@ const Privacy = () => {
                             <p>The Privacy Policy details out how PSTAKE TECHNOLOGIES, handles the personal data of
                                 individuals/ corporates (referred to as “you”, “your”) with regards to accessing and
                                 using the website, application (referred to as “app”) and related services as available
-                                at <a href="https://pstake.finance/" rel="noopener noreferrer" target="_blank">https://pstake.finance/</a> (“The Website”). PSTAKE TECHNOLOGIES (referred to as the
+                                at <a href={PSTAKE_WEB_URL} rel="noopener noreferrer" target="_blank">{PSTAKE_WEB_URL}</a> (“The Website”). PSTAKE TECHNOLOGIES (referred to as the
                                 “Company”, “we”, “our”, “us”) is the controller for your personal data within the scope
                                 of this Privacy Policy. The Company decides “why” and “how” your personal data is
                                 processed in connection with the Staking Protocols & Services.</p>
@@ -65,12 +70,12 @@ const Privacy = () => {
                             <p>You can disable/delete the cookies set by our website - please find the appropriate instructions by following these links on how to implement the deletion in different browsers:</p>
                             <ul>
                                 <li>For Google Chrome browser please refer to this
-                                    <a href="https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=en" rel="noopener noreferrer" target="_blank"> instructions</a>
+                                    <a href={CHORME_URL} rel="noopener noreferrer" target="_blank"> instructions</a>
                                 </li>
-                                <li>For Firefox browser please look up <a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" rel="noopener noreferrer" target="_blank">here</a>
+                                <li>For Firefox browser please look up <a href={FIREFOX_URL} rel="noopener noreferrer" target="_blank">here</a>
                                 </li>
-                                <li>For Safari browser please <a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" rel="noopener noreferrer" target="_blank">visit</a></li>
-                                <li>For Internet Explorer browser please <a href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies" rel="noopener noreferrer" target="_blank">refer to</a>
+                                <li>For Safari browser please <a href={SAFARI_URL} rel="noopener noreferrer" target="_blank">visit</a></li>
+                                <li>For Internet Explorer browser please <a href={IE_URL} rel="noopener noreferrer" target="_blank">refer to</a>
                                 </li>
 
                             </ul>
@@ -110,7 +115,7 @@ const Privacy = () => {
                             <p className="sub-heading">7. Security of Processing</p>
                             <p>We take information security very seriously. We work hard to protect the personal data you give us from loss, misuse, or unauthorized access. We utilize a variety of safeguards to protect the personal data submitted to us, both during transmission and once it is received.</p>
                             <p className="sub-heading">8. Contacts and Requests; Changes to the Privacy Policy</p>
-                            <p>Please send all your requests and queries in connection with your rights and freedoms relating to the personal data protection and processing conducted by the Company as part of providing the website and application and rendering the Services to you to:  <a href="https://pstake.finance/" rel="noopener noreferrer" target="_blank">https://pstake.finance/</a>
+                            <p>Please send all your requests and queries in connection with your rights and freedoms relating to the personal data protection and processing conducted by the Company as part of providing the website and application and rendering the Services to you to:  <a href={PSTAKE_WEB_URL} rel="noopener noreferrer" target="_blank">{PSTAKE_WEB_URL}</a>
                             </p>
                             <p>Changes to the Privacy Policy will be displayed in the form of the updated document published on our website. We also can arrange the updates introduced to the Privacy Policy by archiving the previous versions of the document accessible in the electronic form on the website.</p>
                             <p className="sub-heading">9. Disclaimer</p>
