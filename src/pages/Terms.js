@@ -1,5 +1,7 @@
 import React from 'react';
 import Footer from "../Containers/HomePage/Footer";
+import {
+    PSTAKE_WEB_URL } from '../constants/config';
 const Terms = () => {
     return (
         <React.Fragment>
@@ -15,7 +17,7 @@ const Terms = () => {
                     <div className="container">
                         <div className="section-1">
                             <p className="update-date">Last Updated Date: 1 July 2021</p>
-                            <p className="heading-text">Welcome to the official website of https://pstake.finance/.
+                            <p className="heading-text">Welcome to the official website of {PSTAKE_WEB_URL}.
                                 pSTAKE is a liquid staking solution protocol that unlocks the true potential of PoS
                                 tokens by unlocking liquidity of staked assets. </p>
                             <p className="sub-heading-text">These terms of use and conditions herein by reference
@@ -36,7 +38,7 @@ const Terms = () => {
                                 <p>1. These terms apply to the staking protocols (including but not limited to the user
                                     interface and the underlying protocols) token staking services (including all
                                     associated services, features, technologies and functionalities) available on or via
-                                    the <a href="https://pstake.finance/" rel="noopener noreferrer" target="_blank">https://pstake.finance/</a> (the “Website” and “pStake App”), which:</p>
+                                    the <a href={PSTAKE_WEB_URL} rel="noopener noreferrer" target="_blank">{PSTAKE_WEB_URL}</a> (the “Website” and “pStake App”), which:</p>
                                 <ul>
                                     <li>allow you to create synthetic versions of your Supported Digital Tokens (as
                                         defined herein) which are cross-chain operable;

@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import {
+    PSTAKE_APP_URL } from '../../constants/config';
 import asset1 from '../../assets/asset_1.svg';
 import asset2 from '../../assets/asset_2.svg';
 const StakeAssets = () => {
@@ -22,7 +24,7 @@ const StakeAssets = () => {
                             </Card.Body>
                             <div className="apr">
                                 <h1>7% <span>APR</span></h1>
-                                <a href="https://app.pstake.finance/"rel="noopener noreferrer" target="_blank"><h5>Launch pSTAKE</h5></a>
+                                <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>Launch pSTAKE</h5></a>
                             </div>
                         </Card>
                         <Card className="col-md-4  col-xs-6">

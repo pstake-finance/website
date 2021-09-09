@@ -13,6 +13,12 @@ body a {
     background-color: #232327;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
 }
+.navbar.navbar-custom.terms, .navbar.navbar-custom.privacy {
+    background:#fff;
+}
+.is-sticky .navbar.navbar-custom.terms, .is-sticky .navbar.navbar-custom.privacy {
+    background-color: #232327;
+}
 .navbar.navbar-custom {
     padding: 25px 0px;
     width: 100%;

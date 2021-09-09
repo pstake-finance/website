@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
+import {PSTAKE_MEDIUM_URL, 
+    PSTAKE_DOCS_URL ,
+    PSTAKE_FORUM_URL ,
+    PSTAKE_RAISE_A_TICKET_URL ,
+    PSTAKE_APP_URL } from '../constants/config';
 import Alert from 'react-bootstrap/Alert';
 import close from '../assets/close_icon.png';
 import rightarrow from '../assets/right-arrow.png';
@@ -33,6 +38,7 @@ class Header extends Component {
     componentDidMount() {
         document.body.classList = "";
         window.addEventListener("scroll", this.scrollNavigation, true);
+        
     }
 
     scrollNavigation = () => {
@@ -93,13 +99,13 @@ class Header extends Component {
         return (
             <React.Fragment>
                 <div id="is-sticky">
-                    <nav className="navbar navbar-expand-lg fixed-top navbar-custom sticky" id="nav-bar">
+                    <nav className={"navbar navbar-expand-lg fixed-top navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
                         <div className="container-fluid bannernav-section">
                             {this.state.bannerInfo ?
                                 <div className="container">
                                     <Alert className="nav-banner alert-dismissible">
                                         <p>
-                                            <a href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer"
+                                            <a href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer"
                                                 >
                                                 <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; pSTAKE Beta is live. Stake your ATOM now!</span>&nbsp;
                                                 <img src={rightarrow} alt="arrow" /></a>
@@ -119,16 +125,16 @@ class Header extends Component {
                             </button>
                             <div className={this.state.isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: this.state.isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                                 <ul className={this.state.isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                    <li className="nav-item"><a href="https://pstake.medium.com/" target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOG </a></li>
-                                    <li className="nav-item"><a href="https://docs.pstake.finance" target="_blank" onClick={this.onClickDocs} rel="noopener noreferrer" className="nav-link">DOCS </a></li>
+                                    <li className="nav-item"><a href={PSTAKE_MEDIUM_URL} target="_blank" onClick={this.onClickBlog} rel="noopener noreferrer" className="nav-link">BLOG </a></li>
+                                    <li className="nav-item"><a href={PSTAKE_DOCS_URL} target="_blank" onClick={this.onClickDocs} rel="noopener noreferrer" className="nav-link">DOCS </a></li>
 
 
-                                    <li className="nav-item"><a href="https://forum.pstake.finance/" target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
-                                    <li className="nav-item"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform" target="_blank" rel="noopener noreferrer" className="nav-link">RAISE A TICKET</a></li>
+                                    <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
+                                    <li className="nav-item"><a href={PSTAKE_RAISE_A_TICKET_URL} target="_blank" rel="noopener noreferrer" className="nav-link">RAISE A TICKET</a></li>
                                     <li className="nav-item">  <Link className="nav-link" to="/stakeDropXPRT">STAKEDROP</Link></li>
                                     
                                     {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
-                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href="https://app.pstake.finance/" target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Go to App</span></a></li>        
+                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Go to App</span></a></li>        
                                
                                 </ul>
                             </div>
