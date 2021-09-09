@@ -131,9 +131,9 @@ class Header extends Component {
 
                                     <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
                                     <li className="nav-item"><a href={PSTAKE_RAISE_A_TICKET_URL} target="_blank" rel="noopener noreferrer" className="nav-link">RAISE A TICKET</a></li>
-                                    <li className="nav-item">  <Link className="nav-link" to="/stakeDropXPRT">STAKEDROP</Link></li>
+                                   
                                     
-                                    {/* <li className="nav-item"><span className="nav-link pophover tooltip-multiline app-btn" data-tooltip="Coming Soon!" href="/" target="_blank" rel="noopener noreferrer"> APP</span></li> */}
+                                 
                                     <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Go to App</span></a></li>        
                                
                                 </ul>
