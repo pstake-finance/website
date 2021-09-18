@@ -4,7 +4,7 @@ import ReactGa from 'react-ga';
 import {PSTAKE_MEDIUM_URL, 
     PSTAKE_DOCS_URL ,
     PSTAKE_FORUM_URL ,
-    PSTAKE_RAISE_A_TICKET_URL ,
+    PSTAKE_AIRDROP_URL,
     PSTAKE_APP_URL } from '../constants/config';
 import Alert from 'react-bootstrap/Alert';
 import close from '../assets/close_icon.png';
@@ -130,11 +130,11 @@ class Header extends Component {
 
 
                                     <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
-                                    <li className="nav-item"><a href={PSTAKE_RAISE_A_TICKET_URL} target="_blank" rel="noopener noreferrer" className="nav-link">RAISE A TICKET</a></li>
                                    
                                     
+                                    <li className="nav-item" style={{ marginLeft: '0', marginRight: '0' }}><a style={{ padding: '0' }} onClick={this.onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Airdrop</span></a></li>        
                                  
-                                    <li className="nav-item"><a style={{ padding: '0' }} onClick={this.onClickNavApp} href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Go to App</span></a></li>        
+                                    <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={this.onClickNavApp} href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Go to App</span></a></li>        
                                
                                 </ul>
                             </div>

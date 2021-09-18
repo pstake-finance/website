@@ -1685,7 +1685,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         padding: 15px 0;
     }
     .navbar-expand-lg li.nav-item {
-        margin: 10px 33px;
+        margin: 10px 0px;
+        width: 100px;
+        text-align: center;
+        margin-left: 0!important;
     }
 
     .uses-section .box-list {

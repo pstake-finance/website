@@ -11,6 +11,7 @@ const MATIC_API_URL = process.env.REACT_APP_MATIC_API_KEY;
 export const getMaticStatusURL = () => `${MATIC_API_URL}/status`;
 export const getCalculateMatic = (calAddress) => `${MATIC_API_URL}/delegator/${calAddress}`;
 export const PSTAKE_MEDIUM_URL = "https://pstake.medium.com/";
+export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
 export const PSTAKE_FORUM_URL = "https://forum.pstake.finance/";
 export const PSTAKE_RAISE_A_TICKET_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform";
