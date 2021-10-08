@@ -5,12 +5,7 @@ export const ANALYTICS = "UA-199452342-1";
 
 export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
-
-const MATIC_API_URL = process.env.REACT_APP_MATIC_API_KEY;
-
-export const getMaticStatusURL = () => `${MATIC_API_URL}/status`;
-export const getCalculateMatic = (calAddress) => `${MATIC_API_URL}/delegator/${calAddress}`;
-export const PSTAKE_MEDIUM_URL = "https://pstake.medium.com/";
+export const PSTAKE_MEDIUM_URL = "https://blog.pstake.finance/";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
 export const PSTAKE_AUDITS_URL = "https://github.com/persistenceOne/pStake-auditReports";
