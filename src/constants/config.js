@@ -13,6 +13,7 @@ export const getCalculateMatic = (calAddress) => `${MATIC_API_URL}/delegator/${c
 export const PSTAKE_MEDIUM_URL = "https://pstake.medium.com/";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
+export const PSTAKE_AUDITS_URL = "https://github.com/persistenceOne/pStake-auditReports";
 export const PSTAKE_FORUM_URL = "https://forum.pstake.finance/";
 export const PSTAKE_RAISE_A_TICKET_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform";
 export const PSTAKE_APP_URL = "https://app.pstake.finance/";

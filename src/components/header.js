@@ -5,6 +5,7 @@ import {PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL ,
     PSTAKE_FORUM_URL ,
     PSTAKE_AIRDROP_URL,
+    PSTAKE_AUDITS_URL,
     PSTAKE_APP_URL } from '../constants/config';
 
 import Icon from "../components/Icon";
@@ -91,6 +92,13 @@ class Header extends Component {
         })
 
     }
+    onClickAudit = () => {
+        ReactGa.event({
+            category: 'AUDITS',
+            action: 'Clicked on AUDIT'
+        })
+
+    }
     render() {
 
         return (
@@ -111,6 +119,7 @@ class Header extends Component {
 
 
                                     <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
+                                    <li className="nav-item"><a href={PSTAKE_AUDITS_URL} target="_blank" onClick={this.onClickAudit} rel="noopener noreferrer" className="nav-link">AUDITS</a></li>
                                    
                                     
                                     <li className="nav-item" style={{ marginLeft: '0', marginRight: '0' }}><a style={{ padding: '0' }} onClick={this.onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Airdrop</span></a></li>        
