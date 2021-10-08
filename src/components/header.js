@@ -5,11 +5,9 @@ import {PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL ,
     PSTAKE_FORUM_URL ,
     PSTAKE_AIRDROP_URL,
+    PSTAKE_AUDITS_URL,
     PSTAKE_APP_URL } from '../constants/config';
-import Alert from 'react-bootstrap/Alert';
-import close from '../assets/close_icon.png';
-import rightarrow from '../assets/right-arrow.png';
-import vectorarrow from '../assets/Vector.png';
+
 import Icon from "../components/Icon";
 class Header extends Component {
     constructor(props) {
@@ -94,29 +92,20 @@ class Header extends Component {
         })
 
     }
+    onClickAudit = () => {
+        ReactGa.event({
+            category: 'AUDITS',
+            action: 'Clicked on AUDIT'
+        })
+
+    }
     render() {
 
         return (
             <React.Fragment>
                 <div id="is-sticky">
                     <nav className={"navbar navbar-expand-lg fixed-top navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
-                        <div className="container-fluid bannernav-section">
-                            {this.state.bannerInfo ?
-                                <div className="container">
-                                    <Alert className="nav-banner alert-dismissible">
-                                        <p>
-                                            <a href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer"
-                                                >
-                                                <span onClick={this.onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp; pSTAKE Beta is live. Stake your ATOM now!</span>&nbsp;
-                                                <img src={rightarrow} alt="arrow" /></a>
-                                        </p>
-                                        <img src={close} alt="close" className="close" onClick={this.closeBanner}/>
-                                    </Alert>
-                                </div>
-                                : null}
-
-
-                        </div>
+                        
                         <div className="container mb-pad">
                             <Link className="navbar-brand logo text-uppercase" to="/">
                                </Link>
@@ -130,6 +119,7 @@ class Header extends Component {
 
 
                                     <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={this.onClickForum} rel="noopener noreferrer" className="nav-link">FORUM</a></li>
+                                    <li className="nav-item"><a href={PSTAKE_AUDITS_URL} target="_blank" onClick={this.onClickAudit} rel="noopener noreferrer" className="nav-link">AUDITS</a></li>
                                    
                                     
                                     <li className="nav-item" style={{ marginLeft: '0', marginRight: '0' }}><a style={{ padding: '0' }} onClick={this.onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn"> Airdrop</span></a></li>        

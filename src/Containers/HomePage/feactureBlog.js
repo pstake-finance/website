@@ -29,7 +29,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">LAUNCH</p>
+                                                <p className="text1">AIRDROP</p>
                                                 <p className="learn-more">Learn More<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -49,7 +49,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">PROGRAM</p>
+                                                <p className="text1">LAUNCH</p>
                                                 <p className="learn-more">Learn More<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
