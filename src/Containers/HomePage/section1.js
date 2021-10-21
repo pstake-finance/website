@@ -52,7 +52,7 @@ const SectionOne = () => {
                                 </div>
                                 <div className="network-stats">
                                     <div className="stats-count">
-                                        <h1>${totalTVLData} M+</h1>
+                                        <h1>${totalTVLData}M+</h1>
                                         <h6>Total Value Locked</h6>
                                     </div>
                                     <div className="stats-count">
@@ -60,11 +60,11 @@ const SectionOne = () => {
                                         <h6>Supported Networks (More Coming)</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>${totalstkXPRTData} M+</h1>
+                                        <h1>${totalstkXPRTData}M+</h1>
                                         <h6>Sushi Pool LP for stkATOM - Eth</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>${totalstkATOMData} M+</h1>
+                                        <h1>${totalstkATOMData}M+</h1>
                                         <h6>Sushi Pool LP for stkXPRT - Eth</h6>
                                     </div>
 
