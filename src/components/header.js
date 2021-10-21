@@ -5,7 +5,6 @@ import {PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL ,
     PSTAKE_FORUM_URL ,
     PSTAKE_AIRDROP_URL,
-    PSTAKE_AUDITS_URL,
     PSTAKE_APP_URL } from '../constants/config';
 
 import Icon from "../components/Icon";
