@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import rightarrow from '../../assets/right-arrow.svg';
 import InfoSection from "../../Containers/HomePage/InfoSection";
@@ -8,11 +8,27 @@ import {
 import { getTVLURL, getstkXPRTLIQUIDITYURL, getstkATOMLIQUIDITYURL } from "../../constants/url";
 
 const SectionOne = () => {
+  const [totalTVLData, setTotalTVLData] = useState('0.00');
+  const [totalstkXPRTData, settotalstkXPRTData] = useState('0.00');
+  const [totalstkATOMData, settotalstkATOMData] = useState('0.00');
+
     useEffect(() => {
         const url = getTVLURL()
+        const getstkXPRTurl = getstkXPRTLIQUIDITYURL()
+        const getstkATOMurl = getstkATOMLIQUIDITYURL()
         axios.get(url).then((result) => {
             const totaltvldata = result.data;
-            console.log(totaltvldata, 'totaltvldata')
+            setTotalTVLData((totaltvldata.TVL/1000000).toFixed(2))
+
+        });
+        axios.get(getstkXPRTurl).then((result) => {
+            const totalstkXPRTData = result.data;
+            settotalstkXPRTData((totalstkXPRTData.stkXPRTLiquidity/1000000).toFixed(2))
+
+        });
+        axios.get(getstkATOMurl).then((result) => {
+            const totalstkATOMData = result.data;
+            settotalstkATOMData((totalstkATOMData.stkATOMLiquidity/1000000).toFixed(2))
 
         });
     }, []);
@@ -36,7 +52,7 @@ const SectionOne = () => {
                                 </div>
                                 <div className="network-stats">
                                     <div className="stats-count">
-                                        <h1>$16.1 M+</h1>
+                                        <h1>${totalTVLData} M+</h1>
                                         <h6>Total Value Locked</h6>
                                     </div>
                                     <div className="stats-count">
@@ -44,11 +60,11 @@ const SectionOne = () => {
                                         <h6>Supported Networks (More Coming)</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>$9.1M+</h1>
+                                        <h1>${totalstkXPRTData}M+</h1>
                                         <h6>Sushi Pool LP for stkATOM - Eth</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>$54K+</h1>
+                                        <h1>${totalstkATOMData}M+</h1>
                                         <h6>Sushi Pool LP for stkXPRT - Eth</h6>
                                     </div>
 
