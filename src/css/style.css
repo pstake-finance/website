@@ -15,11 +15,13 @@ body a:hover {
           box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.navbar-custom.terms, .navbar.navbar-custom.privacy {
+.navbar.navbar-custom.terms,
+.navbar.navbar-custom.privacy {
   background: #fff;
 }
 
-.is-sticky .navbar.navbar-custom.terms, .is-sticky .navbar.navbar-custom.privacy {
+.is-sticky .navbar.navbar-custom.terms,
+.is-sticky .navbar.navbar-custom.privacy {
   background-color: #232327;
 }
 
@@ -148,6 +150,32 @@ body a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.banner-section .network-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.banner-section .network-stats .stats-count {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.banner-section .network-stats .stats-count h1 {
+  color: #1D1D22;
+  font-weight: bold;
+}
+
+.banner-section .network-stats .stats-count h6 {
+  color: #838C9F;
+  font-weight: normal;
 }
 
 .banner-section .banner-main-section {
@@ -454,6 +482,18 @@ body a:hover {
   color: #f3f3f3;
 }
 
+.stake-section.audited .audited-list {
+  text-align: center;
+}
+
+.stake-section.audited .audited-list img {
+  margin: 10px;
+}
+
+.stake-section.audited .section-title {
+  margin-bottom: 30px;
+}
+
 .stake-section {
   padding: 150px 0;
 }
@@ -488,7 +528,7 @@ body a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #EDEDED;
+  background: #ededed;
   padding: 20px 0px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -509,7 +549,7 @@ body a:hover {
 
 .stake-section .apr h5 {
   font-size: 14px;
-  background: #1D1D22;
+  background: #1d1d22;
   padding: 15px 35px;
   cursor: pointer;
   color: #fff;
@@ -1929,7 +1969,10 @@ body a:hover {
   .banner-section .banner-buttons .button {
     font-size: 14px;
   }
-  .banner-section .banner-heading, .pos-section .info-banner-heading, .stake-section .section-title, .second-section .section-title {
+  .banner-section .banner-heading,
+  .pos-section .info-banner-heading,
+  .stake-section .section-title,
+  .second-section .section-title {
     font-size: 28px;
   }
   .banner-section .caption span {
@@ -1998,10 +2041,14 @@ body a:hover {
 }
 
 @media only screen and (max-width: 767px) {
-  .banner-section .banner-heading, .pos-section .info-banner-heading, .stake-section .section-title, .second-section .section-title {
+  .banner-section .banner-heading,
+  .pos-section .info-banner-heading,
+  .stake-section .section-title,
+  .second-section .section-title {
     font-size: 24px;
   }
-  .pos-section p span, .stake-section p span {
+  .pos-section p span,
+  .stake-section p span {
     display: inline;
   }
   .stake-section p {
