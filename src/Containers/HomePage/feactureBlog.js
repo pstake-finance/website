@@ -1,11 +1,13 @@
 import React from 'react';
+
 import {
     PSTAKE_BLOG_ONE_URL,
     PSTAKE_BLOG_ONE_IMG_URL,
     PSTAKE_BLOG_TWO_URL,
     PSTAKE_BLOG_TWO_IMG_URL,
     PSTAKE_BLOG_THREE_URL,
-    PSTAKE_BLOG_THREE_IMG_URL
+    PSTAKE_BLOG_THREE_IMG_URL,
+    PSTAKE_MEDIUM_URL
 } from '../../constants/config';
 import Icon from "../../components/Icon";
 const FeactureBlog = () => {
@@ -79,7 +81,13 @@ const FeactureBlog = () => {
 
                             </div>
                         </div>
-
+                        <div className="banner-buttons">
+                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_MEDIUM_URL}>
+                                        <span className="button xprt">
+                                            <span className="hideone">Read All&nbsp;</span>
+                                        </span>
+                                    </a>
+                                </div>
 
                     </div>
                 </div>
