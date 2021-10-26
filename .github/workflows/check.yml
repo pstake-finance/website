@@ -24,3 +24,4 @@ jobs:
         run: npm run build --if-present
         env:
           CI: false
+          REACT_APP_DASHBORAD_URL: https://api.dashboard.pstake.finance/
