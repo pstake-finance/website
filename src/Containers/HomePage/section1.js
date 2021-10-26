@@ -61,11 +61,11 @@ const SectionOne = () => {
                                     </div>
                                     <div className="stats-count">
                                         <h1>${totalstkXPRTData}M+</h1>
-                                        <h6>Sushi Pool LP for stkATOM - Eth</h6>
+                                        <h6>Sushi Pool LP for stkATOM - ETH</h6>
                                     </div>
                                     <div className="stats-count">
                                         <h1>${totalstkATOMData}M+</h1>
-                                        <h6>Sushi Pool LP for stkXPRT - Eth</h6>
+                                        <h6>Sushi Pool LP for stkXPRT - ETH</h6>
                                     </div>
 
                                 </div>
