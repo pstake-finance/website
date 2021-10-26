@@ -1,6 +1,7 @@
 import React from 'react';
 import auditedone from '../../assets/auditedone.png';
 import auditedtwo from '../../assets/auditedtwo.png';
+import comingsoon from '../../assets/comingsoon.png';
 import {
     PSTAKE_AUDITS_URL
      } from '../../constants/config';
@@ -16,6 +17,7 @@ const Audited = () => {
                             <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={auditedtwo} title="Solidified" alt="Solidified" /></a>
                             
                             <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={auditedone} title="Solidified" alt="Solidified" /></a>
+                            <img className="" src={comingsoon} title="ComingSoon" alt="ComingSoon" />
                         </div>
 
 

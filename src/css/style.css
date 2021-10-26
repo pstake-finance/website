@@ -169,12 +169,12 @@ body a:hover {
 }
 
 .banner-section .network-stats .stats-count h1 {
-  color: #1D1D22;
+  color: #1d1d22;
   font-weight: bold;
 }
 
 .banner-section .network-stats .stats-count h6 {
-  color: #838C9F;
+  color: #838c9f;
   font-weight: normal;
 }
 
@@ -484,14 +484,15 @@ body a:hover {
 
 .stake-section.audited .audited-list {
   text-align: center;
+  width: 80%;
 }
 
 .stake-section.audited .audited-list img {
-  margin: 10px;
+  margin: 25px 10px;
 }
 
 .stake-section.audited .section-title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .stake-section {
@@ -1298,6 +1299,52 @@ body a:hover {
   padding: 0px 0 115px 0;
 }
 
+.stay-updated .banner-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 45px;
+}
+
+.stay-updated .banner-buttons .white-paper {
+  background: #313238 !important;
+}
+
+.stay-updated .banner-buttons .button {
+  border-radius: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  border: 0px solid;
+  width: 180px;
+  padding: 15px 1.5rem;
+}
+
+.stay-updated .banner-buttons .xprt {
+  background: #e50913 !important;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.stay-updated .banner-buttons .xprt .hideone {
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .stay-updated .section-title {
   color: #ffffff;
 }
@@ -1933,6 +1980,9 @@ body a:hover {
   .navbar-expand-lg .navbar-nav .nav-link {
     color: #fff;
   }
+  .stake-section.audited .audited-list {
+    width: 100%;
+  }
   .banner-section .banner-buttons a {
     width: 50%;
   }
@@ -2046,6 +2096,9 @@ body a:hover {
   .stake-section .section-title,
   .second-section .section-title {
     font-size: 24px;
+  }
+  .stake-section.audited .audited-list img {
+    margin: 25px 0px;
   }
   .pos-section p span,
   .stake-section p span {
