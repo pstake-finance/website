@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactGa from 'react-ga';
-import Icon from "../../components/Icon";
+import Icon from "./Icon";
 import {Link} from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 import {
     PSTAKE_TWITTER_URL,
 PSTAKE_TELEGRAM_URL,
@@ -9,7 +10,7 @@ PSTAKE_YOUTUBE_URL,
 PSTAKE_REDDIT_URL,
 PERSISTENCE_ONE_URL,
 PSTAKE_MEDIUM_URL
-}  from '../../constants/config';
+}  from '../constants/config';
 const clickOnTwitter = () => {
     ReactGa.event({
         category: 'Twitter',
@@ -46,6 +47,7 @@ const clickOnReddit = () => {
 
 }
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <React.Fragment>
             <section className="footer-section">
@@ -69,7 +71,7 @@ const Footer = () => {
                         </div>
                     <p className="terms">{new Date().getFullYear()} | Built with  <Icon viewClass="social_icon_ig heart" icon="footerheart"/> by <a href={PERSISTENCE_ONE_URL} target="_blank" rel="noopener noreferrer">Persistence.</a></p>
                     <div className="privacy-terms">
-                        <Link to='/terms' target='_blank'>Terms of Service </Link> <Link to='/privacy' target='_blank'>Privacy Policy</Link>
+                        <Link to='/terms' target='_blank'>{t("TERMS_OF_SERVICE")} </Link> <Link to='/privacy' target='_blank'>{t("PRIVACY_POLICY")}</Link>
                     </div>
                 </div>
             </section>
