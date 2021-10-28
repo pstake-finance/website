@@ -1,44 +1,45 @@
 import React from 'react';
 import cosmospos from '../../assets/pos/cosmospos.svg';
 import ethpos from '../../assets/pos/ethpos.svg';
-//import cordanapos from '../../assets/pos/cordanapos.svg';
+import { useTranslation } from "react-i18next";
 import polkadotpos from '../../assets/pos/polkadotpos.svg';
 import solanapos from '../../assets/pos/solanapos.svg';
-const leadingPOS = () => {
+const LeadingPOS = () => {
+    const { t } = useTranslation();
     return (
         <React.Fragment>
             <section className="pos-section aos-init aos-animate">
                 <div className="container">
-                <h3 className="info-banner-heading "> Ecosystems and their <span>Market Caps</span></h3>
-                <p className="text-center mt-2">pSTAKE’s Total Addressable Market is ~$500B+, with the following PoS ecosystems holding the lion’s share of value</p>
+                <h3 className="info-banner-heading ">{t("ECOSYSTEM_TITLE")} <span>{t("MARKET_CAPS")}</span></h3>
+                <p className="text-center mt-2">{t("PSTAKE_TOTAL_ADDRESSABLE")}</p>
 
                    <div className="row">
                         <div className="pos-cards">
                             <img src={cosmospos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
                                 <h4>$50B+</h4>
-                                <p>Cosmos</p>
+                                <p>{t("COSMOS")}</p>
                             </div>
                         </div>
                         <div className="pos-cards">
                             <img src={ethpos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
                                 <h4>$350B+</h4>
-                                <p>Ethereum</p>
+                                <p>{t("ETHEREUM")}</p>
                             </div>
                         </div>
                         <div className="pos-cards">
                             <img src={polkadotpos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
                                 <h4>$30B+</h4>
-                                <p>Polkadot</p>
+                                <p>{t("POLKADOT")}</p>
                             </div>
                         </div>
                         <div className="pos-cards">
                             <img src={solanapos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
                                 <h4>$60B+</h4>
-                                <p>Solana</p>
+                                <p>{t("SOLANA")}</p>
                             </div>
                         </div>
                        
@@ -53,4 +54,4 @@ const leadingPOS = () => {
 }
 
 
-export default leadingPOS;
+export default LeadingPOS;

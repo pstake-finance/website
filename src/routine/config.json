@@ -1,7 +1,0 @@
-{
-  "NETWORK_ID" : 3,
-  "DECIMAL_PLACES" : 6,
-  "XPRT_PRIZE_POOL" : 5000,
-  "web3WS" : "wss://ropsten.infura.io/ws/v3/b21966541db246d398fb31402eec2c14",
-  "endDateTs": 1627385797
-}

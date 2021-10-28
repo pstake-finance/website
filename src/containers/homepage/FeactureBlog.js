@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useTranslation } from "react-i18next";
 import {
     PSTAKE_BLOG_ONE_URL,
     PSTAKE_BLOG_ONE_IMG_URL,
@@ -11,11 +11,12 @@ import {
 } from '../../constants/config';
 import Icon from "../../components/Icon";
 const FeactureBlog = () => {
+    const { t } = useTranslation();
     return (
         <React.Fragment>
             <section className="stay-updated">
                 <div className="title-line-section">
-                    <h3 className="section-title">Featured Blogs</h3>
+                    <h3 className="section-title">{t("FEACTURED_BLOGS")}</h3>
                 </div>
                 <div className="container">
                     <div className="row">
@@ -31,8 +32,8 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">AIRDROP</p>
-                                                <p className="learn-more">Learn More<Icon viewClass="arrow-right" icon="arrow-right" /></p>
+                                                <p className="text1">{t("AIRDROP_SECOND_TITLE")}</p>
+                                                <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
                                     </a>
@@ -51,8 +52,8 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">LAUNCH</p>
-                                                <p className="learn-more">Learn More<Icon viewClass="arrow-right" icon="arrow-right" /></p>
+                                                <p className="text1">{t("LAUNCH")}</p>
+                                                <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
                                     </a>
@@ -71,8 +72,8 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">STAKE</p>
-                                                <p className="learn-more">Learn More<Icon viewClass="arrow-right" icon="arrow-right" /></p>
+                                                <p className="text1">{t("STAKE_SECOND_TITLE")}</p>
+                                                <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
                                     </a>
@@ -84,7 +85,7 @@ const FeactureBlog = () => {
                         <div className="banner-buttons">
                                     <a rel="noopener noreferrer" target="_blank" href={PSTAKE_MEDIUM_URL}>
                                         <span className="button xprt">
-                                            <span className="hideone">Read All&nbsp;</span>
+                                            <span className="hideone">{t("READ_ALL")}&nbsp;</span>
                                         </span>
                                     </a>
                                 </div>

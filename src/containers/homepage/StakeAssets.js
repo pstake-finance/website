@@ -1,44 +1,46 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { useTranslation } from "react-i18next";
 import {
     PSTAKE_APP_URL } from '../../constants/config';
 import asset1 from '../../assets/asset_1.svg';
 import asset2 from '../../assets/asset_2.svg';
 const StakeAssets = () => {
+    const { t } = useTranslation();
     return (
         <React.Fragment>
             <section className="stake-section">
                 <div className="container">
                     <div className="row">
-                        <h3 className="section-title">Stake Your Assets Now</h3>
-                    <p className="text-center mt-2">Stake Assets using pSTAKE to receive pASSETS which can be used in DeFi to generate yield while <span>you earn staking rewards on your staked Assets</span></p>
+                        <h3 className="section-title">{t("STAKE_YOUR_ASSETS")}</h3>
+                    <p className="text-center mt-2">{t("STAKE_ASSETS_USNING_PSAKE")} <span>{t("YOU_EARN_STAKING_REWARDS")}</span></p>
 
                         <Card className="col-md-4 col-xs-6">
                             <Card.Body>
                                 <div className="text-center">
                                 <img className="pt-4 pb-4" src={asset1} title="Asset" alt="Asset"/>
-                                <Card.Title>Cosmos Network</Card.Title>
+                                <Card.Title>{t("COSMOS_NETWORK")}</Card.Title>
                                 </div>
                                
                               
                             </Card.Body>
                             <div className="apr">
                                 <h1>7% <span>APR</span></h1>
-                                <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>Stake Now</h5></a>
+                                <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
                             </div>
                         </Card>
                         <Card className="col-md-4  col-xs-6">
                             <Card.Body>
                                 <div className="text-center">
                                 <img className="pt-4 pb-4" src={asset2} title="Asset" alt="Asset"/>
-                                <Card.Title>Persistence</Card.Title>
+                                <Card.Title>{t("PERSISTENCE")}</Card.Title>
                                 </div>
                                
                              
                             </Card.Body>
                             <div className="apr">
                                 <h1>30.62% <span>APR</span></h1>
-                                <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>Stake Now</h5></a>
+                                <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
 
                             </div>
                         </Card>

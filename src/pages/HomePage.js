@@ -1,11 +1,11 @@
 import React from 'react';
-import SectionOne from '../Containers/HomePage/section1';
-import SectionTwo from '../Containers/HomePage/section2';
-import LeadingPOS from '../Containers/HomePage/LeadingPOS';
-import FeactureBlog from '../Containers/HomePage/feactureBlog';
-import StakeAssets from '../Containers/HomePage/stakeAssets';
-import Audited from '../Containers/HomePage/audited';
-import Footer from "../Containers/HomePage/Footer";
+import SectionOne from '../containers/homepage/SectionOne';
+import SectionTwo from '../containers/homepage/SectionTwo';
+import LeadingPOS from '../containers/homepage/LeadingPOS';
+import FeactureBlog from '../containers/homepage/FeactureBlog';
+import StakeAssets from '../containers/homepage/StakeAssets';
+import Audited from '../containers/homepage/Audited';
+import Footer from "../components/Footer";
 const homePage = () => {
         return (
             <React.Fragment>
