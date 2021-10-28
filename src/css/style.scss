@@ -936,17 +936,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         padding: 0 10%;
     }
 }
-// .button.xprt {
-//     span.hidetwo {
-//         display: none;
-//     }
-//     &:hover span.hideone {
-//         display: none;
-//     }
-//     &:hover span.hidetwo {
-//         display: block;
-//     }
-// }
+
 .pos-section {
     position: relative;
     padding: 150px 0 65px 0;
@@ -1158,8 +1148,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
             img {
                 border: 0;
-                //mix-blend-mode: luminosity;
-                //height: 198px;
+              
             }
         }
 
@@ -1188,10 +1177,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 color: #7b7b7b;
             }
         }
-        .card-img-top {
-            //height: 180px;
-            //mix-blend-mode: luminosity;
-        }
+       
 
         .custom-card {
             background: #101013;
@@ -1581,14 +1567,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             align-items: center;
             overflow: hidden;
 
-            // &::before {
-            // 	content: "";
-            // 	height: 100%;
-            // 	width: 8px;
-            // 	background: #e50913;
-            // 	position: absolute;
-            // 	left: 0px;
-            // }
+          
             .icon.icon-social_icon_imgg {
                 width: 25px;
             }
