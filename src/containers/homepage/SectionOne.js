@@ -61,6 +61,7 @@ const SectionOne = () => {
                                     <div className="stats-count">
                                         <h1>02</h1>
                                         <h6>{t("SUPPORTED_NETWORKS")}</h6>
+                                        <h6>{t("MORE_COMING_SOON")}</h6>
                                     </div>
                                     <div className="stats-count">
                                         <h1>${totalstkATOMData}M+</h1>
