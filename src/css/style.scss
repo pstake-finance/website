@@ -68,7 +68,7 @@ body a {
     .navbar-brand.logo {
         background: url(../assets/logo.svg);
     }
-    .navbar-nav .nav-link {
+    .navbar-nav a {
         color: #fff;
     }
     .navbar-nav .nav-link.app-btn {
@@ -84,11 +84,12 @@ body a {
         width: 105px;
         height: 26px;
     }
-    .navbar-nav .nav-link {
+    .navbar-nav a {
         color: #322d3e;
         font-size: 12px;
         font-weight: 600;
     }
+   
     button {
         color: #fff;
         background: #e50913;
@@ -110,6 +111,12 @@ body a {
     .background-gradient {
         background: url(../assets/bg.svg);
         background-repeat: no-repeat;
+        .gradient-ellispse {
+            position: absolute;
+            right: 0;
+            bottom: 60px;
+            z-index: 23;
+        }
     }
     .banner-video {
         width: 100%;
@@ -620,6 +627,7 @@ body a {
 }
 .footer-section {
     padding: 100px 0;
+    background: #1d1d22;
     .icon-list {
         display: flex;
         justify-content: center;
@@ -1148,7 +1156,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
             img {
                 border: 0;
-              
             }
         }
 
@@ -1177,7 +1184,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 color: #7b7b7b;
             }
         }
-       
 
         .custom-card {
             background: #101013;
@@ -1567,7 +1573,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             align-items: center;
             overflow: hidden;
 
-          
             .icon.icon-social_icon_imgg {
                 width: 25px;
             }
@@ -1632,7 +1637,79 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         border-radius: 8px;
     }
 }
+.tokensale {
+    .second-section.insurance {
+        .caption {
+            text-align: center;
+            width: 65%;
+            font-size: 14px;
+            color: #dbd6d6;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    }
+    .investors {
+        .investor-list {
+            text-align: center;
+            img {
+                margin: 25px 10px;
+            }
+        }
+    }
+    .incentive-alignment,
+    .investors,
+    .tokenomics {
+        padding: 150px 0;
+        background: #1d1d22;
+        .inner-incentive {
+            margin: auto;
+            text-align: center;
+            .img-width {
+                width: 100%;
+            }
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 4rem;
+            line-height: 131.4%;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 80px;
+        }
+    }
+    .governance {
+        background: url(../assets/governance_bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .gradientellipse2 {
+            position: absolute;
+            bottom: 50px;
+        }
 
+        .second-section {
+            background: none;
+        }
+    }
+    .inner-bg {
+        background: #1d1d22;
+    }
+    .caption {
+        margin-bottom: 15px;
+    }
+    .banner-main-section {
+        padding: 230px 0 50px 0;
+    }
+    .group-staked-assets {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        img {
+            margin: 0 5px;
+        }
+    }
+}
 @media (min-width: 1400px) {
     .container,
     .container-lg,
@@ -1643,7 +1720,15 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 991px) {
-   
+    .tokensale .tokenomics .inner-incentive img {
+        width: 100%;
+    }
+    .banner-section .background-gradient .gradient-ellispse {
+       display: none;
+    }
+    .tokensale .governance .gradientellipse2 {
+       display: none; 
+    }
     .navbar-expand-lg .navbar-nav .nav-link {
         color: #fff;
     }
@@ -1656,7 +1741,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .pos-section .pos-cards {
         margin: 15px;
     }
-    .m-none {
+    .m-none { 
         display: none;
     }
     .dd-none {
@@ -1671,6 +1756,12 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .second-section {
         padding: 0 0 150px 0;
+    }
+    .tokensale .second-section {
+        padding: 150px 0;
+    }
+    .tokensale .incentive-alignment .section-title, .tokensale .investors .section-title, .tokensale .tokenomics .section-title {
+        font-size: 28px;
     }
     .info-section .image-section img.ellipse-gradient {
         display: none;
@@ -1759,6 +1850,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 767px) {
+    
     .banner-section .banner-heading,
     .pos-section .info-banner-heading,
     .stake-section .section-title,

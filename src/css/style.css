@@ -82,7 +82,7 @@ body a:hover {
   background: url(../assets/logo.svg);
 }
 
-.navbar-expand-lg.sticky-dark .navbar-nav .nav-link {
+.navbar-expand-lg.sticky-dark .navbar-nav a {
   color: #fff;
 }
 
@@ -102,7 +102,7 @@ body a:hover {
   height: 26px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand-lg .navbar-nav a {
   color: #322d3e;
   font-size: 12px;
   font-weight: 600;
@@ -134,6 +134,13 @@ body a:hover {
 .banner-section .background-gradient {
   background: url(../assets/bg.svg);
   background-repeat: no-repeat;
+}
+
+.banner-section .background-gradient .gradient-ellispse {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  z-index: 23;
 }
 
 .banner-section .banner-video {
@@ -787,6 +794,7 @@ body a:hover {
 
 .footer-section {
   padding: 100px 0;
+  background: #1d1d22;
 }
 
 .footer-section .icon-list {
@@ -1966,6 +1974,97 @@ body a:hover {
   border-radius: 8px;
 }
 
+.tokensale .second-section.insurance .caption {
+  text-align: center;
+  width: 65%;
+  font-size: 14px;
+  color: #dbd6d6;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.tokensale .investors .investor-list {
+  text-align: center;
+}
+
+.tokensale .investors .investor-list img {
+  margin: 25px 10px;
+}
+
+.tokensale .incentive-alignment,
+.tokensale .investors,
+.tokensale .tokenomics {
+  padding: 150px 0;
+  background: #1d1d22;
+}
+
+.tokensale .incentive-alignment .inner-incentive,
+.tokensale .investors .inner-incentive,
+.tokensale .tokenomics .inner-incentive {
+  margin: auto;
+  text-align: center;
+}
+
+.tokensale .incentive-alignment .inner-incentive .img-width,
+.tokensale .investors .inner-incentive .img-width,
+.tokensale .tokenomics .inner-incentive .img-width {
+  width: 100%;
+}
+
+.tokensale .incentive-alignment .section-title,
+.tokensale .investors .section-title,
+.tokensale .tokenomics .section-title {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 131.4%;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.tokensale .governance {
+  background: url(../assets/governance_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.tokensale .governance .gradientellipse2 {
+  position: absolute;
+  bottom: 50px;
+}
+
+.tokensale .governance .second-section {
+  background: none;
+}
+
+.tokensale .inner-bg {
+  background: #1d1d22;
+}
+
+.tokensale .caption {
+  margin-bottom: 15px;
+}
+
+.tokensale .banner-main-section {
+  padding: 230px 0 50px 0;
+}
+
+.tokensale .group-staked-assets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tokensale .group-staked-assets img {
+  margin: 0 5px;
+}
+
 @media (min-width: 1400px) {
   .container,
   .container-lg,
@@ -1977,6 +2076,15 @@ body a:hover {
 }
 
 @media only screen and (max-width: 991px) {
+  .tokensale .tokenomics .inner-incentive img {
+    width: 100%;
+  }
+  .banner-section .background-gradient .gradient-ellispse {
+    display: none;
+  }
+  .tokensale .governance .gradientellipse2 {
+    display: none;
+  }
   .navbar-expand-lg .navbar-nav .nav-link {
     color: #fff;
   }
@@ -2004,6 +2112,12 @@ body a:hover {
   }
   .second-section {
     padding: 0 0 150px 0;
+  }
+  .tokensale .second-section {
+    padding: 150px 0;
+  }
+  .tokensale .incentive-alignment .section-title, .tokensale .investors .section-title, .tokensale .tokenomics .section-title {
+    font-size: 28px;
   }
   .info-section .image-section img.ellipse-gradient {
     display: none;
