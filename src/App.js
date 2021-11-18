@@ -11,7 +11,6 @@ import RouteNotFound from './components/RouteNotFound';
 import HomePage from './pages/HomePage';
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
-import TokenSale from "./pages/TokenSale";
 
 
 ReactGA.initialize(ANALYTICS)
@@ -31,10 +30,7 @@ const App = () => {
   },{
       path: '/privacy',
       component: Privacy,
-  },{
-    path: '/tokensale',
-    component: TokenSale,
-}];
+  }];
 
   const [isOnline, setNetwork] = useState(window.navigator.onLine);
   const updateNetwork = () => {
