@@ -29,8 +29,9 @@ const Investors = () => {
         <React.Fragment>
             <section className="investors">
                 <div className="container">
+                <h3 className="section-title backing_us">{t("WHO_BACKING_US")}</h3>
                    
-                        <h3 className="section-title">{t("INVESTORS")}</h3>
+                        <h4 className="section-title">{t("INVESTORS")}</h4>
                         <div className="investor-list">
                             <a href={THREEAC_URL} target="_blank" rel="noopener noreferrer"><img className="" src={arrow_capital} title="Arrow Capital" alt="Arrow Capital" /></a>    
                             <a href={SEQUOIA_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sequoia} title="Sequoia" alt="Sequoia" /></a>

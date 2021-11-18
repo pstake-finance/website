@@ -89,7 +89,7 @@ body a {
         font-size: 12px;
         font-weight: 600;
     }
-   
+
     button {
         color: #fff;
         background: #e50913;
@@ -396,7 +396,7 @@ body a {
         }
     }
     .section-title {
-        margin-bottom: 10px;
+        margin-bottom: 40px;
     }
 }
 .stake-section {
@@ -1237,8 +1237,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
     h3 {
         text-align: center;
-        color: #191616;
+      
         padding: 80px 0;
+        font-size: 4rem;
+        font-weight: bold;
+        
     }
 
     .blog-head {
@@ -1656,7 +1659,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     span.des_text_one {
         display: inline-block;
-        color: #E50913;
+        color: #e50913;
         font-weight: 600;
     }
     span.des_text_cont {
@@ -1682,12 +1685,12 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .investors.validators {
         background: #1d1d22;
+        padding: 150px 0;
     }
     .incentive-alignment,
-    .investors,
     .tokenomics {
         padding: 150px 0;
-        background: #1c1c21;
+
         .inner-incentive {
             margin: auto;
             text-align: center;
@@ -1704,6 +1707,21 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             width: 100%;
             margin-bottom: 80px;
+        }
+    }
+    .investors {
+        .section-title.backing_us {
+            font-size: 4rem;
+            margin-bottom: 80px;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 3rem;
+            line-height: 131.4%;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
         }
     }
     .governance {
@@ -1748,17 +1766,32 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 991px) {
+    .tokensale .investors .section-title.backing_us {
+        margin-bottom: 40px;
+    }
+    .tokensale .investors.validators {
+        padding: 75px 0;
+    }
+    .stay-updated h3 {
+        font-size: 28px;
+    }
+    .tokensale .investors .section-title.backing_us {
+        font-size: 34px;
+    }
     .tokensale .investors .investor-list img {
         margin: 10px;
     }
-    .tokensale .tokenomics .inner-incentive img, .tokensale .incentive-alignment .inner-incentive img{
+    .tokensale .tokenomics .inner-incentive img,
+    .tokensale .incentive-alignment .inner-incentive img {
         width: 100%;
     }
-    .tokensale .incentive-alignment, .tokensale .investors, .tokensale .tokenomics {
+    .tokensale .incentive-alignment,
+    .tokensale .investors,
+    .tokensale .tokenomics {
         padding: 75px 0;
-        background: #1c1c21;
     }
-    .banner-section.tokensale .banner-main-section,  .tokensale .second-section {
+    .banner-section.tokensale .banner-main-section,
+    .tokensale .second-section {
         padding: 75px 0;
     }
     .stake-section.audited .section-title {
@@ -1768,10 +1801,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         margin: 10px;
     }
     .banner-section .background-gradient .gradient-ellispse {
-       display: none;
+        display: none;
     }
     .tokensale .governance .gradientellipse2 {
-       display: none; 
+        display: none;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         color: #fff;
@@ -1785,7 +1818,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .pos-section .pos-cards {
         margin: 15px;
     }
-    .m-none { 
+    .m-none {
         display: none;
     }
     .dd-none {
@@ -1804,10 +1837,14 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .tokensale .second-section {
         padding: 75px 0;
     }
-    .tokensale .incentive-alignment .section-title, .tokensale .investors .section-title, .tokensale .tokenomics .section-title  {
+    .tokensale .incentive-alignment .section-title,
+    .tokensale .investors .section-title,
+    .tokensale .tokenomics .section-title {
         margin-bottom: 40px;
     }
-    .tokensale .incentive-alignment .section-title, .tokensale .investors .section-title, .tokensale .tokenomics .section-title {
+    .tokensale .incentive-alignment .section-title,
+    .tokensale .investors .section-title,
+    .tokensale .tokenomics .section-title {
         font-size: 28px;
     }
     .info-section .image-section img.ellipse-gradient {
@@ -1897,14 +1934,13 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 767px) {
-    
     .banner-section .banner-heading,
     .pos-section .info-banner-heading,
     .stake-section .section-title,
     .second-section .section-title {
         font-size: 24px;
     }
-    
+
     .pos-section p span,
     .stake-section p span {
         display: inline;

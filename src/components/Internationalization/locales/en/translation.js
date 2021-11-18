@@ -233,7 +233,8 @@ let English = {
     "INVESTORS": "Investors",
     "VALIDATORS": "Validators",
     "TOKENOMICS": "Tokenomics",
-    "BUY_NOW": "Buy Now"
+    "BUY_NOW": "Buy Now",
+    "WHO_BACKING_US": "Who’s backing us?",
 }
 
 };
