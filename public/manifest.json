@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "ogimage.jpg",
+      "src": "ogimage.jpeg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "ogimage.jpg",
+      "src": "ogimage.jpeg",
       "type": "image/png",
       "sizes": "512x512"
     }
