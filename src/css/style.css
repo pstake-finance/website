@@ -1974,6 +1974,32 @@ body a:hover {
   border-radius: 8px;
 }
 
+.tokensale .buttonapp .nav-link {
+  text-align: center;
+}
+
+.tokensale .buttonapp .nav-link .nav-link.app-btn {
+  padding: 10px 25px;
+  background: #1d1d22;
+  color: #fff;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.tokensale span.des_text_one {
+  display: inline-block;
+  color: #E50913;
+  font-weight: 600;
+}
+
+.tokensale span.des_text_cont {
+  display: inline-block;
+}
+
 .tokensale .second-section.insurance .caption {
   text-align: center;
   width: 65%;
@@ -1991,11 +2017,15 @@ body a:hover {
   margin: 25px 10px;
 }
 
+.tokensale .investors.validators {
+  background: #1d1d22;
+}
+
 .tokensale .incentive-alignment,
 .tokensale .investors,
 .tokensale .tokenomics {
   padding: 150px 0;
-  background: #1d1d22;
+  background: #1c1c21;
 }
 
 .tokensale .incentive-alignment .inner-incentive,
@@ -2008,7 +2038,8 @@ body a:hover {
 .tokensale .incentive-alignment .inner-incentive .img-width,
 .tokensale .investors .inner-incentive .img-width,
 .tokensale .tokenomics .inner-incentive .img-width {
-  width: 100%;
+  max-width: 100%;
+  width: 1000px;
 }
 
 .tokensale .incentive-alignment .section-title,
@@ -2076,8 +2107,24 @@ body a:hover {
 }
 
 @media only screen and (max-width: 991px) {
-  .tokensale .tokenomics .inner-incentive img {
+  .tokensale .investors .investor-list img {
+    margin: 10px;
+  }
+  .tokensale .tokenomics .inner-incentive img, .tokensale .incentive-alignment .inner-incentive img {
     width: 100%;
+  }
+  .tokensale .incentive-alignment, .tokensale .investors, .tokensale .tokenomics {
+    padding: 75px 0;
+    background: #1c1c21;
+  }
+  .banner-section.tokensale .banner-main-section, .tokensale .second-section {
+    padding: 75px 0;
+  }
+  .stake-section.audited .section-title {
+    margin-bottom: 25px;
+  }
+  .stake-section.audited .audited-list img {
+    margin: 10px;
   }
   .banner-section .background-gradient .gradient-ellispse {
     display: none;
@@ -2114,7 +2161,10 @@ body a:hover {
     padding: 0 0 150px 0;
   }
   .tokensale .second-section {
-    padding: 150px 0;
+    padding: 75px 0;
+  }
+  .tokensale .incentive-alignment .section-title, .tokensale .investors .section-title, .tokensale .tokenomics .section-title {
+    margin-bottom: 40px;
   }
   .tokensale .incentive-alignment .section-title, .tokensale .investors .section-title, .tokensale .tokenomics .section-title {
     font-size: 28px;
@@ -2210,9 +2260,6 @@ body a:hover {
   .stake-section .section-title,
   .second-section .section-title {
     font-size: 24px;
-  }
-  .stake-section.audited .audited-list img {
-    margin: 25px 0px;
   }
   .pos-section p span,
   .stake-section p span {

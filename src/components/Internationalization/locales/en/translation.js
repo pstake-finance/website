@@ -220,8 +220,10 @@ let English = {
     // TOKEN SALE
     "PSTAKE": "$PSTAKE",
     "PSTAKE_DESCRIPTION": "$PSTAKE is the governance token of the pSTAKE platform. pSTAKE currently",
-    "PSTAKE_DESCRIPTION_NEXT_LINE_ONE": "supports two networks Cosmos & Persistence. It aligns stakeholder",
-    "PSTAKE_DESCRIPTION_NEXT_LINE_TWO": "ncentives in pSTAKE’s liquid staking ecosystem.",
+    "PSTAKE_DESCRIPTION_NEXT_LINE_ONE": "supports two networks",
+    "PSTAKE_DESCRIPTION_TEXT_ONE": "Cosmos & Persistence. ",
+    "PSTAKE_DESCRIPTION_NEXT_LINE_THREE": "It aligns stakeholder",
+    "PSTAKE_DESCRIPTION_NEXT_LINE_TWO": "incentives in pSTAKE’s liquid staking ecosystem.",
     "GOVERNANCE": "Governance",
     "INSURANCE": "Insurance",
     "INSURANCE_TITLE":"Validators who wish to be whitelisted to receive delegations on the Terra Blockchain, stake ‘x’ number of $PSTAKE tokens to the Terra $PSTAKE Staking Vault. This $PSTAKE is used as collateral in case the validator is slashed on the Terra Network.",
@@ -230,7 +232,8 @@ let English = {
     "INCENTIVE_ALIGNMENT": "Incentive Alignement",
     "INVESTORS": "Investors",
     "VALIDATORS": "Validators",
-    "TOKENOMICS": "Tokenomics"
+    "TOKENOMICS": "Tokenomics",
+    "BUY_NOW": "Buy Now"
 }
 
 };

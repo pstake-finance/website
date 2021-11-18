@@ -12,7 +12,7 @@ const Incentive = () => {
                    
                         <h3 className="section-title">{t("INCENTIVE_ALIGNMENT")}</h3>
                         <div className="inner-incentive">
-                            <img src={incentive} alt="inentive" className="img-width" />
+                            <img src={incentive} alt="inentive" />
                         </div>
                     </div>
                
