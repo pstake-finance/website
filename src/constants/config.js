@@ -30,6 +30,22 @@ export const CHORME_URL = "https://support.google.com/accounts/answer/32050?co=G
 export const FIREFOX_URL = "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox";
 export const SAFARI_URL = "https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac";
 export const IE_URL = "https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies";
+export const THREEAC_URL = "https://www.threearrowscap.com/";
+export const SEQUOIA_URL = "https://www.sequoiacap.com/india/";
+export const COINBASE_VENTURES_URL = "https://www.coinbase.com/ventures";
+export const KRAKEN_VENTURES_URL = "https://www.krakenventures.com/";
+export const TENDERMINT_URL = "https://tendermint.com/";
+export const ALAMEDA_RESEARCH_URL = "https://www.alameda-research.com/";
+export const DEFI_CAPITAL_URL = "https://deficapital.com/";
+export const GALAXY_DIGITAL_URL = "https://www.galaxydigital.io/";
+export const SPARTAN_CAPITAL = "https://spartancapital.com/";
+export const SINO_GLOBAL_CAPITAL = "https://www.sinoglobalcapital.com/";
+export const STAKEFISH = "https://stake.fish/en/";
+export const FIGMENT = "https://www.figment.io/";
+export const EVERSTAKE = "https://everstake.one/";
+export const CHORUS = "https://chorus.one/";
+export const COSMOSTATION = "https://www.cosmostation.io/";
+
 //native blockchain
 export const CURRENCY = {
     solana: {

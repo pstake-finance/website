@@ -5,22 +5,26 @@ import LeadingPOS from '../containers/homepage/LeadingPOS';
 import FeactureBlog from '../containers/homepage/FeactureBlog';
 import StakeAssets from '../containers/homepage/StakeAssets';
 import Audited from '../containers/homepage/Audited';
+import Investors from '../containers/tokensale/Investors';
+import Validators from '../containers/tokensale/Validators';
 import Footer from "../components/Footer";
 const homePage = () => {
-        return (
-            <React.Fragment>
-                <div className="container-fluid p-0">
-                    <SectionOne />
-                    <LeadingPOS />
-                    <StakeAssets />
-                    <SectionTwo />
-                    <Audited />
-                    <FeactureBlog />
-                    <Footer/>
-                </div>
-            </React.Fragment >
-        );
-    }
+    return (
+        <React.Fragment>
+            <div className="container-fluid p-0 tokensale">
+                <SectionOne />
+                <LeadingPOS />
+                <StakeAssets />
+                <SectionTwo />
+                <Audited />
+                <Investors />
+                <Validators />
+                <FeactureBlog />
+                <Footer />
+            </div>
+        </React.Fragment >
+    );
+}
 
 
 export default homePage;
