@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import arrow_capital from '../../assets/investors/arrow_capital.png';
+import arrow_capital from '../../assets/investors/arrow_capital.svg';
 import sequoia from '../../assets/investors/sequoia.png';
 import galaxydigital from '../../assets/investors/galaxydigital.png';
 import coinbase from '../../assets/investors/coinbase.png';
@@ -8,7 +8,7 @@ import krakenventures from '../../assets/investors/krakenventures.png';
 import spartencapital from '../../assets/investors/sparten_capital.png';
 import tendermint from '../../assets/investors/tendermint.png';
 import sino from '../../assets/investors/sino.png';
-import alameda from '../../assets/investors/alameda.png';
+import alameda from '../../assets/investors/almeda.svg';
 import defiance from '../../assets/investors/defiance_capital.png';
 import {
     THREEAC_URL,
