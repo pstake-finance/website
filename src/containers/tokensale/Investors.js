@@ -1,15 +1,15 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import arrow_capital from '../../assets/investors/arrow_capital.svg';
-import sequoia from '../../assets/investors/sequoia.png';
-import galaxydigital from '../../assets/investors/galaxydigital.png';
-import coinbase from '../../assets/investors/coinbase.png';
-import krakenventures from '../../assets/investors/krakenventures.png';
+import sequoia from '../../assets/investors/sequoia.svg';
+import galaxydigital from '../../assets/investors/galaxydigital.svg';
+import coinbase from '../../assets/investors/coinbase.svg';
+import krakenventures from '../../assets/investors/krakenventures.svg';
 import spartencapital from '../../assets/investors/sparten_capital.png';
-import tendermint from '../../assets/investors/tendermint.png';
-import sino from '../../assets/investors/sino.png';
+import tendermint from '../../assets/investors/tendermint.svg';
+import sino from '../../assets/investors/sino.svg';
 import alameda from '../../assets/investors/almeda.svg';
-import defiance from '../../assets/investors/defiance_capital.png';
+import defiance from '../../assets/investors/defiance_capital.svg';
 import {
     THREEAC_URL,
 SEQUOIA_URL,

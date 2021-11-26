@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import stakefish from '../../assets/validators/stakefish.png';
-import figment from '../../assets/validators/figment.png';
-import everstake from '../../assets/validators/everstake.png';
-import chorus from '../../assets/validators/chorus.png';
-import cosmostation from '../../assets/validators/cosmostation.png';
+import stakefish from '../../assets/validators/stakefish.svg';
+import figment from '../../assets/validators/figment.svg';
+import everstake from '../../assets/validators/everstake.svg';
+import chorus from '../../assets/validators/chorus.svg';
+import cosmostation from '../../assets/validators/cosmostation.svg';
 
 import {
     STAKEFISH,
