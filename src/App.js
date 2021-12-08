@@ -30,7 +30,10 @@ const App = () => {
   },{
       path: '/privacy',
       component: Privacy,
-  }];
+  },{
+    path: '/tokensale',
+    component: TokenSale,
+}];
 
   const [isOnline, setNetwork] = useState(window.navigator.onLine);
   const updateNetwork = () => {
