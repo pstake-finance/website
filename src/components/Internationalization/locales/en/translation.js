@@ -47,6 +47,7 @@ let English = {
         "LEARN_MORE":"Learn More",
         "LAUNCH": "LAUNCH",
         "STAKEDROP": "STAKEDROP",
+        "LIQUID_STAKING":"Liquid Staking",
         "STAKE_SECOND_TITLE": "STAKE",
         "READ_ALL": "Read All",
         "TERMS_OF_SERVICE":"Terms of Service",
@@ -233,7 +234,8 @@ let English = {
     "INVESTORS": "Investors",
     "VALIDATORS": "Validators",
     "TOKENOMICS": "Tokenomics",
-    "BUY_NOW": "Buy Now"
+    "BUY_NOW": "Buy Now",
+    "WHO_BACKING_US": "Who’s backing us?",
 }
 
 };

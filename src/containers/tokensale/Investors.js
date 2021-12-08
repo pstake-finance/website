@@ -1,15 +1,15 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import arrow_capital from '../../assets/investors/arrow_capital.png';
-import sequoia from '../../assets/investors/sequoia.png';
-import galaxydigital from '../../assets/investors/galaxydigital.png';
-import coinbase from '../../assets/investors/coinbase.png';
-import krakenventures from '../../assets/investors/krakenventures.png';
+import arrow_capital from '../../assets/investors/arrow_capital.svg';
+import sequoia from '../../assets/investors/sequoia.svg';
+import galaxydigital from '../../assets/investors/galaxydigital.svg';
+import coinbase from '../../assets/investors/coinbase.svg';
+import krakenventures from '../../assets/investors/krakenventures.svg';
 import spartencapital from '../../assets/investors/sparten_capital.png';
-import tendermint from '../../assets/investors/tendermint.png';
-import sino from '../../assets/investors/sino.png';
-import alameda from '../../assets/investors/alameda.png';
-import defiance from '../../assets/investors/defiance_capital.png';
+import tendermint from '../../assets/investors/tendermint.svg';
+import sino from '../../assets/investors/sino.svg';
+import alameda from '../../assets/investors/almeda.svg';
+import defiance from '../../assets/investors/defiance_capital.svg';
 import {
     THREEAC_URL,
 SEQUOIA_URL,
@@ -29,8 +29,9 @@ const Investors = () => {
         <React.Fragment>
             <section className="investors">
                 <div className="container">
+                <h3 className="section-title backing_us">{t("WHO_BACKING_US")}</h3>
                    
-                        <h3 className="section-title">{t("INVESTORS")}</h3>
+                        <h4 className="section-title">{t("INVESTORS")}</h4>
                         <div className="investor-list">
                             <a href={THREEAC_URL} target="_blank" rel="noopener noreferrer"><img className="" src={arrow_capital} title="Arrow Capital" alt="Arrow Capital" /></a>    
                             <a href={SEQUOIA_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sequoia} title="Sequoia" alt="Sequoia" /></a>
