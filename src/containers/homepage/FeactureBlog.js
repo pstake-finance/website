@@ -54,7 +54,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("LAUNCH")}</p>
+                                                <p className="text1">{t("REWARDS")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>

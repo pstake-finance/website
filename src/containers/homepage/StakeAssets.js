@@ -5,6 +5,7 @@ import {
     PSTAKE_APP_URL } from '../../constants/config';
 import asset1 from '../../assets/asset_1.svg';
 import asset2 from '../../assets/asset_2.svg';
+import asset3 from '../../assets/asset_3.svg';
 const StakeAssets = () => {
     const { t } = useTranslation();
     return (
@@ -42,6 +43,20 @@ const StakeAssets = () => {
                                 <h1>33% <span>APR</span></h1>
                                 <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
 
+                            </div>
+                        </Card>
+                        <Card className="col-md-4  col-xs-6">
+                            <Card.Body>
+                                <div className="text-center">
+                                <img className="pt-4 pb-4" src={asset3} title="Asset" alt="Asset"/>
+                                <Card.Title>{t("ETHEREUM")}</Card.Title>
+                                </div>
+                               
+                             
+                            </Card.Body>
+                            <div className="apr apr2">
+                              
+                                <h5>Coming Soon!</h5>
                             </div>
                         </Card>
                     </div>

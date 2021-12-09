@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import tokenomics from '../../assets/tokenomics.png';
-import incentization from '../../assets/incentization.png';
+import incentization from '../../assets/incentization.svg';
 import datalist from '../../assets/datalist.png';
 
 

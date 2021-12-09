@@ -42,12 +42,13 @@ let English = {
         "LIQUIDITY_INSTANT_STAKING_DESCRIPTION": "You can skip long unbonding periods by swapping your stkTOKENs for other assets through liquidity pools on DEXes.",
         "INSURANCE_FUND": "Insurance Fund",
         "INSURANCE_FUND_DESCRIPTION": "In the near future, assets delegated to pSTAKE’s safelisted validators will be safeguarded against slashing risks by an insurance pool which covers a portion or all of the slashed amount based on the severity of the slashing event.",
-        "GENERATE_ADDITONAL_YIELD": "Generate Additional Yield",
+        "GENERATE_ADDITONAL_YIELD": "Leverage Defi",
         "GENERATE_ADDITONAL_YIELD_DESCRIPTION": "stkTOKENs can be used across various DeFi protocols in the Ethereum ecosystem to generate additional yield. This can be in the form of trading fees earned by supplying liquidity to a DEX, or more complex use cases such as borrowing and lending.",
         "FEACTURED_BLOGS":"Featured Blogs",
         "AIRDROP_SECOND_TITLE":"AIRDROP",
         "LEARN_MORE":"Learn More",
         "LAUNCH": "LAUNCH",
+        "REWARDS":"REWARDS",
         "STAKEDROP": "STAKEDROP",
         "LIQUID_STAKING":"Liquid Staking",
         "STAKE_SECOND_TITLE": "STAKE",
@@ -251,6 +252,10 @@ let English = {
     "TOKEN_DISTRIBUTION": "Token Distribution",
     "PARTICIPATE_TOKEN": "Participate In Token Sale",
     "REGISTER": "Register",
+    "BANNER_TEXT":"$PSTAKE Token sale registration Is live on CoinList.",
+    "REGISTER_NOW": "Register Now!",
+    "INTRO_VIDEO": "Intro Video",
+    
 
 }
 

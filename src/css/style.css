@@ -7,8 +7,12 @@ body a:hover {
   text-decoration: none;
 }
 
+.banner_bold {
+  font-weight: 800;
+}
+
 .is-sticky .navbar.navbar-custom {
-  margin-top: 0px;
+  margin-top: 5px;
   padding: 20px 0px;
   background-color: #232327;
   -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
@@ -106,6 +110,7 @@ body a:hover {
   color: #322d3e;
   font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .navbar-expand-lg button {
@@ -232,7 +237,7 @@ body a:hover {
 }
 
 .banner-section .banner-buttons a {
-  width: 25%;
+  margin: 0 10px;
 }
 
 .banner-section .banner-buttons .white-paper {
@@ -267,7 +272,7 @@ body a:hover {
 }
 
 .banner-section .banner-buttons .xprt .hideone {
-  padding-right: 30px;
+  padding-right: 15px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -319,22 +324,22 @@ body a:hover {
   position: relative;
 }
 
-.second-section .feactures-card {
+.second-section .homecard.feactures-card {
   background: #26262b;
   opacity: 0.9;
   color: #fff;
   padding: 30px 40px;
-  height: 100%;
+  height: auto !important;
 }
 
-.second-section .feactures-card h5 {
-  font-size: 26px;
+.second-section .homecard.feactures-card h5 {
+  font-size: 18px;
   font-weight: 600;
   line-height: 2;
   margin: 15px 0;
 }
 
-.second-section .feactures-card p {
+.second-section .homecard.feactures-card p {
   line-height: 2;
   font-size: 16px;
   color: #dbd6d6;
@@ -1983,6 +1988,14 @@ body a:hover {
   display: block !important;
 }
 
+.tokensale .second-section .feactures-card {
+  background: #26262b;
+  opacity: 0.9;
+  color: #fff;
+  padding: 30px 40px;
+  height: 100%;
+}
+
 .tokensale .investors {
   background: #1d1d22;
   padding: 150px 0 0 0;
@@ -2216,6 +2229,12 @@ body a:hover {
   background: none;
 }
 
+.tokensale .governance .second-section .gov-displaycontent .caption {
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+}
+
 .tokensale .governance .second-section .gov-displaycontent .gov-list h5 {
   color: #dbd6d6;
   font-weight: 600;
@@ -2259,6 +2278,7 @@ body a:hover {
 .tokensale .governance .second-section .section-title {
   text-align: left;
   margin-bottom: 25px;
+  font-size: 26px;
 }
 
 .tokensale .inner-bg {
@@ -2503,6 +2523,9 @@ body a:hover {
 }
 
 @media only screen and (max-width: 767px) {
+  .stay-updated .blog-articles.left {
+    margin-bottom: 25px;
+  }
   .tokensale .participate .buttonapp .nav-link .nav-link.app-btn {
     width: 200px;
     padding: 10px 40px;

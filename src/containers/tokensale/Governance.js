@@ -28,7 +28,7 @@ const Governance = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6 col-md-6 col-sm-12">
+                                <div className="col-lg-6 col-md-6 col-sm-12 gov-displaycontent">
                                     <div className="feactures-card">
                                         <img src={incentivization} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                         <h5 className="section-title">{t("INSURANCE")}</h5>

@@ -7,8 +7,11 @@ body a {
         text-decoration: none;
     }
 }
+.banner_bold {
+    font-weight: 800;
+}
 .is-sticky .navbar.navbar-custom {
-    margin-top: 0px;
+    margin-top: 5px;
     padding: 20px 0px;
     background-color: #232327;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
@@ -88,6 +91,7 @@ body a {
         color: #322d3e;
         font-size: 12px;
         font-weight: 600;
+        text-transform: uppercase;
     }
 
     button {
@@ -182,7 +186,7 @@ body a {
         display: flex;
         justify-content: center;
         a {
-            width: 25%;
+            margin: 0 10px;
         }
         .white-paper {
             background: #313238 !important;
@@ -206,7 +210,7 @@ body a {
             justify-content: center;
             margin: auto;
             .hideone {
-                padding-right: 30px;
+                padding-right: 15px;
                 font-size: 14px;
                 font-weight: 600;
             }
@@ -251,15 +255,16 @@ body a {
     .inner-feacture {
         position: relative;
     }
-    .feactures-card {
+    .homecard.feactures-card {
         background: #26262b;
         opacity: 0.9;
+       
         color: #fff;
         padding: 30px 40px;
-        height: 100%;
+       height: auto!important;
 
         h5 {
-            font-size: 26px;
+            font-size: 18px;
             font-weight: 600;
             line-height: 2;
             margin: 15px 0;
@@ -1654,6 +1659,13 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 .tokensale {
+    .second-section .feactures-card {
+        background: #26262b;
+        opacity: 0.9;
+        color: #fff;
+        padding: 30px 40px;
+        height: 100%;
+    }
     .investors {
         background: #1d1d22;
         padding: 150px 0 0 0;
@@ -1847,6 +1859,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         }
         .second-section {
             .gov-displaycontent {
+                .caption {
+                    text-align: left;
+                    color:#fff;
+                    font-size: 16px;
+                }
                 .gov-list {
                     h5 {
                         color: #dbd6d6;
@@ -1887,6 +1904,8 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             .section-title {
                 text-align: left;
                 margin-bottom: 25px;
+                font-size: 26px;
+
             }
             background: none;
         }
@@ -2127,6 +2146,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 767px) {
+    .stay-updated .blog-articles.left{
+        margin-bottom: 25px;
+    }
     .tokensale .participate .buttonapp .nav-link .nav-link.app-btn {
         width: 200px;
         padding: 10px 40px;
