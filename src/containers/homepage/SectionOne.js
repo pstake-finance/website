@@ -49,7 +49,7 @@ const SectionOne = () => {
                                 <div className="banner-buttons">
                                 <a rel="noopener noreferrer" target="_blank" href={VIDEO_URL}>
                                         <span className="button xprt video">
-                                        <Icon viewClass="social_icon_img" icon="play" />&nbsp;
+                                        <Icon viewClass="social_icon_img" icon="play" />&emsp;
                                             <span className="hideone">{t("INTRO_VIDEO")}&nbsp;</span>
                                            
                                         </span>
