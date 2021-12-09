@@ -2,7 +2,6 @@ export const UNSTAKEDTOKENS = "wTOKENs";
 export const STAKEDTOKENS = "pTOKENs";
 export const STAKEDTOKEN = "pTOKEN";
 export const ANALYTICS = "UA-199452342-1";
-
 export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
 export const PSTAKE_MEDIUM_URL = "https://blog.pstake.finance/";
@@ -46,6 +45,8 @@ export const FIGMENT = "https://www.figment.io/";
 export const EVERSTAKE = "https://everstake.one/";
 export const CHORUS = "https://chorus.one/";
 export const COSMOSTATION = "https://www.cosmostation.io/";
+export const REGISTER = "https://coinlist.co/pstake";
+export const LEARN_MORE = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";
 
 //native blockchain
 export const CURRENCY = {
