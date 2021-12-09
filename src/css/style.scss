@@ -7,8 +7,11 @@ body a {
         text-decoration: none;
     }
 }
+.banner_bold {
+    font-weight: 800;
+}
 .is-sticky .navbar.navbar-custom {
-    margin-top: 0px;
+    margin-top: 5px;
     padding: 20px 0px;
     background-color: #232327;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
@@ -88,6 +91,7 @@ body a {
         color: #322d3e;
         font-size: 12px;
         font-weight: 600;
+        text-transform: uppercase;
     }
 
     button {
@@ -96,7 +100,12 @@ body a {
         border-radius: 0;
     }
     li.nav-item {
-        margin: 0 33px;
+        margin: 0 20px;
+    }
+    li.nav-item.status {
+        .icon {
+            width: 12px;
+        }
     }
 }
 .m-none {
@@ -111,10 +120,11 @@ body a {
     .background-gradient {
         background: url(../assets/bg.svg);
         background-repeat: no-repeat;
+        position: relative;
         .gradient-ellispse {
             position: absolute;
             right: 0;
-            bottom: 60px;
+            bottom: -40%;
             z-index: 23;
         }
     }
@@ -176,7 +186,7 @@ body a {
         display: flex;
         justify-content: center;
         a {
-            width: 25%;
+            margin: 0 10px;
         }
         .white-paper {
             background: #313238 !important;
@@ -191,16 +201,20 @@ body a {
             width: 180px;
             padding: 15px 1.5rem;
         }
+        .xprt.video {
+            background: #1d1d22 !important;
+        }
         .xprt {
             background: #e50913 !important;
             margin-right: 15px;
             display: flex;
             width: 200px;
+            height: 50px;
             align-items: center;
             justify-content: center;
             margin: auto;
             .hideone {
-                padding-right: 30px;
+                padding-right: 15px;
                 font-size: 14px;
                 font-weight: 600;
             }
@@ -219,7 +233,7 @@ body a {
     background-repeat: no-repeat;
     background-size: cover;
     .icon-feacture {
-        width: 36px;
+        width: auto;
         height: auto;
     }
     .section-title {
@@ -245,12 +259,13 @@ body a {
     .inner-feacture {
         position: relative;
     }
-    .feactures-card {
-        background: linear-gradient(180deg, #2c2c30 0%, #232328 100%);
+    .homecard.feactures-card {
+        background: #26262b;
         opacity: 0.9;
+       
         color: #fff;
         padding: 30px 40px;
-        backdrop-filter: blur(10px);
+       height: auto!important;
 
         h5 {
             font-size: 18px;
@@ -260,8 +275,9 @@ body a {
         }
         p {
             line-height: 2;
-            font-size: 14px;
+            font-size: 16px;
             color: #dbd6d6;
+            text-align: left;
         }
     }
 }
@@ -1237,11 +1253,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
     h3 {
         text-align: center;
-      
+
         padding: 80px 0;
         font-size: 4rem;
         font-weight: bold;
-        
     }
 
     .blog-head {
@@ -1640,20 +1655,42 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         border-radius: 8px;
     }
 }
+.investors-sectiondisplay {
+    .investors {
+        .backing_us {
+            display: block !important;
+        }
+    }
+}
 .tokensale {
+    .second-section .feactures-card {
+        background: #26262b;
+        opacity: 0.9;
+        color: #fff;
+        padding: 30px 40px;
+        height: 100%;
+    }
+    .investors {
+        background: #1d1d22;
+        padding: 150px 0 0 0;
+        .backing_us {
+            display: none;
+        }
+    }
     .buttonapp {
         .nav-link {
             text-align: center;
             .nav-link.app-btn {
                 padding: 10px 25px;
-                background: #1d1d22;
+                background: #e50913;
+                width: 240px;
                 color: #fff;
                 display: inline-block;
                 margin: auto;
                 text-align: center;
                 font-weight: 600;
                 font-size: 12px;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -1666,12 +1703,40 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         display: inline-block;
     }
     .second-section.insurance {
+        .row {
+            .participate-btn {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: right;
+                display: block;
+                .nav-link {
+                    display: inline-block;
+                    font-size: 14px;
+                    background: #e50913;
+                    color: #fff;
+                    font-weight: 600;
+                }
+            }
+            a {
+                width: 100%;
+            }
+        }
+        .caption-link {
+            .icon {
+                width: 12px;
+                height: auto;
+            }
+            font-size: 16px;
+            color: #dbd6d6;
+            text-align: right;
+            width: 100%;
+            text-decoration: underline;
+        }
         .caption {
-            text-align: center;
-            width: 65%;
-            font-size: 14px;
+            font-size: 18px;
             color: #dbd6d6;
             margin: auto;
+            text-align: right;
             margin-bottom: 20px;
         }
     }
@@ -1687,11 +1752,52 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         background: #1d1d22;
         padding: 150px 0;
     }
+    .participate {
+        .buttonapp.second {
+            .nav-link .nav-link.app-btn {
+                background: #262626;
+                .icon {
+                    width: 10px;
+                }
+            }
+        }
+        .buttonapp .nav-link .nav-link.app-btn {
+            width: auto;
+            padding: 10px 40px;
+        }
+        .ptp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        background: #1d1d22;
+        .section-title {
+            font-weight: bold;
+            font-size: 3.5rem;
+            line-height: 131.4%;
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
     .incentive-alignment,
     .tokenomics {
         padding: 150px 0;
+        background: #1d1d22;
 
         .inner-incentive {
+            .incentive-statistics {
+                max-width: 100%;
+                width: 1000px;
+                margin: auto;
+                padding: 65px 0;
+                h4 {
+                    color: #fff;
+                    text-align: left;
+                    margin-bottom: 40px;
+                }
+            }
             margin: auto;
             text-align: center;
             .img-width {
@@ -1699,14 +1805,29 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 width: 1000px;
             }
         }
+        h5 {
+            color: #dbd6d6;
+            text-align: center;
+            font-size: 24px;
+        }
+        h6 {
+            font-size: 14px;
+            color: #dbd6d6;
+            text-align: center;
+            font-weight: normal;
+            line-height: 2;
+            width: 70%;
+            margin: auto;
+            margin-top: 15px;
+        }
         .section-title {
             font-weight: bold;
-            font-size: 4rem;
+            font-size: 3rem;
             line-height: 131.4%;
             color: #ffffff;
             text-align: center;
             width: 100%;
-            margin-bottom: 80px;
+            margin-bottom: 20px;
         }
     }
     .investors {
@@ -1733,8 +1854,63 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             position: absolute;
             bottom: 50px;
         }
-
+        .second-section.insurance {
+            padding: 0 0 150px 0;
+            .section-title {
+                text-align: right;
+                width: 100%;
+            }
+        }
         .second-section {
+            .gov-displaycontent {
+                .caption {
+                    text-align: left;
+                    color:#fff;
+                    font-size: 16px;
+                }
+                .gov-list {
+                    h5 {
+                        color: #dbd6d6;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                    .fa-ul {
+                        list-style-type: none;
+                        margin-left: 1.5em;
+                        padding-left: 0;
+                        li {
+                            position: relative;
+                            font-size: 16px;
+                            color: #dbd6d6;
+                            margin: 10px 0;
+                            .fa-li {
+                                .icon {
+                                    width: 10px;
+                                    height: auto;
+                                }
+                                left: -2em;
+                                position: absolute;
+                                text-align: center;
+                                width: 2em;
+                                line-height: inherit;
+                            }
+                        }
+                    }
+                }
+                h6 {
+                    color: #dbd6d6;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 1.8;
+                    margin-bottom: 25px;
+                }
+            }
+            .section-title {
+                text-align: left;
+                margin-bottom: 25px;
+                font-size: 26px;
+
+            }
             background: none;
         }
     }
@@ -1743,9 +1919,18 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .caption {
         margin-bottom: 15px;
+        font-size: 18px;
     }
     .banner-main-section {
-        padding: 230px 0 50px 0;
+        padding: 230px 0 100px 0;
+        text-align: center;
+        p {
+            margin-bottom: 5px;
+        }
+        h5 {
+            color: #322d3e;
+            font-weight: 600;
+        }
     }
     .group-staked-assets {
         display: flex;
@@ -1766,6 +1951,39 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 991px) {
+    .governance {
+        .gov-displaycontent {
+            margin-bottom: 30px;
+            .feactures-card {
+                padding: 30px 25px;
+            }
+        }
+    }
+    .tokensale .tokenomics h5 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    .tokensale .tokenomics h6 {
+        width: 100%;
+    }
+    .tokensale .participate .section-title {
+        font-size: 30px;
+    }
+   
+    .tokensale .governance .second-section.insurance .section-title {
+        text-align: left;
+        width: 100%;
+    }
+    .tokensale .second-section.insurance .caption {
+        text-align: left;
+    }
+    .tokensale .second-section.insurance .row .participate-btn {
+        text-align: left;
+    }
+    .tokensale .second-section.insurance .caption-link {
+        font-size: 14px;
+        text-align: left;
+    }
     .tokensale .investors .section-title.backing_us {
         margin-bottom: 40px;
     }
@@ -1803,10 +2021,8 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .banner-section .background-gradient .gradient-ellispse {
         display: none;
     }
-    .tokensale .governance .gradientellipse2 {
-        display: none;
-    }
-    .navbar-expand-lg .navbar-nav .nav-link {
+
+    .navbar-expand-lg .navbar-nav a {
         color: #fff;
     }
     .stake-section.audited .audited-list {
@@ -1934,13 +2150,26 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 767px) {
+    .stay-updated .blog-articles.left{
+        margin-bottom: 25px;
+    }
+    .tokensale .participate .buttonapp .nav-link .nav-link.app-btn {
+        width: 200px;
+        padding: 10px 40px;
+        margin: auto;
+    }
+    .tokensale .participate .ptp-btn {
+        flex-direction: column;
+    }
     .banner-section .banner-heading,
     .pos-section .info-banner-heading,
     .stake-section .section-title,
     .second-section .section-title {
         font-size: 24px;
     }
-
+    .tokensale .governance .gradientellipse2 {
+        display: none;
+    }
     .pos-section p span,
     .stake-section p span {
         display: inline;

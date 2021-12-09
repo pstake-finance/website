@@ -3,9 +3,11 @@ import axios from 'axios';
 import rightarrow from '../../assets/right-arrow.svg';
 import { useTranslation } from "react-i18next";
 import InfoSection from "../homepage/InfoSection";
+import Icon from "../../components/Icon";
 
 import {
-    PSTAKE_APP_URL
+    PSTAKE_APP_URL,
+    VIDEO_URL
 } from '../../constants/config';
 import { getTVLURL, getstkXPRTLIQUIDITYURL, getstkATOMLIQUIDITYURL } from "../../constants/url";
 
@@ -43,15 +45,22 @@ const SectionOne = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12 col-sm-12 banner-main-section">
-                                <h1 className="banner-heading ">{t("UNLOCKING_LIQUIDITY")}<span> {t("STAKED_ASSETS")}</span></h1>
-                                <p className="caption">{t("SECURELY_STAKED")} <span>{t("SECURELY_STAKED_NEXT_LINE")}</span></p>
+                                <h1 className="banner-heading mb-3">{t("UNLOCKING_LIQUIDITY")}<span> {t("STAKED_ASSETS")}</span></h1>
                                 <div className="banner-buttons">
+                                <a rel="noopener noreferrer" target="_blank" href={VIDEO_URL}>
+                                        <span className="button xprt video">
+                                        <Icon viewClass="social_icon_img" icon="play" />&emsp;
+                                            <span className="hideone">{t("INTRO_VIDEO")}&nbsp;</span>
+                                           
+                                        </span>
+                                    </a>
                                     <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL}>
                                         <span className="button xprt">
                                             <span className="hideone">{t("GET_STARTED")}&nbsp;</span>
                                             <img src={rightarrow} alt="arrow" />
                                         </span>
                                     </a>
+                                   
                                 </div>
                                 <div className="network-stats">
                                     <div className="stats-count">
@@ -61,7 +70,6 @@ const SectionOne = () => {
                                     <div className="stats-count">
                                         <h1>02</h1>
                                         <h6>{t("SUPPORTED_NETWORKS")}</h6>
-                                        <h6>{t("MORE_COMING_SOON")}</h6>
                                     </div>
                                     <div className="stats-count">
                                         <h1>${totalstkATOMData}M+</h1>

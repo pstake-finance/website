@@ -2,12 +2,12 @@ export const UNSTAKEDTOKENS = "wTOKENs";
 export const STAKEDTOKENS = "pTOKENs";
 export const STAKEDTOKEN = "pTOKEN";
 export const ANALYTICS = "UA-199452342-1";
-
 export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
 export const PSTAKE_MEDIUM_URL = "https://blog.pstake.finance/";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
+export const DISCORD_URL = "https://discord.com/invite/qXRmTTGcYD";
 export const PSTAKE_AUDITS_URL = "https://github.com/persistenceOne/pStake-auditReports";
 export const PSTAKE_FORUM_URL = "https://forum.pstake.finance/";
 export const PSTAKE_RAISE_A_TICKET_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform";
@@ -18,8 +18,8 @@ export const PSTAKE_FRONTIER_URL = "https://frontier.xyz/";
 export const PSTAKE_DILIGENCE_AUDIT = "https://consensys.net/diligence/audits/2021/08/pstake-finance/";
 export const PSTAKE_BLOG_THREE_URL = "https://blog.pstake.finance/2021/11/16/pstake-raises-10m-to-bootstrap-liquid-staking-protocol/";
 export const PSTAKE_BLOG_THREE_IMG_URL = "https://blog.pstake.finance/wp-content/uploads/2021/11/photo_2021-11-17-18.18.38.jpeg";
-export const PSTAKE_BLOG_TWO_URL = "https://blog.pstake.finance/2021/09/13/pstake-to-launch-on-alpha-launchpad/";
-export const PSTAKE_BLOG_TWO_IMG_URL = "https://blog.pstake.finance/wp-content/uploads/2021/10/1DCTgALjUEyC9cw5ah16hAA-550x309.png";
+export const PSTAKE_BLOG_TWO_URL = "https://blog.pstake.finance/2021/10/25/introducing-retroactive-rewards-for-stktoken-liquidity-providers/";
+export const PSTAKE_BLOG_TWO_IMG_URL = "https://blog.pstake.finance/wp-content/uploads/2021/10/pSTAKE-Retroactive-550x309.png";
 export const PSTAKE_BLOG_ONE_URL = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";
 export const PSTAKE_BLOG_ONE_IMG_URL = "https://blog.pstake.finance/wp-content/uploads/2021/09/17iUOeH4h8AMU_XVGUeQB1g.png";
 export const PSTAKE_TWITTER_URL = "https://twitter.com/pStakeFinance";
@@ -46,6 +46,9 @@ export const FIGMENT = "https://www.figment.io/";
 export const EVERSTAKE = "https://everstake.one/";
 export const CHORUS = "https://chorus.one/";
 export const COSMOSTATION = "https://www.cosmostation.io/";
+export const REGISTER = "https://coinlist.co/pstake";
+export const LEARN_MORE = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";
+export const VIDEO_URL = "https://www.youtube.com/watch?v=0i55V5Vl9Bs";
 
 //native blockchain
 export const CURRENCY = {

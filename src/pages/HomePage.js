@@ -17,7 +17,9 @@ const homePage = () => {
                 <StakeAssets />
                 <SectionTwo />
                 <Audited />
+                <div className="investors-sectiondisplay">
                 <Investors />
+                </div>
                 <Validators />
                 <FeactureBlog />
                 <Footer />

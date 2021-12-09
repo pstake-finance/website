@@ -2,11 +2,9 @@ import React from 'react';
 import { useTranslation } from "react-i18next";
 import feactureone from '../../assets/feacture-1.svg';
 import feacturetwo from '../../assets/feacture-2.svg';
-import feacturethree from '../../assets/feacture-3.svg';
-import feacturefour from '../../assets/feacture-4.svg';
-import feacturefive from '../../assets/feacture-5.svg';
+
 import feacturesix from '../../assets/feacture-6.svg';
-import feacturegradient from '../../assets/feacture-gradient.svg';
+
 import feacturegradient2 from '../../assets/feacture-gradent2.svg';
 const SectionTwo = () => {
     const { t } = useTranslation();
@@ -18,46 +16,28 @@ const SectionTwo = () => {
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-sm-12">
 
-                            <div className="feactures-card mb-4">
+                            <div className="homecard feactures-card mb-4">
                                 <img src={feactureone} className="text-left icon-feacture" alt="feacture" title="feacture" /> 
                                 <h5>{t("WRAP")}</h5>
                                 <p>{t("WRAP_DESCRIPTION")}</p>
                             </div>
-                            <div className="inner-feacture">
-                                <div className="feactures-card mb-4">
-                                    <img src={feacturefour} className="text-left icon-feacture" alt="feacture" title="feacture" />
-                                    <h5>{t("CLAIM_STAKING_REWARDS")}</h5>
-                                    <p>{t("CLAIM_STAKING_REWARDS_DESCRIPTION")}</p>
-
-                                </div>
-                                <img src={feacturegradient} className="feacturegradient" alt="feacture" />
-                            </div>
+                          
                             
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12">
 
-                            <div className="feactures-card mb-4">
+                            <div className="homecard feactures-card mb-4">
                                 <img src={feacturetwo} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>{t("STAKE")}</h5>
                                 <p>{t("STAKE_DESCRIPTION")}</p>
 
                             </div>
-                            <div className="feactures-card mb-4">
-                                <img src={feacturefive} className="text-left icon-feacture" alt="feacture" title="feacture" />
-                                <h5>{t("LIQUIDITY_INSTANT_STAKING")}</h5>
-                                <p>{t("LIQUIDITY_INSTANT_STAKING_DESCRIPTION")}</p>
-
-                            </div>
+                            
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12">
-                            <div className="feactures-card mb-4">
-                                <img src={feacturethree} className="text-left icon-feacture" alt="feacture" title="feacture" />
-                                <h5>{t("INSURANCE_FUND")}</h5>
-                                <p>{t("INSURANCE_FUND_DESCRIPTION")}</p>
-
-                            </div>
+                           
                             <img src={feacturegradient2} className="feacturegradient2" alt="feacture" />
-                            <div className="feactures-card m-none mb-4">
+                            <div className="homecard feactures-card m-none mb-4">
                                 <img src={feacturesix} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>{t("GENERATE_ADDITONAL_YIELD")}</h5>
                                 <p>{t("GENERATE_ADDITONAL_YIELD_DESCRIPTION")}</p>
@@ -66,7 +46,7 @@ const SectionTwo = () => {
 
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12 ">
-                        <div className="feactures-card dd-none mb-4">
+                        <div className="homecard feactures-card dd-none mb-4">
                                 <img src={feacturesix} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>{t("GENERATE_ADDITONAL_YIELD")}</h5>
                                 <p>{t("GENERATE_ADDITONAL_YIELD_DESCRIPTION")}</p>

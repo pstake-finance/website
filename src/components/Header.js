@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import ReactGa from 'react-ga';
+import Alert from 'react-bootstrap/Alert';
+import close from '../assets/close_icon.png';
+import rightarrow from '../assets/right-arrow.png';
+import vectorarrow from '../assets/Vector.png';
 import {
     PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL,
-    PSTAKE_FORUM_URL,
+    DISCORD_URL,
     PSTAKE_AIRDROP_URL,
-    PSTAKE_APP_URL
+    PSTAKE_APP_URL,
+    REGISTER
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
 
@@ -15,18 +20,19 @@ const Header = () => {
     const { t } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
+    const [bannerInfo, setbannerInfo] = useState(true);
     const toggleMenu = () => {
-        setIsOpen(!isOpen );
-        
+        setIsOpen(!isOpen);
+
     }
-   
+
     useEffect(() => {
         document.body.classList = "";
         window.addEventListener("scroll", scrollNavigation, true);
-       
+
     }, []);
 
-  
+
     const scrollNavigation = () => {
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
@@ -68,13 +74,37 @@ const Header = () => {
         })
 
     }
-
+    const onClickTopBar = () => {
+        ReactGa.event({
+            category: 'App',
+            action: 'Clicked on Banner'
+        })
+    }
+    const closeBanner = () => {
+        setbannerInfo(false)
+    }
 
     return (
         <React.Fragment>
             <div id="is-sticky">
                 <nav className={"navbar navbar-expand-lg fixed-top navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
+                    <div className="container-fluid bannernav-section">
+                        {bannerInfo ?
+                            <div className="container">
+                                <Alert className="nav-banner alert-dismissible">
+                                    <p>
+                                        <a href={REGISTER} target="_blank" rel="noopener noreferrer"
+                                        >
+                                            <span onClick={onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp;  {t("BANNER_TEXT")} <span className="banner_bold">{t("REGISTER_NOW")}</span> </span>&nbsp;
+                                            <img src={rightarrow} alt="arrow" /></a>
+                                    </p>
+                                    <img src={close} alt="close" className="close" onClick={closeBanner} />
+                                </Alert>
+                            </div>
+                            : null}
 
+
+                    </div>
                     <div className="container mb-pad">
                         <Link className="navbar-brand logo text-uppercase" to="/">
                         </Link>
@@ -83,13 +113,13 @@ const Header = () => {
                         </button>
                         <div className={isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                             <ul className={isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                          
 
+                                <li className="nav-item status"><NavLink to="/tokensale">  <Icon viewClass="social_icon_img" icon="nav-status" />&nbsp;{t("TOKENSALE")}</NavLink></li>
                                 <li className="nav-item"><a href={PSTAKE_MEDIUM_URL} target="_blank" onClick={onClickBlog} rel="noopener noreferrer" className="nav-link">{t("BLOG")} </a></li>
                                 <li className="nav-item"><a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("DOCS")} </a></li>
 
 
-                                <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("FORUM")}</a></li>
+                                <li className="nav-item"><a href={DISCORD_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("DISCORD")}</a></li>
 
 
                                 <li className="nav-item" style={{ marginLeft: '0', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("AIRDROP")} </span></a></li>
