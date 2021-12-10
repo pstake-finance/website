@@ -8,7 +8,7 @@ import vectorarrow from '../assets/Vector.png';
 import {
     PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL,
-    DISCORD_URL,
+    PSTAKE_FORUM_URL,
     PSTAKE_AIRDROP_URL,
     PSTAKE_APP_URL,
     REGISTER
@@ -119,7 +119,7 @@ const Header = () => {
                                 <li className="nav-item"><a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("DOCS")} </a></li>
 
 
-                                <li className="nav-item"><a href={DISCORD_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("DISCORD")}</a></li>
+                                <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("FORUM")}</a></li>
 
 
                                 <li className="nav-item" style={{ marginLeft: '0', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("AIRDROP")} </span></a></li>

@@ -262,10 +262,10 @@ body a {
     .homecard.feactures-card {
         background: #26262b;
         opacity: 0.9;
-       
+
         color: #fff;
         padding: 30px 40px;
-       height: auto!important;
+        height: auto !important;
 
         h5 {
             font-size: 18px;
@@ -1785,7 +1785,27 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .tokenomics {
         padding: 150px 0;
         background: #1d1d22;
-
+        .stats {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: auto;
+            width: 100%;
+            .stats-count {
+                margin: 20px 0;
+                width: 50%;
+                text-align: center;
+                h1 {
+                    color: #fff;
+                    font-weight: 700;
+                }
+                h6 {
+                    color: #dbd6d6;
+                    font-weight: 400;
+                }
+            }
+        }
         .inner-incentive {
             .incentive-statistics {
                 max-width: 100%;
@@ -1865,7 +1885,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             .gov-displaycontent {
                 .caption {
                     text-align: left;
-                    color:#fff;
+                    color: #fff;
                     font-size: 16px;
                 }
                 .gov-list {
@@ -1909,7 +1929,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 text-align: left;
                 margin-bottom: 25px;
                 font-size: 26px;
-
             }
             background: none;
         }
@@ -1951,6 +1970,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 991px) {
+    .is-sticky .navbar.navbar-custom {
+        margin-top: 0;
+    }
     .governance {
         .gov-displaycontent {
             margin-bottom: 30px;
@@ -1969,7 +1991,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .tokensale .participate .section-title {
         font-size: 30px;
     }
-   
+
     .tokensale .governance .second-section.insurance .section-title {
         text-align: left;
         width: 100%;
@@ -2008,7 +2030,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .tokensale .tokenomics {
         padding: 75px 0;
     }
-    .banner-section.tokensale .banner-main-section,
+    .banner-section.tokensale .banner-main-section {
+        padding: 200px 0 150px 0;
+    }
     .tokensale .second-section {
         padding: 75px 0;
     }
@@ -2028,9 +2052,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .stake-section.audited .audited-list {
         width: 100%;
     }
-    .banner-section .banner-buttons a {
-        width: 50%;
-    }
+
     .pos-section .pos-cards {
         margin: 15px;
     }
@@ -2150,7 +2172,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 @media only screen and (max-width: 767px) {
-    .stay-updated .blog-articles.left{
+    .stay-updated .blog-articles.left {
         margin-bottom: 25px;
     }
     .tokensale .participate .buttonapp .nav-link .nav-link.app-btn {
@@ -2254,5 +2276,16 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 width: 50px;
             }
         }
+    }
+}
+@media screen and (max-width: 540px) and (min-width: 320px) {
+    .banner-section .banner-buttons {
+        .button.xprt.video {
+            margin: 0 0 10px 0;
+        }
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -11,7 +11,6 @@ const Tokenomics = () => {
         <React.Fragment>
             <section className="tokenomics">
                 <div className="container">
-
                     <h3 className="section-title">{t("TOKENOMICS")}</h3>
                     <h5>{t("GENESIS_SUPPLY")}</h5>
                     <h6>{t("GENEIS_SUPPLY_DES")}</h6>
@@ -27,7 +26,16 @@ const Tokenomics = () => {
                         <div className="incentive-statistics">
                             <img className="img-width" src={datalist} alt="data" />
                         </div>
-                       
+                    </div>
+                    <div className="stats">
+                        <div className="stats-count">
+                            <h1>$50M</h1>
+                            <h6>{t("STRATEGIC_SALE_VALUATION")}</h6>
+                        </div>
+                        <div className="stats-count">
+                            <h1>$0.1</h1>
+                            <h6>{t("TOKEN_PRICE")}</h6>
+                        </div>
                     </div>
                 </div>
 

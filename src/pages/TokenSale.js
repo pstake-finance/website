@@ -33,8 +33,7 @@ const TokenSale = () => {
                                 
                                 <p className="caption">{t("PUBLIC_SALE_IN")}</p>
                                 <h5 className="text-center">
-                                Dec 16 at 18:00 UTC
-
+                                {t("PUBLISALE_RELEASEDATE")}
                                 </h5>
                             </div>
 
