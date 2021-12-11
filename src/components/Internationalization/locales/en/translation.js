@@ -255,6 +255,10 @@ let English = {
     "BANNER_TEXT":"$PSTAKE Token sale registration Is live on CoinList.",
     "REGISTER_NOW": "Register Now!",
     "INTRO_VIDEO": "Intro Video",
+    "PUBLISALE_RELEASEDATE": "Dec 16 at 18:00 UTC",
+    "STRATEGIC_SALE_VALUATION": "Strategic sale valuation",
+    "TOKEN_PRICE": "Token price"
+
     
 
 }
