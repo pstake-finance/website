@@ -27,16 +27,7 @@ const Tokenomics = () => {
                             <img className="img-width" src={datalist} alt="data" />
                         </div>
                     </div>
-                    <div className="stats">
-                        <div className="stats-count">
-                            <h1>$50M</h1>
-                            <h6>{t("STRATEGIC_SALE_VALUATION")}</h6>
-                        </div>
-                        <div className="stats-count">
-                            <h1>$0.1</h1>
-                            <h6>{t("TOKEN_PRICE")}</h6>
-                        </div>
-                    </div>
+                   
                 </div>
 
             </section>
