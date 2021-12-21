@@ -251,7 +251,7 @@ let English = {
     "TOKEN_ALLOCATION": "Token Allocation",
     "TOKEN_DISTRIBUTION": "Token Distribution",
     "PARTICIPATE_TOKEN": "Participate In Token Sale",
-    "REGISTER": "Register",
+    "REGISTER": "Registration Closed",
     "BANNER_TEXT":"$PSTAKE Token sale registration Is live on CoinList.",
     "REGISTER_NOW": "Register Now!",
     "INTRO_VIDEO": "Intro Video",

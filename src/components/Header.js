@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import ReactGa from 'react-ga';
-import Alert from 'react-bootstrap/Alert';
-import close from '../assets/close_icon.png';
-import rightarrow from '../assets/right-arrow.png';
-import vectorarrow from '../assets/Vector.png';
 import {
     PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL,
     PSTAKE_FORUM_URL,
     PSTAKE_AIRDROP_URL,
-    PSTAKE_APP_URL,
-    REGISTER
+    PSTAKE_APP_URL
+
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
 
@@ -20,7 +16,6 @@ const Header = () => {
     const { t } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
-    const [bannerInfo, setbannerInfo] = useState(true);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
 
@@ -74,37 +69,12 @@ const Header = () => {
         })
 
     }
-    const onClickTopBar = () => {
-        ReactGa.event({
-            category: 'App',
-            action: 'Clicked on Banner'
-        })
-    }
-    const closeBanner = () => {
-        setbannerInfo(false)
-    }
+ 
 
     return (
         <React.Fragment>
             <div id="is-sticky">
                 <nav className={"navbar navbar-expand-lg fixed-top navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
-                    <div className="container-fluid bannernav-section">
-                        {bannerInfo ?
-                            <div className="container">
-                                <Alert className="nav-banner alert-dismissible">
-                                    <p>
-                                        <a href={REGISTER} target="_blank" rel="noopener noreferrer"
-                                        >
-                                            <span onClick={onClickTopBar}><img src={vectorarrow} alt="arrow" />&nbsp;  {t("BANNER_TEXT")} <span className="banner_bold">{t("REGISTER_NOW")}</span> </span>&nbsp;
-                                            <img src={rightarrow} alt="arrow" /></a>
-                                    </p>
-                                    <img src={close} alt="close" className="close" onClick={closeBanner} />
-                                </Alert>
-                            </div>
-                            : null}
-
-
-                    </div>
                     <div className="container mb-pad">
                         <Link className="navbar-brand logo text-uppercase" to="/">
                         </Link>

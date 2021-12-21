@@ -12,7 +12,7 @@ body a:hover {
 }
 
 .is-sticky .navbar.navbar-custom {
-  margin-top: 5px;
+  margin-top: 0px;
   padding: 20px 0px;
   background-color: #232327;
   -webkit-box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
