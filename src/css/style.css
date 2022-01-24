@@ -83,7 +83,7 @@ body a:hover {
 }
 
 .navbar-expand-lg.sticky-dark .navbar-brand.logo {
-  background: url(../assets/logo.svg);
+  background: url(../assets/logo.png);
 }
 
 .navbar-expand-lg.sticky-dark .navbar-nav a {
@@ -101,8 +101,8 @@ body a:hover {
 }
 
 .navbar-expand-lg .navbar-brand.logo {
-  background: url(../assets/darklogo.svg);
-  width: 105px;
+  background: url(../assets/darklogo.png);
+  width: 107px;
   height: 26px;
 }
 
