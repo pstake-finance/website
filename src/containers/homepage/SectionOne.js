@@ -18,9 +18,9 @@ const SectionOne = () => {
   const [totalstkATOMData, settotalstkATOMData] = useState('0.00');
 
     useEffect(() => {
-        const url = getTVLURL()
-        const getstkXPRTurl = getstkXPRTLIQUIDITYURL()
-        const getstkATOMurl = getstkATOMLIQUIDITYURL()
+        const url = getTVLURL();
+        const getstkXPRTurl = getstkXPRTLIQUIDITYURL();
+        const getstkATOMurl = getstkATOMLIQUIDITYURL();
         axios.get(url).then((result) => {
             const totaltvldata = result.data;
             setTotalTVLData((totaltvldata.TVL/1000000).toFixed(2))
