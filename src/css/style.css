@@ -869,6 +869,10 @@ ul.dropdown li a {
   color: #fff;
 }
 
+.stake-section .card .gthree.card-body h5, .stake-section .card .gfour.card-body h5 {
+  cursor: not-allowed;
+}
+
 .stake-section .card .gone.card-body:before {
   border: 1px solid transparent;
   /* !importanté */
