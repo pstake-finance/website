@@ -5,7 +5,7 @@ import coindesk from "../../assets/featured/coindeskb.png";
 
 import decrypt from "../../assets/featured/decrypt.svg";
 import theblock from "../../assets/featured/theblock.svg";
-import yf from "../../assets/featured/YF.png";
+import yf from "../../assets/featured/YF.svg";
 import {useTranslation} from "react-i18next";
 import {
     

@@ -594,6 +594,7 @@ ul.dropdown li a {
 .banner-section .banner-buttons .xprt .hideone {
   padding-right: 15px;
   font-size: 14px;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -954,10 +955,15 @@ ul.dropdown li a {
   padding: 15px 35px;
   cursor: pointer;
   color: #fff;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: rgba(140, 140, 140, 0.31);
   font-weight: 600;
   margin: 16px 0 25px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.stake-section .apr h5:hover {
+  background: #262626;
 }
 
 .stake-section .card-title {

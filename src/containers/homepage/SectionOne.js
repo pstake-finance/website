@@ -25,12 +25,14 @@ const SectionOne = () => {
                                 <div className="banner-buttons">
                                
                                     <h6>Stake your PoS assets while earning DeFi yields</h6>
-                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL}>
+                                  
                                         <span className="button xprt">
+                                        <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL}>
                                             <span className="hideone">{t("GET_STARTED")}&nbsp;</span>
                                             <img src={rightarrow} alt="arrow" />
+                                            </a>
                                         </span>
-                                    </a>
+                                  
                                    
                                 </div>
                                 <div className="network-stats">
