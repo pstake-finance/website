@@ -2,7 +2,7 @@ import React from "react";
 import rightarrow from '../../assets/right-arrow.svg';
 import { useTranslation } from "react-i18next";
 import InfoSection from "../homepage/InfoSection";
-// import Icon from "../../components/Icon";
+
 
 import {
     PSTAKE_APP_URL,
