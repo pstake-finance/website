@@ -708,6 +708,9 @@ ul.dropdown {
                 cursor: not-allowed;
             }
         }
+        .ap3, .ap4{
+            margin-top: 28px;
+        }
         .gone.card-body:before {
             border: 1px solid transparent; /* !importanté */
         }
@@ -732,7 +735,7 @@ ul.dropdown {
             transition: all 0.2s ease-in-out;
             $border: 1px;
             color: #fff;
-            background: #1c1c1d;
+            background: #26262b;
             background-clip: padding-box; /* !importanté */
             border-radius: 1em;
             &:before {
@@ -1997,7 +2000,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         opacity: 0.9;
         color: #fff;
         padding: 30px 40px;
-        height: 100%;
+        height: 100% !important;
     }
     .investors {
         background: #1d1d22;

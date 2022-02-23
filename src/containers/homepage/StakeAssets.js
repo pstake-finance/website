@@ -20,7 +20,7 @@ const StakeAssets = () => {
                         <Card className="col-md-3 col-xs-6">
                             <Card.Body className="gone">
                                 <div className="text-center">
-                                <img className="pt-5 pb-2" src={asset1} title="Asset" alt="Asset"/>
+                                <img className="pt-4 pb-4" src={asset1} title="Asset" alt="Asset"/>
                                 <Card.Title>{t("COSMOS")}</Card.Title>
                                 </div>
                                 <div className="apr">
@@ -52,8 +52,8 @@ const StakeAssets = () => {
                                 <img className="pt-4 pb-4" src={asset3} title="Asset" alt="Asset"/>
                                 <Card.Title>{t("ETHEREUM")}</Card.Title>
                                 </div>
-                                <div className="apr ap2">
-                                <h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>
+                                <div className="apr ap3">
+                                {/*<h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>*/}
                                 <h5>Coming Soon!</h5>
 
                             </div>
@@ -67,8 +67,8 @@ const StakeAssets = () => {
                                 <img className="pt-4 pb-4" src={asset4} title="Asset" alt="Asset"/>
                                 <Card.Title>{t("SOLANA")}</Card.Title>
                                 </div>
-                                <div className="apr ap2">
-                                <h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>
+                                <div className="apr ap4">
+                                {/*<h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>*/}
                                 <h5>Coming Soon!</h5>
 
                             </div>
