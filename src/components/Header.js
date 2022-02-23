@@ -15,7 +15,12 @@ import {
     PSTAKE_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
     PSTAKE_AIRDROP_URL,
-    PSTAKE_APP_URL
+    PSTAKE_APP_URL,
+    SECURITY_AUDIT_URL,
+    GUIDES_FAQ_URL,
+    DOCS_URL,
+    SNANPSHOT_URL,
+    PSTAKE_FORUM_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
@@ -57,7 +62,7 @@ const Header = () => {
         })
 
     }
- 
+
     const onClickNavApp = () => {
         ReactGa.event({
             category: 'App',
@@ -92,10 +97,18 @@ const Header = () => {
 
                                     </a>
                                     <ul class="dropdown">
-                                        <li>Security Audits</li>
-                                        <li>Guides & Tutorials</li>
-                                        <li>Docs</li>
-                                        <li>FAQs</li>
+                                        <li><a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Security Audits")}
+
+                                        </a></li>
+                                        <li><a href={GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Guides & Tutorials")}
+
+                                        </a></li>
+                                        <li><a href={DOCS_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Docs")}
+
+                                        </a></li>
+                                        <li><a href={GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("FAQs")}
+
+                                        </a></li>
 
                                     </ul>
 
@@ -106,24 +119,29 @@ const Header = () => {
 
                                     </a>
                                     <ul class="dropdown">
-                                        <li>Forum</li>
-                                        <li>Governance</li>
-                                       
-                                            <ul class="socialicons">
-                                                <li><a href={PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
-                                                </li>
-                                                <li>
+                                        <li><a href={PSTAKE_FORUM_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Forum")}
+
+                                        </a></li>
+                                        <li><a href={SNANPSHOT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Governance")}
+
+                                        </a></li>
+
+
+                                        <ul class="socialicons">
+                                            <li><a href={PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
+                                            </li>
+                                            <li>
                                                 <a href={PSTAKE_TELEGRAM_URL} target="_blank" rel="noopener noreferrer" ><Icon viewClass="social_icon_ig" icon="telegram-plane" /></a>
 
 
-                                                </li>
-                                                <li>
+                                            </li>
+                                            <li>
                                                 <a href={PSTAKE_MEDIUM_URL} target="_blank" rel="noopener noreferrer" > <Icon viewClass="social_icon_img" icon="medium-m" /></a>
 
 
-                                                </li>
-                                            </ul>
-                                           
+                                            </li>
+                                        </ul>
+
                                     </ul>
 
                                 </li>
@@ -133,7 +151,7 @@ const Header = () => {
                                 {/* <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("FORUM")}</a></li> */}
 
 
-                                <li className="nav-item" style={{ marginLeft: '0', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("AIRDROP")} </span></a></li>
+                                <li className="nav-item" style={{ marginLeft: '7px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("AIRDROP")} </span></a></li>
 
                                 <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("GO_TO_APP")}</span></a></li>
 
