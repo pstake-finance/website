@@ -48,7 +48,16 @@ export const CHORUS = "https://chorus.one/";
 export const COSMOSTATION = "https://www.cosmostation.io/";
 export const REGISTER = "https://coinlist.co/pstake";
 export const LEARN_MORE = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";
-export const VIDEO_URL = "https://www.youtube.com/watch?v=0i55V5Vl9Bs";
+export const VIDEO_URL = "0i55V5Vl9Bs";
+export const AOK_URL = "https://github.com/persistenceOne/pStake-auditReports";
+export const AS_SEEN_ON1_URL = "https://www.forbes.com/sites/lawrencewintermeyer/2021/07/01/collaboration-and-interoperability-over-tribalism-signals-maturity-developing-in-defi/?sh=3f285e0e6644";
+export const AS_SEEN_ON2_URL = "https://www.nasdaq.com/articles/staking-is-the-quiet-giant-of-crypto-yield-2021-06-23";
+export const AS_SEEN_ON3_URL = "https://www.coinspeaker.com/persistence-blazing-trail-defi/";
+export const AS_SEEN_ON4_URL = "https://www.coindesk.com/business/2021/03/26/staking-as-an-asset-class-this-swiss-institutional-fund-is-jumping-in/";
+export const AS_SEEN_ON5_URL = "https://cointelegraph.com/news/the-future-of-crypto-trading-will-be-omni-chain";
+export const AS_SEEN_ON6_URL = "https://defitimes.io/defi/the-new-era-of-defi-moving-from-speculation-to-value-creation-with-persistence/";
+export const AS_SEEN_ON7_URL = "https://www.investing.com/news/cryptocurrency-news/staking-will-eat-blockchain-for-breakfast--heres-why-2593077";
+export const AS_SEEN_ON8_URL = "https://www.odaily.com/newsflash/238810";
 
 //native blockchain
 export const CURRENCY = {

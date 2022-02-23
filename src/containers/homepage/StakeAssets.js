@@ -6,6 +6,7 @@ import {
 import asset1 from '../../assets/asset_1.svg';
 import asset2 from '../../assets/asset_2.svg';
 import asset3 from '../../assets/asset_3.svg';
+import asset4 from '../../assets/asset_4.svg';
 const StakeAssets = () => {
     const { t } = useTranslation();
     return (
@@ -14,51 +15,68 @@ const StakeAssets = () => {
                 <div className="container">
                     <div className="row">
                         <h3 className="section-title">{t("STAKE_YOUR_ASSETS")}</h3>
-                    <p className="text-center mt-2">{t("STAKE_ASSETS_USNING_PSAKE")} <span>{t("YOU_EARN_STAKING_REWARDS")}</span></p>
+                    {/* <p className="text-center mt-2">{t("STAKE_ASSETS_USNING_PSAKE")} <span>{t("YOU_EARN_STAKING_REWARDS")}</span></p> */}
 
-                        <Card className="col-md-4 col-xs-6">
-                            <Card.Body>
+                        <Card className="col-md-3 col-xs-6">
+                            <Card.Body className="gone">
                                 <div className="text-center">
-                                <img className="pt-4 pb-4" src={asset1} title="Asset" alt="Asset"/>
-                                <Card.Title>{t("COSMOS_NETWORK")}</Card.Title>
+                                <img className="pt-5 pb-2" src={asset1} title="Asset" alt="Asset"/>
+                                <Card.Title>{t("COSMOS")}</Card.Title>
                                 </div>
-                               
-                              
-                            </Card.Body>
-                            <div className="apr">
+                                <div className="apr">
                                 <h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>
                                 <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
                             </div>
+                              
+                            </Card.Body>
+                           
                         </Card>
-                        <Card className="col-md-4  col-xs-6">
-                            <Card.Body>
+                        <Card className="col-md-3  col-xs-6">
+                            <Card.Body className="gtwo">
                                 <div className="text-center">
                                 <img className="pt-4 pb-4" src={asset2} title="Asset" alt="Asset"/>
                                 <Card.Title>{t("PERSISTENCE")}</Card.Title>
                                 </div>
-                               
-                             
-                            </Card.Body>
-                            <div className="apr">
+                                <div className="apr">
                                 <h1>{t("XPRT_APR")} <span>{t("APR")}</span></h1>
                                 <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
 
                             </div>
+                             
+                            </Card.Body>
+                           
                         </Card>
-                        <Card className="col-md-4  col-xs-6">
-                            <Card.Body>
+                        <Card className="col-md-3  col-xs-6">
+                            <Card.Body className="gthree">
                                 <div className="text-center">
                                 <img className="pt-4 pb-4" src={asset3} title="Asset" alt="Asset"/>
                                 <Card.Title>{t("ETHEREUM")}</Card.Title>
                                 </div>
-                               
+                                <div className="apr ap2">
+                                <h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>
+                                <h5>Coming Soon!</h5>
+
+                            </div>
                              
                             </Card.Body>
-                            <div className="apr apr2">
-                              
-                                <h5>Coming Soon!</h5>
-                            </div>
+                            
                         </Card>
+                        <Card className="col-md-3  col-xs-6">
+                            <Card.Body className="gfour">
+                                <div className="text-center">
+                                <img className="pt-4 pb-4" src={asset4} title="Asset" alt="Asset"/>
+                                <Card.Title>{t("SOLANA")}</Card.Title>
+                                </div>
+                                <div className="apr ap2">
+                                <h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>
+                                <h5>Coming Soon!</h5>
+
+                            </div>
+                             
+                            </Card.Body>
+                            
+                        </Card>
+                       
                     </div>
                 </div>
             </section>

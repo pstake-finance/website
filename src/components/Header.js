@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
+// import {
+//     PSTAKE_TWITTER_URL,
+// PSTAKE_TELEGRAM_URL,
+// PSTAKE_YOUTUBE_URL,
+// PSTAKE_REDDIT_URL,
+// PERSISTENCE_ONE_URL,
+// PSTAKE_MEDIUM_URL
+// }  from '../constants/config';
 import {
     PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL,
-    PSTAKE_FORUM_URL,
+    PSTAKE_TWITTER_URL,
+    PSTAKE_TELEGRAM_URL,
     PSTAKE_AIRDROP_URL,
     PSTAKE_APP_URL
 
@@ -48,13 +57,7 @@ const Header = () => {
         })
 
     }
-    const onClickForum = () => {
-        ReactGa.event({
-            category: 'Forum',
-            action: 'Clicked on Forum'
-        })
-
-    }
+ 
     const onClickNavApp = () => {
         ReactGa.event({
             category: 'App',
@@ -69,8 +72,6 @@ const Header = () => {
         })
 
     }
- 
-
     return (
         <React.Fragment>
             <div id="is-sticky">
@@ -84,12 +85,52 @@ const Header = () => {
                         <div className={isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                             <ul className={isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
 
-                                <li className="nav-item status"><NavLink to="/tokensale">  <Icon viewClass="social_icon_img" icon="nav-status" />&nbsp;{t("TOKENSALE")}</NavLink></li>
+                                {/* <li className="nav-item status"><NavLink to="/tokensale">  <Icon viewClass="social_icon_img" icon="nav-status" />&nbsp;{t("TOKENSALE")}</NavLink></li> */}
+                                <li className="nav-item nav__menu-item">
+
+                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("LEARN")}
+
+                                    </a>
+                                    <ul class="dropdown">
+                                        <li>Security Audits</li>
+                                        <li>Guides & Tutorials</li>
+                                        <li>Docs</li>
+                                        <li>FAQs</li>
+
+                                    </ul>
+
+                                </li>
+                                <li className="nav-item nav__menu-item">
+
+                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("Community")}
+
+                                    </a>
+                                    <ul class="dropdown">
+                                        <li>Forum</li>
+                                        <li>Governance</li>
+                                       
+                                            <ul class="socialicons">
+                                                <li><a href={PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
+                                                </li>
+                                                <li>
+                                                <a href={PSTAKE_TELEGRAM_URL} target="_blank" rel="noopener noreferrer" ><Icon viewClass="social_icon_ig" icon="telegram-plane" /></a>
+
+
+                                                </li>
+                                                <li>
+                                                <a href={PSTAKE_MEDIUM_URL} target="_blank" rel="noopener noreferrer" > <Icon viewClass="social_icon_img" icon="medium-m" /></a>
+
+
+                                                </li>
+                                            </ul>
+                                           
+                                    </ul>
+
+                                </li>
+
                                 <li className="nav-item"><a href={PSTAKE_MEDIUM_URL} target="_blank" onClick={onClickBlog} rel="noopener noreferrer" className="nav-link">{t("BLOG")} </a></li>
-                                <li className="nav-item"><a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("DOCS")} </a></li>
 
-
-                                <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("FORUM")}</a></li>
+                                {/* <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("FORUM")}</a></li> */}
 
 
                                 <li className="nav-item" style={{ marginLeft: '0', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("AIRDROP")} </span></a></li>
