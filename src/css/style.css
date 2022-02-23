@@ -186,7 +186,7 @@ body a:hover {
 }
 
 .modal-video-close-btn:before, .modal-video-close-btn:after {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   width: 100%;
@@ -261,7 +261,8 @@ body a:hover {
   font-weight: 600;
 }
 
-.navbar-expand-lg.sticky-dark .nav-item a:hover, .navbar-nav .nav-item a:hover {
+.navbar-expand-lg.sticky-dark .nav-item a:hover,
+.navbar-nav .nav-item a:hover {
   color: #fff;
 }
 
@@ -303,11 +304,23 @@ body a:hover {
 }
 
 .navbar-expand-lg li.nav-item {
-  margin: 0 20px;
+  margin: 0 10px;
+}
+
+.navbar-expand-lg li.nav-item ul.dropdown li a {
+  font-size: 14px;
+  margin: 0;
+  color: #000;
+  padding: 0;
+  font-weight: 500;
 }
 
 .navbar-expand-lg li.nav-item.status .icon {
   width: 12px;
+}
+
+.navbar-expand-lg.sticky-dark li.nav-item ul.dropdown li a:hover {
+  color: #000;
 }
 
 .navbar-expand-lg .nav-item,
@@ -324,12 +337,13 @@ body a:hover {
 }
 
 .featured-on {
-  background: #F5F6FA !important;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0.05))), #090808;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), #090808;
   padding: 65px 0 115px 0;
 }
 
 .featured-on .section-title {
-  color: #1B1A20;
+  color: #f5f6fa;
 }
 
 .featured-on .logos {
@@ -410,6 +424,10 @@ ul.dropdown li {
   cursor: pointer;
 }
 
+ul.dropdown li a {
+  text-transform: none !important;
+}
+
 .nav-item:hover ul.dropdown {
   display: block;
 }
@@ -460,8 +478,9 @@ ul.dropdown li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-top: 50px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -832,13 +851,21 @@ ul.dropdown li {
 }
 
 .stake-section .card .gone.card-body:hover {
-  background: linear-gradient(288.57deg, #946AD5 3.7%, #A994C8 100%);
+  background: linear-gradient(288.57deg, #946ad5 3.7%, #a994c8 100%);
   border: 0;
 }
 
+.stake-section .card .gone.card-body:hover h1, .stake-section .card .gone.card-body:hover span {
+  color: #fff;
+}
+
 .stake-section .card .gtwo.card-body:hover {
-  background: linear-gradient(287.41deg, #E50913 4.63%, #5C4243 98.79%);
+  background: linear-gradient(287.41deg, #e50913 4.63%, #5c4243 98.79%);
   border: 0;
+}
+
+.stake-section .card .gtwo.card-body:hover h1, .stake-section .card .gtwo.card-body:hover span {
+  color: #fff;
 }
 
 .stake-section .card .gone.card-body:before {
@@ -862,7 +889,7 @@ ul.dropdown li {
 }
 
 .stake-section .card .card-body {
-  width: 90%;
+  width: 100%;
   margin: auto;
   max-width: 22em;
   -webkit-box-pack: center;
@@ -875,7 +902,7 @@ ul.dropdown li {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #fff;
-  background: #1C1C1D;
+  background: #1c1c1d;
   background-clip: padding-box;
   /* !importanté */
   border-radius: 1em;
@@ -2714,11 +2741,26 @@ ul.dropdown li {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .stake-section .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 @media only screen and (max-width: 991px) {
+  .tokensale .investors .investor-list img {
+    width: 200px;
+  }
   .featured-on {
     padding: 70px 0;
+  }
+  .stake-section .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
   }
   .is-sticky .navbar.navbar-custom {
     margin-top: 0;
@@ -2916,6 +2958,20 @@ ul.dropdown li {
 }
 
 @media only screen and (max-width: 767px) {
+  ul.dropdown .socialicons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tokensale .investors .investor-list img {
+    width: 220px;
+  }
+  .stake-section .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
   .stay-updated .blog-articles.left {
     margin-bottom: 25px;
   }
@@ -3031,6 +3087,9 @@ ul.dropdown li {
 }
 
 @media screen and (max-width: 540px) and (min-width: 320px) {
+  .tokensale .investors .investor-list, .tokensale .investors .section-title {
+    text-align: center;
+  }
   .banner-section .banner-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
