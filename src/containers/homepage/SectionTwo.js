@@ -1,9 +1,6 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import feactureone from '../../assets/feacture-1.svg';
-import feacturetwo from '../../assets/feacture-2.svg';
 
-import feacturesix from '../../assets/feacture-3.svg';
 
 import feacturegradient2 from '../../assets/feacture-gradent2.svg';
 const SectionTwo = () => {
@@ -17,9 +14,8 @@ const SectionTwo = () => {
                         <div className="col-lg-4 col-md-6 col-sm-12">
 
                             <div className="homecard feactures-card mb-4">
-                                <img src={feactureone} className="text-left icon-feacture" alt="feacture" title="feacture" /> 
-                                <h5>{t("WRAP")}</h5>
-                                <p>{t("WRAP_DESCRIPTION")}</p>
+                                <h5>Unlock Liquidity</h5>
+                                <p>{t("FEATURE_WRAP")}</p>
                             </div>
                           
                             
@@ -27,9 +23,8 @@ const SectionTwo = () => {
                         <div className="col-lg-4 col-md-6 col-sm-12">
 
                             <div className="homecard feactures-card mb-4">
-                                <img src={feacturetwo} className="text-left icon-feacture" alt="feacture" title="feacture" />
-                                <h5>{t("STAKE")}</h5>
-                                <p>{t("STAKE_DESCRIPTION")}</p>
+                                <h5>Leverage Defi</h5>
+                                <p>{t("FEATURE_DEFI")}</p>
 
                             </div>
                             
@@ -38,9 +33,8 @@ const SectionTwo = () => {
                            
                             <img src={feacturegradient2} className="feacturegradient2" alt="feacture" />
                             <div className="homecard feactures-card mb-4">
-                                <img src={feacturesix} className="text-left icon-feacture" alt="feacture" title="feacture" />
-                                <h5>{t("GENERATE_ADDITONAL_YIELD")}</h5>
-                                <p>{t("GENERATE_ADDITONAL_YIELD_DESCRIPTION")}</p>
+                                <h5>Instant Redemption</h5>
+                                <p>{t("FEATURE_ANCHOR")}</p>
 
                             </div>
 

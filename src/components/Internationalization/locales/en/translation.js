@@ -261,7 +261,11 @@ let English = {
     "INTRO_VIDEO": "Intro Video",
     "PUBLISALE_RELEASEDATE": "Dec 16 at 18:00 UTC",
     "STRATEGIC_SALE_VALUATION": "Strategic sale valuation",
-    "TOKEN_PRICE": "Token price"
+    "TOKEN_PRICE": "Token price",
+     "FEATURE_WRAP":"Stake and receive stkASSETs to maintain liquidity of otherwise locked assets\n",
+      "FEATURE_DEFI":"Explore DeFi opportunities using the liquid stkASSETs while earning staking rewards",
+      "FEATURE_ANCHOR":"Skip unstaking and unbonding process by directly swapping stkASSETs for native assets",
+
 
     
 
