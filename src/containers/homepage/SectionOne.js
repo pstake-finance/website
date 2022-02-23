@@ -3,11 +3,11 @@ import axios from 'axios';
 import rightarrow from '../../assets/right-arrow.svg';
 import { useTranslation } from "react-i18next";
 import InfoSection from "../homepage/InfoSection";
-import Icon from "../../components/Icon";
+// import Icon from "../../components/Icon";
 
 import {
     PSTAKE_APP_URL,
-    VIDEO_URL
+    
 } from '../../constants/config';
 import { getTVLURL, getstkXPRTLIQUIDITYURL, getstkATOMLIQUIDITYURL } from "../../constants/url";
 
@@ -47,13 +47,14 @@ const SectionOne = () => {
                             <div className="col-md-12 col-sm-12 banner-main-section">
                                 <h1 className="banner-heading mb-3">{t("UNLOCKING_LIQUIDITY")}<span> {t("STAKED_ASSETS")}</span></h1>
                                 <div className="banner-buttons">
-                                <a rel="noopener noreferrer" target="_blank" href={VIDEO_URL}>
+                                {/* <a rel="noopener noreferrer" target="_blank" href={VIDEO_URL}>
                                         <span className="button xprt video">
                                         <Icon viewClass="social_icon_img" icon="play" />&emsp;
                                             <span className="hideone">{t("INTRO_VIDEO")}&nbsp;</span>
                                            
                                         </span>
-                                    </a>
+                                    </a> */}
+                                    <h6>Stake your PoS assets while earning DeFi yields</h6>
                                     <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL}>
                                         <span className="button xprt">
                                             <span className="hideone">{t("GET_STARTED")}&nbsp;</span>

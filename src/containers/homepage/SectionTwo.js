@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import feactureone from '../../assets/feacture-1.svg';
 import feacturetwo from '../../assets/feacture-2.svg';
 
-import feacturesix from '../../assets/feacture-6.svg';
+import feacturesix from '../../assets/feacture-3.svg';
 
 import feacturegradient2 from '../../assets/feacture-gradent2.svg';
 const SectionTwo = () => {
@@ -37,7 +37,7 @@ const SectionTwo = () => {
                         <div className="col-lg-4 col-md-6 col-sm-12">
                            
                             <img src={feacturegradient2} className="feacturegradient2" alt="feacture" />
-                            <div className="homecard feactures-card m-none mb-4">
+                            <div className="homecard feactures-card mb-4">
                                 <img src={feacturesix} className="text-left icon-feacture" alt="feacture" title="feacture" />
                                 <h5>{t("GENERATE_ADDITONAL_YIELD")}</h5>
                                 <p>{t("GENERATE_ADDITONAL_YIELD_DESCRIPTION")}</p>
@@ -45,13 +45,7 @@ const SectionTwo = () => {
                             </div>
 
                         </div>
-                        <div className="col-lg-4 col-md-6 col-sm-12 ">
-                        <div className="homecard feactures-card dd-none mb-4">
-                                <img src={feacturesix} className="text-left icon-feacture" alt="feacture" title="feacture" />
-                                <h5>{t("GENERATE_ADDITONAL_YIELD")}</h5>
-                                <p>{t("GENERATE_ADDITONAL_YIELD_DESCRIPTION")}</p>
-                            </div>
-                        </div>
+                       
 
                     </div>
 

@@ -1,27 +1,30 @@
 import React from 'react';
 import SectionOne from '../containers/homepage/SectionOne';
 import SectionTwo from '../containers/homepage/SectionTwo';
-import LeadingPOS from '../containers/homepage/LeadingPOS';
+// import LeadingPOS from '../containers/homepage/LeadingPOS';
 import FeactureBlog from '../containers/homepage/FeactureBlog';
 import StakeAssets from '../containers/homepage/StakeAssets';
-import Audited from '../containers/homepage/Audited';
+// import Audited from '../containers/homepage/Audited';
 import Investors from '../containers/tokensale/Investors';
-import Validators from '../containers/tokensale/Validators';
+import Featured from '../containers/homepage/Featured';
+// import Validators from '../containers/tokensale/Validators';
 import Footer from "../components/Footer";
 const homePage = () => {
     return (
         <React.Fragment>
             <div className="container-fluid p-0 tokensale">
                 <SectionOne />
-                <LeadingPOS />
+                {/* <LeadingPOS /> */}
                 <StakeAssets />
                 <SectionTwo />
-                <Audited />
+                {/* <Audited /> */}
                 <div className="investors-sectiondisplay">
+                {/* <Validators /> */}
+
                 <Investors />
                 </div>
-                <Validators />
                 <FeactureBlog />
+                <Featured />
                 <Footer />
             </div>
         </React.Fragment >
