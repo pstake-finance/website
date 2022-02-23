@@ -703,6 +703,11 @@ ul.dropdown {
                 color: #fff;
             }
         }
+        .gthree.card-body, .gfour.card-body {
+            h5{
+                cursor: not-allowed;
+            }
+        }
         .gone.card-body:before {
             border: 1px solid transparent; /* !importanté */
         }
