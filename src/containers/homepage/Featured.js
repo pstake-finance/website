@@ -56,42 +56,6 @@ const Featured = () => {
                                          src={yf}
                                          alt="yahoo finance"/>
                                 </a>
-
-
-
-                            {/* <a href={AS_SEEN_ON1_URL}
-                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                    <img className="logo-img" src={forbes} alt="Forbes"/>
-                            </a>
-                            <a href={AS_SEEN_ON2_URL} target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                              
-                                <img className="logo-img"
-                                 src={nasdaq}
-                                 alt="Nasdaq"
-                                 />
-                            </a>
-
-                            <a href={AS_SEEN_ON3_URL}
-                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                <img className="logo-img"
-                                  src={coinspeaker}
-                                  alt="Coinspeaker"/>
-                            </a>
-                           
-                           
-                                <a href={AS_SEEN_ON6_URL}
-                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                    <img className="logo-img"
-                                         src={defitimes}
-                                         alt="Defi Times"/>
-                                </a>
-                                <a href={AS_SEEN_ON7_URL}
-                               target="_blank" rel="noopener noreferrer" data-aos="fade" data-aos-duration="1000">
-                                    <img className="logo-img"
-                                         src={investing}
-                                         alt="Investing.com"/>
-                                </a> */}
-                            
                         </div>
                     </div>
                 </div>

@@ -6,13 +6,13 @@ import InfoSection from "../homepage/InfoSection";
 
 import {
     PSTAKE_APP_URL,
-    
+
 } from '../../constants/config';
 
 const SectionOne = () => {
     const { t } = useTranslation();
-  
-   
+
+
 
     return (
         <React.Fragment>
@@ -23,32 +23,30 @@ const SectionOne = () => {
                             <div className="col-md-12 col-sm-12 banner-main-section">
                                 <h1 className="banner-heading mb-3">{t("UNLOCKING_LIQUIDITY")}<span> {t("STAKED_ASSETS")}</span></h1>
                                 <div className="banner-buttons">
-                               
-                                    <h6>Stake your PoS assets while earning DeFi yields</h6>
-                                  
-                                        <span className="button xprt">
+
+                                    <h6> {t("STAKE_ASSETS")}</h6>
+
+                                    <span className="button xprt">
                                         <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL}>
                                             <span className="hideone">{t("GET_STARTED")}&nbsp;</span>
                                             <img src={rightarrow} alt="arrow" />
-                                            </a>
-                                        </span>
-                                  
-                                   
+                                        </a>
+                                    </span>
                                 </div>
                                 <div className="network-stats">
                                     <div className="stats-count">
-                                        <h1>$49.05M+</h1>
-                                        <h6>{t("Value of stkASSETs")}</h6>
+                                        <h1>{t("$49.05M+")}</h1>
+                                        <h6>{t("VALUE_STKASSETS")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>$28.12M+ </h1>
-                                        <h6>{t("Liquidity of stkASSETs")}</h6>
+                                        <h1>{t("$28.12M+")} </h1>
+                                        <h6>{t("LIQUIDITY_STKASSETS")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>5,107</h1>
-                                        <h6>{t("Number of stakers")}</h6>
+                                        <h1>{t("5,107")}</h1>
+                                        <h6>{t("NUMBER_STAKERS")}</h6>
                                     </div>
-                                   
+
 
                                 </div>
                             </div>

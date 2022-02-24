@@ -90,20 +90,19 @@ const Header = () => {
                         <div className={isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                             <ul className={isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
 
-                                {/* <li className="nav-item status"><NavLink to="/tokensale">  <Icon viewClass="social_icon_img" icon="nav-status" />&nbsp;{t("TOKENSALE")}</NavLink></li> */}
                                 <li className="nav-item nav__menu-item">
 
                                     <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("LEARN")}
 
                                     </a>
                                     <ul class="dropdown">
-                                        <li><a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Security Audits")}
+                                        <li><a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("SECURITY_AUDITS")}
 
                                         </a></li>
-                                        <li><a href={GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Guides & Tutorials")}
+                                        <li><a href={GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GUIDES_TUTORIALS")}
 
                                         </a></li>
-                                        <li><a href={DOCS_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Docs")}
+                                        <li><a href={DOCS_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("DOCS")}
 
                                         </a></li>
                                         <li><a href={GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("FAQs")}
@@ -115,14 +114,14 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item nav__menu-item">
 
-                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("Community")}
+                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("COMMUNITY")}
 
                                     </a>
                                     <ul class="dropdown">
-                                        <li><a href={PSTAKE_FORUM_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Forum")}
+                                        <li><a href={PSTAKE_FORUM_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("FORUM")}
 
                                         </a></li>
-                                        <li><a href={SNANPSHOT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("Governance")}
+                                        <li><a href={SNANPSHOT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GOVERNANCE")}
 
                                         </a></li>
 
@@ -148,7 +147,6 @@ const Header = () => {
 
                                 <li className="nav-item"><a href={PSTAKE_MEDIUM_URL} target="_blank" onClick={onClickBlog} rel="noopener noreferrer" className="nav-link">{t("BLOG")} </a></li>
 
-                                {/* <li className="nav-item"><a href={PSTAKE_FORUM_URL} target="_blank" onClick={onClickForum} rel="noopener noreferrer" className="nav-link">{t("FORUM")}</a></li> */}
 
 
                                 <li className="nav-item" style={{ marginLeft: '7px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("AIRDROP")} </span></a></li>

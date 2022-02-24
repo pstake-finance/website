@@ -14,7 +14,7 @@ const SectionTwo = () => {
                         <div className="col-lg-4 col-md-6 col-sm-12">
 
                             <div className="homecard feactures-card mb-4">
-                                <h5>Unlock Liquidity</h5>
+                                <h5>{t("UNLOCK_LIQUIDITY")}</h5>
                                 <p>{t("FEATURE_WRAP")}</p>
                             </div>
                           
@@ -23,7 +23,7 @@ const SectionTwo = () => {
                         <div className="col-lg-4 col-md-6 col-sm-12">
 
                             <div className="homecard feactures-card mb-4">
-                                <h5>Leverage Defi</h5>
+                                <h5>{t("LEVERAGE_DEFI")}</h5>
                                 <p>{t("FEATURE_DEFI")}</p>
 
                             </div>
@@ -33,7 +33,7 @@ const SectionTwo = () => {
                            
                             <img src={feacturegradient2} className="feacturegradient2" alt="feacture" />
                             <div className="homecard feactures-card mb-4">
-                                <h5>Instant Redemption</h5>
+                                <h5>{t("INSTANT_REDEMPTION")}</h5>
                                 <p>{t("FEATURE_ANCHOR")}</p>
 
                             </div>

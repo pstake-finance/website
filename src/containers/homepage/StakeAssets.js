@@ -15,8 +15,6 @@ const StakeAssets = () => {
                 <div className="container">
                     <div className="row">
                         <h3 className="section-title">{t("STAKE_YOUR_ASSETS")}</h3>
-                    {/* <p className="text-center mt-2">{t("STAKE_ASSETS_USNING_PSAKE")} <span>{t("YOU_EARN_STAKING_REWARDS")}</span></p> */}
-
                         <Card className="col-md-3 col-xs-6">
                             <Card.Body className="gone">
                                 <div className="text-center">
@@ -53,8 +51,7 @@ const StakeAssets = () => {
                                 <Card.Title>{t("ETHEREUM")}</Card.Title>
                                 </div>
                                 <div className="apr ap3">
-                                {/*<h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>*/}
-                                <h5>Coming Soon!</h5>
+                                <h5>{t("Coming Soon!")}</h5>
 
                             </div>
                              
@@ -68,8 +65,7 @@ const StakeAssets = () => {
                                 <Card.Title>{t("SOLANA")}</Card.Title>
                                 </div>
                                 <div className="apr ap4">
-                                {/*<h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>*/}
-                                <h5>Coming Soon!</h5>
+                                <h5>{t("Coming Soon!")}</h5>
 
                             </div>
                              
