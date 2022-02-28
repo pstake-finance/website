@@ -17,28 +17,28 @@ const LeadingPOS = () => {
                         <div className="pos-cards">
                             <img src={cosmospos} alt="cosmos" title="Cosmos" />
                             <div className="asideposcount">
-                                <h4>$68B+</h4>
+                                <h4>{t("$68B+")}</h4>
                                 <p>{t("COSMOS")}</p>
                             </div>
                         </div>
                         <div className="pos-cards">
                             <img src={ethpos} alt="cosmos" title="ETH" />
                             <div className="asideposcount">
-                                <h4>$508B+</h4>
+                                <h4>{t("$508B+")}</h4>
                                 <p>{t("ETHEREUM")}</p>
                             </div>
                         </div>
                         <div className="pos-cards">
                             <img src={polkadotpos} alt="cosmos" title="Polkadot" />
                             <div className="asideposcount">
-                                <h4>$30B+</h4>
+                                <h4>{t("$30B+")}</h4>
                                 <p>{t("POLKADOT")}</p>
                             </div>
                         </div>
                         <div className="pos-cards">
                             <img src={solanapos} alt="cosmos" title="Solana" />
                             <div className="asideposcount">
-                                <h4>$57B+</h4>
+                                <h4>{t("$57B+")}</h4>
                                 <p>{t("SOLANA")}</p>
                             </div>
                         </div>
