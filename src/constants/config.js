@@ -4,6 +4,7 @@ export const STAKEDTOKEN = "pTOKEN";
 export const ANALYTICS = "UA-199452342-1";
 export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
+export const PSTAKE_BRIDGE_URL = "https://bridge.persistence.one/";
 export const PSTAKE_MEDIUM_URL = "https://blog.pstake.finance/";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";

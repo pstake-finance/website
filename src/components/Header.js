@@ -12,6 +12,7 @@ import ReactGa from 'react-ga';
 import {
     PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL,
+    PSTAKE_BRIDGE_URL,
     PSTAKE_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
     PSTAKE_AIRDROP_URL,
@@ -89,7 +90,12 @@ const Header = () => {
                         </button>
                         <div className={isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                             <ul className={isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
+                                <li className="nav-item nav__menu-item status">
 
+                                    <a href={PSTAKE_BRIDGE_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link"><Icon viewClass="social_icon_img" icon="nav-status" />&nbsp;{t("BRIDGE")}
+
+                                    </a>
+                                </li>
                                 <li className="nav-item nav__menu-item">
 
                                     <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("LEARN")}
