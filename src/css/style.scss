@@ -284,10 +284,22 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         position: relative;
         line-height: 21px;
         text-align: left;
+        .nav-link.chevron {
+            .icon {
+                width: 10px;
+                transform: rotate(90deg);
+                margin-left: 5px;
+            }
+        }
+        a.nav-link.chevron:hover .icon{
+            transform: rotate(-90deg) ;
+        }
         a {
             &:hover {
                 color: #322d3e;
+
             }
+
         }
     }
 }
@@ -400,9 +412,10 @@ ul.dropdown {
         .stats-count {
             margin: 20px 0;
             text-align: center;
-            h1 {
+            h6.stats {
                 color: #1d1d22;
                 font-weight: bold;
+                font-size: 2.5rem;
             }
             h6 {
                 color: #838c9f;
@@ -444,6 +457,7 @@ ul.dropdown {
         justify-content: center;
         h6 {
             margin-bottom: 20px;
+            font-size: 1rem;
         }
         a {
             margin: 0 10px;
@@ -2079,6 +2093,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 margin: 25px 10px;
                 border-radius: 10px;
                 width: 240px;
+                background:#25252B;
             }
         }
     }
@@ -2501,6 +2516,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         width: 100px;
         text-align: center;
         margin-left: 0 !important;
+
     }
 
     .uses-section .box-list {
