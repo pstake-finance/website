@@ -23,16 +23,16 @@ const FeactureBlog = () => {
                         <div className="col-md-4 blog-articles left">
                             <div className="row m-0">
                                 <div className="col-md-12">
-                                    <a href={PSTAKE_BLOG_THREE_URL}
+                                    <a href={PSTAKE_BLOG_ONE_URL}
                                        target="_blank" rel="noopener noreferrer">
                                         <div className="custom-card mb-10" data-aos="fade-up">
                                             <div className="blog-image">
                                                 <img className="card-img-top" alt="blog2"
-                                                     src={PSTAKE_BLOG_THREE_IMG_URL} />
+                                                     src={PSTAKE_BLOG_ONE_IMG_URL} />
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("LIQUID_STAKING")}</p>
+                                                <p className="text1">{t("USER GUIDE")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -54,7 +54,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("REWARDS")}</p>
+                                                <p className="text1">{t("STAKE VIA pSTAKE")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -66,16 +66,16 @@ const FeactureBlog = () => {
                         <div className="col-md-4 blog-articles left">
                             <div className="row m-0">
                                 <div className="col-md-12">
-                                    <a href={PSTAKE_BLOG_ONE_URL}
+                                    <a href={PSTAKE_BLOG_THREE_URL}
                                        target="_blank" rel="noopener noreferrer">
                                         <div className="custom-card mb-10" data-aos="fade-up">
                                             <div className="blog-image">
                                                 <img className="card-img-top" alt="blog2"
-                                                     src={PSTAKE_BLOG_ONE_IMG_URL} />
+                                                     src={PSTAKE_BLOG_THREE_IMG_URL} />
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("AIRDROP_SECOND_TITLE")}</p>
+                                                <p className="text1">{t("WHY pSTAKE")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>

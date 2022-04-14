@@ -43,7 +43,7 @@ const SectionOne = () => {
                                         <h6>{t("LIQUIDITY_STKASSETS")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h6>{t("5,107")}</h6>
+                                        <h6 className={"stats"}>{t("5,107")}</h6>
                                         <h6>{t("NUMBER_STAKERS")}</h6>
                                     </div>
 
