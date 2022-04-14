@@ -35,15 +35,15 @@ const SectionOne = () => {
                                 </div>
                                 <div className="network-stats">
                                     <div className="stats-count">
-                                        <h1>{t("$49.05M+")}</h1>
+                                        <h6 className="stats">{t("$49.05M+")}</h6>
                                         <h6>{t("VALUE_STKASSETS")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>{t("$28.12M+")} </h1>
+                                        <h6 className="stats">{t("$28.12M+")} </h6>
                                         <h6>{t("LIQUIDITY_STKASSETS")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h1>{t("5,107")}</h1>
+                                        <h6>{t("5,107")}</h6>
                                         <h6>{t("NUMBER_STAKERS")}</h6>
                                     </div>
 

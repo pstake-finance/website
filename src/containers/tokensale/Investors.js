@@ -54,7 +54,7 @@ const Investors = () => {
 
                     <h4 className="section-title">{t("Security Audits")}</h4>
                     <div className="investor-list">
-                        <a href={THREEAC_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_1} title="Trail Of Bits" alt="Trail Of Bits" /></a>
+                        <a href="/" target="_blank" rel="noopener noreferrer"><img className="" src={sa_1} title="Trail Of Bits" alt="Trail Of Bits" /></a>
                         <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer"><img className="" src={sa_2} title="Digilence" alt="Digilence" /></a>
                         <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_3} title="Solidified" alt="Solidified" /></a>
                         <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_4} title="Peckshield" alt="Peckshield" /></a>

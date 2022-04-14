@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import ReactGa from 'react-ga';
 // import {
 //     PSTAKE_TWITTER_URL,
@@ -31,6 +32,7 @@ const Header = () => {
     const { t } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
+    const [chevronChange, setChevronChange] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
 
@@ -47,10 +49,13 @@ const Header = () => {
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
         if (top > 50) {
+            setChevronChange(true);
             document.getElementById('nav-bar').classList.add('sticky-dark');
             document.getElementById('is-sticky').classList.add('is-sticky');
         }
         else {
+            setChevronChange(false);
+
             document.getElementById('nav-bar').classList.remove('sticky-dark');
             document.getElementById('is-sticky').classList.remove('is-sticky');
         }
@@ -98,9 +103,12 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item nav__menu-item">
 
-                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("LEARN")}
-
-                                    </a>
+                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link chevron">{t("LEARN")}
+                                        {!chevronChange ?
+                                            <Icon viewClass="social_icon_img" icon="chevron"/>
+                                            : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
+                                        }
+                                            </a>
                                     <ul class="dropdown">
                                         <li><a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("SECURITY_AUDITS")}
 
@@ -120,7 +128,11 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item nav__menu-item">
 
-                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link">{t("COMMUNITY")}
+                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link chevron">{t("COMMUNITY")}
+                                        {!chevronChange ?
+                                            <Icon viewClass="social_icon_img" icon="chevron"/>
+                                            : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
+                                        }
 
                                     </a>
                                     <ul class="dropdown">
