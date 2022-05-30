@@ -13,6 +13,7 @@ export const PSTAKE_AUDITS_URL = "https://github.com/persistenceOne/pStake-audit
 export const PSTAKE_FORUM_URL = "https://forum.pstake.finance/";
 export const PSTAKE_RAISE_A_TICKET_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform";
 export const PSTAKE_APP_URL = "https://app.pstake.finance/";
+export const PSTAKE_STAGING_APP_URL = "https://staging.app.pstake.finance/";
 export const PSTAKE_WEB_URL = "https://pstake.finance/";
 export const PSTAKE_MATIC_WALLET_URL = "https://wallet.matic.network/";
 export const PSTAKE_FRONTIER_URL = "https://frontier.xyz/";
