@@ -2,7 +2,9 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { useTranslation } from "react-i18next";
 import {
-    PSTAKE_APP_URL } from '../../constants/config';
+    PSTAKE_APP_STKETH_URL,
+    PSTAKE_APP_URL
+} from '../../constants/config';
 import asset1 from '../../assets/asset_1.svg';
 import asset2 from '../../assets/asset_2.svg';
 import asset3 from '../../assets/asset_3.svg';
@@ -53,7 +55,7 @@ const StakeAssets = () => {
                                 </div>
                                 <div className="apr">
                                     <h1>{t("ETH_APR")} <span>{t("APR")}</span></h1>
-                                    <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
+                                    <a href={PSTAKE_APP_STKETH_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
 
 
                                 </div>
