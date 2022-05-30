@@ -45,15 +45,18 @@ const StakeAssets = () => {
                            
                         </Card>
                         <Card className="col-md-3  col-xs-6">
-                            <Card.Body className="gthree">
+
+                            <Card.Body className="gone">
                                 <div className="text-center">
                                 <img className="pt-4 pb-4" src={asset3} title="Asset" alt="Asset"/>
                                 <Card.Title>{t("ETHEREUM")}</Card.Title>
                                 </div>
-                                <div className="apr ap3">
-                                <h5>{t("Coming Soon!")}</h5>
+                                <div className="apr">
+                                    <h1>{t("ETH_APR")} <span>{t("APR")}</span></h1>
+                                    <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
 
-                            </div>
+
+                                </div>
                              
                             </Card.Body>
                             

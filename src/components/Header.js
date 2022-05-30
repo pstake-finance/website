@@ -2,14 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import ReactGa from 'react-ga';
-// import {
-//     PSTAKE_TWITTER_URL,
-// PSTAKE_TELEGRAM_URL,
-// PSTAKE_YOUTUBE_URL,
-// PSTAKE_REDDIT_URL,
-// PERSISTENCE_ONE_URL,
-// PSTAKE_MEDIUM_URL
-// }  from '../constants/config';
+
 import {
     PSTAKE_MEDIUM_URL,
     PSTAKE_DOCS_URL,
@@ -17,12 +10,12 @@ import {
     PSTAKE_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
     PSTAKE_AIRDROP_URL,
-    PSTAKE_APP_URL,
     SECURITY_AUDIT_URL,
     GUIDES_FAQ_URL,
     DOCS_URL,
     SNANPSHOT_URL,
-    PSTAKE_FORUM_URL
+    PSTAKE_FORUM_URL,
+    PSTAKE_STAGING_APP_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
@@ -169,7 +162,7 @@ const Header = () => {
 
                                 <li className="nav-item" style={{ marginLeft: '7px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_AIRDROP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("AIRDROP")} </span></a></li>
 
-                                <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("GO_TO_APP")}</span></a></li>
+                                <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_STAGING_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("GO_TO_APP")}</span></a></li>
 
                             </ul>
                         </div>
