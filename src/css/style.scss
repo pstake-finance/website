@@ -717,6 +717,10 @@ ul.dropdown {
                 color: #fff;
             }
         }
+        .gfour.card-body:hover{
+            background: linear-gradient(287.41deg, #efb90b 4.63%, #5c4243 98.79%);
+            border: 0;
+        }
         .gthree.card-body, .gfour.card-body {
             h5{
                 cursor: not-allowed;
@@ -770,6 +774,9 @@ ul.dropdown {
             background: #636974;
             cursor: no-drop;
         }
+    }
+    img{
+        width: 39px;
     }
     .apr {
         padding: 20px 0px 0;
