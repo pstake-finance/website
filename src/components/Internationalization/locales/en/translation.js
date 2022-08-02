@@ -34,6 +34,7 @@ let English = {
         "ETHEREUM": "Ethereum",
         "POLKADOT":"Polkadot",
         "SOLANA":"Solana",
+        "BINANCE": "Binance",
         "STAKE_YOUR_ASSETS": "Supported Networks",
         "STAKE_ASSETS_USNING_PSAKE": "Stake Assets using pSTAKE to receive pASSETS which can be used in DeFi to generate yield while",
         "YOU_EARN_STAKING_REWARDS": "you earn staking rewards on your staked Assets",
