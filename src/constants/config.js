@@ -48,6 +48,7 @@ export const STAKEFISH = "https://stake.fish/en/";
 export const FIGMENT = "https://www.figment.io/";
 export const EVERSTAKE = "https://everstake.one/";
 export const CHORUS = "https://chorus.one/";
+export const AUDIT = "https://audit.one/";
 export const COSMOSTATION = "https://www.cosmostation.io/";
 export const REGISTER = "https://coinlist.co/pstake";
 export const LEARN_MORE = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";

@@ -9,7 +9,6 @@ PSTAKE_TELEGRAM_URL,
 PSTAKE_YOUTUBE_URL,
 PSTAKE_REDDIT_URL,
 PERSISTENCE_ONE_URL,
-PSTAKE_MEDIUM_URL
 }  from '../constants/config';
 const clickOnTwitter = () => {
     ReactGa.event({
@@ -18,13 +17,7 @@ const clickOnTwitter = () => {
     })
 
 }
-const clickOnTelegram = () => {
-    ReactGa.event({
-        category: 'Telegram',
-        action: 'Clicked on Telegram'
-    })
 
-}
 const clickOnMedium = () => {
     ReactGa.event({
         category: 'Medium',
@@ -51,27 +44,77 @@ const Footer = () => {
     return (
         <React.Fragment>
             <section className="footer-section">
+                <h3 className="section-title">{t("JOIN_OUR_COMMUNITY")}</h3>
                 <div className="container">
-                        <div className="icon-list">
-                            <div className="icon-box">
-                                <a href={PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer" onClick={clickOnTwitter}><Icon viewClass="social_icon_img" icon="twitter-logo"/></a>
+                    <div className="icon-list">
+                        <div className="row">
+                            <div className="item">
+                                <div className="item-body">
+                                    <div className="icon-box">
+                                        <Icon viewClass="social_icon_img" icon="twitter-logo"/>
+                                    </div>
+                                    <div className="content">
+                                        <p className="name">Telegram</p>
+                                        <a href={PSTAKE_TELEGRAM_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnTwitter}>
+                                            Join the Community
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="icon-box">
-                            <a href={PSTAKE_TELEGRAM_URL} target="_blank" rel="noopener noreferrer" onClick={clickOnTelegram}><Icon viewClass="social_icon_ig" icon="telegram-plane"/></a>
-                            </div>
-                            <div className="icon-box">
-                            <a href={PSTAKE_MEDIUM_URL} target="_blank" rel="noopener noreferrer" onClick={clickOnMedium}> <Icon viewClass="social_icon_img" icon="medium-m"/></a>
-                            </div>
-                            <div className="icon-box">
-                            <a href={PSTAKE_YOUTUBE_URL} target="_blank" rel="noopener noreferrer" onClick={clickOnYoutube}> <Icon viewClass="social_icon_img" icon="youtube"/></a>
-                            </div>
-                            <div className="icon-box">
-                            <a href={PSTAKE_REDDIT_URL} target="_blank" rel="noopener noreferrer" onClick={clickOnReddit}> <Icon viewClass="social_icon_img" icon="reddit-round"/></a>
+                            <div className="item">
+                                <div className="item-body">
+                                    <div className="icon-box">
+                                        <Icon viewClass="social_icon_img" icon="medium-m"/>
+                                    </div>
+                                    <div className="content">
+                                        <p className="name">Twitter</p>
+                                        <a href={PSTAKE_TWITTER_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnMedium}>
+                                            Join the Community
+                                        </a>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    <p className="terms">{new Date().getFullYear()} | Built with  <Icon viewClass="social_icon_ig heart" icon="footerheart"/> by <a href={PERSISTENCE_ONE_URL} target="_blank" rel="noopener noreferrer">Persistence.</a></p>
+                        <div className="row">
+                            <div className="item">
+                                <div className="item-body">
+                                    <div className="icon-box">
+                                        <Icon viewClass="social_icon_img" icon="youtube"/>
+                                    </div>
+                                    <div className="content">
+                                        <p className="name">Youtube</p>
+                                        <a href={PSTAKE_YOUTUBE_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnYoutube}>
+                                            Join the Community
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <div className="item-body">
+                                    <div className="icon-box">
+                                        <Icon viewClass="social_icon_img" icon="reddit-round"/>
+                                    </div>
+                                    <div className="content">
+                                        <p className="name">Reddit</p>
+                                        <a href={PSTAKE_REDDIT_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnReddit}>
+                                            Join the Community
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="privacy-terms">
-                        <Link to='/terms' target='_blank'>{t("TERMS_OF_SERVICE")} </Link> <Link to='/privacy' target='_blank'>{t("PRIVACY_POLICY")}</Link>
+                        <Link to='/privacy' target='_blank'>{t("PRIVACY_POLICY")}</Link>
+                        <p className="terms">{new Date().getFullYear()} | Built with
+                            &nbsp;
+                            <Icon viewClass="social_icon_ig heart" icon="footerheart"/>
+                            &nbsp;
+                            by &nbsp;
+                            <a href={PERSISTENCE_ONE_URL} target="_blank" rel="noopener noreferrer">Persistence.</a>
+                        </p>
+                        <Link to='/terms' target='_blank'>{t("TERMS_OF_SERVICE")} </Link>
                     </div>
                 </div>
             </section>
