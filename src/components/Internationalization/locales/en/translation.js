@@ -235,52 +235,83 @@ let English = {
         "GENERAL_TITLE_NINE":"9. Disclaimer",
         "GENERAL_TITLE_NINE_SUB_ONE":"It may kindly be noted that the transmission of information via the internet is not completely secure. We will do our best to protect your Personal Information and Sensitive Personal Information but we cannot guarantee the security of your data transmitted to the Website. Any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access.",
         "GENERAL_TITLE_NINE_SUB_TWO":"We request you to ensure that all your information shared with us is accurate, correct and complete, at all times, and you must promptly inform us of any changes to your information which may impact your use of the Website and application. You understand that we shall not be liable or responsible for the authenticity of your information, or for any loss or damage that may occur to you or other third parties on account of the information being provided by you.",
-    // TOKEN SALE
-    "PSTAKE_DESCRIPTION": "PSTAKE is an ERC-20 based governance and ",
-    "PSTAKE_DESCRIPTION_NEXT_LINE_ONE": "incentivization token that powers the pSTAKE ecosystem.",
-    "PSTAKE_DESCRIPTION_TEXT_ONE": "Cosmos & Persistence. ",
-    "PSTAKE_DESCRIPTION_NEXT_LINE_THREE": "It aligns stakeholder",
-    "PSTAKE_DESCRIPTION_NEXT_LINE_TWO": "incentives in pSTAKE’s liquid staking ecosystem.",
-    "GOVERNANCE": "Governance",
-    "GOVERNANCE_DES": "$PSTAKE holders are incentivised to participate in the protocol’s governance to ensure its long-term success and security by staking $PSTAKE on the Protocol.",
-    "INSURANCE": "Incentivization",
-    "INSURANCE_TITLE":"In order to ensure long-term success of the protocol, the $PSTAKE token will be used to incentivise the core contributors of the pSTAKE ecosystem. $PSTAKE will also be used as a dis-incentivization token in case stakeholders staking the token act maliciously or are unable to perform their respective duties appropriately.",
-    "INSURANCE_TITLE_ONE": "So if the validator gets slashed on the network, y% of all the assets delegated/staked with the validator is burned off by the Terra Network as a punishment.",
-    "INSURANCE_TITLE_TWO": "Now if y% of the slashed stake corresponds to $1,000 worth of LUNA, then $1,000 worth of $PSTAKE staked by the validator in the vault is auctioned off to by LUNA and stake it via pSTAKE again to make the end-users whole. This process adds skin-in-the-game for validators to always maintain high standards and avoid getting slashed",
-    "INCENTIVE_ALIGNMENT": "Incentive Alignement",
-    "INVESTORS": "Investors",
-    "VALIDATORS": "Validators",
-    "TOKENOMICS": "Tokenomics",
-    "FEATURED_ON_SECTION_TITLE": "As seen on",
-    "BUY_NOW": "Participate in Public Sale",
-    "WHO_BACKING_US": "Who’s backing us?",
-    "PARTICIPATE_PUBLIC_SALE": "Participate in Public Sale",
-    "BENEFITS_INCLUDING": "Benefits Including:",
-    "BENEFITS_ONE": "Participation in protocol improvement proposals through voting.",
-    "BENEFITS_TWO": "Participation in protocol security.",
-    "LEARN_MORE_HERE": "Learn more about the $PSTAKE here",
-    "PUBLIC_SALE_IN": "The pSTAKE Sale Begins:",
-    "$PSTAKE": "$PSTAKE",
-    "GENESIS_SUPPLY": "The Total Genesis Supply of PSTAKE will be 500,000,000.",
-    "GENEIS_SUPPLY_DES":"The distribution is designed to maximize decentralisation of protocol governance, while adequately incentivising the core contributors of the long-term growth of the protocol.",
-    "TOKEN_ALLOCATION": "Token Allocation",
-    "TOKEN_DISTRIBUTION": "Token Distribution",
-    "PARTICIPATE_TOKEN": "Participate In Token Sale",
-    "REGISTER": "Registration Closed",
-    "BANNER_TEXT":"$PSTAKE Token sale registration Is live on CoinList.",
-    "REGISTER_NOW": "Register Now!",
-    "INTRO_VIDEO": "Intro Video",
-    "PUBLISALE_RELEASEDATE": "Dec 16 at 18:00 UTC",
-    "STRATEGIC_SALE_VALUATION": "Strategic sale valuation",
-    "TOKEN_PRICE": "Token price",
-     "FEATURE_WRAP":"Stake and receive stkASSETs to maintain liquidity of otherwise locked assets\n",
-      "FEATURE_DEFI":"Explore DeFi opportunities using the liquid stkASSETs while earning staking rewards",
-      "FEATURE_ANCHOR":"Skip unstaking and unbonding process by directly swapping stkASSETs for native assets",
+        // TOKEN SALE
+        "PSTAKE_DESCRIPTION": "PSTAKE is an ERC-20 based governance and ",
+        "PSTAKE_DESCRIPTION_NEXT_LINE_ONE": "incentivization token that powers the pSTAKE ecosystem.",
+        "PSTAKE_DESCRIPTION_TEXT_ONE": "Cosmos & Persistence. ",
+        "PSTAKE_DESCRIPTION_NEXT_LINE_THREE": "It aligns stakeholder",
+        "PSTAKE_DESCRIPTION_NEXT_LINE_TWO": "incentives in pSTAKE’s liquid staking ecosystem.",
+        "GOVERNANCE": "Governance",
+        "GOVERNANCE_DES": "$PSTAKE holders are incentivised to participate in the protocol’s governance to ensure its long-term success and security by staking $PSTAKE on the Protocol.",
+        "INSURANCE": "Incentivization",
+        "INSURANCE_TITLE":"In order to ensure long-term success of the protocol, the $PSTAKE token will be used to incentivise the core contributors of the pSTAKE ecosystem. $PSTAKE will also be used as a dis-incentivization token in case stakeholders staking the token act maliciously or are unable to perform their respective duties appropriately.",
+        "INSURANCE_TITLE_ONE": "So if the validator gets slashed on the network, y% of all the assets delegated/staked with the validator is burned off by the Terra Network as a punishment.",
+        "INSURANCE_TITLE_TWO": "Now if y% of the slashed stake corresponds to $1,000 worth of LUNA, then $1,000 worth of $PSTAKE staked by the validator in the vault is auctioned off to by LUNA and stake it via pSTAKE again to make the end-users whole. This process adds skin-in-the-game for validators to always maintain high standards and avoid getting slashed",
+        "INCENTIVE_ALIGNMENT": "Incentive Alignement",
+        "INVESTORS": "Investors",
+        "VALIDATORS": "Validators",
+        "TOKENOMICS": "Tokenomics",
+        "FEATURED_ON_SECTION_TITLE": "As seen on",
+        "BUY_NOW": "Participate in Public Sale",
+        "WHO_BACKING_US": "Who’s backing us?",
+        "PARTICIPATE_PUBLIC_SALE": "Participate in Public Sale",
+        "BENEFITS_INCLUDING": "Benefits Including:",
+        "BENEFITS_ONE": "Participation in protocol improvement proposals through voting.",
+        "BENEFITS_TWO": "Participation in protocol security.",
+        "LEARN_MORE_HERE": "Learn more about the $PSTAKE here",
+        "PUBLIC_SALE_IN": "The pSTAKE Sale Begins:",
+        "$PSTAKE": "$PSTAKE",
+        "GENESIS_SUPPLY": "The Total Genesis Supply of PSTAKE will be 500,000,000.",
+        "GENEIS_SUPPLY_DES":"The distribution is designed to maximize decentralisation of protocol governance, while adequately incentivising the core contributors of the long-term growth of the protocol.",
+        "TOKEN_ALLOCATION": "Token Allocation",
+        "TOKEN_DISTRIBUTION": "Token Distribution",
+        "PARTICIPATE_TOKEN": "Participate In Token Sale",
+        "REGISTER": "Registration Closed",
+        "BANNER_TEXT":"$PSTAKE Token sale registration Is live on CoinList.",
+        "REGISTER_NOW": "Register Now!",
+        "INTRO_VIDEO": "Intro Video",
+        "PUBLISALE_RELEASEDATE": "Dec 16 at 18:00 UTC",
+        "STRATEGIC_SALE_VALUATION": "Strategic sale valuation",
+        "TOKEN_PRICE": "Token price",
+        "FEATURE_WRAP":"Stake and receive stkASSETs to maintain liquidity of otherwise locked assets\n",
+        "FEATURE_DEFI":"Explore DeFi opportunities using the liquid stkASSETs while earning staking rewards",
+        "FEATURE_ANCHOR":"Skip unstaking and unbonding process by directly swapping stkASSETs for native assets",
+        "JOIN_OUR_COMMUNITY":"Join Our Community",
+
+// BNB SECTION
+
+        "BANNER_HEADING": "Unlock Liquidity of BNB You Stake",
+        "BANNER_SUB_HEADING": "Enjoy the best of both worlds in the BNB Ecosystem—staking rewards & DeFi\n" +
+            "                                        yields by receiving stkBNB when you stake BNB with pSTAKE.",
+        "LIQUID_STAKE_BNB":"Liquid Stake BNB",
+        "TOTAL_VALUE_UNLOCKED": "Total Value Unlocked(TVU)",
+        "NUMBER_OF_BNB_LIQUID_STAKERS": "Number of BNB Liquid Stakers",
+        "APY":"APY",
+        "TOTAL_REWARDS_EARNED": "Total Rewards Earned",
+        "WHY_PSTAKE_FOR_BNB": "Why pSTAKE for BNB?",
+        "WHY_PSTAKE_FOR_BNB_ONE_HEADING":"Say goodbye to illiquidity",
+        "WHY_PSTAKE_FOR_BNB_ONE_CONTENT": "Receive stkBNB to maintain liquidity of otherwise locked $BNB when you stake",
+        "WHY_PSTAKE_FOR_BNB_TWO_HEADING":"Yields. Yields. Yields.",
+        "WHY_PSTAKE_FOR_BNB_TWO_CONTENT":"Generate the highest of yields with auto-compounding BNB staking rewards & " +
+            "various stkBNB DeFi opportunities all while securing the BNB chain network",
+        "WHY_PSTAKE_FOR_BNB_THREE_HEADING":"Redemption Time who?",
+        "WHY_PSTAKE_FOR_BNB_THREE_CONTENT":"Skip unstaking and unbonding process of your $BNB by directly for " +
+            "swapping stkBNB from a liquidity pool ",
+        "STAKING_VS_LIQUID_STAKING": "Staking vs Liquid Staking",
+        "ECOSYSTEM_HEADING": "Put your stkBNB to work in the BNB DeFi Ecosystem",
+        "START_STAKING":"Start Staking",
 
 
-    
 
-}
+
+
+
+
+
+
+
+
+    }
 
 };
 

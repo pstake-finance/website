@@ -232,6 +232,12 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .navbar-nav .nav-link.app-btn {
         background: #e50913;
     }
+    &.bnb{
+        .navbar-nav .nav-link.app-btn {
+            background: #F0B90B;
+            color: #1D1D22;
+        }
+    }
 }
 .navbar-nav {
     align-items: center;
@@ -995,21 +1001,79 @@ ul.dropdown {
 .footer-section {
     padding: 100px 0;
     background: #1d1d22;
+    .section-title{
+        margin-bottom: 50px;
+    }
     .icon-list {
         display: flex;
         justify-content: center;
         padding-bottom: 30px;
-        .icon-box {
-            padding: 0 10px;
-            svg {
-                width: 18px;
-                fill: #515257;
-                &:hover {
-                    fill: #e50913;
-                    cursor: pointer;
+        align-items: center;
+        max-width: 1000px;
+        flex-direction: column;
+        margin: auto;
+        .row{
+            width: 100%;
+            margin: auto auto 30px auto;
+            justify-content: center;
+        }
+        .item{
+            max-width: 440px;
+            width: 100%;
+            .item-body {
+                background: #25252A;
+                box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
+                border-radius: 16px;
+                margin: 0 15px;
+                padding: 1.5rem;
+                display: flex;
+                align-items: center;
+
+                .content {
+                    .name {
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 141.9%;
+                        color: #FFFFFF;
+                        margin: 0;
+                    }
+
+                    .link {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 141.9%;
+                        color: #70747C;
+
+                        &:hover {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+
+                .icon-box {
+                    margin: 0 10px;
+                    width: 46px;
+                    height: 46px;
+                    background: #3F3F45;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    svg {
+                        width: 22px;
+                        fill: #70747C;
+                    }
+                }
+                &:hover{
+                    .icon-box {
+                        svg {
+                            fill: #e50913;
+                        }
+                    }
                 }
             }
         }
+
     }
     .terms {
         font-weight: normal;
@@ -1029,18 +1093,18 @@ ul.dropdown {
     .privacy-terms {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         a {
             color: #70747c;
             font-size: 14px;
-            &:first-child {
-                border-right: 1px solid #70747c;
-            }
-            padding: 0 20px;
             &:hover {
                 color: #ffffff;
                 cursor: pointer;
             }
+        }
+        p{
+            margin: 0;
         }
     }
 }
@@ -1060,11 +1124,22 @@ ul.dropdown {
         opacity: 1;
     }
 }
-.navbar-expand-lg .navbar-nav .nav-link.app-btn {
-    padding: 10px 25px;
-    background: #1d1d22;
-    color: #fff;
-    border-radius: 8px;
+.navbar-expand-lg {
+    .navbar-nav {
+        .nav-link.app-btn {
+            padding: 10px 25px;
+            background: #1d1d22;
+            color: #fff;
+            border-radius: 8px;
+        }
+    }
+    &.bnb{
+        .navbar-nav {
+            .nav-link.app-btn {
+                color: #F0B90B;
+            }
+        }
+    }
 }
 [data-tooltip] {
     position: relative;
@@ -1647,6 +1722,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         font-weight: 600;
     }
 }
+
 // XPRT sTAKEDROP CSS
 .participate-stakedrop {
     padding: 135px 0;
@@ -2216,7 +2292,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             font-size: 3rem;
             line-height: 131.4%;
             color: #ffffff;
-            text-align: left;
+            text-align: center;
             width: 100%;
             margin-bottom: 40px;
         }
@@ -2313,6 +2389,477 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         margin-bottom: 20px;
         img {
             margin: 0 5px;
+        }
+    }
+}
+
+// BINANCE PAGE
+.binance{
+    .section-title{
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 141.9%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .banner-section{
+      background-image:url("../assets/binance_bg.svg"),  radial-gradient(100% 311.1% at 97.81% 0%, #FFFFFF 0%, #FFFEF8 45.83%, #FFFFFD 100%);
+      background-repeat: no-repeat;
+      background-position:top right, 100% 100%;
+      //height: 100vh;
+      background-size:30%, 100%;
+      padding-bottom: 90px;
+      .banner-main-section{
+          .logo{
+              width: 150px;
+              height: 150px;
+              margin: auto;
+          }
+          .banner-heading{
+              font-weight: 700;
+              font-size: 72px;
+              line-height: 126.5%;
+              text-align: center;
+              color: #1D1D22;
+              max-width: 850px;
+              margin: 1.5rem auto auto auto;
+          }
+          .banner-sub-heading{
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 200%;
+              max-width: 650px;
+              color: #393939;
+              margin: auto;
+              text-align: center;
+          }
+          .banner-buttons{
+              display: block;
+              margin-top: 2rem;
+              .button-link{
+                  display: block;
+                  background: #F0B90B;
+                  border-radius: 8px;
+                  padding: 1rem 2rem;
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 180%;
+                  color: #000000;
+                  margin: auto;
+                  text-align: center;
+                  max-width: 215px;
+                  .icon{
+                      fill: #000;
+                      margin-left:5px;
+                  }
+                  &:hover {
+                      text-decoration: none;
+                  }
+              }
+          }
+          .network-stats{
+                .stats-count{
+                    .label{
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 131.4%;
+                        text-align: center;
+                        color: #838C9F;
+                    }
+                    .stats{
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 131.4%;
+                        text-align: center;
+                        color: #1D1D22;
+                    }
+                }
+          }
+      }
+  }
+    .use-case-section{
+        padding: 130px 0;
+        .section-title{
+            margin-bottom: 20px;
+        }
+        .row{
+            justify-content: center;
+        }
+        .card{
+            flex: 0 0 360px;
+            padding-top: 50px;
+            background: transparent;
+            border: 0;
+            padding-bottom: 50px;
+            .card-body{
+                width: 100%;
+                margin: auto;
+                max-width: 22em;
+                background: #26262B;
+                opacity: 0.9;
+                border: 1px solid #2A2C31;
+                backdrop-filter: blur(40px);
+                border-radius: 8px;
+                padding: 2rem;
+                .card-heading{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 131.4%;
+                    color: #FFFFFF;
+                    margin-bottom: 22px;
+                }
+                .card-content{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 200%;
+                    color: #DBD6D6;
+                }
+            }
+            &:first-child{
+                background-image:url("../assets/usecase/bg2.svg");
+                background-repeat: no-repeat;
+                background-position: 0 95%;
+            }
+            &:last-child{
+                background-image:url("../assets/usecase/bg1.svg");
+                background-repeat: no-repeat;
+                background-position: 80% 0;
+            }
+        }
+    }
+    .comparison-section{
+        padding-top: 30px;
+        padding-bottom: 50px;
+        .section-title{
+            margin-bottom: 50px;
+        }
+        .table-container {
+            .table {
+                background: #26262B;
+                tr {
+                    th {
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 141.9%;
+                        color: #70747C;
+                        border-color: #313134;
+                        padding: 22px 16px 18px 70px ;
+                        &:first-child{
+                            padding-left: 80px;
+                        }
+                        &:last-child{
+                            padding-right: 70px;
+                        }
+                    }
+
+                    td {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 200%;
+                        color: #DBD6D6;
+                        border-color: #313134;
+                        padding-left: 70px;
+                        &:first-child {
+                            padding-left: 80px;
+                        }
+                        &:last-child{
+                            padding-right: 70px;
+                        }
+                    }
+                }
+
+                thead {
+                    background: #2E2E34;
+                }
+
+            }
+        }
+    }
+
+    .ecosystem-section{
+        padding: 100px 0;
+        .section-title{
+            margin-bottom: 50px;
+            max-width: 960px;
+            margin: auto;
+        }
+        .row{
+            justify-content: center;
+        }
+        .card{
+            flex: 0 0 468px;
+            margin-top: 50px;
+            background: transparent;
+            border: 0;
+            .card-body{
+                width: 100%;
+                margin: auto;
+                background: #26262B;
+                opacity: 0.9;
+                border: 1px solid #2A2C31;
+                backdrop-filter: blur(40px);
+                border-radius: 8px;
+                padding: 2rem;
+                position: relative;
+                .tag{
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 160%;
+                    text-align: center;
+                    color: #25252A;
+                    padding: 10px 22px 10px 14px;
+                    background: #FFFFFF;
+                    left: 0;
+                    position: absolute;
+                    border-top-right-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                    p{
+                        margin: 0;
+                    }
+                }
+                .icon-box{
+                    text-align: center;
+                }
+                .card-heading{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 131.4%;
+                    color: #FFFFFF;
+                    margin-bottom: 22px;
+                }
+                .card-content{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 200%;
+                    color: #DBD6D6;
+                }
+                .stats{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 2rem;
+                    .item{
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 131.4%;
+                        color: #24B574;
+                        margin: 0px 10px;
+                        span{
+                            font-size: 12px;
+                            color: #70747C;
+                        }
+                    }
+                }
+                .buttons{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 2rem;
+                    flex-wrap: wrap;
+                    .button-link{
+                        display: block;
+                        flex: 1;
+                        border-radius: 8px;
+                        padding: 0.625rem 2rem;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 180%;
+                        text-align: center;
+                        width: 186px;
+                        &.primary{
+                            background: #F0B90B;
+                            color: #000000;
+                            margin-right: 5px;
+                        }
+                        &.secondary{
+                            background: #2E2E34;
+                            color: #FFFFFF;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .guides-section{
+        padding: 70px 0;
+        .section-title{
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 141.9%;
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 50px;
+            max-width: 960px;
+            margin: auto;
+        }
+        .row{
+            justify-content: center;
+        }
+        .card {
+            flex: 1;
+            margin-top: 50px;
+            background: transparent;
+            border: 0;
+
+            .card-body {
+                width: 100%;
+                margin: auto;
+                background: #26262B;
+                opacity: 0.9;
+                border: 1px solid #2A2C31;
+                backdrop-filter: blur(40px);
+                border-radius: 8px;
+                padding: 11px 18px;
+                position: relative;
+                .guide-section{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .embed-responsive{
+                        width: 171px;
+                        height: 104px;
+                    }
+                    .content{
+                        margin-left: 1rem;
+                        .heading{
+                            font-weight: 600;
+                            font-size: 20px;
+                            line-height: 131.4%;
+                            color: #FFFFFF;
+                            margin-bottom: 12px;
+                            .icon{
+                                fill: #FFFFFF;
+                                width: 14px;
+                                margin-left: 10px;
+                            }
+                        }
+                        .text{
+                            margin: 0;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 150%;
+                            color: #DBD6D6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .audited-section{
+        padding: 55px 0;
+        .section-sub-title{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 141.9%;
+            text-align: center;
+            color: #70747C;
+            max-width: 500px;
+            margin: auto;
+        }
+        .audited-list{
+            margin-top: 60px;
+            text-align: center;
+            a{
+                img{
+                    margin: 25px 10px;
+                    width:auto;
+                }
+            }
+        }
+    }
+    .validators-section{
+        padding: 100px 0;
+        .section-sub-title{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 141.9%;
+            text-align: center;
+            color: #70747C;
+            max-width: 500px;
+            margin: auto;
+        }
+        .validator-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 80px;
+            a{
+                img{
+                    margin: 25px 10px;
+                    width:auto;
+                }
+            }
+        }
+    }
+    .blog-section{
+        padding: 70px 0;
+        &.stay-updated .blog-articles .custom-card .custom-card-body .learn-more{
+            border-color: #F0B90B;
+        }
+        .section-title{
+            padding: 0;
+        }
+        .row{
+            margin-top: 50px;
+        }
+    }
+    .faq-section {
+        padding: 70px 0;
+        .row{
+            justify-content: center;
+        }
+        .accordion {
+            padding-top: 40px;
+
+            .accordion-button {
+                background: none;
+                border: 0px solid ;
+                outline: 0;
+            }
+
+            .card {
+                background: transparent;
+                border: 0px solid;
+                margin-bottom: 20px;
+
+                .card-header {
+                    background-color: #313134;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        margin: 0;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 2;
+                        color: #FFFFFF;
+                    }
+                }
+
+                .card-body {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    line-height: 2;
+                    color: #F3F3F3;
+                }
+            }
+        }
+    }
+    .footer-section {
+        padding: 70px 0;
+        .icon-list .item {
+            .item-body{
+                &:hover{
+                    .icon-box{
+                        svg{
+                            fill: #F0B90B;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -2458,7 +3005,8 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .tokensale .incentive-alignment .section-title,
     .tokensale .investors .section-title,
-    .tokensale .tokenomics .section-title {
+    .tokensale .tokenomics .section-title,
+    .binance .section-title{
         font-size: 28px;
     }
     .info-section .image-section img.ellipse-gradient {
@@ -2547,6 +3095,15 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             max-width: 50%;
         }
     }
+    .footer-section {
+        .icon-list .item {
+            &:first-child{
+                .item-body{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width: 767px) {
     ul.dropdown .socialicons {
@@ -2573,6 +3130,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .tokensale .participate .ptp-btn {
         flex-direction: column;
     }
+    .binance .banner-section .banner-main-section .banner-heading,
     .banner-section .banner-heading,
     .pos-section .info-banner-heading,
     .stake-section .section-title,
@@ -2667,8 +3225,16 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             }
         }
     }
+    .binance {
+        .guides-section .row{
+            flex-direction: column;
+        }
+        .ecosystem-section .card{
+            flex: 100%;
+        }
+    }
 }
-@media screen and (max-width: 540px) and (min-width: 320px) {
+@media only screen and (max-width: 576px) {
     .tokensale .investors .investor-list, .tokensale .investors .section-title{
         text-align: center;
     }
@@ -2681,4 +3247,16 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         flex-direction: column;
         align-items: center;
     }
+    .binance{
+        .ecosystem-section .card .card-body .buttons{
+            flex-direction: column;
+            .button-link{
+                &:first-child{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
 }
+
