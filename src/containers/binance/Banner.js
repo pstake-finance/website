@@ -1,8 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-    PSTAKE_APP_URL,
-} from '../../constants/config';
 import stkBNB from "../../assets/stkBNB.svg";
 import Icon from "../../components/Icon";
 
@@ -24,7 +21,7 @@ const Banner = () => {
                                     {t("BANNER_SUB_HEADING")}
                                 </h6>
                                 <div className="banner-buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://staging.bnb.pstake.finance/" className="button-link">
                                         <span className="hideone">{t("LIQUID_STAKE_BNB")} &nbsp;</span>
                                         <Icon viewClass="right-arrow" icon="right-arrow" />
                                     </a>
@@ -39,7 +36,7 @@ const Banner = () => {
                                         <h6 className="label">{t("NUMBER_OF_BNB_LIQUID_STAKERS")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h6 className={"stats"}>{t("5,107")}</h6>
+                                        <h6 className={"stats"}>{t("~5%")}</h6>
                                         <h6 className="label">{t("APY")}</h6>
                                     </div>
                                     <div className="stats-count">

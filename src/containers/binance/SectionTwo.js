@@ -21,7 +21,7 @@ const SectionTwo = () => {
                                 <div className="content">
                                     <p className="card-heading">{t("WHY_PSTAKE_FOR_BNB_ONE_HEADING")}</p>
                                     <p className="card-content">
-                                        {t("WHY_PSTAKE_FOR_BNB_ONE_CONTENT")}
+                                        Receive stkBNB to maintain liquidity of otherwise locked $BNB when you stake
                                     </p>
                                 </div>
                             </Card.Body>
@@ -32,9 +32,10 @@ const SectionTwo = () => {
                                     <img className="pt-4 pb-4" src={usecase2} title="Asset" alt="Asset"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">{t("WHY_PSTAKE_FOR_BNB_THREE_HEADING")}</p>
+                                    <p className="card-heading">Yields. Yields. Yields.</p>
                                     <p className="card-content">
-                                        {t("WHY_PSTAKE_FOR_BNB_THREE_CONTENT")}
+                                        Generate the highest of yields with auto-compounding BNB staking rewards
+                                        & various stkBNB DeFi opportunities all while securing the BNB chain network
                                     </p>
                                 </div>
                             </Card.Body>

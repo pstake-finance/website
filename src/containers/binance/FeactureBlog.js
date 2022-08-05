@@ -53,7 +53,7 @@ const FeaturedBlogs = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("STAKE VIA pSTAKE")}</p>
+                                                <p className="text1">LIQUID STAKING</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -74,7 +74,7 @@ const FeaturedBlogs = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("WHY pSTAKE")}</p>
+                                                <p className="text1">STAKE ATOM</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>

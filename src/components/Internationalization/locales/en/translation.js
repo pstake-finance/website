@@ -44,6 +44,7 @@ let English = {
         "ATOM_APR": "~13.5%",
         "ETH_APR": "~4.05%",
         "XPRT_APR": "~25%",
+        "BNB_APR": "~5%",
         "PERSISTENCE": "Persistence",
         "FEACTURES": "Features",
         "WRAP": "Wrap",
@@ -276,13 +277,13 @@ let English = {
         "FEATURE_WRAP":"Stake and receive stkASSETs to maintain liquidity of otherwise locked assets\n",
         "FEATURE_DEFI":"Explore DeFi opportunities using the liquid stkASSETs while earning staking rewards",
         "FEATURE_ANCHOR":"Skip unstaking and unbonding process by directly swapping stkASSETs for native assets",
-        "JOIN_OUR_COMMUNITY":"Join Our Community",
+        "JOIN_OUR_COMMUNITY":"Join our community",
 
 // BNB SECTION
 
         "BANNER_HEADING": "Unlock Liquidity of BNB You Stake",
         "BANNER_SUB_HEADING": "Enjoy the best of both worlds in the BNB Ecosystem—staking rewards & DeFi\n" +
-            "                                        yields by receiving stkBNB when you stake BNB with pSTAKE.",
+            "                                        yields by receiving stkBNB when you stake BNB with pSTAKE",
         "LIQUID_STAKE_BNB":"Liquid Stake BNB",
         "TOTAL_VALUE_UNLOCKED": "Total Value Unlocked(TVU)",
         "NUMBER_OF_BNB_LIQUID_STAKERS": "Number of BNB Liquid Stakers",

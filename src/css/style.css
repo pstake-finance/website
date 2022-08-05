@@ -6,6 +6,24 @@ body {
 body a:hover {
   text-decoration: none; }
 
+.top-banner-section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background: #e50913;
+  text-align: center;
+  padding: 8px 0;
+  z-index: 999; }
+  .top-banner-section .content {
+    color: #fff;
+    margin: 0; }
+    .top-banner-section .content img {
+      margin-left: 10px; }
+    .top-banner-section .content:hover {
+      text-decoration: underline; }
+
 .banner_bold {
   font-weight: 800; }
 
@@ -14,6 +32,9 @@ body a:hover {
   padding: 20px 0px;
   background-color: #232327;
   box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1); }
+
+.navbar.navbar-custom.fixed-top {
+  top: 40px; }
 
 @keyframes modal-video {
   from {
@@ -786,7 +807,12 @@ ul.dropdown {
   padding: 100px 0;
   background: #1d1d22; }
   .footer-section .section-title {
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 141.9%;
+    text-align: center;
+    color: #FFFFFF; }
   .footer-section .icon-list {
     display: flex;
     justify-content: center;
@@ -806,7 +832,7 @@ ul.dropdown {
         background: #25252A;
         box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
         border-radius: 16px;
-        margin: 0 15px;
+        margin: 15px;
         padding: 1.5rem;
         display: flex;
         align-items: center; }
@@ -1258,11 +1284,19 @@ ul.dropdown {
     padding: 0; }
     .stay-updated .blog-articles a {
       color: #7b7b7b;
-      font-weight: 600; }
+      font-weight: 600;
+      height: 325px;
+      display: block; }
+      .stay-updated .blog-articles a .blog-image {
+        height: 70%; }
+        .stay-updated .blog-articles a .blog-image .card-img-top {
+          max-height: 100%;
+          height: -webkit-fill-available; }
       .stay-updated .blog-articles a:hover {
         color: #7b7b7b; }
     .stay-updated .blog-articles .custom-card {
       background: #101013;
+      height: 100%;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
       border: 0; }
       .stay-updated .blog-articles .custom-card:hover {
@@ -1982,7 +2016,8 @@ ul.dropdown {
         .binance .ecosystem-section .card .card-body .tag p {
           margin: 0; }
       .binance .ecosystem-section .card .card-body .icon-box {
-        text-align: center; }
+        text-align: center;
+        margin-top: 1.5rem; }
       .binance .ecosystem-section .card .card-body .card-heading {
         font-weight: 700;
         font-size: 16px;
@@ -2035,11 +2070,6 @@ ul.dropdown {
 .binance .guides-section {
   padding: 70px 0; }
   .binance .guides-section .section-title {
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 141.9%;
-    text-align: center;
-    color: #FFFFFF;
     margin-bottom: 50px;
     max-width: 960px;
     margin: auto; }
@@ -2087,6 +2117,12 @@ ul.dropdown {
             color: #DBD6D6; }
 .binance .audited-section {
   padding: 55px 0; }
+  .binance .audited-section .type {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 2;
+    color: #FFFFFF; }
   .binance .audited-section .section-sub-title {
     font-weight: 500;
     font-size: 16px;
@@ -2099,8 +2135,13 @@ ul.dropdown {
     margin-top: 60px;
     text-align: center; }
     .binance .audited-section .audited-list a img {
-      margin: 25px 10px;
+      margin: 10px 20px;
       width: auto; }
+    .binance .audited-section .audited-list .tracking {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px; }
 .binance .validators-section {
   padding: 100px 0; }
   .binance .validators-section .section-sub-title {
@@ -2176,7 +2217,10 @@ ul.dropdown {
 
   .stake-section .card {
     flex: 0 0 50%;
-    max-width: 50%; } }
+    max-width: 50%; }
+
+  .stay-updated .blog-articles a {
+    height: auto; } }
 @media only screen and (max-width: 991px) {
   .tokensale .investors .investor-list img {
     width: 200px; }
@@ -2295,7 +2339,8 @@ ul.dropdown {
   .tokensale .incentive-alignment .section-title,
   .tokensale .investors .section-title,
   .tokensale .tokenomics .section-title,
-  .binance .section-title {
+  .binance .section-title,
+  .footer-section .section-title {
     font-size: 28px; }
 
   .info-section .image-section img.ellipse-gradient {

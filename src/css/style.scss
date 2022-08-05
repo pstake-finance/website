@@ -7,6 +7,28 @@ body a {
         text-decoration: none;
     }
 }
+.top-banner-section{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: #e50913;
+    text-align: center;
+    padding: 8px 0;
+    z-index: 999;
+    .content{
+        color: #fff;
+        margin: 0;
+        img{
+            margin-left: 10px;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
 .banner_bold {
     font-weight: 800;
 }
@@ -15,6 +37,9 @@ body a {
     padding: 20px 0px;
     background-color: #232327;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
+}
+.navbar.navbar-custom.fixed-top{
+    top: 40px;
 }
 // modelvideo css
 $animation-speed: 0.3s;
@@ -1003,6 +1028,12 @@ ul.dropdown {
     background: #1d1d22;
     .section-title{
         margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 141.9%;
+        text-align: center;
+        color: #FFFFFF;
+
     }
     .icon-list {
         display: flex;
@@ -1024,7 +1055,7 @@ ul.dropdown {
                 background: #25252A;
                 box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
                 border-radius: 16px;
-                margin: 0 15px;
+                margin: 15px;
                 padding: 1.5rem;
                 display: flex;
                 align-items: center;
@@ -1623,7 +1654,16 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         a {
             color: #7b7b7b;
             font-weight: 600;
+            height: 325px;
+            display: block;
 
+            .blog-image{
+                height: 70%;
+                .card-img-top{
+                    max-height: 100%;
+                    height: -webkit-fill-available;
+                }
+            }
             &:hover {
                 color: #7b7b7b;
             }
@@ -1631,6 +1671,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
         .custom-card {
             background: #101013;
+            height: 100%;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
             border: 0;
 
@@ -2619,6 +2660,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 }
                 .icon-box{
                     text-align: center;
+                    margin-top: 1.5rem;
                 }
                 .card-heading{
                     font-weight: 700;
@@ -2685,11 +2727,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .guides-section{
         padding: 70px 0;
         .section-title{
-            font-weight: 700;
-            font-size: 64px;
-            line-height: 141.9%;
-            text-align: center;
-            color: #FFFFFF;
             margin-bottom: 50px;
             max-width: 960px;
             margin: auto;
@@ -2749,6 +2786,13 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .audited-section{
         padding: 55px 0;
+        .type{
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 2;
+            color: #FFFFFF;
+        }
         .section-sub-title{
             font-weight: 500;
             font-size: 16px;
@@ -2763,9 +2807,15 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             a{
                 img{
-                    margin: 25px 10px;
+                    margin: 10px 20px;
                     width:auto;
                 }
+            }
+            .tracking{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 50px;
             }
         }
     }
@@ -2881,7 +2931,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .stay-updated .blog-articles a{
+        height: auto;
+    }
 }
+
 @media only screen and (max-width: 991px) {
     .tokensale .investors .investor-list img {
         width: 200px;
@@ -3006,7 +3060,8 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .tokensale .incentive-alignment .section-title,
     .tokensale .investors .section-title,
     .tokensale .tokenomics .section-title,
-    .binance .section-title{
+    .binance .section-title,
+    .footer-section .section-title{
         font-size: 28px;
     }
     .info-section .image-section img.ellipse-gradient {

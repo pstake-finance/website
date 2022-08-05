@@ -42,7 +42,7 @@ const Guides = () => {
                                     </div>
                                     <div className="content">
                                         <p className="heading">
-                                            Liquid Staking $BNB
+                                            pSTAKE & Binance Labs Partnership
                                             <Icon viewClass="redirect" icon="redirect" />
                                         </p>
                                         <p className="text">PancakeSwap is the leading decentralized exchange on BNB Smart Chain</p>

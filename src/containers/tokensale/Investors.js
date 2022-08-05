@@ -14,6 +14,7 @@ import stakefish from '../../assets/validators/stakefish.svg';
 import figment from '../../assets/validators/figment.svg';
 import everstake from '../../assets/validators/everstake.svg';
 import chorus from '../../assets/validators/chorus.svg';
+import halborn_black from '../../assets/audits/halborn_black.svg';
 import cosmostation from '../../assets/validators/cosmostation.svg';
 import sa_1 from '../../assets/sa/sa_1.svg';
 import sa_2 from '../../assets/sa/sa_2.svg';
@@ -54,8 +55,13 @@ const Investors = () => {
 
                     <h4 className="section-title">{t("Security Audits")}</h4>
                     <div className="investor-list">
+                        <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={halborn_black} title="halborn" alt="halborn" />
+                        </a>
                         <img className="" src={sa_1} title="Trail Of Bits" alt="Trail Of Bits" />
-                        <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer"><img className="" src={sa_2} title="Digilence" alt="Digilence" /></a>
+                        <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={sa_2} title="Digilence" alt="Digilence" />
+                        </a>
                         <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_3} title="Solidified" alt="Solidified" /></a>
                         <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_4} title="Peckshield" alt="Peckshield" /></a>
                         <a href={AOK_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_5} title="AOK" alt="AOK" /></a>

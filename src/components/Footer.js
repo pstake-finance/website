@@ -5,40 +5,45 @@ import {Link} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import {
     PSTAKE_TWITTER_URL,
-PSTAKE_TELEGRAM_URL,
-PSTAKE_YOUTUBE_URL,
-PSTAKE_REDDIT_URL,
-PERSISTENCE_ONE_URL,
-}  from '../constants/config';
-const clickOnTwitter = () => {
-    ReactGa.event({
-        category: 'Twitter',
-        action: 'Clicked on Twitter'
-    })
+    PSTAKE_TELEGRAM_URL,
+    PSTAKE_YOUTUBE_URL,
+    PERSISTENCE_ONE_URL, PSTAKE_MEDIUM_URL,
+} from '../constants/config';
 
+const onClick = (name) => {
+    ReactGa.event({
+        category: name,
+        action: `Clicked on ${name}`
+    })
 }
 
-const clickOnMedium = () => {
-    ReactGa.event({
-        category: 'Medium',
-        action: 'Clicked on Medium'
-    })
+const list = [
+    {
+        name:"Telegram",
+        url:PSTAKE_TELEGRAM_URL,
+        icon:<Icon viewClass="social_icon_img" icon="telegram-plane"/>,
+        text:'Chat with the community'
+    },
+    {
+        name:"Twitter",
+        url:PSTAKE_TWITTER_URL,
+        icon:<Icon viewClass="social_icon_img" icon="twitter-logo"/>,
+        text:'Stay updated'
+    },
+    {
+        name:"Blogs",
+        url:PSTAKE_MEDIUM_URL,
+        icon:<Icon viewClass="social_icon_img" icon="medium-m"/>,
+        text:'Learn about stkBNB'
+    },
+    {
+        name:"Youtube",
+        url:PSTAKE_YOUTUBE_URL,
+        icon:<Icon viewClass="social_icon_img" icon="youtube"/>,
+        text:'Learn about stkBNB'
+    },
+]
 
-}
-const clickOnYoutube = () => {
-    ReactGa.event({
-        category: 'Youtube',
-        action: 'Clicked on Youtube'
-    })
-
-}
-const clickOnReddit = () => {
-    ReactGa.event({
-        category: 'Reddit',
-        action: 'Clicked on Reddit'
-    })
-
-}
 const Footer = () => {
     const { t } = useTranslation();
     return (
@@ -48,61 +53,27 @@ const Footer = () => {
                 <div className="container">
                     <div className="icon-list">
                         <div className="row">
-                            <div className="item">
-                                <div className="item-body">
-                                    <div className="icon-box">
-                                        <Icon viewClass="social_icon_img" icon="twitter-logo"/>
+                            {
+                                list.map((item, index) => (
+                                    <div className="item cold-md-6" key={index}>
+                                        <div className="item-body">
+                                            <div className="icon-box">
+                                                {item.icon}
+                                            </div>
+                                            <div className="content">
+                                                <p className="name">{item.name}</p>
+                                                <a href={item.url}
+                                                   className="link"
+                                                   target="_blank"
+                                                   rel="noopener noreferrer"
+                                                   onClick={()=>onClick(item.name)}>
+                                                    {item.text}
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="content">
-                                        <p className="name">Telegram</p>
-                                        <a href={PSTAKE_TELEGRAM_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnTwitter}>
-                                            Join the Community
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="item-body">
-                                    <div className="icon-box">
-                                        <Icon viewClass="social_icon_img" icon="medium-m"/>
-                                    </div>
-                                    <div className="content">
-                                        <p className="name">Twitter</p>
-                                        <a href={PSTAKE_TWITTER_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnMedium}>
-                                            Join the Community
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="item">
-                                <div className="item-body">
-                                    <div className="icon-box">
-                                        <Icon viewClass="social_icon_img" icon="youtube"/>
-                                    </div>
-                                    <div className="content">
-                                        <p className="name">Youtube</p>
-                                        <a href={PSTAKE_YOUTUBE_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnYoutube}>
-                                            Join the Community
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item">
-                                <div className="item-body">
-                                    <div className="icon-box">
-                                        <Icon viewClass="social_icon_img" icon="reddit-round"/>
-                                    </div>
-                                    <div className="content">
-                                        <p className="name">Reddit</p>
-                                        <a href={PSTAKE_REDDIT_URL} className="link" target="_blank" rel="noopener noreferrer" onClick={clickOnReddit}>
-                                            Join the Community
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                                ))
+                            }
                         </div>
                     </div>
                     <div className="privacy-terms">
@@ -112,7 +83,7 @@ const Footer = () => {
                             <Icon viewClass="social_icon_ig heart" icon="footerheart"/>
                             &nbsp;
                             by &nbsp;
-                            <a href={PERSISTENCE_ONE_URL} target="_blank" rel="noopener noreferrer">Persistence.</a>
+                            <a href={PERSISTENCE_ONE_URL} target="_blank" rel="noopener noreferrer">Persistence</a>
                         </p>
                         <Link to='/terms' target='_blank'>{t("TERMS_OF_SERVICE")} </Link>
                     </div>
