@@ -20,19 +20,19 @@ const Comparison = () => {
                             </thead>
                             <tbody>
                             <tr>
-                                <td>ELI5</td>
+                                <td>What is it?</td>
                                 <td>Act of locking $BNB for securing the BNB chain to receive rewards</td>
                                 <td>Liquidity on staked $BNB to enable its usage in DeFi dApps on BSC</td>
                             </tr>
                             <tr>
-                                <td>APR</td>
-                                <td>Upto 5.58%</td>
+                                <td>Rewards</td>
+                                <td>Upto ~5%</td>
                                 <td>Upto N %</td>
                             </tr>
                             <tr>
                                 <td>Minimum $BNB Requirement</td>
-                                <td>1 BNB</td>
-                                <td>No minimum</td>
+                                <td>0.000001 BNB</td>
+                                <td>0.000001 BNB</td>
                             </tr>
                             <tr>
                                 <td>Auto-compounding Rewards</td>
@@ -50,9 +50,9 @@ const Comparison = () => {
                                 <td>Medium</td>
                             </tr>
                             <tr>
-                                <td>Participation in Governance</td>
-                                <td>No</td>
-                                <td>No</td>
+                                <td>Unstaking</td>
+                                <td>Unbonding period of 7 days where no staking rewards are earned</td>
+                                <td>Directly swap for BNB via a Liquidity Pool</td>
                             </tr>
                             <tr>
                                 <td>Drawbacks</td>

@@ -51,10 +51,7 @@ const StakeAssets = () => {
                                 <div className="apr">
                                     <h1>{t("ETH_APR")} <span>{t("APR")}</span></h1>
                                     <a href={PSTAKE_APP_STKETH_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
-
-
                                 </div>
-                             
                             </Card.Body>
                             
                         </Card>
@@ -64,8 +61,9 @@ const StakeAssets = () => {
                                 <img className="pt-4 pb-4" src={asset4} title="Asset" alt="Asset"/>
                                 <Card.Title>{t("BINANCE")}</Card.Title>
                                 </div>
-                                <div className="apr ap4">
-                                <h5>{t("Coming Soon!")}</h5>
+                                <div className="apr">
+                                    <h1>{t("BNB_APR")} <span>{t("APR")}</span></h1>
+                                    <h5>{t("Coming Soon!")}</h5>
 
                             </div>
                              
