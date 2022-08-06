@@ -17,6 +17,7 @@ let English = {
         "TOTAL_VALUE_LOCKED": "Total Value Locked",
         "SUPPORTED_NETWORKS": "Supported Networks",
         "COMMUNITY":"Community",
+        "COMING_SOON": "Coming soon",
         "MORE_COMING_SOON":" (More Coming Soon)",
         "SUSHI_POOL_LP_STKATOM_ETH": "Sushi Pool LP for stkATOM - ETH",
         "SUSHI_POOL_LP_STKXPRT_ETH": "Sushi Pool LP for stkXPRT - ETH",
@@ -283,7 +284,7 @@ let English = {
 
         "BANNER_HEADING": "Unlock Liquidity of BNB You Stake",
         "BANNER_SUB_HEADING": "Enjoy the best of both worlds in the BNB Ecosystem—staking rewards & DeFi\n" +
-            "                                        yields by receiving stkBNB when you stake BNB with pSTAKE",
+            "                                        yields by minting stkBNB when you stake BNB with pSTAKE",
         "LIQUID_STAKE_BNB":"Liquid Stake BNB",
         "TOTAL_VALUE_UNLOCKED": "Total Value Unlocked(TVU)",
         "NUMBER_OF_BNB_LIQUID_STAKERS": "Number of BNB Liquid Stakers",

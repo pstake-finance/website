@@ -5,6 +5,7 @@ import {
     PSTAKE_APP_URL
 } from '../../constants/config';
 import pancake from '../../assets/pancake.svg';
+import alpaca from '../../assets/alpaca.svg';
 
 const Ecosystem = () => {
     const { t } = useTranslation();
@@ -17,7 +18,7 @@ const Ecosystem = () => {
                         <Card className="col-md-6 col-xs-12">
                             <Card.Body className="">
                                 <div className="tag">
-                                    <p>Decentralized Exchanges</p>
+                                    <p>Dex</p>
                                 </div>
                                 <div className="icon-box">
                                     <img className="pt-4 pb-4" src={pancake} title="Asset" alt="Asset"/>
@@ -34,7 +35,7 @@ const Ecosystem = () => {
                                 {/*    <p className="item">7% <span>SAPR</span></p>*/}
                                 {/*</div>*/}
                                 <div className="buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link primary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://pancakeswap.finance/" className="button-link primary">
                                         {t("START_STAKING")}
                                     </a>
                                     <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link secondary">
@@ -43,35 +44,30 @@ const Ecosystem = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                        {/*<Card className="col-md-6 col-xs-12">*/}
-                        {/*    <Card.Body className="">*/}
-                        {/*        <div className="tag">*/}
-                        {/*            <p>Defi</p>*/}
-                        {/*        </div>*/}
-                        {/*        <div className="icon-box">*/}
-                        {/*            <img className="pt-4 pb-4" src={pancake} title="Asset" alt="pancake"/>*/}
-                        {/*        </div>*/}
-                        {/*        <div className="content">*/}
-                        {/*            <p className="card-heading text-center">{t("WHY_PSTAKE_FOR_BNB_THREE_HEADING")}</p>*/}
-                        {/*            <p className="card-content text-center">*/}
-                        {/*                {t("WHY_PSTAKE_FOR_BNB_THREE_CONTENT")}*/}
-                        {/*            </p>*/}
-                        {/*        </div>*/}
-                        {/*        <div className="stats">*/}
-                        {/*            <p className="item">17% <span>APR</span></p>*/}
-                        {/*            <p className="item">0.5% <span>Fee</span></p>*/}
-                        {/*            <p className="item">7% <span>SAPR</span></p>*/}
-                        {/*        </div>*/}
-                        {/*        <div className="buttons">*/}
-                        {/*            <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link primary">*/}
-                        {/*                {t("START_STAKING")}*/}
-                        {/*            </a>*/}
-                        {/*            <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link secondary">*/}
-                        {/*             {t("LEARN_MORE")}*/}
-                        {/*            </a>*/}
-                        {/*        </div>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
+                        <Card className="col-md-6 col-xs-12">
+                            <Card.Body className="">
+                                <div className="tag">
+                                    <p>Yield Farming</p>
+                                </div>
+                                <div className="icon-box">
+                                    <img className="pt-4 pb-4" src={alpaca} title="Asset" alt="pancake"/>
+                                </div>
+                                <div className="content">
+                                    <p className="card-heading text-center">{t("Alpaca")}</p>
+                                    <p className="card-content text-center">
+                                        {t("WHY_PSTAKE_FOR_BNB_THREE_CONTENT")}
+                                    </p>
+                                </div>
+                                <div className="buttons">
+                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link primary">
+                                        {t("COMING_SOON")}
+                                    </a>
+                                    <a rel="noopener noreferrer" target="_blank" href="https://www.alpacafinance.org/" className="button-link secondary">
+                                     {t("LEARN_MORE")}
+                                    </a>
+                                </div>
+                            </Card.Body>
+                        </Card>
                     </div>
                 </div>
             </section>

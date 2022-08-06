@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Route, Switch, withRouter, useLocation} from "react-router-dom";
 import ReactGA from 'react-ga';
-// import offline from "./assets/offline.svg";
 import './css/style.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,7 +12,6 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
 import Binance from "./pages/Binance";
-import rightarrow from "./assets/right-arrow.svg";
 
 
 ReactGA.initialize(ANALYTICS)
@@ -76,14 +74,6 @@ const App = () => {
                   </div>
                   : ""
           }
-          <div className="top-banner-section">
-              <div className="container">
-                <a className="content" href="https://coinmarketcap.com/community/articles/32880" target="_blank" rel="noopener noreferrer">
-                    pSTAKE's Liquid Staking Solution for BNB is launching on 8th Aug 2022
-                    <img src={rightarrow} alt="arrow" />
-                </a>
-              </div>
-          </div>
           <div className="container-fluid app-nav">
               <div className="container">
                   <Header/>

@@ -21,10 +21,13 @@ import {
 import { useTranslation } from "react-i18next";
 
 import Icon from "./Icon";
+import bnb from "../assets/bnb_black.png";
+
 const Header = () => {
     const { t } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
+    const [banner, setBanner] = useState(true);
     const [chevronChange, setChevronChange] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -76,10 +79,26 @@ const Header = () => {
         })
 
     }
+
+    const closeBanner = () => {
+        console.log("here");
+        setBanner(false);
+    }
+
     return (
         <React.Fragment>
-            <div id="is-sticky">
-                <nav className={"navbar navbar-expand-lg fixed-top navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
+            <div id="is-sticky" className="top-bar">
+                <div className={!banner ? 'd-none' : "top-banner-section"}>
+                    <a className="content" href="https://coinmarketcap.com/community/articles/32880" target="_blank" rel="noopener noreferrer">
+                        <img className="logo" src={bnb} alt={bnb}/>
+                        pSTAKE's Liquid Staking Solution for BNB is launching on 8th Aug 2022
+                        <Icon viewClass="right-arrow" icon="right-arrow" />
+                    </a>
+                    <div onClick={closeBanner}>
+                        <Icon viewClass="close" icon="close" />
+                    </div>
+                </div>
+                <nav className={"navbar navbar-expand-lg navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
                     <div className="container mb-pad">
                         <Link className="navbar-brand logo text-uppercase" to="/">
                         </Link>
