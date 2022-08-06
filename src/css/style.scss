@@ -32,7 +32,7 @@ body a {
             fill: #000;
         }
         .logo{
-            width: 14px;
+            width: 16px;
             margin-right: 10px;
         }
     }
@@ -302,6 +302,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         color: #fff;
         background: #e50913;
         border-radius: 0;
+        .icon{
+            fill: #fff;
+        }
     }
     li.nav-item {
         margin: 0 10px;
@@ -1210,6 +1213,12 @@ ul.dropdown {
         .navbar-nav {
             .nav-link.app-btn {
                 color: #F0B90B;
+            }
+        }
+        button{
+            background: #F0B90B;
+            .icon{
+                fill: #000;
             }
         }
     }
@@ -3337,7 +3346,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         .ecosystem-section .card{
             flex: 100%;
         }
-        audited-section .audited-list .tracking{
+        .audited-section .audited-list .tracking{
             margin-top: 30px;
             .bug-bounty{
                 margin-top: 30px;
@@ -3367,6 +3376,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 }
             }
         }
+    }
+    .banner-section .network-stats{
+        flex-direction: column;
     }
 
 }
