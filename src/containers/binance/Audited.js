@@ -1,7 +1,7 @@
 import React from 'react';
-import peckshield from '../../assets/audits/peckshield.svg';
-import halborn from '../../assets/audits/halborn.svg';
-import certora from '../../assets/audits/certora.svg';
+import peckshield from '../../assets/audits/peckshield_black.svg';
+import halborn from '../../assets/audits/halborn_black.svg';
+import certora from '../../assets/audits/certora_black.svg';
 import immunefi from '../../assets/audits/immunefi.svg';
 import forta from '../../assets/audits/forta.svg';
 
@@ -27,11 +27,11 @@ const Audited = () => {
                               <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={certora} title="certora" alt="certora" /></a>
                           </div>
                             <div className="tracking">
-                                <div>
+                                <div className="on-chain">
                                     <p className="type">ON-CHAIN TRACKING</p>
                                     <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={forta} title="forta" alt="forta" /></a>
                                 </div>
-                                <div>
+                                <div className="bug-bounty">
                                     <p className="type">BUG-BOUNTY PROGRAMS</p>
                                     <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={immunefi} title="immunefi" alt="immunefi" /></a>
                                 </div>

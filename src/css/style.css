@@ -6,23 +6,38 @@ body {
 body a:hover {
   text-decoration: none; }
 
-.top-banner-section {
+.top-bar {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  background: #e50913;
-  text-align: center;
-  padding: 8px 0;
   z-index: 999; }
+
+.top-banner-section {
+  background: #efb90b;
+  text-align: center;
+  padding: 4px 40px 4px 0;
+  position: relative; }
   .top-banner-section .content {
-    color: #fff;
+    color: #000;
+    font-size: 12px;
     margin: 0; }
-    .top-banner-section .content img {
-      margin-left: 10px; }
     .top-banner-section .content:hover {
       text-decoration: underline; }
+    .top-banner-section .content .icon {
+      margin-left: 10px;
+      fill: #000; }
+    .top-banner-section .content .logo {
+      width: 14px;
+      margin-right: 10px; }
+  .top-banner-section .icon-close {
+    width: 10px;
+    fill: #000;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px; }
 
 .banner_bold {
   font-weight: 800; }
@@ -574,7 +589,7 @@ ul.dropdown {
     background: transparent;
     border: 0; }
     .stake-section .card .gone.card-body:hover {
-      background: linear-gradient(288.57deg, #946ad5 3.7%, #a994c8 100%);
+      background: linear-gradient(287.41deg, #2f3148 4.63%, #5c4243 98.79%);
       border: 0; }
       .stake-section .card .gone.card-body:hover h1, .stake-section .card .gone.card-body:hover span {
         color: #fff; }
@@ -583,11 +598,26 @@ ul.dropdown {
       border: 0; }
       .stake-section .card .gtwo.card-body:hover h1, .stake-section .card .gtwo.card-body:hover span {
         color: #fff; }
+    .stake-section .card .gthree.card-body:hover {
+      background: linear-gradient(287.41deg, #20335b 4.63%, #5c4243 98.79%);
+      border: 0; }
+      .stake-section .card .gthree.card-body:hover h1, .stake-section .card .gthree.card-body:hover span {
+        color: #fff; }
     .stake-section .card .gfour.card-body:hover {
       background: linear-gradient(287.41deg, #efb90b 4.63%, #5c4243 98.79%);
       border: 0; }
-    .stake-section .card .gthree.card-body h5, .stake-section .card .gfour.card-body h5 {
-      cursor: not-allowed; }
+      .stake-section .card .gfour.card-body:hover h1, .stake-section .card .gfour.card-body:hover span {
+        color: #fff; }
+    .stake-section .card .solana.card-body:hover {
+      background: linear-gradient(287.41deg, #9f96d3 4.63%, #5c4243 98.79%);
+      border: 0; }
+      .stake-section .card .solana.card-body:hover h1, .stake-section .card .solana.card-body:hover span {
+        color: #fff; }
+    .stake-section .card .avax.card-body:hover {
+      background: linear-gradient(287.41deg, #e74042 4.63%, #5c4243 98.79%);
+      border: 0; }
+      .stake-section .card .avax.card-body:hover h1, .stake-section .card .avax.card-body:hover span {
+        color: #fff; }
     .stake-section .card .ap3, .stake-section .card .ap4 {
       margin-top: 28px; }
     .stake-section .card .gone.card-body:before {
@@ -1662,7 +1692,7 @@ ul.dropdown {
   text-align: right;
   margin-bottom: 20px; }
 .tokensale .investors .investor-list {
-  text-align: left; }
+  text-align: center; }
   .tokensale .investors .investor-list img {
     margin: 25px 10px;
     border-radius: 10px;
@@ -2023,12 +2053,14 @@ ul.dropdown {
         font-size: 16px;
         line-height: 131.4%;
         color: #FFFFFF;
+        text-align: center;
         margin-bottom: 22px; }
       .binance .ecosystem-section .card .card-body .card-content {
         font-weight: 400;
         font-size: 14px;
         line-height: 200%;
-        color: #DBD6D6; }
+        color: #DBD6D6;
+        text-align: center; }
       .binance .ecosystem-section .card .card-body .stats {
         display: flex;
         align-items: center;
@@ -2074,7 +2106,9 @@ ul.dropdown {
     max-width: 960px;
     margin: auto; }
   .binance .guides-section .row {
-    justify-content: center; }
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
   .binance .guides-section .card {
     flex: 1;
     margin-top: 50px;
@@ -2135,13 +2169,16 @@ ul.dropdown {
     margin-top: 60px;
     text-align: center; }
     .binance .audited-section .audited-list a img {
-      margin: 10px 20px;
-      width: auto; }
+      margin: 10px;
+      border-radius: 10px;
+      width: 240px;
+      background: #25252B; }
     .binance .audited-section .audited-list .tracking {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 50px; }
+      margin-top: 50px;
+      flex-wrap: wrap; }
 .binance .validators-section {
   padding: 100px 0; }
   .binance .validators-section .section-sub-title {
@@ -2183,15 +2220,17 @@ ul.dropdown {
       border: 0px solid;
       margin-bottom: 20px; }
       .binance .faq-section .accordion .card .card-header {
-        background-color: #313134;
+        background: #25252A;
+        box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: space-between; }
         .binance .faq-section .accordion .card .card-header p {
           margin: 0;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 14px;
-          line-height: 2;
+          line-height: 141.9%;
           color: #FFFFFF; }
       .binance .faq-section .accordion .card .card-body {
         font-family: 'Poppins', sans-serif;
@@ -2348,7 +2387,6 @@ ul.dropdown {
 
   .navbar-expand-lg .navbar-nav .nav-link.app-btn {
     padding: 10px 15px;
-    background: #e50913;
     width: auto; }
 
   .navbar-nav {
@@ -2532,7 +2570,11 @@ ul.dropdown {
   .binance .guides-section .row {
     flex-direction: column; }
   .binance .ecosystem-section .card {
-    flex: 100%; } }
+    flex: 100%; }
+  .binance audited-section .audited-list .tracking {
+    margin-top: 30px; }
+    .binance audited-section .audited-list .tracking .bug-bounty {
+      margin-top: 30px; } }
 @media only screen and (max-width: 576px) {
   .tokensale .investors .investor-list, .tokensale .investors .section-title {
     text-align: center; }

@@ -7,26 +7,44 @@ body a {
         text-decoration: none;
     }
 }
-.top-banner-section{
+.top-bar{
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     width: 100%;
-    background: #e50913;
-    text-align: center;
-    padding: 8px 0;
     z-index: 999;
+}
+.top-banner-section{
+    background: #efb90b;
+    text-align: center;
+    padding: 4px 40px 4px 0;
+    position: relative;
     .content{
-        color: #fff;
+        color: #000;
+        font-size: 12px;
         margin: 0;
-        img{
-            margin-left: 10px;
-        }
         &:hover{
             text-decoration: underline;
         }
+        .icon{
+            margin-left: 10px;
+            fill: #000;
+        }
+        .logo{
+            width: 14px;
+            margin-right: 10px;
+        }
     }
+    .icon-close{
+        width: 10px;
+        fill: #000;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    
 }
 
 .banner_bold {
@@ -735,7 +753,7 @@ ul.dropdown {
         background: transparent;
         border: 0;
         .gone.card-body:hover {
-            background: linear-gradient(288.57deg, #946ad5 3.7%, #a994c8 100%);
+            background: linear-gradient(287.41deg, #2f3148 4.63%, #5c4243 98.79%);
             border: 0;
             h1,span{
                 color: #fff;
@@ -748,15 +766,39 @@ ul.dropdown {
                 color: #fff;
             }
         }
+        .gthree.card-body:hover {
+            background: linear-gradient(287.41deg, #20335b 4.63%, #5c4243 98.79%);
+            border: 0;
+            h1,span{
+                color: #fff;
+            }
+        }
         .gfour.card-body:hover{
             background: linear-gradient(287.41deg, #efb90b 4.63%, #5c4243 98.79%);
             border: 0;
-        }
-        .gthree.card-body, .gfour.card-body {
-            h5{
-                cursor: not-allowed;
+            h1,span{
+                color: #fff;
             }
         }
+        .solana.card-body:hover{
+            background:linear-gradient(287.41deg, #9f96d3 4.63%, #5c4243 98.79%);
+            border: 0;
+            h1,span{
+                color: #fff;
+            }
+        }
+        .avax.card-body:hover{
+            background:linear-gradient(287.41deg, #e74042 4.63%, #5c4243 98.79%);
+            border: 0;
+            h1,span{
+                color: #fff;
+            }
+        }
+        //.gthree.card-body, .gfour.card-body {
+        //    h5{
+        //        cursor: not-allowed;
+        //    }
+        //}
         .ap3, .ap4{
             margin-top: 28px;
         }
@@ -2212,7 +2254,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .investors {
         .investor-list {
-            text-align: left;
+            text-align: center;
             img {
                 margin: 25px 10px;
                 border-radius: 10px;
@@ -2667,6 +2709,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                     font-size: 16px;
                     line-height: 131.4%;
                     color: #FFFFFF;
+                    text-align: center;
                     margin-bottom: 22px;
                 }
                 .card-content{
@@ -2674,6 +2717,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                     font-size: 14px;
                     line-height: 200%;
                     color: #DBD6D6;
+                    text-align: center;
                 }
                 .stats{
                     display: flex;
@@ -2733,6 +2777,8 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         }
         .row{
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
         .card {
             flex: 1;
@@ -2807,8 +2853,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             a{
                 img{
-                    margin: 10px 20px;
-                    width:auto;
+                    margin:10px;
+                    border-radius: 10px;
+                    width: 240px;
+                    background: #25252B;
                 }
             }
             .tracking{
@@ -2816,6 +2864,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 align-items: center;
                 justify-content: center;
                 margin-top: 50px;
+                flex-wrap: wrap;
             }
         }
     }
@@ -2875,16 +2924,18 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 margin-bottom: 20px;
 
                 .card-header {
-                    background-color: #313134;
+                    background: #25252A;
+                    box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
+                    border-radius: 8px;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
 
                     p {
                         margin: 0;
-                        font-weight: 600;
+                        font-weight: 500;
                         font-size: 14px;
-                        line-height: 2;
+                        line-height: 141.9%;
                         color: #FFFFFF;
                     }
                 }
@@ -3069,7 +3120,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .navbar-expand-lg .navbar-nav .nav-link.app-btn {
         padding: 10px 15px;
-        background: #e50913;
         width: auto;
     }
     .navbar-nav {
@@ -3286,6 +3336,12 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         }
         .ecosystem-section .card{
             flex: 100%;
+        }
+        audited-section .audited-list .tracking{
+            margin-top: 30px;
+            .bug-bounty{
+                margin-top: 30px;
+            }
         }
     }
 }

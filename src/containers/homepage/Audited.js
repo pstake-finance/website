@@ -1,5 +1,5 @@
 import React from 'react';
-import auditedone from '../../assets/peckshield_black.svg';
+import auditedone from '../../assets/audits/peckshield_black.svg';
 import auditDiligence from '../../assets/diligence_black.svg';
 import comingsoon from '../../assets/comingsoon.svg';
 import auditedtwo from "../../assets/solidified_black.svg";

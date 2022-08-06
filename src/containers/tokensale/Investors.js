@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import arrow_capital from '../../assets/investors/arrow_capital.svg';
 import sequoia from '../../assets/investors/sequoia.svg';
 import galaxydigital from '../../assets/investors/galaxydigital.svg';
 import coinbase from '../../assets/investors/coinbase.svg';
@@ -15,6 +14,7 @@ import figment from '../../assets/validators/figment.svg';
 import everstake from '../../assets/validators/everstake.svg';
 import chorus from '../../assets/validators/chorus.svg';
 import halborn_black from '../../assets/audits/halborn_black.svg';
+import certora_black from '../../assets/audits/certora_black.svg';
 import cosmostation from '../../assets/validators/cosmostation.svg';
 import sa_1 from '../../assets/sa/sa_1.svg';
 import sa_2 from '../../assets/sa/sa_2.svg';
@@ -27,10 +27,9 @@ import {
     FIGMENT,
     EVERSTAKE,
     CHORUS,
-    COSMOSTATION
+    COSMOSTATION, PSTAKE_TRAIL_OF_BITS, PSTAKE_CERTORA
 } from '../../constants/config';
 import {
-    THREEAC_URL,
     SEQUOIA_URL,
     COINBASE_VENTURES_URL,
     KRAKEN_VENTURES_URL,
@@ -58,14 +57,22 @@ const Investors = () => {
                         <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer">
                             <img className="" src={halborn_black} title="halborn" alt="halborn" />
                         </a>
-                        <img className="" src={sa_1} title="Trail Of Bits" alt="Trail Of Bits" />
+                        <a href={PSTAKE_TRAIL_OF_BITS} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={sa_1} title="Trail Of Bits" alt="Trail Of Bits" />
+                        </a>
                         <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer">
                             <img className="" src={sa_2} title="Digilence" alt="Digilence" />
                         </a>
+                    </div>
+                    <div className="investor-list">
                         <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_3} title="Solidified" alt="Solidified" /></a>
                         <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_4} title="Peckshield" alt="Peckshield" /></a>
                         <a href={AOK_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_5} title="AOK" alt="AOK" /></a>
- 
+                    </div>
+                    <div className="investor-list">
+                        <a href={PSTAKE_CERTORA} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={certora_black} title="certora" alt="certora" />
+                        </a>
                     </div>
                 </div>
 
@@ -89,7 +96,6 @@ const Investors = () => {
 
                     <h4 className="section-title">{t("INVESTORS")}</h4>
                     <div className="investor-list">
-                        <a href={THREEAC_URL} target="_blank" rel="noopener noreferrer"><img className="" src={arrow_capital} title="Arrow Capital" alt="Arrow Capital" /></a>
                         <a href={SEQUOIA_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sequoia} title="Sequoia" alt="Sequoia" /></a>
                         <a href={GALAXY_DIGITAL_URL} target="_blank" rel="noopener noreferrer"><img className="" src={galaxydigital} title="Galaxy Digital" alt="Galaxy Digital" /></a>
                         <a href={DEFI_CAPITAL_URL} target="_blank" rel="noopener noreferrer"><img className="" src={defiance} title="Defiance Capital" alt="Defiance Capital" /></a>
