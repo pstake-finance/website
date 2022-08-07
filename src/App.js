@@ -11,8 +11,6 @@ import HomePage from './pages/HomePage';
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
-import Binance from "./pages/Binance";
-
 
 ReactGA.initialize(ANALYTICS)
 
@@ -34,10 +32,7 @@ const App = () => {
   },{
     path: '/tokensale',
     component: TokenSale,
-},{
-      path: '/bnb',
-      component: Binance,
-  }];
+}];
 
   const [isOnline, setNetwork] = useState(window.navigator.onLine);
   const updateNetwork = () => {
