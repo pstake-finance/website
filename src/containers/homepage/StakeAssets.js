@@ -11,7 +11,6 @@ import asset3 from '../../assets/asset_3.svg';
 import asset4 from '../../assets/bnb.svg';
 import sol from '../../assets/sol.svg';
 import avax from '../../assets/avax.svg';
-import {Link} from "react-router-dom";
 const StakeAssets = () => {
     const { t } = useTranslation();
     return (
@@ -64,7 +63,7 @@ const StakeAssets = () => {
                                 </div>
                                 <div className="apr">
                                     <h1>{t("BNB_APR")} <span>{t("APR")}</span></h1>
-                                    <Link to='/bnb'><h5>{t("STAKE_NOW")}</h5></Link>
+                                    <h5>{t("Coming Soon!")}</h5>
                                 </div>
                             </Card.Body>
                         </Card>
