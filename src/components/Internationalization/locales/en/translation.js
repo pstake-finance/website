@@ -27,6 +27,7 @@ let English = {
         "NUMBER_STAKERS":"Number of stakers",
         "UNLOCK_LIQUIDITY":"Unlock Liquidity",
         "INSTANT_REDEMPTION":"Instant Redemption",
+        "BRIDGE":"BRIDGE",
         "LEVERAGE_DEFI":"Leverage Defi",
         "ECOSYSTEM_TITLE": "Ecosystems and their",
         "MARKET_CAPS": "Market Caps",
