@@ -15,7 +15,7 @@ import {
     DOCS_URL,
     SNANPSHOT_URL,
     PSTAKE_FORUM_URL,
-    PSTAKE_APP_URL, PSTAKE_BRIDGE_URL, BSC_BRIDGE_URL, GUIDES_URL
+    PSTAKE_APP_URL, PSTAKE_BRIDGE_URL, BSC_BRIDGE_URL, GUIDES_URL, STK_FAQ_URL, STK_BNB_DOCS_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
@@ -154,18 +154,25 @@ const Header = () => {
                                         }
                                             </a>
                                     <ul class="dropdown">
-                                        <li><a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("SECURITY_AUDITS")}
-
-                                        </a></li>
-                                        <li><a href={GUIDES_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GUIDES_TUTORIALS")}
-
-                                        </a></li>
-                                        <li><a href={DOCS_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("DOCS")}
-
-                                        </a></li>
-                                        <li><a href={GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("FAQs")}
-
-                                        </a></li>
+                                        <li>
+                                            <a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
+                                                {t("SECURITY_AUDITS")}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href={GUIDES_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GUIDES_TUTORIALS")}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href={window.location.pathname === "/bnb" ? STK_BNB_DOCS_URL : DOCS_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
+                                                {t("DOCS")}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href={window.location.pathname === "/bnb" ? STK_FAQ_URL: GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
+                                                {t("FAQs")}
+                                            </a>
+                                        </li>
 
                                     </ul>
 

@@ -13,12 +13,12 @@ const Ecosystem = () => {
         <React.Fragment>
             <section className="ecosystem-section">
                 <div className="container">
-                    <h3 className="section-title">{t("ECOSYSTEM_HEADING")}</h3>
+                    <h3 className="section-title">Put your stkBNB to work in the <br/> BNB DeFi Ecosystem</h3>
                     <div className="row">
                         <Card className="col-md-6 col-xs-12">
                             <Card.Body className="">
                                 <div className="tag">
-                                    <p>Dex</p>
+                                    <p>DEX</p>
                                 </div>
                                 <div className="icon-box">
                                     <img className="pt-4 pb-4" src={pancake} title="Asset" alt="Asset"/>
@@ -36,9 +36,9 @@ const Ecosystem = () => {
                                 {/*</div>*/}
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://pancakeswap.finance/" className="button-link primary">
-                                        {t("START_STAKING")}
+                                        {t("Add liquidity")}
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link secondary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://blog.pstake.finance/2022/08/05/pstake-x-pancakeswap-partner-to-integrate-stkbnb-pstake-liquidity-pools/" className="button-link secondary">
                                         {t("LEARN_MORE")}
                                     </a>
                                 </div>
@@ -59,10 +59,10 @@ const Ecosystem = () => {
                                     </p>
                                 </div>
                                 <div className="buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link primary">
+                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link primary pointer-events-none">
                                         {t("COMING_SOON")}
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href="https://www.alpacafinance.org/" className="button-link secondary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://blog.pstake.finance/2022/08/06/alpaca-finance-to-enable-leveraged-yield-farming-for-stkbnb-pstake/" className="button-link secondary">
                                      {t("LEARN_MORE")}
                                     </a>
                                 </div>

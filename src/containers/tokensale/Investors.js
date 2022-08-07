@@ -45,8 +45,8 @@ import {
 import legend from "../../assets/validators/bnb/legend.svg";
 import math_wallet from "../../assets/validators/bnb/math_wallet.svg";
 import cloud from "../../assets/validators/bnb/cloud.svg";
-import ankr from "../../assets/validators/bnb/ankr.svg";
-import defibit from "../../assets/validators/bnb/defibit.svg";
+import tranches from "../../assets/validators/bnb/tranches.svg";
+import nodreal from "../../assets/validators/bnb/nodreal.svg";
 
 const Investors = () => {
     const { t } = useTranslation();
@@ -92,20 +92,20 @@ const Investors = () => {
                         <a href={EVERSTAKE} target="_blank" rel="noopener noreferrer"><img className="" src={everstake} title="Everstake" alt="Everstake" /></a>
                         <a href={CHORUS} target="_blank" rel="noopener noreferrer"><img className="" src={chorus} title="Chorus" alt="Chorus" /></a>
                         <a href={COSMOSTATION} target="_blank" rel="noopener noreferrer"><img className="" src={cosmostation} title="Cosmostation" alt="Cosmostation" /></a>
-                        <a href={STAKEFISH} target="_blank" rel="noopener noreferrer">
+                        <a href={STAKEFISH} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
                             <img className="" src={legend} title="legend" alt="legend" />
                         </a>
-                        <a href={FIGMENT} target="_blank" rel="noopener noreferrer">
+                        <a href={FIGMENT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
                             <img className="" src={math_wallet} title="math_wallet" alt="math_wallet" />
                         </a>
-                        <a href={EVERSTAKE} target="_blank" rel="noopener noreferrer">
+                        <a href={EVERSTAKE} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
                             <img className="" src={cloud} title="cloud" alt="cloud" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
-                            <img className="" src={ankr} title="ankr" alt="ankr" />
+                        <a href={AUDIT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                            <img className="" src={tranches} title="tranches" alt="tranches" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
-                            <img className="" src={defibit} title="defibit" alt="defibit" />
+                        <a href={AUDIT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                            <img className="" src={nodreal} title="nodreal" alt="nodreal" />
                         </a>
                     </div>
                 </div>

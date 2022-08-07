@@ -21,7 +21,7 @@ const SectionTwo = () => {
                                 <div className="content">
                                     <p className="card-heading">{t("WHY_PSTAKE_FOR_BNB_ONE_HEADING")}</p>
                                     <p className="card-content">
-                                        Receive stkBNB to maintain liquidity of otherwise locked $BNB when you stake
+                                        Receive stkBNB to maintain liquidity of otherwise locked BNB when you stake
                                     </p>
                                 </div>
                             </Card.Body>

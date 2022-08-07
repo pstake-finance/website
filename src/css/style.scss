@@ -7,6 +7,9 @@ body a {
         text-decoration: none;
     }
 }
+.pointer-events-none{
+    pointer-events: none;
+}
 .top-bar{
     position: fixed;
     top: 0;
@@ -1119,10 +1122,7 @@ ul.dropdown {
                         font-size: 14px;
                         line-height: 141.9%;
                         color: #70747C;
-
-                        &:hover {
-                            color: #FFFFFF;
-                        }
+                        margin: 0;
                     }
                 }
 
@@ -2502,18 +2502,18 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
       background-size:30%, 100%;
       padding-bottom: 90px;
       .banner-main-section{
+          padding-top: 170px;
           .logo{
-              width: 150px;
-              height: 150px;
+              width: 130px;
+              height: 130px;
               margin: auto;
           }
           .banner-heading{
               font-weight: 700;
-              font-size: 72px;
+              font-size: 54px;
               line-height: 126.5%;
               text-align: center;
               color: #1D1D22;
-              max-width: 850px;
               margin: 1.5rem auto auto auto;
           }
           .banner-sub-heading{
@@ -2522,12 +2522,12 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
               line-height: 200%;
               max-width: 650px;
               color: #393939;
-              margin: auto;
+              margin:15px auto auto auto;
               text-align: center;
           }
           .banner-buttons{
               display: block;
-              margin-top: 2rem;
+              margin-top: 1.3rem;
               .button-link{
                   display: block;
                   background: #F0B90B;
@@ -2550,6 +2550,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
               }
           }
           .network-stats{
+              margin-top: 20px;
                 .stats-count{
                     .label{
                         font-weight: 400;
@@ -2942,9 +2943,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    .embed-responsive{
+                    .embed-responsive, .image-section{
                         width: 171px;
-                        height: 104px;
+                    }
+                    .image-section img{
+                        width: 100%;
                     }
                     .content{
                         margin-left: 1rem;
@@ -3024,9 +3027,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         .validator-list{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             margin-top: 80px;
+            justify-content: center;
             a{
+                pointer-events: none;
                 img{
                     margin: 25px 10px;
                     width:auto;

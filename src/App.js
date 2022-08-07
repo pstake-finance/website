@@ -13,7 +13,6 @@ import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
 import Binance from "./pages/Binance";
 
-
 ReactGA.initialize(ANALYTICS)
 
 const trackPage = page => {
@@ -48,12 +47,13 @@ const App = () => {
       window.addEventListener("offline", updateNetwork);
       window.addEventListener("online", updateNetwork);
       document.body.classList = "";
-  document.getElementById('nav-bar').classList.add('navbar-white');
+      document.getElementById('nav-bar').classList.add('navbar-white');
       return () => {
           window.removeEventListener("offline", updateNetwork);
           window.removeEventListener("online", updateNetwork);
       };
   });
+
   let location = useLocation();
 
   useEffect(() => {

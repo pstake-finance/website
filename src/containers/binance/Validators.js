@@ -11,12 +11,6 @@ import tranches from "../../assets/validators/bnb/tranches.svg"
 import avengers from "../../assets/validators/bnb/avengers.svg"
 import nodreal from "../../assets/validators/bnb/nodreal.svg"
 
-import {
-    STAKEFISH,
-    FIGMENT,
-    EVERSTAKE,
-    AUDIT
-} from '../../constants/config';
 
 const Validators = () => {
     const { t } = useTranslation();
@@ -27,34 +21,34 @@ const Validators = () => {
                     <h3 className="section-title">{t("VALIDATORS")}</h3>
                     <p className="section-sub-title">Explore BNB validators that help pSTAKE grow</p>
                     <div className="validator-list">
-                        <a href={STAKEFISH} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={legend} title="legend" alt="legend" />
                         </a>
-                        <a href={FIGMENT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={math_wallet} title="math_wallet" alt="math_wallet" />
                         </a>
-                        <a href={EVERSTAKE} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={cloud} title="cloud" alt="cloud" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={ankr} title="ankr" alt="ankr" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={defibit} title="defibit" alt="defibit" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={certic} title="certic" alt="certic" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={fuji} title="fuji" alt="fuji" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={tranches} title="tranches" alt="tranches" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={avengers} title="avengers" alt="avengers" />
                         </a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={nodreal} title="nodreal" alt="nodreal" />
                         </a>
                     </div>

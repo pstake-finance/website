@@ -6,6 +6,9 @@ body {
 body a:hover {
   text-decoration: none; }
 
+.pointer-events-none {
+  pointer-events: none; }
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -878,9 +881,8 @@ ul.dropdown {
           font-weight: 500;
           font-size: 14px;
           line-height: 141.9%;
-          color: #70747C; }
-          .footer-section .icon-list .item .item-body .content .link:hover {
-            color: #FFFFFF; }
+          color: #70747C;
+          margin: 0; }
         .footer-section .icon-list .item .item-body .icon-box {
           margin: 0 10px;
           width: 46px;
@@ -1890,58 +1892,61 @@ ul.dropdown {
   background-position: top right, 100% 100%;
   background-size: 30%, 100%;
   padding-bottom: 90px; }
-  .binance .banner-section .banner-main-section .logo {
-    width: 150px;
-    height: 150px;
-    margin: auto; }
-  .binance .banner-section .banner-main-section .banner-heading {
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 126.5%;
-    text-align: center;
-    color: #1D1D22;
-    max-width: 850px;
-    margin: 1.5rem auto auto auto; }
-  .binance .banner-section .banner-main-section .banner-sub-heading {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 200%;
-    max-width: 650px;
-    color: #393939;
-    margin: auto;
-    text-align: center; }
-  .binance .banner-section .banner-main-section .banner-buttons {
-    display: block;
-    margin-top: 2rem; }
-    .binance .banner-section .banner-main-section .banner-buttons .button-link {
-      display: block;
-      background: #F0B90B;
-      border-radius: 8px;
-      padding: 1rem 2rem;
+  .binance .banner-section .banner-main-section {
+    padding-top: 170px; }
+    .binance .banner-section .banner-main-section .logo {
+      width: 130px;
+      height: 130px;
+      margin: auto; }
+    .binance .banner-section .banner-main-section .banner-heading {
       font-weight: 700;
-      font-size: 14px;
-      line-height: 180%;
-      color: #000000;
-      margin: auto;
+      font-size: 54px;
+      line-height: 126.5%;
       text-align: center;
-      max-width: 215px; }
-      .binance .banner-section .banner-main-section .banner-buttons .button-link .icon {
-        fill: #000;
-        margin-left: 5px; }
-      .binance .banner-section .banner-main-section .banner-buttons .button-link:hover {
-        text-decoration: none; }
-  .binance .banner-section .banner-main-section .network-stats .stats-count .label {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 131.4%;
-    text-align: center;
-    color: #838C9F; }
-  .binance .banner-section .banner-main-section .network-stats .stats-count .stats {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 131.4%;
-    text-align: center;
-    color: #1D1D22; }
+      color: #1D1D22;
+      margin: 1.5rem auto auto auto; }
+    .binance .banner-section .banner-main-section .banner-sub-heading {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 200%;
+      max-width: 650px;
+      color: #393939;
+      margin: 15px auto auto auto;
+      text-align: center; }
+    .binance .banner-section .banner-main-section .banner-buttons {
+      display: block;
+      margin-top: 1.3rem; }
+      .binance .banner-section .banner-main-section .banner-buttons .button-link {
+        display: block;
+        background: #F0B90B;
+        border-radius: 8px;
+        padding: 1rem 2rem;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 180%;
+        color: #000000;
+        margin: auto;
+        text-align: center;
+        max-width: 215px; }
+        .binance .banner-section .banner-main-section .banner-buttons .button-link .icon {
+          fill: #000;
+          margin-left: 5px; }
+        .binance .banner-section .banner-main-section .banner-buttons .button-link:hover {
+          text-decoration: none; }
+    .binance .banner-section .banner-main-section .network-stats {
+      margin-top: 20px; }
+      .binance .banner-section .banner-main-section .network-stats .stats-count .label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 131.4%;
+        text-align: center;
+        color: #838C9F; }
+      .binance .banner-section .banner-main-section .network-stats .stats-count .stats {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 131.4%;
+        text-align: center;
+        color: #1D1D22; }
 .binance .use-case-section {
   padding: 130px 0; }
   .binance .use-case-section .section-title {
@@ -2225,9 +2230,10 @@ ul.dropdown {
         display: flex;
         align-items: center;
         justify-content: space-between; }
-        .binance .guides-section .card .card-body .guide-section .embed-responsive {
-          width: 171px;
-          height: 104px; }
+        .binance .guides-section .card .card-body .guide-section .embed-responsive, .binance .guides-section .card .card-body .guide-section .image-section {
+          width: 171px; }
+        .binance .guides-section .card .card-body .guide-section .image-section img {
+          width: 100%; }
         .binance .guides-section .card .card-body .guide-section .content {
           margin-left: 1rem; }
           .binance .guides-section .card .card-body .guide-section .content .heading {
@@ -2289,11 +2295,13 @@ ul.dropdown {
   .binance .validators-section .validator-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 80px; }
-    .binance .validators-section .validator-list a img {
-      margin: 25px 10px;
-      width: auto; }
+    margin-top: 80px;
+    justify-content: center; }
+    .binance .validators-section .validator-list a {
+      pointer-events: none; }
+      .binance .validators-section .validator-list a img {
+        margin: 25px 10px;
+        width: auto; }
 .binance .blog-section {
   padding: 70px 0; }
   .binance .blog-section.stay-updated .blog-articles .custom-card .custom-card-body .learn-more {

@@ -25,17 +25,17 @@ const Comparison = () => {
                        <div className="list-data">
                            <div className="item">
                                <div className="type">What is it?</div>
-                               <div className="bnb">Act of locking $BNB for securing dive BNB chain to receive rewards</div>
-                               <div className="stk-bnb">Liquidity on staked $BNB to enable its usage in DeFi dApps on BSC</div>
+                               <div className="bnb">Act of locking BNB for securing the BNB chain to receive rewards</div>
+                               <div className="stk-bnb">Liquidity on staked BNB to enable its usage in DeFi dApps on BSC</div>
                            </div>
                            <div className="item">
                                <div className="type">Rewards</div>
                                <div className="bnb">Upto ~5%</div>
-                               <div className="stk-bnb">Upto N %</div>
+                               <div className="stk-bnb">Upto ~5.5 %</div>
                            </div>
                            <div className="item">
-                               <div className="type">Minimum $BNB Requirement</div>
-                               <div className="bnb">0.000001 BNB</div>
+                               <div className="type">Minimum BNB Requirement</div>
+                               <div className="bnb">1 BNB</div>
                                <div className="stk-bnb">0.000001 BNB</div>
                            </div>
                            <div className="item">
@@ -60,8 +60,8 @@ const Comparison = () => {
                            </div>
                            <div className="item">
                                <div className="type">Drawbacks</div>
-                               <div className="bnb">Staked $BNB remains locked and inaccessible</div>
-                               <div className="stk-bnb">Additional smart condivact risk</div>
+                               <div className="bnb">Staked BNB remains locked and inaccessible</div>
+                               <div className="stk-bnb">Additional smart contract risk</div>
                            </div>
                        </div>
                     </div>

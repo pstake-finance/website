@@ -56,21 +56,21 @@ const Footer = () => {
                             {
                                 list.map((item, index) => (
                                     <div className="item cold-md-6" key={index}>
-                                        <div className="item-body">
+                                        <a href={item.url}
+                                           target="_blank"
+                                           className="item-body"
+                                           rel="noopener noreferrer"
+                                           onClick={()=>onClick(item.name)}>
                                             <div className="icon-box">
                                                 {item.icon}
                                             </div>
                                             <div className="content">
                                                 <p className="name">{item.name}</p>
-                                                <a href={item.url}
-                                                   className="link"
-                                                   target="_blank"
-                                                   rel="noopener noreferrer"
-                                                   onClick={()=>onClick(item.name)}>
+                                                <p className="link">
                                                     {item.text}
-                                                </a>
+                                                </p>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 ))
                             }

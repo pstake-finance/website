@@ -15,30 +15,32 @@ const Guides = () => {
                     <h3 className="section-title">{t("GUIDES_TUTORIALS")}</h3>
                     <div className="row">
                         <Card className="col-md-6">
-                            <Card.Body>
+                            <a href={VIDEO_URL}  rel="noopener noreferrer" target="_blank" className="card-body">
                                 <div className="guide-section">
                                     <div className="embed-responsive embed-responsive-16by9">
-                                        <iframe
-                                            title="Introducing pSTAKE | Multi-chain Liquid Staking"
-                                            className="embed-responsive-item" src={VIDEO_URL} />
+                                        <iframe width="100" height="60"
+                                                title="Introducing pSTAKE | Multi-chain Liquid Staking"
+                                                src={VIDEO_URL} frameBorder="0"
+                                                className="embed-responsive-item"
+                                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture">
+                                        </iframe>
                                     </div>
                                     <div className="content">
                                         <p className="heading">
-                                            Liquid Staking $BNB
+                                            Liquid Staking BNB
                                             <Icon viewClass="redirect" icon="redirect" />
                                         </p>
                                         <p className="text">PancakeSwap is the leading decentralized exchange on BNB Smart Chain</p>
                                     </div>
                                 </div>
-                            </Card.Body>
+                            </a>
                         </Card>
                         <Card className="col-md-6">
-                            <Card.Body className="">
+                            <a href="https://blog.pstake.finance/2022/08/07/stkbnb-user-guide-bnb-liquid-staking-tutorial/"
+                               rel="noopener noreferrer" target="_blank" className="card-body">
                                 <div className="guide-section">
-                                    <div className="embed-responsive embed-responsive-16by9">
-                                        <iframe
-                                            title="Introducing pSTAKE | Multi-chain Liquid Staking"
-                                            className="embed-responsive-item" src={VIDEO_URL} />
+                                    <div className="image-section">
+                                        <img src="https://blog.pstake.finance/wp-content/uploads/2022/08/user-guide-1160x620.png" alt="blog" />
                                     </div>
                                     <div className="content">
                                         <p className="heading">
@@ -48,7 +50,7 @@ const Guides = () => {
                                         <p className="text">PancakeSwap is the leading decentralized exchange on BNB Smart Chain</p>
                                     </div>
                                 </div>
-                            </Card.Body>
+                            </a>
                         </Card>
                     </div>
                 </div>
