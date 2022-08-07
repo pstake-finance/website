@@ -12,7 +12,7 @@ import {
     DOCS_URL,
     SNANPSHOT_URL,
     PSTAKE_FORUM_URL,
-    PSTAKE_APP_URL, PSTAKE_BRIDGE_URL, BSC_BRIDGE_URL, GUIDES_URL, STK_FAQ_URL, STK_BNB_DOCS_URL
+    PSTAKE_APP_URL, PSTAKE_BRIDGE_URL, BSC_BRIDGE_URL, GUIDES_URL, STK_FAQ_URL, STK_BNB_DOCS_URL, BNB_URL, DISCORD_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
@@ -188,13 +188,11 @@ const Header = () => {
                                             </li>
                                             <li>
                                                 <a href={PSTAKE_TELEGRAM_URL} target="_blank" rel="noopener noreferrer" ><Icon viewClass="social_icon_ig" icon="telegram-plane" /></a>
-
-
                                             </li>
                                             <li>
-                                                <a href={PSTAKE_MEDIUM_URL} target="_blank" rel="noopener noreferrer" > <Icon viewClass="social_icon_img" icon="medium-m" /></a>
-
-
+                                                <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer" >
+                                                    <Icon viewClass="social_icon_img" icon="discord" />
+                                                </a>
                                             </li>
                                         </ul>
 
@@ -204,7 +202,12 @@ const Header = () => {
 
                                 <li className="nav-item"><a href={PSTAKE_MEDIUM_URL} target="_blank" onClick={onClickBlog} rel="noopener noreferrer" className="nav-link">{t("BLOG")} </a></li>
 
-                                <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}><a style={{ padding: '0' }} onClick={onClickNavApp} href={PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link"><span className="nav-link pophover tooltip-multiline app-btn">{t("GO_TO_APP")}</span></a></li>
+                                <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}>
+                                    <a style={{ padding: '0' }} onClick={onClickNavApp} href={window.location.pathname === "/bnb" ? BNB_URL : PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
+                                        <span className="nav-link pophover tooltip-multiline app-btn">{t("GO_TO_APP")}
+                                        </span>
+                                    </a>
+                                </li>
 
                             </ul>
                         </div>

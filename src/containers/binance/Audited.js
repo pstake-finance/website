@@ -24,16 +24,16 @@ const Audited = () => {
 
                               <a href={HALBOR_AUDIT_REPORT} target="_blank" rel="noopener noreferrer"><img className="" src={halborn} title="halborn" alt="halborn" /></a>
 
-                              <a href={CERTORA_WEB_URL} target="_blank" rel="noopener noreferrer"><img className="" src={certora} title="certora" alt="certora" /></a>
+                              <a href={CERTORA_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={certora} title="certora" alt="certora" /></a>
                           </div>
                             <div className="tracking">
                                 <div className="on-chain">
                                     <p className="type">ON-CHAIN TRACKING</p>
-                                    <a href={FORTA_WEB_URL} target="_blank" rel="noopener noreferrer"><img className="" src={forta} title="forta" alt="forta" /></a>
+                                    <a href={FORTA_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={forta} title="forta" alt="forta" /></a>
                                 </div>
                                 <div className="bug-bounty">
-                                    <p className="type">BUG-BOUNTY PROGRAMS</p>
-                                    <a href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer"><img className="" src={immunefi} title="immunefi" alt="immunefi" /></a>
+                                    <p className="type">BUG-BOUNTY PROGRAM</p>
+                                    <a href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={immunefi} title="immunefi" alt="immunefi" /></a>
                                 </div>
                             </div>
                         </div>

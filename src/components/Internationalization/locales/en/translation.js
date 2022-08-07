@@ -283,7 +283,7 @@ let English = {
 
 // BNB SECTION
 
-        "BANNER_HEADING": "Unlock Liquidity of BNB You Stake",
+        "BANNER_HEADING": "Unlock Liquidity of BNB",
         "BANNER_SUB_HEADING": "Enjoy the best of both worlds in the BNB Ecosystem—staking rewards & DeFi\n" +
             "                                        yields by minting stkBNB when you stake BNB with pSTAKE",
         "LIQUID_STAKE_BNB":"Liquid Stake BNB",
@@ -297,8 +297,8 @@ let English = {
         "WHY_PSTAKE_FOR_BNB_TWO_HEADING":"Yields. Yields. Yields.",
         "WHY_PSTAKE_FOR_BNB_TWO_CONTENT":"Generate the highest of yields with auto-compounding BNB staking rewards & " +
             "various stkBNB DeFi opportunities all while securing the BNB chain network",
-        "WHY_PSTAKE_FOR_BNB_THREE_HEADING":"Unbonding period who?",
-        "WHY_PSTAKE_FOR_BNB_THREE_CONTENT":"Earn additional rewards from stkBNB/BNB pair on Pancakeswap pool by borrowing assets and Leverage Farming",
+        "WHY_PSTAKE_FOR_BNB_THREE_HEADING":"Redemption time?",
+        "WHY_PSTAKE_FOR_BNB_THREE_CONTENT":"Skip unstaking and unbonding process of your BNB by directly swapping stkBNB from a liquidity pool",
         "STAKING_VS_LIQUID_STAKING": "Staking vs Liquid Staking",
         "ECOSYSTEM_HEADING": "Put your stkBNB to work in the BNB DeFi Ecosystem",
         "START_STAKING":"Start Staking",

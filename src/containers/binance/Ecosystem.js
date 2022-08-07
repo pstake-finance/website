@@ -55,7 +55,7 @@ const Ecosystem = () => {
                                 <div className="content">
                                     <p className="card-heading text-center">{t("Alpaca")}</p>
                                     <p className="card-content text-center">
-                                        {t("WHY_PSTAKE_FOR_BNB_THREE_CONTENT")}
+                                        Earn additional rewards from stkBNB/BNB pool on Pancakeswap by borrowing assets and Leverage Farming
                                     </p>
                                 </div>
                                 <div className="buttons">
