@@ -72,6 +72,7 @@ export const AS_SEEN_ON9_URL = "https://www.theblockcrypto.com/post/124454/pstak
 export const AS_SEEN_ON10_URL = "https://decrypt.co/86191/liquid-staking-project-pstake-raises-10m-strengthen-cosmos-ethereum-presence";
 export const AS_SEEN_ON11_URL = "https://finance.yahoo.com/news/liquid-staking-protocol-pstake-raises-140000873.html#:~:text=Liquid%20Staking%20Protocol%20PStake%20Raises%20%2410M%20in%20Strategic%20Funding,-Brandy%20Betz&text=PStake%2C%20the%20liquid%20staking%20protocol,Capital%20India%20and%20Defiance%20Capital.";
 export const SECURITY_AUDIT_URL = "https://github.com/persistenceOne/pStake-auditReports";
+export const STK_BNB_SECURITY_AUDIT_URL = "https://github.com/persistenceOne/pStake-auditReports/tree/main/stkBNB"
 export const GUIDES_FAQ_URL = "https://blog.pstake.finance/faqs/";
 export const STK_FAQ_URL = "https://blog.pstake.finance/stkbnb-faqs/"
 export const GUIDES_URL = "https://blog.pstake.finance/category/guides/"

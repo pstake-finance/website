@@ -12,7 +12,15 @@ import {
     DOCS_URL,
     SNANPSHOT_URL,
     PSTAKE_FORUM_URL,
-    PSTAKE_APP_URL, PSTAKE_BRIDGE_URL, BSC_BRIDGE_URL, GUIDES_URL, STK_FAQ_URL, STK_BNB_DOCS_URL, BNB_URL, DISCORD_URL
+    PSTAKE_APP_URL,
+    PSTAKE_BRIDGE_URL,
+    BSC_BRIDGE_URL,
+    GUIDES_URL,
+    STK_FAQ_URL,
+    STK_BNB_DOCS_URL,
+    BNB_URL,
+    DISCORD_URL,
+    STK_BNB_SECURITY_AUDIT_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
@@ -143,7 +151,7 @@ const Header = () => {
                                             </p>
                                     <ul class="dropdown">
                                         <li>
-                                            <a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
+                                            <a href={window.location.pathname === "/bnb" ? STK_BNB_SECURITY_AUDIT_URL : SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
                                                 {t("SECURITY_AUDITS")}
                                             </a>
                                         </li>
