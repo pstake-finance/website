@@ -9,9 +9,11 @@ import Guides from "../containers/binance/Guides";
 import Audited from "../containers/binance/Audited";
 import Validators from "../containers/binance/Validators";
 import Faq from "../containers/binance/Faq";
+import ScrollToTop from "../components/ScrollToTop";
 const Binance = () => {
     return (
         <React.Fragment>
+            <ScrollToTop/>
             <div className="container-fluid p-0 binance">
                 <Banner />
                 <SectionTwo />

@@ -29,7 +29,7 @@ body a:hover {
       margin-left: 10px;
       fill: #000; }
     .top-banner-section .content .logo {
-      width: 14px;
+      width: 16px;
       margin-right: 10px; }
   .top-banner-section .icon-close {
     width: 10px;
@@ -244,6 +244,8 @@ body a:hover {
   color: #fff;
   background: #e50913;
   border-radius: 0; }
+  .navbar-expand-lg button .icon {
+    fill: #fff; }
 .navbar-expand-lg li.nav-item {
   margin: 0 10px; }
   .navbar-expand-lg li.nav-item ul.dropdown li a {
@@ -940,6 +942,10 @@ ul.dropdown {
   border-radius: 8px; }
 .navbar-expand-lg.bnb .navbar-nav .nav-link.app-btn {
   color: #F0B90B; }
+.navbar-expand-lg.bnb button {
+  background: #F0B90B; }
+  .navbar-expand-lg.bnb button .icon {
+    fill: #000; }
 
 [data-tooltip] {
   position: relative;
@@ -2571,9 +2577,9 @@ ul.dropdown {
     flex-direction: column; }
   .binance .ecosystem-section .card {
     flex: 100%; }
-  .binance audited-section .audited-list .tracking {
+  .binance .audited-section .audited-list .tracking {
     margin-top: 30px; }
-    .binance audited-section .audited-list .tracking .bug-bounty {
+    .binance .audited-section .audited-list .tracking .bug-bounty {
       margin-top: 30px; } }
 @media only screen and (max-width: 576px) {
   .tokensale .investors .investor-list, .tokensale .investors .section-title {
@@ -2590,6 +2596,9 @@ ul.dropdown {
   .binance .ecosystem-section .card .card-body .buttons {
     flex-direction: column; }
     .binance .ecosystem-section .card .card-body .buttons .button-link:first-child {
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+
+  .banner-section .network-stats {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -21,7 +21,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 import Icon from "./Icon";
-import bnb from "../assets/bnb_black.png";
+import bnb from "../assets/stk_bnb.svg";
 
 const Header = () => {
     const { t } = useTranslation();
