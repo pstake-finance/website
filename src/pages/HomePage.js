@@ -13,7 +13,7 @@ const homePage = () => {
                 <StakeAssets />
                 <SectionTwo />
                 <div className="investors-sectiondisplay">
-                <Investors />
+                    <Investors />
                 </div>
                 <FeactureBlog />
                 <Footer />

@@ -5,6 +5,7 @@ export const ANALYTICS = "UA-199452342-1";
 export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
 export const PSTAKE_BRIDGE_URL = "https://bridge.persistence.one/";
+export const BSC_BRIDGE_URL = "https://cbridge.celer.network/56/1/PSTAKE";
 export const PSTAKE_MEDIUM_URL = "https://blog.pstake.finance/";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
@@ -69,6 +70,7 @@ export const AS_SEEN_ON10_URL = "https://decrypt.co/86191/liquid-staking-project
 export const AS_SEEN_ON11_URL = "https://finance.yahoo.com/news/liquid-staking-protocol-pstake-raises-140000873.html#:~:text=Liquid%20Staking%20Protocol%20PStake%20Raises%20%2410M%20in%20Strategic%20Funding,-Brandy%20Betz&text=PStake%2C%20the%20liquid%20staking%20protocol,Capital%20India%20and%20Defiance%20Capital.";
 export const SECURITY_AUDIT_URL = "https://github.com/persistenceOne/pStake-auditReports";
 export const GUIDES_FAQ_URL = "https://blog.pstake.finance/faqs/";
+export const GUIDES_URL = "https://blog.pstake.finance/category/guides/"
 export const DOCS_URL = "http://docs.pstake.finance";
 export const SNANPSHOT_URL = "https://snapshot.org/#/";
 

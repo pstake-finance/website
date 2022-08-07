@@ -15,7 +15,7 @@ import {
     DOCS_URL,
     SNANPSHOT_URL,
     PSTAKE_FORUM_URL,
-    PSTAKE_APP_URL, PSTAKE_BRIDGE_URL
+    PSTAKE_APP_URL, PSTAKE_BRIDGE_URL, BSC_BRIDGE_URL, GUIDES_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
@@ -108,12 +108,42 @@ const Header = () => {
                         <div className={isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                             <ul className={isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
                                 {window.location.pathname === "/" ?
-                                    <li className="nav-item nav__menu-item status">
-                                        <a href={PSTAKE_BRIDGE_URL} target="_blank" onClick={onClickDocs}
-                                           rel="noopener noreferrer" className="nav-link"><Icon
-                                            viewClass="social_icon_img" icon="nav-status"/>&nbsp;{t("BRIDGE")}
+
+                                    <li className="nav-item nav__menu-item">
+
+                                        <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs}
+                                           rel="noopener noreferrer" className="nav-link chevron">
+                                            {t("BRIDGE")}
+                                            {/*<Icon viewClass="social_icon_img" icon="nav-status"/>&nbsp;{t("BRIDGE")}*/}
+                                            {!chevronChange ?
+                                                <Icon viewClass="social_icon_img" icon="chevron"/>
+                                                : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
+                                            }
+
                                         </a>
-                                    </li> : ''
+                                        <ul className="dropdown">
+                                            <li>
+                                                <a href={PSTAKE_BRIDGE_URL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">Bridge to Ethereum
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href={BSC_BRIDGE_URL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">Bridge to BSC
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+                                    //
+                                    // <li className="nav-item nav__menu-item status">
+                                    //     <a href={PSTAKE_BRIDGE_URL} target="_blank" onClick={onClickDocs}
+                                    //        rel="noopener noreferrer" className="nav-link"><Icon
+                                    //         viewClass="social_icon_img" icon="nav-status"/>&nbsp;{t("BRIDGE")}
+                                    //     </a>
+                                    // </li>
+                                    : ''
                                 }
                                 <li className="nav-item nav__menu-item">
 
@@ -127,7 +157,7 @@ const Header = () => {
                                         <li><a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("SECURITY_AUDITS")}
 
                                         </a></li>
-                                        <li><a href={GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GUIDES_TUTORIALS")}
+                                        <li><a href={GUIDES_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GUIDES_TUTORIALS")}
 
                                         </a></li>
                                         <li><a href={DOCS_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("DOCS")}

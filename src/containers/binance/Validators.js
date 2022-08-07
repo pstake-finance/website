@@ -1,18 +1,21 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import stakefish from '../../assets/validators/stakefish_plane.svg';
-import figment from '../../assets/validators/figment_plane.svg';
-import everstake from '../../assets/validators/everstake_plane.svg';
-import chorus from '../../assets/validators/chorus_plane.svg';
-import cosmostation from '../../assets/validators/cosmostation_plane.svg';
-import audit from '../../assets/validators/audit_plane.svg';
+import legend from "../../assets/validators/bnb/legend.svg"
+import math_wallet from "../../assets/validators/bnb/math_wallet.svg"
+import cloud from "../../assets/validators/bnb/cloud.svg"
+import ankr from "../../assets/validators/bnb/ankr.svg"
+import defibit from "../../assets/validators/bnb/defibit.svg"
+import certic from "../../assets/validators/bnb/certic.svg"
+import fuji from "../../assets/validators/bnb/fuji.svg"
+import tranches from "../../assets/validators/bnb/tranches.svg"
+import avengers from "../../assets/validators/bnb/avengers.svg"
+import nodreal from "../../assets/validators/bnb/nodreal.svg"
 
 import {
     STAKEFISH,
     FIGMENT,
     EVERSTAKE,
-    CHORUS,
-    COSMOSTATION, AUDIT
+    AUDIT
 } from '../../constants/config';
 
 const Validators = () => {
@@ -24,15 +27,38 @@ const Validators = () => {
                     <h3 className="section-title">{t("VALIDATORS")}</h3>
                     <p className="section-sub-title">Explore BNB validators that help pSTAKE grow</p>
                     <div className="validator-list">
-                        <a href={STAKEFISH} target="_blank" rel="noopener noreferrer"><img className="" src={stakefish} title="Stakefish" alt="Stakefish" /></a>
-                        <a href={FIGMENT} target="_blank" rel="noopener noreferrer"><img className="" src={figment} title="Figment" alt="Figment" /></a>
-                        <a href={EVERSTAKE} target="_blank" rel="noopener noreferrer"><img className="" src={everstake} title="Everstake" alt="Everstake" /></a>
-                        <a href={AUDIT} target="_blank" rel="noopener noreferrer"><img className="" src={audit} title="audit" alt="audit" /></a>
-                        <a href={CHORUS} target="_blank" rel="noopener noreferrer"><img className="" src={chorus} title="Chorus" alt="Chorus" /></a>
-                        <a href={COSMOSTATION} target="_blank" rel="noopener noreferrer"><img className="" src={cosmostation} title="Cosmostation" alt="Cosmostation" /></a>
+                        <a href={STAKEFISH} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={legend} title="legend" alt="legend" />
+                        </a>
+                        <a href={FIGMENT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={math_wallet} title="math_wallet" alt="math_wallet" />
+                        </a>
+                        <a href={EVERSTAKE} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={cloud} title="cloud" alt="cloud" />
+                        </a>
+                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={ankr} title="ankr" alt="ankr" />
+                        </a>
+                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={defibit} title="defibit" alt="defibit" />
+                        </a>
+                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={certic} title="certic" alt="certic" />
+                        </a>
+                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={fuji} title="fuji" alt="fuji" />
+                        </a>
+                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={tranches} title="tranches" alt="tranches" />
+                        </a>
+                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={avengers} title="avengers" alt="avengers" />
+                        </a>
+                        <a href={AUDIT} target="_blank" rel="noopener noreferrer">
+                            <img className="" src={nodreal} title="nodreal" alt="nodreal" />
+                        </a>
                     </div>
                 </div>
-
             </section>
         </React.Fragment >
     );

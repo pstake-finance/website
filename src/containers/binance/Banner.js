@@ -21,7 +21,7 @@ const Banner = () => {
                                     {t("BANNER_SUB_HEADING")}
                                 </h6>
                                 <div className="banner-buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href="https://staging.bnb.pstake.finance/" className="button-link">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://bnb.pstake.finance" className="button-link">
                                         <span className="hideone">{t("LIQUID_STAKE_BNB")} &nbsp;</span>
                                         <Icon viewClass="right-arrow" icon="right-arrow" />
                                     </a>

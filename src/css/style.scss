@@ -2625,9 +2625,125 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         .section-title{
             margin-bottom: 50px;
         }
+        .list{
+            overflow: auto;
+            .item-header{
+                display: flex;
+                width: 100%;
+                .type {
+                    flex-shrink: 0;
+                    padding: 22px 16px 18px 70px ;
+                    width: 300px;
+
+                }
+                .bnb, .stk-bnb{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 22px 16px 18px 70px ;
+                    width: 500px;
+                    align-items: center;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 141.9%;
+                    text-transform: uppercase;
+                    flex-shrink: 0;
+                    color: #FFFFFF;
+
+                    img{
+                        width: 36px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .list-data {
+                background: #26262B;
+                opacity: 0.9;
+                backdrop-filter: blur(40px);
+                border-radius: 8px;
+                .item {
+                    display: flex;
+                    width: 100%;
+
+                    &:not(:first-child) {
+                        .type {
+                            border-top: 1px solid #313134;
+                        }
+
+                        .bnb, .stk-bnb {
+                            border-top: 1px solid #313134;
+                        }
+                    }
+
+                    &:first-child {
+                        .bnb {
+                            border-top-left-radius: 8px;
+                            border-top-right-radius: 8px;
+                            border-top: 1px solid #313134;
+                        }
+
+                        .stk-bnb {
+                            border-top-left-radius: 8px;
+                            border-top-right-radius: 8px;
+                            border-top: 1px solid #efb90b;
+                        }
+                    }
+
+                    &:last-child {
+                        .bnb {
+                            border-bottom-left-radius: 8px;
+                            border-bottom-right-radius: 8px;
+                            border-bottom: 1px solid #313134;
+                        }
+
+                        .stk-bnb {
+                            border-bottom-left-radius: 8px;
+                            border-bottom-right-radius: 8px;
+                            border-bottom: 1px solid #efb90b;
+                        }
+                    }
+
+                    .type {
+                        text-align: left;
+                        width: 300px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 141.9%;
+                        background: #26262B;
+                        flex-shrink: 0;
+                        color: #70747C;
+                        padding: 20px 50px;
+
+                    }
+
+                    .bnb {
+                        border-left: 1px solid #313134;
+                        border-right: 1px solid #313134;
+                    }
+
+                    .bnb, .stk-bnb {
+                        text-align: center;
+                        background: #26262B;
+                        width: 500px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 200%;
+                        flex-shrink: 0;
+                        color: #DBD6D6;
+                        padding: 20px 50px;
+                    }
+
+                    .stk-bnb {
+                        border-left: 1px solid #efb90b;
+                        border-right: 1px solid #efb90b;
+                    }
+                }
+            }
+        }
         .table-container {
             .table {
                 background: #26262B;
+                width: 100%;
+                border-collapse: inherit;
                 tr {
                     th {
                         font-weight: 600;
@@ -2636,11 +2752,20 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                         color: #70747C;
                         border-color: #313134;
                         padding: 22px 16px 18px 70px ;
+                        width: 35%;
+
                         &:first-child{
                             padding-left: 80px;
+                            width: 30%;
                         }
                         &:last-child{
                             padding-right: 70px;
+                            border-left: 1px solid #efb90b;
+                            border-right: 1px solid #efb90b;
+                            border-top: 1px solid #efb90b;
+                        }
+                        &:not(:first-child){
+                            border-left: 1px solid #efb90b;
                         }
                     }
 
@@ -2649,14 +2774,22 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                         font-size: 14px;
                         line-height: 200%;
                         color: #DBD6D6;
-                        border-color: #313134;
+                        border-top: 1px solid #313134;
                         padding-left: 70px;
+                        width: 35%;
                         &:first-child {
                             padding-left: 80px;
+                            width: 30%;
                         }
                         &:last-child{
                             padding-right: 70px;
+                            border-right: 1px solid #efb90b;
+                            border-left: 1px solid #efb90b;
                         }
+                        //&:not(:first-child){
+                        //    border-right: 1px solid #efb90b;
+                        //    border-left: 1px solid #efb90b;
+                        //}
                     }
                 }
 
@@ -3380,6 +3513,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .banner-section .network-stats{
         flex-direction: column;
     }
-
 }
+
 
