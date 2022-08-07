@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
+import Binance from "./pages/Binance";
 
 ReactGA.initialize(ANALYTICS)
 
@@ -32,7 +33,10 @@ const App = () => {
   },{
     path: '/tokensale',
     component: TokenSale,
-}];
+},{
+      path: '/bnb',
+      component: Binance,
+  }];
 
   const [isOnline, setNetwork] = useState(window.navigator.onLine);
   const updateNetwork = () => {
@@ -43,7 +47,7 @@ const App = () => {
       window.addEventListener("offline", updateNetwork);
       window.addEventListener("online", updateNetwork);
       document.body.classList = "";
-  document.getElementById('nav-bar').classList.add('navbar-white');
+      document.getElementById('nav-bar').classList.add('navbar-white');
       return () => {
           window.removeEventListener("offline", updateNetwork);
           window.removeEventListener("online", updateNetwork);

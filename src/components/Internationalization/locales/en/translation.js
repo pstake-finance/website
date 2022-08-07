@@ -4,7 +4,7 @@ let English = {
         "DOCS": "Docs",
         "DISCORD": "Discord",
         "TOKENSALE":"Token Sale",
-        "FORUM": "FORUM",
+        "FORUM": "Forum",
         "AIRDROP": "Airdrop",
         "GO_TO_APP": "Go To App",
         "UNLOCKING_LIQUIDITY": "Unlocking Liquidity for",
@@ -278,7 +278,7 @@ let English = {
         "FEATURE_WRAP":"Stake and receive stkASSETs to maintain liquidity of otherwise locked assets\n",
         "FEATURE_DEFI":"Explore DeFi opportunities using the liquid stkASSETs while earning staking rewards",
         "FEATURE_ANCHOR":"Skip unstaking and unbonding process by directly swapping stkASSETs for native assets",
-        "JOIN_OUR_COMMUNITY":"Join our community",
+        "JOIN_OUR_COMMUNITY":"Join Our Community",
 
 // BNB SECTION
 
@@ -292,13 +292,12 @@ let English = {
         "TOTAL_REWARDS_EARNED": "Total Rewards Earned",
         "WHY_PSTAKE_FOR_BNB": "Why pSTAKE for BNB?",
         "WHY_PSTAKE_FOR_BNB_ONE_HEADING":"Say goodbye to illiquidity",
-        "WHY_PSTAKE_FOR_BNB_ONE_CONTENT": "Receive stkBNB to maintain liquidity of otherwise locked $BNB when you stake",
+        "WHY_PSTAKE_FOR_BNB_ONE_CONTENT": "Receive stkBNB to maintain liquidity of otherwise locked BNB when you stake",
         "WHY_PSTAKE_FOR_BNB_TWO_HEADING":"Yields. Yields. Yields.",
         "WHY_PSTAKE_FOR_BNB_TWO_CONTENT":"Generate the highest of yields with auto-compounding BNB staking rewards & " +
             "various stkBNB DeFi opportunities all while securing the BNB chain network",
-        "WHY_PSTAKE_FOR_BNB_THREE_HEADING":"Redemption Time who?",
-        "WHY_PSTAKE_FOR_BNB_THREE_CONTENT":"Skip unstaking and unbonding process of your $BNB by directly for " +
-            "swapping stkBNB from a liquidity pool ",
+        "WHY_PSTAKE_FOR_BNB_THREE_HEADING":"Unbonding period who?",
+        "WHY_PSTAKE_FOR_BNB_THREE_CONTENT":"Earn additional rewards from stkBNB/BNB pair on Pancakeswap pool by borrowing assets and Leverage Farming",
         "STAKING_VS_LIQUID_STAKING": "Staking vs Liquid Staking",
         "ECOSYSTEM_HEADING": "Put your stkBNB to work in the BNB DeFi Ecosystem",
         "START_STAKING":"Start Staking",

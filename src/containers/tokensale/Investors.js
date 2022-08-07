@@ -27,7 +27,7 @@ import {
     FIGMENT,
     EVERSTAKE,
     CHORUS,
-    COSMOSTATION, PSTAKE_TRAIL_OF_BITS, PSTAKE_CERTORA
+    COSMOSTATION, PSTAKE_TRAIL_OF_BITS, PSTAKE_CERTORA, AUDIT
 } from '../../constants/config';
 import {
     SEQUOIA_URL,
@@ -42,6 +42,11 @@ import {
     PSTAKE_DILIGENCE_AUDIT,
     AOK_URL
 } from '../../constants/config';
+import legend from "../../assets/validators/bnb/legend.svg";
+import math_wallet from "../../assets/validators/bnb/math_wallet.svg";
+import cloud from "../../assets/validators/bnb/cloud.svg";
+import tranches from "../../assets/validators/bnb/tranches.svg";
+import nodreal from "../../assets/validators/bnb/nodreal.svg";
 
 const Investors = () => {
     const { t } = useTranslation();
@@ -87,6 +92,21 @@ const Investors = () => {
                         <a href={EVERSTAKE} target="_blank" rel="noopener noreferrer"><img className="" src={everstake} title="Everstake" alt="Everstake" /></a>
                         <a href={CHORUS} target="_blank" rel="noopener noreferrer"><img className="" src={chorus} title="Chorus" alt="Chorus" /></a>
                         <a href={COSMOSTATION} target="_blank" rel="noopener noreferrer"><img className="" src={cosmostation} title="Cosmostation" alt="Cosmostation" /></a>
+                        <a href={STAKEFISH} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                            <img className="" src={legend} title="legend" alt="legend" />
+                        </a>
+                        <a href={FIGMENT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                            <img className="" src={math_wallet} title="math_wallet" alt="math_wallet" />
+                        </a>
+                        <a href={EVERSTAKE} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                            <img className="" src={cloud} title="cloud" alt="cloud" />
+                        </a>
+                        <a href={AUDIT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                            <img className="" src={tranches} title="tranches" alt="tranches" />
+                        </a>
+                        <a href={AUDIT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                            <img className="" src={nodreal} title="nodreal" alt="nodreal" />
+                        </a>
                     </div>
                 </div>
 

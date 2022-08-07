@@ -11,6 +11,7 @@ import asset3 from '../../assets/asset_3.svg';
 import asset4 from '../../assets/bnb.svg';
 import sol from '../../assets/sol.svg';
 import avax from '../../assets/avax.svg';
+import {Link} from "react-router-dom";
 const StakeAssets = () => {
     const { t } = useTranslation();
     return (
@@ -19,6 +20,30 @@ const StakeAssets = () => {
                 <div className="container">
                     <div className="row">
                         <h3 className="section-title">{t("STAKE_YOUR_ASSETS")}</h3>
+                        <Card className="col-md-4 col-xs-6">
+                            <Card.Body className="gfour">
+                                <div className="text-center">
+                                    <img className="pt-4 pb-4" src={asset4} title="Asset" alt="Asset"/>
+                                    <Card.Title>{t("BINANCE")}</Card.Title>
+                                </div>
+                                <div className="apr">
+                                    <h1>{t("BNB_APR")} <span>{t("APR")}</span></h1>
+                                    <Link to='/bnb'><h5>{t("STAKE_NOW")}</h5></Link>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                        <Card className="col-md-4  col-xs-6">
+                            <Card.Body className="gthree">
+                                <div className="text-center">
+                                    <img className="pt-4 pb-4" src={asset3} title="Asset" alt="Asset"/>
+                                    <Card.Title>{t("ETHEREUM")}</Card.Title>
+                                </div>
+                                <div className="apr">
+                                    <h1>{t("ETH_APR")} <span>{t("APR")}</span></h1>
+                                    <a href={PSTAKE_APP_STKETH_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
+                                </div>
+                            </Card.Body>
+                        </Card>
                         <Card className="col-md-4 col-xs-6">
                             <Card.Body className="gone">
                                 <div className="text-center">
@@ -41,30 +66,6 @@ const StakeAssets = () => {
                                 <h1>{t("XPRT_APR")} <span>{t("APR")}</span></h1>
                                 <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
                             </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-4  col-xs-6">
-                            <Card.Body className="gthree">
-                                <div className="text-center">
-                                <img className="pt-4 pb-4" src={asset3} title="Asset" alt="Asset"/>
-                                <Card.Title>{t("ETHEREUM")}</Card.Title>
-                                </div>
-                                <div className="apr">
-                                    <h1>{t("ETH_APR")} <span>{t("APR")}</span></h1>
-                                    <a href={PSTAKE_APP_STKETH_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-4 col-xs-6">
-                            <Card.Body className="gfour">
-                                <div className="text-center">
-                                <img className="pt-4 pb-4" src={asset4} title="Asset" alt="Asset"/>
-                                <Card.Title>{t("BINANCE")}</Card.Title>
-                                </div>
-                                <div className="apr">
-                                    <h1>{t("BNB_APR")} <span>{t("APR")}</span></h1>
-                                    <h5>{t("Coming Soon!")}</h5>
-                                </div>
                             </Card.Body>
                         </Card>
                         <Card className="col-md-4  col-xs-6">
