@@ -5,11 +5,8 @@ import ReactGa from 'react-ga';
 
 import {
     PSTAKE_MEDIUM_URL,
-    PSTAKE_DOCS_URL,
-    // PSTAKE_BRIDGE_URL,
     PSTAKE_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
-    // PSTAKE_AIRDROP_URL,
     SECURITY_AUDIT_URL,
     GUIDES_FAQ_URL,
     DOCS_URL,
@@ -72,13 +69,6 @@ const Header = () => {
         })
 
     }
-    const onClickDocs = () => {
-        ReactGa.event({
-            category: 'DOCS',
-            action: 'Clicked on Docs'
-        })
-
-    }
 
     const closeBanner = () => {
         console.log("here");
@@ -110,9 +100,7 @@ const Header = () => {
                                 {window.location.pathname === "/" ?
 
                                     <li className="nav-item nav__menu-item">
-
-                                        <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs}
-                                           rel="noopener noreferrer" className="nav-link chevron">
+                                        <p className="nav-link chevron m-0">
                                             {t("BRIDGE")}
                                             {/*<Icon viewClass="social_icon_img" icon="nav-status"/>&nbsp;{t("BRIDGE")}*/}
                                             {!chevronChange ?
@@ -120,7 +108,7 @@ const Header = () => {
                                                 : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
                                             }
 
-                                        </a>
+                                        </p>
                                         <ul className="dropdown">
                                             <li>
                                                 <a href={PSTAKE_BRIDGE_URL} target="_blank" rel="noopener noreferrer"
@@ -147,12 +135,12 @@ const Header = () => {
                                 }
                                 <li className="nav-item nav__menu-item">
 
-                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link chevron">{t("LEARN")}
+                                    <p className="nav-link chevron m-0">{t("LEARN")}
                                         {!chevronChange ?
                                             <Icon viewClass="social_icon_img" icon="chevron"/>
                                             : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
                                         }
-                                            </a>
+                                            </p>
                                     <ul class="dropdown">
                                         <li>
                                             <a href={SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
@@ -179,13 +167,13 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item nav__menu-item">
 
-                                    <a href={PSTAKE_DOCS_URL} target="_blank" onClick={onClickDocs} rel="noopener noreferrer" className="nav-link chevron">{t("COMMUNITY")}
+                                    <p className="nav-link chevron m-0">{t("COMMUNITY")}
                                         {!chevronChange ?
                                             <Icon viewClass="social_icon_img" icon="chevron"/>
                                             : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
                                         }
 
-                                    </a>
+                                    </p>
                                     <ul class="dropdown">
                                         <li><a href={PSTAKE_FORUM_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("FORUM")}
 

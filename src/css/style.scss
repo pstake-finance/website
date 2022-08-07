@@ -265,6 +265,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
 }
 .navbar-expand-lg.sticky-dark .nav-item a:hover,
+.navbar-expand-lg.sticky-dark .nav-item p:hover,
 .navbar-nav .nav-item a:hover {
     color: #fff;
 }
@@ -272,8 +273,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .navbar-brand.logo {
         background: url(../assets/logo.svg);
     }
-    .navbar-nav a {
-        color: #fff;
+    .navbar-nav {
+        a, p {
+            color: #fff;
+        }
     }
     .navbar-nav .nav-link.app-btn {
         background: #e50913;
@@ -294,11 +297,13 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         width: 107px;
         height: 26px;
     }
-    .navbar-nav a {
-        color: #322d3e;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
+    .navbar-nav {
+        a, p{
+            color: #322d3e;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
     }
 
     button {
@@ -346,10 +351,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 margin-left: 5px;
             }
         }
-        a.nav-link.chevron:hover .icon{
+        a.nav-link.chevron:hover .icon,  p.nav-link.chevron:hover .icon{
             transform: rotate(-90deg) ;
         }
-        a {
+        a, p {
             &:hover {
                 color: #322d3e;
 
@@ -3525,6 +3530,18 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .banner-section .network-stats{
         flex-direction: column;
+    }
+    .stay-updated .blog-articles {
+        .custom-card{
+            height: auto;
+        }
+        a .blog-image{
+            height: auto;
+            .card-img-top{
+                max-height: initial;
+                height: auto;
+            }
+        }
     }
 }
 
