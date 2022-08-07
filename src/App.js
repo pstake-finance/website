@@ -53,7 +53,6 @@ const App = () => {
           window.removeEventListener("online", updateNetwork);
       };
   });
-
   let location = useLocation();
 
   useEffect(() => {

@@ -16,7 +16,7 @@ const Ecosystem = () => {
                     <h3 className="section-title">Put your stkBNB to work in the <br/> BNB DeFi Ecosystem</h3>
                     <div className="row">
                         <Card className="col-md-6 col-xs-12">
-                            <Card.Body className="">
+                            <Card.Body className="pancake">
                                 <div className="tag">
                                     <p>DEX</p>
                                 </div>
