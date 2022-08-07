@@ -228,9 +228,13 @@ body a:hover {
   color: #fff; }
 .navbar-expand-lg.sticky-dark .navbar-nav .nav-link.app-btn {
   background: #e50913; }
+  .navbar-expand-lg.sticky-dark .navbar-nav .nav-link.app-btn:hover {
+    box-shadow: 0 4px 16px #e508138a; }
 .navbar-expand-lg.sticky-dark.bnb .navbar-nav .nav-link.app-btn {
   background: #F0B90B;
   color: #1D1D22; }
+  .navbar-expand-lg.sticky-dark.bnb .navbar-nav .nav-link.app-btn:hover {
+    box-shadow: 0 4px 16px #eeb906a1; }
 
 .navbar-nav {
   align-items: center; }
@@ -437,6 +441,8 @@ ul.dropdown {
         font-size: 14px;
         color: #fff;
         font-weight: 600; }
+      .banner-section .banner-buttons .xprt:hover {
+        box-shadow: 0 4px 16px #e508138a; }
 
 .icon {
   width: 18px; }
@@ -1267,6 +1273,8 @@ ul.dropdown {
       .stay-updated .banner-buttons .xprt .hideone {
         font-size: 14px;
         font-weight: 600; }
+      .stay-updated .banner-buttons .xprt:hover {
+        box-shadow: 0 4px 16px #e508138a; }
   .stay-updated .section-title {
     color: #ffffff; }
   .stay-updated .col-md-5 {
@@ -1935,6 +1943,7 @@ ul.dropdown {
           fill: #000;
           margin-left: 5px; }
         .binance .banner-section .banner-main-section .banner-buttons .button-link:hover {
+          box-shadow: 0 4px 16px #eeb906a1;
           text-decoration: none; }
     .binance .banner-section .banner-main-section .network-stats {
       margin-top: 20px; }
@@ -2205,10 +2214,14 @@ ul.dropdown {
             background: #F0B90B;
             color: #000000;
             margin-right: 5px; }
+            .binance .ecosystem-section .card .card-body .buttons .button-link.primary:hover {
+              box-shadow: 0 4px 16px #eeb906a1; }
           .binance .ecosystem-section .card .card-body .buttons .button-link.secondary {
             background: #2E2E34;
             color: #FFFFFF;
             margin-left: 5px; }
+            .binance .ecosystem-section .card .card-body .buttons .button-link.secondary:hover {
+              box-shadow: 0 4px 16px #2b2c3082; }
 .binance .guides-section {
   padding: 70px 0; }
   .binance .guides-section .section-title {
@@ -2292,6 +2305,9 @@ ul.dropdown {
       flex-wrap: wrap; }
 .binance .validators-section {
   padding: 100px 0; }
+  .binance .validators-section .section-title {
+    max-width: 960px;
+    margin: auto auto 30px auto; }
   .binance .validators-section .section-sub-title {
     font-weight: 500;
     font-size: 16px;

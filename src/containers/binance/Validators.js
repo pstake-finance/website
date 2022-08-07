@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from "react-i18next";
 import legend from "../../assets/validators/bnb/legend.svg"
 import math_wallet from "../../assets/validators/bnb/math_wallet.svg"
 import cloud from "../../assets/validators/bnb/cloud.svg"
@@ -13,13 +12,13 @@ import nodreal from "../../assets/validators/bnb/nodreal.svg"
 
 
 const Validators = () => {
-    const { t } = useTranslation();
     return (
         <React.Fragment>
             <section className="validators-section">
                 <div className="container">
-                    <h3 className="section-title">{t("VALIDATORS")}</h3>
-                    <p className="section-sub-title">Explore BNB validators that help pSTAKE grow</p>
+                    <h3 className="section-title">Why stake with one validator when you can stake with 10</h3>
+                    <p className="section-sub-title">pSTAKE uses a validator scoring mechanism to stake with the top
+                        10 validators in the BNB chain ecosystem</p>
                     <div className="validator-list">
                         <a href="/" target="_blank" rel="noopener noreferrer">
                             <img className="" src={legend} title="legend" alt="legend" />

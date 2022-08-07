@@ -34,8 +34,8 @@ const SectionTwo = () => {
                                 <div className="content">
                                     <p className="card-heading">Yields. Yields. Yields.</p>
                                     <p className="card-content">
-                                        Generate the highest of yields with auto-compounding BNB staking rewards
-                                        & various stkBNB DeFi opportunities all while securing the BNB chain network
+                                        Generate the highest yields with auto-compounding BNB staking rewards & various
+                                        stkBNB DeFi opportunities, all while securing the BNB chain network
                                     </p>
                                 </div>
                             </Card.Body>

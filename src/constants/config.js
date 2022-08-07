@@ -58,6 +58,7 @@ export const COSMOSTATION = "https://www.cosmostation.io/";
 export const REGISTER = "https://coinlist.co/pstake";
 export const LEARN_MORE = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";
 export const VIDEO_URL = "https://www.youtube.com/embed/0sMoynPrA4w";
+export const GUIDE_VIDEO_URL = "https://www.youtube.com/watch?v=KkOphCBs3fQ";
 export const AOK_URL = "https://github.com/persistenceOne/pStake-auditReports";
 export const AS_SEEN_ON1_URL = "https://www.forbes.com/sites/lawrencewintermeyer/2021/07/01/collaboration-and-interoperability-over-tribalism-signals-maturity-developing-in-defi/?sh=3f285e0e6644";
 export const AS_SEEN_ON2_URL = "https://www.nasdaq.com/articles/staking-is-the-quiet-giant-of-crypto-yield-2021-06-23";
@@ -80,6 +81,7 @@ export const SNANPSHOT_URL = "https://snapshot.org/#/pstakefinance.eth";
 export const PECKSHIELD_WEB_URL = "https://peckshield.com"
 export const HALBORN_WEB_URL = "https://halborn.com/"
 export const CERTORA_WEB_URL = "https://www.certora.com/"
+export const BNB_URL = "https://bnb.pstake.finance/"
 export const FORTA_WEB_URL = "https://forta.org/"
 export const IMMUNEFI_WEB_URL = "https://immunefi.com/"
 

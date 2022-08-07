@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { useTranslation } from "react-i18next";
 import {
-    VIDEO_URL
+    GUIDE_VIDEO_URL
 } from '../../constants/config';
 import Icon from "../../components/Icon";
 
@@ -15,12 +15,12 @@ const Guides = () => {
                     <h3 className="section-title">{t("GUIDES_TUTORIALS")}</h3>
                     <div className="row">
                         <Card className="col-md-6">
-                            <a href={VIDEO_URL}  rel="noopener noreferrer" target="_blank" className="card-body">
+                            <a href={GUIDE_VIDEO_URL}  rel="noopener noreferrer" target="_blank" className="card-body">
                                 <div className="guide-section">
                                     <div className="embed-responsive embed-responsive-16by9">
                                         <iframe width="100" height="60"
                                                 title="Introducing pSTAKE | Multi-chain Liquid Staking"
-                                                src={VIDEO_URL} frameBorder="0"
+                                                src={GUIDE_VIDEO_URL} frameBorder="0"
                                                 className="embed-responsive-item"
                                                 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture">
                                         </iframe>
@@ -30,7 +30,7 @@ const Guides = () => {
                                             Liquid Staking BNB
                                             <Icon viewClass="redirect" icon="redirect" />
                                         </p>
-                                        <p className="text">PancakeSwap is the leading decentralized exchange on BNB Smart Chain</p>
+                                        <p className="text">Step by step video tutorial on staking BNB through pSTAKE</p>
                                     </div>
                                 </div>
                             </a>
@@ -44,10 +44,10 @@ const Guides = () => {
                                     </div>
                                     <div className="content">
                                         <p className="heading">
-                                            pSTAKE & Binance Labs Partnership
+                                            stkBNB User Guide
                                             <Icon viewClass="redirect" icon="redirect" />
                                         </p>
-                                        <p className="text">PancakeSwap is the leading decentralized exchange on BNB Smart Chain</p>
+                                        <p className="text"> Walk-through of how to stake BNB and use it in DeFI with screenshots</p>
                                     </div>
                                 </div>
                             </a>
