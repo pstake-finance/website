@@ -2703,6 +2703,14 @@ ul.dropdown {
       margin-bottom: 10px; }
 
   .banner-section .network-stats {
-    flex-direction: column; } }
+    flex-direction: column; }
+
+  .stay-updated .blog-articles .custom-card {
+    height: auto; }
+  .stay-updated .blog-articles a .blog-image {
+    height: auto; }
+    .stay-updated .blog-articles a .blog-image .card-img-top {
+      max-height: initial;
+      height: auto; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -3526,6 +3526,18 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .banner-section .network-stats{
         flex-direction: column;
     }
+    .stay-updated .blog-articles {
+        .custom-card{
+            height: auto;
+        }
+        a .blog-image{
+            height: auto;
+            .card-img-top{
+                max-height: initial;
+                height: auto;
+            }
+        }
+    }
 }
 
 
