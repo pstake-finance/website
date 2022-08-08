@@ -87,9 +87,9 @@ const Header = () => {
         <React.Fragment>
             <div id="is-sticky" className="top-bar">
                 <div className={!banner ? 'd-none' : "top-banner-section"}>
-                    <a className="content" href="https://coinmarketcap.com/community/articles/32880" target="_blank" rel="noopener noreferrer">
+                    <a className="content" href={window.location.pathname === "/bnb" ? BNB_URL : "/bnb"} target="_blank" rel="noopener noreferrer">
                         <img className="logo" src={bnb} alt={bnb}/>
-                        pSTAKE's Liquid Staking Solution for BNB is launching on 8th Aug 2022
+                        pSTAKE's Liquid Staking Solution for BNB is live now
                         <Icon viewClass="right-arrow" icon="right-arrow" />
                     </a>
                     <div onClick={closeBanner}>

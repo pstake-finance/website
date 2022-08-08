@@ -1,10 +1,20 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { useTranslation } from "react-i18next";
 import stkBNB from "../../assets/stkBNB.svg";
 import Icon from "../../components/Icon";
+import {getTVL} from "../../utils/helpers";
 
 const Banner = () => {
     const { t } = useTranslation();
+    const [totalwei, setTotalwei] = useState(0);
+
+    useEffect( ()=>{
+        const fetchValues = async ()=>{
+            setTotalwei(await getTVL())
+        }
+        fetchValues()
+    },[setTotalwei])
+
     return (
         <React.Fragment>
             <section className="banner-section aos-init aos-animate">
@@ -28,21 +38,21 @@ const Banner = () => {
                                 </div>
                                 <div className="network-stats">
                                     <div className="stats-count">
-                                        <h6 className="stats">{t("$28.12M+")} </h6>
+                                        <h6 className="stats">{totalwei} </h6>
                                         <h6 className="label">{t("TOTAL_VALUE_UNLOCKED")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h6 className={"stats"}>{t("5,107")}</h6>
+                                        <h6 className={"stats"}>10+</h6>
                                         <h6 className="label">{t("NUMBER_OF_BNB_LIQUID_STAKERS")}</h6>
                                     </div>
                                     <div className="stats-count">
-                                        <h6 className={"stats"}>{t("~5%")}</h6>
+                                        <h6 className={"stats"}>{t("BNB_APR")}</h6>
                                         <h6 className="label">{t("APY")}</h6>
                                     </div>
-                                    <div className="stats-count">
-                                        <h6 className={"stats"}>{t("5,107")}</h6>
-                                        <h6 className="label">{t("TOTAL_REWARDS_EARNED")}</h6>
-                                    </div>
+                                    {/*<div className="stats-count">*/}
+                                    {/*    <h6 className={"stats"}>{t("0")}</h6>*/}
+                                    {/*    <h6 className="label">{t("TOTAL_REWARDS_EARNED")}</h6>*/}
+                                    {/*</div>*/}
 
                                 </div>
                             </div>
