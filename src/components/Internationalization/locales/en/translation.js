@@ -46,7 +46,7 @@ let English = {
         "ATOM_APR": "~13.5%",
         "ETH_APR": "~4.05%",
         "XPRT_APR": "~25%",
-        "BNB_APR": "~5%",
+        "BNB_APY": "~5.2%",
         "PERSISTENCE": "Persistence",
         "FEACTURES": "Features",
         "WRAP": "Wrap",

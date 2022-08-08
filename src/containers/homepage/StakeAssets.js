@@ -27,7 +27,7 @@ const StakeAssets = () => {
                                     <Card.Title>{t("BINANCE")}</Card.Title>
                                 </div>
                                 <div className="apr">
-                                    <h1>{t("BNB_APR")} <span>{t("APR")}</span></h1>
+                                    <h1>{t("BNB_APY")} <span>{t("APY")}</span></h1>
                                     <Link to='/bnb'><h5>{t("STAKE_NOW")}</h5></Link>
                                 </div>
                             </Card.Body>
@@ -39,7 +39,7 @@ const StakeAssets = () => {
                                     <Card.Title>{t("ETHEREUM")}</Card.Title>
                                 </div>
                                 <div className="apr">
-                                    <h1>{t("ETH_APR")} <span>{t("APR")}</span></h1>
+                                    <h1>{t("ETH_APR")} <span>{t("APY")}</span></h1>
                                     <a href={PSTAKE_APP_STKETH_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
                                 </div>
                             </Card.Body>
@@ -51,7 +51,7 @@ const StakeAssets = () => {
                                 <Card.Title>{t("COSMOS")}</Card.Title>
                                 </div>
                                 <div className="apr">
-                                    <h1>{t("ATOM_APR")} <span>{t("APR")}</span></h1>
+                                    <h1>{t("ATOM_APR")} <span>{t("APY")}</span></h1>
                                     <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
                                 </div>
                             </Card.Body>
@@ -63,7 +63,7 @@ const StakeAssets = () => {
                                 <Card.Title>{t("PERSISTENCE")}</Card.Title>
                                 </div>
                                 <div className="apr">
-                                <h1>{t("XPRT_APR")} <span>{t("APR")}</span></h1>
+                                <h1>{t("XPRT_APR")} <span>{t("APY")}</span></h1>
                                 <a href={PSTAKE_APP_URL} rel="noopener noreferrer" target="_blank"><h5>{t("STAKE_NOW")}</h5></a>
                             </div>
                             </Card.Body>
@@ -90,7 +90,6 @@ const StakeAssets = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                       
                     </div>
                 </div>
             </section>
