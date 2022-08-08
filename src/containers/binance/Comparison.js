@@ -30,8 +30,8 @@ const Comparison = () => {
                            </div>
                            <div className="item">
                                <div className="type">Rewards</div>
-                               <div className="bnb">Upto ~5.2%</div>
-                               <div className="stk-bnb">{t("BNB_APR")}</div>
+                               <div className="bnb">Upto ~5%</div>
+                               <div className="stk-bnb">{t("BNB_APY")}</div>
                            </div>
                            <div className="item">
                                <div className="type">Minimum BNB Requirement</div>

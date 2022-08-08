@@ -34,13 +34,13 @@ const list = [
         name:"Blogs",
         url:PSTAKE_MEDIUM_URL,
         icon:<Icon viewClass="social_icon_img" icon="medium-m"/>,
-        text:'Learn about stkBNB'
+        text:'Learn about pSTAKE'
     },
     {
         name:"Youtube",
         url:PSTAKE_YOUTUBE_URL,
         icon:<Icon viewClass="social_icon_img" icon="youtube"/>,
-        text:'Learn about stkBNB'
+        text:'Learn about pSTAKE'
     },
 ]
 

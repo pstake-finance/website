@@ -35,7 +35,7 @@ const Ecosystem = () => {
                                 {/*    <p className="item">7% <span>SAPR</span></p>*/}
                                 {/*</div>*/}
                                 <div className="buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href="https://pancakeswap.finance/" className="button-link primary">
+                                    <a rel="noopener noreferrer" target="_blank" href={`https://pancakeswap.finance/add/${process.env.REACT_APP_STK_BNB_CONTRACT_ADDRESS}/BNB`} className="button-link primary">
                                         {t("Add liquidity")}
                                     </a>
                                     <a rel="noopener noreferrer" target="_blank" href="https://blog.pstake.finance/2022/08/05/pstake-x-pancakeswap-partner-to-integrate-stkbnb-pstake-liquidity-pools/" className="button-link secondary">

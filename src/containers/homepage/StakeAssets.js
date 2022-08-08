@@ -27,7 +27,7 @@ const StakeAssets = () => {
                                     <Card.Title>{t("BINANCE")}</Card.Title>
                                 </div>
                                 <div className="apr">
-                                    <h1>{t("BNB_APR")} <span>{t("APY")}</span></h1>
+                                    <h1>{t("BNB_APY")} <span>{t("APY")}</span></h1>
                                     <Link to='/bnb'><h5>{t("STAKE_NOW")}</h5></Link>
                                 </div>
                             </Card.Body>
