@@ -21,7 +21,7 @@ const SectionOne = () => {
 
                                     <h6> {t("STAKE_ASSETS")}</h6>
 
-                                    <span className="button mt-3 mb-3 xprt">
+                                    <span className="button xprt">
                                         <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL}>
                                             <span className="hideone">{t("GET_STARTED")}&nbsp;</span>
                                             <img src={rightarrow} alt="arrow" />

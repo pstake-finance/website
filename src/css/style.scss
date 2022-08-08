@@ -669,6 +669,11 @@ ul.dropdown {
         }
     }
 }
+.home-page{
+    .banner-main-section{
+        height: 100vh;
+    }
+}
 .ecosystem-faq-section {
     padding: 100px 0;
     background: #232327;
@@ -3171,6 +3176,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 991px) {
+    .home-page .banner-main-section{
+        height: auto;
+    }
     .tokensale .investors .investor-list img {
         width: 200px;
     }

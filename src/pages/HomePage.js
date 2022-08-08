@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const homePage = () => {
     return (
         <React.Fragment>
-            <div className="container-fluid p-0 tokensale">
+            <div className="container-fluid p-0 tokensale home-page">
                 <SectionOne />
                 <StakeAssets />
                 <SectionTwo />
