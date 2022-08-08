@@ -523,6 +523,9 @@ ul.dropdown {
         .social-icons ul a .icon:hover {
           fill: #e50913; }
 
+.home-page .banner-main-section {
+  height: 100vh; }
+
 .ecosystem-faq-section {
   padding: 100px 0;
   background: #232327; }
@@ -2390,6 +2393,9 @@ ul.dropdown {
   .stay-updated .blog-articles a {
     height: auto; } }
 @media only screen and (max-width: 991px) {
+  .home-page .banner-main-section {
+    height: auto; }
+
   .tokensale .investors .investor-list img {
     width: 200px; }
 
