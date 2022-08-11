@@ -1,9 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { useTranslation } from "react-i18next";
-import {
-    PSTAKE_APP_URL
-} from '../../constants/config';
 import pancake from '../../assets/pancake.svg';
 import alpaca from '../../assets/alpaca.svg';
 
@@ -53,14 +50,14 @@ const Ecosystem = () => {
                                     <img className="pt-4 pb-4" src={alpaca} title="Asset" alt="pancake"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading text-center">{t("Alpaca")}</p>
+                                    <p className="card-heading text-center">{t("Alpaca Finance")}</p>
                                     <p className="card-content text-center">
                                         Earn additional rewards from stkBNB/BNB pool on Pancakeswap by borrowing assets and Leverage Farming
                                     </p>
                                 </div>
                                 <div className="buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL} className="button-link primary pointer-events-none">
-                                        {t("COMING_SOON")}
+                                    <a rel="noopener noreferrer" target="_blank" href="https://app.alpacafinance.org/farm/pancake-swap/pool/pcs-stkbnb-bnb/-/open?leverage=4&configKey=pcs-stkbnb-bnb" className="button-link primary">
+                                        Start farming
                                     </a>
                                     <a rel="noopener noreferrer" target="_blank" href="https://blog.pstake.finance/2022/08/06/alpaca-finance-to-enable-leveraged-yield-farming-for-stkbnb-pstake/" className="button-link secondary">
                                      {t("LEARN_MORE")}
