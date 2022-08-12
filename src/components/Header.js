@@ -87,9 +87,9 @@ const Header = () => {
         <React.Fragment>
             <div id="is-sticky" className="top-bar">
                 <div className={!banner ? 'd-none' : "top-banner-section"}>
-                    <a className="content" href={window.location.pathname === "/bnb" ? BNB_URL : "/bnb"} target="_blank" rel="noopener noreferrer">
+                    <a className="content" href={"https://immunefi.com/bounty/pstake"} target="_blank" rel="noopener noreferrer">
                         <img className="logo" src={bnb} alt={bnb}/>
-                        pSTAKE's Liquid Staking Solution for BNB is live now
+                            pSTAKE has launched a bug bounty program for stkBNB with Immunefi
                         <Icon viewClass="right-arrow" icon="right-arrow" />
                     </a>
                     <div onClick={closeBanner}>
@@ -149,7 +149,7 @@ const Header = () => {
                                             : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
                                         }
                                             </p>
-                                    <ul class="dropdown">
+                                    <ul className="dropdown">
                                         <li>
                                             <a href={window.location.pathname === "/bnb" ? STK_BNB_SECURITY_AUDIT_URL : SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
                                                 {t("SECURITY_AUDITS")}
@@ -182,7 +182,7 @@ const Header = () => {
                                         }
 
                                     </p>
-                                    <ul class="dropdown">
+                                    <ul className="dropdown">
                                         <li><a href={PSTAKE_FORUM_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("FORUM")}
 
                                         </a></li>
@@ -191,7 +191,7 @@ const Header = () => {
                                         </a></li>
 
 
-                                        <ul class="socialicons">
+                                        <ul className="socialicons">
                                             <li><a href={PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
                                             </li>
                                             <li>
