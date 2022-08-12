@@ -84,7 +84,7 @@ export const HALBORN_WEB_URL = "https://halborn.com/"
 export const CERTORA_WEB_URL = "https://www.certora.com/"
 export const BNB_URL = "https://bnb.pstake.finance/"
 export const FORTA_WEB_URL = "https://forta.org/"
-export const IMMUNEFI_WEB_URL = "https://immunefi.com/"
+export const IMMUNEFI_WEB_URL = "https://immunefi.com/bounty/pstake/"
 
 //native blockchain
 export const CURRENCY = {

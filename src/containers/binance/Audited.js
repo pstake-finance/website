@@ -27,17 +27,16 @@ const Audited = () => {
                               <a href={CERTORA_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={certora} title="certora" alt="certora" /></a>
                           </div>
                             <div className="tracking">
+                                <div className="bug-bounty">
+                                    <p className="type">BUG-BOUNTY PROGRAM</p>
+                                    <a href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer"><img className="" src={immunefi} title="immunefi" alt="immunefi" /></a>
+                                </div>
                                 <div className="on-chain">
                                     <p className="type">ON-CHAIN TRACKING</p>
                                     <a href={FORTA_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={forta} title="forta" alt="forta" /></a>
                                 </div>
-                                <div className="bug-bounty">
-                                    <p className="type">BUG-BOUNTY PROGRAM</p>
-                                    <a href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={immunefi} title="immunefi" alt="immunefi" /></a>
-                                </div>
                             </div>
                         </div>
-
                 </div>
             </section>
         </React.Fragment >
