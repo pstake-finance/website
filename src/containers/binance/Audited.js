@@ -6,8 +6,8 @@ import immunefi from '../../assets/audits/immunefi.svg';
 import forta from '../../assets/audits/forta.svg';
 
 import {
-    CERTORA_WEB_URL, FORTA_WEB_URL, HALBOR_AUDIT_REPORT,
-    IMMUNEFI_WEB_URL, PECKSHIELD_AUDIT_REPORT,
+    FORTA_WEB_URL, HALBOR_AUDIT_REPORT,
+    IMMUNEFI_WEB_URL, PECKSHIELD_AUDIT_REPORT, PSTAKE_CERTORA,
 } from '../../constants/config';
 
 const Audited = () => {
@@ -24,7 +24,7 @@ const Audited = () => {
 
                               <a href={HALBOR_AUDIT_REPORT} target="_blank" rel="noopener noreferrer"><img className="" src={halborn} title="halborn" alt="halborn" /></a>
 
-                              <a href={CERTORA_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={certora} title="certora" alt="certora" /></a>
+                              <a href={PSTAKE_CERTORA} target="_blank" rel="noopener noreferrer"><img className="" src={certora} title="certora" alt="certora" /></a>
                           </div>
                             <div className="tracking">
                                 <div className="bug-bounty">
