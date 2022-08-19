@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { useTranslation } from "react-i18next";
 import pancake from '../../assets/pancake.svg';
 import alpaca from '../../assets/alpaca.svg';
+import beefy from '../../assets/beefy.svg';
 
 const Ecosystem = () => {
     const { t } = useTranslation();
@@ -12,7 +13,7 @@ const Ecosystem = () => {
                 <div className="container">
                     <h3 className="section-title">Put your stkBNB to work in the <br/> BNB DeFi Ecosystem</h3>
                     <div className="row">
-                        <Card className="col-md-6 col-xs-12">
+                        <Card className="col-md-4 col-xs-12">
                             <Card.Body className="pancake">
                                 <div className="tag">
                                     <p>DEX</p>
@@ -41,7 +42,7 @@ const Ecosystem = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className="col-md-6 col-xs-12">
+                        <Card className="col-md-4 col-xs-12">
                             <Card.Body className="">
                                 <div className="tag">
                                     <p>Yield Farming</p>
@@ -61,6 +62,30 @@ const Ecosystem = () => {
                                     </a>
                                     <a rel="noopener noreferrer" target="_blank" href="https://blog.pstake.finance/2022/08/06/alpaca-finance-to-enable-leveraged-yield-farming-for-stkbnb-pstake/" className="button-link secondary">
                                      {t("LEARN_MORE")}
+                                    </a>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                        <Card className="col-md-4 col-xs-12">
+                            <Card.Body className="">
+                                <div className="tag">
+                                    <p>Yield Farming</p>
+                                </div>
+                                <div className="icon-box">
+                                    <img className="pt-4 pb-4" src={beefy} title="beefy" alt="beefy"/>
+                                </div>
+                                <div className="content">
+                                    <p className="card-heading text-center">{t("Beefy Finance")}</p>
+                                    <p className="card-content text-center">
+                                        Earn compound interest on stkBNB/BNB pool on Pancakeswap by depositing BNB or stkBNB in Beefy vault
+                                    </p>
+                                </div>
+                                <div className="buttons">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://app.beefy.finance/vault/cakev2-wbnb-stkbnb" className="button-link primary">
+                                        Start farming
+                                    </a>
+                                    <a rel="noopener noreferrer" target="_blank" href="/" className="button-link secondary pointer-events-none">
+                                        {t("LEARN_MORE")}
                                     </a>
                                 </div>
                             </Card.Body>
