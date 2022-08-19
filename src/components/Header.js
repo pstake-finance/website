@@ -20,11 +20,12 @@ import {
     STK_BNB_DOCS_URL,
     BNB_URL,
     DISCORD_URL,
-    STK_BNB_SECURITY_AUDIT_URL
+    STK_BNB_SECURITY_AUDIT_URL, IMMUNEFI_WEB_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
 
+import immunefi from "../assets/audits/immunefi_header.svg";
 import Icon from "./Icon";
 import bnb from "../assets/stk_bnb.svg";
 
@@ -209,7 +210,15 @@ const Header = () => {
                                 </li>
 
                                 <li className="nav-item"><a href={PSTAKE_MEDIUM_URL} target="_blank" onClick={onClickBlog} rel="noopener noreferrer" className="nav-link">{t("BLOG")} </a></li>
-
+                                {window.location.pathname === "/bnb" ?
+                                    <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}>
+                                        <a style={{ padding: '0' }} href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
+                                              <span className="nav-link pophover tooltip-multiline app-btn p-l-3">
+                                                <img src={immunefi} alt={"immunefi"} />
+                                              </span>
+                                        </a>
+                                    </li>
+                                    : ""}
                                 <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}>
                                     <a style={{ padding: '0' }} onClick={onClickNavApp} href={window.location.pathname === "/bnb" ? BNB_URL : PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
                                         <span className="nav-link pophover tooltip-multiline app-btn">{t("GO_TO_APP")}

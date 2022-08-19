@@ -10,6 +10,10 @@ body a {
 .pointer-events-none{
     pointer-events: none;
 }
+
+.visibility-none{
+    visibility: hidden;
+}
 .top-bar{
     position: fixed;
     top: 0;
@@ -2850,11 +2854,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 border-radius: 8px;
                 padding: 2rem;
                 position: relative;
-                &.pancake{
-                    .buttons{
-                       margin-top: 60px;
-                    }
-                }
+                //&.pancake{
+                //    .buttons{
+                //       margin-top: 127px;
+                //    }
+                //}
                 &:hover{
                     background: #2A2A30;
                     box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
@@ -2897,6 +2901,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 .stats{
                     display: flex;
                     align-items: center;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                     margin-top: 2rem;
                     .item{
@@ -2927,6 +2932,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                         line-height: 180%;
                         text-align: center;
                         width: 186px;
+                        margin-bottom: 10px;
                         &.primary{
                             background: #F0B90B;
                             color: #000000;
