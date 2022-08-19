@@ -9,6 +9,9 @@ body a:hover {
 .pointer-events-none {
   pointer-events: none; }
 
+.visibility-none {
+  visibility: hidden; }
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -2148,8 +2151,6 @@ ul.dropdown {
       border-radius: 8px;
       padding: 2rem;
       position: relative; }
-      .binance .ecosystem-section .card .card-body.pancake .buttons {
-        margin-top: 60px; }
       .binance .ecosystem-section .card .card-body:hover {
         background: #2A2A30;
         box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12); }
@@ -2186,6 +2187,7 @@ ul.dropdown {
       .binance .ecosystem-section .card .card-body .stats {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 2rem; }
         .binance .ecosystem-section .card .card-body .stats .item {
@@ -2212,7 +2214,8 @@ ul.dropdown {
           font-size: 14px;
           line-height: 180%;
           text-align: center;
-          width: 186px; }
+          width: 186px;
+          margin-bottom: 10px; }
           .binance .ecosystem-section .card .card-body .buttons .button-link.primary {
             background: #F0B90B;
             color: #000000;

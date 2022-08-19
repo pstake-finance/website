@@ -1,12 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import { useTranslation } from "react-i18next";
 import pancake from '../../assets/pancake.svg';
 import alpaca from '../../assets/alpaca.svg';
 import beefy from '../../assets/beefy.svg';
+import {fetchAlpaca, fetchBeefyInfo} from "../../actions/api";
+
 
 const Ecosystem = () => {
     const { t } = useTranslation();
+    const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
+    const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
+
+    useEffect(()=>{
+        const fetchApi = async () =>{
+            setAlpacaInfo(await fetchAlpaca());
+            setBeefyInfo(await fetchBeefyInfo());
+        }
+        fetchApi();
+    }, [])
+
+
     return (
         <React.Fragment>
             <section className="ecosystem-section">
@@ -25,18 +39,18 @@ const Ecosystem = () => {
                                     <p className="card-heading">PancakeSwap</p>
                                     <p className="card-content">
                                         Provide liquidity in the stkBNB/BNB liquidity pool to earn trading fees
+                                        <span className="visibility-none">by borrowing assets and Leverage Farming</span>
                                     </p>
                                 </div>
-                                {/*<div className="stats">*/}
-                                {/*    <p className="item">17% <span>APR</span></p>*/}
-                                {/*    <p className="item">0.5% <span>Fee</span></p>*/}
-                                {/*    <p className="item">7% <span>SAPR</span></p>*/}
-                                {/*</div>*/}
+                                <div className="stats invisible">
+                                    <p className="item">17% <span>APY</span></p>
+                                    <p className="item">7% <span>TVL</span></p>
+                                </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href={`https://pancakeswap.finance/add/${process.env.REACT_APP_STK_BNB_CONTRACT_ADDRESS}/BNB`} className="button-link primary">
                                         {t("Add liquidity")}
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href="https://blog.pstake.finance/2022/08/05/pstake-x-pancakeswap-partner-to-integrate-stkbnb-pstake-liquidity-pools/" className="button-link secondary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=vNLxRZCkBqs&t=471s" className="button-link secondary">
                                         {t("LEARN_MORE")}
                                     </a>
                                 </div>
@@ -56,11 +70,15 @@ const Ecosystem = () => {
                                         Earn additional rewards from stkBNB/BNB pool on Pancakeswap by borrowing assets and Leverage Farming
                                     </p>
                                 </div>
+                                <div className="stats">
+                                    <p className="item">{alpacaInfo.apy}% <span>APY</span></p>
+                                    <p className="item">${parseInt(alpacaInfo.tvl)} <span>TVL</span></p>
+                                </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://app.alpacafinance.org/farm/pancake-swap/pool/pcs-stkbnb-bnb/-/open?leverage=4&configKey=pcs-stkbnb-bnb" className="button-link primary">
                                         Start farming
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href="https://blog.pstake.finance/2022/08/06/alpaca-finance-to-enable-leveraged-yield-farming-for-stkbnb-pstake/" className="button-link secondary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://youtu.be/vNLxRZCkBqs?t=56" className="button-link secondary">
                                      {t("LEARN_MORE")}
                                     </a>
                                 </div>
@@ -80,11 +98,15 @@ const Ecosystem = () => {
                                         Earn compound interest on stkBNB/BNB pool on Pancakeswap by depositing BNB or stkBNB in Beefy vault
                                     </p>
                                 </div>
+                                <div className="stats">
+                                    <p className="item">{beefyInfo.apy}% <span>APY</span></p>
+                                    <p className="item">${parseInt(beefyInfo.tvl)} <span>TVL</span></p>
+                                </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://app.beefy.finance/vault/cakev2-wbnb-stkbnb" className="button-link primary">
                                         Start farming
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href="/" className="button-link secondary pointer-events-none">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://youtu.be/vNLxRZCkBqs?t=56" className="button-link secondary">
                                         {t("LEARN_MORE")}
                                     </a>
                                 </div>

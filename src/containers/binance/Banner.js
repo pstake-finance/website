@@ -3,14 +3,17 @@ import { useTranslation } from "react-i18next";
 import stkBNB from "../../assets/stkBNB.svg";
 import Icon from "../../components/Icon";
 import {getTVL} from "../../utils/helpers";
+import {fetchAlpaca} from "../../actions/api";
 
 const Banner = () => {
     const { t } = useTranslation();
     const [totalwei, setTotalwei] = useState(0);
+    const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
 
     useEffect( ()=>{
         const fetchValues = async ()=>{
             setTotalwei(await getTVL())
+            setAlpacaInfo(await fetchAlpaca());
         }
         fetchValues()
     },[setTotalwei])
@@ -28,7 +31,8 @@ const Banner = () => {
                                     {t("BANNER_HEADING")}
                                 </h1>
                                 <h6 className="banner-sub-heading">
-                                    {t("BANNER_SUB_HEADING")}
+                                    Enjoy the best of both worlds in the BNB ecosystem - Earn upto {alpacaInfo.apy
+                                }% in DeFi yields while earning staking rewards when you stake BNB with pSTAKE
                                 </h6>
                                 <div className="banner-buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://bnb.pstake.finance" className="button-link">
