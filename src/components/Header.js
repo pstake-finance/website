@@ -27,13 +27,11 @@ import { useTranslation } from "react-i18next";
 
 import immunefi from "../assets/audits/immunefi_header.svg";
 import Icon from "./Icon";
-import bnb from "../assets/stk_bnb.svg";
 
 const Header = () => {
     const { t } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
-    const [banner, setBanner] = useState(true);
     const [chevronChange, setChevronChange] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -79,24 +77,9 @@ const Header = () => {
 
     }
 
-    const closeBanner = () => {
-        console.log("here");
-        setBanner(false);
-    }
-
     return (
         <React.Fragment>
             <div id="is-sticky" className="top-bar">
-                <div className={!banner ? 'd-none' : "top-banner-section"}>
-                    <a className="content" href={"https://immunefi.com/bounty/pstake"} target="_blank" rel="noopener noreferrer">
-                        <img className="logo" src={bnb} alt={bnb}/>
-                            pSTAKE has launched a bug bounty program for stkBNB with Immunefi
-                        <Icon viewClass="right-arrow" icon="right-arrow" />
-                    </a>
-                    <div onClick={closeBanner}>
-                        <Icon viewClass="close" icon="close" />
-                    </div>
-                </div>
                 <nav className={"navbar navbar-expand-lg navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
                     <div className="container mb-pad">
                         <Link className="navbar-brand logo text-uppercase" to="/">
