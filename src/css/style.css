@@ -236,6 +236,13 @@ body a:hover {
 .navbar-expand-lg.sticky-dark.bnb .navbar-nav .nav-link.app-btn {
   background: #F0B90B;
   color: #1D1D22; }
+  .navbar-expand-lg.sticky-dark.bnb .navbar-nav .nav-link.app-btn.immunefi {
+    width: 114px;
+    height: 41px;
+    background-image: url("../assets/audits/immunefi_black.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto; }
   .navbar-expand-lg.sticky-dark.bnb .navbar-nav .nav-link.app-btn:hover {
     box-shadow: 0 4px 16px #eeb906a1; }
 
@@ -959,6 +966,13 @@ ul.dropdown {
   border-radius: 8px; }
 .navbar-expand-lg.bnb .navbar-nav .nav-link.app-btn {
   color: #F0B90B; }
+  .navbar-expand-lg.bnb .navbar-nav .nav-link.app-btn.immunefi {
+    width: 114px;
+    height: 41px;
+    background-image: url("../assets/audits/immunefi_header.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto; }
 .navbar-expand-lg.bnb button {
   background: #F0B90B; }
   .navbar-expand-lg.bnb button .icon {
@@ -2151,6 +2165,8 @@ ul.dropdown {
       border-radius: 8px;
       padding: 2rem;
       position: relative; }
+      .binance .ecosystem-section .card .card-body.pancake .card-content {
+        padding-bottom: 28px; }
       .binance .ecosystem-section .card .card-body:hover {
         background: #2A2A30;
         box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12); }

@@ -292,6 +292,14 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         .navbar-nav .nav-link.app-btn {
             background: #F0B90B;
             color: #1D1D22;
+            &.immunefi{
+                width: 114px;
+                height: 41px;
+                background-image: url("../assets/audits/immunefi_black.svg");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: auto;
+            }
             &:hover {
                 box-shadow: 0 4px 16px #eeb906a1;
             }
@@ -1236,6 +1244,14 @@ ul.dropdown {
         .navbar-nav {
             .nav-link.app-btn {
                 color: #F0B90B;
+                &.immunefi{
+                    width: 114px;
+                    height: 41px;
+                    background-image: url("../assets/audits/immunefi_header.svg");
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    background-size: auto;
+                }
             }
         }
         button{
@@ -2854,11 +2870,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 border-radius: 8px;
                 padding: 2rem;
                 position: relative;
-                //&.pancake{
-                //    .buttons{
-                //       margin-top: 127px;
-                //    }
-                //}
+                &.pancake{
+                    .card-content{
+                        padding-bottom: 28px;
+                    }
+                }
                 &:hover{
                     background: #2A2A30;
                     box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
