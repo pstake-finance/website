@@ -2566,6 +2566,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
               color: #393939;
               margin:15px auto auto auto;
               text-align: center;
+              span{
+                  font-weight: bold;
+                  color: #efb90b;
+              }
           }
           .banner-buttons{
               display: block;

@@ -51,7 +51,7 @@ const Ecosystem = () => {
                                     <a rel="noopener noreferrer" target="_blank" href={`https://pancakeswap.finance/add/${process.env.REACT_APP_STK_BNB_CONTRACT_ADDRESS}/BNB`} className="button-link primary">
                                         {t("Add liquidity")}
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=vNLxRZCkBqs&t=471s" className="button-link secondary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://youtube.com/clip/UgkxCZAHN3sTY8sH3FD_UoKvYZns6oZBFaza" className="button-link secondary">
                                         {t("LEARN_MORE")}
                                     </a>
                                 </div>
@@ -79,7 +79,7 @@ const Ecosystem = () => {
                                     <a rel="noopener noreferrer" target="_blank" href="https://app.alpacafinance.org/farm/pancake-swap/pool/pcs-stkbnb-bnb/-/open?leverage=4&configKey=pcs-stkbnb-bnb" className="button-link primary">
                                         Start farming
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href="https://youtu.be/vNLxRZCkBqs?t=56" className="button-link secondary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://youtube.com/clip/UgkxNxpgUN_yqPpLh2vknM6pQxpmSzH1vSPr" className="button-link secondary">
                                      {t("LEARN_MORE")}
                                     </a>
                                 </div>
@@ -107,7 +107,7 @@ const Ecosystem = () => {
                                     <a rel="noopener noreferrer" target="_blank" href="https://app.beefy.finance/vault/cakev2-wbnb-stkbnb" className="button-link primary">
                                         Start farming
                                     </a>
-                                    <a rel="noopener noreferrer" target="_blank" href="https://youtu.be/vNLxRZCkBqs?t=56" className="button-link secondary">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=UgiEqmKSOWI" className="button-link secondary">
                                         {t("LEARN_MORE")}
                                     </a>
                                 </div>
