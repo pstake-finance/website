@@ -1944,6 +1944,9 @@ ul.dropdown {
       color: #393939;
       margin: 15px auto auto auto;
       text-align: center; }
+      .binance .banner-section .banner-main-section .banner-sub-heading span {
+        font-weight: bold;
+        color: #efb90b; }
     .binance .banner-section .banner-main-section .banner-buttons {
       display: block;
       margin-top: 1.3rem; }
