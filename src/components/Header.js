@@ -25,7 +25,6 @@ import {
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
 
-import immunefi from "../assets/audits/immunefi_header.svg";
 import Icon from "./Icon";
 
 const Header = () => {
@@ -196,9 +195,9 @@ const Header = () => {
                                 {window.location.pathname === "/bnb" ?
                                     <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}>
                                         <a style={{ padding: '0' }} href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
-                                              <span className="nav-link pophover tooltip-multiline app-btn p-l-3">
-                                                <img src={immunefi} alt={"immunefi"} />
-                                              </span>
+                                              <div className="nav-link pophover tooltip-multiline app-btn immunefi p-l-3">
+                                                {/*<img src={immunefi} alt={"immunefi"} />*/}
+                                              </div>
                                         </a>
                                     </li>
                                     : ""}

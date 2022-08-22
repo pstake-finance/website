@@ -4,18 +4,20 @@ import { useTranslation } from "react-i18next";
 import pancake from '../../assets/pancake.svg';
 import alpaca from '../../assets/alpaca.svg';
 import beefy from '../../assets/beefy.svg';
-import {fetchAlpaca, fetchBeefyInfo} from "../../actions/api";
+import {fetchAlpaca, fetchBeefyInfo, fetchPancakeInfo} from "../../actions/api";
 
 
 const Ecosystem = () => {
     const { t } = useTranslation();
     const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
     const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
+    const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
 
     useEffect(()=>{
         const fetchApi = async () =>{
             setAlpacaInfo(await fetchAlpaca());
             setBeefyInfo(await fetchBeefyInfo());
+            setPanCakeInfo(await fetchPancakeInfo());
         }
         fetchApi();
     }, [])
@@ -39,12 +41,11 @@ const Ecosystem = () => {
                                     <p className="card-heading">PancakeSwap</p>
                                     <p className="card-content">
                                         Provide liquidity in the stkBNB/BNB liquidity pool to earn trading fees
-                                        <span className="visibility-none">by borrowing assets and Leverage Farming</span>
                                     </p>
                                 </div>
-                                <div className="stats invisible">
-                                    <p className="item">17% <span>APY</span></p>
-                                    <p className="item">7% <span>TVL</span></p>
+                                <div className="stats justify-content-center">
+                                    {/*<p className="item">17% <span>APY</span></p>*/}
+                                    <p className="item">${parseInt(pancakeInfo.tvl).toLocaleString()} <span>TVL</span></p>
                                 </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href={`https://pancakeswap.finance/add/${process.env.REACT_APP_STK_BNB_CONTRACT_ADDRESS}/BNB`} className="button-link primary">
@@ -72,7 +73,7 @@ const Ecosystem = () => {
                                 </div>
                                 <div className="stats">
                                     <p className="item">{alpacaInfo.apy}% <span>APY</span></p>
-                                    <p className="item">${parseInt(alpacaInfo.tvl)} <span>TVL</span></p>
+                                    <p className="item">${parseInt(alpacaInfo.tvl).toLocaleString()} <span>TVL</span></p>
                                 </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://app.alpacafinance.org/farm/pancake-swap/pool/pcs-stkbnb-bnb/-/open?leverage=4&configKey=pcs-stkbnb-bnb" className="button-link primary">
@@ -100,7 +101,7 @@ const Ecosystem = () => {
                                 </div>
                                 <div className="stats">
                                     <p className="item">{beefyInfo.apy}% <span>APY</span></p>
-                                    <p className="item">${parseInt(beefyInfo.tvl)} <span>TVL</span></p>
+                                    <p className="item">${parseInt(beefyInfo.tvl).toLocaleString()} <span>TVL</span></p>
                                 </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://app.beefy.finance/vault/cakev2-wbnb-stkbnb" className="button-link primary">
