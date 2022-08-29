@@ -18,8 +18,9 @@ const StakeAssets = () => {
         <React.Fragment>
             <section className="stake-section">
                 <div className="container">
+                    <h3 className="section-title">{t("STAKE_YOUR_ASSETS")}</h3>
+                    <p className="section-sub-title">pSTAKE offers liquid staking for the following networks</p>
                     <div className="row">
-                        <h3 className="section-title">{t("STAKE_YOUR_ASSETS")}</h3>
                         <Card className="col-md-4 col-xs-6">
                             <Card.Body className="gfour">
                                 <div className="text-center">

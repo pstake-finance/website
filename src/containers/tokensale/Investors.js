@@ -56,8 +56,8 @@ const Investors = () => {
 
             <section className="investors">
                 <div className="container">
-
                     <h4 className="section-title">{t("Security Audits")}</h4>
+                    <p className="section-sub-title">pSTAKE’s liquid staking solution has been, and continues to be, audited by the industry’s best in blockchain security</p>
                     <div className="investor-list">
                         <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer">
                             <img className="" src={halborn_black} title="halborn" alt="halborn" />
@@ -86,6 +86,7 @@ const Investors = () => {
                 <div className="container">
 
                     <h3 className="section-title">{t("VALIDATORS")}</h3>
+                    <p className="section-sub-title">pSTAKE’s validator scoring mechanism ensures our liquid staking ecosystem consists of top-performing validators across supported networks.</p>
                     <div className="investor-list">
                         <a href={STAKEFISH} target="_blank" rel="noopener noreferrer"><img className="" src={stakefish} title="Stakefish" alt="Stakefish" /></a>
                         <a href={FIGMENT} target="_blank" rel="noopener noreferrer"><img className="" src={figment} title="Figment" alt="Figment" /></a>
@@ -115,6 +116,7 @@ const Investors = () => {
                 <div className="container">
 
                     <h4 className="section-title">{t("INVESTORS")}</h4>
+                    <p className="section-sub-title">pSTAKE’s vision of disrupting PoS and DeFi via liquid staking resonates with major industry backers.</p>
                     <div className="investor-list">
                         <a href={SEQUOIA_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sequoia} title="Sequoia" alt="Sequoia" /></a>
                         <a href={GALAXY_DIGITAL_URL} target="_blank" rel="noopener noreferrer"><img className="" src={galaxydigital} title="Galaxy Digital" alt="Galaxy Digital" /></a>

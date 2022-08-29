@@ -474,7 +474,15 @@ ul.dropdown {
     font-weight: bold;
     text-align: center;
     padding: 0;
-    margin-bottom: 80px; }
+    margin-bottom: 20px; }
+  .second-section .section-sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 141.9%;
+    text-align: center;
+    color: #70747C;
+    max-width: 500px;
+    margin: auto auto 80px auto; }
   .second-section .feacturegradient {
     position: absolute;
     z-index: -21;
@@ -610,6 +618,14 @@ ul.dropdown {
   padding: 150px 0; }
   .stake-section .row {
     justify-content: center; }
+  .stake-section .section-sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 141.9%;
+    text-align: center;
+    color: #70747C;
+    max-width: 500px;
+    margin: auto; }
   .stake-section .card {
     flex: 0 0 360px;
     margin-top: 50px;
@@ -1839,7 +1855,15 @@ ul.dropdown {
   color: #ffffff;
   text-align: center;
   width: 100%;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
+.tokensale .investors .section-sub-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 141.9%;
+  text-align: center;
+  color: #70747C;
+  max-width: 500px;
+  margin: auto auto 40px auto; }
 .tokensale .governance {
   background: url(../assets/governance_bg.png);
   background-repeat: no-repeat;

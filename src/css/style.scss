@@ -599,7 +599,17 @@ ul.dropdown {
         font-weight: bold;
         text-align: center;
         padding: 0;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
+
+    }
+    .section-sub-title{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 141.9%;
+        text-align: center;
+        color: #70747C;
+        max-width: 500px;
+        margin: auto auto 80px auto;
     }
     .feacturegradient {
         position: absolute;
@@ -783,7 +793,15 @@ ul.dropdown {
     .row {
         justify-content: center;
     }
-
+    .section-sub-title{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 141.9%;
+        text-align: center;
+        color: #70747C;
+        max-width: 500px;
+        margin: auto;
+    }
     .card {
         flex: 0 0 360px;
         margin-top: 50px;
@@ -2428,7 +2446,16 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             color: #ffffff;
             text-align: center;
             width: 100%;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
+        }
+        .section-sub-title{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 141.9%;
+            text-align: center;
+            color: #70747C;
+            max-width: 500px;
+            margin: auto auto 40px auto;
         }
     }
     .governance {

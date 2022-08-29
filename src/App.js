@@ -6,7 +6,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import { ANALYTICS } from "./constants/config";
-import RouteNotFound from './components/RouteNotFound';
 import HomePage from './pages/HomePage';
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
@@ -90,7 +89,7 @@ const App = () => {
                   )
               }
 
-              <Route component={RouteNotFound}/>
+              <Route component={HomePage}/>
           </Switch>
       </>
 
