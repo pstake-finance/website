@@ -11,6 +11,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
 import Binance from "./pages/Binance";
+import RouteNotFound from "./pages/RouteNotFound";
 
 ReactGA.initialize(ANALYTICS)
 
@@ -89,7 +90,7 @@ const App = () => {
                   )
               }
 
-              <Route component={HomePage}/>
+              <Route component={RouteNotFound}/>
           </Switch>
       </>
 

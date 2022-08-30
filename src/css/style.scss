@@ -3205,6 +3205,23 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         }
     }
 }
+
+//ERROR PAGE
+.page-error {
+    .banner {
+        background: radial-gradient(100% 311.1% at 97.81% 0%, #fff8f8 0%, #f0fdff 100%, #f0fdff 100%);
+        height: 100vh;
+        .container, .content {
+            height: 100%;
+            .text {
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 1.3;
+                text-align: center;
+            }
+        }
+    }
+}
 @media (min-width: 1400px) {
     .container,
     .container-lg,
