@@ -24,7 +24,7 @@ const StakeAssets = () => {
                             <Card.Body className="gfour">
                                 <div className="text-center">
                                     <img className="pt-4 pb-4" src={asset4} title="Asset" alt="Asset"/>
-                                    <Card.Title>{t("BINANCE")}</Card.Title>
+                                    <Card.Title>{t("BNB")}</Card.Title>
                                 </div>
                                 <div className="apr">
                                     <h1>{t("BNB_APY")} <span>{t("APY")}</span></h1>
