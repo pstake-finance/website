@@ -5,7 +5,7 @@ import pancake from '../../assets/pancake.svg';
 import alpaca from '../../assets/alpaca.svg';
 import beefy from '../../assets/beefy.svg';
 import leverage from '../../assets/leverage.svg';
-import {fetchAlpaca, fetchBeefyInfo, fetchPancakeInfo} from "../../actions/api";
+import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo} from "../../actions/api";
 
 
 const Ecosystem = () => {
@@ -13,12 +13,14 @@ const Ecosystem = () => {
     const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
     const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
     const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
+    const [openLeverageInfo, setOpenLeverageInfo] = useState({tvl:0, apy:0})
 
     useEffect(()=>{
         const fetchApi = async () =>{
             setAlpacaInfo(await fetchAlpaca());
             setBeefyInfo(await fetchBeefyInfo());
             setPanCakeInfo(await fetchPancakeInfo());
+            setOpenLeverageInfo(await fetchOpenLeverage());
         }
         fetchApi();
     }, [])
@@ -87,7 +89,7 @@ const Ecosystem = () => {
                             </Card.Body>
                         </Card>
                         <Card className="col-md-6 col-xs-12">
-                            <Card.Body className="">
+                            <Card.Body className="beefy">
                                 <div className="tag">
                                     <p>Yield Farming</p>
                                 </div>
@@ -128,9 +130,9 @@ const Ecosystem = () => {
                                         Earn leveraged staking yields on your stkBNB by borrowing BNB upto 6x leverage and converting it to stkBNB
                                     </p>
                                 </div>
-                                <div className="stats invisible">
-                                    <p className="item">{beefyInfo.apy}% <span>APY</span></p>
-                                    <p className="item">${parseInt(beefyInfo.tvl).toLocaleString()} <span>TVL</span></p>
+                                <div className="stats justify-content-center">
+                                    {/*<p className="item">17% <span>APY</span></p>*/}
+                                    <p className="item">${parseInt(openLeverageInfo.tvl).toLocaleString()} <span>TVL</span></p>
                                 </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://bnb.openleverage.finance/app/trade/pairs/345" className="button-link primary">
