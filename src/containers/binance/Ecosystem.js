@@ -134,7 +134,7 @@ const Ecosystem = () => {
                                 </div>
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://bnb.openleverage.finance/app/trade/pairs/345" className="button-link primary">
-                                        Leverage Stake
+                                        Leveraged Staking
                                     </a>
                                     <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=UgiEqmKSOWI" className="button-link secondary pointer-events-none">
                                         {t("LEARN_MORE")}
