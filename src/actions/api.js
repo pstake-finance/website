@@ -2,6 +2,7 @@ import Axios from "axios";
 const ALPACA_API = "https://alpaca-static-api.alpacafinance.org/bsc/v1/landing/summary.json"
 const BEEFY_APY_API = "https://api.beefy.finance/apy"
 const BEEFY_APY_TVL = "https://api.beefy.finance/tvl"
+export const OPEN_LEVERAGE_API = 'https://bnb.openleverage.finance/api/info/pool/0x9630cefdccbc7eb8689ed1de14a1899468b0839d'
 export const PANCAKE_API = 'https://bsc.streamingfast.io/subgraphs/name/pancakeswap/exchange-v2'
 
 export const fetchAlpaca = async () => {
@@ -41,6 +42,21 @@ export const fetchBeefyInfo = async () => {
         }
         return {tvl:Number(tvl).toFixed(2), apy:Number(apy).toFixed(2)}
 
+    } catch (e) {
+        console.log(e.message)
+        return {tvl: 0, apy: 0}
+    }
+}
+
+export const fetchOpenLeverage = async () => {
+    try {
+        const res = await Axios.get(OPEN_LEVERAGE_API)
+        if(res && res.data && res.data.data && res.data.data.currentTVLUsd) {
+            const tvlUSD = res.data.data.currentTVLUsd;
+            return {tvl:Number(tvlUSD).toFixed(2), apy:0}
+        }else{
+            return {tvl: 0, apy: 0}
+        }
     } catch (e) {
         console.log(e.message)
         return {tvl: 0, apy: 0}
