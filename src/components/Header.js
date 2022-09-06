@@ -68,7 +68,6 @@ const Header = () => {
     }
 
     const closeBanner = () => {
-        console.log("here");
         setBanner(false);
     }
 
