@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import pancake from '../../assets/pancake.svg';
 import alpaca from '../../assets/alpaca.svg';
 import beefy from '../../assets/beefy.svg';
-import {fetchAlpaca, fetchBeefyInfo, fetchPancakeInfo} from "../../actions/api";
+import leverage from '../../assets/leverage.svg';
+import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo} from "../../actions/api";
 
 
 const Ecosystem = () => {
@@ -12,12 +13,14 @@ const Ecosystem = () => {
     const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
     const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
     const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
+    const [openLeverageInfo, setOpenLeverageInfo] = useState({tvl:0, apy:0})
 
     useEffect(()=>{
         const fetchApi = async () =>{
             setAlpacaInfo(await fetchAlpaca());
             setBeefyInfo(await fetchBeefyInfo());
             setPanCakeInfo(await fetchPancakeInfo());
+            setOpenLeverageInfo(await fetchOpenLeverage());
         }
         fetchApi();
     }, [])
@@ -29,7 +32,7 @@ const Ecosystem = () => {
                 <div className="container">
                     <h3 className="section-title">Put your stkBNB to work in the <br/> BNB DeFi Ecosystem</h3>
                     <div className="row">
-                        <Card className="col-md-4 col-xs-12">
+                        <Card className="col-md-6 col-xs-12">
                             <Card.Body className="pancake">
                                 <div className="tag">
                                     <p>DEX</p>
@@ -57,7 +60,7 @@ const Ecosystem = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className="col-md-4 col-xs-12">
+                        <Card className="col-md-6 col-xs-12">
                             <Card.Body className="">
                                 <div className="tag">
                                     <p>Yield Farming</p>
@@ -85,8 +88,8 @@ const Ecosystem = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className="col-md-4 col-xs-12">
-                            <Card.Body className="">
+                        <Card className="col-md-6 col-xs-12">
+                            <Card.Body className="beefy">
                                 <div className="tag">
                                     <p>Yield Farming</p>
                                 </div>
@@ -108,6 +111,34 @@ const Ecosystem = () => {
                                         Start farming
                                     </a>
                                     <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=UgiEqmKSOWI" className="button-link secondary">
+                                        {t("LEARN_MORE")}
+                                    </a>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                        <Card className="col-md-6 col-xs-12">
+                            <Card.Body className="">
+                                <div className="tag">
+                                    <p>Margin Trading</p>
+                                </div>
+                                <div className="icon-box">
+                                    <img className="pt-4 pb-4" src={leverage} title="beefy" alt="beefy"/>
+                                </div>
+                                <div className="content">
+                                    <p className="card-heading text-center">{t("OpenLeverage")}</p>
+                                    <p className="card-content text-center">
+                                        Earn leveraged staking yields on your stkBNB by borrowing BNB upto 6x leverage and converting it to stkBNB
+                                    </p>
+                                </div>
+                                <div className="stats justify-content-center">
+                                    {/*<p className="item">17% <span>APY</span></p>*/}
+                                    <p className="item">${parseInt(openLeverageInfo.tvl).toLocaleString()} <span>TVL</span></p>
+                                </div>
+                                <div className="buttons">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://bnb.openleverage.finance/app/trade/pairs/345" className="button-link primary">
+                                        Leveraged Staking
+                                    </a>
+                                    <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=UgiEqmKSOWI" className="button-link secondary pointer-events-none">
                                         {t("LEARN_MORE")}
                                     </a>
                                 </div>

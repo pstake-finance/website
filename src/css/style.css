@@ -2186,7 +2186,7 @@ ul.dropdown {
   .binance .ecosystem-section .row {
     justify-content: center; }
   .binance .ecosystem-section .card {
-    flex: 0 0 468px;
+    flex: 0 0 500px;
     margin-top: 50px;
     background: transparent;
     border: 0; }
@@ -2200,7 +2200,7 @@ ul.dropdown {
       border-radius: 8px;
       padding: 2rem;
       position: relative; }
-      .binance .ecosystem-section .card .card-body.pancake .card-content {
+      .binance .ecosystem-section .card .card-body.pancake .card-content, .binance .ecosystem-section .card .card-body.beefy .card-content {
         padding-bottom: 28px; }
       .binance .ecosystem-section .card .card-body:hover {
         background: #2A2A30;
