@@ -880,12 +880,20 @@ ul.dropdown {
   padding: 100px 0;
   background: #1d1d22; }
   .footer-section .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 64px;
     line-height: 141.9%;
     text-align: center;
     color: #FFFFFF; }
+  .footer-section .section-sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 141.9%;
+    text-align: center;
+    color: #70747C;
+    max-width: 500px;
+    margin: auto auto 40px auto; }
   .footer-section .icon-list {
     display: flex;
     justify-content: center;

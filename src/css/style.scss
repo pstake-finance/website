@@ -1125,13 +1125,22 @@ ul.dropdown {
     padding: 100px 0;
     background: #1d1d22;
     .section-title{
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         font-weight: 700;
         font-size: 64px;
         line-height: 141.9%;
         text-align: center;
         color: #FFFFFF;
 
+    }
+    .section-sub-title{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 141.9%;
+        text-align: center;
+        color: #70747C;
+        max-width: 500px;
+        margin: auto auto 40px auto;
     }
     .icon-list {
         display: flex;

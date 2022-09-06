@@ -49,7 +49,9 @@ const Footer = () => {
     return (
         <React.Fragment>
             <section className="footer-section">
-                <h3 className="section-title">{t("JOIN_OUR_COMMUNITY")}</h3>
+                <h3 className="section-title">{t("Explore the Community")}</h3>
+                <p className="section-sub-title">Join the discussion on one of our many fronts. Learn about the pSTAKE Liquid Staking Ecosystem,
+                    meet others like you & make your voice heard.</p>
                 <div className="container">
                     <div className="icon-list">
                         <div className="row">
