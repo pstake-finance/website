@@ -6,12 +6,12 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import { ANALYTICS } from "./constants/config";
-import RouteNotFound from './pages/RouteNotFound';
 import HomePage from './pages/HomePage';
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
 import Binance from "./pages/Binance";
+import RouteNotFound from "./pages/RouteNotFound";
 
 ReactGA.initialize(ANALYTICS)
 

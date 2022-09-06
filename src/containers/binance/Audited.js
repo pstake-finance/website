@@ -33,7 +33,7 @@ const Audited = () => {
                                 </div>
                                 <div className="on-chain">
                                     <p className="type">ON-CHAIN TRACKING</p>
-                                    <a href={FORTA_WEB_URL} target="_blank" rel="noopener noreferrer" className="pointer-events-none"><img className="" src={forta} title="forta" alt="forta" /></a>
+                                    <a href={FORTA_WEB_URL} target="_blank" rel="noopener noreferrer"><img className="" src={forta} title="forta" alt="forta" /></a>
                                 </div>
                             </div>
                         </div>

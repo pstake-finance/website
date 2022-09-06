@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import ReactGa from 'react-ga';
 
 import {
-    PSTAKE_MEDIUM_URL,
     PSTAKE_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
     SECURITY_AUDIT_URL,
@@ -60,14 +59,6 @@ const Header = () => {
         }
     }
 
-    const onClickBlog = () => {
-        ReactGa.event({
-            category: 'BLOG',
-            action: 'Clicked on Blog'
-        })
-
-    }
-
     const onClickNavApp = () => {
         ReactGa.event({
             category: 'App',
@@ -77,7 +68,6 @@ const Header = () => {
     }
 
     const closeBanner = () => {
-        console.log("here");
         setBanner(false);
     }
 
@@ -106,42 +96,6 @@ const Header = () => {
                         </button>
                         <div className={isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                             <ul className={isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                {window.location.pathname === "/" ?
-
-                                    <li className="nav-item nav__menu-item">
-                                        <p className="nav-link chevron m-0">
-                                            {t("BRIDGE")}
-                                            {/*<Icon viewClass="social_icon_img" icon="nav-status"/>&nbsp;{t("BRIDGE")}*/}
-                                            {!chevronChange ?
-                                                <Icon viewClass="social_icon_img" icon="chevron"/>
-                                                : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
-                                            }
-
-                                        </p>
-                                        <ul className="dropdown">
-                                            <li>
-                                                <a href={PSTAKE_BRIDGE_URL} target="_blank" rel="noopener noreferrer"
-                                                   className="nav-link">Bridge to Ethereum
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href={BSC_BRIDGE_URL} target="_blank" rel="noopener noreferrer"
-                                                   className="nav-link">Bridge to BSC
-                                                </a>
-                                            </li>
-
-                                        </ul>
-
-                                    </li>
-                                    //
-                                    // <li className="nav-item nav__menu-item status">
-                                    //     <a href={PSTAKE_BRIDGE_URL} target="_blank" onClick={onClickDocs}
-                                    //        rel="noopener noreferrer" className="nav-link"><Icon
-                                    //         viewClass="social_icon_img" icon="nav-status"/>&nbsp;{t("BRIDGE")}
-                                    //     </a>
-                                    // </li>
-                                    : ''
-                                }
                                 <li className="nav-item nav__menu-item">
 
                                     <p className="nav-link chevron m-0">{t("LEARN")}
@@ -149,7 +103,7 @@ const Header = () => {
                                             <Icon viewClass="social_icon_img" icon="chevron"/>
                                             : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
                                         }
-                                            </p>
+                                    </p>
                                     <ul className="dropdown">
                                         <li>
                                             <a href={window.location.pathname === "/bnb" ? STK_BNB_SECURITY_AUDIT_URL : SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
@@ -175,13 +129,11 @@ const Header = () => {
 
                                 </li>
                                 <li className="nav-item nav__menu-item">
-
                                     <p className="nav-link chevron m-0">{t("COMMUNITY")}
                                         {!chevronChange ?
                                             <Icon viewClass="social_icon_img" icon="chevron"/>
                                             : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
                                         }
-
                                     </p>
                                     <ul className="dropdown">
                                         <li><a href={PSTAKE_FORUM_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("FORUM")}
@@ -206,8 +158,34 @@ const Header = () => {
                                     </ul>
 
                                 </li>
+                                {window.location.pathname === "/" ?
+                                    <li className="nav-item nav__menu-item">
+                                        <p className="nav-link chevron m-0">
+                                            {t("BRIDGE")}
+                                            {!chevronChange ?
+                                                <Icon viewClass="social_icon_img" icon="chevron"/>
+                                                : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
+                                            }
 
-                                <li className="nav-item"><a href={PSTAKE_MEDIUM_URL} target="_blank" onClick={onClickBlog} rel="noopener noreferrer" className="nav-link">{t("BLOG")} </a></li>
+                                        </p>
+                                        <ul className="dropdown">
+                                            <li>
+                                                <a href={PSTAKE_BRIDGE_URL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">Bridge to Ethereum
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href={BSC_BRIDGE_URL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">Bridge to BSC
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+                                    : ''
+                                }
+
                                 {window.location.pathname === "/bnb" ?
                                     <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}>
                                         <a style={{ padding: '0' }} href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
