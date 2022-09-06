@@ -88,8 +88,7 @@ const Header = () => {
                     <div className={!banner ? 'd-none' : "top-banner-section"}>
                         <a className="content" href="https://galaxy.eco/pSTAKE/campaign/GCnmjUt4CL" target="_blank"
                            rel="noopener noreferrer">
-                            Earn up to 52% APY in PSTAKE token rewards on your BNB in the first ever <b>BNB
-                            Stake-to-Earn campaign</b> in Web3 history
+                            Earn up to 52% APY on your BNB in the first ever <b>BNB Stake-to-Earn campaign</b> in Web3 history
                             <Icon viewClass="right-arrow" icon="right-arrow"/>
                         </a>
                         <div onClick={closeBanner}>
