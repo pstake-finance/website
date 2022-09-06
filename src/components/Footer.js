@@ -7,7 +7,7 @@ import {
     PSTAKE_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
     PSTAKE_YOUTUBE_URL,
-    PERSISTENCE_ONE_URL, PSTAKE_MEDIUM_URL,
+    PERSISTENCE_ONE_URL, PSTAKE_MEDIUM_URL, STK_BNB_TWITTER_URL,
 } from '../constants/config';
 
 const onClick = (name) => {
@@ -26,7 +26,7 @@ const list = [
     },
     {
         name:"Twitter",
-        url:PSTAKE_TWITTER_URL,
+        url: window.location.pathname === "/bnb" ? STK_BNB_TWITTER_URL : PSTAKE_TWITTER_URL,
         icon:<Icon viewClass="social_icon_img" icon="twitter-logo"/>,
         text:'Stay updated'
     },

@@ -31,6 +31,7 @@ export const PSTAKE_BLOG_TWO_IMG_URL = "https://blog.pstake.finance/wp-content/u
 export const PSTAKE_BLOG_ONE_URL = "https://blog.pstake.finance/2022/08/07/stkbnb-user-guide-bnb-liquid-staking-tutorial/";
 export const PSTAKE_BLOG_ONE_IMG_URL = "https://blog.pstake.finance/wp-content/uploads/2022/08/user-guide-1160x620.png";
 export const PSTAKE_TWITTER_URL = "https://twitter.com/pStakeFinance";
+export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
 export const PSTAKE_TELEGRAM_URL = "https://t.me/pstakefinance";
 export const PSTAKE_YOUTUBE_URL = "https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured";
 export const PSTAKE_REDDIT_URL = "https://www.reddit.com/r/PersistenceOne/";

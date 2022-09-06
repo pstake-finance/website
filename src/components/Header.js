@@ -20,7 +20,7 @@ import {
     STK_BNB_DOCS_URL,
     BNB_URL,
     DISCORD_URL,
-    STK_BNB_SECURITY_AUDIT_URL, IMMUNEFI_WEB_URL
+    STK_BNB_SECURITY_AUDIT_URL, IMMUNEFI_WEB_URL, STK_BNB_TWITTER_URL
 
 } from '../constants/config';
 import { useTranslation } from "react-i18next";
@@ -29,7 +29,7 @@ import Icon from "./Icon";
 
 const Header = () => {
     const { t } = useTranslation();
-
+    const [banner, setBanner] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const [chevronChange, setChevronChange] = useState(false);
     const toggleMenu = () => {
@@ -76,9 +76,28 @@ const Header = () => {
 
     }
 
+    const closeBanner = () => {
+        console.log("here");
+        setBanner(false);
+    }
+
     return (
         <React.Fragment>
             <div id="is-sticky" className="top-bar">
+                {window.location.pathname === "/bnb" ?
+                    <div className={!banner ? 'd-none' : "top-banner-section"}>
+                        <a className="content" href="https://galaxy.eco/pSTAKE/campaign/GCnmjUt4CL" target="_blank"
+                           rel="noopener noreferrer">
+                            Earn up to 52% APY in PSTAKE token rewards on your BNB in the first ever <b>BNB
+                            Stake-to-Earn campaign</b> in Web3 history
+                            <Icon viewClass="right-arrow" icon="right-arrow"/>
+                        </a>
+                        <div onClick={closeBanner}>
+                            <Icon viewClass="close" icon="close"/>
+                        </div>
+                    </div>
+                    : null
+                }
                 <nav className={"navbar navbar-expand-lg navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
                     <div className="container mb-pad">
                         <Link className="navbar-brand logo text-uppercase" to="/">
@@ -170,12 +189,10 @@ const Header = () => {
 
                                         </a></li>
                                         <li><a href={SNANPSHOT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GOVERNANCE")}
-
                                         </a></li>
 
-
                                         <ul className="socialicons">
-                                            <li><a href={PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
+                                            <li><a href={window.location.pathname === "/bnb" ? STK_BNB_TWITTER_URL : PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
                                             </li>
                                             <li>
                                                 <a href={PSTAKE_TELEGRAM_URL} target="_blank" rel="noopener noreferrer" ><Icon viewClass="social_icon_ig" icon="telegram-plane" /></a>
