@@ -32,7 +32,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("USER GUIDE")}</p>
+                                                <p className="text1">{t("The State of ATOM Staking")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -54,7 +54,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("STAKE VIA pSTAKE")}</p>
+                                                <p className="text1">{t("Why Liquid Staking is a Game-Changer for BNB")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -75,7 +75,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("WHY pSTAKE")}</p>
+                                                <p className="text1">{t("stkBNB User Guide")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>

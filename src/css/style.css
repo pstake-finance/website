@@ -54,11 +54,6 @@ body a:hover {
   background-color: #232327;
   box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1); }
 
-.is-sticky .navbar-expand-lg li.nav-item ul.dropdown {
-  background: #fff; }
-  .is-sticky .navbar-expand-lg li.nav-item ul.dropdown li a {
-    color: #000; }
-
 .navbar.navbar-custom.fixed-top {
   top: 40px; }
 
@@ -274,7 +269,7 @@ body a:hover {
   .navbar-expand-lg li.nav-item ul.dropdown li a {
     font-size: 14px;
     margin: 0;
-    color: #fff;
+    color: #000;
     padding: 0;
     font-weight: 500; }
 .navbar-expand-lg li.nav-item.status .icon {
@@ -331,7 +326,7 @@ body a:hover {
 ul.dropdown {
   min-width: 100%;
   /* Set width of the dropdown */
-  background: #232327;
+  background: #fff;
   display: none;
   position: absolute;
   z-index: 999;
@@ -2375,11 +2370,9 @@ ul.dropdown {
     flex-wrap: wrap;
     margin-top: 80px;
     justify-content: center; }
-    .binance .validators-section .validator-list a {
-      pointer-events: none; }
-      .binance .validators-section .validator-list a img {
-        margin: 25px 10px;
-        width: auto; }
+    .binance .validators-section .validator-list a img {
+      margin: 25px 10px;
+      width: auto; }
 .binance .blog-section {
   padding: 70px 0; }
   .binance .blog-section.stay-updated .blog-articles .custom-card .custom-card-body .learn-more {

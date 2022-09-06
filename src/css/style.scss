@@ -63,12 +63,6 @@ body a {
     background-color: #232327;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
 }
-.is-sticky .navbar-expand-lg li.nav-item ul.dropdown{
-    background: #fff;
-    li a{
-        color: #000;
-    }
-}
 
 .navbar.navbar-custom.fixed-top{
     top: 40px;
@@ -346,7 +340,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 a {
                     font-size: 14px;
                     margin: 0;
-                    color: #fff;
+                    color: #000;
                     padding: 0;
                     font-weight: 500;
                 }
@@ -429,7 +423,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 }
 ul.dropdown {
     min-width: 100%; /* Set width of the dropdown */
-    background: #232327;
+    background: #fff;
     display: none;
     position: absolute;
     z-index: 999;
@@ -3132,7 +3126,6 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             margin-top: 80px;
             justify-content: center;
             a{
-                pointer-events: none;
                 img{
                     margin: 25px 10px;
                     width:auto;

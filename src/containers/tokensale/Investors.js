@@ -27,7 +27,17 @@ import {
     FIGMENT,
     EVERSTAKE,
     CHORUS,
-    COSMOSTATION, PSTAKE_TRAIL_OF_BITS, PSTAKE_CERTORA, AUDIT
+    COSMOSTATION,
+    PSTAKE_TRAIL_OF_BITS,
+    PSTAKE_CERTORA,
+    VALIDATOR_NODE_REAL,
+    VALIDATOR_TRANCHES,
+    VALIDATOR_COINBASE,
+    VALIDATOR_MATH,
+    VALIDATOR_LEGEND,
+    HALBOR_AUDIT_REPORT,
+    PSTAKE_SOLIDFIED_AUDIT,
+    PSTAKE_PECKSHIELD_AUDIT, PSTAKE_OAK_AUDIT
 } from '../../constants/config';
 import {
     SEQUOIA_URL,
@@ -38,9 +48,8 @@ import {
     DEFI_CAPITAL_URL,
     GALAXY_DIGITAL_URL,
     SPARTAN_CAPITAL,
-    SINO_GLOBAL_CAPITAL, PSTAKE_AUDITS_URL,
+    SINO_GLOBAL_CAPITAL,
     PSTAKE_DILIGENCE_AUDIT,
-    AOK_URL
 } from '../../constants/config';
 import legend from "../../assets/validators/bnb/legend.svg";
 import math_wallet from "../../assets/validators/bnb/math_wallet.svg";
@@ -59,7 +68,7 @@ const Investors = () => {
                     <h4 className="section-title">{t("Security Audits")}</h4>
                     <p className="section-sub-title">pSTAKE’s liquid staking solution has been, and continues to be, audited by the industry’s best in blockchain security</p>
                     <div className="investor-list">
-                        <a href={PSTAKE_DILIGENCE_AUDIT} target="_blank" rel="noopener noreferrer">
+                        <a href={HALBOR_AUDIT_REPORT} target="_blank" rel="noopener noreferrer">
                             <img className="" src={halborn_black} title="halborn" alt="halborn" />
                         </a>
                         <a href={PSTAKE_TRAIL_OF_BITS} target="_blank" rel="noopener noreferrer">
@@ -70,9 +79,9 @@ const Investors = () => {
                         </a>
                     </div>
                     <div className="investor-list">
-                        <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_3} title="Solidified" alt="Solidified" /></a>
-                        <a href={PSTAKE_AUDITS_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_4} title="Peckshield" alt="Peckshield" /></a>
-                        <a href={AOK_URL} target="_blank" rel="noopener noreferrer"><img className="" src={sa_5} title="AOK" alt="AOK" /></a>
+                        <a href={PSTAKE_SOLIDFIED_AUDIT} target="_blank" rel="noopener noreferrer"><img className="" src={sa_3} title="Solidified" alt="Solidified" /></a>
+                        <a href={PSTAKE_PECKSHIELD_AUDIT} target="_blank" rel="noopener noreferrer"><img className="" src={sa_4} title="Peckshield" alt="Peckshield" /></a>
+                        <a href={PSTAKE_OAK_AUDIT} target="_blank" rel="noopener noreferrer"><img className="" src={sa_5} title="AOK" alt="AOK" /></a>
                     </div>
                     <div className="investor-list">
                         <a href={PSTAKE_CERTORA} target="_blank" rel="noopener noreferrer">
@@ -93,19 +102,19 @@ const Investors = () => {
                         <a href={EVERSTAKE} target="_blank" rel="noopener noreferrer"><img className="" src={everstake} title="Everstake" alt="Everstake" /></a>
                         <a href={CHORUS} target="_blank" rel="noopener noreferrer"><img className="" src={chorus} title="Chorus" alt="Chorus" /></a>
                         <a href={COSMOSTATION} target="_blank" rel="noopener noreferrer"><img className="" src={cosmostation} title="Cosmostation" alt="Cosmostation" /></a>
-                        <a href={STAKEFISH} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                        <a href={VALIDATOR_LEGEND} target="_blank" rel="noopener noreferrer">
                             <img className="" src={legend} title="legend" alt="legend" />
                         </a>
-                        <a href={FIGMENT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                        <a href={VALIDATOR_MATH} target="_blank"  rel="noopener noreferrer">
                             <img className="" src={math_wallet} title="math_wallet" alt="math_wallet" />
                         </a>
-                        <a href={EVERSTAKE} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                        <a href={VALIDATOR_COINBASE} target="_blank" rel="noopener noreferrer">
                             <img className="" src={cloud} title="cloud" alt="cloud" />
                         </a>
-                        <a href={AUDIT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                        <a href={VALIDATOR_TRANCHES} target="_blank" rel="noopener noreferrer">
                             <img className="" src={tranches} title="tranches" alt="tranches" />
                         </a>
-                        <a href={AUDIT} target="_blank" className="pointer-events-none" rel="noopener noreferrer">
+                        <a href={VALIDATOR_NODE_REAL} target="_blank" rel="noopener noreferrer">
                             <img className="" src={nodreal} title="nodreal" alt="nodreal" />
                         </a>
                     </div>
@@ -114,7 +123,6 @@ const Investors = () => {
             </section>
             <section className="investors">
                 <div className="container">
-
                     <h4 className="section-title">{t("INVESTORS")}</h4>
                     <p className="section-sub-title">pSTAKE’s vision of disrupting PoS and DeFi via liquid staking resonates with major industry backers.</p>
                     <div className="investor-list">
