@@ -474,7 +474,15 @@ ul.dropdown {
     font-weight: bold;
     text-align: center;
     padding: 0;
-    margin-bottom: 80px; }
+    margin-bottom: 20px; }
+  .second-section .section-sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 141.9%;
+    text-align: center;
+    color: #70747C;
+    max-width: 500px;
+    margin: auto auto 80px auto; }
   .second-section .feacturegradient {
     position: absolute;
     z-index: -21;
@@ -610,6 +618,14 @@ ul.dropdown {
   padding: 150px 0; }
   .stake-section .row {
     justify-content: center; }
+  .stake-section .section-sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 141.9%;
+    text-align: center;
+    color: #70747C;
+    max-width: 500px;
+    margin: auto; }
   .stake-section .card {
     flex: 0 0 360px;
     margin-top: 50px;
@@ -864,12 +880,20 @@ ul.dropdown {
   padding: 100px 0;
   background: #1d1d22; }
   .footer-section .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 64px;
     line-height: 141.9%;
     text-align: center;
     color: #FFFFFF; }
+  .footer-section .section-sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 141.9%;
+    text-align: center;
+    color: #70747C;
+    max-width: 500px;
+    margin: auto auto 40px auto; }
   .footer-section .icon-list {
     display: flex;
     justify-content: center;
@@ -1839,7 +1863,15 @@ ul.dropdown {
   color: #ffffff;
   text-align: center;
   width: 100%;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
+.tokensale .investors .section-sub-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 141.9%;
+  text-align: center;
+  color: #70747C;
+  max-width: 500px;
+  margin: auto auto 40px auto; }
 .tokensale .governance {
   background: url(../assets/governance_bg.png);
   background-repeat: no-repeat;
@@ -2346,11 +2378,9 @@ ul.dropdown {
     flex-wrap: wrap;
     margin-top: 80px;
     justify-content: center; }
-    .binance .validators-section .validator-list a {
-      pointer-events: none; }
-      .binance .validators-section .validator-list a img {
-        margin: 25px 10px;
-        width: auto; }
+    .binance .validators-section .validator-list a img {
+      margin: 25px 10px;
+      width: auto; }
 .binance .blog-section {
   padding: 70px 0; }
   .binance .blog-section.stay-updated .blog-articles .custom-card .custom-card-body .learn-more {
@@ -2613,7 +2643,7 @@ ul.dropdown {
     padding: 15px 0; }
 
   .navbar-expand-lg li.nav-item {
-    margin: 10px 0px;
+    margin: 10px 0;
     width: 100px;
     text-align: center;
     margin-left: 0 !important; }

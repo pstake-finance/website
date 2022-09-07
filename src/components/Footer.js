@@ -49,7 +49,9 @@ const Footer = () => {
     return (
         <React.Fragment>
             <section className="footer-section">
-                <h3 className="section-title">{t("JOIN_OUR_COMMUNITY")}</h3>
+                <h3 className="section-title">{t("Explore the Community")}</h3>
+                <p className="section-sub-title">Join the discussion on one of our many fronts. Learn about the pSTAKE Liquid Staking Ecosystem,
+                    meet others like you & make your voice heard.</p>
                 <div className="container">
                     <div className="icon-list">
                         <div className="row">
@@ -78,12 +80,8 @@ const Footer = () => {
                     </div>
                     <div className="privacy-terms">
                         <Link to='/privacy' target='_blank'>{t("PRIVACY_POLICY")}</Link>
-                        <p className="terms">{new Date().getFullYear()} | Built with
-                            &nbsp;
-                            <Icon viewClass="social_icon_ig heart" icon="footerheart"/>
-                            &nbsp;
-                            by &nbsp;
-                            <a href={PERSISTENCE_ONE_URL} target="_blank" rel="noopener noreferrer">Persistence</a>
+                        <p className="terms">{new Date().getFullYear()} | Developed by
+                            <a href={PERSISTENCE_ONE_URL} target="_blank" rel="noopener noreferrer"> Persistence</a>
                         </p>
                         <Link to='/terms' target='_blank'>{t("TERMS_OF_SERVICE")} </Link>
                     </div>
