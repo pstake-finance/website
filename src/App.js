@@ -45,7 +45,7 @@ const App = () => {
   };
 
   useEffect(() => {
-      OneSignalReact.init({appId: 'd9ecac74-9446-4df2-9a04-ba68bee2caee'})
+      OneSignalReact.init({appId: process.env.REACT_APP_ONE_SIGNAL_APP_ID})
       window.addEventListener("offline", updateNetwork);
       window.addEventListener("online", updateNetwork);
       document.body.classList = "";
