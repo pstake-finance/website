@@ -14,13 +14,11 @@ const InfoSection = () => {
                 <div className="container">
                     <div className="row">
                         <div className="image-section">
-                            <div class="embed-responsive embed-responsive-16by9">
+                            <div className="embed-responsive embed-responsive-16by9">
                                 <iframe
-                                title="Introducing pSTAKE | Multi-chain Liquid Staking"
-                                class="embed-responsive-item" src={VIDEO_URL}></iframe>
+                                    title="Introducing pSTAKE | Multi-chain Liquid Staking"
+                                    className="embed-responsive-item" src={VIDEO_URL}/>
                             </div>
-                          
-
                             <img src={ellipsegraident} alt="pStake" className="ellipse-gradient" />
                         </div>
                     </div>

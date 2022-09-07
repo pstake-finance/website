@@ -12,7 +12,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
 import Binance from "./pages/Binance";
-
+import OneSignalReact from "react-onesignal";
 ReactGA.initialize(ANALYTICS)
 
 const trackPage = page => {
@@ -44,6 +44,7 @@ const App = () => {
   };
 
   useEffect(() => {
+      OneSignalReact.init({appId: 'd9ecac74-9446-4df2-9a04-ba68bee2caee'})
       window.addEventListener("offline", updateNetwork);
       window.addEventListener("online", updateNetwork);
       document.body.classList = "";

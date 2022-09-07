@@ -2407,6 +2407,14 @@ ul.dropdown {
       line-height: 1.3;
       text-align: center; }
 
+#onesignal-popover-container #onesignal-popover-dialog .primary.popover-button + .secondary.popover-button, #onesignal-popover-container #onesignal-popover-dialog .primary.slidedown-button + .secondary.slidedown-button, #onesignal-popover-container #onesignal-slidedown-dialog .primary.popover-button + .secondary.popover-button, #onesignal-popover-container #onesignal-slidedown-dialog .primary.slidedown-button + .secondary.slidedown-button, #onesignal-slidedown-container #onesignal-popover-dialog .primary.popover-button + .secondary.popover-button, #onesignal-slidedown-container #onesignal-popover-dialog .primary.slidedown-button + .secondary.slidedown-button, #onesignal-slidedown-container #onesignal-slidedown-dialog .primary.popover-button + .secondary.popover-button, #onesignal-slidedown-container #onesignal-slidedown-dialog .primary.slidedown-button + .secondary.slidedown-button {
+  color: #2E2E34 !important; }
+
+#onesignal-popover-container #onesignal-popover-dialog .popover-button.primary, #onesignal-popover-container #onesignal-popover-dialog .slidedown-button.primary, #onesignal-popover-container #onesignal-slidedown-dialog .popover-button.primary, #onesignal-popover-container #onesignal-slidedown-dialog .slidedown-button.primary, #onesignal-slidedown-container #onesignal-popover-dialog .popover-button.primary, #onesignal-slidedown-container #onesignal-popover-dialog .slidedown-button.primary, #onesignal-slidedown-container #onesignal-slidedown-dialog .popover-button.primary, #onesignal-slidedown-container #onesignal-slidedown-dialog .slidedown-button.primary {
+  background: #e50913 !important;
+  color: #fff !important;
+  border-radius: 8px !important; }
+
 @media (min-width: 1400px) {
   .container,
   .container-lg,
