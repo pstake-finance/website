@@ -11,6 +11,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import TokenSale from "./pages/TokenSale";
 import Binance from "./pages/Binance";
+import OneSignalReact from "react-onesignal";
 import RouteNotFound from "./pages/RouteNotFound";
 
 ReactGA.initialize(ANALYTICS)
@@ -44,6 +45,7 @@ const App = () => {
   };
 
   useEffect(() => {
+      OneSignalReact.init({appId: process.env.REACT_APP_ONE_SIGNAL_APP_ID})
       window.addEventListener("offline", updateNetwork);
       window.addEventListener("online", updateNetwork);
       document.body.classList = "";

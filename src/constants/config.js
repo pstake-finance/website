@@ -74,7 +74,7 @@ export const COSMOSTATION = "https://www.cosmostation.io/?utm_source=pstake_webs
 export const REGISTER = "https://coinlist.co/pstake";
 export const LEARN_MORE = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";
 export const VIDEO_URL = "https://www.youtube.com/embed/0sMoynPrA4w";
-export const GUIDE_VIDEO_URL = "https://www.youtube.com/embed/vRIepQiVZ7Q";
+export const GUIDE_VIDEO_URL = "https://www.youtube.com/embed/sPHdPXcTjqA";
 export const AOK_URL = "https://github.com/persistenceOne/pStake-auditReports";
 export const AS_SEEN_ON1_URL = "https://www.forbes.com/sites/lawrencewintermeyer/2021/07/01/collaboration-and-interoperability-over-tribalism-signals-maturity-developing-in-defi/?sh=3f285e0e6644";
 export const AS_SEEN_ON2_URL = "https://www.nasdaq.com/articles/staking-is-the-quiet-giant-of-crypto-yield-2021-06-23";
