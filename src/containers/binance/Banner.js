@@ -32,7 +32,7 @@ const Banner = () => {
                                 </h1>
                                 <h6 className="banner-sub-heading">
                                     Enjoy the best of both worlds in the BNB ecosystem - <span>Earn upto {alpacaInfo.apy
-                                }% </span> in DeFi yields while earning staking rewards when you stake BNB with pSTAKE
+                                }% </span> in staking and DeFi yields while earning staking rewards when you stake BNB with pSTAKE
                                 </h6>
                                 <div className="banner-buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://bnb.pstake.finance" className="button-link">

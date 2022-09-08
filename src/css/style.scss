@@ -594,9 +594,10 @@ ul.dropdown {
         height: auto;
     }
     .section-title {
-        color: #ffffff;
-        font-size: 4rem;
-        font-weight: bold;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 141.9%;
         text-align: center;
         padding: 0;
         margin-bottom: 20px;
@@ -621,7 +622,6 @@ ul.dropdown {
         position: absolute;
         top: -70px;
         right: 22px;
-        z-index: -2;
     }
     .inner-feacture {
         position: relative;
@@ -648,6 +648,61 @@ ul.dropdown {
         }
     }
 }
+
+.steps-section {
+    padding: 100px 0 20px 0;
+    .icon-feacture {
+        width: auto;
+        height: auto;
+    }
+    .section-title {
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 141.9%;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 20px;
+
+    }
+    .box {
+        color: #fff;
+        padding: 30px 40px;
+        height: auto !important;
+        text-align: center;
+        .icon-box{
+            background: #25252A;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem auto;
+            .text{
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 141.9%;
+                text-align: center;
+                color: #E50913;
+            }
+        }
+        h5 {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 131.4%;
+            margin: 0 0 22px 0;
+        }
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 200%;
+            text-align: center;
+            color: #DBD6D6;
+        }
+    }
+}
+
 .terms-content {
     p {
         color: #dbd6d6 !important;
@@ -1135,9 +1190,9 @@ ul.dropdown {
     .section-sub-title{
         font-weight: 500;
         font-size: 16px;
-        line-height: 141.9%;
+        line-height: 200%;
         text-align: center;
-        color: #70747C;
+        color: #FFFFFF;
         max-width: 500px;
         margin: auto auto 40px auto;
     }
@@ -1172,7 +1227,7 @@ ul.dropdown {
                         font-size: 16px;
                         line-height: 141.9%;
                         color: #FFFFFF;
-                        margin: 0;
+                        margin-bottom: 8px;
                     }
 
                     .link {
@@ -3394,7 +3449,8 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     .tokensale .investors .section-title,
     .tokensale .tokenomics .section-title,
     .binance .section-title,
-    .footer-section .section-title{
+    .footer-section .section-title,
+    .steps-section .section-title{
         font-size: 28px;
     }
     .info-section .image-section img.ellipse-gradient {

@@ -5,6 +5,7 @@ import FeactureBlog from '../containers/homepage/FeactureBlog';
 import StakeAssets from '../containers/homepage/StakeAssets';
 import Investors from '../containers/tokensale/Investors';
 import Footer from "../components/Footer";
+import StakingSteps from "../containers/homepage/StakingSteps";
 const homePage = () => {
     return (
         <React.Fragment>
@@ -12,6 +13,7 @@ const homePage = () => {
                 <SectionOne />
                 <StakeAssets />
                 <SectionTwo />
+                <StakingSteps/>
                 <div className="investors-sectiondisplay">
                     <Investors />
                 </div>
