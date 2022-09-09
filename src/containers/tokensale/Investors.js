@@ -16,11 +16,11 @@ import chorus from '../../assets/validators/chorus.svg';
 import halborn_black from '../../assets/audits/halborn_black.svg';
 import certora_black from '../../assets/audits/certora_black.svg';
 import cosmostation from '../../assets/validators/cosmostation.svg';
-import sa_1 from '../../assets/sa/sa_1.svg';
-import sa_2 from '../../assets/sa/sa_2.svg';
-import sa_3 from '../../assets/sa/sa_3.svg';
-import sa_4 from '../../assets/sa/sa_4.svg';
-import sa_5 from '../../assets/sa/sa_5.svg';
+import sa_1 from '../../assets/audits/trail_of_bits.svg';
+import sa_2 from '../../assets/audits/diligence.svg';
+import sa_3 from '../../assets/audits/solidified.svg';
+import sa_4 from '../../assets/audits/peckshield.svg';
+import sa_5 from '../../assets/audits/aok.svg';
 
 import {
     STAKEFISH,
@@ -61,8 +61,6 @@ const Investors = () => {
     const { t } = useTranslation();
     return (
         <React.Fragment>
-
-
             <section className="investors">
                 <div className="container">
                     <h4 className="section-title">{t("Security Audits")}</h4>
@@ -89,7 +87,6 @@ const Investors = () => {
                         </a>
                     </div>
                 </div>
-
             </section>
             <section className="investors">
                 <div className="container">

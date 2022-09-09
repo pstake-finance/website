@@ -10,14 +10,11 @@ import {
     PSTAKE_MEDIUM_URL
 } from '../../constants/config';
 import Icon from "../../components/Icon";
-const FeactureBlog = () => {
+const Blogs = () => {
     const { t } = useTranslation();
     return (
-        <React.Fragment>
-            <section className="stay-updated">
-                <div className="title-line-section">
-                    <h3 className="section-title">{t("FEACTURED_BLOGS")}</h3>
-                </div>
+            <section className="blogs-section">
+                <h3 className="section-title">{t("FEATURED_BLOGS")}</h3>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 blog-articles left">
@@ -30,16 +27,13 @@ const FeactureBlog = () => {
                                                 <img className="card-img-top" alt="blog2"
                                                      src={PSTAKE_BLOG_ONE_IMG_URL} />
                                             </div>
-
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("The State of ATOM Staking")}</p>
+                                                <p className="tag">{t("The State of ATOM Staking")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
                                     </a>
-
                                 </div>
-
                             </div>
                         </div>
                         <div className="col-md-4 blog-articles left">
@@ -50,11 +44,11 @@ const FeactureBlog = () => {
                                         <div className="custom-card mb-10" data-aos="fade-up">
                                             <div className="blog-image">
                                                 <img className="card-img-top" alt="blog2"
-                                                    src={PSTAKE_BLOG_TWO_IMG_URL}/>
+                                                    src={PSTAKE_BLOG_TWO_IMG_URL}
+                                                />
                                             </div>
-
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("Why Liquid Staking is a Game-Changer for BNB")}</p>
+                                                <p className="tag">{t("Why Liquid Staking is a Game-Changer for BNB")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -75,7 +69,7 @@ const FeactureBlog = () => {
                                             </div>
 
                                             <div className="custom-card-body">
-                                                <p className="text1">{t("stkBNB User Guide")}</p>
+                                                <p className="tag">{t("stkBNB User Guide")}</p>
                                                 <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
                                             </div>
                                         </div>
@@ -84,19 +78,18 @@ const FeactureBlog = () => {
                             </div>
                         </div>
                         <div className="banner-buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href={PSTAKE_MEDIUM_URL}>
-                                        <span className="button xprt">
-                                            <span className="hideone">{t("READ_ALL")}&nbsp;</span>
-                                        </span>
-                                    </a>
-                                </div>
+                            <a rel="noopener noreferrer" target="_blank" href={PSTAKE_MEDIUM_URL}>
+                                <span className="button xprt">
+                                    <span className="hideone">{t("READ_ALL")}&nbsp;</span>
+                                </span>
+                            </a>
+                        </div>
 
                     </div>
                 </div>
             </section>
-        </React.Fragment >
     );
 }
 
 
-export default FeactureBlog;
+export default Blogs;

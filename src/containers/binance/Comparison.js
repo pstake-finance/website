@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
-import bnbLogo from "../../assets/bnb.svg";
+import bnbLogo from "../../assets/networks/bnb.svg";
 import stkBNBLogo from "../../assets/stk_bnb.svg";
 
 const Comparison = () => {

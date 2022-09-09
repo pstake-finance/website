@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Route, Switch, withRouter, useLocation} from "react-router-dom";
 import ReactGA from 'react-ga';
-import './css/style.css';
-import './App.css';
+import './css/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import { ANALYTICS } from "./constants/config";
