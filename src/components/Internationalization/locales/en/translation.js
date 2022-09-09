@@ -61,7 +61,7 @@ let English = {
         "INSURANCE_FUND_DESCRIPTION": "In the near future, assets delegated to pSTAKE’s safelisted validators will be safeguarded against slashing risks by an insurance pool which covers a portion or all of the slashed amount based on the severity of the slashing event.",
         "GENERATE_ADDITONAL_YIELD": "Anchor Intigration",
         "GENERATE_ADDITONAL_YIELD_DESCRIPTION": "Assets delegated to pSTAKE’s whitelisted validators are safeguarded against the slashing risks by an insurance pool which covers a portion.",
-        "FEACTURED_BLOGS":"Featured Blogs",
+        "FEATURED_BLOGS":"Featured Blogs",
         "AIRDROP_SECOND_TITLE":"AIRDROP",
         "LEARN_MORE":"Learn More",
         "LAUNCH": "LAUNCH",

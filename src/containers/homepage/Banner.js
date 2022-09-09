@@ -1,13 +1,12 @@
 import React from "react";
-import rightarrow from '../../assets/right-arrow.svg';
 import { useTranslation } from "react-i18next";
-import InfoSection from "../homepage/InfoSection";
 import {
-    PSTAKE_APP_URL,
-
+    PSTAKE_APP_URL, VIDEO_URL,
 } from '../../constants/config';
+import Icon from "../../components/Icon";
+import bg_lane from "../../assets/bg_images/bg_lane.png";
 
-const SectionOne = () => {
+const Banner = () => {
     const { t } = useTranslation();
     return (
         <React.Fragment>
@@ -24,7 +23,7 @@ const SectionOne = () => {
                                     <span className="button xprt">
                                         <a rel="noopener noreferrer" target="_blank" href={PSTAKE_APP_URL}>
                                             <span className="hideone">{t("GET_STARTED")}&nbsp;</span>
-                                            <img src={rightarrow} alt="arrow" />
+                                            <Icon viewClass="right-arrow" icon="right-arrow" />
                                         </a>
                                     </span>
                                 </div>
@@ -41,20 +40,28 @@ const SectionOne = () => {
                                 {/*        <h6 className={"stats"}>{t("5,107")}</h6>*/}
                                 {/*        <h6>{t("NUMBER_STAKERS")}</h6>*/}
                                 {/*    </div>*/}
-
-
                                 {/*</div>*/}
                             </div>
 
                         </div>
                     </div>
-                    <InfoSection />
+                    <div className="info-section">
+                        <img src={bg_lane} alt="pStake" className="bg-lane-gradient" />
+                        <div className='container'>
+                            <div className="image-section">
+                                <div className="embed-responsive embed-responsive-16by9">
+                                    <iframe
+                                        title="Introducing pSTAKE | Multi-chain Liquid Staking"
+                                        className="embed-responsive-item" src={VIDEO_URL}/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </section>
         </React.Fragment >
     );
 }
 
 
-export default SectionOne;
+export default Banner;

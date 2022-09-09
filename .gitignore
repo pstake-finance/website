@@ -8,6 +8,8 @@
 # misc
 .sass-cache
 /__unfinished/*
+*.css
+*.css.map
 
 ### Node ###
 .serverless
