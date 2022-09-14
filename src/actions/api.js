@@ -53,7 +53,7 @@ export const fetchOpenLeverage = async () => {
         const res = await Axios.get(OPEN_LEVERAGE_API)
         if(res && res.data && res.data.data && res.data.data.currentTVLUsd) {
             const tvlUSD = res.data.data.currentTVLUsd;
-            return {tvl:Number(tvlUSD).toFixed(2), apy:0}
+            return {tvl:Number(tvlUSD).toFixed(2), apy:35}
         }else{
             return {tvl: 0, apy: 0}
         }
@@ -61,6 +61,10 @@ export const fetchOpenLeverage = async () => {
         console.log(e.message)
         return {tvl: 0, apy: 0}
     }
+}
+
+export const fetchWombat = async () => {
+    return {tvl: 0, apy: 0}
 }
 
 export const fetchPancakeInfo = async () => {

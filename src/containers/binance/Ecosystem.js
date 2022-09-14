@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import { useTranslation } from "react-i18next";
-import pancake from '../../assets/pancake.svg';
-import alpaca from '../../assets/alpaca.svg';
-import beefy from '../../assets/beefy.svg';
-import leverage from '../../assets/leverage.svg';
+import pancake from '../../assets/integrations/pancake.svg';
+import alpaca from '../../assets/integrations/alpaca.svg';
+import beefy from '../../assets/integrations/beefy.svg';
+import wombat from '../../assets/integrations/wombat.svg';
+import leverage from '../../assets/integrations/leverage.svg';
+
 import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo} from "../../actions/api";
 
 
@@ -30,7 +32,7 @@ const Ecosystem = () => {
         <React.Fragment>
             <section className="ecosystem-section">
                 <div className="container">
-                    <h3 className="section-title">Put your stkBNB to work in the <br/> BNB DeFi Ecosystem</h3>
+                    <h3 className="section-title">Put your stkBNB to work in the <br/> BNB DeFi Ecosystem </h3>
                     <div className="row">
                         <Card className="col-md-6 col-xs-12">
                             <Card.Body className="pancake">
@@ -137,6 +139,34 @@ const Ecosystem = () => {
                                 <div className="buttons">
                                     <a rel="noopener noreferrer" target="_blank" href="https://bnb.openleverage.finance/app/trade/pairs/345" className="button-link primary">
                                         Leveraged Staking
+                                    </a>
+                                    <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=UgiEqmKSOWI" className="button-link secondary pointer-events-none">
+                                        {t("LEARN_MORE")}
+                                    </a>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                        <Card className="col-md-6 col-xs-12">
+                            <Card.Body className="">
+                                <div className="tag">
+                                    <p>Dex</p>
+                                </div>
+                                <div className="icon-box">
+                                    <img className="pt-4 pb-4" src={wombat} title="wombat" alt="wombat"/>
+                                </div>
+                                <div className="content">
+                                    <p className="card-heading text-center">{t("Wombat")}</p>
+                                    <p className="card-content text-center">
+                                        Provide single sided stkBNB liquidity to earn trading fees, $PSTAKE and $WOM emissions
+                                    </p>
+                                </div>
+                                <div className="stats justify-content-center">
+                                    {/*<p className="item">17% <span>APY</span></p>*/}
+                                    {/*<p className="item">${parseInt(openLeverageInfo.tvl).toLocaleString()} <span>TVL</span></p>*/}
+                                </div>
+                                <div className="buttons">
+                                    <a rel="noopener noreferrer" target="_blank" href="https://app.wombat.exchange/pool" className="button-link primary">
+                                        Add liquidity
                                     </a>
                                     <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=UgiEqmKSOWI" className="button-link secondary pointer-events-none">
                                         {t("LEARN_MORE")}

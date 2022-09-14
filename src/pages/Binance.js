@@ -4,12 +4,13 @@ import FeaturedBlogs from '../containers/binance/FeactureBlog';
 import Footer from "../components/Footer";
 import Banner from "../containers/binance/Banner";
 import Comparison from "../containers/binance/Comparison";
-import Ecosystem from "../containers/binance/Ecosystem";
 import Guides from "../containers/binance/Guides";
 import Audited from "../containers/binance/Audited";
 import Validators from "../containers/binance/Validators";
 import Faq from "../containers/binance/Faq";
 import ScrollToTop from "../components/ScrollToTop";
+import EcosystemSlider from "../containers/binance/EcosystemSilder";
+
 const Binance = () => {
     return (
         <React.Fragment>
@@ -18,7 +19,7 @@ const Binance = () => {
                 <Banner />
                 <SectionTwo />
                 <Comparison/>
-                <Ecosystem/>
+                <EcosystemSlider/>
                 <Guides/>
                 <Validators/>
                 <Audited/>

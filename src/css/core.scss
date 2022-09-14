@@ -2237,6 +2237,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
           line-height: 200%;
           color: #DBD6D6;
           text-align: center;
+          .empty{
+            margin-bottom: 4rem;
+          }
         }
         .stats{
           display: flex;
@@ -2273,6 +2276,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             width: 186px;
             margin-bottom: 10px;
+            white-space: nowrap;
             &.primary{
               background: #F0B90B;
               color: #000000;
@@ -2292,6 +2296,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
           }
         }
       }
+    }
+    .react-multi-carousel-item{
+      padding-right: 20px;
     }
   }
 
