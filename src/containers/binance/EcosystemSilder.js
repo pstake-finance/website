@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React, {useEffect, useState} from "react";
-import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo} from "../../actions/api";
+import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo, fetchWombat} from "../../actions/api";
 import pancake from '../../assets/integrations/pancake.svg';
 import alpaca from '../../assets/integrations/alpaca.svg';
 import beefy from '../../assets/integrations/beefy.svg';
@@ -17,7 +17,7 @@ const responsive = {
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 2,
+        items: 1,
         paritialVisibilityGutter: 10
     },
     mobile: {
@@ -32,6 +32,8 @@ const EcosystemSlider = ({ deviceType }) => {
     const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
     const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
     const [openLeverageInfo, setOpenLeverageInfo] = useState({tvl:0, apy:0})
+    const [wombatInfo, setWombatInfo] = useState({tvl:0, apy:0})
+
 
     const list = [
         {
@@ -62,12 +64,12 @@ const EcosystemSlider = ({ deviceType }) => {
             name:'Wombat',
             tag:'DEX',
             logoUrl: wombat,
-            content:<span className='d-block empty'>Provide single sided stkBNB liquidity to earn trading fees, $PSTAKE and $WOM emissions</span>,
+            content:<span className='mb-4 d-block '>Provide single sided stkBNB liquidity to earn trading fees, $PSTAKE and $WOM emissions</span>,
             primaryButtonText:'Add liquidity',
             primaryButtonUrl:'https://app.wombat.exchange/pool',
             secondaryButtonText:'Learn More',
             secondaryButtonUrl:'https://youtube.com/clip/UgkxCZAHN3sTY8sH3FD_UoKvYZns6oZBFaza',
-            tvl:'',
+            tvl:<>${parseInt(wombatInfo.tvl).toLocaleString()} <span>TVL</span></>,
             apy: ''
         },
         {
@@ -103,6 +105,7 @@ const EcosystemSlider = ({ deviceType }) => {
             setBeefyInfo(await fetchBeefyInfo());
             setPanCakeInfo(await fetchPancakeInfo());
             setOpenLeverageInfo(await fetchOpenLeverage());
+            setWombatInfo(await fetchWombat());
         }
         fetchApi();
     }, [])
