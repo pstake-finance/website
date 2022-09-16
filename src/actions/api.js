@@ -4,6 +4,7 @@ const BEEFY_APY_API = "https://api.beefy.finance/apy"
 const BEEFY_APY_TVL = "https://api.beefy.finance/tvl"
 export const OPEN_LEVERAGE_API = 'https://bnb.openleverage.finance/api/info/pool/0x9630cefdccbc7eb8689ed1de14a1899468b0839d'
 export const PANCAKE_API = 'https://bsc.streamingfast.io/subgraphs/name/pancakeswap/exchange-v2'
+export const WOMBAT_API = 'https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-exchange'
 
 export const fetchAlpaca = async () => {
     try {
@@ -64,7 +65,28 @@ export const fetchOpenLeverage = async () => {
 }
 
 export const fetchWombat = async () => {
-    return {tvl: 0, apy: 0}
+    try {
+        const res = await fetch(WOMBAT_API, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                query: `{
+              asset(id: "0xc496f42ea6fc72af434f48469b847a469fe0d17f") {
+                    liabilityUSD
+              }
+             }`
+            })
+        })
+        const responseJson = await res.json();
+        if(responseJson && responseJson.data && responseJson.data.asset) {
+            return {tvl:Number(responseJson.data.asset.liabilityUSD).toFixed(2), apy:0}
+        }
+    }catch (e) {
+        console.log(e.message)
+        return {tvl: 0, apy: 0}
+    }
 }
 
 export const fetchPancakeInfo = async () => {
