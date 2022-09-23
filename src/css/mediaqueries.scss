@@ -274,12 +274,20 @@
   .tokensale .participate .ptp-btn {
     flex-direction: column;
   }
+  .atom .banner-section .banner-main-section .banner-heading,
   .binance .banner-section .banner-main-section .banner-heading,
   .banner-section .banner-heading,
   .pos-section .info-banner-heading,
   .stake-section .section-title,
-  .second-section .section-title {
+  .second-section .section-title,
+  .binance .section-title, .atom .section-title{
     font-size: 24px;
+  }
+  .binance .banner-section .banner-main-section .logo,
+  .atom .banner-section .banner-main-section .logo{
+    width: 70px;
+    height: 70px;
+    display: flex;
   }
   .tokensale .governance .gradientellipse2 {
     display: none;

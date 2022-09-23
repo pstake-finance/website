@@ -27,6 +27,7 @@ import { useTranslation } from "react-i18next";
 import Icon from "./Icon";
 
 const Header = () => {
+
     const { t } = useTranslation();
     const [banner, setBanner] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
@@ -71,6 +72,26 @@ const Header = () => {
         setBanner(false);
     }
 
+    let auditURL;
+    let docsURL;
+    let faqURL;
+    let twitterUrl;
+    let appURL;
+
+    if (window.location.pathname === "/"){
+        auditURL = SECURITY_AUDIT_URL;
+        docsURL =  DOCS_URL;
+        faqURL = GUIDES_FAQ_URL;
+        twitterUrl = PSTAKE_TWITTER_URL;
+        appURL = PSTAKE_APP_URL;
+    }else if (window.location.pathname === "/bnb"){
+        auditURL = STK_BNB_SECURITY_AUDIT_URL;
+        docsURL = STK_BNB_DOCS_URL;
+        faqURL = STK_FAQ_URL;
+        twitterUrl = STK_BNB_TWITTER_URL;
+        appURL = BNB_URL;
+    }
+
     return (
         <React.Fragment>
             <div id="is-sticky" className="top-bar">
@@ -96,38 +117,44 @@ const Header = () => {
                         </button>
                         <div className={isOpen ? "collapse navbar-collapse show" : "collapse navbar-collapse"} style={{ display: isOpen ? "inline-grid" : "" }} id="navbarCollapse">
                             <ul className={isOpen ? "navbar-nav navbar-left" : "navbar-nav ml-auto navbar-left"} id="mySidenav">
-                                <li className="nav-item nav__menu-item">
+                                {window.location.pathname !== "/atom" ?
+                                    <li className="nav-item nav__menu-item">
+                                        <p className="nav-link chevron m-0">{t("LEARN")}
+                                            {!chevronChange ?
+                                                <Icon viewClass="social_icon_img" icon="chevron"/>
+                                                : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
+                                            }
+                                        </p>
+                                        <ul className="dropdown">
+                                            <li>
+                                                <a href={auditURL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">
+                                                    {t("SECURITY_AUDITS")}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href={GUIDES_URL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">{t("GUIDES_TUTORIALS")}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href={docsURL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">
+                                                    {t("DOCS")}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href={faqURL} target="_blank" rel="noopener noreferrer"
+                                                   className="nav-link">
+                                                    {t("FAQs")}
+                                                </a>
+                                            </li>
 
-                                    <p className="nav-link chevron m-0">{t("LEARN")}
-                                        {!chevronChange ?
-                                            <Icon viewClass="social_icon_img" icon="chevron"/>
-                                            : <Icon viewClass="social_icon_img" icon="chevroncolorchange"/>
-                                        }
-                                    </p>
-                                    <ul className="dropdown">
-                                        <li>
-                                            <a href={window.location.pathname === "/bnb" ? STK_BNB_SECURITY_AUDIT_URL : SECURITY_AUDIT_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
-                                                {t("SECURITY_AUDITS")}
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href={GUIDES_URL} target="_blank" rel="noopener noreferrer" className="nav-link">{t("GUIDES_TUTORIALS")}
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href={window.location.pathname === "/bnb" ? STK_BNB_DOCS_URL : DOCS_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
-                                                {t("DOCS")}
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href={window.location.pathname === "/bnb" ? STK_FAQ_URL: GUIDES_FAQ_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
-                                                {t("FAQs")}
-                                            </a>
-                                        </li>
+                                        </ul>
 
-                                    </ul>
-
-                                </li>
+                                    </li>
+                                    : ""
+                                }
                                 <li className="nav-item nav__menu-item">
                                     <p className="nav-link chevron m-0">{t("COMMUNITY")}
                                         {!chevronChange ?
@@ -143,7 +170,7 @@ const Header = () => {
                                         </a></li>
 
                                         <ul className="socialicons">
-                                            <li><a href={window.location.pathname === "/bnb" ? STK_BNB_TWITTER_URL : PSTAKE_TWITTER_URL} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
+                                            <li><a href={twitterUrl} target="_blank" rel="noopener noreferrer"><Icon viewClass="social_icon_img" icon="twitter-logo" /></a>
                                             </li>
                                             <li>
                                                 <a href={PSTAKE_TELEGRAM_URL} target="_blank" rel="noopener noreferrer" ><Icon viewClass="social_icon_ig" icon="telegram-plane" /></a>
@@ -195,13 +222,17 @@ const Header = () => {
                                         </a>
                                     </li>
                                     : ""}
-                                <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}>
-                                    <a style={{ padding: '0' }} onClick={onClickNavApp} href={window.location.pathname === "/bnb" ? BNB_URL : PSTAKE_APP_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
-                                        <span className="nav-link pophover tooltip-multiline app-btn">{t("GO_TO_APP")}
+                                {window.location.pathname !== "/atom" ?
+                                    <li className="nav-item" style={{marginLeft: '10px', marginRight: '0'}}>
+                                        <a style={{padding: '0'}} onClick={onClickNavApp} href={appURL} target="_blank"
+                                           rel="noopener noreferrer" className="nav-link">
+                                        <span className="nav-link pophover tooltip-multiline app-btn">
+                                            {t("GO_TO_APP")}
                                         </span>
-                                    </a>
-                                </li>
-
+                                        </a>
+                                    </li>
+                                    : ""
+                                }
                             </ul>
                         </div>
                     </div>
