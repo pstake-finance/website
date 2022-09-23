@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {Route, Switch, withRouter, useLocation} from "react-router-dom";
 import ReactGA from 'react-ga';
-import './css/style.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import { ANALYTICS } from "./constants/config";
@@ -12,6 +13,8 @@ import TokenSale from "./pages/TokenSale";
 import Binance from "./pages/Binance";
 import OneSignalReact from "react-onesignal";
 import RouteNotFound from "./pages/RouteNotFound";
+import Atom from "./pages/Atom";
+import './css/style.scss';
 
 ReactGA.initialize(ANALYTICS)
 
@@ -36,7 +39,16 @@ const App = () => {
 },{
       path: '/bnb',
       component: Binance,
+  },{
+      path: '/atom',
+      component: Atom,
   }];
+
+    useEffect(() => {
+        AOS.init({
+            duration : 2000
+        })
+    },[]);
 
   const [isOnline, setNetwork] = useState(window.navigator.onLine);
   const updateNetwork = () => {

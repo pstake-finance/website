@@ -122,42 +122,40 @@ const EcosystemSlider = ({ deviceType }) => {
                     responsive={responsive}
                     autoPlay={false}
                 >
-                    {list.slice(0, 5).map(item => {
+                    {list.slice(0, 5).map((item, index) => {
                         return (
-                            <>
-                                <Card className="">
-                                    <Card.Body className="pancake">
-                                        <div className="tag">
-                                            <p>{item.tag}</p>
-                                        </div>
-                                        <div className="icon-box">
-                                            <img className="pt-4 pb-4" src={item.logoUrl} title="Asset" alt="Asset"/>
-                                        </div>
-                                        <div className="content">
-                                            <p className="card-heading">{item.name}</p>
-                                            <p className="card-content">
-                                                {item.content}
-                                            </p>
-                                        </div>
-                                        <div className="stats justify-content-center">
-                                            <p className="item">{item.apy}</p>
-                                            <p className="item">{item.tvl}</p>
-                                        </div>
-                                        <div className="buttons">
-                                            <a rel="noopener noreferrer" target="_blank" href={item.primaryButtonUrl} className="button-link primary">
-                                                {item.primaryButtonText}
-                                            </a>
-                                            <a rel="noopener noreferrer"
-                                               target="_blank"
-                                               href={item.secondaryButtonUrl}
-                                               className={`button-link secondary ${item.name === 'Wombat' ? 'pointer-events-none' : ''}`}
-                                            >
-                                                {item.secondaryButtonText}
-                                            </a>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                            </>
+                            <Card key={index}>
+                                <Card.Body className="pancake">
+                                    <div className="tag">
+                                        <p>{item.tag}</p>
+                                    </div>
+                                    <div className="icon-box">
+                                        <img className="pt-4 pb-4" src={item.logoUrl} title="Asset" alt="Asset"/>
+                                    </div>
+                                    <div className="content">
+                                        <p className="card-heading">{item.name}</p>
+                                        <p className="card-content">
+                                            {item.content}
+                                        </p>
+                                    </div>
+                                    <div className="stats justify-content-center">
+                                        <p className="item">{item.apy}</p>
+                                        <p className="item">{item.tvl}</p>
+                                    </div>
+                                    <div className="buttons">
+                                        <a rel="noopener noreferrer" target="_blank" href={item.primaryButtonUrl} className="button-link primary">
+                                            {item.primaryButtonText}
+                                        </a>
+                                        <a rel="noopener noreferrer"
+                                           target="_blank"
+                                           href={item.secondaryButtonUrl}
+                                           className={`button-link secondary ${item.name === 'Wombat' ? 'pointer-events-none' : ''}`}
+                                        >
+                                            {item.secondaryButtonText}
+                                        </a>
+                                    </div>
+                                </Card.Body>
+                            </Card>
                         );
                     })}
                 </Carousel>

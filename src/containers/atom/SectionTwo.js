@@ -1,56 +1,56 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { useTranslation } from "react-i18next";
 import Icon from "../../components/Icon";
 
 const SectionTwo = () => {
-    const { t } = useTranslation();
     return (
         <React.Fragment>
             <section className="use-case-section">
                 <div className="container">
-                    <h3 className="section-title">{t("WHY_PSTAKE_FOR_BNB")}</h3>
+                    <h3 className="section-title">Why pSTAKE for ATOM?</h3>
                     <div className="row">
-                        <Card className="col-md-4 col-xs-12">
+                        <Card className="col-md-4 col-xs-12" data-aos="fade-up">
                             <div className='circle'>
                             </div>
-                            <Card.Body className="">
-                                <div className="icon-box">
-                                    <Icon viewClass="use-case" icon="usecase1"/>
-                                </div>
-                                <div className="content">
-                                    <p className="card-heading">{t("WHY_PSTAKE_FOR_BNB_ONE_HEADING")}</p>
-                                    <p className="card-content">
-                                        Receive stkBNB to maintain liquidity of otherwise locked BNB when you stake
-                                    </p>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-4  col-xs-12">
                             <Card.Body className="">
                                 <div className="icon-box">
                                     <Icon viewClass="use-case" icon="usecase2"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">Yields. Yields. Yields.</p>
+                                    <p className="card-heading">High-yields</p>
                                     <p className="card-content">
-                                        Generate the highest yields with auto-compounding BNB staking rewards & various
-                                        stkBNB DeFi opportunities, all while securing the BNB chain network
+                                        Generate the highest yields with auto-compounding ATOM staking rewards &
+                                        participating in multiple DeFi opportunities with your staked ATOM.
                                     </p>
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className="col-md-4  col-xs-12">
+                        <Card className="col-md-4  col-xs-12" data-aos="fade-up">
+                            <Card.Body className="">
+                                <div className="icon-box">
+                                    <Icon viewClass="use-case" icon="security"/>
+                                </div>
+                                <div className="content">
+                                    <p className="card-heading">Top-Notch Security</p>
+                                    <p className="card-content">
+                                        Protocol security has been a core focus. stkATOM on Persistence will be audited
+                                        by Halborn upon its launch, with more audits to come as the protocol matures.
+                                    </p>
+                                </div>
+                            </Card.Body>
+                        </Card>
+                        <Card className="col-md-4 col-xs-12" data-aos="fade-up">
                             <div className='circle'>
                             </div>
                             <Card.Body className="">
                                 <div className="icon-box">
-                                    <Icon viewClass="use-case" icon="usecase3"/>
+                                    <Icon viewClass="use-case" icon="enhance-ui"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">{t("WHY_PSTAKE_FOR_BNB_THREE_HEADING")}</p>
+                                    <p className="card-heading">Enhancing UX</p>
                                     <p className="card-content">
-                                        {t("WHY_PSTAKE_FOR_BNB_THREE_CONTENT")}
+                                        We’re creating an optimised, seamless solution by leveraging our experience and
+                                        learnings from years of building products for users within the Cosmos ecosystem.
                                     </p>
                                 </div>
                             </Card.Body>
