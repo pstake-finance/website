@@ -1,13 +1,16 @@
 import React from 'react';
 import stkAtom from "../../assets/stkAtom.svg";
 import stkATOM2 from '../../assets/stkATOM2.svg';
+import {COSMOS_URL, STK_ATOM_MIGRATION_URL} from "../../constants/config";
+import Icon from "../../components/Icon";
+import stkATOM from "../../assets/stkAtom.svg";
 
 const Comparison = () => {
     return (
         <React.Fragment>
             <section className="comparison-section" data-aos="fade-up">
                 <div className="container">
-                    <h3 className="section-title">stkATOM & Migration Utility</h3>
+                    <h3 className="section-title">stkATOM From <br/> Ethereum to Persistence</h3>
                     <div className="list">
                         <div className="item-header">
                             <div className="type"></div>
@@ -17,10 +20,19 @@ const Comparison = () => {
                             </div>
                             <div className="stk-bnb">
                                 <img src={stkAtom} alt="stkBNBLogo"/>
-                                Post Migration stkATOM
+                                stkATOM(Persistence)
                             </div>
                         </div>
                        <div className="list-data">
+                           <div className="item">
+                               <div className="type">Status</div>
+                               <div className="bnb">
+                                   First-ever liquid staking solution for ATOM. Launched in 2021, to be migrated to the new implementation
+                               </div>
+                               <div className="stk-bnb">
+                                   New and improved liquid staking solution for ATOM. <b>Launching soon</b>
+                               </div>
+                           </div>
                            <div className="item">
                                <div className="type">How it works</div>
                                <div className="bnb">User deposits ATOM with pSTAKE to mint 1:1 pegged pATOM.
@@ -86,7 +98,43 @@ const Comparison = () => {
                                    future, Bug-Bounty Programs and On-Chain tracking
                                </div>
                            </div>
+                           <div className="item">
+                               <div className="type"></div>
+                               <div className="bnb">
+                                   <div className="buttons">
+                                       <a rel="noopener noreferrer" target="_blank" href={COSMOS_URL} className="button-link primary">
+                                           Go to app
+                                       </a>
+                                   </div>
+                               </div>
+                               <div className="stk-bnb">
+                                   <div className="buttons">
+                                       <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_MIGRATION_URL} className="button-link primary disable">
+                                           Coming Soon
+                                       </a>
+                                   </div>
+                               </div>
+                           </div>
                        </div>
+                    </div>
+                    <div className='migration-card'>
+                        <div className='card-body p-0 d-flex align-items-center justify-content-between flex-wrap'>
+                            <div className="content d-flex align-items-center flex-wrap">
+                                <div className="icon-box">
+                                    <img src={stkATOM2} title="stkATOM2" alt="stkATOM2"/>
+                                    <Icon viewClass="right-arrow" icon="right-arrow-bold" />
+                                    <img src={stkATOM} title="stkATOM2" alt="stkATOM2"/>
+                                </div>
+                                <p className="card-text">
+                                    Migration of stkATOM(ERC-20) to Persistence Core-1 Chain
+                                </p>
+                            </div>
+                            <div className="buttons">
+                                <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_MIGRATION_URL} className="button-link primary">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -7,7 +7,11 @@ import {
     PSTAKE_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
     PSTAKE_YOUTUBE_URL,
-    PERSISTENCE_ONE_URL, PSTAKE_MEDIUM_URL, STK_BNB_TWITTER_URL,
+    PERSISTENCE_ONE_URL,
+    PSTAKE_MEDIUM_URL,
+    STK_BNB_TWITTER_URL,
+    STK_ATOM_TWITTER_URL,
+    STK_ATOM_SUBSCRIBE_URL,
 } from '../constants/config';
 
 const onClick = (name) => {
@@ -15,6 +19,16 @@ const onClick = (name) => {
         category: name,
         action: `Clicked on ${name}`
     })
+}
+
+let twitterUrl;
+
+if (window.location.pathname === "/"){
+    twitterUrl = PSTAKE_TWITTER_URL;
+}else if (window.location.pathname === "/bnb"){
+    twitterUrl = STK_BNB_TWITTER_URL;
+}else if (window.location.pathname === "/atom"){
+    twitterUrl = STK_ATOM_TWITTER_URL
 }
 
 const list = [
@@ -26,7 +40,7 @@ const list = [
     },
     {
         name:"Twitter",
-        url: window.location.pathname === "/bnb" ? STK_BNB_TWITTER_URL : PSTAKE_TWITTER_URL,
+        url: twitterUrl,
         icon:<Icon viewClass="social_icon_img" icon="twitter-logo"/>,
         text:'Stay updated'
     },
@@ -59,7 +73,7 @@ const Footer = () => {
                         <div className="row justify-content-center">
                             {
                                 list.map((item, index) => (
-                                    <div className="item cold-md-6" key={index}>
+                                    <div className="item col-md-6" key={index}>
                                         <a href={item.url}
                                            target="_blank"
                                            className="item-body d-flex align-items-center"
@@ -78,7 +92,22 @@ const Footer = () => {
                                     </div>
                                 ))
                             }
+                            {window.location.pathname === "/atom" ?
+                                <div className="col-md-12 subscribe buttons m-0">
+                                    <div className="item-body">
+                                        <p className="heading">Subscribe here for our stkATOM newsletter</p>
+                                        <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_SUBSCRIBE_URL}
+                                           className="button-link primary">
+                                        <span className="button xprt">
+                                            <span className="hideone">{t("Subscribe")}&nbsp;</span>
+                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                : ""
+                            }
                         </div>
+
                     </div>
                     <div className="privacy-terms d-flex align-items-center">
                         <Link to='/privacy' target='_blank'>{t("PRIVACY_POLICY")}</Link>
