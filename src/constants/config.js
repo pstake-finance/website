@@ -35,7 +35,7 @@ export const PSTAKE_BLOG_ONE_URL = "https://blog.pstake.finance/2022/08/19/the-s
 export const PSTAKE_BLOG_ONE_IMG_URL = "https://blog.pstake.finance/wp-content/uploads/2022/08/photo_2022-08-19_14-44-02-1160x652.jpg";
 export const PSTAKE_TWITTER_URL = "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
-export const PSTAKE_TELEGRAM_URL = "https://t.me/pstakefinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
+export const PSTAKE_TELEGRAM_URL = "https://t.me/pstakefinancechat";
 export const PSTAKE_YOUTUBE_URL = "https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const PSTAKE_REDDIT_URL = "https://www.reddit.com/r/PersistenceOne/";
 export const PERSISTENCE_ONE_URL = "https://persistence.one/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
