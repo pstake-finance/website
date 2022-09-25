@@ -7,7 +7,7 @@ const SectionTwo = () => {
         <React.Fragment>
             <section className="use-case-section">
                 <div className="container">
-                    <h3 className="section-title">Why pSTAKE for ATOM?</h3>
+                    <h3 className="section-title">Why Liquid Stake ATOM <br/> with pSTAKE?</h3>
                     <div className="row">
                         <Card className="col-md-4 col-xs-12" data-aos="fade-up">
                             <div className='circle'>
@@ -17,10 +17,10 @@ const SectionTwo = () => {
                                     <Icon viewClass="use-case" icon="usecase2"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">High-yields</p>
+                                    <p className="card-heading">High Yields</p>
                                     <p className="card-content">
-                                        Generate the highest yields with auto-compounding ATOM staking rewards &
-                                        participating in multiple DeFi opportunities with your staked ATOM.
+                                        Generate high yields with auto-compounding ATOM staking rewards & participate
+                                        in multiple DeFi opportunities with your staked ATOM
                                     </p>
                                 </div>
                             </Card.Body>
@@ -31,10 +31,10 @@ const SectionTwo = () => {
                                     <Icon viewClass="use-case" icon="security"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">Top-Notch Security</p>
+                                    <p className="card-heading">Strong Security</p>
                                     <p className="card-content">
-                                        Protocol security has been a core focus. stkATOM on Persistence will be audited
-                                        by Halborn upon its launch, with more audits to come as the protocol matures.
+                                        Protocol security has been a core focus. Security audits, bug-bounty program
+                                        and on-chain monitoring measures are underway
                                     </p>
                                 </div>
                             </Card.Body>
@@ -47,10 +47,10 @@ const SectionTwo = () => {
                                     <Icon viewClass="use-case" icon="enhance-ui"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">Enhancing UX</p>
+                                    <p className="card-heading">Enhanced User Experience</p>
                                     <p className="card-content">
-                                        We’re creating an optimised, seamless solution by leveraging our experience and
-                                        learnings from years of building products for users within the Cosmos ecosystem.
+                                        Smooth and seamless liquid staking with minimal fees, fast transactions, high
+                                        rewards and IBC interoperability
                                     </p>
                                 </div>
                             </Card.Body>

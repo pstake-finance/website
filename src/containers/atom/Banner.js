@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import stkAtom from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
+import {STK_ATOM_TWITTER_URL} from "../../constants/config";
 
 const Banner = () => {
     const { t } = useTranslation();
@@ -15,13 +16,13 @@ const Banner = () => {
                                     <img src={stkAtom} alt="stkAtom"/>
                                 </div>
                                 <h1 className="banner-heading">
-                                    stkATOM is Launching <br/> on Persistence Soon
+                                    Liquid Staking for The <br/> Internet of Blockchains
                                 </h1>
                                 <h6 className="banner-sub-heading">
-                                    Enjoy the best of both worlds - Staking and DeFi in the Cosmos network ecosystem. Unlock the full potential of ATOM by simultaneously contributing to Cosmos hub’s security, earning staking rewards, and participating in DeFi.
+                                    With <b>stkATOM</b>, enjoy the best of both worlds - earn staking rewards while securing the cosmos hub and participate in DeFi for additional yields.
                                 </h6>
                                 <div className="banner-buttons">
-                                    <a rel="noopener noreferrer" target="_blank" href="/" className="button-link pointer-events-none">
+                                    <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_TWITTER_URL} className="button-link">
                                         <span className="hideone">{t("LEARN_MORE")} &nbsp;</span>
                                         <Icon viewClass="right-arrow" icon="right-arrow" />
                                     </a>

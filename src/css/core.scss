@@ -91,10 +91,10 @@ body a {
     }
     &.atom{
       .navbar-nav .nav-link.app-btn {
-        background: #2E3148;
+        background: #595D7B;
         color: #FFFFFF;
         &:hover {
-          box-shadow: 0 4px 16px #2e314880;
+          box-shadow: 0 4px 16px #595d7b78;
         }
       }
     }
@@ -196,7 +196,7 @@ body a {
     }
     &.atom {
       button {
-        background: #2E3148;
+        background: #595D7B;
         .icon{
           fill: #fff;
         }
@@ -872,6 +872,29 @@ body a {
       &:hover {
         color: #e50913;
         text-decoration: none;
+      }
+    }
+  }
+  .subscribe{
+    max-width: 880px;
+    width: 100%;
+    .item-body{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      background: #25252A;
+      box-shadow: 0px 4px 33px rgb(0 0 0 / 12%);
+      border-radius: 16px;
+      margin: 15px;
+      padding: 30px 36px;
+      flex-wrap: wrap;
+      .heading{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 141.9%;
+        color: #FFFFFF;
+        margin: 0;
       }
     }
   }
@@ -2622,19 +2645,49 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 }
 
 .atom {
+  .section-sub-title{
+    margin: auto auto 40px;
+  }
+  .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    .button-link{
+      display: block;
+      border-radius: 8px;
+      padding: 0.625rem 2rem;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 180%;
+      text-align: center;
+      width: 186px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      &.primary{
+        margin-right: 5px;
+        background: #595D7B;
+        color: #FFFFFF;
+        &:hover {
+          box-shadow: 0 4px 16px #595d7b78;
+        }
+      }
+    }
+  }
   .banner-section {
     background-image: url("../assets/bg_images/atom_bg.svg"), url("../assets/bg_images/atom_banner.svg");
     background-size:30%, cover;
     .banner-main-section {
       .banner-sub-heading {
         span {
-          color: #5064FB;
+          color: #595D7B;
         }
       }
 
       .banner-buttons {
         .button-link {
-          background: #2E3148;
+          background: #595D7B;
           color: #FFFFFF;
 
           .icon {
@@ -2642,7 +2695,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
           }
 
           &:hover {
-            box-shadow: 0 4px 16px #2e314880;
+            box-shadow: 0 4px 16px #595d7b78;
           }
         }
       }
@@ -2681,7 +2734,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         .circle {
           width: 113.59px;
           height: 113.59px;
-          background: radial-gradient(73.4% 73.4% at 88.37% 59.95%, #46509F 0%, #2E3148 100%);
+          background: radial-gradient(73.4% 73.4% at 88.37% 59.95%, #46509F 0%, #595D7B 100%);
           box-shadow: inset 0 3.26418px 7.18121px rgb(255 255 255 / 23%);
           transform: rotate(-150deg);
           transition: all .2s ease-in-out;
@@ -2698,6 +2751,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
   }
   .comparison-section {
+    .section-title{
+      margin-bottom: 20px;
+    }
     .list {
       .item-header{
         .type, .bnb, .stk-bnb{
@@ -2729,6 +2785,41 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         }
       }
     }
+    .migration-card{
+      background: #26262B;
+      opacity: 0.9;
+      box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      padding: 40px;
+      max-width: 1060px;
+      margin:20px auto auto auto;
+      .card-body{
+       .content{
+         .icon-box{
+           img{
+             width: 52px;
+           }
+          .icon{
+            margin: 0 24px;
+          }
+         }
+         .card-text{
+           font-weight: 500;
+           font-size: 18px;
+           line-height: 151.9%;
+           color: #FFFFFF;
+           margin: 0 16px 0 40px;
+           max-width: 300px;
+           text-align: left;
+         }
+       }
+        .buttons{
+          .button-link{
+
+          }
+        }
+      }
+    }
   }
   .ecosystem-section {
     .card {
@@ -2736,10 +2827,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         .buttons {
           .button-link {
             &.primary {
-              background: #2E3148;
+              background: #595D7B;
               color: #FFFFFF;
               &:hover {
-                box-shadow: 0 4px 16px #2e314880;
+                box-shadow: 0 4px 16px #595d7b78;
               }
             }
           }
@@ -2750,7 +2841,26 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
       justify-content: center;
     }
   }
+  .blogs-section {
+    .blog-articles {
+      a{
+        height: auto;
+      }
+      .custom-card{
+        height: auto;
+        .custom-card-body .learn-more
+        {
+          border-color:  #595D7B;
+          .icon{
+            fill: #FFFFFF;
+            width: 14px;
+            margin: 0 5px;
+          }
+        }
+      }
 
+    }
+  }
   .migration-section{
     padding: 100px 0;
     .section-title{
@@ -2784,7 +2894,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
           text-align: center;
           margin-top: 1.5rem;
           .icon{
-            fill:#5064FB;
+            fill:#595D7B;
             width: 30px;
             margin: 0 30px;
           }
@@ -2829,11 +2939,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
             margin-bottom: 10px;
             white-space: nowrap;
             &.primary {
-              background: #2E3148;
+              background: #595D7B;
               color: #FFFFFF;
               margin-right: 5px;
               &:hover {
-                box-shadow: 0 4px 16px #2e314880;
+                box-shadow: 0 4px 16px #595d7b78;
               }
             }
             &.secondary{
@@ -2853,7 +2963,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
   .blog-section{
     &.stay-updated .blog-articles .custom-card .custom-card-body .learn-more{
-      border-color: #5064FB;
+      border-color: #595D7B;
     }
   }
   .footer-section {
@@ -2861,8 +2971,9 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
       .item-body{
         &:hover{
           .icon-box{
+            background: #595D7B;
             svg{
-              fill: #5064FB;
+              fill: #FFFFFF;
             }
           }
         }

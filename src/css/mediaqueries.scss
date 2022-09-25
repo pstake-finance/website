@@ -391,6 +391,35 @@
       }
     }
   }
+  .atom .comparison-section {
+    .migration-card{
+      .card-body {
+        justify-content: center !important;
+        .content {
+          justify-content: center;
+          .card-text {
+            margin: 1rem 0;
+            text-align: center;
+          }
+        }
+        .buttons{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .footer-section .subscribe {
+    .item-body{
+      display: block;
+      text-align: center;
+      .heading{
+        margin-bottom: 1rem;
+      }
+      .button-link{
+        margin: auto;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 576px) {
   .tokensale .investors .investor-list, .tokensale .investors .section-title{

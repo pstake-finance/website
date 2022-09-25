@@ -5,6 +5,7 @@ import ReactGa from 'react-ga';
 
 import {
     PSTAKE_TWITTER_URL,
+    STK_ATOM_TWITTER_URL,
     PSTAKE_TELEGRAM_URL,
     SECURITY_AUDIT_URL,
     GUIDES_FAQ_URL,
@@ -90,6 +91,8 @@ const Header = () => {
         faqURL = STK_FAQ_URL;
         twitterUrl = STK_BNB_TWITTER_URL;
         appURL = BNB_URL;
+    }else if (window.location.pathname === "/atom"){
+        twitterUrl = STK_ATOM_TWITTER_URL
     }
 
     return (
@@ -155,6 +158,7 @@ const Header = () => {
                                     </li>
                                     : ""
                                 }
+                                {window.location.pathname !== "/atom" ?
                                 <li className="nav-item nav__menu-item">
                                     <p className="nav-link chevron m-0">{t("COMMUNITY")}
                                         {!chevronChange ?
@@ -184,7 +188,8 @@ const Header = () => {
 
                                     </ul>
 
-                                </li>
+                                </li> : ""}
+
                                 {window.location.pathname === "/" ?
                                     <li className="nav-item nav__menu-item">
                                         <p className="nav-link chevron m-0">
@@ -217,11 +222,11 @@ const Header = () => {
                                     <li className="nav-item" style={{ marginLeft: '10px', marginRight: '0' }}>
                                         <a style={{ padding: '0' }} href={IMMUNEFI_WEB_URL} target="_blank" rel="noopener noreferrer" className="nav-link">
                                               <div className="nav-link pophover tooltip-multiline app-btn immunefi p-l-3">
-                                                {/*<img src={immunefi} alt={"immunefi"} />*/}
                                               </div>
                                         </a>
                                     </li>
-                                    : ""}
+                                    : ""
+                                }
                                 {window.location.pathname !== "/atom" ?
                                     <li className="nav-item" style={{marginLeft: '10px', marginRight: '0'}}>
                                         <a style={{padding: '0'}} onClick={onClickNavApp} href={appURL} target="_blank"
@@ -229,6 +234,15 @@ const Header = () => {
                                         <span className="nav-link pophover tooltip-multiline app-btn">
                                             {t("GO_TO_APP")}
                                         </span>
+                                        </a>
+                                    </li>
+                                    : ""
+                                }
+                                {window.location.pathname === "/atom" ?
+                                    <li className="nav-item" style={{marginLeft: '10px', marginRight: '0'}}>
+                                        <a style={{padding: '0'}} onClick={onClickNavApp} href={appURL} target="_blank"
+                                           rel="noopener noreferrer" className="nav-link">
+                                            COMING SOON
                                         </a>
                                     </li>
                                     : ""

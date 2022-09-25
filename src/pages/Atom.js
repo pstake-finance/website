@@ -3,9 +3,8 @@ import SectionTwo from '../containers/atom/SectionTwo';
 import Footer from "../components/Footer";
 import Banner from "../containers/atom/Banner";
 import Comparison from "../containers/atom/Comparison";
-import Faq from "../containers/atom/Faq";
 import ScrollToTop from "../components/ScrollToTop";
-import EcosystemSlider from "../containers/atom/EcosystemSilder";
+import FeaturedBlogs from "../containers/atom/FeactureBlog";
 
 const Atom = () => {
     return (
@@ -15,8 +14,7 @@ const Atom = () => {
                 <Banner />
                 <SectionTwo />
                 <Comparison/>
-                <EcosystemSlider/>
-                <Faq/>
+                <FeaturedBlogs/>
                 <Footer />
             </div>
         </React.Fragment >
