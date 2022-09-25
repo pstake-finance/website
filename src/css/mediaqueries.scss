@@ -420,6 +420,12 @@
       }
     }
   }
+  .binance .comparison-section .list,
+  .atom .comparison-section .list{
+    .item-header, .list-data .item{
+      justify-content: unset;
+    }
+  }
 }
 @media only screen and (max-width: 576px) {
   .tokensale .investors .investor-list, .tokensale .investors .section-title{
