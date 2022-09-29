@@ -70,7 +70,6 @@ const App = () => {
 
   useEffect(() => {
       const page = location.pathname;
-      console.log(page)
       document.body.classList.add('is-loaded')
       trackPage(page);
   }, [location]);

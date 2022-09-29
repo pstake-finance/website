@@ -248,6 +248,23 @@
       }
     }
   }
+  .atom .comparison-section {
+    .migration-card{
+      .card-body {
+        justify-content: center !important;
+        .content {
+          justify-content: center;
+          .card-text {
+            margin: 1rem 0;
+            text-align: center;
+          }
+        }
+        .buttons{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
 }
 @media only screen and (max-width: 767px) {
   ul.dropdown .socialicons {
@@ -388,23 +405,6 @@
       margin-top: 30px;
       .bug-bounty{
         margin-top: 30px;
-      }
-    }
-  }
-  .atom .comparison-section {
-    .migration-card{
-      .card-body {
-        justify-content: center !important;
-        .content {
-          justify-content: center;
-          .card-text {
-            margin: 1rem 0;
-            text-align: center;
-          }
-        }
-        .buttons{
-          margin-top: 10px;
-        }
       }
     }
   }

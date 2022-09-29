@@ -14,7 +14,7 @@ const FeaturedBlogs = () => {
                 <h3 className="section-title">{t("FEATURED_BLOGS")}</h3>
                 <div className="container" data-aos="fade-up">
                     <div className="row justify-content-center">
-                        <div className="col-md-4 blog-articles left">
+                        <div className="col-lg-4 col-md-6 blog-articles left">
                             <div className="col-md-12 px-4">
                                     <a href={STK_ATOM_BLOG_ONE_URL}
                                        target="_blank" rel="noopener noreferrer">
@@ -31,7 +31,7 @@ const FeaturedBlogs = () => {
                                     </a>
                                 </div>
                         </div>
-                        <div className="col-md-4 blog-articles left">
+                        <div className="col-lg-4 col-md-6 blog-articles left">
                             <div className="col-md-12 px-4">
                                     <a href={STK_ATOM_BLOG_TWO_URL}
                                        target="_blank" rel="noopener noreferrer">
