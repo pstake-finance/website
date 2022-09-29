@@ -158,7 +158,6 @@ const Header = () => {
                                     </li>
                                     : ""
                                 }
-                                {window.location.pathname !== "/atom" ?
                                 <li className="nav-item nav__menu-item">
                                     <p className="nav-link chevron m-0">{t("COMMUNITY")}
                                         {!chevronChange ?
@@ -187,8 +186,7 @@ const Header = () => {
                                         </ul>
 
                                     </ul>
-
-                                </li> : ""}
+                                </li>
 
                                 {window.location.pathname === "/" ?
                                     <li className="nav-item nav__menu-item">
@@ -241,8 +239,9 @@ const Header = () => {
                                 {window.location.pathname === "/atom" ?
                                     <li className="nav-item" style={{marginLeft: '10px', marginRight: '0'}}>
                                         <a style={{padding: '0'}} onClick={onClickNavApp} href={appURL} target="_blank"
-                                           rel="noopener noreferrer" className="nav-link">
-                                            COMING SOON
+                                           rel="noopener noreferrer" className="nav-link coming-soon">
+                                            <span className="nav-link app-btn">
+                                            </span>
                                         </a>
                                     </li>
                                     : ""

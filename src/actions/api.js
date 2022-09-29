@@ -17,7 +17,6 @@ export const fetchAlpaca = async () => {
             return {tvl:Number(data[0].tvl).toFixed(2), apy: Number(data[0].totalApy).toFixed(2)}
         }
     } catch (e) {
-        console.log(e.message)
         return {tvl:0, apy:0}
     }
 }
@@ -44,7 +43,6 @@ export const fetchBeefyInfo = async () => {
         return {tvl:Number(tvl).toFixed(2), apy:Number(apy).toFixed(2)}
 
     } catch (e) {
-        console.log(e.message)
         return {tvl: 0, apy: 0}
     }
 }
@@ -54,12 +52,11 @@ export const fetchOpenLeverage = async () => {
         const res = await Axios.get(OPEN_LEVERAGE_API)
         if(res && res.data && res.data.data && res.data.data.currentTVLUsd) {
             const tvlUSD = res.data.data.currentTVLUsd;
-            return {tvl:Number(tvlUSD).toFixed(2), apy:35}
+            return {tvl:Number(tvlUSD).toFixed(2), apy:30}
         }else{
             return {tvl: 0, apy: 0}
         }
     } catch (e) {
-        console.log(e.message)
         return {tvl: 0, apy: 0}
     }
 }
@@ -84,7 +81,6 @@ export const fetchWombat = async () => {
             return {tvl:Number(responseJson.data.asset.liabilityUSD).toFixed(2), apy:0}
         }
     }catch (e) {
-        console.log(e.message)
         return {tvl: 0, apy: 0}
     }
 }
@@ -109,7 +105,6 @@ export const fetchPancakeInfo = async () => {
             return {tvl:Number(responseJson.data.pair.reserveUSD).toFixed(2), apy:0}
         }
     }catch (e) {
-        console.log(e.message)
         return {tvl: 0, apy: 0}
     }
 }

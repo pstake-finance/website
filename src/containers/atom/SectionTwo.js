@@ -9,7 +9,7 @@ const SectionTwo = () => {
                 <div className="container">
                     <h3 className="section-title">Why Liquid Stake ATOM <br/> with pSTAKE?</h3>
                     <div className="row">
-                        <Card className="col-md-4 col-xs-12" data-aos="fade-up">
+                        <Card className="col-lg-4 col-md-6 col-xs-12" data-aos="fade-up">
                             <div className='circle'>
                             </div>
                             <Card.Body className="">
@@ -25,7 +25,7 @@ const SectionTwo = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className="col-md-4  col-xs-12" data-aos="fade-up">
+                        <Card className="col-lg-4 col-md-6  col-xs-12" data-aos="fade-up">
                             <Card.Body className="">
                                 <div className="icon-box">
                                     <Icon viewClass="use-case" icon="security"/>
@@ -39,7 +39,7 @@ const SectionTwo = () => {
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className="col-md-4 col-xs-12" data-aos="fade-up">
+                        <Card className="col-lg-4 col-md-6 col-xs-12" data-aos="fade-up">
                             <div className='circle'>
                             </div>
                             <Card.Body className="">

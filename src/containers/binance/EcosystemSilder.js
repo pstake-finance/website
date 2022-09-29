@@ -1,7 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React, {useEffect, useState} from "react";
-import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo, fetchWombat} from "../../actions/api";
+import React from "react";
 import pancake from '../../assets/integrations/pancake.svg';
 import alpaca from '../../assets/integrations/alpaca.svg';
 import beefy from '../../assets/integrations/beefy.svg';
@@ -27,13 +26,7 @@ const responsive = {
     }
 };
 
-const EcosystemSlider = ({ deviceType }) => {
-    const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
-    const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
-    const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
-    const [openLeverageInfo, setOpenLeverageInfo] = useState({tvl:0, apy:0})
-    const [wombatInfo, setWombatInfo] = useState({tvl:0, apy:0})
-
+const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo, alpacaInfo, wombatInfo }) => {
 
     const list = [
         {
@@ -97,18 +90,6 @@ const EcosystemSlider = ({ deviceType }) => {
             apy: <><span>upto </span>{openLeverageInfo.apy}% <span>APY</span></>
         }
     ];
-
-
-    useEffect(()=>{
-        const fetchApi = async () =>{
-            setAlpacaInfo(await fetchAlpaca());
-            setBeefyInfo(await fetchBeefyInfo());
-            setPanCakeInfo(await fetchPancakeInfo());
-            setOpenLeverageInfo(await fetchOpenLeverage());
-            setWombatInfo(await fetchWombat());
-        }
-        fetchApi();
-    }, [])
 
     return (
         <section className="ecosystem-section">

@@ -101,15 +101,15 @@ const Comparison = () => {
                            <div className="item">
                                <div className="type"></div>
                                <div className="bnb">
-                                   <div className="buttons">
-                                       <a rel="noopener noreferrer" target="_blank" href={COSMOS_URL} className="button-link primary">
+                                   <div className="buttons m-0">
+                                       <a rel="noopener noreferrer" target="_blank" href={COSMOS_URL} className="button-link primary  m-0">
                                            Go to app
                                        </a>
                                    </div>
                                </div>
                                <div className="stk-bnb">
-                                   <div className="buttons">
-                                       <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_MIGRATION_URL} className="button-link primary disable">
+                                   <div className="buttons m-0">
+                                       <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_MIGRATION_URL} className="button-link primary disable  m-0">
                                            Coming Soon
                                        </a>
                                    </div>
@@ -129,8 +129,8 @@ const Comparison = () => {
                                     Migration of stkATOM(ERC-20) to Persistence Core-1 Chain
                                 </p>
                             </div>
-                            <div className="buttons">
-                                <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_MIGRATION_URL} className="button-link primary">
+                            <div className="buttons m-0">
+                                <a rel="noopener noreferrer" target="_blank" href={STK_ATOM_MIGRATION_URL} className="button-link primary  m-0">
                                     Learn More
                                 </a>
                             </div>

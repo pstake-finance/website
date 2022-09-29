@@ -128,7 +128,19 @@ body a {
         text-transform: uppercase;
       }
     }
-
+    .coming-soon{
+      .app-btn{
+        width: 140px;
+        text-align: center;
+        transition: transform 250ms;
+        &:after {
+          content: "Go To App";
+        }
+        &:hover::after {
+          content: "Coming Soon";
+        }
+      }
+    }
     button {
       color: #fff;
       background: #e50913;
