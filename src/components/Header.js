@@ -30,7 +30,6 @@ import Icon from "./Icon";
 const Header = () => {
 
     const { t } = useTranslation();
-    const [banner, setBanner] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const [chevronChange, setChevronChange] = useState(false);
     const toggleMenu = () => {
@@ -69,10 +68,6 @@ const Header = () => {
 
     }
 
-    const closeBanner = () => {
-        setBanner(false);
-    }
-
     let auditURL;
     let docsURL;
     let faqURL;
@@ -98,19 +93,6 @@ const Header = () => {
     return (
         <React.Fragment>
             <div id="is-sticky" className="top-bar">
-                {window.location.pathname === "/bnb" ?
-                    <div className={!banner ? 'd-none' : "top-banner-section"}>
-                        <a className="content" href="https://galaxy.eco/pSTAKE/campaign/GCnmjUt4CL" target="_blank"
-                           rel="noopener noreferrer">
-                            Earn up to 52% APY on your BNB in the first ever <b>BNB Stake-to-Earn campaign</b> in Web3 history
-                            <Icon viewClass="right-arrow" icon="right-arrow"/>
-                        </a>
-                        <div onClick={closeBanner}>
-                            <Icon viewClass="close" icon="close"/>
-                        </div>
-                    </div>
-                    : null
-                }
                 <nav className={"navbar navbar-expand-lg navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
                     <div className="container mb-pad">
                         <Link className="navbar-brand logo text-uppercase" to="/">
