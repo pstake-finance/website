@@ -104,7 +104,7 @@ export const IMMUNEFI_WEB_URL = "https://immunefi.com/bounty/pstake/?utm_source=
 export const STK_ATOM_MIGRATION_URL = "https://forum.pstake.finance/t/discussion-on-migration-of-stkatom-from-ethereum-to-persistence-core-1/417"
 export const COSMOS_URL = "https://cosmos.pstake.finance/"
 export const STK_ATOM_BLOG_URL = "https://blog.pstake.finance/category/stkatom/"
-export const STK_ATOM_TWITTER_URL = "https://twitter.com/pSTAKE_stkATOM?t=dcfl2wiekpZ2dHsdqMi9aQ&s=09"
+export const STK_ATOM_TWITTER_URL = "https://twitter.com/pstake_cosmos?s=11&t=E_q2T3rK9Bwiywy_YCvo5A"
 export const STK_ATOM_BLOG_ONE_URL = "https://blog.pstake.finance/2022/09/15/a-letter-to-the-cosmos-community-from-pstake/"
 export const STK_ATOM_BLOG_ONE_IMAGE_URL = "https://blog.pstake.finance/wp-content/uploads/2022/09/atom.png"
 export const STK_ATOM_BLOG_TWO_URL = "https://blog.pstake.finance/2022/09/09/liquid-staking-with-ibc-atom-stkatom/"
