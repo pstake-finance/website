@@ -11,6 +11,7 @@ import Faq from "../containers/binance/Faq";
 import ScrollToTop from "../components/ScrollToTop";
 import EcosystemSlider from "../containers/binance/EcosystemSilder";
 import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo, fetchWombat} from "../actions/api";
+import { useLocation } from "react-router-dom";
 
 const Binance = () => {
     const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
@@ -18,6 +19,23 @@ const Binance = () => {
     const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
     const [openLeverageInfo, setOpenLeverageInfo] = useState({tvl:0, apy:0})
     const [wombatInfo, setWombatInfo] = useState({tvl:0, apy:0})
+    const location = useLocation();
+
+    useEffect(() => {
+        if (window.location.pathname === '/bnb') {
+            const script = document.createElement('script');
+
+            script.src = "https://static.zdassets.com/ekr/snippet.js?key=90d2e772-18c1-44ad-8eab-6789a882b5f3";
+            script.async = true;
+            script.id = "ze-snippet";
+
+            document.body.appendChild(script);
+
+            return () => {
+                document.body.removeChild(script);
+            }
+        }
+    }, [location]);
 
     useEffect(()=>{
         const fetchApi = async () =>{
