@@ -73,7 +73,7 @@ export const AUDIT = "https://audit.one/";
 export const COSMOSTATION = "https://www.cosmostation.io/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const REGISTER = "https://coinlist.co/pstake";
 export const LEARN_MORE = "https://blog.pstake.finance/2021/09/09/introducing-pstake/";
-export const VIDEO_URL = "https://www.youtube.com/embed/0sMoynPrA4w";
+export const VIDEO_URL = "https://www.youtube.com/embed/eoC5aj50GNg";
 export const GUIDE_VIDEO_URL = "https://www.youtube.com/embed/sPHdPXcTjqA";
 export const AOK_URL = "https://github.com/persistenceOne/pStake-auditReports";
 export const AS_SEEN_ON1_URL = "https://www.forbes.com/sites/lawrencewintermeyer/2021/07/01/collaboration-and-interoperability-over-tribalism-signals-maturity-developing-in-defi/?sh=3f285e0e6644";
