@@ -1,7 +1,7 @@
 export const UNSTAKEDTOKENS = "wTOKENs";
 export const STAKEDTOKENS = "pTOKENs";
 export const STAKEDTOKEN = "pTOKEN";
-export const ANALYTICS = "UA-199452342-1";
+export const ANALYTICS = "G-H8D8RR8PNL";
 export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
 export const PSTAKE_BRIDGE_URL = "https://bridge.persistence.one/";

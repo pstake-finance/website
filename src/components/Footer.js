@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 import Icon from "./Icon";
 import {Link} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
