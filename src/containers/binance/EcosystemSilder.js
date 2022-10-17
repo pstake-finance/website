@@ -6,6 +6,7 @@ import alpaca from '../../assets/integrations/alpaca.svg';
 import beefy from '../../assets/integrations/beefy.svg';
 import wombat from '../../assets/integrations/wombat.svg';
 import leverage from '../../assets/integrations/leverage.svg';
+import midas from '../../assets/integrations/midas.svg';
 import Card from "react-bootstrap/Card";
 
 const responsive = {
@@ -57,7 +58,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
             name:'Wombat',
             tag:'DEX',
             logoUrl: wombat,
-            content:<span className='mb-4 d-block '>Provide single sided stkBNB liquidity to earn trading fees, $PSTAKE and $WOM emissions</span>,
+            content:<span className='mb-4 d-block'>Provide single sided stkBNB liquidity to earn trading fees, $PSTAKE and $WOM emissions</span>,
             primaryButtonText:'Add liquidity',
             primaryButtonUrl:'https://app.wombat.exchange/pool',
             secondaryButtonText:'Learn More',
@@ -88,6 +89,18 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
             secondaryButtonUrl:'https://www.youtube.com/watch?v=UgiEqmKSOWI',
             tvl:<>${parseInt(openLeverageInfo.tvl).toLocaleString()} <span>TVL</span></>,
             apy: <><span>upto </span>{openLeverageInfo.apy}% <span>APY</span></>
+        },
+        {
+            name:'Midas Capital',
+            tag:'Borrowing/Lending',
+            logoUrl: midas,
+            content:<span className='mb-4 d-block '>stkBNB/BNB/stkBNB-BNB LP token as collateral to borrow BNB</span>,
+            primaryButtonText:'Borrow',
+            primaryButtonUrl:`https://app.midascapital.xyz/56/pool/11`,
+            secondaryButtonText:'Learn More',
+            secondaryButtonUrl:'',
+            tvl:<span className="invisible">''<span>TVL</span></span>,
+            apy:''
         }
     ];
 
@@ -103,7 +116,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
                     responsive={responsive}
                     autoPlay={false}
                 >
-                    {list.slice(0, 5).map((item, index) => {
+                    {list.slice(0, 6).map((item, index) => {
                         return (
                             <Card key={index}>
                                 <Card.Body className="pancake">
@@ -130,7 +143,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
                                         <a rel="noopener noreferrer"
                                            target="_blank"
                                            href={item.secondaryButtonUrl}
-                                           className={`button-link secondary ${item.name === 'Wombat' ? 'pointer-events-none' : ''}`}
+                                           className={`button-link secondary ${item.name === 'Wombat' || item.name === 'Midas Capital' ? 'pointer-events-none' : ''}`}
                                         >
                                             {item.secondaryButtonText}
                                         </a>
