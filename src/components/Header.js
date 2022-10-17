@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 
 import {
     PSTAKE_TWITTER_URL,

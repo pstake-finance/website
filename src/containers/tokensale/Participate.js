@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
-import ReactGa from 'react-ga';
+import ReactGa from 'react-ga4';
 
 import Icon from "../../components/Icon";
 

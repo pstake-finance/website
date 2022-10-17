@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Route, Switch, withRouter, useLocation} from "react-router-dom";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
