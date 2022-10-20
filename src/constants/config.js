@@ -109,7 +109,7 @@ export const STK_ATOM_BLOG_ONE_URL = "https://blog.pstake.finance/2022/09/15/a-l
 export const STK_ATOM_BLOG_ONE_IMAGE_URL = "https://blog.pstake.finance/wp-content/uploads/2022/09/atom.png"
 export const STK_ATOM_BLOG_TWO_URL = "https://blog.pstake.finance/2022/09/09/liquid-staking-with-ibc-atom-stkatom/"
 export const STK_ATOM_BLOG_TWO_IMAGE_URL = "https://blog.pstake.finance/wp-content/uploads/2022/09/Liquid-Staking-with-IBC.png"
-export const STK_ATOM_SUBSCRIBE_URL = "https://www.getrevue.co/profile/pSTAKE_stkATOM"
+export const STK_ATOM_SUBSCRIBE_URL = "https://www.getrevue.co/profile/pSTAKE_Cosmos"
 //native blockchain
 export const CURRENCY = {
     solana: {
