@@ -64,7 +64,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
             secondaryButtonText:'Learn More',
             secondaryButtonUrl:'https://youtube.com/clip/UgkxCZAHN3sTY8sH3FD_UoKvYZns6oZBFaza',
             tvl:<>${parseInt(wombatInfo.tvl).toLocaleString()} <span>TVL</span></>,
-            apy: ''
+            apy: <>{wombatInfo.apy}% <span>APY</span></>
         },
         {
             name:'Beefy',
