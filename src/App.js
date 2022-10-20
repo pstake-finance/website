@@ -20,7 +20,7 @@ ReactGA.initialize(ANALYTICS)
 
 const trackPage = page => {
     ReactGA.set({ page });
-    ReactGA.pageview(page);
+    ReactGA.send(page);
   };
 
 const App = () => {
