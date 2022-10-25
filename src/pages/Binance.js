@@ -10,7 +10,14 @@ import Validators from "../containers/binance/Validators";
 import Faq from "../containers/binance/Faq";
 import ScrollToTop from "../components/ScrollToTop";
 import EcosystemSlider from "../containers/binance/EcosystemSilder";
-import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo, fetchWombat} from "../actions/api";
+import {
+    fetchAlpaca,
+    fetchBeefyInfo,
+    fetchOpenLeverage,
+    fetchPancakeInfo,
+    fetchShield,
+    fetchWombat
+} from "../actions/api";
 
 const Binance = () => {
     const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
@@ -18,14 +25,25 @@ const Binance = () => {
     const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
     const [openLeverageInfo, setOpenLeverageInfo] = useState({tvl:0, apy:0})
     const [wombatInfo, setWombatInfo] = useState({tvl:0, apy:0})
+    const [shieldInfo, setShieldInfo] = useState({tvl:0, apy:0})
 
     useEffect(()=>{
         const fetchApi = async () =>{
-            setAlpacaInfo(await fetchAlpaca());
-            setBeefyInfo(await fetchBeefyInfo());
-            setPanCakeInfo(await fetchPancakeInfo());
-            setOpenLeverageInfo(await fetchOpenLeverage());
-            setWombatInfo(await fetchWombat());
+            const [alpaca, beefyInfo, pancake, openLeverage, wombat, shield] = await Promise.all(
+                [
+                    fetchAlpaca(),
+                    fetchBeefyInfo(),
+                    fetchPancakeInfo(),
+                    fetchOpenLeverage(),
+                    fetchWombat(),
+                    fetchShield()
+                ]);
+            setAlpacaInfo(alpaca);
+            setBeefyInfo(beefyInfo);
+            setPanCakeInfo(pancake);
+            setOpenLeverageInfo(openLeverage);
+            setWombatInfo(wombat);
+            setShieldInfo(shield);
         }
         fetchApi();
     }, [])
@@ -50,6 +68,7 @@ const Binance = () => {
                     pancakeInfo={pancakeInfo}
                     openLeverageInfo={openLeverageInfo}
                     wombatInfo={wombatInfo}
+                    shieldInfo={shieldInfo}
                 />
                 <Guides/>
                 <Validators/>

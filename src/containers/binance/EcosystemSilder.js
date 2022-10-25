@@ -7,6 +7,7 @@ import beefy from '../../assets/integrations/beefy.svg';
 import wombat from '../../assets/integrations/wombat.svg';
 import leverage from '../../assets/integrations/leverage.svg';
 import midas from '../../assets/integrations/midas.svg';
+import shield from '../../assets/integrations/shield.svg';
 import Card from "react-bootstrap/Card";
 
 const responsive = {
@@ -27,7 +28,7 @@ const responsive = {
     }
 };
 
-const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo, alpacaInfo, wombatInfo }) => {
+const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo, alpacaInfo, wombatInfo, shieldInfo }) => {
 
     const list = [
         {
@@ -101,6 +102,18 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
             secondaryButtonUrl:'',
             tvl:<span className="invisible">''<span>TVL</span></span>,
             apy:''
+        },
+        {
+            name:'Shield',
+            tag:'Options',
+            logoUrl: shield,
+            content:<span className='mb-4 d-block '>Deposit stkBNB to an M-vault option pool and earn stable rewards</span>,
+            primaryButtonText:'Deposit',
+            primaryButtonUrl:`https://app.shieldex.io/dds.html#/vault`,
+            secondaryButtonText:'Learn More',
+            secondaryButtonUrl:'',
+            tvl:'',
+            apy: <>{shieldInfo.apy}% <span>APY</span></>
         }
     ];
 
@@ -116,7 +129,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
                     responsive={responsive}
                     autoPlay={false}
                 >
-                    {list.slice(0, 6).map((item, index) => {
+                    {list.slice(0, list.length).map((item, index) => {
                         return (
                             <Card key={index}>
                                 <Card.Body className="pancake">

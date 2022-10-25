@@ -1,4 +1,7 @@
 import Axios from "axios";
+import {bigNumberToEther, shieldContractsAddress, SPEEDY_NODE_URL} from "../utils/helpers";
+import {ethers} from "ethers";
+import shield from '../utils/ABIs/shield.json';
 const ALPACA_API = "https://alpaca-static-api.alpacafinance.org/bsc/v1/landing/summary.json"
 const BEEFY_APY_API = "https://api.beefy.finance/apy"
 const BEEFY_APY_TVL = "https://api.beefy.finance/tvl"
@@ -132,6 +135,19 @@ export const fetchPancakeInfo = async () => {
             return {tvl:Number(responseJson.data.pair.reserveUSD).toFixed(2), apy:0}
         }
     }catch (e) {
+        return {tvl: 0, apy: 0}
+    }
+}
+
+export const fetchShield = async () => {
+
+    try{
+        const provider = new ethers.providers.JsonRpcProvider(SPEEDY_NODE_URL);
+        const contract = new ethers.Contract(shieldContractsAddress, shield, provider);
+        const response = await contract.getLatestRoundInfo();
+        const apy = bigNumberToEther(response['APY'])*100;
+        return {tvl: 0, apy: apy.toFixed(2)}
+    } catch (e) {
         return {tvl: 0, apy: 0}
     }
 }

@@ -5,6 +5,8 @@ export const stakePoolContractAddress = process.env.REACT_APP_STAKE_POOL_CONTRAC
 export const stakePoolContractABI = stakepool.abi;
 export const SPEEDY_NODE_URL = process.env.REACT_APP_BNB_CHAIN_RPC_URL
 
+export const shieldContractsAddress  = process.env.REACT_APP_SHIELD_CONTRACT_ADDRESS;
+
 export const APP_ETHERS_PROVIDER = new ethers.providers.JsonRpcProvider(SPEEDY_NODE_URL);
 export const STAKE_POOL_CONTRACT = new ethers.Contract(stakePoolContractAddress, stakePoolContractABI, APP_ETHERS_PROVIDER);
 
