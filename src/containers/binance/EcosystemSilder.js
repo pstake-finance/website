@@ -156,7 +156,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
                                         <a rel="noopener noreferrer"
                                            target="_blank"
                                            href={item.secondaryButtonUrl}
-                                           className={`button-link secondary ${item.name === 'Wombat' || item.name === 'Midas Capital' ? 'pointer-events-none' : ''}`}
+                                           className={`button-link secondary ${item.name === 'Wombat' || item.name === 'Midas Capital' || item.name === 'Shield' ? 'pointer-events-none' : ''}`}
                                         >
                                             {item.secondaryButtonText}
                                         </a>
