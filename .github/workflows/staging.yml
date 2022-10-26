@@ -29,6 +29,7 @@ jobs:
           REACT_APP_STAKE_POOL_CONTRACT_ADDRESS: '0x7CdFba1Ee6A8D1e688B4B34A56b62287ce400802'
           REACT_APP_BNB_CHAIN_RPC_URL: 'https://data-seed-prebsc-1-s1.binance.org:8545'
           REACT_APP_ONE_SIGNAL_APP_ID: 'd9ecac74-9446-4df2-9a04-ba68bee2caee'
+          REACT_APP_SHIELD_CONTRACT_ADDRESS: '0xd48096fd351f429bb15eec36c8675fcdef12d499'
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:
