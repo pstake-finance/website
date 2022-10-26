@@ -9,7 +9,7 @@ export const OPEN_LEVERAGE_API = 'https://bnb.openleverage.finance/api/info/pool
 export const PANCAKE_API = 'https://bsc.streamingfast.io/subgraphs/name/pancakeswap/exchange-v2'
 export const WOMBAT_API = 'https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-exchange'
 export const WOMBAT_APR_API ='https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-apr'
-
+export const SHIELD_TVL_API = 'https://api2.shieldex.io/mainnet/mvault/getTVL'
 
 export const fetchAlpaca = async () => {
     try {
@@ -139,14 +139,30 @@ export const fetchPancakeInfo = async () => {
     }
 }
 
-export const fetchShield = async () => {
+export const fetchShieldTVL = async () => {
+    try {
+        const res = await Axios.post(SHIELD_TVL_API, {
+            "vault":shieldContractsAddress,
+            "nodeType":"BSC"
+        })
+        if (res.data.code === 200) {
+            const data = res.data.msg;
+            return bigNumberToEther(data.toString())
+        }
+        return 0
+    } catch (e) {
+        return 0;
+    }
+}
 
+export const fetchShield = async () => {
     try{
         const provider = new ethers.providers.JsonRpcProvider(SPEEDY_NODE_URL);
         const contract = new ethers.Contract(shieldContractsAddress, shield, provider);
         const response = await contract.getLatestRoundInfo();
         const apy = bigNumberToEther(response['APY'])*100;
-        return {tvl: 0, apy: apy.toFixed(2)}
+        const tvl = await fetchShieldTVL();
+        return {tvl: parseInt(tvl).toLocaleString(), apy: apy.toFixed(2)}
     } catch (e) {
         return {tvl: 0, apy: 0}
     }

@@ -112,7 +112,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
             primaryButtonUrl:`https://app.shieldex.io/dds.html#/vault`,
             secondaryButtonText:'Learn More',
             secondaryButtonUrl:'',
-            tvl:'',
+            tvl:<>${shieldInfo.tvl} <span>TVL</span></>,
             apy: <>{shieldInfo.apy}% <span>APY</span></>
         }
     ];
