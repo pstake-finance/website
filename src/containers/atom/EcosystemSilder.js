@@ -35,7 +35,6 @@ const EcosystemSlider = ({ deviceType }) => {
     };
     fetchApi();
   }, []);
-  console.log({ osmosisInfo });
   const list = [
     {
       name: "Osmosis",
