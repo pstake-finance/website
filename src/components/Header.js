@@ -26,6 +26,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 import Icon from "./Icon";
+import BannerTop from "./BannerTop";
 
 const Header = () => {
 
@@ -93,6 +94,7 @@ const Header = () => {
     return (
         <React.Fragment>
             <div id="is-sticky" className="top-bar">
+                <BannerTop/>
                 <nav className={"navbar navbar-expand-lg navbar-custom sticky " + window.location.pathname.split('/')[1]} id="nav-bar">
                     <div className="container mb-pad">
                         <Link className="navbar-brand logo text-uppercase" to="/">

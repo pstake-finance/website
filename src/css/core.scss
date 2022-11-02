@@ -9,17 +9,19 @@ body a {
 }
 
 .top-banner-section{
-  background: #efb90b;
+  background-image:url(../assets/banner_bg.svg),  radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDC 20.4%, #83339D 50%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, contain;
   text-align: center;
   padding: 4px 40px 4px 0;
   position: relative;
   .content{
-    color: #000;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
     margin: 0;
-    &:hover{
-      text-decoration: underline;
-    }
     .icon{
       margin-left: 10px;
       fill: #000;
@@ -31,7 +33,7 @@ body a {
   }
   .icon-close{
     width: 10px;
-    fill: #000;
+    fill: #fff;
     cursor: pointer;
     position: absolute;
     right: 20px;
