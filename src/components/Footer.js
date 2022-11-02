@@ -65,8 +65,8 @@ const Footer = () => {
             <section className="footer-section">
                 <h3 className="section-title">{t("Explore the Community")}</h3>
                 <p className="section-sub-title">
-                    Join the discussion on one of our many fronts. Learn about the pSTAKE Liquid Staking Ecosystem,
-                    meet others like you & make your voice heard.
+                {window.location.pathname === "/atom" ? "Join the discussion on liquid staking ATOM. Learn about the pSTAKE Liquid Staking Ecosystem, meet others like you & make your voice heard." 
+                : "Join the discussion on one of our many fronts. Learn about the pSTAKE Liquid Staking Ecosystem, meet others like you & make your voice heard." }
                 </p>
                 <div className="container">
                     <div className="icon-list d-flex align-items-center justify-content-center m-auto">
