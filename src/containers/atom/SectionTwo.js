@@ -17,10 +17,9 @@ const SectionTwo = () => {
                                     <Icon viewClass="use-case" icon="usecase2"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">High Yields</p>
+                                    <p className="card-heading">ATOM yields like never before</p>
                                     <p className="card-content">
-                                        Generate high yields with auto-compounding ATOM staking rewards & participate
-                                        in multiple DeFi opportunities with your staked ATOM
+                                    Generate the highest yields with auto-compounding ATOM staking rewards & various stkATOM DeFi opportunities, all while securing the Cosmos Hub
                                     </p>
                                 </div>
                             </Card.Body>
@@ -31,10 +30,9 @@ const SectionTwo = () => {
                                     <Icon viewClass="use-case" icon="security"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">Strong Security</p>
+                                    <p className="card-heading">Safe. Secure. Solid.</p>
                                     <p className="card-content">
-                                        Protocol security has been a core focus. Security audits, bug-bounty program
-                                        and on-chain monitoring measures are underway
+                                    Security audits from Halborn, Immunefi Bug Bounty, and on-chain monitoring measures ensure you have a secure experience while liquid staking your ATOM
                                     </p>
                                 </div>
                             </Card.Body>
@@ -47,10 +45,9 @@ const SectionTwo = () => {
                                     <Icon viewClass="use-case" icon="enhance-ui"/>
                                 </div>
                                 <div className="content">
-                                    <p className="card-heading">Enhanced User Experience</p>
+                                    <p className="card-heading">By Cosmonauts. For Cosmonauts.</p>
                                     <p className="card-content">
-                                        Smooth and seamless liquid staking with minimal fees, fast transactions, high
-                                        rewards and IBC interoperability
+                                    Minimal fees, fast transactions, high rewards, and IBC interoperability make liquid staking your ATOM smooth and seamless
                                     </p>
                                 </div>
                             </Card.Body>

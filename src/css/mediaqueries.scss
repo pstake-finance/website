@@ -1,4 +1,3 @@
-
 @media (min-width: 1400px) {
   .container,
   .container-lg,
@@ -18,13 +17,13 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .stay-updated .blog-articles a{
+  .stay-updated .blog-articles a {
     height: auto;
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .home-page .banner-main-section{
+  .home-page .banner-main-section {
     height: auto;
   }
   .tokensale .investors .investor-list img {
@@ -151,7 +150,7 @@
   .tokensale .investors .section-title,
   .tokensale .tokenomics .section-title,
   .binance .section-title,
-  .section-title{
+  .section-title {
     font-size: 28px;
   }
   .info-section .image-section img.ellipse-gradient {
@@ -202,7 +201,8 @@
   .features-section .feature-gradient {
     display: none;
   }
-  .top-bar .navbar.navbar-custom .navbar-nav a, .top-bar .navbar.navbar-custom .navbar-nav p{
+  .top-bar .navbar.navbar-custom .navbar-nav a,
+  .top-bar .navbar.navbar-custom .navbar-nav p {
     color: #fff;
   }
   .top-bar .navbar.navbar-custom button {
@@ -241,15 +241,15 @@
   }
   .footer-section {
     .icon-list .item {
-      &:first-child{
-        .item-body{
+      &:first-child {
+        .item-body {
           margin-bottom: 30px;
         }
       }
     }
   }
-  .atom .comparison-section {
-    .migration-card{
+  .atom .migration-section {
+    .migration-card {
       .card-body {
         justify-content: center !important;
         .content {
@@ -259,7 +259,7 @@
             text-align: center;
           }
         }
-        .buttons{
+        .buttons {
           margin-top: 10px;
         }
       }
@@ -297,11 +297,12 @@
   .pos-section .info-banner-heading,
   .stake-section .section-title,
   .second-section .section-title,
-  .binance .section-title, .atom .section-title{
+  .binance .section-title,
+  .atom .section-title {
     font-size: 24px;
   }
   .binance .banner-section .banner-main-section .logo,
-  .atom .banner-section .banner-main-section .logo{
+  .atom .banner-section .banner-main-section .logo {
     width: 70px;
     height: 70px;
     display: flex;
@@ -395,40 +396,42 @@
     }
   }
   .binance {
-    .guides-section .row{
+    .guides-section .row {
       flex-direction: column;
     }
-    .ecosystem-section .card{
+    .ecosystem-section .card {
       flex: 100%;
     }
-    .audited-section .audited-list .tracking{
+    .audited-section .audited-list .tracking {
       margin-top: 30px;
-      .bug-bounty{
+      .bug-bounty {
         margin-top: 30px;
       }
     }
   }
   .footer-section .subscribe {
-    .item-body{
+    .item-body {
       display: block;
       text-align: center;
-      .heading{
+      .heading {
         margin-bottom: 1rem;
       }
-      .button-link{
+      .button-link {
         margin: auto;
       }
     }
   }
   .binance .comparison-section .list,
-  .atom .comparison-section .list{
-    .item-header, .list-data .item{
+  .atom .comparison-section .list {
+    .item-header,
+    .list-data .item {
       justify-content: unset;
     }
   }
 }
 @media only screen and (max-width: 576px) {
-  .tokensale .investors .investor-list, .tokensale .investors .section-title{
+  .tokensale .investors .investor-list,
+  .tokensale .investors .section-title {
     text-align: center;
   }
   .banner-section .banner-buttons {
@@ -440,26 +443,26 @@
     flex-direction: column;
     align-items: center;
   }
-  .binance{
-    .ecosystem-section .card .card-body .buttons{
+  .binance {
+    .ecosystem-section .card .card-body .buttons {
       flex-direction: column;
-      .button-link{
-        &:first-child{
+      .button-link {
+        &:first-child {
           margin-bottom: 10px;
         }
       }
     }
   }
-  .banner-section .network-stats{
+  .banner-section .network-stats {
     flex-direction: column;
   }
   .blogs-section .blog-articles {
-    .custom-card{
+    .custom-card {
       height: auto;
     }
-    a .blog-image{
+    a .blog-image {
       height: auto;
-      .card-img-top{
+      .card-img-top {
         max-height: initial;
         height: auto;
       }

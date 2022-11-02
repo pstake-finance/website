@@ -12,7 +12,7 @@ const Guides = () => {
         <React.Fragment>
             <section className="guides-section">
                 <div className="container">
-                    <h3 className="section-title">{t("GUIDES_TUTORIALS")}</h3>
+                    <h3 className="section-title">{t("GUIDES_TUTORIALS")} to liquid stake your ATOM</h3>
                     <div className="row">
                         <Card className="col-md-6">
                             <a href={GUIDE_VIDEO_URL}  rel="noopener noreferrer" target="_blank" className="card-body">
@@ -27,10 +27,10 @@ const Guides = () => {
                                     </div>
                                     <div className="content">
                                         <p className="heading">
-                                            Liquid Staking BNB
+                                            Liquid Staking ATOM
                                             <Icon viewClass="redirect" icon="redirect" />
                                         </p>
-                                        <p className="text">Step by step video tutorial on staking BNB through pSTAKE</p>
+                                        <p className="text">Step by step video tutorial on liquid staking ATOM with pSTAKE</p>
                                     </div>
                                 </div>
                             </a>
@@ -44,10 +44,10 @@ const Guides = () => {
                                     </div>
                                     <div className="content">
                                         <p className="heading">
-                                            stkBNB User Guide
+                                            stkATOM User Guide
                                             <Icon viewClass="redirect" icon="redirect" />
                                         </p>
-                                        <p className="text"> Walk-through of how to stake BNB and use it in DeFI with screenshots</p>
+                                        <p className="text"> Walk-through of how to liquid stake ATOM and use it in DeFi</p>
                                     </div>
                                 </div>
                             </a>

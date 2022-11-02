@@ -11,7 +11,7 @@ const FeaturedBlogs = () => {
     return (
         <React.Fragment>
             <section className="blogs-section">
-                <h3 className="section-title">{t("FEATURED_BLOGS")}</h3>
+                <h3 className="section-title">{t("FEATURED_BLOGS")} on Liquid Staking ATOM</h3>
                 <div className="container" data-aos="fade-up">
                     <div className="row justify-content-center">
                         <div className="col-lg-4 col-md-6 blog-articles left">
