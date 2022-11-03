@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import stkAtom from "../../assets/stkAtom.svg";
-import stkATOM2 from "../../assets/stkATOM2.svg";
-import { COSMOS_URL, STK_ATOM_MIGRATION_URL } from "../../constants/config";
-import Icon from "../../components/Icon";
-import stkATOM from "../../assets/stkAtom.svg";
+import atom from "../../assets/atom.svg";
+import { APR_DEFAULT, ATOM_URL } from "../../constants/config";
+import { getAPR } from "../../actions/api";
 
 const Comparison = () => {
+  const [apr, setApr] = useState(APR_DEFAULT);
+  useEffect(() => {
+    const fetchValues = async () => {
+      setApr(await getAPR());
+    };
+    fetchValues();
+  }, []);
   return (
     <React.Fragment>
       <section className="comparison-section" data-aos="fade-up">
@@ -15,7 +21,7 @@ const Comparison = () => {
             <div className="item-header">
               <div className="type"></div>
               <div className="bnb">
-                <img src={stkATOM2} alt="ATOM Logo" />
+                <img src={atom} alt="ATOM Logo" />
                 Staking $ATOM
               </div>
               <div className="stk-bnb">
@@ -38,7 +44,9 @@ const Comparison = () => {
               <div className="item">
                 <div className="type">APR</div>
                 <div className="bnb">Average ~17.5 %</div>
-                <div className="stk-bnb">Up to Y %</div>
+                <div className="stk-bnb">
+                  Up to ~{apr === -1 ? APR_DEFAULT : apr} %
+                </div>
               </div>
               <div className="item">
                 <div className="type">Auto-compounding rewards</div>
@@ -106,7 +114,7 @@ const Comparison = () => {
                     <a
                       rel="noopener noreferrer"
                       target="_blank"
-                      href={COSMOS_URL}
+                      href={ATOM_URL}
                       className="button-link primary  m-0"
                     >
                       Go to app

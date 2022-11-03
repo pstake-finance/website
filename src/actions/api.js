@@ -5,11 +5,17 @@ import {
   shieldContractsAddress,
   SPEEDY_NODE_URL
 } from "../utils/helpers";
+import { QueryClientImpl as StakingQueryClient } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { QueryClientImpl as BankQuery } from "cosmjs-types/cosmos/bank/v1beta1/query";
 import { QueryClientImpl } from "../helpers/proto-codecs/codec/pstake/pstake/lscosmos/v1beta1/query";
 import { ethers } from "ethers";
 import shield from "../utils/ABIs/shield.json";
-import { STK_ATOM_MINIMAL_DENOM, TVL } from "../constants/config";
+import {
+  APR_BASE_RATE,
+  APR_DEFAULT,
+  STK_ATOM_MINIMAL_DENOM,
+  TVL
+} from "../constants/config";
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
 const ALPACA_API =
@@ -257,5 +263,99 @@ export const getTVU = async (rpc) => {
     return 0;
   } catch (e) {
     return 0;
+  }
+};
+
+export const getCommission = async () => {
+  try {
+    const weight = 1;
+    let commission = 0;
+    const rpcClient = await RpcClient(
+      "https://rpc.devnet.persistence.pstake.finance"
+    );
+    const pstakeQueryService = new QueryClientImpl(rpcClient);
+    const allowListedValidators =
+      await pstakeQueryService.AllowListedValidators({});
+    const cosmosRpcClient = await RpcClient(
+      "https://rpc.devnet.cosmos.pstake.finance"
+    );
+    const cosmosQueryService = new StakingQueryClient(cosmosRpcClient);
+    const validators =
+      allowListedValidators?.allowListedValidators?.allowListedValidators;
+    const commissionRates = [];
+
+    if (validators && validators?.length !== 0) {
+      // keep the commission rates of validators in an array
+      for (const addr of validators) {
+        const validator = await cosmosQueryService.Validator({
+          validatorAddr: addr.validatorAddress
+        });
+        let commissionRate =
+          parseFloat(
+            decimalize(
+              validator.validator.commission
+                ? validator.validator.commission.commissionRates.rate
+                : 0,
+              18
+            )
+          ) * 100;
+        commissionRates.push(commissionRate);
+      }
+      /* Calculating the average commission rate of all the validators in the network. */
+      commission =
+        (weight * commissionRates.reduce((a, b) => a + b, 0)) /
+        validators.length;
+    } else {
+      commission = 0;
+    }
+    return commission;
+  } catch (e) {
+    return 0;
+  }
+};
+
+/**
+ * It fetches the incentives for the delegator
+ * @returns the incentives for the delegator.
+ */
+export const getIncentives = async () => {
+  try {
+    let incentives = 0;
+    const rpcClient = await RpcClient(
+      "https://rpc.devnet.persistence.pstake.finance"
+    );
+    const pstakeQueryService = new QueryClientImpl(rpcClient);
+    const delegationState = await pstakeQueryService.DelegationState({});
+    const hostAccountDelegations =
+      delegationState?.delegationState?.hostAccountDelegations;
+
+    let stakedAmount = 0;
+    if (hostAccountDelegations) {
+      for (const amount of hostAccountDelegations) {
+        stakedAmount += parseInt(amount?.amount?.amount, 10);
+      }
+    }
+
+    const balance = (await pstakeQueryService.RewardsBoosterAccount({})).balance
+      ?.amount;
+
+    if (balance) {
+      incentives = (parseInt(balance, 10) * 365) / stakedAmount;
+    }
+    return incentives;
+  } catch (e) {
+    return 0;
+  }
+};
+
+export const getAPR = async () => {
+  try {
+    const baseRate = APR_BASE_RATE;
+    const commission = await getCommission();
+    const incentives = await getIncentives();
+    const apr = baseRate - (commission / 100) * baseRate + incentives;
+    return isNaN(apr) ? APR_DEFAULT : apr.toFixed(2);
+  } catch (e) {
+    return -1;
   }
 };
