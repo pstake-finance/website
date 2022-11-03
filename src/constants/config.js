@@ -176,6 +176,8 @@ export const STK_ATOM_SUBSCRIBE_URL =
 
 export const TVL = "tvl";
 export const STK_ATOM_MINIMAL_DENOM = "stk/uatom";
+export const APR_BASE_RATE = 18.92;
+export const APR_DEFAULT = 15.86;
 //native blockchain
 export const CURRENCY = {
   solana: {
