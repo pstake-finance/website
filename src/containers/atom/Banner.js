@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { getExchangeRate, getTVU } from "../../actions/api";
 import stkAtom from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
-import { STK_ATOM_TWITTER_URL } from "../../constants/config";
+import { ATOM_URL } from "../../constants/config";
 import { decimalize, formatNumber } from "../../utils/helpers";
 
 const Banner = () => {
@@ -43,7 +43,7 @@ const Banner = () => {
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href={STK_ATOM_TWITTER_URL}
+                  href={ATOM_URL}
                   className="button-link"
                 >
                   <span className="hideone">{t("Liquid Stake ATOM")}</span>

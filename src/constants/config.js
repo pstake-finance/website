@@ -173,6 +173,10 @@ export const STK_ATOM_BLOG_TWO_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/09/Liquid-Staking-with-IBC.png";
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
+export const STK_ATOM_SECURITY_AUDIT_URL = "#";
+export const STK_ATOM_DOCS_URL = "#";
+export const STK_ATOM_FAQ_URL = "#";
+export const ATOM_URL = "https://staging.cosmos.pstake.finance/";
 
 export const TVL = "tvl";
 export const STK_ATOM_MINIMAL_DENOM = "stk/uatom";

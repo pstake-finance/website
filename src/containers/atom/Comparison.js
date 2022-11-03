@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import stkAtom from "../../assets/stkAtom.svg";
-import stkATOM2 from "../../assets/stkATOM2.svg";
-import { APR_DEFAULT, COSMOS_URL } from "../../constants/config";
+import atom from "../../assets/atom.svg";
+import { APR_DEFAULT, ATOM_URL } from "../../constants/config";
 import { getAPR } from "../../actions/api";
 
 const Comparison = () => {
@@ -21,7 +21,7 @@ const Comparison = () => {
             <div className="item-header">
               <div className="type"></div>
               <div className="bnb">
-                <img src={stkATOM2} alt="ATOM Logo" />
+                <img src={atom} alt="ATOM Logo" />
                 Staking $ATOM
               </div>
               <div className="stk-bnb">
@@ -114,7 +114,7 @@ const Comparison = () => {
                     <a
                       rel="noopener noreferrer"
                       target="_blank"
-                      href={COSMOS_URL}
+                      href={ATOM_URL}
                       className="button-link primary  m-0"
                     >
                       Go to app

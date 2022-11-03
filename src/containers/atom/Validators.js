@@ -27,7 +27,7 @@ const Validators = ({ deviceType }) => {
       <section className="validators-section">
         <div className="container">
           <h3 className="section-title">
-            Why stake with one validator when you can stake with 62
+            Why stake your ATOM with one validator when you can stake with 62?
           </h3>
           {/* <div className="validator-list"> */}
           <Carousel
@@ -37,6 +37,7 @@ const Validators = ({ deviceType }) => {
             itemClass="image-item"
             responsive={responsive}
             autoPlay={false}
+            slidesToSlide={10}
           >
             {validators_list.map((item, index) => {
               return (

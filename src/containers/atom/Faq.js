@@ -59,11 +59,11 @@ const Faq = () => {
                         What is the minimum and maximum amount of ATOM I can
                         stake?
                       </p>
-                      <ContextAwareToggle eventKey="0">
+                      <ContextAwareToggle eventKey="1">
                         Click me!
                       </ContextAwareToggle>
                     </Card.Header>
-                    <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey="1">
                       <Card.Body>
                         Unlock the full potential of ATOM by simultaneously
                         contributing to Cosmos hub’s security, earning staking
@@ -74,11 +74,11 @@ const Faq = () => {
                   <Card>
                     <Card.Header>
                       <p>Why do I get less STKATOM for my 1 ATOM?</p>
-                      <ContextAwareToggle eventKey="0">
+                      <ContextAwareToggle eventKey="2">
                         Click me!
                       </ContextAwareToggle>
                     </Card.Header>
-                    <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey="2">
                       <Card.Body>
                         Unlock the full potential of ATOM by simultaneously
                         contributing to Cosmos hub’s security, earning staking
@@ -89,11 +89,11 @@ const Faq = () => {
                   <Card>
                     <Card.Header>
                       <p>How do I receive rewards?</p>
-                      <ContextAwareToggle eventKey="0">
+                      <ContextAwareToggle eventKey="3">
                         Click me!
                       </ContextAwareToggle>
                     </Card.Header>
-                    <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey="3">
                       <Card.Body>
                         Unlock the full potential of ATOM by simultaneously
                         contributing to Cosmos hub’s security, earning staking
@@ -104,11 +104,11 @@ const Faq = () => {
                   <Card>
                     <Card.Header>
                       <p>Does pSTAKE charge for the service?</p>
-                      <ContextAwareToggle eventKey="0">
+                      <ContextAwareToggle eventKey="4">
                         Click me!
                       </ContextAwareToggle>
                     </Card.Header>
-                    <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey="4">
                       <Card.Body>
                         Unlock the full potential of ATOM by simultaneously
                         contributing to Cosmos hub’s security, earning staking
@@ -122,11 +122,11 @@ const Faq = () => {
                         What determines the amount of reward I receive after
                         every epoch?
                       </p>
-                      <ContextAwareToggle eventKey="0">
+                      <ContextAwareToggle eventKey="5">
                         Click me!
                       </ContextAwareToggle>
                     </Card.Header>
-                    <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey="5">
                       <Card.Body>
                         Unlock the full potential of ATOM by simultaneously
                         contributing to Cosmos hub’s security, earning staking

@@ -92,6 +92,14 @@ body a {
       .navbar-nav .nav-link.app-btn {
         background: #595d7b;
         color: #ffffff;
+        &.immunefi {
+          width: 114px;
+          height: 41px;
+          background-image: url("../assets/audits/immunefi_header.svg");
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: auto;
+        }
         &:hover {
           box-shadow: 0 4px 16px #595d7b78;
         }
@@ -2255,6 +2263,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
           background: #100e10;
           color: white;
           height: 500px;
+          &:hover {
+            background: #100e10;
+            box-shadow: none;
+          }
         }
         &.pancake,
         &.beefy {
@@ -2464,7 +2476,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
   .validators-section {
     padding: 100px 0;
     .section-title {
-      max-width: 960px;
+      max-width: 1080px;
       margin: auto auto 30px auto;
     }
     .section-sub-title {
@@ -3031,6 +3043,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 }
 
 .liquid-staking-steps-section {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  .row {
+    margin-top: 40px;
+  }
   .card-heading {
     font-weight: 700;
     font-size: 16px;
@@ -3045,22 +3062,23 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     line-height: 200%;
     color: #dbd6d6;
     text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .icon-box {
-    .icon {
-      fill: #5064fb;
-      width: 34px;
-    }
     width: 70px;
     height: 70px;
     background: #26262b;
-    opacity: 0.9;
     display: flex;
     border-radius: 16px;
     justify-content: center;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    &:hover {
+      box-shadow: 0 4px 16px #5064fb;
+      cursor: pointer;
+    }
   }
 }
 
