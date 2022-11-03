@@ -216,6 +216,20 @@ body a {
       }
     }
     &.atom {
+      .navbar-nav {
+        .nav-link.app-btn {
+          background: #595d7b;
+          color: #ffffff;
+          &.immunefi {
+            width: 114px;
+            height: 41px;
+            background-image: url("../assets/audits/immunefi_header.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: auto;
+          }
+        }
+      }
       button {
         background: #595d7b;
         .icon {
