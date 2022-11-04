@@ -29,7 +29,6 @@ const Validators = ({ deviceType }) => {
           <h3 className="section-title">
             Why stake your ATOM with one validator when you can stake with 62?
           </h3>
-          {/* <div className="validator-list"> */}
           <Carousel
             ssr
             partialVisbile
@@ -37,7 +36,7 @@ const Validators = ({ deviceType }) => {
             itemClass="image-item"
             responsive={responsive}
             autoPlay={false}
-            slidesToSlide={10}
+            slidesToSlide={5}
           >
             {validators_list.map((item, index) => {
               return (
@@ -45,35 +44,40 @@ const Validators = ({ deviceType }) => {
                   className="d-flex flex-column justify-content-around pt-4"
                   key={index}
                 >
-                  <a
+                  {/* <a
                     href={item.val_1_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
-                    <img
+                  > */}
+                  <div className="validator d-flex justify-content-center align-items-center mb-4">
+                    {item.val_1_name}
+                  </div>
+                  {/* <img
                       className="pb-4"
                       src={item.val_1_logo}
                       title={item.val_1_name}
                       alt={item.val_1_name}
-                    />
-                  </a>
-                  <a
+                    /> */}
+                  {/* </a> */}
+                  {/* <a
                     href={item.val_2_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
-                    <img
+                  > */}
+                  <div className="validator d-flex justify-content-center align-items-center">
+                    {item.val_2_name}
+                  </div>
+                  {/* <img
                       className=""
                       src={item.val_2_logo}
                       title={item.val_2_name}
                       alt={item.val_2_name}
-                    />
-                  </a>
+                    /> */}
+                  {/* </a> */}
                 </div>
               );
             })}
           </Carousel>
-          {/* </div> */}
         </div>
       </section>
     </React.Fragment>
