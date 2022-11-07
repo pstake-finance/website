@@ -47,7 +47,7 @@ const EcosystemSlider = ({ deviceType }) => {
         </span>
       ),
       primaryButtonText: "Add Liquidity",
-      primaryButtonUrl: `https://pancakeswap.finance/add/${process.env.REACT_APP_STK_BNB_CONTRACT_ADDRESS}/BNB`,
+      primaryButtonUrl: `https://app.osmosis.zone/pool/843`,
       secondaryButtonText: "Learn More",
       secondaryButtonUrl: "/",
       tvl: (
@@ -60,6 +60,9 @@ const EcosystemSlider = ({ deviceType }) => {
       //     <span>upto </span>0% <span>APY</span>
       //   </>
       // )
+    },
+    {
+      name: "Coming Soon"
     }
   ];
 
@@ -75,10 +78,10 @@ const EcosystemSlider = ({ deviceType }) => {
           deviceType={deviceType}
           itemClass="image-item"
           responsive={responsive}
-          autoPlay={true}
+          autoPlay={false}
         >
-          {list.slice(0, 5).map((item, index) => {
-            return (
+          {list.slice(0, list.length).map((item, index) => {
+            return item.name !== "Coming Soon" ? (
               <Card key={index}>
                 <Card.Body className="pancake">
                   <div className="tag">
@@ -120,13 +123,14 @@ const EcosystemSlider = ({ deviceType }) => {
                   </div>
                 </Card.Body>
               </Card>
+            ) : (
+              <Card>
+                <Card.Body className="coming-soon d-flex justify-content-center align-items-center">
+                  <p className="card-heading">Coming soon!</p>
+                </Card.Body>
+              </Card>
             );
           })}
-          <Card>
-            <Card.Body className="coming-soon d-flex justify-content-center align-items-center">
-              <p className="card-heading">Coming soon!</p>
-            </Card.Body>
-          </Card>
         </Carousel>
       </div>
     </section>

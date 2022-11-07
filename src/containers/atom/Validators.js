@@ -50,14 +50,18 @@ const Validators = ({ deviceType }) => {
                     rel="noopener noreferrer"
                   > */}
                   <div className="validator d-flex justify-content-center align-items-center mb-4">
-                    {item.val_1_name}
-                  </div>
-                  {/* <img
-                      className="pb-4"
+                    <img
+                      className="mr-3"
                       src={item.val_1_logo}
                       title={item.val_1_name}
                       alt={item.val_1_name}
-                    /> */}
+                      width={36}
+                    />
+
+                    <div className="d-inline-block text-truncate">
+                      {item.val_1_name}
+                    </div>
+                  </div>
                   {/* </a> */}
                   {/* <a
                     href={item.val_2_url}
@@ -65,14 +69,17 @@ const Validators = ({ deviceType }) => {
                     rel="noopener noreferrer"
                   > */}
                   <div className="validator d-flex justify-content-center align-items-center">
-                    {item.val_2_name}
-                  </div>
-                  {/* <img
-                      className=""
+                    <img
+                      className="mr-3"
                       src={item.val_2_logo}
                       title={item.val_2_name}
                       alt={item.val_2_name}
-                    /> */}
+                      width={36}
+                    />
+                    <div className="d-inline-block text-truncate">
+                      {item.val_2_name}
+                    </div>
+                  </div>
                   {/* </a> */}
                 </div>
               );

@@ -2375,6 +2375,11 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
                 box-shadow: 0px 4px 33px #0000008a;
               }
             }
+            @media (max-width: 464px) {
+              &.secondary {
+                margin-left: 0px;
+              }
+            }
           }
         }
       }
@@ -2721,6 +2726,13 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 }
 
 .atom {
+  .ecosystem-section {
+    @media (max-width: 464px) {
+      .card {
+        height: 500px;
+      }
+    }
+  }
   .section-sub-title {
     margin: auto auto 40px;
   }
@@ -2891,8 +2903,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         }
       }
     }
-    .react-multi-carousel-list {
-      justify-content: center;
+    @media (min-width: 464px) {
+      .react-multi-carousel-list {
+        justify-content: center;
+      }
     }
   }
   .blogs-section {
@@ -3135,7 +3149,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
 .validator {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 143.9%;
   /* identical to box height, or 23px */
 
