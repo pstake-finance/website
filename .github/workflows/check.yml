@@ -25,3 +25,4 @@ jobs:
         env:
           CI: false
           REACT_APP_DASHBORAD_URL: https://api.dashboard.pstake.finance
+          REACT_APP_ENVIRONMENT: "Testnet"
