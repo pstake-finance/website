@@ -75,9 +75,9 @@ const EcosystemSlider = ({ deviceType }) => {
           deviceType={deviceType}
           itemClass="image-item"
           responsive={responsive}
-          autoPlay={true}
+          autoPlay={false}
         >
-          {list.slice(0, 5).map((item, index) => {
+          {list.slice(0, list.length).map((item, index) => {
             return (
               <Card key={index}>
                 <Card.Body className="pancake">
