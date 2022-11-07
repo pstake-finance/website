@@ -1,5 +1,3 @@
-import legend from "../../assets/validators/bnb/legend.svg";
-import math_wallet from "../../assets/validators/bnb/math_wallet.svg";
 import stakefish from "../../assets/validators/atom/stakefish.svg";
 import sg1 from "../../assets/validators/atom/sg-1.svg";
 import zkv from "../../assets/validators/atom/zkv.svg";

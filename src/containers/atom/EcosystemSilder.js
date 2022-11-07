@@ -60,6 +60,9 @@ const EcosystemSlider = ({ deviceType }) => {
       //     <span>upto </span>0% <span>APY</span>
       //   </>
       // )
+    },
+    {
+      name: "Coming Soon"
     }
   ];
 
@@ -78,7 +81,7 @@ const EcosystemSlider = ({ deviceType }) => {
           autoPlay={false}
         >
           {list.slice(0, list.length).map((item, index) => {
-            return (
+            return item.name !== "Coming Soon" ? (
               <Card key={index}>
                 <Card.Body className="pancake">
                   <div className="tag">
@@ -120,13 +123,14 @@ const EcosystemSlider = ({ deviceType }) => {
                   </div>
                 </Card.Body>
               </Card>
+            ) : (
+              <Card>
+                <Card.Body className="coming-soon d-flex justify-content-center align-items-center">
+                  <p className="card-heading">Coming soon!</p>
+                </Card.Body>
+              </Card>
             );
           })}
-          <Card>
-            <Card.Body className="coming-soon d-flex justify-content-center align-items-center">
-              <p className="card-heading">Coming soon!</p>
-            </Card.Body>
-          </Card>
         </Carousel>
       </div>
     </section>

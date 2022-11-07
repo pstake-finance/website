@@ -13,6 +13,8 @@ import shield from "../utils/ABIs/shield.json";
 import {
   APR_BASE_RATE,
   APR_DEFAULT,
+  CHAIN_ID,
+  ExternalChains,
   STK_ATOM_MINIMAL_DENOM,
   TVL
 } from "../constants/config";
@@ -32,9 +34,19 @@ export const WOMBAT_APR_API =
   "https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-apr";
 export const SHIELD_TVL_API = "https://api2.shieldex.io/mainnet/mvault/getTVL";
 
-export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/1";
+export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/843";
 
 const initialLiquidity = { [TVL]: 0 };
+
+const env = process.env.REACT_APP_ENVIRONMENT;
+
+const persistenceChainInfo = ExternalChains[env].find(
+  (chain) => chain.chainId === CHAIN_ID[env].persistenceChainID
+);
+
+const cosmosChainInfo = ExternalChains[env].find(
+  (chain) => chain.chainId === CHAIN_ID[env].cosmosChainID
+);
 
 export const fetchAlpaca = async () => {
   try {
@@ -231,9 +243,7 @@ export async function RpcClient(rpc) {
 
 export const getExchangeRate = async (rpc) => {
   try {
-    const rpcClient = await RpcClient(
-      "https://rpc.devnet.persistence.pstake.finance"
-    );
+    const rpcClient = await RpcClient(persistenceChainInfo.rpc);
     const pstakeQueryService = new QueryClientImpl(rpcClient);
     const cvalue = await pstakeQueryService.CValue({});
     return Number(decimalize(cvalue.cValue, 18));
@@ -244,9 +254,7 @@ export const getExchangeRate = async (rpc) => {
 
 export const getTVU = async (rpc) => {
   try {
-    const rpcClient = await RpcClient(
-      "https://rpc.devnet.persistence.pstake.finance"
-    );
+    const rpcClient = await RpcClient(persistenceChainInfo.rpc);
     const bankQueryService = new BankQuery(rpcClient);
     const supplyResponse = await bankQueryService.TotalSupply({});
     if (supplyResponse.supply.length) {
@@ -270,15 +278,11 @@ export const getCommission = async () => {
   try {
     const weight = 1;
     let commission = 0;
-    const rpcClient = await RpcClient(
-      "https://rpc.devnet.persistence.pstake.finance"
-    );
+    const rpcClient = await RpcClient(persistenceChainInfo.rpc);
     const pstakeQueryService = new QueryClientImpl(rpcClient);
     const allowListedValidators =
       await pstakeQueryService.AllowListedValidators({});
-    const cosmosRpcClient = await RpcClient(
-      "https://rpc.devnet.cosmos.pstake.finance"
-    );
+    const cosmosRpcClient = await RpcClient(cosmosChainInfo.rpc);
     const cosmosQueryService = new StakingQueryClient(cosmosRpcClient);
     const validators =
       allowListedValidators?.allowListedValidators?.allowListedValidators;
@@ -321,9 +325,7 @@ export const getCommission = async () => {
 export const getIncentives = async () => {
   try {
     let incentives = 0;
-    const rpcClient = await RpcClient(
-      "https://rpc.devnet.persistence.pstake.finance"
-    );
+    const rpcClient = await RpcClient(persistenceChainInfo.rpc);
     const pstakeQueryService = new QueryClientImpl(rpcClient);
     const delegationState = await pstakeQueryService.DelegationState({});
     const hostAccountDelegations =
