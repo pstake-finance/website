@@ -47,7 +47,7 @@ const EcosystemSlider = ({ deviceType }) => {
         </span>
       ),
       primaryButtonText: "Add Liquidity",
-      primaryButtonUrl: `https://pancakeswap.finance/add/${process.env.REACT_APP_STK_BNB_CONTRACT_ADDRESS}/BNB`,
+      primaryButtonUrl: `https://app.osmosis.zone/pool/843`,
       secondaryButtonText: "Learn More",
       secondaryButtonUrl: "/",
       tvl: (
