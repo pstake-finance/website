@@ -8,20 +8,18 @@ const LiquidStakingSteps = () => {
     <>
       <section className="liquid-staking-steps-section">
         <div className="container">
-          <h3 className="section-title">
-            Liquid Staking ATOM as <br /> simple as 1, 2, 3
-          </h3>
+          <h3 className="section-title">Liquid Staking ATOM in 1, 2, 3</h3>
           <div className="row">
             <div
               className="col-lg-4 col-md-6 col-xs-12 d-flex flex-column align-items-center"
               data-aos="fade-up"
             >
               <div className="icon-box">
-                <img src={stake_atom} alt="Stake Atom Logo" />
+                <img src={stake_atom} alt="Liquid ATOM Staking" />
                 {/* <Icon viewClass="use-case" icon="stake-atom" /> */}
               </div>
               <div className="content">
-                <p className="card-heading">Stake your ATOM</p>
+                <p className="card-heading">Liquid Stake ATOM</p>
                 <p className="card-content">
                   Deposit any non-zero amount of ATOM to stake through pSTAKE’s
                   diverse validator set & earn staking rewards
@@ -33,7 +31,7 @@ const LiquidStakingSteps = () => {
               data-aos="fade-up"
             >
               <div className="icon-box">
-                <img src={receive_stkatom} alt="Receive stkATOM Logo" />
+                <img src={receive_stkatom} alt="Liquid ATOM Staking" />
               </div>
               <div className="content">
                 <p className="card-heading">Receive stkATOM</p>
@@ -48,7 +46,7 @@ const LiquidStakingSteps = () => {
               data-aos="fade-up"
             >
               <div className="icon-box">
-                <img src={participate_in_defi} alt="Participate in Defi Logo" />
+                <img src={participate_in_defi} alt="Liquid ATOM Staking" />
               </div>
               <div className="content">
                 <p className="card-heading">Participate in DeFi</p>

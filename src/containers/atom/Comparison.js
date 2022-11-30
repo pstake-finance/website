@@ -21,11 +21,11 @@ const Comparison = () => {
             <div className="item-header">
               <div className="type"></div>
               <div className="bnb">
-                <img src={atom} alt="ATOM Logo" />
+                <img src={atom} alt="Liquid ATOM Staking" />
                 Staking $ATOM
               </div>
               <div className="stk-bnb">
-                <img src={stkAtom} alt="stkATOM Logo" />
+                <img src={stkAtom} alt="Liquid Stake ATOM" />
                 Liquid Staking $ATOM with pSTAKE
               </div>
             </div>
@@ -37,13 +37,13 @@ const Comparison = () => {
                   rewards
                 </div>
                 <div className="stk-bnb">
-                  Liquidity on staked $ATOM to enable its usage in DeFi dApps
-                  across the Cosmos Ecosystem
+                  Liquidity for staked ATOM so users can earn ATOM staking
+                  rewards and use stkATOM across Cosmos DeFi
                 </div>
               </div>
               <div className="item">
-                <div className="type">APR</div>
-                <div className="bnb">Average ~17.5 %</div>
+                <div className="type">APR (after fees)</div>
+                <div className="bnb">Average ~18.5 %</div>
                 <div className="stk-bnb">
                   Up to ~{apr === -1 ? APR_DEFAULT : apr} %
                 </div>
@@ -66,7 +66,9 @@ const Comparison = () => {
               <div className="item">
                 <div className="type">Participation in Governance</div>
                 <div className="bnb">Yes</div>
-                <div className="stk-bnb">Not at launch</div>
+                <div className="stk-bnb">
+                  In subsequent upgrade after stkATOM launch
+                </div>
               </div>
               <div className="item">
                 <div className="type">Unstaking</div>
@@ -89,9 +91,9 @@ const Comparison = () => {
               </div>
               <div className="item">
                 <div className="type">Fees & Commissions</div>
-                <div className="bnb">Average N%</div>
+                <div className="bnb">Average 7% on ATOM staking rewards</div>
                 <div className="stk-bnb">
-                  0% on withdrawals & deposits 5% on rewards earned
+                  0% on withdrawals & deposits <br /> 5% on ATOM staking rewards
                 </div>
               </div>
               <div className="item">
@@ -102,7 +104,9 @@ const Comparison = () => {
                 </div>
               </div>
               <div className="item">
-                <div className="type">Instant Redemption</div>
+                <div className="type">
+                  Instant Redemption by skipping unbonding period
+                </div>
                 <div className="bnb">Not possible</div>
                 <div className="stk-bnb">Only possible with pSTAKE</div>
               </div>

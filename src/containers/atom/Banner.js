@@ -29,15 +29,15 @@ const Banner = () => {
               data-aos="fade-up"
             >
               <div className="logo">
-                <img src={stkAtom} alt="Liquid Staking ATOM" />
+                <img src={stkAtom} alt="Liquid ATOM Staking" />
               </div>
               <h1 className="banner-heading">
                 Liquid Staking for The <br /> Internet of Blockchains
               </h1>
               <h6 className="banner-sub-heading">
-                With stkATOM, enjoy the best of both worlds—Earn ATOM staking
-                rewards while securing the cosmos hub and participate in DeFi
-                for additional yields.
+                Liquid Stake ATOM to enjoy the best of both worlds—Earn ATOM
+                staking rewards for securing the cosmos hub and participate in
+                DeFi with stkATOM for additional yields
               </h6>
               <div className="banner-buttons">
                 <a

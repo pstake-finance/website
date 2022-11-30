@@ -70,7 +70,8 @@ const EcosystemSlider = ({ deviceType }) => {
     <section className="ecosystem-section" data-aos="fade-up">
       <div className="container">
         <h3 className="section-title">
-          Put your stkATOM to work in the <br /> Cosmos DeFi Ecosystem{" "}
+          Liquid Stake ATOM & put your stkATOM to work in the Cosmos DeFi
+          Ecosystem
         </h3>
         <Carousel
           ssr
