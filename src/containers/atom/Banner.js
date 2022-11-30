@@ -36,7 +36,7 @@ const Banner = () => {
               </h1>
               <h6 className="banner-sub-heading">
                 Liquid Stake ATOM to enjoy the best of both worlds—Earn ATOM
-                staking rewards for securing the cosmos hub and participate in
+                staking rewards for securing the Cosmos Hub and participate in
                 DeFi with stkATOM for additional yields
               </h6>
               <div className="banner-buttons">
@@ -46,14 +46,14 @@ const Banner = () => {
                   href={ATOM_URL}
                   className="button-link"
                 >
-                  <span className="hideone">{t("Liquid Stake ATOM")}</span>
+                  <span className="hideone">{t("Liquid Stake ATOM Now")}</span>
                   <Icon viewClass="right-arrow" icon="right-arrow" />
                 </a>
               </div>
               <div className="network-stats">
                 <div className="stats-count">
                   <h6 className="stats">
-                    {formatNumber(Number(decimalize(tvl * exchangeRate)), 3, 2)}{" "}
+                    {formatNumber(Number(decimalize(tvl / exchangeRate)), 3, 2)}{" "}
                     ATOM
                   </h6>
                   <h6 className="label">{t("TOTAL_VALUE_UNLOCKED")}</h6>

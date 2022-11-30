@@ -27,7 +27,8 @@ import {
   STK_ATOM_DOCS_URL,
   STK_ATOM_FAQ_URL,
   ATOM_URL,
-  STKATOM_BLOG_URL
+  STKATOM_BLOG_URL,
+  PSTAKE_REDDIT_URL
 } from "../constants/config";
 import { useTranslation } from "react-i18next";
 
@@ -264,6 +265,15 @@ const Header = () => {
                           rel="noopener noreferrer"
                         >
                           <Icon viewClass="social_icon_img" icon="discord" />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href={PSTAKE_REDDIT_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Icon viewClass="social_icon_img" icon="reddit" />
                         </a>
                       </li>
                     </ul>

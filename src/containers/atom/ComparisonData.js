@@ -3,9 +3,9 @@ const ComparisonData = () => {
     {
       parameter: "What is it?",
       column1:
-        "Act of locking $ATOM for securing the Cosmos Hub to receive rewards",
+        "Act of locking ATOM for securing the Cosmos Hub to receive rewards",
       column2:
-        "Liquidity on staked $ATOM to enable its usage in DeFi dApps across the Cosmos Ecosystem"
+        "Liquidity on staked ATOM to enable its usage in DeFi dApps across the Cosmos Ecosystem"
     },
     {
       parameter: "APR",
@@ -36,11 +36,11 @@ const ComparisonData = () => {
       parameter: "Unstaking",
       column1:
         "Unbonding period of 21 days where no staking rewards are earned",
-      column2: "Directly swap for $ATOM via a Liquidity Pool"
+      column2: "Directly swap for ATOM via a Liquidity Pool"
     },
     {
       parameter: "Drawbacks",
-      column1: "Staked $ATOM remains locked and inaccessible",
+      column1: "Staked ATOM remains locked and inaccessible",
       column2: "Additional smart contract risk with liquid staking ATOM"
     },
     {

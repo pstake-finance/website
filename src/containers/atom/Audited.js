@@ -4,6 +4,7 @@ import halborn from "../../assets/audits/halborn_black.svg";
 import certora from "../../assets/audits/certora_black.svg";
 import immunefi from "../../assets/audits/immunefi.svg";
 import forta from "../../assets/audits/forta.svg";
+import oak from "../../assets/audits/aok.svg";
 
 import {
   FORTA_WEB_URL,
@@ -34,8 +35,20 @@ const Audited = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img className="" src={halborn} title="halborn" alt="halborn" />
+                <img className="" src={halborn} title="Halborn" alt="halborn" />
               </a>
+              {/* <a
+                href={STKATOM_HALBOR_AUDIT_REPORT}
+                target="_blank"
+                rel="noopener noreferrer"
+              > */}
+              <img
+                className=""
+                src={oak}
+                title="Oak Security"
+                alt="oak security"
+              />
+              {/* </a> */}
             </div>
             {/* <div className="tracking">
               <div className="bug-bounty">
