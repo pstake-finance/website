@@ -57,7 +57,7 @@ export const PSTAKE_TWITTER_URL =
 export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
 export const PSTAKE_TELEGRAM_URL = "https://t.me/pstakefinancechat";
 export const PSTAKE_YOUTUBE_URL = "https://www.youtube.com/@pstakefinance";
-export const PSTAKE_REDDIT_URL = "https://www.reddit.com/r/PersistenceOne/";
+export const PSTAKE_REDDIT_URL = "https://www.reddit.com/r/pstake_official/";
 export const PERSISTENCE_ONE_URL =
   "https://persistence.one/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const CHORME_URL =

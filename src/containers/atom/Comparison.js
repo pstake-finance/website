@@ -22,18 +22,18 @@ const Comparison = () => {
               <div className="type"></div>
               <div className="bnb">
                 <img src={atom} alt="Liquid ATOM Staking" />
-                Staking $ATOM
+                Staking ATOM
               </div>
               <div className="stk-bnb">
                 <img src={stkAtom} alt="Liquid Stake ATOM" />
-                Liquid Staking $ATOM with pSTAKE
+                Liquid Staking ATOM with pSTAKE
               </div>
             </div>
             <div className="list-data">
               <div className="item">
                 <div className="type">What is it?</div>
                 <div className="bnb">
-                  Act of locking $ATOM for securing the Cosmos Hub to receive
+                  Act of locking ATOM for securing the Cosmos Hub to receive
                   rewards
                 </div>
                 <div className="stk-bnb">
@@ -77,13 +77,13 @@ const Comparison = () => {
                   earned
                 </div>
                 <div className="stk-bnb">
-                  Directly swap for $ATOM via a Liquidity Pool
+                  Directly swap for ATOM via a Liquidity Pool
                 </div>
               </div>
               <div className="item">
                 <div className="type">Drawbacks</div>
                 <div className="bnb">
-                  Staked $ATOM remains locked and inaccessible
+                  Staked ATOM remains locked and inaccessible
                 </div>
                 <div className="stk-bnb">
                   Additional smart contract risk with liquid staking ATOM
