@@ -31,9 +31,9 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 const Faq = () => {
   return (
     <>
-      <section className="faq-section" data-aos="fade-up">
+      <section id="stkAtomFaqs" className="faq-section" data-aos="fade-up">
         <div className="container">
-          <h1 className="section-title">FAQs</h1>
+          <h1 className="section-title">FAQs about ATOM Liquid Staking</h1>
           <div className="row">
             <div className="col-md-6">
               <div className="info">

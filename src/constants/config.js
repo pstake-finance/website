@@ -10,13 +10,15 @@ export const PSTAKE_MEDIUM_URL =
   "https://blog.pstake.finance/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
-export const DISCORD_URL = "https://discord.com/invite/qXRmTTGcYD";
+export const DISCORD_URL = "https://discord.gg/2ek5rUyT8x";
 export const PSTAKE_AUDITS_URL =
   "https://github.com/persistenceOne/pStake-auditReports";
 export const PECKSHIELD_AUDIT_REPORT =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pStake_stkBNB_Smart_Contract_Audit_Peckshield%20%5B04.07.2022%5D.pdf?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
 export const HALBOR_AUDIT_REPORT =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pSTAKE_stkBNB_Smart_Contract_Audit_Halborn%20%5B05.08.2022%5D.pdf?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
+export const STKATOM_HALBOR_AUDIT_REPORT =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkATOM/Persistence_stkATOM_Cosmos_Security_Audit_Report_Halborn_Final.pdf";
 export const PSTAKE_FORUM_URL = "https://forum.pstake.finance/";
 export const PSTAKE_RAISE_A_TICKET_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform";
@@ -54,8 +56,7 @@ export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
 export const PSTAKE_TELEGRAM_URL = "https://t.me/pstakefinancechat";
-export const PSTAKE_YOUTUBE_URL =
-  "https://www.youtube.com/channel/UC5wqI1ZRdkCjWWVOCQdhxLQ/featured?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
+export const PSTAKE_YOUTUBE_URL = "https://www.youtube.com/@pstakefinance";
 export const PSTAKE_REDDIT_URL = "https://www.reddit.com/r/PersistenceOne/";
 export const PERSISTENCE_ONE_URL =
   "https://persistence.one/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
@@ -144,6 +145,8 @@ export const STK_BNB_SECURITY_AUDIT_URL =
 export const GUIDES_FAQ_URL = "https://blog.pstake.finance/faqs/";
 export const STK_FAQ_URL = "https://blog.pstake.finance/stkbnb-faqs/";
 export const GUIDES_URL = "https://blog.pstake.finance/category/guides/";
+export const STKATOM_BLOG_URL =
+  "https://blog.pstake.finance/category/product/stkatom/";
 export const DOCS_URL = "http://docs.pstake.finance";
 export const STK_BNB_DOCS_URL =
   "https://docs.pstake.finance/stkBNB_Staking_Overview/";
@@ -173,9 +176,10 @@ export const STK_ATOM_BLOG_TWO_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/09/Liquid-Staking-with-IBC.png";
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
-export const STK_ATOM_SECURITY_AUDIT_URL = "#";
+export const STK_ATOM_SECURITY_AUDIT_URL =
+  "https://github.com/persistenceOne/pStake-auditReports/tree/main/stkATOM";
 export const STK_ATOM_DOCS_URL = "#";
-export const STK_ATOM_FAQ_URL = "#";
+export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
 export const ATOM_URL = "https://staging.cosmos.pstake.finance/";
 
 export const TVL = "tvl";

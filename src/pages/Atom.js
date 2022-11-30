@@ -22,7 +22,7 @@ const Atom = () => {
         <SectionTwo />
         <Comparison />
         <LiquidStakingSteps />
-        <EcosystemSlider />
+        {/* <EcosystemSlider /> */}
         <Guides />
         <Validators />
         <Audited />

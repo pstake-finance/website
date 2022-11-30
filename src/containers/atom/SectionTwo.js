@@ -8,7 +8,7 @@ const SectionTwo = () => {
       <section className="use-case-section">
         <div className="container">
           <h3 className="section-title">
-            Why Liquid Stake ATOM <br /> with pSTAKE?
+            Why pSTAKE for liquid staking <br /> your ATOM?
           </h3>
           <div className="row">
             <Card className="col-lg-4 col-md-6 col-xs-12" data-aos="fade-up">
@@ -18,11 +18,11 @@ const SectionTwo = () => {
                   <Icon viewClass="use-case" icon="usecase2" />
                 </div>
                 <div className="content">
-                  <p className="card-heading">ATOM yields like never before</p>
+                  <p className="card-heading">ATOM yields like never before.</p>
                   <p className="card-content">
-                    Generate the highest yields with auto-compounding ATOM
-                    staking rewards & various stkATOM DeFi opportunities, all
-                    while securing the Cosmos Hub
+                    Liquid staking ATOM on pSTAKE generates high yields by
+                    auto-compounding ATOM staking rewards while enabling you to
+                    easily use your staked ATOM in Cosmos DeFi
                   </p>
                 </div>
               </Card.Body>
@@ -35,9 +35,9 @@ const SectionTwo = () => {
                 <div className="content">
                   <p className="card-heading">Safe. Secure. Solid.</p>
                   <p className="card-content">
-                    Security audits from Halborn, Immunefi Bug Bounty, and
-                    on-chain monitoring measures ensure you have a secure
-                    experience while liquid staking your ATOM
+                    Security audits from Halborn & Oak Security, upcoming
+                    Immunefi Bug Bounty, and on-chain monitoring measures ensure
+                    you have a secure experience while liquid staking your ATOM
                   </p>
                 </div>
               </Card.Body>
@@ -49,7 +49,10 @@ const SectionTwo = () => {
                   <Icon viewClass="use-case" icon="cosmos" />
                 </div>
                 <div className="content">
-                  <p className="card-heading">By Cosmonauts. For Cosmonauts.</p>
+                  <p className="card-heading">
+                    By Cosmonauts.
+                    <br /> For Cosmonauts.
+                  </p>
                   <p className="card-content">
                     Minimal fees, fast transactions, high rewards, and IBC
                     interoperability make liquid staking your ATOM smooth and

@@ -27,8 +27,13 @@ const Validators = ({ deviceType }) => {
       <section className="validators-section">
         <div className="container">
           <h3 className="section-title">
-            Why stake your ATOM with one validator when you can stake with 62?
+            Why Liquid Stake ATOM with one validator when you can stake with 62?
           </h3>
+          <p className="section-sub-title">
+            pSTAKE has the largest active validator set among any ATOM liquid
+            staking solution to increase decentralization & minimize the risk of
+            slashing
+          </p>
           <Carousel
             ssr
             partialVisbile

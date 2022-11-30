@@ -11,7 +11,8 @@ import {
   IMMUNEFI_WEB_URL,
   PERSISTENCE_ONE_URL,
   PECKSHIELD_AUDIT_REPORT,
-  PSTAKE_CERTORA
+  PSTAKE_CERTORA,
+  STKATOM_HALBOR_AUDIT_REPORT
 } from "../../constants/config";
 
 const Audited = () => {
@@ -29,14 +30,14 @@ const Audited = () => {
               <p className="type">AUDITS</p>
 
               <a
-                href={HALBOR_AUDIT_REPORT}
+                href={STKATOM_HALBOR_AUDIT_REPORT}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img className="" src={halborn} title="halborn" alt="halborn" />
               </a>
             </div>
-            <div className="tracking">
+            {/* <div className="tracking">
               <div className="bug-bounty">
                 <p className="type">BUG-BOUNTY PROGRAM</p>
                 <a
@@ -67,7 +68,7 @@ const Audited = () => {
                   />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

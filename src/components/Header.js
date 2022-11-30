@@ -26,7 +26,8 @@ import {
   STK_ATOM_SECURITY_AUDIT_URL,
   STK_ATOM_DOCS_URL,
   STK_ATOM_FAQ_URL,
-  ATOM_URL
+  ATOM_URL,
+  STKATOM_BLOG_URL
 } from "../constants/config";
 import { useTranslation } from "react-i18next";
 
@@ -154,12 +155,18 @@ const Header = () => {
                     </li>
                     <li>
                       <a
-                        href={GUIDES_URL}
+                        href={
+                          window.location.pathname === "/atom"
+                            ? STKATOM_BLOG_URL
+                            : GUIDES_URL
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
                         className="nav-link"
                       >
-                        {t("GUIDES_TUTORIALS")}
+                        {window.location.pathname === "/atom"
+                          ? t("Blog")
+                          : t("GUIDES_TUTORIALS")}
                       </a>
                     </li>
                     <li>
@@ -173,14 +180,20 @@ const Header = () => {
                       </a>
                     </li>
                     <li>
-                      <a
-                        href={faqURL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="nav-link"
-                      >
-                        {t("FAQs")}
-                      </a>
+                      {window.location.pathname !== "/atom" ? (
+                        <a
+                          href={faqURL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="nav-link"
+                        >
+                          {t("FAQs")}
+                        </a>
+                      ) : (
+                        <a href={faqURL} className="nav-link">
+                          {t("FAQs")}
+                        </a>
+                      )}
                     </li>
                   </ul>
                 </li>
@@ -297,7 +310,7 @@ const Header = () => {
                   ""
                 )}
 
-                {window.location.pathname !== "/" ? (
+                {window.location.pathname === "/bnb" ? (
                   <li
                     className="nav-item"
                     style={{ marginLeft: "10px", marginRight: "0" }}
