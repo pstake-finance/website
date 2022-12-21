@@ -49,9 +49,9 @@ export const PSTAKE_BLOG_TWO_URL =
 export const PSTAKE_BLOG_TWO_IMG_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/07/1-1160x619.png";
 export const PSTAKE_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2022/08/19/the-state-of-atom-staking-august-2022-report/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
+  "https://blog.pstake.finance/2022/11/29/the-state-of-bnb-staking-november-2022-report/";
 export const PSTAKE_BLOG_ONE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/08/photo_2022-08-19_14-44-02-1160x652.jpg";
+  "https://blog.pstake.finance/wp-content/uploads/2022/11/BNB-Staking-Report.-Nov-550x309.jpg";
 export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
