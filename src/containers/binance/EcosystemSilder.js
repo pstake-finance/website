@@ -28,7 +28,7 @@ const responsive = {
     }
 };
 
-const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo, alpacaInfo, wombatInfo, shieldInfo }) => {
+const EcosystemSlider = ({ deviceType, openLeverageInfo, beefyInfo, alpacaInfo, wombatInfo, shieldInfo }) => {
 
     const list = [
         {
@@ -40,7 +40,7 @@ const EcosystemSlider = ({ deviceType, pancakeInfo, openLeverageInfo, beefyInfo,
             primaryButtonUrl:`https://pancakeswap.finance/add/${process.env.REACT_APP_STK_BNB_CONTRACT_ADDRESS}/BNB`,
             secondaryButtonText:'Learn More',
             secondaryButtonUrl:'https://youtube.com/clip/UgkxCZAHN3sTY8sH3FD_UoKvYZns6oZBFaza',
-            tvl:<>${parseInt(pancakeInfo.tvl).toLocaleString()} <span>TVL</span></>,
+            tvl:<span className="invisible">''<span>TVL</span></span>,
             apy: ''
         },
         {
