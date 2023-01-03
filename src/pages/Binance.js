@@ -14,7 +14,6 @@ import {
     fetchAlpaca,
     fetchBeefyInfo,
     fetchOpenLeverage,
-    fetchPancakeInfo,
     fetchShield,
     fetchWombat
 } from "../actions/api";
@@ -22,25 +21,22 @@ import {
 const Binance = () => {
     const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
     const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
-    const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})
     const [openLeverageInfo, setOpenLeverageInfo] = useState({tvl:0, apy:0})
     const [wombatInfo, setWombatInfo] = useState({tvl:0, apy:0})
     const [shieldInfo, setShieldInfo] = useState({tvl:0, apy:0})
 
     useEffect(()=>{
         const fetchApi = async () =>{
-            const [alpaca, beefyInfo, pancake, openLeverage, wombat, shield] = await Promise.all(
+            const [alpaca, beefyInfo, openLeverage, wombat, shield] = await Promise.all(
                 [
                     fetchAlpaca(),
                     fetchBeefyInfo(),
-                    fetchPancakeInfo(),
                     fetchOpenLeverage(),
                     fetchWombat(),
                     fetchShield()
                 ]);
             setAlpacaInfo(alpaca);
             setBeefyInfo(beefyInfo);
-            setPanCakeInfo(pancake);
             setOpenLeverageInfo(openLeverage);
             setWombatInfo(wombat);
             setShieldInfo(shield);
@@ -50,7 +46,6 @@ const Binance = () => {
 
     const maxApy = Math.max(Number(alpacaInfo.apy),
         Number(beefyInfo.apy),
-        Number(pancakeInfo.apy),
         Number(openLeverageInfo.apy),
         Number(wombatInfo.apy)
     );
@@ -65,7 +60,6 @@ const Binance = () => {
                 <EcosystemSlider
                     alpacaInfo={alpacaInfo}
                     beefyInfo={beefyInfo}
-                    pancakeInfo={pancakeInfo}
                     openLeverageInfo={openLeverageInfo}
                     wombatInfo={wombatInfo}
                     shieldInfo={shieldInfo}
