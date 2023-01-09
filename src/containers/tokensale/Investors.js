@@ -306,7 +306,7 @@ const Investors = () => {
             <a href={SPARTAN_CAPITAL} target="_blank" rel="noopener noreferrer">
               <img
                 className=""
-                src={"/images/investors/krakenventures.svg"}
+                src={"/images/investors/sparten_capital.png"}
                 title="Spartencapital"
                 alt="Spartencapital"
               />
