@@ -25,7 +25,7 @@ const Validators = () => {
             pSTAKE uses a validator scoring mechanism to stake with the top 10
             validators in the BNB chain ecosystem
           </p>
-          <div className="validator-list">
+          <div className="validator-list d-flex justify-content-center flex-wrap">
             <a
               href={VALIDATOR_LEGEND}
               target="_blank"

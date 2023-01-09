@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
 import ReactGa from "react-ga4";
 
 import {
@@ -28,14 +28,15 @@ import {
   STK_ATOM_FAQ_URL,
   ATOM_URL,
   STKATOM_BLOG_URL,
-  PSTAKE_REDDIT_URL
+  PSTAKE_REDDIT_URL,
 } from "../constants/config";
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from "next-translate/useTranslation";
 
 import Icon from "./Icon";
 
 const Header = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [chevronChange, setChevronChange] = useState(false);
   const toggleMenu = () => {
@@ -65,7 +66,7 @@ const Header = () => {
   const onClickNavApp = () => {
     ReactGa.event({
       category: "App",
-      action: "Clicked on Navigation App"
+      action: "Clicked on Navigation App",
     });
   };
 
@@ -75,19 +76,19 @@ const Header = () => {
   let twitterUrl;
   let appURL;
 
-  if (window.location.pathname === "/") {
+  if (router.pathname === "/") {
     auditURL = SECURITY_AUDIT_URL;
     docsURL = DOCS_URL;
     faqURL = GUIDES_FAQ_URL;
     twitterUrl = PSTAKE_TWITTER_URL;
     appURL = PSTAKE_APP_URL;
-  } else if (window.location.pathname === "/bnb") {
+  } else if (router.pathname === "/bnb") {
     auditURL = STK_BNB_SECURITY_AUDIT_URL;
     docsURL = STK_BNB_DOCS_URL;
     faqURL = STK_FAQ_URL;
     twitterUrl = STK_BNB_TWITTER_URL;
     appURL = BNB_URL;
-  } else if (window.location.pathname === "/atom") {
+  } else if (router.pathname === "/atom") {
     auditURL = STK_ATOM_SECURITY_AUDIT_URL;
     docsURL = STK_ATOM_DOCS_URL;
     faqURL = STK_ATOM_FAQ_URL;
@@ -101,12 +102,12 @@ const Header = () => {
         <nav
           className={
             "navbar navbar-expand-lg navbar-custom sticky " +
-            window.location.pathname.split("/")[1]
+            router.pathname.split("/")[1]
           }
           id="nav-bar"
         >
           <div className="container mb-pad">
-            <Link className="navbar-brand logo text-uppercase" to="/"></Link>
+            <Link className="navbar-brand logo text-uppercase" href="/"></Link>
             <button
               className="navbar-toggler"
               onClick={toggleMenu}
@@ -157,7 +158,7 @@ const Header = () => {
                     <li>
                       <a
                         href={
-                          window.location.pathname === "/atom"
+                          router.pathname === "/atom"
                             ? STKATOM_BLOG_URL
                             : GUIDES_URL
                         }
@@ -165,7 +166,7 @@ const Header = () => {
                         rel="noopener noreferrer"
                         className="nav-link"
                       >
-                        {window.location.pathname === "/atom"
+                        {router.pathname === "/atom"
                           ? t("Blog")
                           : t("GUIDES_TUTORIALS")}
                       </a>
@@ -181,7 +182,7 @@ const Header = () => {
                       </a>
                     </li>
                     <li>
-                      {window.location.pathname !== "/atom" ? (
+                      {router.pathname !== "/atom" ? (
                         <a
                           href={faqURL}
                           target="_blank"
@@ -280,7 +281,7 @@ const Header = () => {
                   </ul>
                 </li>
 
-                {window.location.pathname === "/" ? (
+                {router.pathname === "/" ? (
                   <li className="nav-item nav__menu-item">
                     <p className="nav-link chevron m-0">
                       {t("BRIDGE")}
@@ -320,7 +321,7 @@ const Header = () => {
                   ""
                 )}
 
-                {window.location.pathname === "/bnb" ? (
+                {router.pathname === "/bnb" ? (
                   <li
                     className="nav-item"
                     style={{ marginLeft: "10px", marginRight: "0" }}

@@ -6,7 +6,7 @@ import {
   PSTAKE_APP_STKETH_URL,
   PSTAKE_APP_URL,
 } from "../../constants/config";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { getAPR } from "../../actions/api";
 
 const Networks = () => {
@@ -43,7 +43,7 @@ const Networks = () => {
                     {t("BNB_APY")}{" "}
                     <span className="helper-text">{t("APY")}</span>
                   </h1>
-                  <Link to="/bnb">
+                  <Link href="/bnb">
                     <p className="link">{t("STAKE_NOW")}</p>
                   </Link>
                 </div>
@@ -65,7 +65,7 @@ const Networks = () => {
                     ~{apr === -1 ? APR_DEFAULT : apr}%{" "}
                     <span className="helper-text">{t("APY")}</span>
                   </h1>
-                  <Link to="/atom">
+                  <Link href="/atom">
                     <p className="link">{t("STAKE_NOW")}</p>
                   </Link>
                 </div>
