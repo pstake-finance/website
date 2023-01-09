@@ -1,8 +1,8 @@
 import React from 'react';
-import featureGradient from '../../assets/bg_images/feature-gradent2.svg';
-import liquidity from "../../assets/liquidity.svg";
-import redemption from "../../assets/redemption.svg";
-import cash from "../../assets/cash.svg";
+import featureGradient from '/images/bg_images/feature-gradent2.svg';
+import liquidity from "/images/liquidity.svg";
+import redemption from "/images/redemption.svg";
+import cash from "/images/cash.svg";
 
 const Features = () => {
     return (

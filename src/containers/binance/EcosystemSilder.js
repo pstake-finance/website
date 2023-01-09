@@ -1,13 +1,13 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
-import pancake from '../../assets/integrations/pancake.svg';
-import alpaca from '../../assets/integrations/alpaca.svg';
-import beefy from '../../assets/integrations/beefy.svg';
-import wombat from '../../assets/integrations/wombat.svg';
-import leverage from '../../assets/integrations/leverage.svg';
-import midas from '../../assets/integrations/midas.svg';
-import shield from '../../assets/integrations/shield.svg';
+import pancake from '/images/integrations/pancake.svg';
+import alpaca from '/images/integrations/alpaca.svg';
+import beefy from '/images/integrations/beefy.svg';
+import wombat from '/images/integrations/wombat.svg';
+import leverage from '/images/integrations/leverage.svg';
+import midas from '/images/integrations/midas.svg';
+import shield from '/images/integrations/shield.svg';
 import Card from "react-bootstrap/Card";
 
 const responsive = {

@@ -4,7 +4,7 @@ import {
     PSTAKE_APP_URL, VIDEO_URL,
 } from '../../constants/config';
 import Icon from "../../components/Icon";
-import bg_lane from "../../assets/bg_images/bg_lane.png";
+import bg_lane from "/images/bg_images/bg_lane.png";
 
 const Banner = () => {
     const { t } = useTranslation('common');

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
-import bnbLogo from "../../assets/networks/bnb.svg";
-import stkBNBLogo from "../../assets/stk_bnb.svg";
+import bnbLogo from "/images/networks/bnb.svg";
+import stkBNBLogo from "/images/stk_bnb.svg";
 
 const Comparison = () => {
     const { t } = useTranslation('common');

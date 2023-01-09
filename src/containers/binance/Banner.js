@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import useTranslation from 'next-translate/useTranslation';
-import stkBNB from "../../assets/stkBNB.svg";
+import stkBNB from "/images/stkBNB.svg";
 import Icon from "../../components/Icon";
 import {getTVL} from "../../utils/helpers";
 

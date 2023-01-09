@@ -1,7 +1,7 @@
 import React from "react";
-import stake_atom from "../../assets/steps/stake_atom.svg";
-import receive_stkatom from "../../assets/steps/receive_stkatom.svg";
-import participate_in_defi from "../../assets/steps/participate_in_defi.svg";
+import stake_atom from "/images/steps/stake_atom.svg";
+import receive_stkatom from "/images/steps/receive_stkatom.svg";
+import participate_in_defi from "/images/steps/participate_in_defi.svg";
 
 const LiquidStakingSteps = () => {
   return (

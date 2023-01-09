@@ -53,7 +53,7 @@ body a {
     background-color: #232327;
     box-shadow: 0 10px 33px rgba(0, 0, 0, 0.1);
     .navbar-brand.logo {
-      background: url(../assets/logo.svg);
+      background: url(/images/logo.svg);
     }
     .nav-item a:hover,
     .nav-item p:hover {
@@ -78,7 +78,7 @@ body a {
         &.immunefi {
           width: 114px;
           height: 41px;
-          background-image: url("../assets/audits/immunefi_black.svg");
+          background-image: url("/images/audits/immunefi_black.svg");
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: auto;
@@ -95,7 +95,7 @@ body a {
         &.immunefi {
           width: 114px;
           height: 41px;
-          background-image: url("../assets/audits/immunefi_header.svg");
+          background-image: url("/images/audits/immunefi_header.svg");
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: auto;
@@ -116,7 +116,7 @@ body a {
     transition: all 0.5s ease-in-out;
 
     .navbar-brand.logo {
-      background: url(../assets/darklogo.svg);
+      background: url(/images/darklogo.svg);
       width: 107px;
       height: 26px;
     }
@@ -201,7 +201,7 @@ body a {
           &.immunefi {
             width: 114px;
             height: 41px;
-            background-image: url("../assets/audits/immunefi_header.svg");
+            background-image: url("/images/audits/immunefi_header.svg");
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-size: auto;
@@ -223,7 +223,7 @@ body a {
           &.immunefi {
             width: 114px;
             height: 41px;
-            background-image: url("../assets/audits/immunefi_header.svg");
+            background-image: url("/images/audits/immunefi_header.svg");
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-size: auto;
@@ -262,7 +262,7 @@ body a {
   );
   height: 100%;
   .background-gradient {
-    background-image: url(../assets/bg_images/bg.svg);
+    background-image: url(/images/bg_images/bg.svg);
     background-repeat: no-repeat;
     position: relative;
     .gradient-ellispse {
@@ -383,7 +383,7 @@ body a {
 // homepage features sections
 .features-section {
   padding: 150px 0 150px 0;
-  background-image: url(../assets/texture2.svg);
+  background-image: url(/images/texture2.svg);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -1841,7 +1841,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
   }
   .governance {
-    background: url(../assets/governance_bg.png);
+    background: url(/images/governance_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -2589,7 +2589,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
 
 .binance {
   .banner-section {
-    background-image: url("../assets/bg_images/binance_bg.svg"),
+    background-image: url("/images/bg_images/binance_bg.svg"),
       radial-gradient(
         100% 311.1% at 97.81% 0%,
         #ffffff 0%,
@@ -2772,8 +2772,8 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
   }
   .banner-section {
-    background-image: url("../assets/bg_images/atom_bg.svg"),
-      url("../assets/bg_images/atom_banner.svg");
+    background-image: url("/images/bg_images/atom_bg.svg"),
+      url("/images/bg_images/atom_banner.svg");
     background-size: 30%, cover;
     .banner-main-section {
       .banner-sub-heading {

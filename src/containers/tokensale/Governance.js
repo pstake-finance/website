@@ -1,8 +1,8 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Icon from "../../components/Icon";
-import governacne from '../../assets/gov.svg';
-import incentivization from '../../assets/incent.svg';
+import governacne from '/images/gov.svg';
+import incentivization from '/images/incent.svg';
 
 const Governance = () => {
     const { t } = useTranslation('common');

@@ -1,8 +1,8 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import tokenomics from '../../assets/tokenomics.png';
-import incentization from '../../assets/incentization.svg';
-import datalist from '../../assets/datalist.png';
+import tokenomics from '/images/tokenomics.png';
+import incentization from '/images/incentization.svg';
+import datalist from '/images/datalist.png';
 
 
 const Tokenomics = () => {

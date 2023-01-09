@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import Card from 'react-bootstrap/Card';
 import useTranslation from 'next-translate/useTranslation';
-import pancake from '../../assets/integrations/pancake.svg';
-import alpaca from '../../assets/integrations/alpaca.svg';
-import beefy from '../../assets/integrations/beefy.svg';
-import wombat from '../../assets/integrations/wombat.svg';
-import leverage from '../../assets/integrations/leverage.svg';
+import pancake from '/images/integrations/pancake.svg';
+import alpaca from '/images/integrations/alpaca.svg';
+import beefy from '/images/integrations/beefy.svg';
+import wombat from '/images/integrations/wombat.svg';
+import leverage from '/images/integrations/leverage.svg';
 
 import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo} from "../../actions/api";
 

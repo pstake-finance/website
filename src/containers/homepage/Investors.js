@@ -1,14 +1,14 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import sequoia from '../../assets/investors/sequoia.svg';
-import galaxydigital from '../../assets/investors/galaxydigital.svg';
-import coinbase from '../../assets/investors/coinbase.svg';
-import krakenventures from '../../assets/investors/krakenventures.svg';
-import spartencapital from '../../assets/investors/sparten_capital.png';
-import tendermint from '../../assets/investors/tendermint.svg';
-import sino from '../../assets/investors/sino.svg';
-import alameda from '../../assets/investors/almeda.svg';
-import defiance from '../../assets/investors/defiance_capital.svg';
+import sequoia from '/images/investors/sequoia.svg';
+import galaxydigital from '/images/investors/galaxydigital.svg';
+import coinbase from '/images/investors/coinbase.svg';
+import krakenventures from '/images/investors/krakenventures.svg';
+import spartencapital from '/images/investors/sparten_capital.png';
+import tendermint from '/images/investors/tendermint.svg';
+import sino from '/images/investors/sino.svg';
+import alameda from '/images/investors/almeda.svg';
+import defiance from '/images/investors/defiance_capital.svg';
 
 import {
     SEQUOIA_URL,

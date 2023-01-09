@@ -6,10 +6,10 @@ import {
   PSTAKE_APP_STKETH_URL,
   PSTAKE_APP_URL
 } from "../../constants/config";
-import atom from "../../assets/networks/atom.svg";
-import persistence from "../../assets/networks/persistence.svg";
-import ethereum from "../../assets/networks/ethereum.svg";
-import bnb from "../../assets/networks/bnb.svg";
+import atom from "/images/networks/atom.svg";
+import persistence from "/images/networks/persistence.svg";
+import ethereum from "/images/networks/ethereum.svg";
+import bnb from "/images/networks/bnb.svg";
 import { Link } from "react-router-dom";
 import { getAPR } from "../../actions/api";
 

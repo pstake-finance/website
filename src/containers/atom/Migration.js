@@ -1,8 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import useTranslation from 'next-translate/useTranslation';
-import stkATOM2 from "../../assets/stkATOM2.svg";
-import stkATOM from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
 
 const Migration = () => {
@@ -18,7 +16,7 @@ const Migration = () => {
                 <div className="icon-box">
                   <img
                     className="pt-4 pb-4"
-                    src={stkATOM2}
+                    src={"/images/stkATOM2.svg"}
                     title="stkATOM2"
                     alt="stkATOM2"
                   />
@@ -56,14 +54,14 @@ const Migration = () => {
                 <div className="icon-box">
                   <img
                     className="pt-4 pb-4"
-                    src={stkATOM2}
+                    src={"/images/stkATOM2.svg"}
                     title="stkATOM2"
                     alt="stkATOM2"
                   />
                   <Icon viewClass="right-arrow" icon="right-arrow" />
                   <img
                     className="pt-4 pb-4"
-                    src={stkATOM}
+                    src={"/images/stkATOM.svg"}
                     title="stkATOM2"
                     alt="stkATOM2"
                   />

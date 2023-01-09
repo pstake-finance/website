@@ -1,6 +1,6 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import incentive from '../../assets/incentive.png';
+import incentive from '/images/incentive.png';
 
 
 const Incentive = () => {

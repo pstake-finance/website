@@ -6,16 +6,16 @@ import {
     STAKEFISH, VALIDATOR_COINBASE, VALIDATOR_LEGEND, VALIDATOR_MATH, VALIDATOR_NODE_REAL, VALIDATOR_TRANCHES
 } from '../../constants/config';
 import {useTranslation} from "react-i18next";
-import stakefish from "../../assets/validators/stakefish.svg";
-import figment from "../../assets/validators/figment.svg";
-import everstake from "../../assets/validators/everstake.svg";
-import chorus from "../../assets/validators/chorus.svg";
-import cosmostation from "../../assets/validators/cosmostation.svg";
-import legend from "../../assets/validators/bnb/legend.svg";
-import math_wallet from "../../assets/validators/bnb/math_wallet.svg";
-import cloud from "../../assets/validators/bnb/cloud.svg";
-import tranches from "../../assets/validators/bnb/tranches.svg";
-import nodreal from "../../assets/validators/bnb/nodreal.svg";
+import stakefish from "/images/validators/stakefish.svg";
+import figment from "/images/validators/figment.svg";
+import everstake from "/images/validators/everstake.svg";
+import chorus from "/images/validators/chorus.svg";
+import cosmostation from "/images/validators/cosmostation.svg";
+import legend from "/images/validators/bnb/legend.svg";
+import math_wallet from "/images/validators/bnb/math_wallet.svg";
+import cloud from "/images/validators/bnb/cloud.svg";
+import tranches from "/images/validators/bnb/tranches.svg";
+import nodreal from "/images/validators/bnb/nodreal.svg";
 
 const Validators = () => {
     const { t } = useTranslation('common');

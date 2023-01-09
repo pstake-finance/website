@@ -1,9 +1,8 @@
 import React from 'react';
-import peckshield from '../../assets/audits/peckshield_black.svg';
-import halborn from '../../assets/audits/halborn_black.svg';
-import certora from '../../assets/audits/certora_black.svg';
-import immunefi from '../../assets/audits/immunefi.svg';
-import forta from '../../assets/audits/forta.svg';
+import halborn from '/images/audits/halborn_black.svg';
+import certora from '/images/audits/certora_black.svg';
+import immunefi from '/images/audits/immunefi.svg';
+import forta from '/images/audits/forta.svg';
 
 import {
     FORTA_WEB_URL, HALBOR_AUDIT_REPORT,
@@ -20,7 +19,7 @@ const Audited = () => {
                         <div className="audited-list">
                           <div className="list">
                               <p className="type">AUDITS</p>
-                              <a href={PECKSHIELD_AUDIT_REPORT} target="_blank" rel="noopener noreferrer"><img className="" src={peckshield} title="peckshield" alt="peckshield" /></a>
+                              <a href={PECKSHIELD_AUDIT_REPORT} target="_blank" rel="noopener noreferrer"><img className="" src={"/images/audits/peckshield_black.svg"} title="peckshield" alt="peckshield" /></a>
 
                               <a href={HALBOR_AUDIT_REPORT} target="_blank" rel="noopener noreferrer"><img className="" src={halborn} title="halborn" alt="halborn" /></a>
 

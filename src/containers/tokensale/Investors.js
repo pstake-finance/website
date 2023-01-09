@@ -1,26 +1,26 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import sequoia from '../../assets/investors/sequoia.svg';
-import galaxydigital from '../../assets/investors/galaxydigital.svg';
-import coinbase from '../../assets/investors/coinbase.svg';
-import krakenventures from '../../assets/investors/krakenventures.svg';
-import spartencapital from '../../assets/investors/sparten_capital.png';
-import tendermint from '../../assets/investors/tendermint.svg';
-import sino from '../../assets/investors/sino.svg';
-import alameda from '../../assets/investors/almeda.svg';
-import defiance from '../../assets/investors/defiance_capital.svg';
-import stakefish from '../../assets/validators/stakefish.svg';
-import figment from '../../assets/validators/figment.svg';
-import everstake from '../../assets/validators/everstake.svg';
-import chorus from '../../assets/validators/chorus.svg';
-import halborn_black from '../../assets/audits/halborn_black.svg';
-import certora_black from '../../assets/audits/certora_black.svg';
-import cosmostation from '../../assets/validators/cosmostation.svg';
-import sa_1 from '../../assets/audits/trail_of_bits.svg';
-import sa_2 from '../../assets/audits/diligence.svg';
-import sa_3 from '../../assets/audits/solidified.svg';
-import sa_4 from '../../assets/audits/peckshield.svg';
-import sa_5 from '../../assets/audits/aok.svg';
+import sequoia from '/images/investors/sequoia.svg';
+import galaxydigital from '/images/investors/galaxydigital.svg';
+import coinbase from '/images/investors/coinbase.svg';
+import krakenventures from '/images/investors/krakenventures.svg';
+import spartencapital from '/images/investors/sparten_capital.png';
+import tendermint from '/images/investors/tendermint.svg';
+import sino from '/images/investors/sino.svg';
+import alameda from '/images/investors/almeda.svg';
+import defiance from '/images/investors/defiance_capital.svg';
+import stakefish from '/images/validators/stakefish.svg';
+import figment from '/images/validators/figment.svg';
+import everstake from '/images/validators/everstake.svg';
+import chorus from '/images/validators/chorus.svg';
+import halborn_black from '/images/audits/halborn_black.svg';
+import certora_black from '/images/audits/certora_black.svg';
+import cosmostation from '/images/validators/cosmostation.svg';
+import sa_1 from '/images/audits/trail_of_bits.svg';
+import sa_2 from '/images/audits/diligence.svg';
+import sa_3 from '/images/audits/solidified.svg';
+import sa_4 from '/images/audits/peckshield.svg';
+import sa_5 from '/images/audits/aok.svg';
 
 import {
     STAKEFISH,
@@ -51,11 +51,11 @@ import {
     SINO_GLOBAL_CAPITAL,
     PSTAKE_DILIGENCE_AUDIT,
 } from '../../constants/config';
-import legend from "../../assets/validators/bnb/legend.svg";
-import math_wallet from "../../assets/validators/bnb/math_wallet.svg";
-import cloud from "../../assets/validators/bnb/cloud.svg";
-import tranches from "../../assets/validators/bnb/tranches.svg";
-import nodreal from "../../assets/validators/bnb/nodreal.svg";
+import legend from "/images/validators/bnb/legend.svg";
+import math_wallet from "/images/validators/bnb/math_wallet.svg";
+import cloud from "/images/validators/bnb/cloud.svg";
+import tranches from "/images/validators/bnb/tranches.svg";
+import nodreal from "/images/validators/bnb/nodreal.svg";
 
 const Investors = () => {
     const { t } = useTranslation('common');

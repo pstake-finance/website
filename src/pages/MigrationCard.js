@@ -1,8 +1,8 @@
 import React from "react";
 import Icon from "../components/Icon";
-import stkATOM2 from "../assets/stkATOM2.svg";
+import stkATOM2 from "/images/stkATOM2.svg";
 import { STK_ATOM_MIGRATION_URL } from "../constants/config";
-import stkATOM from "../assets/stkAtom.svg";
+import stkATOM from "/images/stkAtom.svg";
 
 const MigrationCard = () => {
   return (

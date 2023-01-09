@@ -1,14 +1,14 @@
 import React from 'react';
-import legend from "../../assets/validators/bnb/legend.svg"
-import math_wallet from "../../assets/validators/bnb/math_wallet.svg"
-import cloud from "../../assets/validators/bnb/cloud.svg"
-import ankr from "../../assets/validators/bnb/ankr.svg"
-import defibit from "../../assets/validators/bnb/defibit.svg"
-import certic from "../../assets/validators/bnb/certic.svg"
-import fuji from "../../assets/validators/bnb/fuji.svg"
-import tranches from "../../assets/validators/bnb/tranches.svg"
-import avengers from "../../assets/validators/bnb/avengers.svg"
-import nodreal from "../../assets/validators/bnb/nodreal.svg"
+import legend from "/images/validators/bnb/legend.svg"
+import math_wallet from "/images/validators/bnb/math_wallet.svg"
+import cloud from "/images/validators/bnb/cloud.svg"
+import ankr from "/images/validators/bnb/ankr.svg"
+import defibit from "/images/validators/bnb/defibit.svg"
+import certic from "/images/validators/bnb/certic.svg"
+import fuji from "/images/validators/bnb/fuji.svg"
+import tranches from "/images/validators/bnb/tranches.svg"
+import avengers from "/images/validators/bnb/avengers.svg"
+import nodreal from "/images/validators/bnb/nodreal.svg"
 import {
     VALIDATOR_ANKR,
     VALIDATOR_AVENGERS,

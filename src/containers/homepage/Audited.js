@@ -4,13 +4,13 @@ import {
     PSTAKE_CERTORA,
     PSTAKE_DILIGENCE_AUDIT, PSTAKE_OAK_AUDIT, PSTAKE_PECKSHIELD_AUDIT, PSTAKE_SOLIDFIED_AUDIT, PSTAKE_TRAIL_OF_BITS
 } from '../../constants/config';
-import halborn_black from "../../assets/audits/halborn_black.svg";
-import trail_of_bits from "../../assets/audits/trail_of_bits.svg";
-import diligence from "../../assets/audits/diligence.svg";
-import solidified from "../../assets/audits/solidified.svg";
-import peckshield from "../../assets/audits/peckshield.svg";
-import aok from "../../assets/audits/aok.svg";
-import certora_black from "../../assets/audits/certora_black.svg";
+import halborn_black from "/images/audits/halborn_black.svg";
+import trail_of_bits from "/images/audits/trail_of_bits.svg";
+import diligence from "/images/audits/diligence.svg";
+import solidified from "/images/audits/solidified.svg";
+import peckshield from "/images/audits/peckshield.svg";
+import aok from "/images/audits/aok.svg";
+import certora_black from "/images/audits/certora_black.svg";
 import {useTranslation} from "react-i18next";
 
 const Audited = () => {

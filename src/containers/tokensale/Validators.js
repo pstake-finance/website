@@ -1,10 +1,10 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import stakefish from '../../assets/validators/stakefish.svg';
-import figment from '../../assets/validators/figment.svg';
-import everstake from '../../assets/validators/everstake.svg';
-import chorus from '../../assets/validators/chorus.svg';
-import cosmostation from '../../assets/validators/cosmostation.svg';
+import stakefish from '/images/validators/stakefish.svg';
+import figment from '/images/validators/figment.svg';
+import everstake from '/images/validators/everstake.svg';
+import chorus from '/images/validators/chorus.svg';
+import cosmostation from '/images/validators/cosmostation.svg';
 
 import {
     STAKEFISH,
