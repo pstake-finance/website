@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import sequoia from '../../assets/investors/sequoia.svg';
 import galaxydigital from '../../assets/investors/galaxydigital.svg';
 import coinbase from '../../assets/investors/coinbase.svg';
@@ -24,7 +24,7 @@ import {
 
 
 const Investors = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <section className="investors-section">
             <div className="container">

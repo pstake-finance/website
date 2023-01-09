@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import sequoia from '../../assets/investors/sequoia.svg';
 import galaxydigital from '../../assets/investors/galaxydigital.svg';
 import coinbase from '../../assets/investors/coinbase.svg';
@@ -58,7 +58,7 @@ import tranches from "../../assets/validators/bnb/tranches.svg";
 import nodreal from "../../assets/validators/bnb/nodreal.svg";
 
 const Investors = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <section className="investors">

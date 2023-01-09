@@ -14,7 +14,7 @@ import certora_black from "../../assets/audits/certora_black.svg";
 import {useTranslation} from "react-i18next";
 
 const Audited = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <section className="audited-section homepage">

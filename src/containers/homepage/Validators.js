@@ -18,7 +18,7 @@ import tranches from "../../assets/validators/bnb/tranches.svg";
 import nodreal from "../../assets/validators/bnb/nodreal.svg";
 
 const Validators = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <section className="validators-section homepage">
             <div className="container">

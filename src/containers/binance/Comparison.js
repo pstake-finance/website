@@ -4,7 +4,7 @@ import bnbLogo from "../../assets/networks/bnb.svg";
 import stkBNBLogo from "../../assets/stk_bnb.svg";
 
 const Comparison = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <section className="comparison-section">

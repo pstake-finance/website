@@ -1,13 +1,13 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import {
     GUIDE_VIDEO_URL
 } from '../../constants/config';
 import Icon from "../../components/Icon";
 
 const Guides = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <section className="guides-section">

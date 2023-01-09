@@ -1,11 +1,11 @@
 import React from 'react';
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import Icon from "../../components/Icon";
 import governacne from '../../assets/gov.svg';
 import incentivization from '../../assets/incent.svg';
 
 const Governance = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <div className="inner-bg">

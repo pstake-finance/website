@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import stkATOM2 from "../../assets/stkATOM2.svg";
 import stkATOM from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
 
 const Migration = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   return (
     <React.Fragment>
       <section className="migration-section">
