@@ -24,13 +24,13 @@ jobs:
         run: npm run build --if-present
         env:
           CI: false
-          REACT_APP_DASHBORAD_URL: "https://api.dashboard.pstake.finance"
-          REACT_APP_STK_BNB_CONTRACT_ADDRESS: "0xF7CE8444b3b1c62e785a25343a8B4764198A81B8"
-          REACT_APP_STAKE_POOL_CONTRACT_ADDRESS: "0x7CdFba1Ee6A8D1e688B4B34A56b62287ce400802"
-          REACT_APP_BNB_CHAIN_RPC_URL: "https://data-seed-prebsc-1-s1.binance.org:8545"
-          REACT_APP_ONE_SIGNAL_APP_ID: "d9ecac74-9446-4df2-9a04-ba68bee2caee"
-          REACT_APP_SHIELD_CONTRACT_ADDRESS: "0xd48096fd351f429bb15eec36c8675fcdef12d499"
-          REACT_APP_ENVIRONMENT: "Mainnet"
+          NEXT_PUBLIC_DASHBORAD_URL: "https://api.dashboard.pstake.finance"
+          NEXT_PUBLIC_STK_BNB_CONTRACT_ADDRESS: "0xF7CE8444b3b1c62e785a25343a8B4764198A81B8"
+          NEXT_PUBLIC_STAKE_POOL_CONTRACT_ADDRESS: "0x7CdFba1Ee6A8D1e688B4B34A56b62287ce400802"
+          NEXT_PUBLIC_BNB_CHAIN_RPC_URL: "https://data-seed-prebsc-1-s1.binance.org:8545"
+          NEXT_PUBLIC_ONE_SIGNAL_APP_ID: "d9ecac74-9446-4df2-9a04-ba68bee2caee"
+          NEXT_PUBLIC_SHIELD_CONTRACT_ADDRESS: "0xd48096fd351f429bb15eec36c8675fcdef12d499"
+          NEXT_PUBLIC_ENVIRONMENT: "Mainnet"
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:

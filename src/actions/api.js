@@ -3,7 +3,7 @@ import {
   bigNumberToEther,
   decimalize,
   shieldContractsAddress,
-  SPEEDY_NODE_URL
+  SPEEDY_NODE_URL,
 } from "../utils/helpers";
 import { QueryClientImpl as StakingQueryClient } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { QueryClientImpl as BankQuery } from "cosmjs-types/cosmos/bank/v1beta1/query";
@@ -16,7 +16,7 @@ import {
   CHAIN_ID,
   ExternalChains,
   STK_ATOM_MINIMAL_DENOM,
-  TVL
+  TVL,
 } from "../constants/config";
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
@@ -38,7 +38,7 @@ export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/843";
 
 const initialLiquidity = { [TVL]: 0 };
 
-const env = process.env.REACT_APP_ENVIRONMENT;
+const env = process.env.NEXT_PUBLIC_ENVIRONMENT;
 
 const persistenceChainInfo = ExternalChains[env].find(
   (chain) => chain.chainId === CHAIN_ID[env].persistenceChainID
@@ -58,7 +58,7 @@ export const fetchAlpaca = async () => {
       });
       return {
         tvl: Number(data[0].tvl).toFixed(2),
-        apy: Number(data[0].totalApy).toFixed(2)
+        apy: Number(data[0].totalApy).toFixed(2),
       };
     }
   } catch (e) {
@@ -69,7 +69,7 @@ export const fetchBeefyInfo = async () => {
   try {
     const responses = await Axios.all([
       Axios.get(BEEFY_APY_API),
-      Axios.get(BEEFY_APY_TVL)
+      Axios.get(BEEFY_APY_TVL),
     ]);
     const responseOne = responses[0];
     const responseTwo = responses[1];
@@ -110,20 +110,20 @@ export const fetchWombat = async () => {
     const res = await fetch(WOMBAT_API, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         query: `{
               asset(id: "0xc496f42ea6fc72af434f48469b847a469fe0d17f") {
                     liabilityUSD
               }
-             }`
-      })
+             }`,
+      }),
     });
     const aprResponse = await fetch(WOMBAT_APR_API, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         query: `{
@@ -133,8 +133,8 @@ export const fetchWombat = async () => {
                     totalBonusTokenAPR
                     medianBoostedAPR
                   }
-             }`
-      })
+             }`,
+      }),
     });
     const aprResponseJson = await aprResponse.json();
     let apr;
@@ -154,7 +154,7 @@ export const fetchWombat = async () => {
     if (responseJson && responseJson.data && responseJson.data.asset) {
       return {
         tvl: Number(responseJson.data.asset.liabilityUSD).toFixed(2),
-        apy: apr
+        apy: apr,
       };
     }
   } catch (e) {
@@ -167,21 +167,21 @@ export const fetchPancakeInfo = async () => {
     const res = await fetch(PANCAKE_API, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         query: `{
                pair(id: "0xaa2527ff1893e0d40d4a454623d362b79e8bb7f1") {
                  reserveUSD
                }
-             }`
-      })
+             }`,
+      }),
     });
     const responseJson = await res.json();
     if (responseJson && responseJson.data) {
       return {
         tvl: Number(responseJson.data.pair.reserveUSD).toFixed(2),
-        apy: 0
+        apy: 0,
       };
     }
   } catch (e) {
@@ -193,7 +193,7 @@ export const fetchShieldTVL = async () => {
   try {
     const res = await Axios.post(SHIELD_TVL_API, {
       vault: shieldContractsAddress,
-      nodeType: "BSC"
+      nodeType: "BSC",
     });
     if (res.data.code === 200) {
       const data = res.data.msg;
@@ -227,7 +227,7 @@ export const fetchOsmosisPoolInfo = async () => {
     const res = await Axios.get(OSMOSIS_POOL_URL);
     if (res && res.data) {
       return {
-        [TVL]: Math.round(res.data[0].liquidity)
+        [TVL]: Math.round(res.data[0].liquidity),
       };
     }
   } catch (e) {
@@ -252,7 +252,7 @@ export const getExchangeRate = async (rpc) => {
   }
 };
 
-export const getTVU = async (rpc) => {
+export const getTVU = async () => {
   try {
     const rpcClient = await RpcClient(persistenceChainInfo.rpc);
     const bankQueryService = new BankQuery(rpcClient);
@@ -292,7 +292,7 @@ export const getCommission = async () => {
       // keep the commission rates of validators in an array
       for (const addr of validators) {
         const validator = await cosmosQueryService.Validator({
-          validatorAddr: addr.validatorAddress
+          validatorAddr: addr.validatorAddress,
         });
         let commissionRate =
           parseFloat(

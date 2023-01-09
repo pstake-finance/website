@@ -4,7 +4,7 @@ import {
   STKATOM_HALBOR_AUDIT_REPORT
 } from "../../constants/config";
 
-const Audited = () => {
+const Audited = () => { 
   return (
     <React.Fragment>
       <section className="audited-section">

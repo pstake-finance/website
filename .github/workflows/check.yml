@@ -24,5 +24,5 @@ jobs:
         run: npm run build --if-present
         env:
           CI: false
-          REACT_APP_DASHBORAD_URL: https://api.dashboard.pstake.finance
-          REACT_APP_ENVIRONMENT: "Testnet"
+          NEXT_PUBLIC_DASHBORAD_URL: https://api.dashboard.pstake.finance
+          NEXT_PUBLIC_ENVIRONMENT: "Testnet"
