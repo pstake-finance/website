@@ -1,10 +1,10 @@
 import React from 'react';
 import Footer from "../components/Footer";
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import {
     PSTAKE_WEB_URL } from '../constants/config';
 const Terms = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <div className="container-fluid p-0 terms-sections">

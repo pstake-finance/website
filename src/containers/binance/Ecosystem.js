@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Card from 'react-bootstrap/Card';
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import pancake from '../../assets/integrations/pancake.svg';
 import alpaca from '../../assets/integrations/alpaca.svg';
 import beefy from '../../assets/integrations/beefy.svg';
@@ -11,7 +11,7 @@ import {fetchAlpaca, fetchBeefyInfo, fetchOpenLeverage, fetchPancakeInfo} from "
 
 
 const Ecosystem = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     const [alpacaInfo, setAlpacaInfo] = useState({tvl:0, apy:0})
     const [beefyInfo, setBeefyInfo] = useState({tvl:0, apy:0})
     const [pancakeInfo, setPanCakeInfo] = useState({tvl:0, apy:0})

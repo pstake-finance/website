@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import { getExchangeRate, getTVU } from "../../actions/api";
 import stkAtom from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
@@ -9,7 +9,7 @@ import { ATOM_URL } from "../../constants/config";
 import { decimalize, formatNumber } from "../../utils/helpers";
 
 const Banner = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [tvl, setTvl] = useState(0);
   const [exchangeRate, setExchangeRate] = useState(1);
   useEffect(() => {

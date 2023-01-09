@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import {
   APR_DEFAULT,
   PSTAKE_APP_STKETH_URL,
@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { getAPR } from "../../actions/api";
 
 const Networks = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [apr, setApr] = useState(APR_DEFAULT);
   useEffect(() => {
     const fetchValues = async () => {

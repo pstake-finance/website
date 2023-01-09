@@ -30,12 +30,12 @@ import {
   STKATOM_BLOG_URL,
   PSTAKE_REDDIT_URL
 } from "../constants/config";
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 
 import Icon from "./Icon";
 
 const Header = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [isOpen, setIsOpen] = useState(false);
   const [chevronChange, setChevronChange] = useState(false);
   const toggleMenu = () => {

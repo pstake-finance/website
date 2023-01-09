@@ -2,7 +2,7 @@ import React from "react";
 import ReactGa from "react-ga4";
 import Icon from "./Icon";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import {
   PSTAKE_TWITTER_URL,
   PSTAKE_TELEGRAM_URL,
@@ -73,7 +73,7 @@ const list = [
 ];
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   return (
     <React.Fragment>
       <section className="footer-section">

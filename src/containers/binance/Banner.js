@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import stkBNB from "../../assets/stkBNB.svg";
 import Icon from "../../components/Icon";
 import {getTVL} from "../../utils/helpers";
 
 const Banner = ({maxApy}) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     const [totalwei, setTotalwei] = useState(0);
 
     useEffect( () => {

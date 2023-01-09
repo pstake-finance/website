@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import {Table} from "react-bootstrap";
 import Footer from "../components/Footer";
 import {
@@ -8,7 +8,7 @@ import {
     SAFARI_URL,
     IE_URL } from '../constants/config';
 const Privacy = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <div className="container-fluid p-0 terms-sections">

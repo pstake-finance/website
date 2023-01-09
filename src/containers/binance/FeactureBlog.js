@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from "react-i18next";
+import useTranslation from 'next-translate/useTranslation';
 import {
     PSTAKE_BLOG_ONE_URL,
     PSTAKE_BLOG_ONE_IMG_URL,
@@ -10,7 +10,7 @@ import {
 } from '../../constants/config';
 import Icon from "../../components/Icon";
 const FeaturedBlogs = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     return (
         <React.Fragment>
             <section className="blogs-section">
