@@ -7,7 +7,6 @@ import krakenventures from "../../assets/investors/krakenventures.svg";
 import spartencapital from "../../assets/investors/sparten_capital.png";
 import tendermint from "../../assets/investors/tendermint.svg";
 import sino from "../../assets/investors/sino.svg";
-import alameda from "../../assets/investors/almeda.svg";
 import defiance from "../../assets/investors/defiance_capital.svg";
 import binance_labs from "../../assets/investors/binance_labs.svg";
 
@@ -101,19 +100,6 @@ const Investors = () => {
               src={spartencapital}
               title="Spartencapital"
               alt="Spartencapital"
-            />
-          </a>
-          <a
-            href={ALAMEDA_RESEARCH_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={alameda}
-              title="Alameda Research"
-              alt="Alameda Research"
             />
           </a>
           <a
