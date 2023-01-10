@@ -34,62 +34,64 @@ const Validators = ({ deviceType }) => {
             staking solution to increase decentralization & minimize the risk of
             slashing
           </p>
-          <Carousel
-            ssr
-            partialVisbile
-            deviceType={deviceType}
-            itemClass="image-item"
-            responsive={responsive}
-            autoPlay={false}
-            slidesToSlide={5}
-          >
-            {validators_list.map((item, index) => {
-              return (
-                <div
-                  className="d-flex flex-column justify-content-around pt-4"
-                  key={index}
-                >
-                  {/* <a
+          <div className="mt-5">
+            <Carousel
+              ssr
+              partialVisbile
+              deviceType={deviceType}
+              itemClass="image-item"
+              responsive={responsive}
+              autoPlay={false}
+              slidesToSlide={5}
+            >
+              {validators_list.map((item, index) => {
+                return (
+                  <div
+                    className="d-flex flex-column justify-content-around pt-4"
+                    key={index}
+                  >
+                    {/* <a
                     href={item.val_1_url}
                     target="_blank"
                     rel="noopener noreferrer"
                   > */}
-                  <div className="validator d-flex justify-content-center align-items-center mb-4">
-                    <img
-                      className="mr-3"
-                      src={item.val_1_logo}
-                      title={item.val_1_name}
-                      alt={item.val_1_name}
-                      width={36}
-                    />
+                    <div className="validator d-flex justify-content-center align-items-center mb-4">
+                      <img
+                        className="mr-3"
+                        src={item.val_1_logo}
+                        title={item.val_1_name}
+                        alt={item.val_1_name}
+                        width={36}
+                      />
 
-                    <div className="d-inline-block text-truncate">
-                      {item.val_1_name}
+                      <div className="d-inline-block text-truncate">
+                        {item.val_1_name}
+                      </div>
                     </div>
-                  </div>
-                  {/* </a> */}
-                  {/* <a
+                    {/* </a> */}
+                    {/* <a
                     href={item.val_2_url}
                     target="_blank"
                     rel="noopener noreferrer"
                   > */}
-                  <div className="validator d-flex justify-content-center align-items-center">
-                    <img
-                      className="mr-3"
-                      src={item.val_2_logo}
-                      title={item.val_2_name}
-                      alt={item.val_2_name}
-                      width={36}
-                    />
-                    <div className="d-inline-block text-truncate">
-                      {item.val_2_name}
+                    <div className="validator d-flex justify-content-center align-items-center">
+                      <img
+                        className="mr-3"
+                        src={item.val_2_logo}
+                        title={item.val_2_name}
+                        alt={item.val_2_name}
+                        width={36}
+                      />
+                      <div className="d-inline-block text-truncate">
+                        {item.val_2_name}
+                      </div>
                     </div>
+                    {/* </a> */}
                   </div>
-                  {/* </a> */}
-                </div>
-              );
-            })}
-          </Carousel>
+                );
+              })}
+            </Carousel>
+          </div>
         </div>
       </section>
     </React.Fragment>
