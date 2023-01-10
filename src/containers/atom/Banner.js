@@ -1,24 +1,23 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+// import { useState } from "react";
+// import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { getExchangeRate, getTVU } from "../../actions/api";
+// import { getExchangeRate, getTVU } from "../../actions/api";
 import stkAtom from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
-import { ATOM_URL, STK_ATOM_TWITTER_URL } from "../../constants/config";
-import { decimalize, formatNumber } from "../../utils/helpers";
+import { STK_ATOM_TWITTER_URL } from "../../constants/config";
 
 const Banner = () => {
   const { t } = useTranslation();
-  const [tvl, setTvl] = useState(0);
-  const [exchangeRate, setExchangeRate] = useState(1);
-  useEffect(() => {
-    const fetchValues = async () => {
-      setTvl(await getTVU());
-      setExchangeRate(await getExchangeRate());
-    };
-    fetchValues();
-  }, []);
+  // const [tvl, setTvl] = useState(0);
+  // const [exchangeRate, setExchangeRate] = useState(1);
+  // useEffect(() => {
+  //   const fetchValues = async () => {
+  //     setTvl(await getTVU());
+  //     setExchangeRate(await getExchangeRate());
+  //   };
+  //   fetchValues();
+  // }, []);
   return (
     <React.Fragment>
       <section className="banner-section aos-init aos-animate">
