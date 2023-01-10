@@ -105,27 +105,6 @@ const Footer = () => {
                   </a>
                 </div>
               ))}
-              {window.location.pathname === "/atom" ? (
-                <div className="col-md-12 subscribe buttons m-0">
-                  <div className="item-body">
-                    <p className="heading">
-                      Subscribe here for our stkATOM newsletter
-                    </p>
-                    <a
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      href={STK_ATOM_SUBSCRIBE_URL}
-                      className="button-link primary"
-                    >
-                      <span className="button xprt">
-                        <span className="hideone">{t("Subscribe")}&nbsp;</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
             </div>
           </div>
           <div className="privacy-terms d-flex align-items-center">
