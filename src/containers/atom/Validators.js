@@ -50,43 +50,43 @@ const Validators = ({ deviceType }) => {
                     className="d-flex flex-column justify-content-around pt-4"
                     key={index}
                   >
-                    {/* <a
-                    href={item.val_1_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  > */}
-                    <div className="validator d-flex justify-content-center align-items-center mb-4">
-                      <img
-                        className="mr-3"
-                        src={item.val_1_logo}
-                        title={item.val_1_name}
-                        alt={item.val_1_name}
-                        width={36}
-                      />
+                    <a
+                      href={item.val_1_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="validator d-flex justify-content-center align-items-center mb-4">
+                        <img
+                          className="mr-3"
+                          src={item.val_1_logo}
+                          title={item.val_1_name}
+                          alt={item.val_1_name}
+                          width={36}
+                        />
 
-                      <div className="d-inline-block text-truncate">
-                        {item.val_1_name}
+                        <div className="d-inline-block text-truncate">
+                          {item.val_1_name}
+                        </div>
                       </div>
-                    </div>
-                    {/* </a> */}
-                    {/* <a
-                    href={item.val_2_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  > */}
-                    <div className="validator d-flex justify-content-center align-items-center">
-                      <img
-                        className="mr-3"
-                        src={item.val_2_logo}
-                        title={item.val_2_name}
-                        alt={item.val_2_name}
-                        width={36}
-                      />
-                      <div className="d-inline-block text-truncate">
-                        {item.val_2_name}
+                    </a>
+                    <a
+                      href={item.val_2_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="validator d-flex justify-content-center align-items-center">
+                        <img
+                          className="mr-3"
+                          src={item.val_2_logo}
+                          title={item.val_2_name}
+                          alt={item.val_2_name}
+                          width={36}
+                        />
+                        <div className="d-inline-block text-truncate">
+                          {item.val_2_name}
+                        </div>
                       </div>
-                    </div>
-                    {/* </a> */}
+                    </a>
                   </div>
                 );
               })}
