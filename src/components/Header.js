@@ -12,13 +12,11 @@ import {
   DOCS_URL,
   SNANPSHOT_URL,
   PSTAKE_FORUM_URL,
-  PSTAKE_APP_URL,
   PSTAKE_BRIDGE_URL,
   BSC_BRIDGE_URL,
   GUIDES_URL,
   STK_FAQ_URL,
   STK_BNB_DOCS_URL,
-  BNB_URL,
   DISCORD_URL,
   STK_BNB_SECURITY_AUDIT_URL,
   IMMUNEFI_WEB_URL,
@@ -26,7 +24,6 @@ import {
   STK_ATOM_SECURITY_AUDIT_URL,
   STK_ATOM_DOCS_URL,
   STK_ATOM_FAQ_URL,
-  ATOM_URL,
   STKATOM_BLOG_URL,
   PSTAKE_REDDIT_URL,
   CREW3_URL
@@ -74,25 +71,25 @@ const Header = () => {
   let docsURL;
   let faqURL;
   let twitterUrl;
-  let appURL;
+  // let appURL;
 
   if (window.location.pathname === "/") {
     auditURL = SECURITY_AUDIT_URL;
     docsURL = DOCS_URL;
     faqURL = GUIDES_FAQ_URL;
     twitterUrl = PSTAKE_TWITTER_URL;
-    appURL = PSTAKE_APP_URL;
+    // appURL = PSTAKE_APP_URL;
   } else if (window.location.pathname === "/bnb") {
     auditURL = STK_BNB_SECURITY_AUDIT_URL;
     docsURL = STK_BNB_DOCS_URL;
     faqURL = STK_FAQ_URL;
     twitterUrl = STK_BNB_TWITTER_URL;
-    appURL = BNB_URL;
+    // appURL = BNB_URL;
   } else if (window.location.pathname === "/atom") {
     auditURL = STK_ATOM_SECURITY_AUDIT_URL;
     docsURL = STK_ATOM_DOCS_URL;
     faqURL = STK_ATOM_FAQ_URL;
-    appURL = ATOM_URL;
+    // appURL = ATOM_URL;
     twitterUrl = STK_ATOM_TWITTER_URL;
   }
 
@@ -356,11 +353,11 @@ const Header = () => {
                     style={{ marginLeft: "10px", marginRight: "0" }}
                   >
                     <a
+                      href="/atom"
                       style={{ padding: "0" }}
                       onClick={onClickNavApp}
-                      target="_blank"
                       rel="noopener noreferrer"
-                      className="nav-link coming-soon"
+                      className="nav-link coming-soon "
                     >
                       <span className="nav-link app-btn"></span>
                     </a>

@@ -1,27 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "react-bootstrap/Card";
 import { useTranslation } from "react-i18next";
-import {
-  APR_DEFAULT,
-  PSTAKE_APP_STKETH_URL,
-  PSTAKE_APP_URL
-} from "../../constants/config";
+import { PSTAKE_APP_STKETH_URL, PSTAKE_APP_URL } from "../../constants/config";
 import atom from "../../assets/networks/atom.svg";
 import persistence from "../../assets/networks/persistence.svg";
 import ethereum from "../../assets/networks/ethereum.svg";
 import bnb from "../../assets/networks/bnb.svg";
 import { Link } from "react-router-dom";
-import { getAPR } from "../../actions/api";
 
 const Networks = () => {
   const { t } = useTranslation();
-  const [apr, setApr] = useState(APR_DEFAULT);
-  useEffect(() => {
-    const fetchValues = async () => {
-      setApr(await getAPR());
-    };
-    fetchValues();
-  }, []);
+  // const [apr, setApr] = useState(APR_DEFAULT);
+  // useEffect(() => {
+  //   const fetchValues = async () => {
+  //     setApr(await getAPR());
+  //   };
+  //   fetchValues();
+  // }, []);
   return (
     <React.Fragment>
       <section className="networks-section">
