@@ -8,7 +8,7 @@ const SectionTwo = () => {
       <section className="use-case-section">
         <div className="container">
           <h3 className="section-title">
-            Why pSTAKE for liquid staking <br /> your ATOM?
+            Why liquid stake your <br /> ATOM with pSTAKE?
           </h3>
           <div className="row">
             <Card className="col-lg-4 col-md-6 col-xs-12" data-aos="fade-up">
@@ -18,7 +18,7 @@ const SectionTwo = () => {
                   <Icon viewClass="use-case" icon="usecase2" />
                 </div>
                 <div className="content">
-                  <p className="card-heading">ATOM yields like never before.</p>
+                  <p className="card-heading">ATOM yields like never before</p>
                   <p className="card-content">
                     Liquid staking ATOM on pSTAKE generates high yields by
                     auto-compounding ATOM staking rewards while enabling you to
@@ -33,7 +33,7 @@ const SectionTwo = () => {
                   <Icon viewClass="use-case" icon="security" />
                 </div>
                 <div className="content">
-                  <p className="card-heading">Safe. Secure. Solid.</p>
+                  <p className="card-heading">Safe, Secure, Solid</p>
                   <p className="card-content">
                     Security audits from Halborn & Oak Security, upcoming
                     Immunefi Bug Bounty, and on-chain monitoring measures ensure
@@ -50,8 +50,8 @@ const SectionTwo = () => {
                 </div>
                 <div className="content">
                   <p className="card-heading">
-                    By Cosmonauts.
-                    <br /> For Cosmonauts.
+                    By Cosmonauts,
+                    <br /> For Cosmonauts
                   </p>
                   <p className="card-content">
                     Minimal fees, fast transactions, high rewards, and IBC

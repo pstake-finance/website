@@ -37,8 +37,9 @@ const Comparison = () => {
                   rewards
                 </div>
                 <div className="stk-bnb">
-                  Liquidity for staked ATOM so users can earn ATOM staking
-                  rewards and use stkATOM across Cosmos DeFi
+                  Act of locking ATOM with a liquid staking protocol to secure
+                  the Cosmos Hub & receive a staked ATOM token to participate in
+                  Cosmos DeFi
                 </div>
               </div>
               <div className="item">
@@ -119,9 +120,9 @@ const Comparison = () => {
                       rel="noopener noreferrer"
                       target="_blank"
                       href={ATOM_URL}
-                      className="button-link primary  m-0"
+                      className="button-link primary m-0 pointer-events-none"
                     >
-                      Go to app
+                      Live on 12 Jan 2023
                     </a>
                   </div>
                 </div>

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { getExchangeRate, getTVU } from "../../actions/api";
 import stkAtom from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
-import { ATOM_URL } from "../../constants/config";
+import { ATOM_URL, STK_ATOM_TWITTER_URL } from "../../constants/config";
 import { decimalize, formatNumber } from "../../utils/helpers";
 
 const Banner = () => {
@@ -40,25 +40,34 @@ const Banner = () => {
                 DeFi with stkATOM for additional yields
               </h6>
               <div className="banner-buttons">
+                {/*<a*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*  target="_blank"*/}
+                {/*  href={ATOM_URL}*/}
+                {/*  className="button-link"*/}
+                {/*>*/}
+                {/*  <span className="hideone">{t("Liquid Stake ATOM Now")}</span>*/}
+                {/*  <Icon viewClass="right-arrow" icon="right-arrow" />*/}
+                {/*</a>*/}
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href={ATOM_URL}
+                  href={STK_ATOM_TWITTER_URL}
                   className="button-link"
                 >
-                  <span className="hideone">{t("Liquid Stake ATOM Now")}</span>
+                  <span className="hideone">{t("LEARN_MORE")} &nbsp;</span>
                   <Icon viewClass="right-arrow" icon="right-arrow" />
                 </a>
               </div>
-              <div className="network-stats">
-                <div className="stats-count">
-                  <h6 className="stats">
-                    {formatNumber(Number(decimalize(tvl / exchangeRate)), 3, 2)}{" "}
-                    ATOM
-                  </h6>
-                  <h6 className="label">{t("TOTAL_VALUE_UNLOCKED")}</h6>
-                </div>
-              </div>
+              {/*<div className="network-stats">*/}
+              {/*  <div className="stats-count">*/}
+              {/*    <h6 className="stats">*/}
+              {/*      {formatNumber(Number(decimalize(tvl / exchangeRate)), 3, 2)}{" "}*/}
+              {/*      ATOM*/}
+              {/*    </h6>*/}
+              {/*    <h6 className="label">{t("TOTAL_VALUE_UNLOCKED")}</h6>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
           </div>
         </div>

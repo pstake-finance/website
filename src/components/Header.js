@@ -28,7 +28,8 @@ import {
   STK_ATOM_FAQ_URL,
   ATOM_URL,
   STKATOM_BLOG_URL,
-  PSTAKE_REDDIT_URL
+  PSTAKE_REDDIT_URL,
+  CREW3_URL
 } from "../constants/config";
 import { useTranslation } from "react-i18next";
 
@@ -232,6 +233,16 @@ const Header = () => {
                         {t("GOVERNANCE")}
                       </a>
                     </li>
+                    <li>
+                      <a
+                        href={CREW3_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="nav-link"
+                      >
+                        Crew3
+                      </a>
+                    </li>
 
                     <ul className="socialicons">
                       <li>
@@ -339,23 +350,25 @@ const Header = () => {
                   ""
                 )}
 
-                <li
-                  className="nav-item"
-                  style={{ marginLeft: "10px", marginRight: "0" }}
-                >
-                  <a
-                    style={{ padding: "0" }}
-                    onClick={onClickNavApp}
-                    href={appURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="nav-link"
+                {window.location.pathname === "/atom" ? (
+                  <li
+                    className="nav-item"
+                    style={{ marginLeft: "10px", marginRight: "0" }}
                   >
-                    <span className="nav-link pophover tooltip-multiline app-btn">
-                      {t("GO_TO_APP")}
-                    </span>
-                  </a>
-                </li>
+                    <a
+                      style={{ padding: "0" }}
+                      onClick={onClickNavApp}
+                      href={appURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nav-link coming-soon"
+                    >
+                      <span className="nav-link app-btn"></span>
+                    </a>
+                  </li>
+                ) : (
+                  ""
+                )}
               </ul>
             </div>
           </div>

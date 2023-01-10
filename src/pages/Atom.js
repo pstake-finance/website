@@ -5,8 +5,6 @@ import Banner from "../containers/atom/Banner";
 import Comparison from "../containers/atom/Comparison";
 import ScrollToTop from "../components/ScrollToTop";
 import FeaturedBlogs from "../containers/atom/FeactureBlog";
-import EcosystemSlider from "../containers/atom/EcosystemSilder";
-import Guides from "../containers/atom/Guides";
 import LiquidStakingSteps from "../containers/atom/LiquidStakingSteps";
 import Audited from "../containers/atom/Audited";
 import MigrationCard from "./MigrationCard";
@@ -23,7 +21,7 @@ const Atom = () => {
         <Comparison />
         <LiquidStakingSteps />
         {/* <EcosystemSlider /> */}
-        <Guides />
+        {/*<Guides />*/}
         <Validators />
         <Audited />
         <FeaturedBlogs />
