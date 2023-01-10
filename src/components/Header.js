@@ -358,7 +358,6 @@ const Header = () => {
                     <a
                       style={{ padding: "0" }}
                       onClick={onClickNavApp}
-                      href={appURL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="nav-link coming-soon"
