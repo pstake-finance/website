@@ -64,13 +64,21 @@ const Networks = () => {
                   />
                   <Card.Title>{t("COSMOS")}</Card.Title>
                 </div>
+                {/*<div className="apr text-center m-0">*/}
+                {/*  <h1 className="main-text">*/}
+                {/*    ~{apr === -1 ? APR_DEFAULT : apr}%{" "}*/}
+                {/*    <span className="helper-text">{t("APY")}</span>*/}
+                {/*  </h1>*/}
+                {/*  <Link to="/atom">*/}
+                {/*    <p className="link">{t("STAKE_NOW")}</p>*/}
+                {/*  </Link>*/}
+                {/*</div>*/}
                 <div className="apr text-center m-0">
                   <h1 className="main-text">
-                    ~{apr === -1 ? APR_DEFAULT : apr}%{" "}
-                    <span className="helper-text">{t("APY")}</span>
+                    <span className="helper-text">{t("COMING_SOON")}</span>
                   </h1>
                   <Link to="/atom">
-                    <p className="link">{t("STAKE_NOW")}</p>
+                    <p className="link">{t("LEARN_MORE")}</p>
                   </Link>
                 </div>
               </Card.Body>
