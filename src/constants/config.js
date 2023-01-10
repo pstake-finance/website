@@ -78,6 +78,7 @@ export const DEFI_CAPITAL_URL = "https://deficapital.com/";
 export const GALAXY_DIGITAL_URL = "https://www.galaxydigital.io/";
 export const SPARTAN_CAPITAL = "https://spartancapital.com/";
 export const SINO_GLOBAL_CAPITAL = "https://www.sinoglobalcapital.com/";
+export const BINANCE_LABS = "https://labs.binance.com/";
 export const STAKEFISH =
   "https://stake.fish/en/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const FIGMENT =
