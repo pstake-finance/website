@@ -44,8 +44,8 @@ const Validators = () => {
                 src={"/images/validators/bnb/math_wallet.svg"}
                 title="math_wallet"
                 alt="math_wallet"
-              />
-            </a>
+
+            /></a>
             <a
               href={VALIDATOR_COINBASE}
               target="_blank"
@@ -114,8 +114,8 @@ const Validators = () => {
               href={VALIDATOR_AVENGERS}
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <img
+
+            >  <img
                 className=""
                 src={"/images/validators/bnb/avengers.svg"}
                 title="avengers"
@@ -126,8 +126,8 @@ const Validators = () => {
               href={VALIDATOR_NODE_REAL}
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <img
+
+            >  <img
                 className=""
                 src={"/images/validators/bnb/nodreal.svg"}
                 title="nodreal"

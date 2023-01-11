@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "react-bootstrap/Card";
 import useTranslation from "next-translate/useTranslation";
 import {
-  APR_DEFAULT,
   PSTAKE_APP_STKETH_URL,
   PSTAKE_APP_URL,
 } from "../../constants/config";
 import Link from "next/link";
-import { getAPR } from "../../actions/api";
 
 const Networks = () => {
   const { t } = useTranslation("common");
-  const [apr, setApr] = useState(APR_DEFAULT);
-  useEffect(() => {
-    const fetchValues = async () => {
-      setApr(await getAPR());
-    };
-    fetchValues();
-  }, []);
+  // const [apr, setApr] = useState(APR_DEFAULT);
+  // useEffect(() => {
+  //   const fetchValues = async () => {
+  //     setApr(await getAPR());
+  //   };
+  //   fetchValues();
+  // }, []);
   return (
     <React.Fragment>
       <section className="networks-section">
@@ -60,13 +58,21 @@ const Networks = () => {
                   />
                   <Card.Title>{t("COSMOS")}</Card.Title>
                 </div>
+                {/*<div className="apr text-center m-0">*/}
+                {/*  <h1 className="main-text">*/}
+                {/*    ~{apr === -1 ? APR_DEFAULT : apr}%{" "}*/}
+                {/*    <span className="helper-text">{t("APY")}</span>*/}
+                {/*  </h1>*/}
+                {/*  <Link to="/atom">*/}
+                {/*    <p className="link">{t("STAKE_NOW")}</p>*/}
+                {/*  </Link>*/}
+                {/*</div>*/}
                 <div className="apr text-center m-0">
                   <h1 className="main-text">
-                    ~{apr === -1 ? APR_DEFAULT : apr}%{" "}
-                    <span className="helper-text">{t("APY")}</span>
+                    <span className="helper-text">{t("COMING_SOON")}</span>
                   </h1>
                   <Link href="/atom">
-                    <p className="link">{t("STAKE_NOW")}</p>
+                    <p className="link">{t("LEARN_MORE")}</p>
                   </Link>
                 </div>
               </Card.Body>
