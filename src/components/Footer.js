@@ -13,7 +13,6 @@ import {
   PSTAKE_MEDIUM_URL,
   STK_BNB_TWITTER_URL,
   STK_ATOM_TWITTER_URL,
-  STK_ATOM_SUBSCRIBE_URL,
   DISCORD_URL,
   PSTAKE_REDDIT_URL,
 } from "../constants/config";
@@ -109,27 +108,6 @@ const Footer = () => {
                   </a>
                 </div>
               ))}
-              {router.pathname === "/atom" ? (
-                <div className="col-md-12 subscribe buttons m-0">
-                  <div className="item-body">
-                    <p className="heading">
-                      Subscribe here for our stkATOM newsletter
-                    </p>
-                    <a
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      href={STK_ATOM_SUBSCRIBE_URL}
-                      className="button-link primary"
-                    >
-                      <span className="button xprt">
-                        <span className="hideone">{t("Subscribe")}&nbsp;</span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
             </div>
           </div>
           <div className="privacy-terms d-flex align-items-center">

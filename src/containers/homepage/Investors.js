@@ -6,11 +6,11 @@ import {
   COINBASE_VENTURES_URL,
   KRAKEN_VENTURES_URL,
   TENDERMINT_URL,
-  ALAMEDA_RESEARCH_URL,
   DEFI_CAPITAL_URL,
   GALAXY_DIGITAL_URL,
   SPARTAN_CAPITAL,
   SINO_GLOBAL_CAPITAL,
+    BINANCE_LABS
 } from "../../constants/config";
 
 const Investors = () => {
@@ -103,19 +103,6 @@ const Investors = () => {
             />
           </a>
           <a
-            href={ALAMEDA_RESEARCH_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/almeda.svg"}
-              title="Alameda Research"
-              alt="Alameda Research"
-            />
-          </a>
-          <a
             href={SINO_GLOBAL_CAPITAL}
             target="_blank"
             rel="noopener noreferrer"
@@ -141,6 +128,19 @@ const Investors = () => {
               alt="Tendermint"
             />
           </a>
+            <a
+              href={BINANCE_LABS}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tile"
+            >
+                <img
+                  className=""
+                  src={binance_labs}
+                  title="binance_labs"
+                  alt="binance_labs"
+                />
+            </a>
         </div>
       </div>
     </section>

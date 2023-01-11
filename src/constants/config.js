@@ -78,6 +78,7 @@ export const DEFI_CAPITAL_URL = "https://deficapital.com/";
 export const GALAXY_DIGITAL_URL = "https://www.galaxydigital.io/";
 export const SPARTAN_CAPITAL = "https://spartancapital.com/";
 export const SINO_GLOBAL_CAPITAL = "https://www.sinoglobalcapital.com/";
+export const BINANCE_LABS = "https://labs.binance.com/";
 export const STAKEFISH =
   "https://stake.fish/en/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const FIGMENT =
@@ -151,6 +152,7 @@ export const DOCS_URL = "http://docs.pstake.finance";
 export const STK_BNB_DOCS_URL =
   "https://docs.pstake.finance/stkBNB_Staking_Overview/";
 export const SNANPSHOT_URL = "https://snapshot.org/#/pstakefinance.eth";
+export const CREW3_URL = "https://pstake.crew3.xyz/questboard";
 export const PECKSHIELD_WEB_URL = "https://peckshield.com";
 export const HALBORN_WEB_URL = "https://halborn.com/";
 export const CERTORA_WEB_URL = "https://www.certora.com/";
@@ -167,13 +169,13 @@ export const STK_ATOM_BLOG_URL =
 export const STK_ATOM_TWITTER_URL =
   "https://twitter.com/pstake_cosmos?s=11&t=E_q2T3rK9Bwiywy_YCvo5A";
 export const STK_ATOM_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2022/09/15/a-letter-to-the-cosmos-community-from-pstake/";
+  "https://blog.pstake.finance/2023/01/09/stkatom-launch-update/";
 export const STK_ATOM_BLOG_ONE_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/09/atom.png";
+  "https://blog.pstake.finance/wp-content/uploads/2023/01/stkATOM-Launch_update-min-1160x622.png";
 export const STK_ATOM_BLOG_TWO_URL =
-  "https://blog.pstake.finance/2022/09/09/liquid-staking-with-ibc-atom-stkatom/";
+  "https://blog.pstake.finance/2022/11/05/pstakes-validator-set-for-atom-advancing-the-decentralisation-of-cosmos/";
 export const STK_ATOM_BLOG_TWO_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/09/Liquid-Staking-with-IBC.png";
+  "https://blog.pstake.finance/wp-content/uploads/2022/11/2022-11-05-16_00_04-Media-viewer.png";
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
 export const STK_ATOM_SECURITY_AUDIT_URL =

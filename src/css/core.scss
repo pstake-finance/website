@@ -138,14 +138,14 @@ body a {
     }
     .coming-soon {
       .app-btn {
-        width: 140px;
+        width: 170px;
         text-align: center;
         transition: transform 250ms;
         &:after {
           content: "Go To App";
         }
         &:hover::after {
-          content: "Coming Soon";
+          content: "Live on 12 Jan 2023";
         }
       }
     }
@@ -1832,10 +1832,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .section-sub-title {
       font-weight: 500;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 141.9%;
       text-align: center;
-      color: #70747c;
+      color: #dbd6d6;
       max-width: 500px;
       margin: auto auto 40px auto;
     }
@@ -1971,7 +1971,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
         font-weight: 500;
         font-size: 16px;
         line-height: 200%;
-        max-width: 650px;
+        max-width: 700px;
         color: #393939;
         margin: 1.2rem auto auto auto;
         text-align: center;
@@ -2465,10 +2465,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .section-sub-title {
       font-weight: 500;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 141.9%;
       text-align: center;
-      color: #70747c;
+      color: #dbd6d6;
       max-width: 500px;
       margin: auto;
     }
@@ -2508,10 +2508,10 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
     }
     .section-sub-title {
       font-weight: 500;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 141.9%;
       text-align: center;
-      color: #70747c;
+      color: #dbd6d6;
       max-width: 500px;
       margin: auto;
     }
@@ -2758,7 +2758,7 @@ $backdrop-color: rgba(0, 0, 0, 0.5);
       font-size: 14px;
       line-height: 180%;
       text-align: center;
-      width: 186px;
+      width: auto;
       // margin-bottom: 10px;
       white-space: nowrap;
       &.primary {

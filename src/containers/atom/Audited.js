@@ -4,7 +4,7 @@ import {
   STKATOM_HALBOR_AUDIT_REPORT
 } from "../../constants/config";
 
-const Audited = () => { 
+const Audited = () => {
   return (
     <React.Fragment>
       <section className="audited-section">
@@ -25,13 +25,6 @@ const Audited = () => {
               >
                 <img className="" src={"/images/audits/halborn_black.svg"} title="Halborn" alt="halborn" />
               </a>
-              <img
-                className=""
-                src={"/images/audits/aok.svg"}
-                title="Oak Security"
-                alt="oak security"
-              />
-              {/* </a> */}
             </div>
             {/* <div className="tracking">
               <div className="bug-bounty">
