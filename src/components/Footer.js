@@ -1,8 +1,10 @@
 import React from "react";
 import ReactGa from "react-ga4";
 import Icon from "./Icon";
-import { Link } from "react-router-dom";
-import useTranslation from 'next-translate/useTranslation';
+import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
+
 import {
   PSTAKE_TWITTER_URL,
   PSTAKE_TELEGRAM_URL,
@@ -13,73 +15,75 @@ import {
   STK_ATOM_TWITTER_URL,
   STK_ATOM_SUBSCRIBE_URL,
   DISCORD_URL,
-  PSTAKE_REDDIT_URL
+  PSTAKE_REDDIT_URL,
 } from "../constants/config";
 
-const onClick = (name) => {
-  ReactGa.event({
-    category: name,
-    action: `Clicked on ${name}`
-  });
-};
-
-let twitterUrl;
-
-if (window.location.pathname === "/") {
-  twitterUrl = PSTAKE_TWITTER_URL;
-} else if (window.location.pathname === "/bnb") {
-  twitterUrl = STK_BNB_TWITTER_URL;
-} else if (window.location.pathname === "/atom") {
-  twitterUrl = STK_ATOM_TWITTER_URL;
-}
-
-const list = [
-  {
-    name: "Telegram",
-    url: PSTAKE_TELEGRAM_URL,
-    icon: <Icon viewClass="social_icon_img" icon="telegram-plane" />,
-    text: "Chat with the community"
-  },
-  {
-    name: "Twitter",
-    url: twitterUrl,
-    icon: <Icon viewClass="social_icon_img" icon="twitter-logo" />,
-    text: "Stay updated"
-  },
-  {
-    name: "Blogs",
-    url: PSTAKE_MEDIUM_URL,
-    icon: <Icon viewClass="social_icon_img" icon="medium-m" />,
-    text: "Learn about pSTAKE"
-  },
-  {
-    name: "YouTube",
-    url: PSTAKE_YOUTUBE_URL,
-    icon: <Icon viewClass="social_icon_img" icon="youtube" />,
-    text: "Subscribe for tutorials"
-  },
-  {
-    name: "Discord",
-    url: DISCORD_URL,
-    icon: <Icon viewClass="social_icon_img" icon="discord" />,
-    text: "Ask Questions"
-  },
-  {
-    name: "Reddit",
-    url: PSTAKE_REDDIT_URL,
-    icon: <Icon viewClass="social_icon_img" icon="reddit" />,
-    text: "Interact with community"
-  }
-];
-
 const Footer = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
+  const router = useRouter();
+
+  const onClick = (name) => {
+    ReactGa.event({
+      category: name,
+      action: `Clicked on ${name}`,
+    });
+  };
+
+  let twitterUrl;
+
+  if (router.pathname === "/") {
+    twitterUrl = PSTAKE_TWITTER_URL;
+  } else if (router.pathname === "/bnb") {
+    twitterUrl = STK_BNB_TWITTER_URL;
+  } else if (router.pathname === "/atom") {
+    twitterUrl = STK_ATOM_TWITTER_URL;
+  }
+
+  const list = [
+    {
+      name: "Telegram",
+      url: PSTAKE_TELEGRAM_URL,
+      icon: <Icon viewClass="social_icon_img" icon="telegram-plane" />,
+      text: "Chat with the community",
+    },
+    {
+      name: "Twitter",
+      url: twitterUrl,
+      icon: <Icon viewClass="social_icon_img" icon="twitter-logo" />,
+      text: "Stay updated",
+    },
+    {
+      name: "Blogs",
+      url: PSTAKE_MEDIUM_URL,
+      icon: <Icon viewClass="social_icon_img" icon="medium-m" />,
+      text: "Learn about pSTAKE",
+    },
+    {
+      name: "YouTube",
+      url: PSTAKE_YOUTUBE_URL,
+      icon: <Icon viewClass="social_icon_img" icon="youtube" />,
+      text: "Subscribe for tutorials",
+    },
+    {
+      name: "Discord",
+      url: DISCORD_URL,
+      icon: <Icon viewClass="social_icon_img" icon="discord" />,
+      text: "Ask Questions",
+    },
+    {
+      name: "Reddit",
+      url: PSTAKE_REDDIT_URL,
+      icon: <Icon viewClass="social_icon_img" icon="reddit" />,
+      text: "Interact with community",
+    },
+  ];
+
   return (
     <React.Fragment>
       <section className="footer-section">
         <h3 className="section-title">{t("Explore the Community")}</h3>
         <p className="section-sub-title">
-          {window.location.pathname === "/atom"
+          {router.pathname === "/atom"
             ? "Join the discussion on liquid staking ATOM. Learn about the pSTAKE Liquid Staking Ecosystem, meet others like you & make your voice heard."
             : "Join the discussion on one of our many fronts. Learn about the pSTAKE Liquid Staking Ecosystem, meet others like you & make your voice heard."}
         </p>
@@ -105,7 +109,7 @@ const Footer = () => {
                   </a>
                 </div>
               ))}
-              {window.location.pathname === "/atom" ? (
+              {router.pathname === "/atom" ? (
                 <div className="col-md-12 subscribe buttons m-0">
                   <div className="item-body">
                     <p className="heading">
@@ -129,7 +133,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="privacy-terms d-flex align-items-center">
-            <Link to="/privacy" target="_blank">
+            <Link href="/privacy" target="_blank">
               {t("PRIVACY_POLICY")}
             </Link>
             <p className="terms text-center">
@@ -143,7 +147,7 @@ const Footer = () => {
                 Persistence
               </a>
             </p>
-            <Link to="/terms" target="_blank">
+            <Link href="/terms" target="_blank">
               {t("TERMS_OF_SERVICE")}{" "}
             </Link>
           </div>

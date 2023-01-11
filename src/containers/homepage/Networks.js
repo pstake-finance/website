@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from "next-translate/useTranslation";
 import {
   APR_DEFAULT,
   PSTAKE_APP_STKETH_URL,
-  PSTAKE_APP_URL
+  PSTAKE_APP_URL,
 } from "../../constants/config";
-import atom from "../../assets/networks/atom.svg";
-import persistence from "../../assets/networks/persistence.svg";
-import ethereum from "../../assets/networks/ethereum.svg";
-import bnb from "../../assets/networks/bnb.svg";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { getAPR } from "../../actions/api";
 
 const Networks = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const [apr, setApr] = useState(APR_DEFAULT);
   useEffect(() => {
     const fetchValues = async () => {
@@ -36,7 +32,7 @@ const Networks = () => {
                 <div className="text-center">
                   <img
                     className="pt-4 pb-4 logo"
-                    src={bnb}
+                    src={"/images/networks/bnb.svg"}
                     title="Asset"
                     alt="Asset"
                   />
@@ -47,7 +43,7 @@ const Networks = () => {
                     {t("BNB_APY")}{" "}
                     <span className="helper-text">{t("APY")}</span>
                   </h1>
-                  <Link to="/bnb">
+                  <Link href="/bnb">
                     <p className="link">{t("STAKE_NOW")}</p>
                   </Link>
                 </div>
@@ -58,7 +54,7 @@ const Networks = () => {
                 <div className="text-center">
                   <img
                     className="pt-4 pb-4 logo"
-                    src={atom}
+                    src={"/images/networks/atom.svg"}
                     title="Asset"
                     alt="Asset"
                   />
@@ -69,7 +65,7 @@ const Networks = () => {
                     ~{apr === -1 ? APR_DEFAULT : apr}%{" "}
                     <span className="helper-text">{t("APY")}</span>
                   </h1>
-                  <Link to="/atom">
+                  <Link href="/atom">
                     <p className="link">{t("STAKE_NOW")}</p>
                   </Link>
                 </div>
@@ -82,7 +78,7 @@ const Networks = () => {
                 <div className="text-center">
                   <img
                     className="pt-4 pb-4 logo"
-                    src={persistence}
+                    src={"/images/networks/persistence.svg"}
                     title="Asset"
                     alt="Asset"
                   />
@@ -109,7 +105,7 @@ const Networks = () => {
                 <div className="text-center">
                   <img
                     className="pt-4 pb-4 logo"
-                    src={ethereum}
+                    src={"/images/networks/ethereum.svg"}
                     title="Asset"
                     alt="Asset"
                   />
@@ -136,7 +132,7 @@ const Networks = () => {
                 <div className="text-center">
                   <img
                     className="pt-4 pb-4 logo"
-                    src={atom}
+                    src={"/images/networks/atom.svg"}
                     title="Asset"
                     alt="Asset"
                   />

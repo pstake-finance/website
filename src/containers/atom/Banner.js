@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import useTranslation from 'next-translate/useTranslation';
 import { getExchangeRate, getTVU } from "../../actions/api";
-import stkAtom from "../../assets/stkAtom.svg";
 import Icon from "../../components/Icon";
 import { ATOM_URL } from "../../constants/config";
 import { decimalize, formatNumber } from "../../utils/helpers";
@@ -29,7 +28,7 @@ const Banner = () => {
               data-aos="fade-up"
             >
               <div className="logo">
-                <img src={stkAtom} alt="Liquid ATOM Staking" />
+                <img src={"/images/stkAtom.svg"} alt="Liquid ATOM Staking" />
               </div>
               <h1 className="banner-heading">
                 Liquid Staking for The <br /> Internet of Blockchains

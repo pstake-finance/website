@@ -1,7 +1,4 @@
 import React from "react";
-import stake_atom from "../../assets/steps/stake_atom.svg";
-import receive_stkatom from "../../assets/steps/receive_stkatom.svg";
-import participate_in_defi from "../../assets/steps/participate_in_defi.svg";
 
 const LiquidStakingSteps = () => {
   return (
@@ -15,7 +12,10 @@ const LiquidStakingSteps = () => {
               data-aos="fade-up"
             >
               <div className="icon-box">
-                <img src={stake_atom} alt="Liquid ATOM Staking" />
+                <img
+                  src={"/images/steps/stake_atom.svg"}
+                  alt="Liquid ATOM Staking"
+                />
                 {/* <Icon viewClass="use-case" icon="stake-atom" /> */}
               </div>
               <div className="content">
@@ -31,7 +31,10 @@ const LiquidStakingSteps = () => {
               data-aos="fade-up"
             >
               <div className="icon-box">
-                <img src={receive_stkatom} alt="Liquid ATOM Staking" />
+                <img
+                  src={"/images/steps/receive_stkatom.svg"}
+                  alt="Liquid ATOM Staking"
+                />
               </div>
               <div className="content">
                 <p className="card-heading">Receive stkATOM</p>
@@ -46,7 +49,10 @@ const LiquidStakingSteps = () => {
               data-aos="fade-up"
             >
               <div className="icon-box">
-                <img src={participate_in_defi} alt="Liquid ATOM Staking" />
+                <img
+                  src={"/images/steps/participate_in_defi.svg"}
+                  alt="Liquid ATOM Staking"
+                />
               </div>
               <div className="content">
                 <p className="card-heading">Participate in DeFi</p>

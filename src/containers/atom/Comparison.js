@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import stkAtom from "../../assets/stkAtom.svg";
-import atom from "../../assets/atom.svg";
 import { APR_DEFAULT, ATOM_URL } from "../../constants/config";
 import { getAPR } from "../../actions/api";
 
@@ -21,11 +19,11 @@ const Comparison = () => {
             <div className="item-header">
               <div className="type"></div>
               <div className="bnb">
-                <img src={atom} alt="Liquid ATOM Staking" />
+                <img src={"/images/atom.svg"} alt="Liquid ATOM Staking" />
                 Staking ATOM
               </div>
               <div className="stk-bnb">
-                <img src={stkAtom} alt="Liquid Stake ATOM" />
+                <img src={"/images/stkAtom.svg"} alt="Liquid Stake ATOM" />
                 Liquid Staking ATOM with pSTAKE
               </div>
             </div>

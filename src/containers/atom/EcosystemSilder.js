@@ -1,7 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
-import osmosis from "../../assets/integrations/osmosis.svg";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import { fetchOsmosisPoolInfo } from "../../actions/api";
@@ -39,7 +38,7 @@ const EcosystemSlider = ({ deviceType }) => {
     {
       name: "Osmosis",
       tag: "DEX",
-      logoUrl: osmosis,
+      logoUrl: "/images/integrations/osmosis.svg",
       content: (
         <span className="d-block">
           Provide liquidity in the stkATOM/ATOM liquidity pool to earn trading
