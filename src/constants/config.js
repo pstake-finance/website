@@ -182,7 +182,7 @@ export const STK_ATOM_SECURITY_AUDIT_URL =
   "https://github.com/persistenceOne/pStake-auditReports/tree/main/stkATOM";
 export const STK_ATOM_DOCS_URL = "#";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
-export const ATOM_URL = "https://staging.cosmos.pstake.finance/";
+export const ATOM_URL = "https://cosmos.pstake.finance/";
 
 export const TVL = "tvl";
 export const STK_ATOM_MINIMAL_DENOM = "stk/uatom";
