@@ -9,17 +9,18 @@ body a {
 }
 
 .top-banner-section {
-  background: #efb90b;
+  //background: #efb90b;
+  background-image: url(../assets/bg_images/atom_topbar.svg), radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDD 25.4%, #83339D 100%);
+  background-repeat: no-repeat;
+  background-position: 100%, 100% 100%;
+  background-size: contain;
   text-align: center;
-  padding: 4px 40px 4px 0;
+  padding: 10px 40px 10px 0;
   position: relative;
   .content {
-    color: #000;
+    color: #FFFFFF;
     font-size: 12px;
     margin: 0;
-    &:hover {
-      text-decoration: underline;
-    }
     .icon {
       margin-left: 10px;
       fill: #000;
@@ -28,14 +29,20 @@ body a {
       width: 16px;
       margin-right: 10px;
     }
+    .link{
+      color: #FFFFFF;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .icon-close {
     width: 10px;
-    fill: #000;
+    fill: #FFFFFF;
     cursor: pointer;
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 13px;
   }
 }
 
