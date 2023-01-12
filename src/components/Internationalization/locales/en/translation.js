@@ -452,7 +452,8 @@ let English = {
       "Skip unstaking and unbonding process of your BNB by directly swapping stkBNB from a liquidity pool",
     STAKING_VS_LIQUID_STAKING: "Staking vs Liquid Staking",
     ECOSYSTEM_HEADING: "Put your stkBNB to work in the BNB DeFi Ecosystem",
-    START_STAKING: "Start Staking"
+    START_STAKING: "Start Staking",
+    WITHDRAW_ASSETS: "Withdraw Assets"
   }
 };
 

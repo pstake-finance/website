@@ -86,33 +86,6 @@ const Networks = () => {
           </div>
           <div className="row justify-content-center">
             <Card className="col-md-4  col-xs-6">
-              <Card.Body className="persistence m-auto justify-content-center">
-                <div className="text-center">
-                  <img
-                    className="pt-4 pb-4 logo"
-                    src={persistence}
-                    title="Asset"
-                    alt="Asset"
-                  />
-                  <Card.Title>{t("PERSISTENCE")}</Card.Title>
-                  <span className="helper-text">{t("(ERC20)")}</span>
-                </div>
-                <div className="apr text-center m-0">
-                  <h1 className="main-text">
-                    {t("XPRT_APR")}{" "}
-                    <span className="helper-text">{t("APY")}</span>
-                  </h1>
-                  <a
-                    href={PSTAKE_APP_URL}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <p className="link">{t("STAKE_NOW")}</p>
-                  </a>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card className="col-md-4  col-xs-6">
               <Card.Body className="ethereum m-auto justify-content-center">
                 <div className="text-center">
                   <img
@@ -139,6 +112,38 @@ const Networks = () => {
                 </div>
               </Card.Body>
             </Card>
+            <Card className="col-md-4  col-xs-6">
+              <Card.Body className="persistence m-auto justify-content-center">
+                <div className="text-center">
+                  <img
+                    className="pt-4 pb-4 logo"
+                    src={persistence}
+                    title="Asset"
+                    alt="Asset"
+                  />
+                  <Card.Title>
+                    {t("PERSISTENCE")}&nbsp;
+                    <span className="helper-text font-weight-normal">
+                      {t("(ERC20)")}
+                    </span>
+                  </Card.Title>
+                  <span className="helper-text">(Deprecated)</span>
+                </div>
+                <div className="apr text-center m-0">
+                  <h1 className="main-text">
+                    {t("XPRT_APR")}{" "}
+                    <span className="helper-text">{t("APY")}</span>
+                  </h1>
+                  <a
+                    href={PSTAKE_APP_URL}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <p className="link">{t("WITHDRAW_ASSETS")}</p>
+                  </a>
+                </div>
+              </Card.Body>
+            </Card>
             <Card className="col-md-4 col-xs-6">
               <Card.Body className="cosmos m-auto justify-content-center">
                 <div className="text-center">
@@ -148,8 +153,13 @@ const Networks = () => {
                     title="Asset"
                     alt="Asset"
                   />
-                  <Card.Title>{t("COSMOS")}</Card.Title>
-                  <span className="helper-text">{t("(ERC20)")}</span>
+                  <Card.Title>
+                    {t("COSMOS")}&nbsp;
+                    <span className="helper-text font-weight-normal">
+                      {t("(ERC20)")}
+                    </span>
+                  </Card.Title>
+                  <span className="helper-text">(Deprecated)</span>
                 </div>
                 <div className="apr text-center m-0">
                   <h1 className="main-text">
@@ -161,7 +171,7 @@ const Networks = () => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <p className="link">{t("STAKE_NOW")}</p>
+                    <p className="link">{t("WITHDRAW_ASSETS")}</p>
                   </a>
                 </div>
               </Card.Body>
