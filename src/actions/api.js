@@ -36,7 +36,7 @@ export const SHIELD_TVL_API = "https://api2.shieldex.io/mainnet/mvault/getTVL";
 export const THENA_API =
   "https://api.thegraph.com/subgraphs/name/thenaursa/thena-v1";
 
-export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/843";
+export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
 
 const initialLiquidity = { [TVL]: 0 };
 

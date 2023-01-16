@@ -42,14 +42,14 @@ const EcosystemSlider = ({ deviceType }) => {
       logoUrl: osmosis,
       content: (
         <span className="d-block">
-          Provide liquidity in the stkATOM/ATOM liquidity pool to earn trading
-          fees, OSMO emissions & external incentives
+          Provide liquidity in the stkATOM/ATOM Stableswap pool to earn trading
+          fees and $ATOM external incentives
         </span>
       ),
-      primaryButtonText: "Add Liquidity",
-      primaryButtonUrl: `https://app.osmosis.zone/pool/843`,
-      secondaryButtonText: "Learn More",
-      secondaryButtonUrl: "/",
+      primaryButtonText: "Swap",
+      primaryButtonUrl: `https://frontier.osmosis.zone/?from=stkATOM&to=ATOM`,
+      secondaryButtonText: "Add Liquidity",
+      secondaryButtonUrl: "https://frontier.osmosis.zone/pool/886",
       tvl: (
         <>
           ${parseInt(osmosisInfo.tvl).toLocaleString()} <span>TVL</span>
@@ -60,9 +60,6 @@ const EcosystemSlider = ({ deviceType }) => {
       //     <span>upto </span>0% <span>APY</span>
       //   </>
       // )
-    },
-    {
-      name: "Coming Soon"
     }
   ];
 
@@ -70,8 +67,7 @@ const EcosystemSlider = ({ deviceType }) => {
     <section className="ecosystem-section" data-aos="fade-up">
       <div className="container">
         <h3 className="section-title">
-          Liquid Stake ATOM & put your stkATOM to work in the Cosmos DeFi
-          Ecosystem
+          Put your stkATOM to work in the Cosmos DeFi Ecosystem
         </h3>
         <Carousel
           ssr
@@ -117,7 +113,7 @@ const EcosystemSlider = ({ deviceType }) => {
                       rel="noopener noreferrer"
                       target="_blank"
                       href={item.secondaryButtonUrl}
-                      className={`button-link secondary pointer-events-none`}
+                      className={`button-link secondary`}
                     >
                       {item.secondaryButtonText}
                     </a>
