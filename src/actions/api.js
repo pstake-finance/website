@@ -33,8 +33,10 @@ export const WOMBAT_API =
 export const WOMBAT_APR_API =
   "https://api.thegraph.com/subgraphs/name/wombat-exchange/wombat-apr";
 export const SHIELD_TVL_API = "https://api2.shieldex.io/mainnet/mvault/getTVL";
+export const THENA_API =
+  "https://api.thegraph.com/subgraphs/name/thenaursa/thena-v1";
 
-export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/843";
+export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
 
 const initialLiquidity = { [TVL]: 0 };
 
@@ -96,7 +98,7 @@ export const fetchOpenLeverage = async () => {
     const res = await Axios.get(OPEN_LEVERAGE_API);
     if (res && res.data && res.data.data && res.data.data.currentTVLUsd) {
       const tvlUSD = res.data.data.currentTVLUsd;
-      return { tvl: Number(tvlUSD).toFixed(2), apy: 30 };
+      return { tvl: Number(tvlUSD).toFixed(2), apy: 15 };
     } else {
       return { tvl: 0, apy: 0 };
     }
@@ -217,6 +219,31 @@ export const fetchShield = async () => {
     const apy = bigNumberToEther(response["APY"]) * 100;
     const tvl = await fetchShieldTVL();
     return { tvl: parseInt(tvl).toLocaleString(), apy: apy.toFixed(2) };
+  } catch (e) {
+    return { tvl: 0, apy: 0 };
+  }
+};
+
+export const fetchThenaInfo = async () => {
+  try {
+    const res = await fetch(THENA_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        query: `{
+                pair(id: "0x2b3510f57365aa17bff8e6360ea67c136175dc6d") {
+                   reserveUSD,
+                 }
+             }`
+      })
+    });
+    const responseJson = await res.json();
+    if (responseJson && responseJson.data) {
+      return { tvl: parseInt(responseJson.data.pair.reserveUSD), apy: 0 };
+    }
+    return { tvl: 0, apy: 0 };
   } catch (e) {
     return { tvl: 0, apy: 0 };
   }

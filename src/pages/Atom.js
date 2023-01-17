@@ -10,6 +10,7 @@ import Audited from "../containers/atom/Audited";
 import MigrationCard from "./MigrationCard";
 import Faq from "../containers/atom/Faq";
 import Validators from "../containers/atom/Validators";
+import EcosystemSlider from "../containers/atom/EcosystemSilder";
 
 const Atom = () => {
   return (
@@ -20,7 +21,7 @@ const Atom = () => {
         <SectionTwo />
         <Comparison />
         <LiquidStakingSteps />
-        {/* <EcosystemSlider /> */}
+        <EcosystemSlider />
         {/*<Guides />*/}
         <Validators />
         <Audited />
