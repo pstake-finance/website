@@ -392,7 +392,7 @@ export const getAPR = async () => {
 export const getAPY = async () => {
   try {
     const apr = await getAPR()
-    return ([1 + apr/36500] ** 365 - 1) * 100
+    return ((1 + Number(apr) / 36500) ** 365 - 1) * 100;
   } catch (e) {
     return -1
   }
