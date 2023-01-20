@@ -26,15 +26,19 @@ import {
   STK_ATOM_FAQ_URL,
   STKATOM_BLOG_URL,
   PSTAKE_REDDIT_URL,
-  CREW3_URL
+  CREW3_URL,
+  COSMOS_URL,
+  PSTAKE_APP_URL,
+  BNB_URL,
+  ATOM_URL
 } from "../constants/config";
 import useTranslation from "next-translate/useTranslation";
-
 import Icon from "./Icon";
 
 const Header = () => {
   const { t } = useTranslation("common");
   const router = useRouter();
+  const [banner, setBanner] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [chevronChange, setChevronChange] = useState(false);
   const toggleMenu = () => {
@@ -68,35 +72,58 @@ const Header = () => {
     });
   };
 
+  const closeBanner = () => {
+    setBanner(false);
+  };
+
   let auditURL;
   let docsURL;
   let faqURL;
   let twitterUrl;
-  // let appURL;
+  let appURL;
 
   if (router.pathname === "/") {
     auditURL = SECURITY_AUDIT_URL;
     docsURL = DOCS_URL;
     faqURL = GUIDES_FAQ_URL;
     twitterUrl = PSTAKE_TWITTER_URL;
-    // appURL = PSTAKE_APP_URL;
+    appURL = PSTAKE_APP_URL;
   } else if (router.pathname === "/bnb") {
     auditURL = STK_BNB_SECURITY_AUDIT_URL;
     docsURL = STK_BNB_DOCS_URL;
     faqURL = STK_FAQ_URL;
     twitterUrl = STK_BNB_TWITTER_URL;
-    // appURL = BNB_URL;
+    appURL = BNB_URL;
   } else if (router.pathname === "/atom") {
     auditURL = STK_ATOM_SECURITY_AUDIT_URL;
     docsURL = STK_ATOM_DOCS_URL;
     faqURL = STK_ATOM_FAQ_URL;
-    // appURL = ATOM_URL;
+    appURL = ATOM_URL;
     twitterUrl = STK_ATOM_TWITTER_URL;
   }
 
   return (
     <React.Fragment>
       <div id="is-sticky" className="top-bar">
+        {router.pathname !== "/bnb" ? (
+          <div className={!banner ? "d-none" : "top-banner-section"}>
+            <p className="content">
+              <img src={"/images/stkAtom.svg"} alt={"stkAtom"} className="logo" />
+              stkATOM is now live on the Persistence Mainnet! -&nbsp;
+              <a
+                className="link"
+                href={COSMOS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b>Liquid Stake ATOM Now</b>
+              </a>
+            </p>
+            <div onClick={closeBanner}>
+              <Icon viewClass="close" icon="close" />
+            </div>
+          </div>
+        ) : null}
         <nav
           className={
             "navbar navbar-expand-lg navbar-custom sticky " +
@@ -348,24 +375,23 @@ const Header = () => {
                   ""
                 )}
 
-                {router.pathname === "/atom" ? (
-                  <li
-                    className="nav-item"
-                    style={{ marginLeft: "10px", marginRight: "0" }}
+                <li
+                  className="nav-item"
+                  style={{ marginLeft: "10px", marginRight: "0" }}
+                >
+                  <a
+                    style={{ padding: "0" }}
+                    onClick={onClickNavApp}
+                    href={appURL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nav-link"
                   >
-                    <a
-                      href="/atom"
-                      style={{ padding: "0" }}
-                      onClick={onClickNavApp}
-                      rel="noopener noreferrer"
-                      className="nav-link coming-soon "
-                    >
-                      <span className="nav-link app-btn"></span>
-                    </a>
-                  </li>
-                ) : (
-                  ""
-                )}
+                    <span className="nav-link pophover tooltip-multiline app-btn">
+                      {t("GO_TO_APP")}
+                    </span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

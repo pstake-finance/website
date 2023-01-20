@@ -28,6 +28,7 @@ const EcosystemSlider = ({
   alpacaInfo,
   wombatInfo,
   shieldInfo,
+  thenaInfo
 }) => {
   const list = [
     {
@@ -52,29 +53,28 @@ const EcosystemSlider = ({
       ),
       apy: "",
     },
-    {
-      name: "Alpaca Finance",
-      tag: "Yield Farming",
-      logoUrl: "/images/integrations/alpaca.svg",
-      content:
-        "Earn additional rewards from stkBNB/BNB pool on Pancakeswap by borrowing assets and Leverage Farming",
-      primaryButtonText: "Start farming",
-      primaryButtonUrl:
-        "https://app.alpacafinance.org/farm/pancake-swap/pool/pcs-stkbnb-bnb/-/open?leverage=4&configKey=pcs-stkbnb-bnb",
-      secondaryButtonText: "Learn More",
-      secondaryButtonUrl:
-        "https://youtube.com/clip/UgkxNxpgUN_yqPpLh2vknM6pQxpmSzH1vSPr",
-      tvl: (
-        <>
-          ${parseInt(alpacaInfo.tvl).toLocaleString()} <span>TVL</span>
-        </>
-      ),
-      apy: (
-        <>
-          {alpacaInfo.apy}% <span>APY</span>
-        </>
-      ),
-    },
+      {
+          name: "Thena",
+          tag: "DEX",
+          logoUrl: "/images/integrations/thena.svg",
+          content: (
+            <span className="mb-4 d-block">
+          Provide liquidity in the stkBNB/BNB liquidity pool to earn trading
+          fees and $THE rewards
+        </span>
+          ),
+          primaryButtonText: "Deposit",
+          primaryButtonUrl: `https://www.thena.fi/liquidity`,
+          secondaryButtonText: "Learn More",
+          secondaryButtonUrl:
+            "https://twitter.com/pSTAKE_stkBNB/status/1613241767469670400",
+          tvl: (
+            <>
+                ${parseInt(thenaInfo.tvl).toLocaleString()} <span>TVL</span>
+            </>
+          ),
+          apy: ""
+      },
     {
       name: "Wombat",
       tag: "DEX",
@@ -217,6 +217,7 @@ const EcosystemSlider = ({
                       src={item.logoUrl}
                       title="Asset"
                       alt="Asset"
+                      width={"58px"}
                     />
                   </div>
                   <div className="content">

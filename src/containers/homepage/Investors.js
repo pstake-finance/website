@@ -10,7 +10,7 @@ import {
   GALAXY_DIGITAL_URL,
   SPARTAN_CAPITAL,
   SINO_GLOBAL_CAPITAL,
-    BINANCE_LABS
+  BINANCE_LABS,
 } from "../../constants/config";
 
 const Investors = () => {
@@ -128,19 +128,19 @@ const Investors = () => {
               alt="Tendermint"
             />
           </a>
-            <a
-              href={BINANCE_LABS}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="tile"
-            >
-                <img
-                  className=""
-                  src={binance_labs}
-                  title="binance_labs"
-                  alt="binance_labs"
-                />
-            </a>
+          <a
+            href={BINANCE_LABS}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tile"
+          >
+            <img
+              className=""
+              src={"/images/investors/binance_labs.svg"}
+              title="binance_labs"
+              alt="binance_labs"
+            />
+          </a>
         </div>
       </div>
     </section>

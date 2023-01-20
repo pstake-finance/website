@@ -7,14 +7,16 @@ import {
   fetchBeefyInfo,
   fetchOpenLeverage,
   fetchPancakeInfo,
+  fetchThenaInfo
 } from "../../actions/api";
 
 const Ecosystem = () => {
-  const { t } = useTranslation("common");
+    const { t } = useTranslation("common");
   const [alpacaInfo, setAlpacaInfo] = useState({ tvl: 0, apy: 0 });
   const [beefyInfo, setBeefyInfo] = useState({ tvl: 0, apy: 0 });
   const [pancakeInfo, setPanCakeInfo] = useState({ tvl: 0, apy: 0 });
   const [openLeverageInfo, setOpenLeverageInfo] = useState({ tvl: 0, apy: 0 });
+  const [thenaInfo, setThenaInfo] = useState({ tvl: 0, apy: 0 });
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -22,6 +24,7 @@ const Ecosystem = () => {
       setBeefyInfo(await fetchBeefyInfo());
       setPanCakeInfo(await fetchPancakeInfo());
       setOpenLeverageInfo(await fetchOpenLeverage());
+      setThenaInfo(await fetchThenaInfo());
     };
     fetchApi();
   }, []);

@@ -1,4 +1,5 @@
 import React from "react";
+import { ATOM_URL } from "../../constants/config";
 
 const LiquidStakingSteps = () => {
   return (
@@ -11,13 +12,18 @@ const LiquidStakingSteps = () => {
               className="col-lg-4 col-md-6 col-xs-12 d-flex flex-column align-items-center"
               data-aos="fade-up"
             >
-              <div className="icon-box">
+              <a
+                href={ATOM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-box"
+              >
                 <img
                   src={"/images/steps/stake_atom.svg"}
                   alt="Liquid ATOM Staking"
                 />
                 {/* <Icon viewClass="use-case" icon="stake-atom" /> */}
-              </div>
+              </a>
               <div className="content">
                 <p className="card-heading">Liquid Stake ATOM</p>
                 <p className="card-content">
@@ -30,12 +36,17 @@ const LiquidStakingSteps = () => {
               className="col-lg-4 col-md-6 col-xs-12 d-flex flex-column align-items-center"
               data-aos="fade-up"
             >
-              <div className="icon-box">
+              <a
+                href={ATOM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-box"
+              >
                 <img
                   src={"/images/steps/receive_stkatom.svg"}
                   alt="Liquid ATOM Staking"
                 />
-              </div>
+              </a>
               <div className="content">
                 <p className="card-heading">Receive stkATOM</p>
                 <p className="card-content">
@@ -48,12 +59,17 @@ const LiquidStakingSteps = () => {
               className="col-lg-4 col-md-6 col-xs-12 d-flex flex-column align-items-center"
               data-aos="fade-up"
             >
-              <div className="icon-box">
+              <a
+                href={ATOM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-box"
+              >
                 <img
                   src={"/images/steps/participate_in_defi.svg"}
                   alt="Liquid ATOM Staking"
                 />
-              </div>
+              </a>
               <div className="content">
                 <p className="card-heading">Participate in DeFi</p>
                 <p className="card-content">

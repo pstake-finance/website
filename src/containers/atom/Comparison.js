@@ -118,9 +118,9 @@ const Comparison = () => {
                       rel="noopener noreferrer"
                       target="_blank"
                       href={ATOM_URL}
-                      className="button-link primary m-0 pointer-events-none"
+                      className="button-link primary m-0"
                     >
-                      Live on 12 Jan 2023
+                      Go to app
                     </a>
                   </div>
                 </div>
