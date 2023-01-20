@@ -11,14 +11,17 @@ import persistence from "../../assets/networks/persistence.svg";
 import ethereum from "../../assets/networks/ethereum.svg";
 import bnb from "../../assets/networks/bnb.svg";
 import { Link } from "react-router-dom";
-import { getAPR } from "../../actions/api";
+import { getAPY } from "../../actions/api";
 
 const Networks = () => {
   const { t } = useTranslation();
-  const [apr, setApr] = useState(APR_DEFAULT);
+
+  const [apy, setApy] = useState(APR_DEFAULT)
+
+
   useEffect(() => {
     const fetchValues = async () => {
-      setApr(await getAPR());
+      setApy(await getAPY())
     };
     fetchValues();
   }, []);
@@ -44,7 +47,7 @@ const Networks = () => {
                 </div>
                 <div className="apr text-center m-0">
                   <h1 className="main-text">
-                    ~{apr === -1 ? APR_DEFAULT : apr}%{" "}
+                    ~{apy === -1 ? APR_DEFAULT : apy.toFixed(2)}%{" "}
                     <span className="helper-text">{t("APY")}</span>
                   </h1>
                   <Link to="/atom">
