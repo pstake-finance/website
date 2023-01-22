@@ -8,7 +8,7 @@ import {
   PSTAKE_SOLIDFIED_AUDIT,
   PSTAKE_TRAIL_OF_BITS,
 } from "../../constants/config";
-import { useTranslation } from "react-i18next";
+import useTranslation from "next-translate/useTranslation";
 
 const Audited = () => {
   const { t } = useTranslation("common");

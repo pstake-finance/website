@@ -11,7 +11,7 @@ import {
   VALIDATOR_NODE_REAL,
   VALIDATOR_TRANCHES,
 } from "../../constants/config";
-import { useTranslation } from "react-i18next";
+import useTranslation from "next-translate/useTranslation";
 
 const Validators = () => {
   const { t } = useTranslation("common");

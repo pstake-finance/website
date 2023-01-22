@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import useTranslation from "next-translate/useTranslation";
 
 const Comparison = () => {
   const { t } = useTranslation("common");
