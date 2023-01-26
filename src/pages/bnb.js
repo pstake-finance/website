@@ -16,7 +16,7 @@ import {
   fetchOpenLeverage,
   fetchShield,
   fetchThenaInfo,
-  fetchWombat
+  fetchWombat,
 } from "../actions/api";
 
 const Binance = () => {
@@ -36,8 +36,17 @@ const Binance = () => {
           fetchOpenLeverage(),
           fetchWombat(),
           fetchShield(),
-          fetchThenaInfo()
+          fetchThenaInfo(),
         ]);
+      console.log(
+        alpaca,
+        beefyInfo,
+        openLeverage,
+        wombat,
+        shield,
+        thena,
+        "sssss"
+      );
       setAlpacaInfo(alpaca);
       setBeefyInfo(beefyInfo);
       setOpenLeverageInfo(openLeverage);

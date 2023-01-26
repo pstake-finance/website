@@ -58,6 +58,11 @@ export const fetchAlpaca = async () => {
       const data = farmingPools.filter((val) => {
         return val.key.toLowerCase() === "pcs-stkbnb-bnb";
       });
+      console.log(
+        Number(data[0].tvl).toFixed(2),
+        Number(data[0].totalApy).toFixed(2),
+        "alpaca"
+      );
       return {
         tvl: Number(data[0].tvl).toFixed(2),
         apy: Number(data[0].totalApy).toFixed(2),
@@ -122,41 +127,12 @@ export const fetchWombat = async () => {
              }`,
       }),
     });
-    const aprResponse = await fetch(WOMBAT_APR_API, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: `{
-                    asset(id: "0xc496f42ea6fc72af434f48469b847a469fe0d17f") {
-                    symbol
-                    womBaseAPR
-                    totalBonusTokenAPR
-                    medianBoostedAPR
-                  }
-             }`,
-      }),
-    });
-    const aprResponseJson = await aprResponse.json();
-    let apr;
-    if (aprResponseJson?.data?.asset) {
-      const medianBoostedAPR = aprResponseJson.data.asset.medianBoostedAPR;
-      const totalBonusTokenAPR = aprResponseJson.data.asset.totalBonusTokenAPR;
-      const womBaseAPR = aprResponseJson.data.asset.womBaseAPR;
-      apr = (
-        (Number(medianBoostedAPR) +
-          Number(totalBonusTokenAPR) +
-          Number(womBaseAPR)) *
-        100
-      ).toFixed(2);
-    }
 
     const responseJson = await res.json();
     if (responseJson && responseJson.data && responseJson.data.asset) {
       return {
         tvl: Number(responseJson.data.asset.liabilityUSD).toFixed(2),
-        apy: apr,
+        apy: 0,
       };
     }
   } catch (e) {
@@ -229,15 +205,15 @@ export const fetchThenaInfo = async () => {
     const res = await fetch(THENA_API, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         query: `{
                 pair(id: "0x2b3510f57365aa17bff8e6360ea67c136175dc6d") {
                    reserveUSD,
                  }
-             }`
-      })
+             }`,
+      }),
     });
     const responseJson = await res.json();
     if (responseJson && responseJson.data) {
@@ -391,9 +367,9 @@ export const getAPR = async () => {
 
 export const getAPY = async () => {
   try {
-    const apr = await getAPR()
+    const apr = await getAPR();
     return ((1 + Number(apr) / 36500) ** 365 - 1) * 100;
   } catch (e) {
-    return -1
+    return -1;
   }
-}
+};

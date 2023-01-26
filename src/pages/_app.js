@@ -1,18 +1,19 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import ReactGA from 'react-ga4';
-import AOS from 'aos';
-import "../styles/globals.scss";
-import 'aos/dist/aos.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../components/Header';
+import ReactGA from "react-ga4";
+import AOS from "aos";
+import "../styles/globals.css";
+import "../css/style.scss";
+import "aos/dist/aos.css";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "../components/Header";
 import { ANALYTICS } from "../constants/config";
 import OneSignalReact from "react-onesignal";
-import Head from 'next/head';
+import Head from "next/head";
 
-ReactGA.initialize(ANALYTICS)
+ReactGA.initialize(ANALYTICS);
 
-const trackPage = page => {
+const trackPage = (page) => {
   ReactGA.set({ page });
   ReactGA.send(page);
 };
@@ -20,22 +21,21 @@ const trackPage = page => {
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
     AOS.init({
-      duration : 2000
-    })
-  },[]);
-
+      duration: 2000,
+    });
+  }, []);
 
   useEffect(() => {
-    OneSignalReact.init({appId: process.env.NEXT_PUBLIC_ONE_SIGNAL_APP_ID})
+    OneSignalReact.init({ appId: process.env.NEXT_PUBLIC_ONE_SIGNAL_APP_ID });
     document.body.classList = "";
-    document.getElementById('nav-bar').classList.add('navbar-white');
+    document.getElementById("nav-bar").classList.add("navbar-white");
   });
 
   const router = useRouter();
 
   useEffect(() => {
     const page = router.pathname;
-    document.body.classList.add('is-loaded')
+    document.body.classList.add("is-loaded");
     trackPage(page);
   }, [router]);
 
@@ -50,21 +50,20 @@ const App = ({ Component, pageProps }) => {
           name="description"
           content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets. Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs, which can then be used across DeFi to earn liquid staking rewards."
         />
-        <meta name="keywords" content="liquid staking, pstake, $pstake, cosmos, persistence" />
+        <meta
+          name="keywords"
+          content="liquid staking, pstake, $pstake, cosmos, persistence"
+        />
         <meta property="og:image" content="/static/ogimage.jpeg" />
       </Head>
       <div className="container-fluid app-nav">
         <div className="container">
-          <Header/>
+          <Header />
         </div>
       </div>
-       <Component {...pageProps} />
+      <Component {...pageProps} />
     </>
-
   );
-}
+};
 
 export default App;
-
-
-

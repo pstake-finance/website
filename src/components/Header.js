@@ -30,7 +30,7 @@ import {
   COSMOS_URL,
   PSTAKE_APP_URL,
   BNB_URL,
-  ATOM_URL
+  ATOM_URL,
 } from "../constants/config";
 import useTranslation from "next-translate/useTranslation";
 import Icon from "./Icon";
@@ -104,11 +104,15 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <div id="is-sticky" className="top-bar">
+      <div id="is-sticky" className="top-bar fixed top-0 right-0 left-0 w-full">
         {router.pathname !== "/bnb" ? (
           <div className={!banner ? "d-none" : "top-banner-section"}>
             <p className="content">
-              <img src={"/images/stkAtom.svg"} alt={"stkAtom"} className="logo" />
+              <img
+                src={"/images/stkAtom.svg"}
+                alt={"stkAtom"}
+                className="logo"
+              />
               stkATOM is now live on the Persistence Mainnet! -&nbsp;
               <a
                 className="link"
@@ -126,7 +130,7 @@ const Header = () => {
         ) : null}
         <nav
           className={
-            "navbar navbar-expand-lg navbar-custom sticky " +
+            "px-8 py-0 flex relative items-center navbar navbar-expand-lg navbar-custom sticky " +
             router.pathname.split("/")[1]
           }
           id="nav-bar"
