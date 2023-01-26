@@ -130,26 +130,24 @@ const Header = () => {
         ) : null}
         <nav
           className={
-            "px-8 py-0 flex relative items-center navbar navbar-expand-lg navbar-custom sticky " +
+            "px-8 py-0 flex relative items-center navbar navbar-expand-lg navbar-custom flex-column md:flex-wrap justify-start " +
             router.pathname.split("/")[1]
           }
           id="nav-bar"
         >
-          <div className="container mb-pad">
+          <div className="container flex flex-wrap items-center justify-between">
             <Link className="navbar-brand logo text-uppercase" href="/"></Link>
             <button
-              className="navbar-toggler"
+              className="navbar-toggler di md:text-center md:hidden bg-[#e50913] text-light-full px-3 py-1 text-lg"
               onClick={toggleMenu}
               type="button"
             >
-              <Icon viewClass="social_icon_img" icon="hamberger" />
+              <Icon viewClass="fill-[#fff]" icon="hamberger" />
             </button>
             <div
-              className={
-                isOpen
-                  ? "collapse navbar-collapse show"
-                  : "collapse navbar-collapse"
-              }
+              className={`${
+                isOpen ? "show" : ""
+              } md:flex md:basis-auto grow-1 items-center`}
               style={{ display: isOpen ? "inline-grid" : "" }}
               id="navbarCollapse"
             >
@@ -173,7 +171,7 @@ const Header = () => {
                       />
                     )}
                   </p>
-                  <ul className="dropdown">
+                  <ul className="min-w-full absolute hidden z-[999] p-5 left-0 shadow-[#0000001a] w-[150px]">
                     <li>
                       <a
                         href={auditURL}

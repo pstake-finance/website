@@ -63,34 +63,34 @@ module.exports = {
       overline: ["0.625rem", { lineHeight: "1rem" }],
     },
     screens: {
-      "2xl": { max: "1536px" },
+      "2xl": { min: "1536px" },
       // => @media (max-width: 1536px) { ... }
 
-      "1.5xl": { max: "1408px" },
+      "1.5xl": { min: "1408px" },
       // => @media (max-width: 1408px) { ... }
 
-      xl: { max: "1280px" },
+      xl: { min: "1280px" },
       // => @media (max-width: 1280px) { ... }
 
-      "1.5lg": { max: "1152px" },
+      "1.5lg": { min: "1152px" },
       // => @media (max-width: 1152px) { ... }
 
-      lg: { max: "1024px" },
+      lg: { min: "1024px" },
       // => @media (max-width: 1024px) { ... }
 
-      "1.5md": { max: "896px" },
+      "1.5md": { min: "896px" },
       // => @media (max-width: 896px) { ... }
 
-      md: { max: "768px" },
+      md: { min: "768px" },
       // => @media (max-width: 768px) { ... }
 
-      "1.5xs": { max: "640px" },
+      "1.5xs": { min: "640px" },
       // => @media (max-width: 640px) { ... }
 
       // "1.5xs": { max: "512px" },
       // // => @media (max-width: 512px) { ... }
 
-      sm: { max: "512px" },
+      sm: { min: "512px" },
     },
   },
   plugins: [],
