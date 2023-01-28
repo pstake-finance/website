@@ -34,6 +34,11 @@ import {
 } from "../constants/config";
 import useTranslation from "next-translate/useTranslation";
 import Icon from "./Icon";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownHrefItem,
+} from "@blackpanther1881/component-library";
 
 const Header = () => {
   const { t } = useTranslation("common");
@@ -137,6 +142,30 @@ const Header = () => {
         >
           <div className="container flex flex-wrap items-center justify-between">
             <Link className="navbar-brand logo text-uppercase" href="/"></Link>
+            <Dropdown
+              dropDownVariant="custom"
+              dropDownVariantBg="bg-transparent"
+              dropdownLabel="test"
+              DropdownType={"hover"}
+            >
+              {[
+                <DropdownHrefItem
+                  index={1}
+                  key={1}
+                  href="www.google.com"
+                  optionName="google"
+                  target="_blank"
+                />,
+                <DropdownItem
+                  index={2}
+                  key={2}
+                  onClick={() => {
+                    alert("clicked");
+                  }}
+                  optionName="google"
+                />,
+              ]}
+            </Dropdown>
             <button
               className="navbar-toggler di md:text-center md:hidden bg-[#e50913] text-light-full px-3 py-1 text-lg"
               onClick={toggleMenu}

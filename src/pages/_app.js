@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import ReactGA from "react-ga4";
 import AOS from "aos";
+import "@blackpanther1881/component-library/dist/build.css";
 import "../styles/globals.css";
 import "../css/style.scss";
 import "aos/dist/aos.css";

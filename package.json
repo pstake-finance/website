@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@blackpanther1881/component-library": "^0.0.20",
     "@cosmjs/math": "^0.29.0",
     "@cosmjs/stargate": "^0.29.0",
     "@cosmjs/tendermint-rpc": "^0.29.0",
