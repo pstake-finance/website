@@ -92,3 +92,5 @@ export const decimalize = (valueString, decimals = 6) => {
     decimals
   ).toString();
 };
+
+export const emptyFunc = () => ({});

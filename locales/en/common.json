@@ -26,7 +26,7 @@
     "NUMBER_STAKERS": "Number of stakers",
     "UNLOCK_LIQUIDITY": "Unlock Liquidity",
     "INSTANT_REDEMPTION": "Instant Redemption",
-    "BRIDGE": "BRIDGE",
+    "BRIDGE": "Bridge",
     "LEVERAGE_DEFI": "Leverage Defi",
     "ECOSYSTEM_TITLE": "Ecosystems and their",
     "MARKET_CAPS": "Market Caps",
@@ -36,7 +36,7 @@
     "POLKADOT": "Polkadot",
     "SOLANA": "Solana",
     "BINANCE": "Binance",
-    "STAKE_YOUR_ASSETS": "Supported Networks",
+    "SUPPORTED_NETWORKS": "Supported Networks",
     "STAKE_ASSETS_USNING_PSAKE": "Stake Assets using pSTAKE to receive pASSETS which can be used in DeFi to generate yield while",
     "YOU_EARN_STAKING_REWARDS": "you earn staking rewards on your staked Assets",
     "COSMOS_NETWORK": "Cosmos Network",
@@ -291,5 +291,6 @@
     "STAKING_VS_LIQUID_STAKING": "Staking vs Liquid Staking",
     "ECOSYSTEM_HEADING": "Put your stkBNB to work in the BNB DeFi Ecosystem",
     "START_STAKING": "Start Staking",
-    "WITHDRAW_ASSETS": "Withdraw Assets"
+    "WITHDRAW_ASSETS": "Withdraw Assets",
+    "LEARN": "Learn"
   }

@@ -1,12 +1,9 @@
+import "../styles/globals.css";
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import ReactGA from "react-ga4";
 import AOS from "aos";
-import "@blackpanther1881/component-library/dist/build.css";
-import "../styles/globals.css";
-import "../css/style.scss";
 import "aos/dist/aos.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "../components/Header";
 import { ANALYTICS } from "../constants/config";
 import OneSignalReact from "react-onesignal";
@@ -57,11 +54,7 @@ const App = ({ Component, pageProps }) => {
         />
         <meta property="og:image" content="/static/ogimage.jpeg" />
       </Head>
-      <div className="container-fluid app-nav">
-        <div className="container">
-          <Header />
-        </div>
-      </div>
+      <Header />
       <Component {...pageProps} />
     </>
   );

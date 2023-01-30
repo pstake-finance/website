@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/components/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
       light: {
@@ -10,6 +10,8 @@ module.exports = {
         low: "#787878",
         disabled: "#A9A9A9",
       },
+      atomPrimary: "#595d7b",
+      bnbPrimary: "#f0b90b",
       transparent: "transparent",
       dark: {
         full: "#000",
@@ -19,23 +21,57 @@ module.exports = {
         low: "#787878",
         disabled: "#A9A9A9",
       },
-      primary: "#c73238",
-      secondary: "#47C28B",
+      red: "#e50913",
+      green: "#24b574",
+      "red-light": "#cb575bfa",
     },
     backgroundImage: {
+      immunefiWhite: "url('/images/audits/immunefi_header.svg')",
+      immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
         "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
+      atomBanner: `url('/images/bg_images/atom_topbar.svg'), 
+      radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDD 25.4%, #83339D 100%)`,
+      logoDark: "url('/images/darklogo.svg')",
+      logoLight: "url('/images/logo.svg')",
+      homePageBanner: `url('/images/bg_images/bg.svg'),
+      radial-gradient(100% 311.1% at 97.81% 0,#fff8f8 0,#f0fdff 100%,#f0fdff 0)`,
+      homePageBg2: `url('/images/bg_images/bg_lane.png')`,
+      cosmosCard: "linear-gradient(287.41deg,#2f3148 4.63%,#5c4243 98.79%)",
+      bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
+      ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
+      xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
     },
     backgroundColor: {
       none: "none",
       transparent: "transparent",
       "side-bar": "#171717",
-      gggg: "blue",
       "sideBar-navLinkActive": "#1b1b1b",
-      // dropDown: "#282828",
+      dropDown: "#282828",
       tabHeader: "#181818",
       tabContent: "rgba(24, 24, 24, 0.6)",
       input: "rgba(27, 27, 27, 0.6)",
+      red: "#e50913",
+      green: "#24b574",
+      "red-light": "#cb575bfa",
+      "black-full": "#000",
+      "black-high": "#1d1d22",
+      "black-emphasis": "#030303",
+      "black-mid": "#070B09",
+      "black-900": "#171717",
+      "black-800": "#181818",
+      "black-700": "#1b1b1b",
+      "black-600": "#1b1b1b99",
+      "black-500": "#17171799",
+      "black-400": "#282828",
+      "white-full": "#ffffff",
+      "white-high": "#FCFCFC",
+      "white-emphasis": "#ECECEC",
+      "white-mid": "#A6A6A6",
+      "white-low": "#787878",
+      disabled: "#A9A9A9",
+      atomPrimary: "#595d7b",
+      bnbPrimary: "#f0b90b",
     },
     fontFamily: {
       primary: ["Poppins", "sans-serif"],
@@ -64,34 +100,37 @@ module.exports = {
       overline: ["0.625rem", { lineHeight: "1rem" }],
     },
     screens: {
-      "2xl": { min: "1536px" },
+      "2xl": { max: "1535px" },
       // => @media (max-width: 1536px) { ... }
-
-      "1.5xl": { min: "1408px" },
-      // => @media (max-width: 1408px) { ... }
-
-      xl: { min: "1280px" },
-      // => @media (max-width: 1280px) { ... }
-
-      "1.5lg": { min: "1152px" },
-      // => @media (max-width: 1152px) { ... }
-
-      lg: { min: "1024px" },
-      // => @media (max-width: 1024px) { ... }
-
-      "1.5md": { min: "896px" },
-      // => @media (max-width: 896px) { ... }
-
-      md: { min: "768px" },
-      // => @media (max-width: 768px) { ... }
-
-      "1.5xs": { min: "640px" },
-      // => @media (max-width: 640px) { ... }
-
-      // "1.5xs": { max: "512px" },
-      // // => @media (max-width: 512px) { ... }
-
-      sm: { min: "512px" },
+      xl: { max: "1279px" },
+      lg: { max: "1023px" },
+      md: { max: "767px" },
+      sm: { max: "511px" },
+    },
+    extend: {
+      keyframes: {
+        "menu-open": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.9)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
+      },
+      animation: {
+        "menu-open": "menu-open 200ms ease-in-out",
+      },
+      screens: {
+        "-2xl": { min: "1536px" },
+        // => @media (max-width: 1535px) { ... }
+        "-xl": { min: "1280px" },
+        "-lg": { min: "1024px" },
+        "-md": { min: "768px" },
+        "-sm": { min: "640px" },
+      },
     },
   },
   plugins: [],

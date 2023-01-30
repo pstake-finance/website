@@ -54,7 +54,7 @@ body a {
   left: 0;
   width: 100%;
   z-index: 999;
-  &.is-sticky .navbar.navbar-custom {
+  .is-sticky.navbar.navbar-custom {
     margin-top: 0px;
     padding: 20px 0px;
     background-color: #232327;
@@ -154,14 +154,6 @@ body a {
         &:hover::after {
           content: "Live on 12 Jan 2023";
         }
-      }
-    }
-    button {
-      color: #fff;
-      background: #e50913;
-      border-radius: 0;
-      .icon {
-        fill: #fff;
       }
     }
     li.nav-item {
