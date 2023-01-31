@@ -24,7 +24,7 @@ const Networks = () => {
       apy: cosmosApy === -1 ? APR_DEFAULT : cosmosApy.toFixed(2),
       buttonText: "Start Staking",
       buttonUrl: "/atom",
-      hoverBg: "cosmosCard",
+      hoverBg: "hover:bg-cosmosCard",
     },
     {
       asset: "BNB",
@@ -33,7 +33,7 @@ const Networks = () => {
       apy: t("BNB_APY"),
       buttonText: "Start Staking",
       buttonUrl: "/bnb",
-      hoverBg: "bnbCard",
+      hoverBg: "hover:bg-bnbCard",
     },
     {
       asset: "Ethereum",
@@ -42,7 +42,7 @@ const Networks = () => {
       apy: t("ETH_APR"),
       buttonText: "Start Staking",
       buttonUrl: "https://eth.pstake.finance",
-      hoverBg: "ethCard",
+      hoverBg: "hover:bg-ethCard",
     },
     {
       asset: "Persistence",
@@ -51,7 +51,7 @@ const Networks = () => {
       apy: "0",
       buttonText: "Withdraw Assets",
       buttonUrl: "https://app.pstake.finance/",
-      hoverBg: "xprtCard",
+      hoverBg: "hover:bg-xprtCard",
     },
     {
       asset: "Cosmos",
@@ -60,7 +60,7 @@ const Networks = () => {
       apy: "0",
       buttonText: "Withdraw Assets",
       buttonUrl: "https://app.pstake.finance/",
-      hoverBg: "cosmosCard",
+      hoverBg: "hover:bg-cosmosCard",
     },
   ];
 
@@ -72,7 +72,7 @@ const Networks = () => {
   }, []);
   return (
     <div className="bg-black-high">
-      <div className="container mx-auto px-4 pt-[100px]">
+      <div className="sectionContainer py-[100px]">
         <p className="sectionTitle">{t("SUPPORTED_NETWORKS")}</p>
         <p className="sectionSubTitle m-auto">
           pSTAKE offers liquid staking for the following networks
@@ -81,7 +81,7 @@ const Networks = () => {
           <div className="flex flex-wrap items-center justify-center">
             {networkList.slice(0, 2).map((item, index) => (
               <div
-                className={`p-8 bg-[#26262b] hover:bg-${item.hoverBg} m-4 min-w-[300px] max-w-[500px] rounded-xl`}
+                className={`${item.hoverBg} p-8 bg-[#26262b] m-4 min-w-[300px] max-w-[500px] rounded-xl`}
                 key={index}
               >
                 <div className="mb-2">
@@ -120,7 +120,7 @@ const Networks = () => {
           <div className="flex flex-wrap justify-center pt-8">
             {networkList.slice(2, networkList.length + 1).map((item, index) => (
               <div
-                className={`p-8 bg-[#26262b] hover:bg-${item.hoverBg} m-4 min-w-[300px] max-w-[500px] rounded-xl`}
+                className={`${item.hoverBg} p-8 bg-[#26262b] m-4 min-w-[300px] max-w-[500px] rounded-xl`}
                 key={index}
               >
                 <div className="mb-2">

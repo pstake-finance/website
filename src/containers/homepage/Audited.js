@@ -10,103 +10,82 @@ import {
 } from "../../constants/config";
 import useTranslation from "next-translate/useTranslation";
 
+const auditList = [
+  {
+    link: HALBOR_AUDIT_REPORT,
+    image: "halborn_black",
+  },
+  {
+    link: PSTAKE_TRAIL_OF_BITS,
+    image: "trail_of_bits",
+  },
+  {
+    link: PSTAKE_DILIGENCE_AUDIT,
+    image: "diligence",
+  },
+  {
+    link: PSTAKE_SOLIDFIED_AUDIT,
+    image: "solidified",
+  },
+  {
+    link: PSTAKE_PECKSHIELD_AUDIT,
+    image: "peckshield",
+  },
+  {
+    link: PSTAKE_OAK_AUDIT,
+    image: "aok",
+  },
+  {
+    link: PSTAKE_CERTORA,
+    image: "certora_black",
+  },
+];
 const Audited = () => {
   const { t } = useTranslation("common");
   return (
     <React.Fragment>
-      <section className="audited-section homepage">
-        <div className="container">
-          <h4 className="section-title">{t("Security Audits")}</h4>
-          <p className="section-sub-title">
+      <section className="aos-init aos-animate bg-black-high">
+        <div className="sectionContainer py-[100px]">
+          <h4 className="sectionTitle">{t("Security Audits")}</h4>
+          <p className="sectionSubTitle mb-8">
             pSTAKE’s liquid staking solution has been, and continues to be,
             audited by the industry’s best in blockchain security
           </p>
-          <div className="tiles text-center">
-            <a
-              href={HALBOR_AUDIT_REPORT}
-              target="_blank"
-              className="tile"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={"/images/audits/halborn_black.svg"}
-                title="halborn"
-                alt="halborn"
-              />
-            </a>
-            <a
-              href={PSTAKE_TRAIL_OF_BITS}
-              target="_blank"
-              className="tile"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={"/images/audits/trail_of_bits.svg"}
-                title="Trail Of Bits"
-                alt="Trail Of Bits"
-              />
-            </a>
-            <a
-              href={PSTAKE_DILIGENCE_AUDIT}
-              target="_blank"
-              className="tile"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={"/images/audits/diligence.svg"}
-                title="Digilence"
-                alt="Digilence"
-              />
-            </a>
+          <div className="flex text-center justify-center items-center flex-wrap">
+            {auditList.slice(0, 4).map((item, index) => (
+              <a
+                href={item.link}
+                target="_blank"
+                className="my-4 mx-4"
+                rel="noopener noreferrer"
+                key={index}
+              >
+                <img
+                  src={`/images/audits/${item.image}.svg`}
+                  title="item.link"
+                  className="w-[240px]"
+                  alt={item.image}
+                />
+              </a>
+            ))}
           </div>
-          <div className="tiles text-center">
-            <a
-              href={PSTAKE_SOLIDFIED_AUDIT}
-              target="_blank"
-              className="tile"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={"/images/audits/solidified.svg"}
-                title="Solidified"
-                alt="Solidified"
-              />
-            </a>
-            <a
-              href={PSTAKE_PECKSHIELD_AUDIT}
-              target="_blank"
-              className="tile"
-              rel="noopener noreferrer"
-            >
-              <img
+          <div className="flex text-center justify-center items-center flex-wrap">
+            {auditList.slice(4, auditList.length).map((item, index) => (
+              <a
+                href={item.link}
+                target="_blank"
                 className="tile"
-                src={"/images/audits/peckshield.svg"}
-                title="Peckshield"
-                alt="Peckshield"
-              />
-            </a>
-            <a
-              href={PSTAKE_OAK_AUDIT}
-              target="_blank"
-              className="tile"
-              rel="noopener noreferrer"
-            >
-              <img src={"/images/audits/aok.svg"} title="AOK" alt="AOK" />
-            </a>
-          </div>
-          <div className="tiles text-center">
-            <a
-              href={PSTAKE_CERTORA}
-              target="_blank"
-              className="tile"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={"/images/audits/certora_black.svg"}
-                title="certora"
-                alt="certora"
-              />
-            </a>
+                rel="noopener noreferrer"
+                key={index}
+              >
+                <img
+                  src={`/images/audits/${item.image}.svg`}
+                  title="item.link"
+                  alt={item.image}
+                  className="w-[240px] m-4"
+                />
+              </a>
+            ))}
           </div>
         </div>
       </section>

@@ -1,95 +1,101 @@
-import React from 'react';
-import useTranslation from 'next-translate/useTranslation';
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 import {
-    PSTAKE_BLOG_ONE_URL,
-    PSTAKE_BLOG_ONE_IMG_URL,
-    PSTAKE_BLOG_TWO_URL,
-    PSTAKE_BLOG_TWO_IMG_URL,
-    PSTAKE_BLOG_THREE_URL,
-    PSTAKE_BLOG_THREE_IMG_URL,
-    PSTAKE_MEDIUM_URL
-} from '../../constants/config';
+  PSTAKE_BLOG_ONE_URL,
+  PSTAKE_BLOG_ONE_IMG_URL,
+  PSTAKE_BLOG_TWO_URL,
+  PSTAKE_BLOG_TWO_IMG_URL,
+  PSTAKE_BLOG_THREE_URL,
+  PSTAKE_BLOG_THREE_IMG_URL,
+  PSTAKE_MEDIUM_URL,
+  PSTAKE_APP_URL,
+} from "../../constants/config";
 import Icon from "../../components/Icon";
+import ButtonLink from "../../components/atoms/buttonLink/ButtonLink";
 const Blogs = () => {
-    const { t } = useTranslation('common');
-    return (
-            <section className="blogs-section">
-                <h3 className="section-title">{t("FEATURED_BLOGS")}</h3>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-4 blog-articles left">
-                            <div className="row m-0">
-                                <div className="col-md-12">
-                                    <a href={PSTAKE_BLOG_ONE_URL}
-                                       target="_blank" rel="noopener noreferrer">
-                                        <div className="custom-card mb-10" data-aos="fade-up">
-                                            <div className="blog-image">
-                                                <img className="card-img-top" alt="blog2"
-                                                     src={PSTAKE_BLOG_ONE_IMG_URL} />
-                                            </div>
-                                            <div className="custom-card-body">
-                                                <p className="tag">{t("The State of ATOM Staking")}</p>
-                                                <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 blog-articles left">
-                            <div className="row m-0">
-                                <div className="col-md-12">
-                                    <a href={PSTAKE_BLOG_TWO_URL}
-                                        target="_blank" rel="noopener noreferrer">
-                                        <div className="custom-card mb-10" data-aos="fade-up">
-                                            <div className="blog-image">
-                                                <img className="card-img-top" alt="blog2"
-                                                    src={PSTAKE_BLOG_TWO_IMG_URL}
-                                                />
-                                            </div>
-                                            <div className="custom-card-body">
-                                                <p className="tag">{t("Why Liquid Staking is a Game-Changer for BNB")}</p>
-                                                <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+  const { t } = useTranslation("common");
+  const list = [
+    {
+      title: t("stkATOM User Guide"),
+      blogLink: PSTAKE_BLOG_ONE_URL,
+      imageLink: PSTAKE_BLOG_ONE_IMG_URL,
+    },
+    {
+      title: t("Why Liquid Staking is a Game-Changer for BNB"),
+      blogLink: PSTAKE_BLOG_TWO_URL,
+      imageLink: PSTAKE_BLOG_TWO_IMG_URL,
+    },
+    {
+      title: t("stkBNB User Guide"),
+      blogLink: PSTAKE_BLOG_THREE_URL,
+      imageLink: PSTAKE_BLOG_THREE_IMG_URL,
+    },
+  ];
 
-                        <div className="col-md-4 blog-articles left">
-                            <div className="row m-0">
-                                <div className="col-md-12">
-                                    <a href={PSTAKE_BLOG_THREE_URL}
-                                       target="_blank" rel="noopener noreferrer">
-                                        <div className="custom-card mb-10" data-aos="fade-up">
-                                            <div className="blog-image">
-                                                <img className="card-img-top" alt="blog2"
-                                                     src={PSTAKE_BLOG_THREE_IMG_URL} />
-                                            </div>
+  return (
+    <div className="aos-init aos-animate bg-black-high">
+      <div className="sectionContainer py-[100px]">
+        <h3 className="sectionTitle mb-8">{t("FEATURED_BLOGS")}</h3>
+        <div className="flex flex-wrap mb-8">
+          {list.map((item, index) => (
+            <div
+              className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
+              key={index}
+            >
+              <div className="bg-black-full hover:bg-black-emphasis">
+                <a
+                  href={item.blogLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="blog-image h-[70%]">
+                    <img
+                      className="h-fit max-h-full"
+                      alt="blog2"
+                      src={item.imageLink}
+                    />
+                  </div>
 
-                                            <div className="custom-card-body">
-                                                <p className="tag">{t("stkBNB User Guide")}</p>
-                                                <p className="learn-more">{t("LEARN_MORE")}<Icon viewClass="arrow-right" icon="arrow-right" /></p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="banner-buttons">
-                            <a rel="noopener noreferrer" target="_blank" href={PSTAKE_MEDIUM_URL}>
-                                <span className="button xprt">
-                                    <span className="hideone">{t("READ_ALL")}&nbsp;</span>
-                                </span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-    );
-}
-
+                  <div className="md:p-4 px-6 py-4">
+                    <p className="text-[#555] leading-normal font-semibold text-[12px]">
+                      {item.title}
+                    </p>
+                    <p
+                      className="inline-flex items-center border-b-2 border-[#e50913]
+                    border-solid text-[12px] text-light-full pb-2"
+                    >
+                      {t("LEARN_MORE")}
+                      <Icon
+                        viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
+                        icon="right-arrow"
+                      />
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="">
+          <ButtonLink
+            className={`w-[200px] mx-auto md:py-2 md:text-sm`}
+            variant={"solid"}
+            href={PSTAKE_MEDIUM_URL}
+            scale="lg"
+            target={"_blank"}
+            isDisabled={false}
+            focusEffect={true}
+          >
+            {t("READ_ALL")}
+            <Icon
+              viewClass="right-arrow w-[14px] fill-[#fff]"
+              icon="right-arrow"
+            />
+          </ButtonLink>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Blogs;

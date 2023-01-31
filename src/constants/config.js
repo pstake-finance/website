@@ -49,9 +49,9 @@ export const PSTAKE_BLOG_TWO_URL =
 export const PSTAKE_BLOG_TWO_IMG_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/07/1-1160x619.png";
 export const PSTAKE_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2022/11/29/the-state-of-bnb-staking-november-2022-report/";
+  "https://blog.pstake.finance/2023/01/15/stkatom-user-guide-atom-liquid-staking-tutorial/";
 export const PSTAKE_BLOG_ONE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/11/BNB-Staking-Report.-Nov-550x309.jpg";
+  "https://blog.pstake.finance/wp-content/uploads/2023/01/image1-min.png";
 export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
@@ -197,7 +197,7 @@ export const CURRENCY = {
     stkToken: "stkSOL",
     nameInCaps: "SOLANA",
     bech32Prefix: "cosmos",
-    bech32Length: 38
+    bech32Length: 38,
   },
   polkadot: {
     name: "polkadot",
@@ -206,7 +206,7 @@ export const CURRENCY = {
     stkToken: "stkDOT",
     nameInCaps: "POLKADOT",
     bech32Prefix: "cosmos",
-    bech32Length: 38
+    bech32Length: 38,
   },
   cosmos: {
     name: "cosmos",
@@ -215,7 +215,7 @@ export const CURRENCY = {
     stkToken: "stkATOM",
     nameInCaps: "COSMOS",
     bech32Prefix: "cosmos",
-    bech32Length: 38
+    bech32Length: 38,
   },
   eth2: {
     name: "eth2",
@@ -224,23 +224,23 @@ export const CURRENCY = {
     stkToken: "stkETH2",
     nameInCaps: "ETH2",
     bech32Prefix: "cosmos",
-    bech32Length: 38
-  }
+    bech32Length: 38,
+  },
 };
 
 export const CHAIN_ID = {
   Devnet: {
     cosmosChainID: "gaiad-1",
-    persistenceChainID: "pstaked-1"
+    persistenceChainID: "pstaked-1",
   },
   Testnet: {
     cosmosChainID: "theta-testnet-001",
-    persistenceChainID: "test-core-1"
+    persistenceChainID: "test-core-1",
   },
   Mainnet: {
     cosmosChainID: "cosmoshub-4",
-    persistenceChainID: "core-1"
-  }
+    persistenceChainID: "core-1",
+  },
 };
 
 export const ExternalChains = {
@@ -254,32 +254,32 @@ export const ExternalChains = {
         coinDenom: "XPRT",
         coinMinimalDenom: "uxprt",
         coinDecimals: 6,
-        coinGeckoId: "persistence"
+        coinGeckoId: "persistence",
       },
       bip44: {
-        coinType: 118
+        coinType: 118,
       },
       currencies: [
         {
           coinDenom: "XPRT",
           coinMinimalDenom: "uxprt",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
+          coinGeckoId: "persistence",
         },
         {
           coinDenom: "STKATOM",
           coinMinimalDenom: "stk/uatom",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
-        }
+          coinGeckoId: "persistence",
+        },
       ],
       feeCurrencies: [
         {
           coinDenom: "XPRT",
           coinMinimalDenom: "uxprt",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
-        }
+          coinGeckoId: "persistence",
+        },
       ],
       bech32Config: {
         bech32PrefixAccAddr: "persistence",
@@ -287,8 +287,8 @@ export const ExternalChains = {
         bech32PrefixValAddr: "persistencevaloper",
         bech32PrefixValPub: "persistencevaloperpub",
         bech32PrefixConsAddr: "persistencevalcons",
-        bech32PrefixConsPub: "persistencevalconspub"
-      }
+        bech32PrefixConsPub: "persistencevalconspub",
+      },
     },
     {
       rpc: "https://rpc.devnet.cosmos.pstake.finance",
@@ -299,26 +299,26 @@ export const ExternalChains = {
         coinDenom: "ATOM",
         coinMinimalDenom: "uatom",
         coinDecimals: 6,
-        coinGeckoId: "cosmos"
+        coinGeckoId: "cosmos",
       },
       bip44: {
-        coinType: 118
+        coinType: 118,
       },
       currencies: [
         {
           coinDenom: "ATOM",
           coinMinimalDenom: "uatom",
           coinDecimals: 6,
-          coinGeckoId: "cosmos"
-        }
+          coinGeckoId: "cosmos",
+        },
       ],
       feeCurrencies: [
         {
           coinDenom: "ATOM",
           coinMinimalDenom: "uatom",
           coinDecimals: 6,
-          coinGeckoId: "cosmos"
-        }
+          coinGeckoId: "cosmos",
+        },
       ],
       bech32Config: {
         bech32PrefixAccAddr: "cosmos",
@@ -326,9 +326,9 @@ export const ExternalChains = {
         bech32PrefixValAddr: "cosmosvaloper",
         bech32PrefixValPub: "cosmosvaloperpub",
         bech32PrefixConsAddr: "cosmosvalcons",
-        bech32PrefixConsPub: "persistencevalconspub"
-      }
-    }
+        bech32PrefixConsPub: "persistencevalconspub",
+      },
+    },
   ],
   Testnet: [
     {
@@ -340,32 +340,32 @@ export const ExternalChains = {
         coinDenom: "XPRT",
         coinMinimalDenom: "uxprt",
         coinDecimals: 6,
-        coinGeckoId: "persistence"
+        coinGeckoId: "persistence",
       },
       bip44: {
-        coinType: 118
+        coinType: 118,
       },
       currencies: [
         {
           coinDenom: "XPRT",
           coinMinimalDenom: "uxprt",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
+          coinGeckoId: "persistence",
         },
         {
           coinDenom: "STKATOM",
           coinMinimalDenom: "stk/uatom",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
-        }
+          coinGeckoId: "persistence",
+        },
       ],
       feeCurrencies: [
         {
           coinDenom: "XPRT",
           coinMinimalDenom: "uxprt",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
-        }
+          coinGeckoId: "persistence",
+        },
       ],
       bech32Config: {
         bech32PrefixAccAddr: "persistence",
@@ -373,8 +373,8 @@ export const ExternalChains = {
         bech32PrefixValAddr: "persistencevaloper",
         bech32PrefixValPub: "persistencevaloperpub",
         bech32PrefixConsAddr: "persistencevalcons",
-        bech32PrefixConsPub: "persistencevalconspub"
-      }
+        bech32PrefixConsPub: "persistencevalconspub",
+      },
     },
     {
       rpc: "https://rpc.testnet-cosmos.audit.one",
@@ -385,26 +385,26 @@ export const ExternalChains = {
         coinDenom: "ATOM",
         coinMinimalDenom: "uatom",
         coinDecimals: 6,
-        coinGeckoId: "cosmos"
+        coinGeckoId: "cosmos",
       },
       bip44: {
-        coinType: 118
+        coinType: 118,
       },
       currencies: [
         {
           coinDenom: "ATOM",
           coinMinimalDenom: "uatom",
           coinDecimals: 6,
-          coinGeckoId: "cosmos"
-        }
+          coinGeckoId: "cosmos",
+        },
       ],
       feeCurrencies: [
         {
           coinDenom: "ATOM",
           coinMinimalDenom: "uatom",
           coinDecimals: 6,
-          coinGeckoId: "cosmos"
-        }
+          coinGeckoId: "cosmos",
+        },
       ],
       bech32Config: {
         bech32PrefixAccAddr: "cosmos",
@@ -412,9 +412,9 @@ export const ExternalChains = {
         bech32PrefixValAddr: "cosmosvaloper",
         bech32PrefixValPub: "cosmosvaloperpub",
         bech32PrefixConsAddr: "cosmosvalcons",
-        bech32PrefixConsPub: "persistencevalconspub"
-      }
-    }
+        bech32PrefixConsPub: "persistencevalconspub",
+      },
+    },
   ],
   Mainnet: [
     {
@@ -426,26 +426,26 @@ export const ExternalChains = {
         coinDenom: "ATOM",
         coinMinimalDenom: "uatom",
         coinDecimals: 6,
-        coinGeckoId: "cosmos"
+        coinGeckoId: "cosmos",
       },
       bip44: {
-        coinType: 118
+        coinType: 118,
       },
       currencies: [
         {
           coinDenom: "ATOM",
           coinMinimalDenom: "uatom",
           coinDecimals: 6,
-          coinGeckoId: "cosmos"
-        }
+          coinGeckoId: "cosmos",
+        },
       ],
       feeCurrencies: [
         {
           coinDenom: "ATOM",
           coinMinimalDenom: "uatom",
           coinDecimals: 6,
-          coinGeckoId: "cosmos"
-        }
+          coinGeckoId: "cosmos",
+        },
       ],
       bech32Config: {
         bech32PrefixAccAddr: "cosmos",
@@ -453,8 +453,8 @@ export const ExternalChains = {
         bech32PrefixValAddr: "cosmosvaloper",
         bech32PrefixValPub: "cosmosvaloperpub",
         bech32PrefixConsAddr: "cosmosvalcons",
-        bech32PrefixConsPub: "persistencevalconspub"
-      }
+        bech32PrefixConsPub: "persistencevalconspub",
+      },
     },
     {
       rpc: "https://rpc.core.persistence.one/",
@@ -465,32 +465,32 @@ export const ExternalChains = {
         coinDenom: "XPRT",
         coinMinimalDenom: "uxprt",
         coinDecimals: 6,
-        coinGeckoId: "persistence"
+        coinGeckoId: "persistence",
       },
       bip44: {
-        coinType: 750
+        coinType: 750,
       },
       currencies: [
         {
           coinDenom: "XPRT",
           coinMinimalDenom: "uxprt",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
+          coinGeckoId: "persistence",
         },
         {
           coinDenom: "STKATOM",
           coinMinimalDenom: "stk/uatom",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
-        }
+          coinGeckoId: "persistence",
+        },
       ],
       feeCurrencies: [
         {
           coinDenom: "XPRT",
           coinMinimalDenom: "uxprt",
           coinDecimals: 6,
-          coinGeckoId: "persistence"
-        }
+          coinGeckoId: "persistence",
+        },
       ],
       bech32Config: {
         bech32PrefixAccAddr: "persistence",
@@ -498,8 +498,8 @@ export const ExternalChains = {
         bech32PrefixValAddr: "persistencevaloper",
         bech32PrefixValPub: "persistencevaloperpub",
         bech32PrefixConsAddr: "persistencevalcons",
-        bech32PrefixConsPub: "persistencevalconspub"
-      }
-    }
-  ]
+        bech32PrefixConsPub: "persistencevalconspub",
+      },
+    },
+  ],
 };

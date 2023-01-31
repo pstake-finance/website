@@ -14,133 +14,70 @@ import {
 } from "../../constants/config";
 
 const Investors = () => {
+  const investorList = [
+    {
+      link: SEQUOIA_URL,
+      image: "sequoia.svg",
+    },
+    {
+      link: GALAXY_DIGITAL_URL,
+      image: "galaxydigital.svg",
+    },
+    {
+      link: DEFI_CAPITAL_URL,
+      image: "defiance_capital.svg",
+    },
+    {
+      link: COINBASE_VENTURES_URL,
+      image: "coinbase.svg",
+    },
+    {
+      link: KRAKEN_VENTURES_URL,
+      image: "krakenventures.svg",
+    },
+    {
+      link: SPARTAN_CAPITAL,
+      image: "sparten_capital.png",
+    },
+    {
+      link: SINO_GLOBAL_CAPITAL,
+      image: "sino.svg",
+    },
+    {
+      link: TENDERMINT_URL,
+      image: "tendermint.svg",
+    },
+    {
+      link: BINANCE_LABS,
+      image: "binance_labs.svg",
+    },
+  ];
   const { t } = useTranslation("common");
   return (
-    <section className="investors-section">
-      <div className="container">
-        <h4 className="section-title">{t("INVESTORS")}</h4>
-        <p className="section-sub-title">
+    <section className="aos-init aos-animate bg-black-high">
+      <div className="sectionContainer py-[100px]">
+        <h4 className="sectionTitle">{t("INVESTORS")}</h4>
+        <p className="sectionSubTitle mb-8">
           pSTAKE’s vision of disrupting PoS and DeFi via liquid staking
           resonates with major industry backers.
         </p>
-        <div className="tiles text-center">
-          <a
-            href={SEQUOIA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/sequoia.svg"}
-              title="Sequoia"
-              alt="Sequoia"
-            />
-          </a>
-          <a
-            href={GALAXY_DIGITAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/galaxydigital.svg"}
-              title="Galaxy Digital"
-              alt="Galaxy Digital"
-            />
-          </a>
-          <a
-            href={DEFI_CAPITAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/defiance_capital.svg"}
-              title="Defiance Capital"
-              alt="Defiance Capital"
-            />
-          </a>
-          <a
-            href={COINBASE_VENTURES_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/coinbase.svg"}
-              title="Coinbase"
-              alt="Coinbase"
-            />
-          </a>
-          <a
-            href={KRAKEN_VENTURES_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/krakenventures.svg"}
-              title="KrakenVentures"
-              alt="KrakenVentures"
-            />
-          </a>
-          <a
-            href={SPARTAN_CAPITAL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/sparten_capital.png"}
-              title="Spartencapital"
-              alt="Spartencapital"
-            />
-          </a>
-          <a
-            href={SINO_GLOBAL_CAPITAL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/sino.svg"}
-              title="Sino"
-              alt="Sino"
-            />
-          </a>
-          <a
-            href={TENDERMINT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/tendermint.svg"}
-              title="Tendermint"
-              alt="Tendermint"
-            />
-          </a>
-          <a
-            href={BINANCE_LABS}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/investors/binance_labs.svg"}
-              title="binance_labs"
-              alt="binance_labs"
-            />
-          </a>
+        <div className="flex flex-wrap justify-center items-center text-center">
+          {investorList.map((item, index) => (
+            <a
+              href={item.link}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="my-4 mx-4"
+            >
+              <img
+                src={`/images/investors/${item.image}`}
+                title={item.image}
+                className="w-[240px]"
+                alt={item.image}
+              />
+            </a>
+          ))}
         </div>
       </div>
     </section>

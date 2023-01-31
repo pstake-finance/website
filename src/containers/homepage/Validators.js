@@ -4,6 +4,7 @@ import {
   COSMOSTATION,
   EVERSTAKE,
   FIGMENT,
+  HALBOR_AUDIT_REPORT,
   STAKEFISH,
   VALIDATOR_COINBASE,
   VALIDATOR_LEGEND,
@@ -14,147 +15,75 @@ import {
 import useTranslation from "next-translate/useTranslation";
 
 const Validators = () => {
+  const validatorList = [
+    {
+      link: STAKEFISH,
+      image: "stakefish",
+    },
+    {
+      link: FIGMENT,
+      image: "figment",
+    },
+    {
+      link: EVERSTAKE,
+      image: "everstake",
+    },
+    {
+      link: CHORUS,
+      image: "chorus",
+    },
+    {
+      link: COSMOSTATION,
+      image: "cosmostation",
+    },
+    {
+      link: VALIDATOR_LEGEND,
+      image: "bnb/legend",
+    },
+    {
+      link: VALIDATOR_MATH,
+      image: "bnb/math_wallet",
+    },
+    {
+      link: VALIDATOR_COINBASE,
+      image: "bnb/cloud",
+    },
+    {
+      link: VALIDATOR_TRANCHES,
+      image: "bnb/tranches",
+    },
+    {
+      link: VALIDATOR_NODE_REAL,
+      image: "bnb/nodreal",
+    },
+  ];
   const { t } = useTranslation("common");
   return (
-    <section className="validators-section homepage">
-      <div className="container">
-        <h3 className="section-title">{t("VALIDATORS")}</h3>
-        <p className="section-sub-title">
+    <section className="aos-init aos-animate bg-black-high">
+      <div className="sectionContainer py-[100px]">
+        <h3 className="sectionTitle">{t("VALIDATORS")}</h3>
+        <p className="sectionSubTitle mb-8 max-w-[700px] mx-auto">
           pSTAKE’s validator scoring mechanism ensures our liquid staking
           ecosystem consists of top-performing validators across supported
           networks.
         </p>
-        <div className="tiles text-center">
-          <a
-            href={STAKEFISH}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/stakefish.svg"}
-              title="Stakefish"
-              alt="Stakefish"
-            />
-          </a>
-          <a
-            href={FIGMENT}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/figment.svg"}
-              title="Figment"
-              alt="Figment"
-            />
-          </a>
-          <a
-            href={EVERSTAKE}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/everstake.svg"}
-              title="Everstake"
-              alt="Everstake"
-            />
-          </a>
-          <a
-            href={CHORUS}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/chorus.svg"}
-              title="Chorus"
-              alt="Chorus"
-            />
-          </a>
-          <a
-            href={COSMOSTATION}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/cosmostation.svg"}
-              title="Cosmostation"
-              alt="Cosmostation"
-            />
-          </a>
-          <a
-            href={VALIDATOR_LEGEND}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/bnb/legend.svg"}
-              title="legend"
-              alt="legend"
-            />
-          </a>
-          <a
-            href={VALIDATOR_MATH}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/bnb/math_wallet.svg"}
-              title="math_wallet"
-              alt="math_wallet"
-            />
-          </a>
-          <a
-            href={VALIDATOR_COINBASE}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/bnb/cloud.svg"}
-              title="cloud"
-              alt="cloud"
-            />
-          </a>
-          <a
-            href={VALIDATOR_TRANCHES}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/bnb/tranches.svg"}
-              title="tranches"
-              alt="tranches"
-            />
-          </a>
-          <a
-            href={VALIDATOR_NODE_REAL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tile"
-          >
-            <img
-              className=""
-              src={"/images/validators/bnb/nodreal.svg"}
-              title="nodreal"
-              alt="nodreal"
-            />
-          </a>
+        <div className="flex flex-wrap justify-center items-center text-center">
+          {validatorList.map((item, index) => (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              className="my-4 mx-4"
+            >
+              <img
+                src={`/images/validators/${item.image}.svg`}
+                title={item.image}
+                alt={item.image}
+                className="w-[240px] rounded-md"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </section>
