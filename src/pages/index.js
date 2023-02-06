@@ -1,13 +1,13 @@
 import React from "react";
-import Banner from "../components/containers/homepage/Banner";
-import Networks from "../components/containers/homepage/Networks";
-import Features from "../components/containers/homepage/Features";
-import StakingSteps from "../components/containers/homepage/StakingSteps";
-import Audited from "../components/containers/homepage/Audited";
-import Validators from "../components/containers/homepage/Validators";
-import Investors from "../components/containers/homepage/Investors";
-import Blogs from "../components/containers/homepage/Blogs";
-import Footer from "../components/Footer";
+import Banner from "../components/organisms/homepage/Banner";
+import Networks from "../components/organisms/homepage/Networks";
+import Features from "../components/organisms/homepage/Features";
+import StakingSteps from "../components/organisms/homepage/StakingSteps";
+import Audited from "../components/organisms/homepage/Audited";
+import Validators from "../components/organisms/homepage/Validators";
+import Investors from "../components/organisms/homepage/Investors";
+import Blogs from "../components/organisms/homepage/Blogs";
+import Footer from "../components/molecules/Footer";
 
 const homePage = () => {
   return (

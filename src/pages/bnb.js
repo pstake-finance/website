@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from "react";
-import SectionTwo from "../components/containers/binance/Features";
-import FeaturedBlogs from "../components/containers/binance/FeactureBlog";
-import Footer from "../components/Footer";
-import Banner from "../components/containers/binance/Banner";
-import Comparison from "../components/containers/binance/Comparison";
-import Guides from "../components/containers/binance/Guides";
-import Audited from "../components/containers/binance/Audited";
-import Validators from "../components/containers/binance/Validators";
-import Faq from "../components/containers/binance/Faq";
+import Features from "../components/organisms/binance/Features";
+import FeaturedBlogs from "../components/organisms/binance/FeactureBlog";
+import Footer from "../components/molecules/Footer";
+import Banner from "../components/organisms/binance/Banner";
+import Comparison from "../components/organisms/binance/Comparison";
+import Guides from "../components/organisms/binance/Guides";
+import Audited from "../components/organisms/binance/Audited";
+import Validators from "../components/organisms/binance/Validators";
+import Faq from "../components/organisms/binance/Faq";
 import ScrollToTop from "../components/ScrollToTop";
-import EcosystemSlider from "../components/containers/binance/EcosystemSilder";
+import EcosystemSlider from "../components/organisms/binance/EcosystemSilder";
 import {
-  fetchAlpaca,
   fetchBeefyInfo,
   fetchOpenLeverage,
   fetchShield,
   fetchThenaInfo,
   fetchWombat,
-} from "../actions/api";
+} from "./api/api";
+import { useApp } from "../context/appContext/AppContext";
 
 const Binance = () => {
-  const [alpacaInfo, setAlpacaInfo] = useState({ tvl: 0, apy: 0 });
   const [beefyInfo, setBeefyInfo] = useState({ tvl: 0, apy: 0 });
   const [openLeverageInfo, setOpenLeverageInfo] = useState({ tvl: 0, apy: 0 });
   const [wombatInfo, setWombatInfo] = useState({ tvl: 0, apy: 0 });
@@ -29,16 +28,14 @@ const Binance = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const [alpaca, beefyInfo, openLeverage, wombat, shield, thena] =
+      const [beefyInfo, openLeverage, wombat, shield, thena] =
         await Promise.all([
-          fetchAlpaca(),
           fetchBeefyInfo(),
           fetchOpenLeverage(),
           fetchWombat(),
           fetchShield(),
           fetchThenaInfo(),
         ]);
-      setAlpacaInfo(alpaca);
       setBeefyInfo(beefyInfo);
       setOpenLeverageInfo(openLeverage);
       setWombatInfo(wombat);
@@ -48,22 +45,23 @@ const Binance = () => {
     fetchApi();
   }, []);
 
+  const { bnbData } = useApp();
+
   const maxApy = Math.max(
-    Number(alpacaInfo.apy),
     Number(beefyInfo.apy),
     Number(openLeverageInfo.apy),
-    Number(wombatInfo.apy)
+    Number(wombatInfo.apy),
+    Number(thenaInfo.apy)
   );
 
   return (
     <React.Fragment>
       <ScrollToTop />
       <div className="container-fluid p-0 binance">
-        <Banner maxApy={maxApy} />
-        <SectionTwo />
-        <Comparison />
+        <Banner maxApy={maxApy} tvl={bnbData.tvl} />
+        <Features />
+        <Comparison bnbData={bnbData} />
         <EcosystemSlider
-          alpacaInfo={alpacaInfo}
           beefyInfo={beefyInfo}
           openLeverageInfo={openLeverageInfo}
           wombatInfo={wombatInfo}

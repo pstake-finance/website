@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AccordionData } from "./types";
 
 import { RefObject } from "react";
-import Icon from "../../Icon";
+import Icon from "../../molecules/Icon";
 
 export function getRefValue<C>(ref: RefObject<C>) {
   return ref.current as C;

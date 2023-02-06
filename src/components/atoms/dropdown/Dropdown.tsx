@@ -1,7 +1,7 @@
 import React, { forwardRef, useRef } from "react";
 import { DetailedHTMLProps, HTMLAttributes, useState } from "react";
 import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
-import Icon from "../../Icon";
+import Icon from "../../molecules/Icon";
 import Button from "../button/Button";
 
 export type DropdownButtonVariants = "primary" | "custom";

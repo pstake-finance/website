@@ -4,11 +4,11 @@ import { useRouter } from "next/router";
 import ReactGA from "react-ga4";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Header from "../components/Header";
-import { ANALYTICS } from "../constants/config";
+import Header from "../components/molecules/Header";
+import { ANALYTICS } from "../utils/config";
 import OneSignalReact from "react-onesignal";
 import Head from "next/head";
-
+import AppProvider from "../context/appContext/AppContext";
 ReactGA.initialize(ANALYTICS);
 
 const trackPage = (page) => {
@@ -55,7 +55,9 @@ const App = ({ Component, pageProps }) => {
         <meta property="og:image" content="/static/ogimage.jpeg" />
       </Head>
       <Header />
-      <Component {...pageProps} />
+      <AppProvider>
+        <Component {...pageProps} />
+      </AppProvider>
     </>
   );
 };

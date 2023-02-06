@@ -25,16 +25,6 @@ export const sdkInstance = StkBNBWebSDK.getInstance({
   env: SDK_ENV,
 });
 
-export const getTVL = async () => {
-  try {
-    const tvl = await sdkInstance.getTvl();
-    return Number(StkBNBWebSDK.format(tvl, 2));
-  } catch (e) {
-    console.log(e);
-    return 0;
-  }
-};
-
 export const bigNumberToEther = (bigNumber) => {
   return utils.formatEther(bigNumber);
 };

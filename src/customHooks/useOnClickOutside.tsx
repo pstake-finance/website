@@ -4,7 +4,6 @@ export const useOnClickOutside = (elementRef: any, callback: () => void) => {
   useEffect(() => {
     function handler(event: MouseEvent | TouchEvent) {
       const MenuButton = document.getElementById("toggleButton");
-      console.log(MenuButton, "toggleButton");
       if (
         elementRef.current &&
         !elementRef.current.contains(event.target as Node) &&
