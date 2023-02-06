@@ -72,7 +72,11 @@ const accordionItems = [
 const Faq = () => {
   return (
     <>
-      <div className="aos-init aos-animate bg-black-high" data-aos="fade-up">
+      <div
+        id="stkAtomFaqs"
+        className="aos-init aos-animate bg-black-high"
+        data-aos="fade-up"
+      >
         <div className="sectionContainer py-[65px] md:py-[35px]">
           <h1 className="sectionTitle mb-8">FAQs about ATOM Liquid Staking</h1>
           <div className="max-w-[700px] mx-auto">
