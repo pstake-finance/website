@@ -1,36 +1,34 @@
 import React from "react";
-import SectionTwo from "../containers/atom/SectionTwo";
+import Features from "../components/containers/atom/Features";
 import Footer from "../components/Footer";
-import Banner from "../containers/atom/Banner";
-import Comparison from "../containers/atom/Comparison";
+import Banner from "../components/containers/atom/Banner";
+import Comparison from "../components/containers/atom/Comparison";
 import ScrollToTop from "../components/ScrollToTop";
-import FeaturedBlogs from "../containers/atom/FeactureBlog";
-import LiquidStakingSteps from "../containers/atom/LiquidStakingSteps";
-import Audited from "../containers/atom/Audited";
+import FeaturedBlogs from "../components/containers/atom/FeactureBlog";
+import LiquidStakingSteps from "../components/containers/atom/LiquidStakingSteps";
+import Audited from "../components/containers/atom/Audited";
 import MigrationCard from "./MigrationCard";
-import Faq from "../containers/atom/Faq";
-import Validators from "../containers/atom/Validators";
-import EcosystemSlider from "../containers/atom/EcosystemSilder";
+import Faq from "../components/containers/atom/Faq";
+import Validators from "../components/containers/atom/Validators";
+import EcosystemSlider from "../components/containers/atom/EcosystemSilder";
 
 const Atom = () => {
   return (
-    <React.Fragment>
+    <>
       <ScrollToTop />
-      <div className="container-fluid p-0 atom">
-        <Banner />
-        <SectionTwo />
-        <Comparison />
-        <LiquidStakingSteps />
-        <EcosystemSlider />
-        {/*<Guides />*/}
-        <Validators />
-        <Audited />
-        <FeaturedBlogs />
-        <Faq />
-        <MigrationCard />
-        <Footer />
-      </div>
-    </React.Fragment>
+      <Banner />
+      <Features />
+      <Comparison />
+      <LiquidStakingSteps />
+      <EcosystemSlider />
+      {/*<Guides />*/}
+      <Validators />
+      <Audited />
+      <FeaturedBlogs />
+      <Faq />
+      <MigrationCard />
+      <Footer />
+    </>
   );
 };
 

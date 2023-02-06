@@ -37,6 +37,8 @@ import Icon from "./Icon";
 import Dropdown from "./atoms/dropdown/Dropdown";
 import ButtonLink from "./atoms/buttonLink/ButtonLink";
 import { useOnClickOutside } from "../customHooks/useOnClickOutside";
+import { useWindowSize } from "../customHooks/useWindowSize";
+import Button from "./atoms/button/Button";
 
 const Header = () => {
   const { t } = useTranslation("common");
@@ -48,6 +50,8 @@ const Header = () => {
   const toggleMenu = () => {
     setIsOpen(true);
   };
+
+  const { isMobile } = useWindowSize();
 
   const sideBarRef = useRef<HTMLUListElement>(null);
   useOnClickOutside(sideBarRef, () => {
@@ -179,13 +183,13 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <div id="is-sticky" className="top-bar w-full fixed">
+      <div id="is-sticky" className="top-bar w-full fixed z-[1]">
         {router.pathname !== "/bnb" ? (
           <div
             className={
               !banner
                 ? "hidden"
-                : "top-banner-section bg-atomBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
+                : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
             }
           >
             <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
@@ -228,16 +232,30 @@ const Header = () => {
                       [.is-sticky_&]:bg-logoLight w-[108px] h-[26px] bg-no-repeat bg-center"
               href="/"
             />
-            <button
-              className="md:text-center -md:hidden bg-red px-3 py-1 text-lg cursor-pointer"
+            <Button
+              className={`${
+                router.pathname === "/"
+                  ? "[.is-sticky_&]:bg-red"
+                  : router.pathname === "/atom"
+                  ? "[.is-sticky_&]:bg-atomPrimary"
+                  : "[.is-sticky_&]:bg-bnbPrimary"
+              } -md:hidden md:py-2 !py-2.5 md:text-sm`}
+              variant={"custom"}
               onClick={toggleMenu}
               id={"toggleButton"}
+              scale="lg"
+              isDisabled={false}
+              customButtonClass={`bg-black-800 text-light-high ${
+                router.pathname === "/bnb"
+                  ? "[.is-sticky_&]:text-dark-high"
+                  : router.pathname === "/"
+              } text-[12px]`}
             >
               <Icon
                 viewClass="w-[14px] h-[14px] fill-[#fff]"
                 icon="hamberger"
               />
-            </button>
+            </Button>
             <div
               className={`${
                 isOpen ? "md:opacity-100" : "md:opacity-0"
@@ -253,7 +271,7 @@ const Header = () => {
               />
               <div className="md:fixed md:z-40">
                 <ul
-                  className={`flex items-center md:flex-row -md:ml-auto md:flex-col md:w-[200px] md:bg-white-mid 
+                  className={`flex items-center md:flex-row -md:ml-auto md:flex-col md:w-[200px] md:bg-white-high 
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-4`}
                   id="mySidenav"
                   ref={sideBarRef}
@@ -262,11 +280,14 @@ const Header = () => {
                     <Dropdown
                       className="[.is-sticky_&]:text-light-high"
                       dropDownVariant="custom"
+                      dropDownButtonClass="md:hidden"
                       dropDownVariantBg="bg-transparent text-[12px]"
-                      dropdownLabel={t("LEARN")}
-                      dropDownIcon={true}
+                      dropdownLabel={isMobile ? "" : t("LEARN")}
+                      dropDownIcon={!isMobile}
                       dropdownType={"hover"}
-                      dropDownContentClass="!bg-white-high drop-shadow-md round-md py-4"
+                      dropDownContentClass="!bg-white-high drop-shadow-md
+                      round-md py-4 md:visible md:relative md:opacity-100
+                      md:!bg-transparent md:p-0"
                     >
                       {learnList.map((item, index) => (
                         <a
@@ -292,11 +313,13 @@ const Header = () => {
                     <Dropdown
                       className="[.is-sticky_&]:text-light-high"
                       dropDownVariant="custom"
+                      dropDownButtonClass="md:hidden"
                       dropDownVariantBg="bg-transparent text-[12px]"
-                      dropdownLabel={t("COMMUNITY")}
+                      dropdownLabel={isMobile ? "" : t("COMMUNITY")}
                       dropdownType={"hover"}
-                      dropDownIcon={true}
-                      dropDownContentClass="!bg-white-high drop-shadow-md round-md py-4"
+                      dropDownIcon={!isMobile}
+                      dropDownContentClass="!bg-white-high drop-shadow-md round-md
+                       py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
                     >
                       <>
                         {communityList.map((item, index) => (
@@ -340,11 +363,13 @@ const Header = () => {
                       <Dropdown
                         className="[.is-sticky_&]:text-light-high"
                         dropDownVariant="custom"
+                        dropDownButtonClass="md:hidden"
                         dropDownVariantBg="bg-transparent text-[12px]"
-                        dropdownLabel={t("BRIDGE")}
-                        dropDownIcon={true}
+                        dropdownLabel={isMobile ? "" : t("BRIDGE")}
+                        dropDownIcon={!isMobile}
                         dropdownType={"hover"}
-                        dropDownContentClass="!bg-white-high drop-shadow-md round-md py-4"
+                        dropDownContentClass="!bg-white-high drop-shadow-md round-md py-4
+                         py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
                       >
                         {bridgeList.map((item, index) => (
                           <a
@@ -370,10 +395,10 @@ const Header = () => {
                   )}
 
                   {router.pathname === "/bnb" ? (
-                    <li className="nav-item">
+                    <li className="nav-item md:w-full md:mb-2">
                       <ButtonLink
                         className={`dropDownButton [.is-sticky_&]:bg-bnbPrimary
-                       w-full md:py-2 md:text-sm`}
+                       w-full md:py-2 !py-2.5 md:text-sm`}
                         variant={"custom"}
                         href={IMMUNEFI_WEB_URL}
                         scale="lg"
@@ -383,7 +408,7 @@ const Header = () => {
                       >
                         <div
                           className="bg-immunefiWhite
-                      [.is-sticky_&]:bg-immunifyBlack w-[100px] h-[20px] bg-no-repeat bg-center"
+                      [.is-sticky_&]:bg-immunifyBlack w-[90px] h-[18px] bg-no-repeat bg-center"
                         />
                       </ButtonLink>
                     </li>
@@ -391,21 +416,26 @@ const Header = () => {
                     ""
                   )}
 
-                  <li
-                    className="nav-item"
-                    style={{ marginLeft: "10px", marginRight: "0" }}
-                  >
+                  <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
                     <ButtonLink
-                      className={`dropDownButton [.is-sticky_&]:bg-red
+                      className={`dropDownButton ${
+                        router.pathname === "/"
+                          ? "[.is-sticky_&]:bg-red"
+                          : router.pathname === "/atom"
+                          ? "[.is-sticky_&]:bg-atomPrimary"
+                          : "[.is-sticky_&]:bg-bnbPrimary"
+                      }
                        w-full md:py-2 !py-2.5 md:text-sm`}
                       variant={"custom"}
                       href={appURL}
                       scale="lg"
                       target={"_blank"}
                       isDisabled={false}
-                      customButtonClass={
-                        "bg-black-800 text-light-high text-[12px]"
-                      }
+                      customButtonClass={`bg-black-800 text-light-high ${
+                        router.pathname === "/bnb"
+                          ? "[.is-sticky_&]:text-dark-high"
+                          : router.pathname === "/"
+                      } text-[12px]`}
                     >
                       <span className="nav-link pophover tooltip-multiline app-btn">
                         {t("GO_TO_APP")}

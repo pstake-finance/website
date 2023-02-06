@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import SectionTwo from "../containers/binance/SectionTwo";
-import FeaturedBlogs from "../containers/binance/FeactureBlog";
+import SectionTwo from "../components/containers/binance/Features";
+import FeaturedBlogs from "../components/containers/binance/FeactureBlog";
 import Footer from "../components/Footer";
-import Banner from "../containers/binance/Banner";
-import Comparison from "../containers/binance/Comparison";
-import Guides from "../containers/binance/Guides";
-import Audited from "../containers/binance/Audited";
-import Validators from "../containers/binance/Validators";
-import Faq from "../containers/binance/Faq";
+import Banner from "../components/containers/binance/Banner";
+import Comparison from "../components/containers/binance/Comparison";
+import Guides from "../components/containers/binance/Guides";
+import Audited from "../components/containers/binance/Audited";
+import Validators from "../components/containers/binance/Validators";
+import Faq from "../components/containers/binance/Faq";
 import ScrollToTop from "../components/ScrollToTop";
-import EcosystemSlider from "../containers/binance/EcosystemSilder";
+import EcosystemSlider from "../components/containers/binance/EcosystemSilder";
 import {
   fetchAlpaca,
   fetchBeefyInfo,
@@ -38,15 +38,6 @@ const Binance = () => {
           fetchShield(),
           fetchThenaInfo(),
         ]);
-      console.log(
-        alpaca,
-        beefyInfo,
-        openLeverage,
-        wombat,
-        shield,
-        thena,
-        "sssss"
-      );
       setAlpacaInfo(alpaca);
       setBeefyInfo(beefyInfo);
       setOpenLeverageInfo(openLeverage);

@@ -17,6 +17,7 @@ export type DropdownProps = {
   dropDownVariant: DropdownButtonVariants;
   dropDownVariantBg?: string;
   dropDownContentClass?: string;
+  dropDownButtonClass?: string;
   dropDownIcon?: boolean;
 } & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
@@ -32,6 +33,7 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
       dropDownVariantBg = "",
       dropdownType = "click",
       dropDownIcon = false,
+      dropDownButtonClass = "",
       dropDownContentClass = "",
     },
     ref
@@ -54,7 +56,7 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
       >
         <Button
           name={"buttonConnect"}
-          className={`dropDownButton w-full md:py-2 md:text-sm`}
+          className={`${dropDownButtonClass} dropDownButton w-full md:py-2 md:text-sm`}
           variant={dropDownVariant === "primary" ? "solid" : "custom"}
           scale="lg"
           isDisabled={false}

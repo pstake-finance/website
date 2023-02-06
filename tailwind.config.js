@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
       light: {
@@ -20,6 +20,21 @@ module.exports = {
         mid: "#070B09",
         low: "#787878",
         disabled: "#A9A9A9",
+        "black-full": "#000",
+        "black-high": "#1d1d22",
+        "black-emphasis": "#26262b",
+        "black-mid": "#070B09",
+        "black-900": "#171717",
+        "black-800": "#181818",
+        "black-700": "#1b1b1b",
+        "black-600": "#1b1b1b99",
+        "black-500": "#17171799",
+        "black-400": "#282828",
+        "white-full": "#ffffff",
+        "white-high": "#FCFCFC",
+        "white-emphasis": "#ECECEC",
+        "white-mid": "#A6A6A6",
+        "white-low": "#787878",
       },
       red: "#e50913",
       green: "#24b574",
@@ -30,7 +45,7 @@ module.exports = {
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
         "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
-      atomBanner: `url('/images/bg_images/atom_topbar.svg'), 
+      topBanner: `url('/images/bg_images/atom_topbar.svg'), 
       radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDD 25.4%, #83339D 100%)`,
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
@@ -42,6 +57,10 @@ module.exports = {
       bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
       ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
       xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
+      atomBanner:
+        "url('/images/bg_images/atomBanner2.svg'), url('/images/bg_images/atomBanner1.svg') ",
+      bnbBanner:
+        "url('/images/bg_images/binance_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0,#fff 0,#fffef8 45.83%,#fffffd 100%)",
     },
     backgroundColor: {
       none: "none",
@@ -131,6 +150,14 @@ module.exports = {
         "-lg": { min: "1024px" },
         "-md": { min: "768px" },
         "-sm": { min: "640px" },
+      },
+      backgroundSize: {
+        atomBanner: "30%, cover",
+        bnbBanner: "30%, cover",
+      },
+      backgroundPosition: {
+        atomBanner: "100% 0,100% 100%",
+        bnbBanner: "100% 0,100% 100%",
       },
     },
   },
