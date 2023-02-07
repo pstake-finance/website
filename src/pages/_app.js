@@ -46,13 +46,39 @@ const App = ({ Component, pageProps }) => {
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
-          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets. Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs, which can then be used across DeFi to earn liquid staking rewards."
+          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets.
+           Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs,
+           which can then be used across DeFi to earn liquid staking rewards."
         />
         <meta
           name="keywords"
-          content="liquid staking, pstake, $pstake, cosmos, persistence"
+          content="liquid staking, pstake, $pstake, cosmos, persistence, stkBNB, stkATOM"
         />
-        <meta property="og:image" content="/static/ogimage.jpeg" />
+
+        {/*Open Graph Tags*/}
+        <meta
+          content="pSTAKE | Unlocking liquidity of staked assets"
+          property="og:title"
+        />
+        <meta property="og:image" content="/ogimage.jpeg" />
+        <meta
+          property="og:description"
+          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets.
+           Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs,
+           which can then be used across DeFi to earn liquid staking rewards."
+        />
+        {/*Twitter Tags*/}
+        <meta
+          content="pSTAKE | Unlocking liquidity of staked assets"
+          property="twitter:title"
+        />
+        <meta
+          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets.
+           Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs,
+           which can then be used across DeFi to earn liquid staking rewards."
+          property="twitter:description"
+        />
+        <meta content="/ogimage.jpeg" property="twitter:image" />
       </Head>
       <Header />
       <AppProvider>

@@ -2,11 +2,9 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/ogimage.jpeg" />
-        <link rel="manifest" href="/manifest.json" />
+        <title>pSTAKE | Unlocking liquidity of staked assets</title>
       </Head>
       <body>
         <Main />
