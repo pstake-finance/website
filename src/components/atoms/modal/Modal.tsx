@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
-import { Icon } from "../icon";
 import { emptyFunc } from "../../../utils/helpers";
+import Icon from "../../molecules/Icon";
 
 export interface ModalProps {
   header?: React.ReactNode | string;

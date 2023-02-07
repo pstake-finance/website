@@ -30,10 +30,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     );
   }
 );
-// const Tabs: React.FC<TabsProps> = ({ children }) => {
-//     const [selectedTab, setSelectedTab] = useState(0)
-//
-//
-// }
-//
-// export default Tabs
+
+Tabs.displayName = "Tabs";
+
+export default Tabs;
