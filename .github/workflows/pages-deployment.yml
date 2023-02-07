@@ -1,0 +1,49 @@
+on:
+  pull_request_review:
+    branches: [main]
+    types: [submitted]
+jobs:
+  deploy:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      deployments: write
+    outputs:
+      output1: ${{ steps.publish.outputs.out }}
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Run your project's build step
+      - name: Build
+        run: npm ci
+      - run: npm run build --if-present
+        env:
+          # Add your environment variables here
+          NEXT_PUBLIC_STK_BNB_CONTRACT_ADDRESS: '0xF7CE8444b3b1c62e785a25343a8B4764198A81B8'
+          NEXT_PUBLIC_STAKE_POOL_CONTRACT_ADDRESS: '0x7CdFba1Ee6A8D1e688B4B34A56b62287ce400802'
+          NEXT_PUBLIC_BNB_CHAIN_RPC_URL: 'https://bsc-dataseed1.binance.org'
+          NEXT_PUBLIC_ONE_SIGNAL_APP_ID: 'd9ecac74-9446-4df2-9a04-ba68bee2caee'
+          NEXT_PUBLIC_SHIELD_CONTRACT_ADDRESS: '0xb221dd27b05ff07704426d9bbecc4b6b9ab931c4'
+          NEXT_PUBLIC_ENVIRONMENT: 'Mainnet'
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+      - run: npm run export --if-present
+      - name: Publish
+        id: publish
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'pstake-website' # e.g. 'my-project'
+          directory: 'out' # e.g. 'dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo random-url ${{ steps.publish.outputs.url }}
+
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: |
+            Here's the deployment link - ${{ steps.publish.outputs.url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
