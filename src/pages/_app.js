@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
-import ReactGA from "react-ga4";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "../components/molecules/Header";
@@ -9,12 +8,8 @@ import { ANALYTICS } from "../utils/config";
 import OneSignalReact from "react-onesignal";
 import Head from "next/head";
 import AppProvider from "../context/appContext/AppContext";
-ReactGA.initialize(ANALYTICS);
-
-const trackPage = (page) => {
-  ReactGA.set({ page });
-  ReactGA.send(page);
-};
+import Script from "next/script";
+import * as gtag from "../utils/gtag";
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -23,22 +18,43 @@ const App = ({ Component, pageProps }) => {
     });
   }, []);
 
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   useEffect(() => {
     OneSignalReact.init({ appId: process.env.NEXT_PUBLIC_ONE_SIGNAL_APP_ID });
     document.body.classList = "";
     document.getElementById("nav-bar").classList.add("navbar-white");
   });
 
-  const router = useRouter();
-
-  useEffect(() => {
-    const page = router.pathname;
-    document.body.classList.add("is-loaded");
-    trackPage(page);
-  }, [router]);
-
   return (
     <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
+      />
+      {/* eslint-disable-next-line @next/next/inline-script-id */}
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <Head>
         <meta charSet="utf-8" />
         <title>pSTAKE | Unlocking liquidity of staked assets</title>
