@@ -45,7 +45,7 @@ const FeaturedBlogs = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="blog-image h-[70%]">
+                  <div className="blog-image h-auto">
                     <img
                       className="h-fit max-h-full"
                       alt="blog2"
