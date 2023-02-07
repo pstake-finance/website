@@ -2,34 +2,28 @@ import _ from "lodash";
 import { Decimal } from "@cosmjs/math";
 import stakepool from "../utils/ABIs/StakePool.json";
 import { ethers, utils } from "ethers";
+import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
+
 export const stakePoolContractAddress =
-  process.env.REACT_APP_STAKE_POOL_CONTRACT_ADDRESS;
+  process.env.NEXT_PUBLIC_STAKE_POOL_CONTRACT_ADDRESS;
 
 export const stakePoolContractABI = stakepool.abi;
-export const SPEEDY_NODE_URL = process.env.REACT_APP_BNB_CHAIN_RPC_URL;
+export const SPEEDY_NODE_URL = process.env.NEXT_PUBLIC_BNB_CHAIN_RPC_URL;
 
 export const shieldContractsAddress =
-  process.env.REACT_APP_SHIELD_CONTRACT_ADDRESS;
+  process.env.NEXT_PUBLIC_SHIELD_CONTRACT_ADDRESS;
 
 export const APP_ETHERS_PROVIDER = new ethers.providers.JsonRpcProvider(
   SPEEDY_NODE_URL
 );
-export const STAKE_POOL_CONTRACT = new ethers.Contract(
-  stakePoolContractAddress,
-  stakePoolContractABI,
-  APP_ETHERS_PROVIDER
-);
 
-export const getTVL = async () => {
-  try {
-    const exchangeRate = await STAKE_POOL_CONTRACT.exchangeRate();
-    const totalWei = bigNumberToEther(exchangeRate["totalWei"]);
-    return Number(totalWei).toFixed(2);
-  } catch (e) {
-    console.log(e);
-    return 0;
-  }
-};
+export const SDK_ENV =
+  process.env.NEXT_PUBLIC_ENVIRONMENT === "Mainnet" ? 0 : 1;
+
+export const sdkInstance = StkBNBWebSDK.getInstance({
+  signerOrProvider: APP_ETHERS_PROVIDER,
+  env: SDK_ENV,
+});
 
 export const bigNumberToEther = (bigNumber) => {
   return utils.formatEther(bigNumber);
@@ -92,3 +86,5 @@ export const decimalize = (valueString, decimals = 6) => {
     decimals
   ).toString();
 };
+
+export const emptyFunc = () => ({});
