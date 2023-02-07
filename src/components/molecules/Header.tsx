@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import ReactGa from "react-ga4";
 
 import {
   PSTAKE_TWITTER_URL,
@@ -78,13 +77,6 @@ const Header = () => {
       topbar.classList.remove("topBar");
       navBar.classList.remove("is-sticky");
     }
-  };
-
-  const onClickNavApp = () => {
-    ReactGa.event({
-      category: "App",
-      action: "Clicked on Navigation App",
-    });
   };
 
   const closeBanner = () => {
