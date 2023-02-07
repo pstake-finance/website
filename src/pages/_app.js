@@ -44,6 +44,8 @@ const App = ({ Component, pageProps }) => {
         <title>pSTAKE | Unlocking liquidity of staked assets</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
           content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets.
