@@ -62,7 +62,7 @@ const Audited = () => {
               <img
                 src={`/images/audits/${item.image}.svg`}
                 title="item.link"
-                className="w-[240px] sm:w-[160px] md:w-[200px] rounded-lg"
+                className="w-[240px] bg-[#25252a] sm:w-[160px] md:w-[200px] rounded-lg"
                 alt={item.image}
               />
             </a>
@@ -81,7 +81,7 @@ const Audited = () => {
                 src={`/images/audits/${item.image}.svg`}
                 title="item.link"
                 alt={item.image}
-                className="w-[240px] sm:w-[160px] md:w-[200px] rounded-lg"
+                className="w-[240px] bg-[#25252a] sm:w-[160px] md:w-[200px] rounded-lg"
               />
             </a>
           ))}
