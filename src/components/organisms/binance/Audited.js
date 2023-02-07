@@ -44,7 +44,7 @@ const Audited = () => {
               <img
                 src={`/images/audits/${item.image}.svg`}
                 title="item.link"
-                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252b] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252a] rounded-lg"
                 alt={item.image}
               />
             </a>
@@ -64,7 +64,7 @@ const Audited = () => {
               <img
                 src={`/images/audits/immunefi.svg`}
                 title="immunefi"
-                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252b] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252a] rounded-lg"
                 alt="immunefi"
               />
             </a>
@@ -81,7 +81,7 @@ const Audited = () => {
             >
               <img
                 src={`/images/audits/forta.svg`}
-                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252b] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252a] rounded-lg"
                 title="forta"
                 alt="forta"
               />

@@ -46,11 +46,7 @@ const FeaturedBlogs = () => {
                   rel="noopener noreferrer"
                 >
                   <div className="blog-image h-auto">
-                    <img
-                      className="h-fit max-h-full"
-                      alt="blog2"
-                      src={item.imageLink}
-                    />
+                    <img alt="blog2" src={item.imageLink} />
                   </div>
 
                   <div className="md:p-4 px-6 py-4">

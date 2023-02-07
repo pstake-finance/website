@@ -82,7 +82,7 @@ const Validators = () => {
                 src={`/images/validators/bnb/${item.image}.svg`}
                 title={item.image}
                 alt={item.image}
-                className="w-[240px] sm:w-[160px] md:w-[200px] rounded-md"
+                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252a] rounded-md"
               />
             </a>
           ))}
