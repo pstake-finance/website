@@ -5,8 +5,10 @@ const nextConfig = nextTranslate({
   reactStrictMode: false,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
-
     return config;
+  },
+  experimental: {
+    runtime: "edge",
   },
   async redirects() {
     return [
