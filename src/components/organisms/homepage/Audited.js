@@ -55,14 +55,14 @@ const Audited = () => {
             <a
               href={item.link}
               target="_blank"
-              className="my-4 mx-4"
+              className="m-4 sm:m-2"
               rel="noopener noreferrer"
               key={index}
             >
               <img
                 src={`/images/audits/${item.image}.svg`}
                 title="item.link"
-                className="w-[240px] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] rounded-lg"
                 alt={item.image}
               />
             </a>
@@ -73,7 +73,7 @@ const Audited = () => {
             <a
               href={item.link}
               target="_blank"
-              className="tile"
+              className="m-4 sm:m-2"
               rel="noopener noreferrer"
               key={index}
             >
@@ -81,7 +81,7 @@ const Audited = () => {
                 src={`/images/audits/${item.image}.svg`}
                 title="item.link"
                 alt={item.image}
-                className="w-[240px] m-4"
+                className="w-[240px] sm:w-[160px] md:w-[200px] rounded-lg"
               />
             </a>
           ))}

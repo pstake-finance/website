@@ -93,7 +93,7 @@ const Footer = () => {
             <div className="flex items-center justify-center m-auto flex-wrap">
               {list.map((item, index) => (
                 <div
-                  className="item -lg:basis-[50%] -lg:max-w-[440px] md:max-w-full w-full px-4"
+                  className="item sm:w-auto sm:p-0 -lg:basis-[50%] -lg:max-w-[440px] md:max-w-full w-full px-4"
                   key={index}
                 >
                   <a
@@ -118,7 +118,7 @@ const Footer = () => {
                         icon={item.icon}
                       />
                     </div>
-                    <div>
+                    <div className="sm:hidden">
                       <p className="font-semibold text-base leading-normal text-light-full">
                         {item.name}
                       </p>

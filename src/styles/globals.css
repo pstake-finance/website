@@ -29,7 +29,7 @@ body {
   @apply text-base;
   @apply leading-snug;
   @apply text-center;
-  @apply text-light-low;
+  @apply text-light-mid;
 }
 
 .top-bar.is-sticky .navbar {

@@ -68,12 +68,12 @@ const Investors = () => {
               key={index}
               target="_blank"
               rel="noopener noreferrer"
-              className="my-4 mx-4"
+              className="m-4 sm:m-2"
             >
               <img
                 src={`/images/investors/${item.image}`}
                 title={item.image}
-                className="w-[240px] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] rounded-lg"
                 alt={item.image}
               />
             </a>

@@ -382,7 +382,7 @@ export const getAPR = async () => {
     const commission = await getCommission();
     const incentives = 0;
     const apr = baseRate - (commission / 100) * baseRate + incentives;
-    return isNaN(apr) ? APR_DEFAULT : apr.toFixed(2);
+    return isNaN(apr) ? APR_DEFAULT : apr;
   } catch (e) {
     return -1;
   }

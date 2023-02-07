@@ -76,13 +76,13 @@ const Validators = () => {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="my-4 mx-4"
+              className="m-4 sm:m-2"
             >
               <img
                 src={`/images/validators/bnb/${item.image}.svg`}
                 title={item.image}
                 alt={item.image}
-                className="w-auto rounded-md"
+                className="w-[240px] sm:w-[160px] md:w-[200px] rounded-md"
               />
             </a>
           ))}

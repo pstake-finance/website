@@ -37,14 +37,14 @@ const Audited = () => {
             <a
               href={item.link}
               target="_blank"
-              className="my-4 mx-4"
+              className="m-4 sm:m-2"
               rel="noopener noreferrer"
               key={index}
             >
               <img
                 src={`/images/audits/${item.image}.svg`}
                 title="item.link"
-                className="w-[240px] bg-[#25252b] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252b] rounded-lg"
                 alt={item.image}
               />
             </a>
@@ -52,30 +52,36 @@ const Audited = () => {
         </div>
         <div className="flex justify-center">
           <div className="bug-bounty my-4 mx-4">
-            <p className="text-light-emphasis text-center mb-3">
-              BUG-BOUNTY PROGRAM
+            <p className="text-light-emphasis sm:text-sm text-center mb-3">
+              BUG-BOUNTY
             </p>
             <a
               href={IMMUNEFI_WEB_URL}
               target="_blank"
+              className="m-4 sm:m-2"
               rel="noopener noreferrer"
             >
               <img
                 src={`/images/audits/immunefi.svg`}
                 title="immunefi"
-                className="w-[240px] bg-[#25252b] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252b] rounded-lg"
                 alt="immunefi"
               />
             </a>
           </div>
           <div className="on-chain my-4 mx-4">
-            <p className="text-light-emphasis text-center mb-3">
+            <p className="text-light-emphasis sm:text-sm text-center mb-3">
               ON-CHAIN TRACKING
             </p>
-            <a href={FORTA_WEB_URL} target="_blank" rel="noopener noreferrer">
+            <a
+              href={FORTA_WEB_URL}
+              target="_blank"
+              className="m-4 sm:m-2"
+              rel="noopener noreferrer"
+            >
               <img
                 src={`/images/audits/forta.svg`}
-                className="w-[240px] bg-[#25252b] rounded-lg"
+                className="w-[240px] sm:w-[160px] md:w-[200px] bg-[#25252b] rounded-lg"
                 title="forta"
                 alt="forta"
               />
