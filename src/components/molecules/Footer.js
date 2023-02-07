@@ -78,9 +78,7 @@ const Footer = () => {
   ];
 
   return (
-    <div
-      className={`bg-homePageBg3 bg-cover bg-no-repeat aos-init aos-animate ${router.pathname}`}
-    >
+    <div className={`bg-[#1d1d22] aos-init aos-animate ${router.pathname}`}>
       <div className="sectionContainer py-[100px] md:py-[40px]">
         <h3 className="sectionTitle mb-4">{t("Explore the Community")}</h3>
         <p className="sectionSubTitle max-w-[700px] mx-auto mb-8">
