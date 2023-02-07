@@ -32,7 +32,7 @@ import {
   BNB_URL,
   ATOM_URL,
 } from "../../utils/config";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
 import Dropdown from "../atoms/dropdown/Dropdown";
 import ButtonLink from "../atoms/buttonLink/ButtonLink";

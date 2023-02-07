@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextTranslate = require("next-translate");
 
-const nextConfig = nextTranslate({
+const nextConfig = {
   reactStrictMode: false,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
     return config;
-  },
-  experimental: {
-    runtime: "experimental-edge",
   },
   async redirects() {
     return [
@@ -20,6 +16,6 @@ const nextConfig = nextTranslate({
       },
     ];
   },
-});
+};
 
 module.exports = nextConfig;

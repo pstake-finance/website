@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import { getCosmosTVL, getExchangeRate } from "../../../pages/api/api";
 import Icon from "../../molecules/Icon";
 import { ATOM_URL, PSTAKE_APP_URL } from "../../../utils/config";

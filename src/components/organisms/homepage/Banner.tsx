@@ -1,5 +1,5 @@
 import React from "react";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import { PSTAKE_APP_URL, VIDEO_URL } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";

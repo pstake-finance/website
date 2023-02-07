@@ -11,7 +11,7 @@ import {
   VALIDATOR_NODE_REAL,
   VALIDATOR_TRANCHES,
 } from "../../../utils/config";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 
 const Validators = () => {
   const validatorList = [

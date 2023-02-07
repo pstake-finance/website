@@ -2,7 +2,7 @@ import React from "react";
 import ReactGa from "react-ga4";
 import Icon from "./Icon";
 import Link from "next/link";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import { useRouter } from "next/router";
 
 import {

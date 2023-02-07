@@ -3,9 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-        <title>pSTAKE | Unlocking liquidity of staked assets</title>
-      </Head>
+      <Head />
       <body>
         <Main />
         <NextScript />

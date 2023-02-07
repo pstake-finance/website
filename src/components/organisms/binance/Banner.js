@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
 import { decimalize, formatNumber, getTVL } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";

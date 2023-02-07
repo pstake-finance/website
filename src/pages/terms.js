@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/molecules/Footer";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import { PSTAKE_WEB_URL } from "../utils/config";
 const Terms = () => {
   const { t } = useTranslation("common");

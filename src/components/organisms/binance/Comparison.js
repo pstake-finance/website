@@ -1,5 +1,5 @@
 import React from "react";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { BNB_URL } from "../../../utils/config";
 

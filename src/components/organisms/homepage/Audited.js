@@ -8,7 +8,7 @@ import {
   PSTAKE_SOLIDFIED_AUDIT,
   PSTAKE_TRAIL_OF_BITS,
 } from "../../../utils/config";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 
 const auditList = [
   {

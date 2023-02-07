@@ -1,5 +1,5 @@
 import React from "react";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "next-export-i18n";
 import {
   PSTAKE_BLOG_ONE_URL,
   PSTAKE_BLOG_ONE_IMG_URL,
