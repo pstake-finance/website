@@ -1,5 +1,4 @@
 import React from "react";
-import ReactGa from "react-ga4";
 import Icon from "./Icon";
 import Link from "next/link";
 import { useTranslation } from "next-export-i18n";
@@ -20,13 +19,6 @@ import {
 const Footer = () => {
   const { t } = useTranslation("common");
   const router = useRouter();
-
-  const onClick = (name) => {
-    ReactGa.event({
-      category: name,
-      action: `Clicked on ${name}`,
-    });
-  };
 
   let twitterUrl;
 
@@ -99,7 +91,6 @@ const Footer = () => {
                     target="_blank"
                     className="bg-[#25252a] flex items-center md:m-2 md:p-4 m-4 p-6 rounded-xl group"
                     rel="noopener noreferrer"
-                    onClick={() => onClick(item.name)}
                   >
                     <div
                       className={`w-[46px] h-[46px] bg-[#3f3f45] flex 
