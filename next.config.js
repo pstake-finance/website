@@ -8,7 +8,7 @@ const nextConfig = nextTranslate({
     return config;
   },
   experimental: {
-    runtime: "edge",
+    runtime: "experimental-edge",
   },
   async redirects() {
     return [
