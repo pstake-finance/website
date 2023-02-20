@@ -1,25 +1,14 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
 import { useTranslation } from "next-export-i18n";
-import { getCosmosTVL, getExchangeRate } from "../../../pages/api/api";
 import Icon from "../../molecules/Icon";
-import { ATOM_URL, PSTAKE_APP_URL } from "../../../utils/config";
+import { ATOM_URL } from "../../../utils/config";
 import { decimalize, formatNumber } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
 
 const Banner = () => {
   const { t } = useTranslation("common");
-  const [exchangeRate, setExchangeRate] = useState(1);
   const { cosmosData } = useApp();
-  useEffect(() => {
-    const fetchValues = async () => {
-      const response = await getExchangeRate();
-      setExchangeRate(response);
-    };
-    fetchValues();
-  }, []);
 
   return (
     <div className="text-center aos-init aos-animate bg-atomBanner bg-no-repeat">
@@ -68,12 +57,7 @@ const Banner = () => {
         </div>
         <div className="my-6">
           <h6 className="font-bold text-[36px] sm:text-2xl text-dark-black-high leading-snug">
-            {formatNumber(
-              Number(decimalize(cosmosData.tvl / exchangeRate)),
-              3,
-              2
-            )}{" "}
-            ATOM
+            {formatNumber(Number(decimalize(cosmosData.tvl)), 3, 2)} ATOM
           </h6>
           <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">
             {t("TOTAL_VALUE_UNLOCKED")}

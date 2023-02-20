@@ -1,39 +1,43 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
-import Card from "react-bootstrap/Card";
 import { useState } from "react";
-import { fetchOsmosisPoolInfo } from "../../../pages/api/api";
+import {
+  fetchCrescentPoolInfo,
+  fetchOsmosisPoolInfo,
+} from "../../../pages/api/api";
 import { useEffect } from "react";
-import { ATOM_URL } from "../../../utils/config";
-import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1280 },
     items: 3,
     paritialVisibilityGutter: 10,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    breakpoint: { max: 1280, min: 768 },
+    items: 2,
     paritialVisibilityGutter: 10,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 768, min: 0 },
     items: 1,
     paritialVisibilityGutter: 10,
   },
 };
 
 const EcosystemSlider = ({ deviceType }) => {
-  const [osmosisInfo, setOsmosisInfo] = useState({ tvl: 0 });
+  const [osmosisInfo, setOsmosisInfo] = useState({ tvl: 0, apy: 0 });
+  const [crescentInfo, setCrescentInfo] = useState({ tvl: 0, apy: 0 });
   useEffect(() => {
     const fetchApi = async () => {
-      const [osmosis] = await Promise.all([fetchOsmosisPoolInfo()]);
-
+      const [osmosis, crescent] = await Promise.all([
+        fetchOsmosisPoolInfo(),
+        fetchCrescentPoolInfo(),
+      ]);
       setOsmosisInfo(osmosis);
+      setCrescentInfo(crescent);
     };
     fetchApi();
   }, []);
@@ -43,9 +47,36 @@ const EcosystemSlider = ({ deviceType }) => {
       tag: "DEX",
       logoUrl: "/images/integrations/osmosis.svg",
       content: (
-        <span className="d-block">
+        <span className="block">
           Provide liquidity in the stkATOM/ATOM Stableswap pool to earn trading
           fees and $ATOM external incentives
+        </span>
+      ),
+      primaryButtonText: "Swap",
+      primaryButtonUrl: `https://app.crescent.network/swap?from=stkatom&to=atom`,
+      secondaryButtonText: "Add Liquidity",
+      secondaryButtonUrl:
+        "https://app.crescent.network/farm?open_modal_pool_id=57",
+      tvl: (
+        <>
+          ${parseInt(osmosisInfo.tvl).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">TVL</span>
+        </>
+      ),
+      apy: (
+        <>
+          {osmosisInfo.apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">APY</span>
+        </>
+      ),
+    },
+    {
+      name: "Crescent",
+      tag: "DEX",
+      logoUrl: "/images/integrations/crescent.svg",
+      content: (
+        <span className="block mb-4">
+          Provide liquidity in the stkATOM/ATOM Ranged pool to farm $ATOM & $CRE
         </span>
       ),
       primaryButtonText: "Swap",
@@ -54,8 +85,14 @@ const EcosystemSlider = ({ deviceType }) => {
       secondaryButtonUrl: "https://frontier.osmosis.zone/pool/886",
       tvl: (
         <>
-          ${parseInt(osmosisInfo.tvl).toLocaleString()}{" "}
+          ${parseInt(crescentInfo.tvl).toLocaleString()}{" "}
           <span className="text-[12px] text-[#70747c]">TVL</span>
+        </>
+      ),
+      apy: (
+        <>
+          {crescentInfo.apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">APY</span>
         </>
       ),
     },
@@ -69,19 +106,19 @@ const EcosystemSlider = ({ deviceType }) => {
         </h3>
         <Carousel
           ssr
-          className="flex items-center justify-center"
+          className="flex items-center -md:justify-center"
           partialVisbile
           deviceType={deviceType}
-          itemClass="md:!w-auto !w-[420px]"
+          itemClass="pr-6"
           responsive={responsive}
           autoPlay={false}
         >
           {list.slice(0, list.length).map((item, index) => {
             return item.name !== "Coming Soon" ? (
-              <div key={index} className="h-auto">
+              <div key={index} className="h-[430px] lg:h-auto">
                 <div
                   className="bg-black-emphasis opacity-90 rounded-lg p-8
-                relative w-full border border-solid border-[#2a2c31]"
+                relative w-full border border-solid border-[#2a2c31] h-full"
                 >
                   <div
                     className="absolute font-bold text-[12px] text-center
@@ -102,15 +139,18 @@ const EcosystemSlider = ({ deviceType }) => {
                     <p className="font-bold text-base text-light-full text-center mb-4">
                       {item.name}
                     </p>
-                    <p className="text-light-emphasis text-sm font-medium text-center leading-loose mb-4">
+                    <p
+                      className="text-light-emphasis text-sm font-medium
+                    text-center leading-loose md:mb-3 mb-6 md:pb-2 pb-4"
+                    >
                       {item.content}
                     </p>
                   </div>
                   <div className="flex items-center flex-wrap justify-center mb-4">
-                    <p className="text-green font-semibold text-3xl mx-2">
+                    <p className="text-green font-semibold text-3xl mx-2 lg:text-lg">
                       {item.apy}
                     </p>
-                    <p className="text-green font-semibold text-3xl mx-2">
+                    <p className="text-green font-semibold text-3xl mx-2 lg:text-lg">
                       {item.tvl}
                     </p>
                   </div>
