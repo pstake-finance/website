@@ -223,10 +223,10 @@ export const fetchOsmosisPoolInfo = async () => {
     };
 
     if (responseTwo && responseTwo.data) {
-      let item = responseTwo.data[0].apr_list.find(
-        (item: any) => item!.denom === IBC_DENOM
+      osmoInfo.apy = Math.round(
+        responseTwo.data[0].apr_list[0].apr_14d +
+          responseTwo.data[0].apr_list[1].apr_14d
       );
-      osmoInfo.apy = Math.round(item.apr_14d);
     } else {
       osmoInfo.apy = 0;
     }
