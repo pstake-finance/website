@@ -235,7 +235,6 @@ export const fetchOsmosisPoolInfo = async () => {
     } else {
       osmoInfo.tvl = 0;
     }
-    console.log(responses, "responses");
     return osmoInfo;
   } catch (e) {
     return { tvl: 0, apy: 0 };

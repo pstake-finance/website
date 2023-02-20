@@ -36,7 +36,6 @@ const EcosystemSlider = ({ deviceType }) => {
         fetchOsmosisPoolInfo(),
         fetchCrescentPoolInfo(),
       ]);
-      console.log(crescent, "crescent");
       setOsmosisInfo(osmosis);
       setCrescentInfo(crescent);
     };
