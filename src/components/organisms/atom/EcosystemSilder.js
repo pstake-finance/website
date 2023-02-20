@@ -53,10 +53,9 @@ const EcosystemSlider = ({ deviceType }) => {
         </span>
       ),
       primaryButtonText: "Swap",
-      primaryButtonUrl: `https://app.crescent.network/swap?from=stkatom&to=atom`,
+      primaryButtonUrl: `https://frontier.osmosis.zone/?from=stkATOM&to=ATOM`,
       secondaryButtonText: "Add Liquidity",
-      secondaryButtonUrl:
-        "https://app.crescent.network/farm?open_modal_pool_id=57",
+      secondaryButtonUrl: "https://frontier.osmosis.zone/pool/886",
       tvl: (
         <>
           ${parseInt(osmosisInfo.tvl).toLocaleString()}{" "}
@@ -80,9 +79,10 @@ const EcosystemSlider = ({ deviceType }) => {
         </span>
       ),
       primaryButtonText: "Swap",
-      primaryButtonUrl: `https://frontier.osmosis.zone/?from=stkATOM&to=ATOM`,
+      primaryButtonUrl: `https://app.crescent.network/swap?from=stkatom&to=atom`,
       secondaryButtonText: "Add Liquidity",
-      secondaryButtonUrl: "https://frontier.osmosis.zone/pool/886",
+      secondaryButtonUrl:
+        "https://app.crescent.network/farm?open_modal_pool_id=57",
       tvl: (
         <>
           ${parseInt(crescentInfo.tvl).toLocaleString()}{" "}
