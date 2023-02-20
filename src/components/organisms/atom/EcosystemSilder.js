@@ -106,7 +106,7 @@ const EcosystemSlider = ({ deviceType }) => {
         </h3>
         <Carousel
           ssr
-          className="flex items-center justify-center"
+          className="flex items-center -md:justify-center"
           partialVisbile
           deviceType={deviceType}
           itemClass="pr-6"
