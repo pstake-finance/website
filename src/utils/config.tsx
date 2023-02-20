@@ -185,7 +185,8 @@ export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
 export const STK_ATOM_SECURITY_AUDIT_URL =
   "https://github.com/persistenceOne/pStake-auditReports/tree/main/stkATOM";
-export const STK_ATOM_DOCS_URL = "#";
+export const STK_ATOM_DOCS_URL =
+  "https://blog.pstake.finance/category/stkatom/";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
 export const ATOM_URL = "https://cosmos.pstake.finance/";
 export const CRESCENT_STK_ATOM_DENOM =
