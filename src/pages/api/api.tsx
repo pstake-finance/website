@@ -6,23 +6,10 @@ import {
   shieldContractsAddress,
   SPEEDY_NODE_URL,
 } from "../../utils/helpers";
-import { QueryClientImpl as StakingQueryClient } from "cosmjs-types/cosmos/staking/v1beta1/query";
-import { QueryClientImpl as BankQuery } from "cosmjs-types/cosmos/bank/v1beta1/query";
-import { QueryClientImpl } from "persistenceonejs/pstake/lscosmos/v1beta1/query";
 import { ethers } from "ethers";
 import shield from "../../utils/ABIs/shield.json";
-import {
-  APR_BASE_RATE,
-  APR_DEFAULT,
-  CHAIN_ID,
-  ExternalChains,
-  STK_ATOM_MINIMAL_DENOM,
-  TVL,
-} from "../../utils/config";
-import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
-import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { CRESCENT_STK_ATOM_DENOM, IBC_DENOM, TVL } from "../../utils/config";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
-import Long from "long";
 const ALPACA_API =
   "https://alpaca-static-api.alpacafinance.org/bsc/v1/landing/summary.json";
 const BEEFY_APY_API = "https://api.beefy.finance/apy";
@@ -42,25 +29,20 @@ const STK_BNB_SUBGRAPH_API =
   "https://api.thegraph.com/subgraphs/name/persistenceone/stkbnb";
 
 export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
+export const OSMOSIS_POOL_APR_URL = "https://api.osmosis.zone/apr/v2/886";
+export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
+export const STK_ATOM_TVL_URL =
+  "https://api.persistence.one/pstake/stkatom/atom_tvu";
+export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 
 const initialLiquidity = { [TVL]: 0 };
-
-const env = process.env.NEXT_PUBLIC_ENVIRONMENT;
-
-const persistenceChainInfo = ExternalChains[env].find(
-  (chain) => chain.chainId === CHAIN_ID[env].persistenceChainID
-);
-
-const cosmosChainInfo = ExternalChains[env].find(
-  (chain) => chain.chainId === CHAIN_ID[env].cosmosChainID
-);
 
 export const fetchAlpaca = async () => {
   try {
     const res = await Axios.get(ALPACA_API);
     if (res && res.data && res.data.data && res.data.data.farmingPools) {
       const farmingPools = res.data.data.farmingPools;
-      const data = farmingPools.filter((val) => {
+      const data = farmingPools.filter((val: any) => {
         return val.key.toLowerCase() === "pcs-stkbnb-bnb";
       });
       return {
@@ -177,9 +159,9 @@ export const fetchShieldTVL = async () => {
       const data = res.data.msg;
       return bigNumberToEther(data.toString());
     }
-    return 0;
+    return "0";
   } catch (e) {
-    return 0;
+    return "0";
   }
 };
 
@@ -187,13 +169,14 @@ export const fetchShield = async () => {
   try {
     const provider = new ethers.providers.JsonRpcProvider(SPEEDY_NODE_URL);
     const contract = new ethers.Contract(
-      shieldContractsAddress,
+      shieldContractsAddress!,
       shield,
       provider
     );
-    const response = await contract.getLatestRoundInfo();
-    const apy = bigNumberToEther(response["APY"]) * 100;
-    const tvl = await fetchShieldTVL();
+    const response: any = await contract.getLatestRoundInfo();
+    // @ts-ignore
+    const apy: number = bigNumberToEther(response["APY"]) * 100;
+    const tvl: string = await fetchShieldTVL();
     return { tvl: parseInt(tvl).toLocaleString(), apy: apy.toFixed(2) };
   } catch (e) {
     return { tvl: 0, apy: 0 };
@@ -227,171 +210,82 @@ export const fetchThenaInfo = async () => {
 
 export const fetchOsmosisPoolInfo = async () => {
   try {
-    const res = await Axios.get(OSMOSIS_POOL_URL);
-    if (res && res.data) {
-      return {
-        [TVL]: Math.round(res.data[0].liquidity),
-      };
+    const responses = await Axios.all([
+      Axios.get(OSMOSIS_POOL_URL),
+      Axios.get(OSMOSIS_POOL_APR_URL),
+    ]);
+    const responseOne = responses[0];
+    const responseTwo = responses[1];
+
+    const osmoInfo = {
+      apy: 0,
+      tvl: 0,
+    };
+
+    if (responseTwo && responseTwo.data) {
+      let item = responseTwo.data[0].apr_list.find(
+        (item: any) => item!.denom === IBC_DENOM
+      );
+      osmoInfo.apy = Math.round(item.apr_14d);
+    } else {
+      osmoInfo.apy = 0;
     }
+    if (responseOne && responseOne.data) {
+      osmoInfo.tvl = Math.round(responseOne.data[0].liquidity);
+    } else {
+      osmoInfo.tvl = 0;
+    }
+    console.log(responses, "responses");
+    return osmoInfo;
   } catch (e) {
-    return initialLiquidity;
+    return { tvl: 0, apy: 0 };
   }
 };
 
-export async function RpcClient(rpc) {
-  const tendermintClient = await Tendermint34Client.connect(rpc);
-  const queryClient = new QueryClient(tendermintClient);
-  return createProtobufRpcClient(queryClient);
-}
-
-export const getExchangeRate = async () => {
+export const fetchCrescentPoolInfo = async () => {
   try {
-    const rpcClient = await RpcClient(persistenceChainInfo.rpc);
-    const pstakeQueryService = new QueryClientImpl(rpcClient);
-    const cvalue = await pstakeQueryService.CValue({});
-    return Number(decimalize(cvalue.cValue, 18));
+    const res = await Axios.get(CRESCENT_POOL_URL);
+    if (res && res.data) {
+      const response = res.data.data;
+      let crescentInfo = response.find(
+        (item: any) => item!.Reserved[1]?.denom === CRESCENT_STK_ATOM_DENOM
+      );
+      const atomTvl =
+        Number(crescentInfo.Reserved[0].amount) *
+        crescentInfo.Reserved[0].priceOracle;
+      const stkAtomTvl =
+        Number(crescentInfo.Reserved[1].amount) *
+        crescentInfo.Reserved[1].priceOracle;
+      console.log(atomTvl, stkAtomTvl, "crescentInfo");
+      return {
+        tvl: Number(decimalize(atomTvl + stkAtomTvl)).toFixed(2),
+        apy: Number(crescentInfo?.apr).toFixed(2),
+      };
+    }
   } catch (e) {
-    return 1;
+    return { tvl: 0, apy: 0 };
   }
 };
 
 export const getCosmosTVL = async () => {
   try {
-    const rpcClient = await RpcClient(persistenceChainInfo.rpc);
-    const bankQueryService = new BankQuery(rpcClient);
-    const supplyResponse = await bankQueryService.TotalSupply({});
-    if (supplyResponse.supply.length) {
-      const token = supplyResponse.supply.find(
-        (item) => item.denom === STK_ATOM_MINIMAL_DENOM
-      );
-      if (token !== undefined) {
-        return token?.amount;
-      } else {
-        return 0;
-      }
+    const res = await Axios.get(STK_ATOM_TVL_URL);
+    if (res && res.data) {
+      return res!.data!.amount!.amount;
     }
     return 0;
   } catch (e) {
     return 0;
-  }
-};
-
-export const getCommission = async () => {
-  try {
-    const weight = 1;
-    let commission = 0;
-    const rpcClient = await RpcClient(persistenceChainInfo?.rpc);
-    const pstakeQueryService = new QueryClientImpl(rpcClient);
-    const allowListedValidators =
-      await pstakeQueryService.AllowListedValidators({});
-    const cosmosRpcClient = await RpcClient(cosmosChainInfo?.rpc);
-    const cosmosQueryService = new StakingQueryClient(cosmosRpcClient);
-    const validators =
-      allowListedValidators?.allowListedValidators?.allowListedValidators;
-    const commissionRates = [];
-
-    let key = new Uint8Array();
-    let cosmosValidators = [];
-
-    do {
-      const validatorCommission = await cosmosQueryService.Validators({
-        status: "BOND_STATUS_BONDED",
-        pagination: {
-          key: key,
-          offset: Long.fromNumber(0, true),
-          limit: Long.fromNumber(0, true),
-          countTotal: true,
-          reverse: false,
-        },
-      });
-      key = validatorCommission?.pagination?.nextKey;
-      cosmosValidators.push(...validatorCommission.validators);
-    } while (key.length !== 0);
-
-    if (cosmosValidators?.length !== 0) {
-      for (const validator of cosmosValidators) {
-        const listedValidator = validators?.find(
-          (item) => item?.validatorAddress === validator.operatorAddress
-        );
-        if (listedValidator) {
-          let commissionRate =
-            parseFloat(
-              decimalize(
-                validator.commission
-                  ? validator.commission.commissionRates.rate
-                  : 0,
-                18
-              )
-            ) * 100;
-          commissionRates.push(commissionRate);
-        }
-      }
-      commission =
-        (weight * commissionRates.reduce((a, b) => a + b, 0)) /
-        validators.length;
-    } else {
-      commission = 0;
-    }
-    return commission;
-  } catch (e) {
-    const customScope = new Scope();
-    customScope.setLevel("fatal");
-    customScope.setTags({
-      "Error while fetching commission": persistenceChainInfo?.rpc,
-    });
-    genericErrorHandler(e, customScope);
-    return 0;
-  }
-};
-
-/**
- * It fetches the incentives for the delegator
- * @returns the incentives for the delegator.
- */
-export const getIncentives = async () => {
-  try {
-    let incentives = 0;
-    const rpcClient = await RpcClient(persistenceChainInfo.rpc);
-    const pstakeQueryService = new QueryClientImpl(rpcClient);
-    const delegationState = await pstakeQueryService.DelegationState({});
-    const hostAccountDelegations =
-      delegationState?.delegationState?.hostAccountDelegations;
-
-    let stakedAmount = 0;
-    if (hostAccountDelegations) {
-      for (const amount of hostAccountDelegations) {
-        stakedAmount += parseInt(amount?.amount?.amount, 10);
-      }
-    }
-
-    const balance = (await pstakeQueryService.RewardsBoosterAccount({})).balance
-      ?.amount;
-
-    if (balance) {
-      incentives = (parseInt(balance, 10) * 365) / stakedAmount;
-    }
-    return incentives;
-  } catch (e) {
-    return 0;
-  }
-};
-
-export const getAPR = async () => {
-  try {
-    const baseRate = APR_BASE_RATE;
-    const commission = await getCommission();
-    const incentives = 0;
-    const apr = baseRate - (commission / 100) * baseRate + incentives;
-    return isNaN(apr) ? APR_DEFAULT : apr;
-  } catch (e) {
-    return -1;
   }
 };
 
 export const getCosmosAPY = async () => {
   try {
-    const apr = await getAPR();
-    return (((1 + Number(apr) / 36500) ** 365 - 1) * 100).toFixed(2);
+    const res = await Axios.get(APY_API);
+    if (res && res.data) {
+      return Number((res.data * 100).toFixed(2));
+    }
+    return -1;
   } catch (e) {
     return -1;
   }

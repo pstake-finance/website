@@ -1,3 +1,8 @@
+import { ChainInfo } from "@keplr-wallet/types";
+interface ExternalChainData {
+  [index: string]: ChainInfo[];
+}
+
 export const UNSTAKEDTOKENS = "wTOKENs";
 export const STAKEDTOKENS = "pTOKENs";
 export const STAKEDTOKEN = "pTOKEN";
@@ -183,6 +188,10 @@ export const STK_ATOM_SECURITY_AUDIT_URL =
 export const STK_ATOM_DOCS_URL = "#";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
 export const ATOM_URL = "https://cosmos.pstake.finance/";
+export const CRESCENT_STK_ATOM_DENOM =
+  "ibc/E32F6485CDAE995FC492010770936119D0BF90F5226C9AED727988DF03B5F569";
+export const IBC_DENOM =
+  "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2";
 
 export const TVL = "tvl";
 export const STK_ATOM_MINIMAL_DENOM = "stk/uatom";
@@ -228,7 +237,7 @@ export const CURRENCY = {
   },
 };
 
-export const CHAIN_ID = {
+export const CHAIN_ID: any = {
   Devnet: {
     cosmosChainID: "gaiad-1",
     persistenceChainID: "pstaked-1",
@@ -243,7 +252,7 @@ export const CHAIN_ID = {
   },
 };
 
-export const ExternalChains = {
+export const ExternalChains: ExternalChainData = {
   Devnet: [
     {
       rpc: "https://rpc.devnet.persistence.pstake.finance",

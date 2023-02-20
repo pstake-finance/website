@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { APR_DEFAULT, ATOM_URL } from "../../../utils/config";
-import { getAPR } from "../../../pages/api/api";
-import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
 
