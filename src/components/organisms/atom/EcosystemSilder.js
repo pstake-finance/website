@@ -11,17 +11,17 @@ import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1280 },
     items: 3,
     paritialVisibilityGutter: 10,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    breakpoint: { max: 1280, min: 768 },
+    items: 2,
     paritialVisibilityGutter: 10,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 768, min: 0 },
     items: 1,
     paritialVisibilityGutter: 10,
   },
@@ -115,7 +115,7 @@ const EcosystemSlider = ({ deviceType }) => {
         >
           {list.slice(0, list.length).map((item, index) => {
             return item.name !== "Coming Soon" ? (
-              <div key={index} className="h-[430px] md:h-auto">
+              <div key={index} className="h-[430px] lg:h-auto">
                 <div
                   className="bg-black-emphasis opacity-90 rounded-lg p-8
                 relative w-full border border-solid border-[#2a2c31] h-full"
@@ -147,10 +147,10 @@ const EcosystemSlider = ({ deviceType }) => {
                     </p>
                   </div>
                   <div className="flex items-center flex-wrap justify-center mb-4">
-                    <p className="text-green font-semibold text-3xl mx-2">
+                    <p className="text-green font-semibold text-3xl mx-2 lg:text-lg">
                       {item.apy}
                     </p>
-                    <p className="text-green font-semibold text-3xl mx-2">
+                    <p className="text-green font-semibold text-3xl mx-2 lg:text-lg">
                       {item.tvl}
                     </p>
                   </div>

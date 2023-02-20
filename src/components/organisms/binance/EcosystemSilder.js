@@ -1,22 +1,21 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
-import Card from "react-bootstrap/Card";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1280 },
     items: 3,
     paritialVisibilityGutter: 10,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    breakpoint: { max: 1280, min: 768 },
+    items: 2,
     paritialVisibilityGutter: 10,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 768, min: 0 },
     items: 1,
     paritialVisibilityGutter: 10,
   },
@@ -248,16 +247,16 @@ const EcosystemSlider = ({
                     </p>
                   </div>
                   <div className="flex items-center flex-wrap justify-center mb-4">
-                    <p className="text-green font-semibold text-3xl mx-2">
+                    <p className="text-green font-semibold text-3xl mx-2 lg:text-lg">
                       {item.apy}
                     </p>
-                    <p className="text-green font-semibold text-3xl mx-2">
+                    <p className="text-green font-semibold text-3xl mx-2 lg:text-lg">
                       {item.tvl}
                     </p>
                   </div>
                   <div className="flex md:block items-center flex-wrap justify-center">
                     <ButtonLink
-                      className={`w-[170px] flex-1 mr-2 text-sm md:mb-2 md:mx-auto`}
+                      className={`w-[170px] flex-1 mr-2 text-sm md:mb-2 md:mx-auto lg:text-xsm`}
                       variant={"custom"}
                       href={item.primaryButtonUrl}
                       scale="md"
@@ -269,7 +268,7 @@ const EcosystemSlider = ({
                       {item.primaryButtonText}
                     </ButtonLink>
                     <ButtonLink
-                      className={`w-[170px] flex-1 ml-2 text-sm md:mx-auto md:mb-2 ${
+                      className={`w-[170px] flex-1 ml-2 text-sm md:mx-auto lg:text-xsm md:mb-2 ${
                         item.name === "Wombat" ||
                         item.name === "Midas Capital" ||
                         item.name === "Shield"
