@@ -255,7 +255,6 @@ export const fetchCrescentPoolInfo = async () => {
       const stkAtomTvl =
         Number(crescentInfo.Reserved[1].amount) *
         crescentInfo.Reserved[1].priceOracle;
-      console.log(atomTvl, stkAtomTvl, "crescentInfo");
       return {
         tvl: Number(decimalize(atomTvl + stkAtomTvl)).toFixed(2),
         apy: Number(crescentInfo?.apr).toFixed(2),
