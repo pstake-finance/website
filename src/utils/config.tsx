@@ -24,6 +24,8 @@ export const HALBOR_AUDIT_REPORT =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pSTAKE_stkBNB_Smart_Contract_Audit_Halborn%20%5B05.08.2022%5D.pdf?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
 export const STKATOM_HALBOR_AUDIT_REPORT =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkATOM/Persistence_stkATOM_Cosmos_Security_Audit_Report_Halborn_Final.pdf";
+export const STKATOM_OAK_AUDIT_REPORT =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkATOM/2023-02-17%20Audit%20Report%20-%20pSTAKE%20Native%20v1.0.pdf";
 export const PSTAKE_FORUM_URL = "https://forum.pstake.finance/";
 export const PSTAKE_RAISE_A_TICKET_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSe6oYvc2ffDtbnTbfrMYtkUG9vKcyzVoLxplFtF0XxNNjbGQg/viewform";
@@ -174,13 +176,17 @@ export const STK_ATOM_BLOG_URL =
 export const STK_ATOM_TWITTER_URL =
   "https://twitter.com/pstake_cosmos?s=11&t=E_q2T3rK9Bwiywy_YCvo5A";
 export const STK_ATOM_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2023/01/09/stkatom-launch-update/";
+  "https://blog.pstake.finance/2023/01/15/stkatom-user-guide-atom-liquid-staking-tutorial/";
 export const STK_ATOM_BLOG_ONE_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2023/01/stkATOM-Launch_update-min-1160x622.png";
+  "https://blog.pstake.finance/wp-content/uploads/2023/01/image1-min-1160x622.png";
 export const STK_ATOM_BLOG_TWO_URL =
   "https://blog.pstake.finance/2022/11/05/pstakes-validator-set-for-atom-advancing-the-decentralisation-of-cosmos/";
 export const STK_ATOM_BLOG_TWO_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/11/2022-11-05-16_00_04-Media-viewer.png";
+export const STK_ATOM_BLOG_THREE_URL =
+  "https://blog.pstake.finance/2023/02/10/atom-liquid-staking-guide-stkatom-crescent-ranged-pool/";
+export const STK_ATOM_BLOG_THREE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2023/02/stkATOM-Crecent-Farming-Guide-min-1160x622.png";
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
 export const STK_ATOM_SECURITY_AUDIT_URL =

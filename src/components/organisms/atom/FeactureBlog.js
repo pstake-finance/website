@@ -6,6 +6,8 @@ import {
   STK_ATOM_BLOG_TWO_URL,
   STK_ATOM_BLOG_TWO_IMAGE_URL,
   STK_ATOM_BLOG_URL,
+  STK_ATOM_BLOG_THREE_URL,
+  STK_ATOM_BLOG_THREE_IMAGE_URL,
 } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
@@ -22,6 +24,11 @@ const FeaturedBlogs = () => {
       title: t("LEARN_MORE"),
       blogLink: STK_ATOM_BLOG_TWO_URL,
       imageLink: STK_ATOM_BLOG_TWO_IMAGE_URL,
+    },
+    {
+      title: "stkATOM Crescent Ranged Pool",
+      blogLink: STK_ATOM_BLOG_THREE_URL,
+      imageLink: STK_ATOM_BLOG_THREE_IMAGE_URL,
     },
   ];
   return (

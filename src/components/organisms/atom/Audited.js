@@ -1,12 +1,19 @@
 import React from "react";
 
-import { STKATOM_HALBOR_AUDIT_REPORT } from "../../../utils/config";
+import {
+  STKATOM_HALBOR_AUDIT_REPORT,
+  STKATOM_OAK_AUDIT_REPORT,
+} from "../../../utils/config";
 
 const Audited = () => {
   const auditList = [
     {
       link: STKATOM_HALBOR_AUDIT_REPORT,
       image: "halborn_black",
+    },
+    {
+      link: STKATOM_OAK_AUDIT_REPORT,
+      image: "aok",
     },
   ];
   return (
