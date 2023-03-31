@@ -46,7 +46,7 @@ const Networks = () => {
       imageUrl: "/images/networks/persistence.svg",
       apy: "0",
       buttonText: "Withdraw Assets",
-      buttonUrl: "https://app.pstake.finance/",
+      buttonUrl: "https://migration.pstake.finance/",
       hoverBg: "hover:bg-xprtCard",
     },
     {
@@ -55,7 +55,7 @@ const Networks = () => {
       imageUrl: "/images/networks/atom.svg",
       apy: "0",
       buttonText: "Withdraw Assets",
-      buttonUrl: "https://app.pstake.finance/",
+      buttonUrl: "https://migration.pstake.finance/",
       hoverBg: "hover:bg-cosmosCard",
     },
   ];
@@ -170,63 +170,26 @@ const Networks = () => {
                   </div>
                 </div>
                 <div className="">
-                  {item.network === "ethereum" &&
-                  (item.asset === "Persistence" || item.asset === "Cosmos") ? (
-                    <>
-                      <div className={"text-center"}>
-                        <a
-                          className="inline-block text-light-high text-center text-xsm font-medium
-                        leading-normal hover:underline hover:cursor-pointer mb-3 md:m-0"
-                          href={item.buttonUrl}
-                          target={"_blank"}
-                          rel="noreferrer"
-                        >
-                          {isMobile ? (
-                            <Icon
-                              viewClass="dropDownIcon !w-[14px] ease-in duration-200 rotate-360
+                  <ButtonLink
+                    className={`w-full md:p-2 !py-2.5 md:m-0 md:text-sm md:w-auto md:bg-transparent`}
+                    variant={"custom"}
+                    href={item.buttonUrl}
+                    scale="lg"
+                    isDisabled={false}
+                    customButtonClass={
+                      "mt-9 bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
+                    }
+                  >
+                    {isMobile ? (
+                      <Icon
+                        viewClass="dropDownIcon !w-[14px] ease-in duration-200 rotate-360
                 group-hover:rotate-90 fill-[#ECECEC]"
-                              icon="chevron"
-                            />
-                          ) : (
-                            item.buttonText
-                          )}
-                        </a>
-                      </div>
-                      <Button
-                        className={`button w-full md:p-2 md:m-0 md:hidden md:text-sm after:content-['Migrate_to_Persistence']
-                      hover:after:content-['Coming_soon']`}
-                        variant={"custom"}
-                        scale="lg"
-                        isDisabled={false}
-                        customButtonClass={
-                          "bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
-                        }
-                      >
-                        {""}
-                      </Button>
-                    </>
-                  ) : (
-                    <ButtonLink
-                      className={`w-full md:p-2 !py-2.5 md:m-0 md:text-sm md:w-auto md:bg-transparent`}
-                      variant={"custom"}
-                      href={item.buttonUrl}
-                      scale="lg"
-                      isDisabled={false}
-                      customButtonClass={
-                        "mt-9 bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
-                      }
-                    >
-                      {isMobile ? (
-                        <Icon
-                          viewClass="dropDownIcon !w-[14px] ease-in duration-200 rotate-360
-                group-hover:rotate-90 fill-[#ECECEC]"
-                          icon="chevron"
-                        />
-                      ) : (
-                        item.buttonText
-                      )}
-                    </ButtonLink>
-                  )}
+                        icon="chevron"
+                      />
+                    ) : (
+                      item.buttonText
+                    )}
+                  </ButtonLink>
                 </div>
               </div>
             ))}

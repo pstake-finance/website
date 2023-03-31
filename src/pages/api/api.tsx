@@ -34,6 +34,7 @@ export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
 export const STK_ATOM_TVL_URL =
   "https://api.persistence.one/pstake/stkatom/atom_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
+export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 
 const initialLiquidity = { [TVL]: 0 };
 
@@ -260,6 +261,55 @@ export const fetchCrescentPoolInfo = async () => {
         apy: Number(crescentInfo?.apr).toFixed(2),
       };
     }
+  } catch (e) {
+    return { tvl: 0, apy: 0 };
+  }
+};
+
+export const fetchDexterPoolInfo = async () => {
+  try {
+    const res = await fetch(DEXTER_POOL_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `{
+            pool_aggregate_data {
+              fee_apr
+              current_liquidity_usd
+              pool_id
+            }
+            pool_current_incentive_apr {
+               incentive_apr
+               pool_id
+            }
+          }`,
+      }),
+    });
+    const responseJson = await res.json();
+    if (responseJson && responseJson.data) {
+      const poolAggregate = responseJson.data.pool_aggregate_data?.find(
+        (item: any) => item.pool_id === 1
+      );
+      const poolIncentiveAprList =
+        responseJson.data.pool_current_incentive_apr?.filter((item: any) => {
+          return item.pool_id === 1;
+        });
+      let poolIncentiveApr = 0;
+      if (poolIncentiveAprList && poolIncentiveAprList.length) {
+        poolIncentiveAprList.forEach((item: any) => {
+          poolIncentiveApr += item.incentive_apr;
+        });
+      }
+      return {
+        apy: (
+          poolAggregate.fee_apr + (poolIncentiveApr ? poolIncentiveApr : 0)
+        ).toFixed(2),
+        tvl: poolAggregate.current_liquidity_usd!.toFixed(2),
+      };
+    }
+    return { tvl: 0, apy: 0 };
   } catch (e) {
     return { tvl: 0, apy: 0 };
   }
