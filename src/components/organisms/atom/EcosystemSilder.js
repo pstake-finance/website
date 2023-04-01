@@ -4,6 +4,7 @@ import React from "react";
 import { useState } from "react";
 import {
   fetchCrescentPoolInfo,
+  fetchDexterPoolInfo,
   fetchOsmosisPoolInfo,
 } from "../../../pages/api/api";
 import { useEffect } from "react";
@@ -30,14 +31,18 @@ const responsive = {
 const EcosystemSlider = ({ deviceType }) => {
   const [osmosisInfo, setOsmosisInfo] = useState({ tvl: 0, apy: 0 });
   const [crescentInfo, setCrescentInfo] = useState({ tvl: 0, apy: 0 });
+  const [dexterInfo, setDexterInfo] = useState({ tvl: 0, apy: 0 });
+
   useEffect(() => {
     const fetchApi = async () => {
-      const [osmosis, crescent] = await Promise.all([
+      const [osmosis, crescent, dexter] = await Promise.all([
         fetchOsmosisPoolInfo(),
         fetchCrescentPoolInfo(),
+        fetchDexterPoolInfo(),
       ]);
       setOsmosisInfo(osmosis);
       setCrescentInfo(crescent);
+      setDexterInfo(dexter);
     };
     fetchApi();
   }, []);
@@ -96,6 +101,35 @@ const EcosystemSlider = ({ deviceType }) => {
         </>
       ),
     },
+    {
+      name: "Dexter",
+      tag: "DEX",
+      logoUrl: "/images/integrations/dexter.svg",
+      content: (
+        <span className="block">
+          {" "}
+          Provide liquidity in the stkATOM/ATOM Metastable pool to earn trading
+          fees and $ATOM, $stkATOM, & $XPRT external incentives
+        </span>
+      ),
+      primaryButtonText: "Swap",
+      primaryButtonUrl: `https://app.dexter.zone/`,
+      secondaryButtonText: "Add Liquidity",
+      secondaryButtonUrl:
+        "https://app.dexter.zone/pools/persistence1335rlmhujm0gj5e9gh7at9jpqvqckz0mpe4v284ar4lw5mlkryzszkpfrs",
+      tvl: (
+        <>
+          ${parseInt(dexterInfo.tvl).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">TVL</span>
+        </>
+      ),
+      apy: (
+        <>
+          {dexterInfo.apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">APY</span>
+        </>
+      ),
+    },
   ];
 
   return (
@@ -142,7 +176,7 @@ const EcosystemSlider = ({ deviceType }) => {
                       </p>
                       <p
                         className="text-light-emphasis text-sm font-medium
-                    text-center leading-loose md:mb-3 mb-6 md:pb-2 pb-4"
+                    text-center leading-loose md:pb-2 pb-4"
                       >
                         {item.content}
                       </p>
