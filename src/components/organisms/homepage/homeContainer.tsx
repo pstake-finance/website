@@ -30,20 +30,70 @@ const HomeContainer = () => {
   }, [prices]);
 
   return prices !== null ? (
-    <div className="text-center aos-init aos-animate">
+    <div className="text-center aos-init aos-animate flex items-center max-w-[400px] mx-auto justify-center">
       <div className="pt-[200px] pb-[100px]">
-        <button className="selectMe">clickMe!</button>
-        <p className="text-light-high" onClick={start}>
-          hopers:${prices!.hopers}
-        </p>
-        <p className="text-light-high">hopers:${prices!.jackal}</p>
-        <p className="text-light-high">rebus:${prices!.rebus}</p>
-        <p className="text-light-high">osmosis:${prices!.osmosis}</p>
-        <p className="text-light-high">evmos:${prices!.evmos}</p>
-        <p className="text-light-high">persistence:${prices!.persistence}</p>
-        <p className="text-light-high">akash:${prices!.akash}</p>
-        <p className="text-light-high">cosmos:${prices!.cosmos}</p>
-        <p className="text-light-high">stargaze:${prices!.stargaze}</p>
+        <div className="bg-black-700 p-4 rounded-md">
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              hopers:
+            </p>
+            <p className="text-light-high">${prices!.hopers}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              jackal:
+            </p>
+            <p className="text-light-high">${prices!.jackal}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              hopers:
+            </p>
+            <p className="text-light-high">${prices!.hopers}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              rebus:
+            </p>
+            <p className="text-light-high">${prices!.rebus}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              rebus:
+            </p>
+            <p className="text-light-high">${prices!.osmosis}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              evmos:
+            </p>
+            <p className="text-light-high">${prices!.evmos}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              persistence:
+            </p>
+            <p className="text-light-high">${prices!.persistence}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              akash:
+            </p>
+            <p className="text-light-high">${prices!.akash}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              cosmos:
+            </p>
+            <p className="text-light-high">${prices!.cosmos}</p>
+          </div>
+          <div className="flex items-center mb-2">
+            <p className="text-light-high font-medium w-[200px] text-left">
+              stargaze:
+            </p>
+            <p className="text-light-high">${prices!.stargaze}</p>
+          </div>
+        </div>
       </div>
     </div>
   ) : (
