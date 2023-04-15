@@ -47,12 +47,6 @@ const HomeContainer = () => {
           </div>
           <div className="flex items-center mb-2">
             <p className="text-light-high font-medium w-[200px] text-left">
-              hopers:
-            </p>
-            <p className="text-light-high">${prices!.hopers}</p>
-          </div>
-          <div className="flex items-center mb-2">
-            <p className="text-light-high font-medium w-[200px] text-left">
               rebus:
             </p>
             <p className="text-light-high">${prices!.rebus}</p>
