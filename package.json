@@ -24,7 +24,9 @@
     "react-multi-carousel": "^2.8.2",
     "react-onesignal": "^2.0.4",
     "react-router-dom": "^5.2.0",
-    "typescript": "^4.8.4"
+    "simple-zustand-devtools": "^1.1.0",
+    "typescript": "^4.8.4",
+    "zustand": "^4.3.7"
   },
   "scripts": {
     "dev": "next dev",

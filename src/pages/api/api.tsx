@@ -10,6 +10,7 @@ import { ethers } from "ethers";
 import shield from "../../utils/ABIs/shield.json";
 import { CRESCENT_STK_ATOM_DENOM, IBC_DENOM, TVL } from "../../utils/config";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
+import { responseObjType } from "../../store/slices/initialDataSlice";
 const ALPACA_API =
   "https://alpaca-static-api.alpacafinance.org/bsc/v1/landing/summary.json";
 const BEEFY_APY_API = "https://api.beefy.finance/apy";
@@ -372,5 +373,180 @@ export const getBnbApy = async () => {
   } catch (e) {
     console.log(e);
     return 0;
+  }
+};
+
+const getAmount = (obj: any) => {
+  console.log(obj, "obj");
+  if (obj && obj.data) {
+    return obj.data.market_data.current_price.usd;
+  }
+  return "0";
+};
+
+const getHopers = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/hopers-io"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getJackal = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/jackal-protocol"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getRebus = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/rebus"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getOsmosis = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/osmosis"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getPersistence = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/persistence"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getEvmos = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/evmos"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getCosmos = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/cosmos"
+    );
+    if (response && response.data) {
+      if (Number(response.data.market_data.current_price.usd) > 0) {
+      }
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getAkash = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/akash-network"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+const getStargaze = async () => {
+  try {
+    const response = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/stargaze"
+    );
+    if (response && response.data) {
+      return response.data.market_data.current_price.usd;
+    }
+    return "0";
+  } catch (e) {
+    return "0";
+  }
+};
+
+export const fetchTokensInfo = async () => {
+  let responseObj: responseObjType = {
+    hopers: "0",
+    jackal: "0",
+    rebus: "0",
+    osmosis: "0",
+    persistence: "0",
+    evmos: "0",
+    cosmos: "0",
+    akash: "0",
+    stargaze: "0",
+  };
+  try {
+    responseObj.hopers = await getHopers();
+    responseObj.jackal = await getJackal();
+    responseObj.rebus = await getRebus();
+    responseObj.osmosis = await getOsmosis();
+    responseObj.persistence = await getPersistence();
+    responseObj.evmos = await getEvmos();
+    responseObj.cosmos = await getCosmos();
+    responseObj.akash = await getAkash();
+    responseObj.stargaze = await getStargaze();
+    return responseObj;
+  } catch (e) {
+    console.log(e, "Errro");
+    return {
+      hopers: "0",
+      jackal: "0",
+      rebus: "0",
+      osmosis: "0",
+      persistence: "0",
+      evmos: "0",
+      cosmos: "0",
+      akash: "0",
+      stargaze: "0",
+    };
   }
 };
