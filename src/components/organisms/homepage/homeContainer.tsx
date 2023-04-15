@@ -53,7 +53,7 @@ const HomeContainer = () => {
           </div>
           <div className="flex items-center mb-2">
             <p className="text-light-high font-medium w-[200px] text-left">
-              rebus:
+              osmosis:
             </p>
             <p className="text-light-high">${prices!.osmosis}</p>
           </div>
