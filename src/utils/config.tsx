@@ -168,6 +168,8 @@ export const FORTA_WEB_URL =
   "https://app.forta.network/agents/pstake?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
 export const IMMUNEFI_WEB_URL =
   "https://immunefi.com/bounty/pstake/?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
+export const IMMUNEFI_STK_ATOM_URL =
+  "https://immunefi.com/bounty/pstakeoncosmos/";
 export const STK_ATOM_MIGRATION_URL =
   "https://forum.pstake.finance/t/discussion-on-migration-of-stkatom-from-ethereum-to-persistence-core-1/417";
 export const COSMOS_URL = "https://cosmos.pstake.finance/";
