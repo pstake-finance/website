@@ -30,6 +30,7 @@ import {
   PSTAKE_APP_URL,
   BNB_URL,
   ATOM_URL,
+  IMMUNEFI_STK_ATOM_URL,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -391,21 +392,31 @@ const Header = () => {
                   ""
                 )}
 
-                {router.pathname === "/bnb" ? (
+                {router.pathname === "/bnb" || router.pathname === "/atom" ? (
                   <li className="nav-item md:w-full md:mb-2">
                     <ButtonLink
-                      className={`dropDownButton [.is-sticky_&]:bg-bnbPrimary
-                       w-full md:py-2 !py-2.5 md:text-sm`}
+                      className={`${
+                        router.pathname === "/bnb"
+                          ? "[.is-sticky_&]:bg-bnbPrimary"
+                          : " [.is-sticky_&]:bg-atomPrimary"
+                      } dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
                       variant={"custom"}
-                      href={IMMUNEFI_WEB_URL}
+                      href={
+                        router.pathname === "/bnb"
+                          ? IMMUNEFI_WEB_URL
+                          : IMMUNEFI_STK_ATOM_URL
+                      }
                       scale="lg"
                       target={"_blank"}
                       isDisabled={false}
                       customButtonClass={"bg-black-800 text-light-high"}
                     >
                       <div
-                        className="bg-immunefiWhite
-                      [.is-sticky_&]:bg-immunifyBlack w-[90px] h-[18px] bg-no-repeat bg-center"
+                        className={`${
+                          router.pathname === "/bnb"
+                            ? "[.is-sticky_&]:bg-immunifyBlack"
+                            : ""
+                        } bg-immunefiWhite w-[90px] h-[18px] bg-no-repeat bg-center`}
                       />
                     </ButtonLink>
                   </li>
