@@ -6,8 +6,19 @@ const HomeContainer = () => {
   const fetchInitialData = useAppStore((state) => state.fetchInitialData);
   const [audio, setAudio] = useState<any>(null);
   useEffect(() => {
-    setAudio(new Audio("/audio.mp3"));
+    const audfd = new Audio(
+      "http://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg"
+    );
+    audfd.muted = true;
+    setAudio(audfd);
     // only run once on the first render on the client
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetchInitialData();
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -21,19 +32,28 @@ const HomeContainer = () => {
     // audio.muted();
   };
 
+  var playSound = function () {
+    var sound20 = new Audio(
+      "http://commondatastorage.googleapis.com/codeskulptor-assets/Collision8-Bit.ogg"
+    );
+    sound20.muted = false; // without this line it's not working although I have "muted" in HTML
+    sound20.play();
+  };
+
   useEffect(() => {
     if (prices !== null) {
       if (Number(prices.cosmos) > 10) {
+        // playSound();
         start();
       }
     }
-  }, [prices]);
+  });
 
   return prices !== null ? (
     <div className="text-center aos-init aos-animate flex items-center max-w-[400px] mx-auto justify-center">
       <div className="pt-[200px] pb-[100px]">
         <div className="bg-black-700 p-4 rounded-md">
-          <div className="flex items-center mb-2">
+          <div className="flex items-center mb-2" onClick={playSound}>
             <p className="text-light-high font-medium w-[200px] text-left">
               hopers:
             </p>
