@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
-import { PSTAKE_APP_URL, VIDEO_URL } from "../../../utils/config";
+import { PSTAKE_APP_URL } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 
@@ -27,23 +27,12 @@ const Banner = () => {
             isDisabled={false}
             focusEffect={true}
           >
-            {t("GET_STARTED")}
+            {t("LIQUID_STAKE_NOW")}
             <Icon
               viewClass="right-arrow w-[14px] fill-[#fff]"
               icon="right-arrow"
             />
           </ButtonLink>
-        </div>
-      </div>
-      <div className="info-section bg-homePageBg2 bg-bottom bg-no-repeat bg-cover pb-[65px]">
-        <div className="container mx-auto px-4">
-          <div className="w-full">
-            <iframe
-              title="Introducing pSTAKE | Multi-chain Liquid Staking"
-              className="embed-responsive-item w-full h-[700px] md:h-[300px] sm:h-[200px]"
-              src={VIDEO_URL}
-            />
-          </div>
         </div>
       </div>
     </div>

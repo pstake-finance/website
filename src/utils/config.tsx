@@ -47,17 +47,17 @@ export const PSTAKE_TRAIL_OF_BITS =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/pStake%20Smart%20Contracts%20%2B%20Bridge%20Audit%20-%20Trail%20of%20Bits%20%5B26.04.22%5D.pdf?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const PSTAKE_CERTORA =
   "https://github.com/persistenceOne/stkBNB-contracts/tree/main/certora?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
-export const PSTAKE_BLOG_THREE_URL =
-  "https://blog.pstake.finance/2022/08/07/stkbnb-user-guide-bnb-liquid-staking-tutorial/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_BNB_liquid_staking";
-export const PSTAKE_BLOG_THREE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/08/user-guide-1160x620.png";
+export const PSTAKE_BLOG_ONE_URL =
+  "https://blog.pstake.finance/2023/03/02/pstake-erc-20-liquid-staking-migration-utility/";
+export const PSTAKE_BLOG_ONE_IMG_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2023/03/migration-min-1160x622.png";
 export const PSTAKE_BLOG_TWO_URL =
   "https://blog.pstake.finance/2022/07/28/why-liquid-staking-is-a-game-changer-for-bnb/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_BNB_liquid_staking";
 export const PSTAKE_BLOG_TWO_IMG_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/07/1-1160x619.png";
-export const PSTAKE_BLOG_ONE_URL =
+export const PSTAKE_BLOG_THREE_URL =
   "https://blog.pstake.finance/2023/01/15/stkatom-user-guide-atom-liquid-staking-tutorial/";
-export const PSTAKE_BLOG_ONE_IMG_URL =
+export const PSTAKE_BLOG_THREE_IMG_URL =
   "https://blog.pstake.finance/wp-content/uploads/2023/01/image1-min.png";
 export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";

@@ -1,6 +1,8 @@
 import React from "react";
 import {
+  FORTA_WEB_URL,
   HALBOR_AUDIT_REPORT,
+  IMMUNEFI_WEB_URL,
   PSTAKE_CERTORA,
   PSTAKE_DILIGENCE_AUDIT,
   PSTAKE_OAK_AUDIT,
@@ -38,6 +40,14 @@ const auditList = [
   {
     link: PSTAKE_CERTORA,
     image: "certora_black",
+  },
+  {
+    link: IMMUNEFI_WEB_URL,
+    image: "immunefi",
+  },
+  {
+    link: FORTA_WEB_URL,
+    image: "forta",
   },
 ];
 const Audited = () => {

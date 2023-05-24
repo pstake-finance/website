@@ -6,23 +6,19 @@ const Features = () => {
       title: "Say goodbye to illiquidity",
       icon: "liquidity",
       content:
-        "Receive stkAssets to maintain liquidity of otherwise locked PoS\n" +
-        "                Asset when you stake",
+        "Receive stkASSETs to maintain liquidity of otherwise locked PoS Asset when you stake.",
+    },
+    {
+      title: "Safe, Secure, Solid / Security is our priority",
+      icon: "redemption",
+      content:
+        "Maximum security is ensured through multi-layered measures, including multiple security audits, bug bounties, and on-chain monitoring.",
     },
     {
       title: "Maximise your capital efficiency",
       icon: "cash",
       content:
-        "Generate the highest yields with staking rewards & various\n" +
-        "                stkAsset DeFi opportunities, all while securing the underlying\n" +
-        "                PoS chain",
-    },
-    {
-      title: "Redemption time?",
-      icon: "redemption",
-      content:
-        "Skip unstaking and unbonding process of your Pos Asset by\n" +
-        "                directly swapping stkAsset from a liquidity pool",
+        "Generate the highest yields with staking rewards & various stkASSET DeFi opportunities, all while securing the underlying PoS chain.",
     },
   ];
 
