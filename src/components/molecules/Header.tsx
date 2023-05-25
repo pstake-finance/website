@@ -110,6 +110,27 @@ const Header = () => {
     twitterUrl = STK_ATOM_TWITTER_URL;
   }
 
+  const networks = [
+    {
+      optionName: "Cosmos",
+      optionLink: "/atom",
+      imgUrl: "/images/networks/atom.svg",
+      symbol: "ATOM",
+    },
+    {
+      optionName: "Ethereum",
+      optionLink: "/atom",
+      imgUrl: "/images/networks/ethereum.svg",
+      symbol: "ETH",
+    },
+    {
+      optionName: "BNB",
+      optionLink: "/bnb",
+      imgUrl: "/images/networks/bnb.svg",
+      symbol: "BNB",
+    },
+  ];
+
   const learnList = [
     {
       optionName: t("SECURITY_AUDITS"),
@@ -126,6 +147,10 @@ const Header = () => {
     {
       optionName: t("FAQs"),
       optionLink: faqURL,
+    },
+    {
+      optionName: "Blogs",
+      optionLink: "https://blog.pstake.finance/",
     },
   ];
 
@@ -274,6 +299,48 @@ const Header = () => {
                 id="mySidenav"
                 ref={sideBarRef}
               >
+                <li className="nav-item nav__menu-item">
+                  <Dropdown
+                    className="[.is-sticky_&]:text-light-high"
+                    dropDownVariant="custom"
+                    dropDownButtonClass="md:hidden uppercase"
+                    dropDownVariantBg="bg-transparent text-[12px]"
+                    dropdownLabel={isMobile ? "" : t("Networks")}
+                    dropDownIcon={!isMobile}
+                    dropdownType={"hover"}
+                    dropDownContentClass="!bg-white-high drop-shadow-md
+                      round-md py-4 md:visible md:relative md:opacity-100
+                      md:!bg-transparent md:p-0"
+                  >
+                    <div className="grid grid-cols-3 gap-2 w-[450px] min-w-[300px] rounded-md">
+                      {networks.map((item, index) => (
+                        <a
+                          className="px-4 py-2 flex items-center items-center md:py-3
+                        hover:cursor-pointer text-dark-high whitespace-nowrap "
+                          href={item.optionLink}
+                          key={index}
+                          rel="noreferrer"
+                        >
+                          <img
+                            src={item.imgUrl}
+                            alt={item.optionName}
+                            width={28}
+                            height={28}
+                            className={"mr-4"}
+                          />
+                          <div className={"flex flex-col"}>
+                            <p className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
+                              {item.optionName}
+                            </p>
+                            <span className="text-dark-low text-xsm font-medium leading-normal">
+                              {item.symbol}
+                            </span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </Dropdown>
+                </li>
                 <li className="nav-item nav__menu-item">
                   <Dropdown
                     className="[.is-sticky_&]:text-light-high"

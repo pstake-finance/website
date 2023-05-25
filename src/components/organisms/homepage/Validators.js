@@ -61,12 +61,7 @@ const Validators = () => {
   return (
     <section className="aos-init aos-animate bg-black-high" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle">{t("VALIDATORS")}</h3>
-        <p className="sectionSubTitle mb-8 max-w-[700px] mx-auto">
-          pSTAKE’s validator scoring mechanism ensures our liquid staking
-          ecosystem consists of top-performing validators across supported
-          networks.
-        </p>
+        <h3 className="sectionTitle mb-8">{t("VALIDATORS")}</h3>
         <div className="flex flex-wrap justify-center items-center text-center">
           {validatorList.map((item, index) => (
             <a

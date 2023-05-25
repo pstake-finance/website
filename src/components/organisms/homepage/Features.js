@@ -28,11 +28,7 @@ const Features = () => {
       data-aos="fade-up"
     >
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-6">Why liquid stake with pSTAKE?</h3>
-        <p className="sectionSubTitle mb-16">
-          Why choose between Staking or DeFi yield when you can do both with
-          liquid staking?
-        </p>
+        <h3 className="sectionTitle mb-8">Why liquid stake with pSTAKE?</h3>
         <div className="flex flex-wrap">
           {list.map((item, index) => (
             <div

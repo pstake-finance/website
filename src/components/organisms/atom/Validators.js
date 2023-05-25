@@ -27,14 +27,9 @@ const Validators = ({ deviceType }) => {
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-4">
+        <h3 className="sectionTitle mb-8">
           Why Liquid Stake ATOM with one validator when you can stake with 62?
         </h3>
-        <p className="sectionSubTitle max-w-[700px] mx-auto mb-8">
-          pSTAKE has the largest active validator set among any ATOM liquid
-          staking solution to increase decentralization & minimize the risk of
-          slashing
-        </p>
         <div className="mt-5">
           <Carousel
             ssr

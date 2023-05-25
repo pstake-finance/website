@@ -19,11 +19,7 @@ const Audited = () => {
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-4">stkATOM Security Partners</h3>
-        <p className="sectionSubTitle max-w-[500px] mx-auto mb-4">
-          pSTAKE’s stkATOM implementation is stress tested by the industry’s
-          best in blockchain security
-        </p>
+        <h3 className="sectionTitle mb-8">stkATOM Security Partners</h3>
         <div className="flex text-center justify-center items-center flex-wrap">
           {auditList.slice(0, 4).map((item, index) => (
             <a

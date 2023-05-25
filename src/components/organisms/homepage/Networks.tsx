@@ -62,10 +62,7 @@ const Networks = () => {
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <p className="sectionTitle mb-4">{t("SUPPORTED_NETWORKS")}</p>
-        <p className="sectionSubTitle m-auto">
-          pSTAKE offers liquid staking for the following networks
-        </p>
+        <p className="sectionTitle mb-8">{t("SUPPORTED_NETWORKS")}</p>
         <div className="pt-8">
           <div className="flex flex-wrap items-center justify-center">
             {networkList.slice(0, 2).map((item, index) => (

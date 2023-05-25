@@ -62,13 +62,9 @@ const Validators = () => {
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-4">
+        <h3 className="sectionTitle mb-8">
           Why stake with one validator when you can stake with 10
         </h3>
-        <p className="sectionSubTitle max-w-[700px] mx-auto mb-8">
-          pSTAKE uses a validator scoring mechanism to stake with the top 10
-          validators in the BNB chain ecosystem
-        </p>
         <div className="flex flex-wrap justify-center items-center text-center">
           {validatorList.map((item, index) => (
             <a
