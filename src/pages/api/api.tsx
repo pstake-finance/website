@@ -35,6 +35,8 @@ export const STK_ATOM_TVL_URL =
   "https://api.persistence.one/pstake/stkatom/atom_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
+export const UMEE_URL =
+  "https://testnet-client-bff-ocstrhuppq-uc.a.run.app/convexity/assets/all";
 
 const initialLiquidity = { [TVL]: 0 };
 
@@ -312,6 +314,25 @@ export const fetchDexterPoolInfo = async () => {
     return { tvl: 0, apy: 0 };
   } catch (e) {
     return { tvl: 0, apy: 0 };
+  }
+};
+
+export const fetchUmeeInfo = async () => {
+  try {
+    const res = await Axios.get(UMEE_URL);
+    if (res && res.data) {
+      const stkatom = res.data.find((item: any) => item.asset === "STKATOM");
+      if (stkatom) {
+        return {
+          borrow_apy: Number(stkatom.borrow_apy).toFixed(2),
+          total_supply: Number(stkatom.market_size_usd).toFixed(2),
+        };
+      }
+      return { borrow_apy: 0, total_supply: 0 };
+    }
+    return { borrow_apy: 0, total_supply: 0 };
+  } catch (e) {
+    return { borrow_apy: 0, total_supply: 0 };
   }
 };
 

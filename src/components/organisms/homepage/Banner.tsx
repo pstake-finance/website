@@ -3,17 +3,19 @@ import { useTranslation } from "next-export-i18n";
 import { PSTAKE_APP_URL } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
+import { useApp } from "../../../context/appContext/AppContext";
 
 const Banner = () => {
+  const { cosmosData, bnbData } = useApp();
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-homePageBanner bg-cover bg-no-repeat">
-      <div className="pt-[300px] pb-[200px]">
-        <h1 className="text-[3rem] lg:text-3xl font-bold leading-tight text-center text-dark-high mb-12">
-          Multichain Liquid Staking Protocol
-        </h1>
-        <div className="mb-16">
-          <h6 className="text-base text-dark-high font-medium mb-12">
+      <div className="pt-[250px] pb-[200px]">
+        <div className="pb-[100px]">
+          <h1 className="text-[3rem] lg:text-3xl font-bold leading-tight text-center text-dark-high mb-6">
+            Multichain Liquid Staking Protocol
+          </h1>
+          <h6 className="text-base text-dark-high font-medium mb-8">
             {" "}
             {t("STAKE_ASSETS")}
           </h6>
@@ -34,7 +36,7 @@ const Banner = () => {
           </ButtonLink>
         </div>
         <div className="flex justify-evenly flex-wrap">
-          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-5 bg-[#26262b]">
+          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-5 my-2 bg-[#26262bba]">
             <p className="text-light-emphasis font-medium mb-4">
               Live networks
             </p>
@@ -62,17 +64,19 @@ const Banner = () => {
               />
             </div>
           </div>
-          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 bg-[#26262b]">
+          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#26262bba]">
             <p className="text-light-emphasis font-medium mb-3">
               Total Value Unlocked
             </p>
-            <p className="text-light-mid">$53533</p>
+            <p className="text-light-mid font-medium text-lg">
+              ${(Number(cosmosData.tvl) + Number(bnbData.tvl)).toLocaleString()}
+            </p>
           </div>
-          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 bg-[#26262b]">
+          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#26262bba]">
             <p className="text-light-emphasis font-medium mb-3">
               Total Defi partners
             </p>
-            <p className="text-light-mid">12</p>
+            <p className="text-light-mid font-medium text-lg">12</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
+const withTM = require("next-transpile-modules")(["react-countup"]);
 
 const nextConfig = {
   reactStrictMode: false,
+  transpilePackages: ["react-countup"],
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
     return config;

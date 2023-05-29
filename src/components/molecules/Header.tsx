@@ -312,10 +312,10 @@ const Header = () => {
                       round-md py-4 md:visible md:relative md:opacity-100
                       md:!bg-transparent md:p-0"
                   >
-                    <div className="grid grid-cols-3 gap-2 w-[450px] min-w-[300px] rounded-md">
+                    <div className="grid grid-cols-3 gap-2 md:gap-0.5 -md:w-[450px] -md:min-w-[300px] rounded-md">
                       {networks.map((item, index) => (
                         <a
-                          className="px-4 py-2 flex items-center items-center md:py-3
+                          className="px-4 py-2 flex items-center md:py-3
                         hover:cursor-pointer text-dark-high whitespace-nowrap "
                           href={item.optionLink}
                           key={index}
@@ -324,11 +324,11 @@ const Header = () => {
                           <img
                             src={item.imgUrl}
                             alt={item.optionName}
-                            width={28}
-                            height={28}
-                            className={"mr-4"}
+                            className={
+                              "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
+                            }
                           />
-                          <div className={"flex flex-col"}>
+                          <div className={"flex flex-col md:hidden"}>
                             <p className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
                               {item.optionName}
                             </p>
