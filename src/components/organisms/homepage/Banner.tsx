@@ -4,16 +4,17 @@ import { PSTAKE_APP_URL } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
+import {numberFormat} from "../../../utils/helpers";
 
 const Banner = () => {
   const { cosmosData, bnbData } = useApp();
   const { t } = useTranslation("common");
   return (
-    <div className="text-center aos-init aos-animate bg-homePageBanner bg-cover bg-no-repeat">
-      <div className="pt-[250px] pb-[200px]">
-        <div className="pb-[100px]">
-          <h1 className="text-[3rem] lg:text-3xl font-bold leading-tight text-center text-dark-high mb-6">
-            Multichain Liquid Staking Protocol
+    <div className="text-center aos-init aos-animate bg-[#fff] bg-cover bg-no-repeat">
+      <div className="pt-[250px] pb-[200px] relative">
+        <div>
+          <h1 className="text-[4rem] lg:text-4xl font-bold leading-tight text-center text-dark-high mb-6">
+            Multichain Liquid <br/> Staking Protocol
           </h1>
           <h6 className="text-base text-dark-high font-medium mb-8">
             {" "}
@@ -35,48 +36,50 @@ const Banner = () => {
             />
           </ButtonLink>
         </div>
-        <div className="flex justify-evenly flex-wrap">
-          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-5 my-2 bg-[#26262bba]">
-            <p className="text-light-emphasis font-medium mb-4">
-              Live networks
-            </p>
-            <div className="flex items-center justify-center">
-              <img
-                src={"/images/networks/atom.svg"}
-                alt={"atom"}
-                width={26}
-                height={26}
-                className={"mx-2"}
-              />
-              <img
-                src={"/images/networks/bnb.svg"}
-                alt={"atom"}
-                width={26}
-                height={26}
-                className={"mx-2"}
-              />
-              <img
-                src={"/images/networks/ethereum.svg"}
-                alt={"atom"}
-                width={26}
-                height={26}
-                className={"mx-2"}
-              />
+        <div className="md:relative absolute -bottom-[60px] left-0 right-0 z-10">
+          <div className={"flex flex-wrap justify-center"}>
+            <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-5 my-2 bg-[#fff] drop-shadow-lg">
+              <p className="text-dark-full font-medium mb-4">
+                Live networks
+              </p>
+              <div className="flex items-center justify-center">
+                <img
+                    src={"/images/networks/atom.svg"}
+                    alt={"atom"}
+                    width={26}
+                    height={26}
+                    className={"mx-2"}
+                />
+                <img
+                    src={"/images/networks/bnb.svg"}
+                    alt={"atom"}
+                    width={26}
+                    height={26}
+                    className={"mx-2"}
+                />
+                <img
+                    src={"/images/networks/ethereum.svg"}
+                    alt={"atom"}
+                    width={26}
+                    height={26}
+                    className={"mx-2"}
+                />
+              </div>
             </div>
-          </div>
-          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#26262bba]">
-            <p className="text-light-emphasis font-medium mb-3">
-              Total Value Unlocked
-            </p>
-            <p className="text-light-mid font-medium text-lg">
-              ${(Number(cosmosData.tvl) + Number(bnbData.tvl)).toLocaleString()}
-            </p>
-          </div>
-          <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#26262bba]">
-            <p className="text-light-emphasis font-medium mb-3">
-              Total Defi partners
-            </p>
-            <p className="text-light-mid font-medium text-lg">12</p>
+            <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#fff] mx-8 drop-shadow-lg">
+              <p className="text-dark-full font-medium mb-3">
+                Total Value Unlocked
+              </p>
+              <p className="text-dark-full font-semibold text-2xl">
+                ${(numberFormat((Number(cosmosData.tvl) + Number(bnbData.tvl)), 3))}
+              </p>
+            </div>
+            <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#fff] drop-shadow-lg">
+              <p className="text-dark-full font-medium mb-3">
+                Total Defi partners
+              </p>
+              <p className="text-dark-full font-semibold text-lg text-2xl">12</p>
+            </div>
           </div>
         </div>
       </div>

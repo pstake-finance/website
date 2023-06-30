@@ -61,7 +61,7 @@ const Networks = () => {
   ];
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
-      <div className="sectionContainer py-[65px] md:py-[35px]">
+      <div className="sectionContainer pt-[140px] pb-[65px] md:py-[35px]">
         <p className="sectionTitle mb-8">{t("SUPPORTED_NETWORKS")}</p>
         <div className="pt-8">
           <div className="flex flex-wrap items-center justify-center">

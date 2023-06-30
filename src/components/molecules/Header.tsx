@@ -201,7 +201,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <div id="is-sticky" className="top-bar w-full fixed z-[1]">
+      <div id="is-sticky" className="top-bar w-full fixed z-[100]">
         {router.pathname !== "/bnb" ? (
           <div
             className={

@@ -57,6 +57,7 @@ module.exports = {
       bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
       ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
       xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
+      ethBanner:"url('/images/bg_images/eth_banner_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0%, #FFFFFF 0%, #F5F5F5 50.14%, #D3D3D3 100%)",
       atomBanner:
         "url('/images/bg_images/atomBanner2.svg'), url('/images/bg_images/atomBanner1.svg') ",
       bnbBanner:
@@ -92,6 +93,7 @@ module.exports = {
       disabled: "#A9A9A9",
       atomPrimary: "#595d7b",
       bnbPrimary: "#f0b90b",
+      ethPrimary: "#C73238",
     },
     fontFamily: {
       primary: ["Poppins", "sans-serif"],
@@ -154,10 +156,12 @@ module.exports = {
       backgroundSize: {
         atomBanner: "30%, cover",
         bnbBanner: "30%, cover",
+        ethBanner: "30%, cover",
       },
       backgroundPosition: {
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",
+        ethBanner: "100% 0,100% 100%",
       },
     },
   },
