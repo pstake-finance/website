@@ -20,30 +20,16 @@ const Banner = () => {
                 </div>
                 <h1
                     className="banner-heading font-bold text-[54px] leading-tight
-        text-dark-black-high mt-6 md:text-[40px] sm:text-3xl"
+        text-dark-black-high mt-6 md:text-[40px] sm:text-3xl mb-2"
                 >
-                    Join the stkETH v2 Testnet
+                    Join stkETH v2 Marvel Testnet
                 </h1>
-                <div className="mt-8">
-                    <ButtonLink
-                        className={`w-[200px] mx-auto md:py-2 md:text-sm`}
-                        variant={"custom"}
-                        href={ATOM_URL}
-                        scale="lg"
-                        customButtonClass="hover:bg-ethPrimary hover:text-light-high border border-[#000000]
-                        text-[#393939] hover:border-transparent hover:bg-opacity-100"
-                        target={"_blank"}
-                        isDisabled={false}
-                        focusEffect={true}
-                    >
-                        {t("Starts July 10th - Ends July 31st")}
-                    </ButtonLink>
-                </div>
+                <p className="text-[#C73238] text-lg font-semibold">stkETH v2 now LIVE on Testnet. Public. Incentivized.</p>
                 <h6
                     className="max-w-[700px] mx-auto mt-6 font-medium text-base
         text-dark-black-high leading-loose sm:text-sm"
                 >
-                    Feelin’ lucky? Become one of the first DeFi users to natively liquid stake ETH on L2s — Arbitrum & Optimism.
+                    Feelin’ lucky? Become one of the first DeFi users to natively liquid stake ETH on L2s— Arbitrum & Optimism and unlock the remarkable title of stkETH Marvel.
                 </h6>
 
             </div>
