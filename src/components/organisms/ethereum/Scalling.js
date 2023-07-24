@@ -5,16 +5,16 @@ import Icon from "../../molecules/Icon";
 const Scaling = () => {
     const list = [
         {
-            title: "Choose where you liquid stake",
+            title: "Choose where you want to liquid stake",
             icon: "right",
             content:
                 "With pSTAKE, you choose where to receive your liquid staked ETH—Arbitrum, Optimism, or Ethereum.",
         },
         {
-            title: "L2 native liquid staking",
+            title: "Layer 2 native liquid staking",
             icon: "right",
             content:
-                "Got ETH on a Layer 2? Skip bridging to Ethereum & stake directly from Arbitrum or Optimism.",
+                "Directly stake your ETH present on Arbitrum or Optimism. No need to bridge it back to Ethereum. No extra steps required. No time & gas fees lost.",
         },
         {
             title: "Convenience at your fingertips",
@@ -42,12 +42,6 @@ const Scaling = () => {
                                 className="bg-black-emphasis md:p-4 p-8 h-full opacity-90
               rounded-md border border-solid border-[#2a2c31]"
                             >
-                                <div className="pb-6 pt-3">
-                                    <Icon
-                                        viewClass="use-case w-[34px] fill-[#5064fb]"
-                                        icon={item.icon}
-                                    />
-                                </div>
                                 <div className="content">
                                     <p className="font-bold leading-snug text-base text-light-full mb-6">
                                         {item.title}

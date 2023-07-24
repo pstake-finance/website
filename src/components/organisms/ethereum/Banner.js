@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 import { ATOM_URL } from "../../../utils/config";
+import Button from "../../atoms/button/Button";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 
 const Banner = () => {
@@ -25,13 +26,30 @@ const Banner = () => {
                     Join stkETH v2 Marvel Testnet
                 </h1>
                 <p className="text-[#C73238] text-lg font-semibold">stkETH v2 now LIVE on Testnet. Public. Incentivized.</p>
+                {/*<div className="mt-8">*/}
+
+                {/*    <ButtonLink*/}
+                {/*        className={`w-[200px] mx-auto md:py-2 md:text-sm`}*/}
+                {/*        variant={"custom"}*/}
+                {/*        href={ATOM_URL}*/}
+                {/*        scale="lg"*/}
+                {/*        customButtonClass="hover:bg-ethPrimary hover:text-light-high border border-[#000000]*/}
+                {/*        text-[#393939] hover:border-transparent hover:bg-opacity-100"*/}
+                {/*        target={"_blank"}*/}
+                {/*        isDisabled={false}*/}
+                {/*        focusEffect={true}*/}
+                {/*    >*/}
+                {/*        {t("Starts July 10th - Ends July 31st")}*/}
+                {/*    </ButtonLink>*/}
+                {/*</div>*/}
                 <h6
                     className="max-w-[700px] mx-auto mt-6 font-medium text-base
         text-dark-black-high leading-loose sm:text-sm"
                 >
                     Feelin’ lucky? Become one of the first DeFi users to natively liquid stake ETH on L2s— Arbitrum & Optimism and unlock the remarkable title of stkETH Marvel.
                 </h6>
-
+                <Button className={`w-[150px] mx-auto md:py-2 md:text-sm !bg-[#C73238] mt-8`}>Join Now</Button>
+                <p className="text-dark-black-high mt-8">Claim your share of <b>$10,500</b> incentives and exclusive <b>&#34;stkETH Marvel&#34;</b> NFTs!</p>
             </div>
         </div>
     );

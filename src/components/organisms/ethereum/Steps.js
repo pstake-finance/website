@@ -7,16 +7,8 @@ import {ATOM_URL} from "../../../utils/config";
 const Steps = () => {
     const list = [
         {
-            title: "Get whitelisted",
-            icon: "right",
-            content:
-                "Fill out the Whitelisting form for us to verify your spot. Meanwhile, join our discord for more information. ",
-            link:"/",
-            linkText:"Fill the Form"
-        },
-        {
-            title: "Test the product",
-            icon: "setting",
+            title: "Participate in testnet",
+            icon: "profile",
             content:
                 "Get your testing hats on & perform various on-chain actions like minting stkETH natively on Arbitrum/Optimism—only possible with pSTAKE.",
             link:"/",
@@ -46,7 +38,7 @@ const Steps = () => {
                 <div className="flex flex-wrap">
                     {list.map((item, index) => (
                         <div
-                            className="-lg:basis-[25%] -lg:max-w-[25%] px-4 mt-4 pt-8 md:pt-4"
+                            className="-lg:basis-[33%] -lg:max-w-[33%] px-4 mt-4 pt-8 md:pt-4"
                             data-aos="fade-up"
                             key={index}
                         >
@@ -58,16 +50,17 @@ const Steps = () => {
                                  border-[#2a2c31] flex justify-between flex-col"
                             >
                                 <div>
-                                    <div className="pb-4">
+                                    <div className="pb-4 flex items-center">
                                         <Icon
-                                            viewClass="use-case w-[34px] fill-[#5064fb]"
+                                            viewClass="use-case w-[24px] fill-[#5064fb]"
                                             icon={item.icon}
                                         />
-                                    </div>
-                                    <div className="content">
-                                        <p className="font-bold leading-snug text-base text-light-full mb-6">
+                                        <p className="font-bold leading-snug text-base text-light-full ml-3">
                                             {item.title}
                                         </p>
+                                    </div>
+                                    <div className="content">
+
                                         <p className="font-normal text-sm leading-loose text-light-emphasis">
                                             {item.content}
                                         </p>
