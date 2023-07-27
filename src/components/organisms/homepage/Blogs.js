@@ -15,7 +15,7 @@ const Blogs = () => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: t("stkATOM User Guide"),
+      title: t("pSTAKE Migration Utility"),
       blogLink: PSTAKE_BLOG_ONE_URL,
       imageLink: PSTAKE_BLOG_ONE_IMG_URL,
     },
@@ -25,7 +25,7 @@ const Blogs = () => {
       imageLink: PSTAKE_BLOG_TWO_IMG_URL,
     },
     {
-      title: t("stkBNB User Guide"),
+      title: t("stkATOM User Guide"),
       blogLink: PSTAKE_BLOG_THREE_URL,
       imageLink: PSTAKE_BLOG_THREE_IMG_URL,
     },

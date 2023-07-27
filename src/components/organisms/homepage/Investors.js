@@ -56,11 +56,7 @@ const Investors = () => {
   return (
     <section className="aos-init aos-animate bg-black-high" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h4 className="sectionTitle">{t("INVESTORS")}</h4>
-        <p className="sectionSubTitle mb-8">
-          pSTAKE’s vision of disrupting PoS and DeFi via liquid staking
-          resonates with major industry backers.
-        </p>
+        <h4 className="sectionTitle mb-8">{t("INVESTORS")}</h4>
         <div className="flex flex-wrap justify-center items-center text-center">
           {investorList.map((item, index) => (
             <a

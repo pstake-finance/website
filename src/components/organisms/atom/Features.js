@@ -38,7 +38,7 @@ const Features = () => {
   return (
     <div className="bg-black-high">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-12 md:mb-6">
+        <h3 className="sectionTitle mb-8 md:mb-6">
           Why liquid stake your <br /> ATOM with pSTAKE?
         </h3>
         <div className="flex flex-wrap">

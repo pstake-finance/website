@@ -31,6 +31,9 @@ import {
   BNB_URL,
   ATOM_URL,
   IMMUNEFI_STK_ATOM_URL,
+  ETH_URL,
+  STK_ETH_TWITTER,
+  STK_ETH_DOCS,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -108,7 +111,34 @@ const Header = () => {
     faqURL = STK_ATOM_FAQ_URL;
     appURL = ATOM_URL;
     twitterUrl = STK_ATOM_TWITTER_URL;
+  } else if (router.pathname === "/eth/testnet") {
+    auditURL = STK_ATOM_SECURITY_AUDIT_URL;
+    docsURL = STK_ETH_DOCS;
+    faqURL = STK_ATOM_FAQ_URL;
+    appURL = ETH_URL;
+    twitterUrl = STK_ETH_TWITTER;
   }
+
+  const networks = [
+    {
+      optionName: "Cosmos",
+      optionLink: "/atom",
+      imgUrl: "/images/networks/atom.svg",
+      symbol: "ATOM",
+    },
+    {
+      optionName: "Ethereum",
+      optionLink: "/atom",
+      imgUrl: "/images/networks/ethereum.svg",
+      symbol: "ETH",
+    },
+    {
+      optionName: "BNB",
+      optionLink: "/bnb",
+      imgUrl: "/images/networks/bnb.svg",
+      symbol: "BNB",
+    },
+  ];
 
   const learnList = [
     {
@@ -126,6 +156,10 @@ const Header = () => {
     {
       optionName: t("FAQs"),
       optionLink: faqURL,
+    },
+    {
+      optionName: "Blogs",
+      optionLink: "https://blog.pstake.finance/",
     },
   ];
 
@@ -176,7 +210,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <div id="is-sticky" className="top-bar w-full fixed z-[1]">
+      <div id="is-sticky" className="top-bar w-full fixed z-[100]">
         {router.pathname !== "/bnb" ? (
           <div
             className={
@@ -187,20 +221,19 @@ const Header = () => {
           >
             <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
               <img
-                src={"/images/stkAtom.svg"}
+                src={"/images/stkEth_lg.svg"}
                 alt={"stkAtom"}
                 width={"16px"}
                 height={"16px"}
                 className="logo mr-2.5"
               />
-              stkATOM is now live on the Persistence Mainnet! -&nbsp;
               <a
                 className="link"
-                href={COSMOS_URL}
-                target="_blank"
+                href={"/eth/testnet"}
                 rel="noopener noreferrer"
               >
-                <b>Liquid Stake ATOM Now</b>
+                stkETH v2 Marvel testnet now LIVE. Participate to earn $10,500
+                in PSTAKE.
               </a>
             </p>
             <div onClick={closeBanner}>
@@ -274,6 +307,48 @@ const Header = () => {
                 id="mySidenav"
                 ref={sideBarRef}
               >
+                <li className="nav-item nav__menu-item">
+                  <Dropdown
+                    className="[.is-sticky_&]:text-light-high"
+                    dropDownVariant="custom"
+                    dropDownButtonClass="md:hidden uppercase"
+                    dropDownVariantBg="bg-transparent text-[12px]"
+                    dropdownLabel={isMobile ? "" : t("Networks")}
+                    dropDownIcon={!isMobile}
+                    dropdownType={"hover"}
+                    dropDownContentClass="!bg-white-high drop-shadow-md
+                      round-md py-4 md:visible md:relative md:opacity-100
+                      md:!bg-transparent md:p-0"
+                  >
+                    <div className="grid grid-cols-3 gap-2 md:gap-0.5 -md:w-[450px] -md:min-w-[300px] rounded-md">
+                      {networks.map((item, index) => (
+                        <a
+                          className="px-4 py-2 flex items-center md:py-3
+                        hover:cursor-pointer text-dark-high whitespace-nowrap "
+                          href={item.optionLink}
+                          key={index}
+                          rel="noreferrer"
+                        >
+                          <img
+                            src={item.imgUrl}
+                            alt={item.optionName}
+                            className={
+                              "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
+                            }
+                          />
+                          <div className={"flex flex-col md:hidden"}>
+                            <p className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
+                              {item.optionName}
+                            </p>
+                            <span className="text-dark-low text-xsm font-medium leading-normal">
+                              {item.symbol}
+                            </span>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </Dropdown>
+                </li>
                 <li className="nav-item nav__menu-item">
                   <Dropdown
                     className="[.is-sticky_&]:text-light-high"

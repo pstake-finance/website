@@ -104,6 +104,11 @@ body {
   background: radial-gradient(73.4% 73.4% at 88.37% 59.95%,#f0b90b 0,#775a00 100%);
 }
 
+.feature-circle-two.grey {
+  background: radial-gradient(73.4% 73.4% at 88.37% 59.95%, #070B09 0%, #585858 100%)
+}
+
+
 .feature-circle-two:hover {
   transform: scale(1.1);
 }

@@ -18,7 +18,6 @@ const homePage = () => {
       <StakingSteps />
       <Audited />
       <Validators />
-      <Investors />
       <Blogs />
       <Footer />
     </div>

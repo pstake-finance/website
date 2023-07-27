@@ -6,6 +6,7 @@ import {
   fetchCrescentPoolInfo,
   fetchDexterPoolInfo,
   fetchOsmosisPoolInfo,
+  fetchUmeeInfo,
 } from "../../../pages/api/api";
 import { useEffect } from "react";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
@@ -32,17 +33,20 @@ const EcosystemSlider = ({ deviceType }) => {
   const [osmosisInfo, setOsmosisInfo] = useState({ tvl: 0, apy: 0 });
   const [crescentInfo, setCrescentInfo] = useState({ tvl: 0, apy: 0 });
   const [dexterInfo, setDexterInfo] = useState({ tvl: 0, apy: 0 });
+  const [umeeInfo, setUmeeInfo] = useState({ borrow_apy: 0, total_supply: 0 });
 
   useEffect(() => {
     const fetchApi = async () => {
-      const [osmosis, crescent, dexter] = await Promise.all([
+      const [osmosis, crescent, dexter, umee] = await Promise.all([
         fetchOsmosisPoolInfo(),
         fetchCrescentPoolInfo(),
         fetchDexterPoolInfo(),
+        fetchUmeeInfo(),
       ]);
       setOsmosisInfo(osmosis);
       setCrescentInfo(crescent);
       setDexterInfo(dexter);
+      setUmeeInfo(umee);
     };
     fetchApi();
   }, []);
@@ -130,6 +134,34 @@ const EcosystemSlider = ({ deviceType }) => {
         </>
       ),
     },
+    {
+      name: "Umee",
+      tag: "Borrowing/Lending",
+      logoUrl: "/images/integrations/umee.svg",
+      content: (
+        <span className="block">
+          {" "}
+          Provide liquidity in the stkATOM/ATOM Metastable pool to earn trading
+          fees and $ATOM, $stkATOM, & $XPRT external incentives
+        </span>
+      ),
+      primaryButtonText: "Add Collateral",
+      primaryButtonUrl: `https://app.umee.cc/#/markets`,
+      secondaryButtonText: "Borrow",
+      secondaryButtonUrl: "https://app.umee.cc/#/markets",
+      tvl: (
+        <>
+          ${parseInt(umeeInfo.total_supply).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">Total Supplied</span>
+        </>
+      ),
+      apy: (
+        <>
+          {umeeInfo.borrow_apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">Borrowing APY</span>
+        </>
+      ),
+    },
   ];
 
   return (
@@ -140,7 +172,9 @@ const EcosystemSlider = ({ deviceType }) => {
         </h3>
         <Carousel
           ssr
-          className="flex items-center -md:justify-center"
+          className={`flex items-center ${
+            list.length <= 2 ? "-md:justify-center" : ""
+          }`}
           partialVisbile
           deviceType={deviceType}
           itemClass="pr-6"

@@ -47,17 +47,17 @@ export const PSTAKE_TRAIL_OF_BITS =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/pStake%20Smart%20Contracts%20%2B%20Bridge%20Audit%20-%20Trail%20of%20Bits%20%5B26.04.22%5D.pdf?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const PSTAKE_CERTORA =
   "https://github.com/persistenceOne/stkBNB-contracts/tree/main/certora?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
-export const PSTAKE_BLOG_THREE_URL =
-  "https://blog.pstake.finance/2022/08/07/stkbnb-user-guide-bnb-liquid-staking-tutorial/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_BNB_liquid_staking";
-export const PSTAKE_BLOG_THREE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/08/user-guide-1160x620.png";
+export const PSTAKE_BLOG_ONE_URL =
+  "https://blog.pstake.finance/2023/03/02/pstake-erc-20-liquid-staking-migration-utility/";
+export const PSTAKE_BLOG_ONE_IMG_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2023/03/migration-min-1160x622.png";
 export const PSTAKE_BLOG_TWO_URL =
   "https://blog.pstake.finance/2022/07/28/why-liquid-staking-is-a-game-changer-for-bnb/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_BNB_liquid_staking";
 export const PSTAKE_BLOG_TWO_IMG_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/07/1-1160x619.png";
-export const PSTAKE_BLOG_ONE_URL =
+export const PSTAKE_BLOG_THREE_URL =
   "https://blog.pstake.finance/2023/01/15/stkatom-user-guide-atom-liquid-staking-tutorial/";
-export const PSTAKE_BLOG_ONE_IMG_URL =
+export const PSTAKE_BLOG_THREE_IMG_URL =
   "https://blog.pstake.finance/wp-content/uploads/2023/01/image1-min.png";
 export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
@@ -197,6 +197,9 @@ export const STK_ATOM_DOCS_URL =
   "https://blog.pstake.finance/category/stkatom/";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
 export const ATOM_URL = "https://cosmos.pstake.finance/";
+export const ETH_URL = "https://testnet.app.pstake.finance/eth";
+export const STK_ETH_TWITTER = "https://twitter.com/pSTAKE_ETH";
+export const STK_ETH_DOCS = "https://blog.pstake.finance/category/stketh/";
 export const CRESCENT_STK_ATOM_DENOM =
   "ibc/E32F6485CDAE995FC492010770936119D0BF90F5226C9AED727988DF03B5F569";
 export const IBC_DENOM =

@@ -1,6 +1,8 @@
 import React from "react";
 import {
+  FORTA_WEB_URL,
   HALBOR_AUDIT_REPORT,
+  IMMUNEFI_WEB_URL,
   PSTAKE_CERTORA,
   PSTAKE_DILIGENCE_AUDIT,
   PSTAKE_OAK_AUDIT,
@@ -39,17 +41,21 @@ const auditList = [
     link: PSTAKE_CERTORA,
     image: "certora_black",
   },
+  {
+    link: IMMUNEFI_WEB_URL,
+    image: "immunefi",
+  },
+  {
+    link: FORTA_WEB_URL,
+    image: "forta",
+  },
 ];
 const Audited = () => {
   const { t } = useTranslation("common");
   return (
     <div className="aos-init aos-animate bg-black-high" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h4 className="sectionTitle">{t("Security Audits")}</h4>
-        <p className="sectionSubTitle mb-8 max-w-[700px] mx-auto">
-          pSTAKE’s liquid staking solution has been, and continues to be,
-          audited by the industry’s best in blockchain security
-        </p>
+        <h4 className="sectionTitle mb-8">{t("Security Partners")}</h4>
         <div className="flex text-center justify-center items-center flex-wrap">
           {auditList.slice(0, 4).map((item, index) => (
             <a
