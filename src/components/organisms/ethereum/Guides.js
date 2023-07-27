@@ -40,7 +40,9 @@ const Guides = () => {
                     />
                   </p>
                   <p className="text-sm leading-normal md:text-xsm text-light-emphasis">
-                    stkETH v2 Marvel Testnet User Guide
+                    Read about how to participate in the stkETH v2 Marvel
+                    Testnet and stand a chance to win rewards from a pool of
+                    $10,500.
                   </p>
                 </div>
               </div>
