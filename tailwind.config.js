@@ -46,7 +46,7 @@ module.exports = {
       "body-bg":
         "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
       topBanner: `url('/images/bg_images/atom_topbar.svg'), 
-      radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDD 25.4%, #83339D 100%)`,
+      radial-gradient(100% 57099.62% at 6% 0%, #372627 0%, #372627 25.4%, #030303 100%)`,
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
       homePageBanner: `url('/images/bg_images/bg.svg'),
@@ -57,7 +57,8 @@ module.exports = {
       bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
       ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
       xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
-      ethBanner:"url('/images/bg_images/eth_banner_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0%, #FFFFFF 0%, #F5F5F5 50.14%, #D3D3D3 100%)",
+      ethBanner:
+        "url('/images/bg_images/eth_banner_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0%, #FFFFFF 0%, #F5F5F5 50.14%, #D3D3D3 100%)",
       atomBanner:
         "url('/images/bg_images/atomBanner2.svg'), url('/images/bg_images/atomBanner1.svg') ",
       bnbBanner:

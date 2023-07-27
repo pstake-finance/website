@@ -212,20 +212,15 @@ const Header = () => {
           >
             <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
               <img
-                src={"/images/stkAtom.svg"}
+                src={"/images/stkEth_lg.svg"}
                 alt={"stkAtom"}
                 width={"16px"}
                 height={"16px"}
                 className="logo mr-2.5"
               />
-              stkATOM is now live on the Persistence Mainnet! -&nbsp;
-              <a
-                className="link"
-                href={COSMOS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <b>Liquid Stake ATOM Now</b>
+              <a className="link" href={"/eth"} rel="noopener noreferrer">
+                stkETH v2 Marvel testnet now LIVE. Participate to earn $10,500
+                in PSTAKE.
               </a>
             </p>
             <div onClick={closeBanner}>
