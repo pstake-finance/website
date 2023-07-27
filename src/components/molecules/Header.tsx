@@ -250,7 +250,9 @@ const Header = () => {
             md:flex-wrap justify-start ${
               router.pathname !== "/" &&
               router.pathname !== "/atom" &&
-              router.pathname !== "/bnb"
+              router.pathname !== "/bnb" &&
+              router.pathname !== "/eth" &&
+              router.pathname !== "/eth/testnet"
                 ? "bg-white-emphasis"
                 : ""
             } ${router.pathname.split("/")[1]}
@@ -269,7 +271,9 @@ const Header = () => {
                   ? "[.is-sticky_&]:bg-red"
                   : router.pathname === "/atom"
                   ? "[.is-sticky_&]:bg-atomPrimary"
-                  : "[.is-sticky_&]:bg-bnbPrimary"
+                  : router.pathname === "/bnb"
+                  ? "[.is-sticky_&]:bg-bnbPrimary"
+                  : "[.is-sticky_&]:bg-red"
               } -md:hidden md:py-2 !py-2.5 md:text-sm`}
               variant={"custom"}
               onClick={toggleMenu}
