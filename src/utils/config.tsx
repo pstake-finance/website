@@ -197,6 +197,9 @@ export const STK_ATOM_DOCS_URL =
   "https://blog.pstake.finance/category/stkatom/";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
 export const ATOM_URL = "https://cosmos.pstake.finance/";
+export const ETH_URL = "https://testnet.app.pstake.finance/eth";
+export const STK_ETH_TWITTER = "https://twitter.com/pSTAKE_ETH";
+export const STK_ETH_DOCS = "https://blog.pstake.finance/category/stketh/";
 export const CRESCENT_STK_ATOM_DENOM =
   "ibc/E32F6485CDAE995FC492010770936119D0BF90F5226C9AED727988DF03B5F569";
 export const IBC_DENOM =

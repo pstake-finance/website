@@ -31,6 +31,9 @@ import {
   BNB_URL,
   ATOM_URL,
   IMMUNEFI_STK_ATOM_URL,
+  ETH_URL,
+  STK_ETH_TWITTER,
+  STK_ETH_DOCS,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -108,6 +111,12 @@ const Header = () => {
     faqURL = STK_ATOM_FAQ_URL;
     appURL = ATOM_URL;
     twitterUrl = STK_ATOM_TWITTER_URL;
+  } else if (router.pathname === "/eth/testnet") {
+    auditURL = STK_ATOM_SECURITY_AUDIT_URL;
+    docsURL = STK_ETH_DOCS;
+    faqURL = STK_ATOM_FAQ_URL;
+    appURL = ETH_URL;
+    twitterUrl = STK_ETH_TWITTER;
   }
 
   const networks = [
@@ -218,7 +227,11 @@ const Header = () => {
                 height={"16px"}
                 className="logo mr-2.5"
               />
-              <a className="link" href={"/eth"} rel="noopener noreferrer">
+              <a
+                className="link"
+                href={"/eth/testnet"}
+                rel="noopener noreferrer"
+              >
                 stkETH v2 Marvel testnet now LIVE. Participate to earn $10,500
                 in PSTAKE.
               </a>

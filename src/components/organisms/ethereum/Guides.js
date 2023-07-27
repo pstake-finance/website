@@ -32,7 +32,7 @@ const Guides = () => {
                 <div className="ml-4 md:ml-2">
                   <p className="flex items-center mb-3 md:mb-2">
                     <span className="font-semibold text-lg leading-snug text-light-high md:text-sm">
-                      stkETH User Guide
+                      stkETH v2 Marvel Testnet User Guide
                     </span>
                     <Icon
                       viewClass="redirect w-[16px] md:w-[10px] ml-2"

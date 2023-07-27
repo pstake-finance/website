@@ -10,7 +10,7 @@ const Incentives = () => {
         <div className="max-w-[700px] mx-auto">
           <p className="text-light-emphasis mt-8 text-center mb-6">
             Introducing $10,500 in exciting incentives exclusively for our
-            testnet participants, divided into two enticing parts:
+            testnet participants, divided into two parts:
           </p>
           <div className="rounded-md bg-[#26262B] p-6 mb-4">
             <p className={"text-light-high"}>
