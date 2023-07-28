@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import AOS from "aos";
@@ -10,6 +9,7 @@ import Head from "next/head";
 import AppProvider from "../context/appContext/AppContext";
 import Script from "next/script";
 import * as gtag from "../utils/gtag";
+import "../styles/globals.css";
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {
