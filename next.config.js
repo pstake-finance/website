@@ -7,6 +7,7 @@ const nextConfig = {
   reactStrictMode: false,
   transpilePackages: ["react-countup"],
   swcMinify: false,
+  assetPrefix: isProd ? "./" : "",
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
     return config;
