@@ -208,6 +208,10 @@ const Header = () => {
     },
   ];
 
+  const handleRouter = (link:string) =>{
+    router.push(link)
+  }
+
   return (
     <React.Fragment>
       <div id="is-sticky" className="top-bar w-full fixed z-[100]">
@@ -326,12 +330,11 @@ const Header = () => {
                   >
                     <div className="grid grid-cols-3 gap-2 md:gap-0.5 -md:w-[450px] -md:min-w-[300px] rounded-md">
                       {networks.map((item, index) => (
-                        <a
+                        <div
                           className="px-4 py-2 flex items-center md:py-3
                         hover:cursor-pointer text-dark-high whitespace-nowrap "
-                          href={item.optionLink}
                           key={index}
-                          rel="noreferrer"
+                          onClick={()=>{handleRouter(item.optionLink)}}
                         >
                           <img
                             src={item.imgUrl}
@@ -348,7 +351,7 @@ const Header = () => {
                               {item.symbol}
                             </span>
                           </div>
-                        </a>
+                        </div>
                       ))}
                     </div>
                   </Dropdown>
