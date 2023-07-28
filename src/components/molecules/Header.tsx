@@ -128,7 +128,7 @@ const Header = () => {
     },
     {
       optionName: "Ethereum",
-      optionLink: "/atom",
+      optionLink: "/eth/testnet",
       imgUrl: "/images/networks/ethereum.svg",
       symbol: "ETH",
     },
