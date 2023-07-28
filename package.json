@@ -21,13 +21,11 @@
     "react": "^18.2.0",
     "react-bootstrap": "^1.3.0",
     "react-countdown": "^2.3.2",
-    "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.2",
     "react-onesignal": "^2.0.4",
     "react-router-dom": "^5.2.0",
-    "typescript": "^4.8.4",
-    "use-count-up": "^3.0.1"
+    "typescript": "^4.8.4"
   },
   "scripts": {
     "dev": "next dev",
