@@ -17,6 +17,9 @@ const nextConfig = {
       },
     ];
   },
+  generateBuildId: async () => {
+    return `${new Date().getTime()}`;
+  },
 };
 
 module.exports = nextConfig;
