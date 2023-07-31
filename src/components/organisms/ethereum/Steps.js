@@ -26,7 +26,7 @@ const Steps = () => {
       title: "Claim & Earn",
       icon: "dollar",
       content:
-        "Join the Testnet campaign on Galxe to verify quests and earn loyalty points. Unlock your rewards after the stkETH Mainnet launch.",
+        "Join the Testnet campaign on Galxe to verify quests and mint exclusive Marvel NFTs. Unlock $10,000 in PSTAKE rewards after the stkETH Mainnet launch.",
       link: "https://galxe.com/pSTAKE/campaign/GCyeHU7TK2",
       linkText: "Unlock rewards",
     },
