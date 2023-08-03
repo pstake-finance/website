@@ -7,11 +7,13 @@ import React, {
 } from "react";
 import { AppProviderProps, AppState } from "./types";
 import {
+  fetchTokenPrices,
   getBnbApy,
   getBnbTVL,
   getCosmosAPY,
   getCosmosTVL,
 } from "../../pages/api/api";
+import { decimalize } from "../../utils/helpers";
 
 const AppContext = createContext<AppState>({
   cosmosData: {
@@ -21,6 +23,10 @@ const AppContext = createContext<AppState>({
   bnbData: {
     apy: 0,
     tvl: 0,
+  },
+  tokenPrices: {
+    BNB: 0,
+    ATOM: 0,
   },
 });
 
@@ -37,6 +43,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [prices, setPrices] = useState<any>({
+    BNB: 0,
+    ATOM: 0,
+  });
 
   useEffect(() => {
     const fetchApy = async () => {
@@ -45,20 +55,24 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         cosmosTvlResponse,
         bnbApyResponse,
         bnbTvlResponse,
+        tokenPrices,
       ] = await Promise.all([
         getCosmosAPY(),
         getCosmosTVL(),
         getBnbApy(),
         getBnbTVL(),
+        fetchTokenPrices(),
       ]);
+      console.log("cosmosTvlResponse,", cosmosTvlResponse);
       setCosmosData({
         apy: cosmosApyResponse,
-        tvl: cosmosTvlResponse,
+        tvl: Number(decimalize(cosmosTvlResponse)),
       });
       setBnbData({
         apy: bnbApyResponse,
         tvl: bnbTvlResponse,
       });
+      setPrices(tokenPrices);
     };
     fetchApy();
   }, []);
@@ -66,6 +80,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
   const walletState: AppState = {
     cosmosData: cosmosData,
     bnbData: bnbData,
+    tokenPrices: prices,
   };
 
   return (
