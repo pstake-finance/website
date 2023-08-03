@@ -53,6 +53,7 @@ export const fetchAlpaca = async () => {
         apy: Number(data[0].totalApy).toFixed(2),
       };
     }
+    return { tvl: 0, apy: 0 };
   } catch (e) {
     return { tvl: 0, apy: 0 };
   }
@@ -120,6 +121,7 @@ export const fetchWombat = async () => {
         apy: 0,
       };
     }
+    return { tvl: 0, apy: 0 };
   } catch (e) {
     return { tvl: 0, apy: 0 };
   }
@@ -147,6 +149,7 @@ export const fetchPancakeInfo = async () => {
         apy: 0,
       };
     }
+    return { tvl: 0, apy: 0 };
   } catch (e) {
     return { tvl: 0, apy: 0 };
   }
@@ -263,6 +266,7 @@ export const fetchCrescentPoolInfo = async () => {
         apy: Number(crescentInfo?.apr).toFixed(2),
       };
     }
+    return { tvl: 0, apy: 0 };
   } catch (e) {
     return { tvl: 0, apy: 0 };
   }
