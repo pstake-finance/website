@@ -63,7 +63,6 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getBnbTVL(),
         fetchTokenPrices(),
       ]);
-      console.log("cosmosTvlResponse,", cosmosTvlResponse);
       setCosmosData({
         apy: cosmosApyResponse,
         tvl: Number(decimalize(cosmosTvlResponse)),
