@@ -57,7 +57,7 @@ const Banner = () => {
         </div>
         <div className="my-6">
           <h6 className="font-bold text-[36px] sm:text-2xl text-dark-black-high leading-snug">
-            {formatNumber(Number(decimalize(cosmosData.tvl)), 3, 2)} ATOM
+            {formatNumber(Number(cosmosData.tvl), 3, 2)} ATOM
           </h6>
           <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">
             {t("TOTAL_VALUE_UNLOCKED")}
