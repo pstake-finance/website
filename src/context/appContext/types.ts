@@ -7,6 +7,10 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
+  tokenPrices: {
+    BNB: number;
+    ATOM: number;
+  };
 }
 
 export interface AppProviderProps {

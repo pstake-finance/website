@@ -40,6 +40,31 @@ export const UMEE_URL =
 
 const initialLiquidity = { [TVL]: 0 };
 
+export const fetchTokenPrices = async () => {
+  let data = {
+    BNB: 0,
+    ATOM: 0,
+  };
+  try {
+    const [stkBnb, stkatom] = await Promise.all([
+      Axios.get(`https://api.coingecko.com/api/v3/coins/binancecoin`),
+      Axios.get(`https://api.coingecko.com/api/v3/coins/cosmos`),
+    ]);
+    console.log(stkBnb, stkatom, "prices fetchTokenPrices");
+    if (stkBnb && stkBnb.data) {
+      const stkBnbPrice: number = stkBnb.data.market_data.current_price.usd;
+      data.BNB = stkBnbPrice;
+    }
+    if (stkatom && stkatom.data) {
+      const stkAtomPrice: number = stkatom.data.market_data.current_price.usd;
+      data.ATOM = stkAtomPrice;
+    }
+    return data;
+  } catch (e) {
+    return data;
+  }
+};
+
 export const fetchAlpaca = async () => {
   try {
     const res = await Axios.get(ALPACA_API);
