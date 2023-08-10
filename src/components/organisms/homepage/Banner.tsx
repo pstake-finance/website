@@ -10,7 +10,7 @@ const Banner = () => {
   const { cosmosData, bnbData, tokenPrices } = useApp();
   const { t } = useTranslation("common");
   return (
-    <div className="text-center aos-init aos-animate bg-[#fff] bg-cover bg-no-repeat">
+    <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#fff] bg-cover bg-no-repeat">
       <div className="pt-[250px] pb-[200px] relative">
         <div>
           <h1 className="text-[4rem] lg:text-4xl font-bold leading-tight text-center text-dark-high mb-6">

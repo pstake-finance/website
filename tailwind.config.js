@@ -41,6 +41,7 @@ module.exports = {
       "red-light": "#cb575bfa",
     },
     backgroundImage: {
+      homeBannerBg: "url('/images/bg_images/home_bg.svg')",
       immunefiWhite: "url('/images/audits/immunefi_header.svg')",
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
