@@ -1,13 +1,17 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
+import Icon from "../../molecules/Icon";
 import { ATOM_URL } from "../../../utils/config";
-import Button from "../../atoms/button/Button";
+import { decimalize, formatNumber } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
+import { useApp } from "../../../context/appContext/AppContext";
 
 const Banner = () => {
   const { t } = useTranslation("common");
+  const { cosmosData } = useApp();
+
   return (
-    <div className="text-center aos-init aos-animate bg-ethBanner bg-no-repeat">
+    <div className="text-center aos-init aos-animate bg-atomBanner bg-no-repeat">
       <div
         className="sectionContainer pt-[170px] pb-[100px]"
         data-aos="fade-up"
@@ -21,32 +25,43 @@ const Banner = () => {
         </div>
         <h1
           className="banner-heading font-bold text-[54px] leading-tight
-        text-dark-black-high mt-6 md:text-[40px] sm:text-3xl mb-2"
+        text-dark-black-high mt-6 md:text-[40px] sm:text-3xl"
         >
-          Join stkETH v2 Marvel Testnet
+          L2 Native ETH Liquid Staking
         </h1>
-        <p className="text-[#C73238] text-lg font-semibold">
-          stkETH v2 now LIVE on Testnet. Public. Incentivized.
-        </p>
         <h6
           className="max-w-[700px] mx-auto mt-6 font-medium text-base
         text-dark-black-high leading-loose sm:text-sm"
         >
-          Feelin’ lucky? Become one of the first DeFi users to natively liquid
-          stake ETH on L2s— Arbitrum & Optimism and unlock the remarkable title
-          of stkETH Marvel.
+          A new way to liquid stake ETH on Arbitrum. <br />
+          Simple. Convenient. Efficient. Fast.
         </h6>
-        <ButtonLink
-          href={"https://testnet.app.pstake.finance/eth"}
-          target={"_blank"}
-          className={`w-[150px] mx-auto md:py-2 md:text-sm !bg-[#C73238] mt-8`}
-        >
-          Join Now
-        </ButtonLink>
-        <p className="text-dark-black-high mt-8">
-          Claim your share of <b>$10,500</b> incentives and exclusive{" "}
-          <b>&#34;stkETH Marvel&#34;</b> NFTs!
-        </p>
+        <div className="mt-8">
+          <ButtonLink
+            className={`w-[200px] mx-auto md:py-2 md:text-sm`}
+            variant={"custom"}
+            href={ATOM_URL}
+            scale="lg"
+            customButtonClass="bg-ethPrimary text-light-high"
+            target={"_blank"}
+            isDisabled={false}
+            focusEffect={true}
+          >
+            {t("Liquid Stake ETH Now")}
+            <Icon
+              viewClass="right-arrow w-[14px] fill-[#fff]"
+              icon="right-arrow"
+            />
+          </ButtonLink>
+        </div>
+        <div className="my-6">
+          <h6 className="font-bold text-[36px] sm:text-2xl text-dark-black-high leading-snug">
+            {formatNumber(Number(cosmosData.tvl), 3, 2)} ATOM
+          </h6>
+          <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">
+            {t("TOTAL_VALUE_UNLOCKED")}
+          </h6>
+        </div>
       </div>
     </div>
   );

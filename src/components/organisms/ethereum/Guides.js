@@ -7,50 +7,77 @@ import Icon from "../../molecules/Icon";
 const Guides = () => {
   const { t } = useTranslation("common");
   return (
-    <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
-      <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-6 md:mb-4">
-          Explore the step-by-step guide
-        </h3>
-        <div className="">
-          <div className="max-w-[50%] md:max-w-full mx-auto">
-            <a
-              href="https://blog.pstake.finance/2023/07/27/stketh-v2-marvel-testnet-user-guide/"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="flex bg-black-emphasis border border-solid
-              border-[#2a2c31] px-4 py-3 rounded-xl"
-            >
-              <div className="flex items-center justify-center">
-                <div className="w-[140px]">
-                  <img
-                    src="/images/stkEth_lg.svg"
-                    alt="blog"
-                    className={"w-[100px] m-auto"}
-                  />
+    <React.Fragment>
+      <section className="guides-section">
+        <div className="container">
+          <h3 className="section-title">
+            {t("GUIDES_TUTORIALS")}: How to Liquid Stake ATOM
+          </h3>
+          <div className="row">
+            <Card className="col-md-6">
+              <a
+                href={GUIDE_VIDEO_URL}
+                rel="noopener noreferrer"
+                target="_blank"
+                className="card-body"
+              >
+                <div className="guide-section">
+                  <div className="embed-responsive embed-responsive-16by9">
+                    <iframe
+                      width="100"
+                      height="60"
+                      title="Introducing pSTAKE | Multi-chain Liquid Staking"
+                      src={GUIDE_VIDEO_URL}
+                      frameBorder="0"
+                      className="embed-responsive-item"
+                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                  </div>
+                  <div className="content">
+                    <p className="heading">
+                      Liquid Staking ATOM
+                      <Icon viewClass="redirect" icon="redirect" />
+                    </p>
+                    <p className="text">
+                      Step by step video tutorial on liquid staking ATOM with
+                      pSTAKE
+                    </p>
+                  </div>
                 </div>
-                <div className="ml-4 md:ml-2">
-                  <p className="flex items-center mb-3 md:mb-2">
-                    <span className="font-semibold text-lg leading-snug text-light-high md:text-sm">
-                      stkETH v2 Marvel Testnet User Guide
-                    </span>
-                    <Icon
-                      viewClass="redirect w-[16px] md:w-[10px] ml-2"
-                      icon="redirect"
+              </a>
+            </Card>
+            <Card className="col-md-6">
+              <a
+                href="https://blog.pstake.finance/2022/08/07/stkbnb-user-guide-bnb-liquid-staking-tutorial/"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="card-body"
+              >
+                <div className="guide-section">
+                  <div className="image-section">
+                    <img
+                      src="https://blog.pstake.finance/wp-content/uploads/2022/08/user-guide-1160x620.png"
+                      alt="blog"
                     />
-                  </p>
-                  <p className="text-sm leading-normal md:text-xsm text-light-emphasis">
-                    Read about how to participate in the stkETH v2 Marvel
-                    Testnet and stand a chance to win rewards from a pool of
-                    $10,500.
-                  </p>
+                  </div>
+                  <div className="content">
+                    <p className="heading">
+                      stkATOM User Guide
+                      <Icon viewClass="redirect" icon="redirect" />
+                    </p>
+                    <p className="text">
+                      {" "}
+                      Walk-through of how to liquid stake ATOM and use it in
+                      DeFi
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </Card>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </React.Fragment>
   );
 };
 

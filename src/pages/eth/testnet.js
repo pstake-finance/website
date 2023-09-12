@@ -1,11 +1,11 @@
 import React from "react";
 import Footer from "../../components/molecules/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
-import Banner from "../../components/organisms/ethereum/Banner";
-import Scaling from "../../components/organisms/ethereum/Scalling";
-import Steps from "../../components/organisms/ethereum/Steps";
-import Guides from "../../components/organisms/ethereum/Guides";
-import Incentives from "../../components/organisms/ethereum/incentives";
+import Banner from "../../components/organisms/ethereum/test-net/Banner";
+import Scaling from "../../components/organisms/ethereum/test-net/Scalling";
+import Steps from "../../components/organisms/ethereum/test-net/Steps";
+import Guides from "../../components/organisms/ethereum/test-net/Guides";
+import Incentives from "../../components/organisms/ethereum/test-net/incentives";
 
 const Eth = () => {
   return (

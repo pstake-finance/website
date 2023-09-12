@@ -12,6 +12,7 @@ module.exports = {
       },
       atomPrimary: "#595d7b",
       bnbPrimary: "#f0b90b",
+      ethPrimary: "#C73238",
       transparent: "transparent",
       dark: {
         full: "#000",
