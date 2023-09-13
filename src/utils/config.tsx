@@ -178,17 +178,17 @@ export const STK_ATOM_BLOG_URL =
 export const STK_ATOM_TWITTER_URL =
   "https://twitter.com/pstake_cosmos?s=11&t=E_q2T3rK9Bwiywy_YCvo5A";
 export const STK_ATOM_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2023/01/15/stkatom-user-guide-atom-liquid-staking-tutorial/";
+  "https://blog.pstake.finance/2023/09/12/cosmos-lsm-atom-liquid-staking-made-simpler-with-pstake/";
 export const STK_ATOM_BLOG_ONE_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2023/01/image1-min-1160x622.png";
+  "https://blog.pstake.finance/wp-content/uploads/2023/09/Lsm-banner-2.jpeg";
 export const STK_ATOM_BLOG_TWO_URL =
-  "https://blog.pstake.finance/2022/11/05/pstakes-validator-set-for-atom-advancing-the-decentralisation-of-cosmos/";
+  "https://blog.pstake.finance/2023/01/15/stkatom-user-guide-atom-liquid-staking-tutorial/";
 export const STK_ATOM_BLOG_TWO_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/11/2022-11-05-16_00_04-Media-viewer.png";
+  "https://blog.pstake.finance/wp-content/uploads/2023/01/image1-min-1160x622.png";
 export const STK_ATOM_BLOG_THREE_URL =
-  "https://blog.pstake.finance/2023/02/10/atom-liquid-staking-guide-stkatom-crescent-ranged-pool/";
+  "https://blog.pstake.finance/2022/11/11/stkatom-exchange-rate-mechanics/";
 export const STK_ATOM_BLOG_THREE_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2023/02/stkATOM-Crecent-Farming-Guide-min-1160x622.png";
+  "https://blog.pstake.finance/wp-content/uploads/2022/11/stkATOM-Exchange-rate-mechanics-3-1160x621.jpg";
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
 export const STK_ATOM_SECURITY_AUDIT_URL =

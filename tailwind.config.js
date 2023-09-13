@@ -47,7 +47,7 @@ module.exports = {
       "body-bg":
         "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
       topBanner: `url('/images/bg_images/atom_topbar.svg'), 
-      radial-gradient(100% 57099.62% at 6% 0%, #372627 0%, #372627 25.4%, #030303 100%)`,
+      radial-gradient(100% 57099.62% at 6% 0%, #B8F9FE 0%, #B48FDD 25.4%, #83339D 100%)`,
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
       homePageBanner: `url('/images/bg_images/bg.svg'),
@@ -64,6 +64,9 @@ module.exports = {
         "url('/images/bg_images/atomBanner2.svg'), url('/images/bg_images/atomBanner1.svg') ",
       bnbBanner:
         "url('/images/bg_images/binance_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0,#fff 0,#fffef8 45.83%,#fffffd 100%)",
+      lsmTag:
+        "linear-gradient(91deg, rgba(196, 3, 11, 0.60) -15.72%, rgba(30, 0, 3, 0.60) 125.37%)",
+      lsmHighlight: 'linear-gradient(rgba(140, 2, 8, 1), rgba(211, 73, 79, 1), rgba(140, 2, 8, 1))'
     },
     backgroundColor: {
       none: "none",

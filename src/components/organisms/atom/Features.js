@@ -30,9 +30,8 @@ const Features = () => {
       ),
       icon: "cosmos",
       content:
-        " Minimal fees, fast transactions, high rewards, and IBC\n" +
-        "                  interoperability make liquid staking your ATOM smooth and\n" +
-        "                  seamless",
+        "Minimal fees, fast transactions, high rewards, IBC interoperability, and Liquid Staking Module (LSM) " +
+        "support make liquid staking your ATOM (or natively staked ATOM) smooth and seamless",
     },
   ];
   return (

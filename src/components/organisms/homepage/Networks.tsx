@@ -70,9 +70,18 @@ const Networks = () => {
                 className={`${item.hoverBg} p-8 bg-[#26262b] m-4 md:mx-2 min-w-[300px] 
                 md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
                 md:flex md:items-center md:py-4 md:px-6
-                 md:justify-between`}
+                 md:justify-between relative overflow-hidden relative`}
                 key={index}
               >
+                {item.asset === "Cosmos" ? (
+                  <div className="bg-lsmTag rotate-[322deg] absolute -left-[47px] top-[28px] px-[10px] py-[8px] w-[200px]">
+                    <p className="text-[11px] text-light-emphasis font-medium italic text-center">
+                      LSM Support Enabled
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
                 <div className="mb-2 md:flex md:items-center md:m-0">
                   <div className={"text-center mb-2 md:m-0"}>
                     <img
