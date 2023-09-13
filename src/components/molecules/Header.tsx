@@ -225,7 +225,7 @@ const Header = () => {
           >
             <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
               <img
-                src={"/images/stkATOM.svg"}
+                src={"/images/stkAtom.svg"}
                 alt={"stkAtom"}
                 width={"16px"}
                 height={"16px"}
