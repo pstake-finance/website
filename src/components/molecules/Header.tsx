@@ -231,9 +231,15 @@ const Header = () => {
                 height={"16px"}
                 className="logo mr-2.5"
               />
-              <a className="link" href={"/atom"} rel="noopener noreferrer">
-                LSM support now live on pSTAKE. Liquid stake your already staked
-                ATOM now.
+              LSM support now live on pSTAKE. Liquid stake your already staked
+              ATOM&nbsp;
+              <a
+                className="link underline"
+                href={"https://cosmos.pstake.finance/"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                now.
               </a>
             </p>
             <div onClick={closeBanner}>
