@@ -16,17 +16,17 @@ const FeaturedBlogs = () => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: "stkATOM Launch Update",
+      title: "Cosmos LSM",
       blogLink: STK_ATOM_BLOG_ONE_URL,
       imageLink: STK_ATOM_BLOG_ONE_IMAGE_URL,
     },
     {
-      title: t("LEARN_MORE"),
+      title: "stkATOM User Guide",
       blogLink: STK_ATOM_BLOG_TWO_URL,
       imageLink: STK_ATOM_BLOG_TWO_IMAGE_URL,
     },
     {
-      title: "stkATOM Crescent Ranged Pool",
+      title: "stkATOM Exchange Rate Mechanics",
       blogLink: STK_ATOM_BLOG_THREE_URL,
       imageLink: STK_ATOM_BLOG_THREE_IMAGE_URL,
     },
@@ -52,7 +52,7 @@ const FeaturedBlogs = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="blog-image h-auto">
+                  <div className="blog-image h-auto -md:max-h-[205px]">
                     <img alt="blog2" src={item.imageLink} />
                   </div>
 

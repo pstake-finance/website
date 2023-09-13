@@ -208,9 +208,9 @@ const Header = () => {
     },
   ];
 
-  const handleRouter = (link:string) =>{
-    router.push(link)
-  }
+  const handleRouter = (link: string) => {
+    router.push(link);
+  };
 
   return (
     <React.Fragment>
@@ -225,19 +225,21 @@ const Header = () => {
           >
             <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
               <img
-                src={"/images/stkEth_lg.svg"}
+                src={"/images/stkATOM.svg"}
                 alt={"stkAtom"}
                 width={"16px"}
                 height={"16px"}
                 className="logo mr-2.5"
               />
+              LSM support now live on pSTAKE. Liquid stake your already staked
+              ATOM&nbsp;
               <a
-                className="link"
-                href={"/eth/testnet"}
+                className="link underline"
+                href={"https://cosmos.pstake.finance/"}
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                stkETH v2 Marvel testnet now LIVE. Participate to earn $10,500
-                in PSTAKE.
+                now.
               </a>
             </p>
             <div onClick={closeBanner}>
@@ -334,7 +336,9 @@ const Header = () => {
                           className="px-4 py-2 flex items-center md:py-3
                         hover:cursor-pointer text-dark-high whitespace-nowrap "
                           key={index}
-                          onClick={()=>{handleRouter(item.optionLink)}}
+                          onClick={() => {
+                            handleRouter(item.optionLink);
+                          }}
                         >
                           <img
                             src={item.imgUrl}

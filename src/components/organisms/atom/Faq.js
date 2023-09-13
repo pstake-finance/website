@@ -5,16 +5,6 @@ import Accordion from "../../atoms/accordion/Accordion";
 
 const accordionItems = [
   {
-    title: "How much is my stkATOM worth?",
-    content:
-      "The value of 1 stkATOM goes on increasing as it accrues\n" +
-      "                        staking rewards over time. This is because stkATOM\n" +
-      "                        follows a cToken model whose value changes based on the\n" +
-      "                        amount of underlying ATOM. Users staking/unstaking on\n" +
-      "                        the pSTAKE protocol are charged the ongoing rate which\n" +
-      "                        is displayed on the app UI.",
-  },
-  {
     title: "Why do I get less stkATOM for my ATOM?",
     content:
       "stkATOM follows an exchange rate model (also known as\n" +
@@ -66,6 +56,23 @@ const accordionItems = [
       "See the Migration Tool section for more information. We\n" +
       "                      have compiled a user guide for the migration, and the tool\n" +
       "                      itself will also guide you through the process.",
+  },
+  {
+    title: "Can I liquid stake my already staked ATOM with pSTAKE?",
+    content:
+      "Yes, pSTAKE supports LSM (Liquid Staking Module). Users can liquid stake their staked ATOM instantly on pSTAKE without having to go through the 21-day unbonding period",
+  },
+  {
+    title:
+      "If I liquid stake using LSM on pSTAKE, will my ATOM stake redelegated to other validators?\n",
+    content:
+      "No, users’ staked ATOM will remain with the same validator they have originally staked with, provided the validator is part of pSTAKE’s validator set of 62 validators.",
+  },
+  {
+    title:
+      "Why am I ineligible to liquid stake my natively staked ATOM with pSTAKE?",
+    content:
+      "A user will be ineligible to liquid stake their staked ATOM with pSTAKE if the validator is not part of pSTAKE’s validator set of 62 validators or it’s jailed.\n",
   },
 ];
 

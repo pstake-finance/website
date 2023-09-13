@@ -179,3 +179,13 @@ body {
 .comparison.bnb .item > div:last-child {
   @apply border-x-[#f0b90b];
 }
+
+.gradient-text{
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+  /*-webkit-box-decoration-break: clone;*/
+  /*box-decoration-break: clone;*/
+  /*text-shadow: none;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

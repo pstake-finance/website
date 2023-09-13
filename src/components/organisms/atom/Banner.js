@@ -37,7 +37,21 @@ const Banner = () => {
           rewards for securing the Cosmos Hub and participate in DeFi with
           stkATOM for additional yields
         </h6>
-        <div className="mt-8">
+        <div className={"w-[300px] mx-auto mt-4 relative"}>
+          <p
+            className={
+              "bg-lsmHighlight gradient-text text-[18px] font-semibold mr-3 italic"
+            }
+          >
+            LSM Support Enabled
+          </p>
+          <img
+            src={"/images/spark.svg"}
+            className="w-[20px] h-[20px] absolute top-[2px] right-[20px]"
+            alt="Liquid ATOM Staking"
+          />
+        </div>
+        <div className="mt-6">
           <ButtonLink
             className={`w-[200px] mx-auto md:py-2 md:text-sm`}
             variant={"custom"}
