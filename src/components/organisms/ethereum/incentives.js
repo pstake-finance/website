@@ -84,7 +84,7 @@ const Incentives = () => {
             <div className="ml-4 md:ml-2">
               <p className="flex items-center ">
                 <span className="font-semibold text-lg leading-snug text-light-high md:text-sm">
-                  Learn more about the important stkETH v2 Updates here
+                  Learn more about the important stkETH v2 updates here
                 </span>
                 <Icon
                   viewClass="redirect w-[16px] md:w-[10px] ml-2"
