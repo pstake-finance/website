@@ -43,9 +43,9 @@ const Banner = () => {
           className="max-w-[700px] mx-auto mt-6 font-medium text-base
         text-dark-black-high leading-loose sm:text-sm"
         >
-          The stkETH v2 Marvel Testnet Campaign has now been concluded. The
-          testnet app <br />
-          is still available for further exploration and testing.
+          <b>Note:</b> The stkETH v2 Marvel Testnet Campaign has now been
+          concluded. The testnet app is still available for further exploration
+          and testing.
         </h6>
       </div>
     </div>
