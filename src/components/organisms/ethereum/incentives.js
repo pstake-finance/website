@@ -20,11 +20,9 @@ const Incentives = () => {
           </div>
           <div className="rounded-md bg-[#26262B] p-6">
             <p className={"text-light-high mb-4"}>
-              2. <b>Road to Mainnet:</b> Claim exclusive stkETH Marvel NFTs on
-              Galxe, proving testnet participation and unlocking a rewarding
-              opportunity to share a pool of $10,000 in $PSTAKE for staking a
-              minimum of 0.1 ETH on Mainnet, based on the below-outlined
-              criteria:
+              2. <b>Road to Mainnet:</b> Claimed exclusive Marvel NFTs on Galxe?
+              Join us on Mainnet and share a pool of $10,000 in PSTAKE based on
+              the below criteria:
             </p>
             <table className="border-separate border-spacing-0 border border-[#DBD6D6] w-full rounded-md">
               <thead>
@@ -66,6 +64,36 @@ const Incentives = () => {
             </table>
           </div>
         </div>
+      </div>
+      <div className="max-w-[50%] md:max-w-full mx-auto mb-4">
+        <a
+          href="https://blog.pstake.finance/2023/07/27/stketh-v2-marvel-testnet-user-guide/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="flex bg-black-emphasis border border-solid
+              border-[#2a2c31] p-6 rounded-xl"
+        >
+          <div className="flex items-center justify-center">
+            <div className="w-[24px]">
+              <img
+                src="/images/stkEth_lg.svg"
+                alt="blog"
+                className={"w-full m-auto"}
+              />
+            </div>
+            <div className="ml-4 md:ml-2">
+              <p className="flex items-center ">
+                <span className="font-semibold text-lg leading-snug text-light-high md:text-sm">
+                  Learn more about the important stkETH v2 updates here
+                </span>
+                <Icon
+                  viewClass="redirect w-[16px] md:w-[10px] ml-2"
+                  icon="redirect"
+                />
+              </p>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   );

@@ -23,30 +23,30 @@ const Banner = () => {
           className="banner-heading font-bold text-[54px] leading-tight
         text-dark-black-high mt-6 md:text-[40px] sm:text-3xl mb-2"
         >
-          Join stkETH v2 Marvel Testnet
+          Join stkETH v2 Testnet
         </h1>
-        <p className="text-[#C73238] text-lg font-semibold">
-          stkETH v2 now LIVE on Testnet. Public. Incentivized.
-        </p>
         <h6
           className="max-w-[700px] mx-auto mt-6 font-medium text-base
         text-dark-black-high leading-loose sm:text-sm"
         >
           Feelin’ lucky? Become one of the first DeFi users to natively liquid
-          stake ETH on L2s— Arbitrum & Optimism and unlock the remarkable title
-          of stkETH Marvel.
+          stake ETH on L2s— Arbitrum & Optimism.
         </h6>
         <ButtonLink
           href={"https://testnet.app.pstake.finance/eth"}
           target={"_blank"}
-          className={`w-[150px] mx-auto md:py-2 md:text-sm !bg-[#C73238] mt-8`}
+          className={`w-[200px] mx-auto md:py-2 md:text-sm !bg-[#C73238] mt-8`}
         >
-          Join Now
+          Test here
         </ButtonLink>
-        <p className="text-dark-black-high mt-8">
-          Claim your share of <b>$10,500</b> incentives and exclusive{" "}
-          <b>&#34;stkETH Marvel&#34;</b> NFTs!
-        </p>
+        <h6
+          className="max-w-[700px] mx-auto mt-6 font-medium text-base
+        text-dark-black-high leading-loose sm:text-sm"
+        >
+          <b>Note:</b> The stkETH v2 Marvel Testnet Campaign has now been
+          concluded. The testnet app is still available for further exploration
+          and testing.
+        </h6>
       </div>
     </div>
   );
