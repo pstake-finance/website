@@ -2,10 +2,12 @@ import Axios from "axios";
 import {
   bigNumberToEther,
   decimalize,
+  decimalizeRaw,
   sdkInstance,
   shieldContractsAddress,
   SPEEDY_NODE_URL,
 } from "../../utils/helpers";
+import { SecretNetworkClient } from "secretjs";
 import { ethers } from "ethers";
 import shield from "../../utils/ABIs/shield.json";
 import { CRESCENT_STK_ATOM_DENOM, IBC_DENOM, TVL } from "../../utils/config";
@@ -37,6 +39,9 @@ export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const UMEE_URL =
   "https://testnet-client-bff-ocstrhuppq-uc.a.run.app/convexity/assets/all";
+export const SHADE_URL =
+  "https://na36v10ce3.execute-api.us-east-1.amazonaws.com/API-mainnet-STAGE/shadeswap/pairs";
+export const SHADE_LCD = "https://lcd.secret.express";
 
 const initialLiquidity = { [TVL]: 0 };
 
@@ -245,6 +250,7 @@ export const fetchOsmosisPoolInfo = async () => {
       Axios.get(OSMOSIS_POOL_URL),
       Axios.get(OSMOSIS_POOL_APR_URL),
     ]);
+    console.log(responses, "osmos-responses");
     const responseOne = responses[0];
     const responseTwo = responses[1];
 
@@ -268,6 +274,7 @@ export const fetchOsmosisPoolInfo = async () => {
     }
     return osmoInfo;
   } catch (e) {
+    console.log(e, "osmos-er");
     return { tvl: 0, apy: 0 };
   }
 };
@@ -306,12 +313,14 @@ export const fetchDexterPoolInfo = async () => {
       },
       body: JSON.stringify({
         query: `{
-            pool_aggregate_data {
-              fee_apr
-              current_liquidity_usd
+            pool_weekly_aggregate_with_apr(where: {pool_id: {_eq: 1}}) {
               pool_id
+              total_swap_fee
+              current_liquidity_usd
+              total_volume
+              apr
             }
-            pool_current_incentive_apr {
+            pool_current_incentive_apr(where: {pool_id: {_eq: 1}}) {
                incentive_apr
                pool_id
             }
@@ -319,10 +328,9 @@ export const fetchDexterPoolInfo = async () => {
       }),
     });
     const responseJson = await res.json();
+    console.log(responseJson, "responseJson");
     if (responseJson && responseJson.data) {
-      const poolAggregate = responseJson.data.pool_aggregate_data?.find(
-        (item: any) => item.pool_id === 1
-      );
+      const poolAggregate = responseJson.data.pool_weekly_aggregate_with_apr[0];
       const poolIncentiveAprList =
         responseJson.data.pool_current_incentive_apr?.filter((item: any) => {
           return item.pool_id === 1;
@@ -335,7 +343,7 @@ export const fetchDexterPoolInfo = async () => {
       }
       return {
         apy: (
-          poolAggregate.fee_apr + (poolIncentiveApr ? poolIncentiveApr : 0)
+          poolIncentiveApr + (poolAggregate.apr ? poolAggregate.apr : 0)
         ).toFixed(2),
         tvl: poolAggregate.current_liquidity_usd!.toFixed(2),
       };
@@ -362,6 +370,73 @@ export const fetchUmeeInfo = async () => {
     return { borrow_apy: 0, total_supply: 0 };
   } catch (e) {
     return { borrow_apy: 0, total_supply: 0 };
+  }
+};
+
+export const fetchShadeInfo = async () => {
+  try {
+    const res = await Axios.get(SHADE_URL);
+    if (res && res.data) {
+      const stkATOMSilk = res.data.find(
+        (item: any) => item.id === "ec478c0a-c7cd-4327-b6cb-8d01ca87d319"
+      );
+      const atomStkATOM = res.data.find(
+        (item: any) => item.id === "1d7f9ba8-b4be-4a34-a54d-63554f14f8fb"
+      );
+      console.log(stkATOMSilk, "stkATOMSilk", atomStkATOM);
+      return {
+        stkATOMSilk: {
+          apy: Number(stkATOMSilk.apr.total).toFixed(2),
+          tvl: Number(stkATOMSilk.liquidity_usd).toFixed(2),
+        },
+        atomStkAtom: {
+          apy: Number(atomStkATOM.apr.total).toFixed(2),
+          tvl: Number(atomStkATOM.liquidity_usd).toFixed(2),
+        },
+      };
+    }
+    return {
+      stkATOMSilk: { tvl: 0, apy: 0 },
+      atomStkAtom: { tvl: 0, apy: 0 },
+    };
+  } catch (e) {
+    return {
+      stkATOMSilk: { tvl: 0, apy: 0 },
+      atomStkAtom: { tvl: 0, apy: 0 },
+    };
+  }
+};
+
+export const fetchShadeCollateral = async () => {
+  try {
+    let stkAtomPrice = 1;
+    const res = await Axios.get(
+      "https://api.coingecko.com/api/v3/coins/stkatom"
+    );
+    if (res && res.data) {
+      stkAtomPrice = res.data.market_data.current_price.usd;
+    }
+
+    const secretjs = new SecretNetworkClient({
+      url: SHADE_LCD,
+      chainId: "secret-4",
+    });
+
+    const result: any = await secretjs.query.compute.queryContract({
+      contract_address: "secret1qxk2scacpgj2mmm0af60674afl9e6qneg7yuny",
+      query: { vault: { vault_id: "10" } },
+    });
+    if (result) {
+      return {
+        total_supply:
+          Number(decimalizeRaw(result.vault.collateral.base!, 18)) *
+          stkAtomPrice,
+        fees: Number(result.vault.config.fees.borrow_fee.delta) * 100,
+      };
+    }
+    return { total_supply: 0, fees: 0 };
+  } catch (e) {
+    return { total_supply: 0, fees: 0 };
   }
 };
 

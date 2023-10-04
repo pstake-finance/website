@@ -6,6 +6,8 @@ import {
   fetchCrescentPoolInfo,
   fetchDexterPoolInfo,
   fetchOsmosisPoolInfo,
+  fetchShadeCollateral,
+  fetchShadeInfo,
   fetchUmeeInfo,
 } from "../../../pages/api/api";
 import { useEffect } from "react";
@@ -34,19 +36,32 @@ const EcosystemSlider = ({ deviceType }) => {
   const [crescentInfo, setCrescentInfo] = useState({ tvl: 0, apy: 0 });
   const [dexterInfo, setDexterInfo] = useState({ tvl: 0, apy: 0 });
   const [umeeInfo, setUmeeInfo] = useState({ borrow_apy: 0, total_supply: 0 });
+  const [shadeInfo, setShadeInfo] = useState({
+    stkATOMSilk: { tvl: 0, apy: 0 },
+    atomStkAtom: { tvl: 0, apy: 0 },
+  });
+  const [shadeCollateralInfo, setShadeCollateralInfo] = useState({
+    tvl: 0,
+    apy: 0,
+  });
 
   useEffect(() => {
     const fetchApi = async () => {
-      const [osmosis, crescent, dexter, umee] = await Promise.all([
-        fetchOsmosisPoolInfo(),
-        fetchCrescentPoolInfo(),
-        fetchDexterPoolInfo(),
-        fetchUmeeInfo(),
-      ]);
+      const [osmosis, crescent, dexter, umee, shade, shadeCollateral] =
+        await Promise.all([
+          fetchOsmosisPoolInfo(),
+          fetchCrescentPoolInfo(),
+          fetchDexterPoolInfo(),
+          fetchUmeeInfo(),
+          fetchShadeInfo(),
+          fetchShadeCollateral(),
+        ]);
       setOsmosisInfo(osmosis);
       setCrescentInfo(crescent);
       setDexterInfo(dexter);
       setUmeeInfo(umee);
+      setShadeInfo(shade);
+      setShadeCollateralInfo(shadeCollateral);
     };
     fetchApi();
   }, []);
@@ -157,8 +172,84 @@ const EcosystemSlider = ({ deviceType }) => {
       ),
       apy: (
         <>
-          {umeeInfo.borrow_apy}%{" "}
-          <span className="text-[12px] text-[#70747c]">Borrowing APY</span>
+          {shadeCollateralInfo.fees}%{" "}
+          <span className="text-[12px] text-[#70747c]">Fees</span>
+        </>
+      ),
+    },
+    {
+      name: "Shade Protocol",
+      tag: "Borrowing/Lending",
+      logoUrl: "/images/integrations/shade.svg",
+      content: <span className="block"> Collateral</span>,
+      primaryButtonText: "Add Collateral",
+      primaryButtonUrl: `https://app.shadeprotocol.io/borrow`,
+      secondaryButtonText: "Borrow",
+      secondaryButtonUrl: "https://app.shadeprotocol.io/borrow",
+      tvl: (
+        <>
+          ${parseInt(shadeCollateralInfo.total_supply).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">Total Supplied</span>
+        </>
+      ),
+      apy: (
+        <>
+          {shadeCollateralInfo.fees}%{" "}
+          <span className="text-[12px] text-[#70747c]">Fees</span>
+        </>
+      ),
+    },
+    {
+      name: "Shade Protocol",
+      tag: "DEX",
+      logoUrl: "/images/integrations/shade.svg",
+      content: (
+        <span className="block">
+          {" "}
+          Provide liquidity in the stkATOM/ATOM pool to earn high incentives
+        </span>
+      ),
+      primaryButtonText: "Swap",
+      primaryButtonUrl: `https://app.shadeprotocol.io/swap?input=stkATOM&output=ATOM`,
+      secondaryButtonText: "Add Liquidity",
+      secondaryButtonUrl: "https://app.shadeprotocol.io/swap/pools",
+      tvl: (
+        <>
+          ${parseInt(shadeInfo.atomStkAtom.tvl).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">TVL</span>
+        </>
+      ),
+      apy: (
+        <>
+          {shadeInfo.atomStkAtom.apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">APY</span>
+        </>
+      ),
+    },
+    {
+      name: "Shade Protocol",
+      tag: "DEX",
+      logoUrl: "/images/integrations/shade.svg",
+      content: (
+        <span className="block">
+          {" "}
+          Provide liquidity in the stkATOM/SILK pool to earn high incentives
+        </span>
+      ),
+      primaryButtonText: "Swap",
+      primaryButtonUrl: `https://app.shadeprotocol.io/swap?input=stkATOM&output=SILK`,
+      secondaryButtonText: "Add Liquidity",
+      secondaryButtonUrl: "https://app.shadeprotocol.io/swap/pools",
+      tvl: (
+        <>
+          ${parseInt(shadeInfo.stkATOMSilk.tvl).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">TVL</span>
+        </>
+      ),
+      apy: (
+        <>
+          {shadeInfo.stkATOMSilk.apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">APY</span>
         </>
       ),
     },

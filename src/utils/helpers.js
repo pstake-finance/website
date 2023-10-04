@@ -87,6 +87,10 @@ export const decimalize = (valueString, decimals = 6) => {
   ).toString();
 };
 
+export const decimalizeRaw = (valueString, decimals = 6) => {
+  return Decimal.fromAtomics(valueString, decimals).toString();
+};
+
 export const emptyFunc = () => ({});
 
 export const numberFormat = (number, decPlaces) => {
