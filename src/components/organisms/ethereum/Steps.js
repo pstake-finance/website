@@ -36,7 +36,7 @@ const Steps = () => {
       <div className="sectionContainer py-[65px] md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6">
           Marvel Testnet Campaign
-          <br /> (Now Concluded)
+          <br /> <span className={"text-[36px]"}>(Now Concluded)</span>
         </h3>
         <div className="flex flex-wrap">
           {list.map((item, index) => (

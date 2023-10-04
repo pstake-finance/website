@@ -35,15 +35,18 @@ const Banner = () => {
         <ButtonLink
           href={"https://testnet.app.pstake.finance/eth"}
           target={"_blank"}
-          className={`w-[150px] mx-auto md:py-2 md:text-sm !bg-[#C73238] mt-8`}
+          className={`w-[200px] mx-auto md:py-2 md:text-sm !bg-[#C73238] mt-8`}
         >
           Test here
         </ButtonLink>
-        <p className="text-dark-black-high mt-4 leading-loose">
+        <h6
+          className="max-w-[700px] mx-auto mt-6 font-medium text-base
+        text-dark-black-high leading-loose sm:text-sm"
+        >
           The stkETH v2 Marvel Testnet Campaign has now been concluded. The
           testnet app <br />
           is still available for further exploration and testing.
-        </p>
+        </h6>
       </div>
     </div>
   );
