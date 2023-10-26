@@ -14,6 +14,7 @@ import {
   STK_ATOM_TWITTER_URL,
   DISCORD_URL,
   PSTAKE_REDDIT_URL,
+  STK_ETH_TWITTER,
 } from "../../utils/config";
 
 const Footer = () => {
@@ -28,6 +29,8 @@ const Footer = () => {
     twitterUrl = STK_BNB_TWITTER_URL;
   } else if (router.pathname === "/atom") {
     twitterUrl = STK_ATOM_TWITTER_URL;
+  } else {
+    twitterUrl = STK_ETH_TWITTER;
   }
 
   const list = [
