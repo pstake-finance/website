@@ -13,7 +13,6 @@ import EcosystemSlider from "../components/organisms/binance/EcosystemSilder";
 import {
   fetchBeefyInfo,
   fetchOpenLeverage,
-  fetchShield,
   fetchThenaInfo,
   fetchWombat,
 } from "./api/api";
@@ -23,23 +22,19 @@ const Binance = () => {
   const [beefyInfo, setBeefyInfo] = useState({ tvl: 0, apy: 0 });
   const [openLeverageInfo, setOpenLeverageInfo] = useState({ tvl: 0, apy: 0 });
   const [wombatInfo, setWombatInfo] = useState({ tvl: 0, apy: 0 });
-  const [shieldInfo, setShieldInfo] = useState({ tvl: 0, apy: 0 });
   const [thenaInfo, setThenaInfo] = useState({ tvl: 0, apy: 0 });
 
   useEffect(() => {
     const fetchApi = async () => {
-      const [beefyInfo, openLeverage, wombat, shield, thena] =
-        await Promise.all([
-          fetchBeefyInfo(),
-          fetchOpenLeverage(),
-          fetchWombat(),
-          fetchShield(),
-          fetchThenaInfo(),
-        ]);
+      const [beefyInfo, openLeverage, wombat, thena] = await Promise.all([
+        fetchBeefyInfo(),
+        fetchOpenLeverage(),
+        fetchWombat(),
+        fetchThenaInfo(),
+      ]);
       setBeefyInfo(beefyInfo);
       setOpenLeverageInfo(openLeverage);
       setWombatInfo(wombat);
-      setShieldInfo(shield);
       setThenaInfo(thena);
     };
     fetchApi();
@@ -65,7 +60,6 @@ const Binance = () => {
           beefyInfo={beefyInfo}
           openLeverageInfo={openLeverageInfo}
           wombatInfo={wombatInfo}
-          shieldInfo={shieldInfo}
           thenaInfo={thenaInfo}
         />
         <Guides />

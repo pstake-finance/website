@@ -6,6 +6,8 @@ import {
   fetchCrescentPoolInfo,
   fetchDexterPoolInfo,
   fetchOsmosisPoolInfo,
+  fetchShadeCollateral,
+  fetchShadeInfo,
   fetchUmeeInfo,
 } from "../../../pages/api/api";
 import { useEffect } from "react";
@@ -32,21 +34,44 @@ const responsive = {
 const EcosystemSlider = ({ deviceType }) => {
   const [osmosisInfo, setOsmosisInfo] = useState({ tvl: 0, apy: 0 });
   const [crescentInfo, setCrescentInfo] = useState({ tvl: 0, apy: 0 });
-  const [dexterInfo, setDexterInfo] = useState({ tvl: 0, apy: 0 });
+  const [dexterInfo, setDexterInfo] = useState({ tvl: 0, fees: 0 });
+  const [shadeInfo, setShadeInfo] = useState({
+    stkATOMSilk: { apy: 0, tvl: 0 },
+    atomStkAtom: { apy: 0, tvl: 0 },
+  });
+  const [shadeLendingInfo, setShadeLendingInfo] = useState({
+    tvl: 0,
+    apy: 0,
+  });
   const [umeeInfo, setUmeeInfo] = useState({ borrow_apy: 0, total_supply: 0 });
 
   useEffect(() => {
     const fetchApi = async () => {
-      const [osmosis, crescent, dexter, umee] = await Promise.all([
-        fetchOsmosisPoolInfo(),
-        fetchCrescentPoolInfo(),
-        fetchDexterPoolInfo(),
-        fetchUmeeInfo(),
-      ]);
+      const [osmosis, crescent, dexter, umee, shade, shadeLending] =
+        await Promise.all([
+          fetchOsmosisPoolInfo(),
+          fetchCrescentPoolInfo(),
+          fetchDexterPoolInfo(),
+          fetchUmeeInfo(),
+          fetchShadeInfo(),
+          fetchShadeCollateral(),
+        ]);
+      console.log(shadeLending, "shadeLending-te", shade);
       setOsmosisInfo(osmosis);
       setCrescentInfo(crescent);
       setDexterInfo(dexter);
       setUmeeInfo(umee);
+      setShadeLendingInfo(shadeLending),
+        setShadeInfo({
+          stkATOMSilk: {
+            apy: shade.stkATOMSilk.apy,
+            tvl: shade.stkATOMSilk.tvl,
+          },
+          atomStkAtom: {
+            apy: shade.atomStkAtom.apy,
+            tvl: shade.atomStkAtom.tvl,
+          },
+        });
     };
     fetchApi();
   }, []);
@@ -159,6 +184,82 @@ const EcosystemSlider = ({ deviceType }) => {
         <>
           {umeeInfo.borrow_apy}%{" "}
           <span className="text-[12px] text-[#70747c]">Borrowing APY</span>
+        </>
+      ),
+    },
+    {
+      name: "Shade",
+      tag: "DEX",
+      logoUrl: "/images/integrations/shade.svg",
+      content: (
+        <span className="block">
+          {" "}
+          Provide liquidity in the stkATOM/ATOM pool to earn extra rewards
+        </span>
+      ),
+      primaryButtonText: "Swap",
+      primaryButtonUrl: `https://app.shadeprotocol.io/swap?input=stkATOM&output=ATOM`,
+      secondaryButtonText: "Add Liquidity",
+      secondaryButtonUrl: "https://app.shadeprotocol.io/swap/pools",
+      tvl: (
+        <>
+          ${parseInt(shadeInfo.atomStkAtom.tvl).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">Total Supplied</span>
+        </>
+      ),
+      apy: (
+        <>
+          {shadeInfo.atomStkAtom.apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">APR</span>
+        </>
+      ),
+    },
+    {
+      name: "Shade",
+      tag: "DEX",
+      logoUrl: "/images/integrations/shade.svg",
+      content: (
+        <span className="block">
+          {" "}
+          Provide liquidity in the stkATOM/SILK pool to earn extra rewards
+        </span>
+      ),
+      primaryButtonText: "Swap",
+      primaryButtonUrl: `https://app.shadeprotocol.io/swap?input=stkATOM&output=SILK`,
+      secondaryButtonText: "Add Liquidity",
+      secondaryButtonUrl: "https://app.shadeprotocol.io/swap/pools",
+      tvl: (
+        <>
+          ${parseInt(shadeInfo.stkATOMSilk.tvl).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">Total Supplied</span>
+        </>
+      ),
+      apy: (
+        <>
+          {shadeInfo.stkATOMSilk.apy}%{" "}
+          <span className="text-[12px] text-[#70747c]">APR</span>
+        </>
+      ),
+    },
+    {
+      name: "Shade",
+      tag: "Borrowing/Lending",
+      logoUrl: "/images/integrations/shade.svg",
+      content: <span className="block"> stkATOM collateral</span>,
+      primaryButtonText: "Add Collateral",
+      primaryButtonUrl: `https://app.shadeprotocol.io/borrow`,
+      secondaryButtonText: "Borrow",
+      secondaryButtonUrl: "https://app.shadeprotocol.io/borrow",
+      tvl: (
+        <>
+          ${parseInt(shadeLendingInfo.tvl).toLocaleString()}{" "}
+          <span className="text-[12px] text-[#70747c]">Total Supplied</span>
+        </>
+      ),
+      apy: (
+        <>
+          {shadeLendingInfo.fees}%{" "}
+          <span className="text-[12px] text-[#70747c]">Fee</span>
         </>
       ),
     },
