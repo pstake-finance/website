@@ -26,7 +26,6 @@ const EcosystemSlider = ({
   openLeverageInfo,
   beefyInfo,
   wombatInfo,
-  shieldInfo,
   thenaInfo,
 }) => {
   const list = [
@@ -169,32 +168,6 @@ const EcosystemSlider = ({
         </span>
       ),
       apy: "",
-    },
-    {
-      name: "Shield",
-      tag: "Options",
-      logoUrl: "/images/integrations/shield.svg",
-      content: (
-        <span className="mb-6 block ">
-          Deposit stkBNB to an M-vault option pool and earn stable rewards
-        </span>
-      ),
-      primaryButtonText: "Deposit",
-      primaryButtonUrl: `https://app.shieldex.io/dds.html#/vault`,
-      secondaryButtonText: "Learn More",
-      secondaryButtonUrl: "",
-      tvl: (
-        <>
-          ${shieldInfo.tvl}{" "}
-          <span className="text-[12px] text-[#70747c]">TVL</span>
-        </>
-      ),
-      apy: (
-        <>
-          {shieldInfo.apy}%{" "}
-          <span className="text-[12px] text-[#70747c]">APY</span>
-        </>
-      ),
     },
   ];
 
