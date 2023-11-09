@@ -12,11 +12,9 @@ const Terms = () => {
     <div className="container-fluid p-0 terms-sections">
       <div className="sectionContainer pb-8">
         <div className="pt-[200px] pb-[50px]">
-          <h1 className={`${mainHeading} text-center`}>
-            {t("TERMS_OF_SERVICE_SUBTITLE")}
-          </h1>
+          <h1 className={`${mainHeading} text-center`}>Terms of Use</h1>
         </div>
-        <p className="text-red mb-4">{t("LAST_UPDATED_DATE")}</p>
+        <p className="text-red mb-4">Last Updated Date: 3 November 2023</p>
         <div>
           <p className={contentClass}>
             Please review these Terms of Use of pSTAKE (the <b>“Terms”</b>)
@@ -111,10 +109,10 @@ const Terms = () => {
             </p>
             <ul className={"list-disc pl-5"}>
               <li className={contentClass}>
-                to deploy certain digital tokens supported by pSTAKE (“pSTAKE
-                Supported Tokens”) towards staking on the relevant pSTAKE
-                Deployed Chain (including IBC-enabled blockchains, and other
-                supported blockchains which are Ethereum Virtual
+                to deploy certain digital tokens supported by pSTAKE (“
+                <b>pSTAKE Supported Tokens</b>”) towards staking on the relevant
+                pSTAKE Deployed Chain (including IBC-enabled blockchains, and
+                other supported blockchains which are Ethereum Virtual
                 Machine-compatible) on a non-custodial basis whilst retaining
                 control of liquidity of the underlying staked digital token; and
               </li>
@@ -277,6 +275,19 @@ const Terms = () => {
                 implemented by Company via variations to the pSTAKE Protocols.
               </li>
             </ul>
+            <p className={contentClass}>
+              1.8 <b>Non-circumvention</b>: You agree not to do anything,
+              including the use of any technology such as virtual private
+              networks (VPN) for the purposes of circumventing these Terms.
+            </p>
+            <p className={contentClass}>
+              <b>Sole and exclusive use of IP address:</b> You shall not use
+              another person’s IP address and neither will you allow another
+              person to use your IP address associated with your use of pSTAKE.
+              You hereby declare and represent that the IP address associated
+              with your use of pSTAKE is unique and exclusive to you and shall
+              remain as such.
+            </p>
           </div>
           <p className={subHeading}>
             <b>2. Using pSTAKE</b>
@@ -677,7 +688,7 @@ const Terms = () => {
           <div>
             <p className={contentClass}>
               {" "}
-              <b>For purposes of these Terms:</b>
+              <b>User shall not, directly or indirectly:</b>
             </p>
             <p className={contentClass}>5.1 access and/or use pSTAKE:</p>
             <ul className={"list-disc pl-5"}>
