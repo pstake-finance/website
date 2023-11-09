@@ -147,7 +147,7 @@ const Footer = () => {
               target="_blank"
               className="text-[#70747c] text-[12px] mx-4 sm:mb-4 block"
             >
-              {t("TERMS_OF_SERVICE")}{" "}
+              Terms of Use
             </Link>
           </div>
         </div>
