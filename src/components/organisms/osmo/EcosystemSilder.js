@@ -150,7 +150,7 @@ const EcosystemSlider = ({ deviceType }) => {
                         variant={"custom"}
                         href={item.secondaryButtonUrl}
                         scale="md"
-                        customButtonClass="bg-[#2e2e34] text-light-high"
+                        customButtonClass="bg-[#140F34] text-light-high"
                         target={"_blank"}
                         isDisabled={false}
                         focusEffect={true}

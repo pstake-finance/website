@@ -110,6 +110,8 @@ const Footer = () => {
                             ? "group-hover:bg-[#f0b90b]"
                             : router.pathname === "/atom"
                             ? "group-hover:bg-[#595d7b]"
+                            : router.pathname === "/osmo"
+                            ? "group-hover:bg-[#3f3f45]"
                             : "group-hover:bg-[#e50913]"
                         }`}
                     >
