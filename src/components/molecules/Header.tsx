@@ -335,7 +335,7 @@ const Header = () => {
                     dropdownType={"hover"}
                     dropDownContentClass="!bg-white-high drop-shadow-md
                       round-md py-4 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0 w-[150px] md:!flex md:!justify-center md:flex-wrap"
+                      md:!bg-transparent md:p-0 !w-[150px] md:!flex md:!justify-center md:flex-wrap"
                   >
                     {networks.map((item, index) => (
                       <div
