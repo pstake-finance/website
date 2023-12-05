@@ -138,6 +138,12 @@ const Header = () => {
       imgUrl: "/images/networks/bnb.svg",
       symbol: "BNB",
     },
+    {
+      optionName: "Osmosis",
+      optionLink: "/osmo",
+      imgUrl: "/images/networks/osmo.svg",
+      symbol: "OSMO",
+    },
   ];
 
   const learnList = [
@@ -254,6 +260,7 @@ const Header = () => {
           className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
             md:flex-wrap justify-start ${
+              router.pathname !== "/osmo" &&
               router.pathname !== "/" &&
               router.pathname !== "/atom" &&
               router.pathname !== "/bnb" &&
@@ -328,36 +335,34 @@ const Header = () => {
                     dropdownType={"hover"}
                     dropDownContentClass="!bg-white-high drop-shadow-md
                       round-md py-4 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0"
+                      md:!bg-transparent md:p-0 w-[150px] md:!flex md:!justify-center md:flex-wrap"
                   >
-                    <div className="grid grid-cols-3 gap-2 md:gap-0.5 -md:w-[450px] -md:min-w-[300px] rounded-md">
-                      {networks.map((item, index) => (
-                        <div
-                          className="px-4 py-2 flex items-center md:py-3
+                    {networks.map((item, index) => (
+                      <div
+                        className="px-4 py-2 flex items-center md:py-3
                         hover:cursor-pointer text-dark-high whitespace-nowrap "
-                          key={index}
-                          onClick={() => {
-                            handleRouter(item.optionLink);
-                          }}
-                        >
-                          <img
-                            src={item.imgUrl}
-                            alt={item.optionName}
-                            className={
-                              "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
-                            }
-                          />
-                          <div className={"flex flex-col md:hidden"}>
-                            <p className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
-                              {item.optionName}
-                            </p>
-                            <span className="text-dark-low text-xsm font-medium leading-normal">
-                              {item.symbol}
-                            </span>
-                          </div>
+                        key={index}
+                        onClick={() => {
+                          handleRouter(item.optionLink);
+                        }}
+                      >
+                        <img
+                          src={item.imgUrl}
+                          alt={item.optionName}
+                          className={
+                            "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
+                          }
+                        />
+                        <div className={"flex flex-col md:hidden"}>
+                          <p className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
+                            {item.optionName}
+                          </p>
+                          <span className="text-dark-low text-xsm font-medium leading-normal">
+                            {item.symbol}
+                          </span>
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    ))}
                   </Dropdown>
                 </li>
                 <li className="nav-item nav__menu-item">
@@ -517,6 +522,8 @@ const Header = () => {
                         ? "[.is-sticky_&]:bg-bnbPrimary"
                         : router.pathname === "/atom"
                         ? "[.is-sticky_&]:bg-atomPrimary"
+                        : router.pathname === "/osmo"
+                        ? "[.is-sticky_&]:bg-osmoPrimaryButton"
                         : "[.is-sticky_&]:bg-red"
                     }
                        w-full md:py-2 !py-2.5 md:text-sm`}
