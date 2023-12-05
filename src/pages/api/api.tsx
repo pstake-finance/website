@@ -32,6 +32,7 @@ const STK_BNB_SUBGRAPH_API =
 export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
 export const OSMOSIS_POOL_APR_URL = "https://api.osmosis.zone/apr/v2/886";
 export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
+export const STK_OSMO_APY_API = "https://api.persistence.one/osmosis-apr";
 export const STK_ATOM_TVL_URL =
   "https://api.persistence.one/pstake/stkatom/atom_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
@@ -450,9 +451,10 @@ export const getCosmosTVL = async () => {
   }
 };
 
-export const getCosmosAPY = async () => {
+export const getCosmosAPY = async (prefix: string) => {
   try {
-    const res = await Axios.get(APY_API);
+    const api = prefix === "cosmos" ? APY_API : STK_OSMO_APY_API;
+    const res = await Axios.get(api);
     if (res && res.data) {
       return Number((res.data * 100).toFixed(2));
     }

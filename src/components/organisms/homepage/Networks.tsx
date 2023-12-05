@@ -2,7 +2,6 @@ import React from "react";
 import { useTranslation } from "next-export-i18n";
 import { APR_DEFAULT } from "../../../utils/config";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import Button from "../../atoms/button/Button";
 import { useApp } from "../../../context/appContext/AppContext";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
 import Icon from "../../molecules/Icon";
@@ -10,7 +9,7 @@ import Icon from "../../molecules/Icon";
 const Networks = () => {
   const { t } = useTranslation("common");
 
-  const { cosmosData, bnbData } = useApp();
+  const { cosmosData, bnbData, osmoData } = useApp();
   const { isMobile } = useWindowSize();
   const networkList = [
     {
@@ -21,6 +20,15 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl: "/atom",
       hoverBg: "hover:bg-cosmosCard",
+    },
+    {
+      asset: "Osmosis",
+      network: "osmosis",
+      imageUrl: "/images/networks/atom.svg",
+      apy: osmoData!.apy === -1 ? 9.94 : osmoData.apy,
+      buttonText: "Start Staking",
+      buttonUrl: "/osmo",
+      hoverBg: "hover:bg-osmoCard",
     },
     {
       asset: "BNB",
@@ -73,15 +81,6 @@ const Networks = () => {
                  md:justify-between relative overflow-hidden relative`}
                 key={index}
               >
-                {item.asset === "Cosmos" ? (
-                  <div className="bg-lsmTag rotate-[322deg] absolute -left-[47px] top-[28px] px-[10px] py-[8px] w-[200px]">
-                    <p className="text-[11px] text-light-emphasis font-medium italic text-center">
-                      LSM Support Enabled
-                    </p>
-                  </div>
-                ) : (
-                  ""
-                )}
                 <div className="mb-2 md:flex md:items-center md:m-0">
                   <div className={"text-center mb-2 md:m-0"}>
                     <img

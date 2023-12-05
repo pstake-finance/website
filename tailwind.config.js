@@ -56,6 +56,8 @@ module.exports = {
       homePageBg2: `url('/images/bg_images/bg_lane.png')`,
       homePageBg3: `url('/images/bg_images/home_bg2.svg')`,
       cosmosCard: "linear-gradient(287.41deg,#2f3148 4.63%,#5c4243 98.79%)",
+      osmoCard:
+        "linear-gradient(80.17deg, #7268FD -4.31%, #CA2EBD 111.08%, #CA2EBD 127.68%)",
       bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
       ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
       xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
