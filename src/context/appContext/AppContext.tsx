@@ -20,6 +20,10 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
+  osmoData: {
+    apy: 0,
+    tvl: 0,
+  },
   bnbData: {
     apy: 0,
     tvl: 0,
@@ -39,6 +43,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [osmoData, setOsmoData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
   const [bnbData, setBnbData] = useState<any>({
     apy: 0,
     tvl: 0,
@@ -52,12 +60,14 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     const fetchApy = async () => {
       const [
         cosmosApyResponse,
+        osmoApyResponse,
         cosmosTvlResponse,
         bnbApyResponse,
         bnbTvlResponse,
         tokenPrices,
       ] = await Promise.all([
-        getCosmosAPY(),
+        getCosmosAPY("cosmos"),
+        getCosmosAPY("osmo"),
         getCosmosTVL(),
         getBnbApy(),
         getBnbTVL(),
@@ -66,6 +76,11 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
       setCosmosData({
         apy: cosmosApyResponse,
         tvl: Number(decimalize(cosmosTvlResponse)),
+      });
+      console.log(osmoApyResponse, "osmoApyResponse");
+      setOsmoData({
+        apy: osmoApyResponse,
+        tvl: 0,
       });
       setBnbData({
         apy: bnbApyResponse,
@@ -80,6 +95,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     cosmosData: cosmosData,
     bnbData: bnbData,
     tokenPrices: prices,
+    osmoData,
   };
 
   return (

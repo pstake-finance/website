@@ -80,8 +80,24 @@ body {
   left: -35px;
 }
 
-.feature-circle-red:hover {
+.feature-circle-red:hover, .feature-circle-one:hover {
   transform: scale(1.1);
+}
+
+.feature-circle-one {
+  width: 97px;
+  height: 96px;
+  box-shadow: inset 0 3.26418px 7.18121px rgb(255 255 255 / 23%);
+  transform: rotate(-150deg);
+  transition: all 0.2s ease-in-out;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25px;
+  left: -35px;
+}
+
+.feature-circle-one.purple{
+  background: linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%);
 }
 
 .feature-circle-two {
@@ -98,6 +114,10 @@ body {
 
 .feature-circle-two.violet{
   background: radial-gradient(73.4% 73.4% at 88.37% 59.95%,#46509f 0,#595d7b 100%);
+}
+
+.feature-circle-two.purple{
+  background: linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%);
 }
 
 .feature-circle-two.yellow{

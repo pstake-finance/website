@@ -41,6 +41,7 @@ module.exports = {
       "red-light": "#cb575bfa",
     },
     backgroundImage: {
+      osmoPrimaryButton: "linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%)",
       homeBannerBg: "url('/images/bg_images/home_bg.svg')",
       immunefiWhite: "url('/images/audits/immunefi_header.svg')",
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
@@ -55,6 +56,8 @@ module.exports = {
       homePageBg2: `url('/images/bg_images/bg_lane.png')`,
       homePageBg3: `url('/images/bg_images/home_bg2.svg')`,
       cosmosCard: "linear-gradient(287.41deg,#2f3148 4.63%,#5c4243 98.79%)",
+      osmoCard:
+        "linear-gradient(80.17deg, #7268FD -4.31%, #CA2EBD 111.08%, #CA2EBD 127.68%)",
       bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
       ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
       xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
@@ -62,11 +65,14 @@ module.exports = {
         "url('/images/bg_images/eth_banner_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0%, #FFFFFF 0%, #F5F5F5 50.14%, #D3D3D3 100%)",
       atomBanner:
         "url('/images/bg_images/atomBanner2.svg'), url('/images/bg_images/atomBanner1.svg') ",
+      osmoBanner:
+        "url('/images/bg_images/osmoBanner2.svg'), radial-gradient(87.58% 251.27% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(215, 199, 245, 0.3) 100%) ",
       bnbBanner:
         "url('/images/bg_images/binance_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0,#fff 0,#fffef8 45.83%,#fffffd 100%)",
       lsmTag:
         "linear-gradient(91deg, rgba(196, 3, 11, 0.60) -15.72%, rgba(30, 0, 3, 0.60) 125.37%)",
-      lsmHighlight: 'linear-gradient(rgba(140, 2, 8, 1), rgba(211, 73, 79, 1), rgba(140, 2, 8, 1))'
+      lsmHighlight:
+        "linear-gradient(rgba(140, 2, 8, 1), rgba(211, 73, 79, 1), rgba(140, 2, 8, 1))",
     },
     backgroundColor: {
       none: "none",
@@ -162,11 +168,13 @@ module.exports = {
         atomBanner: "30%, cover",
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
+        osmoBanner: "25%, cover",
       },
       backgroundPosition: {
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",
         ethBanner: "100% 0,100% 100%",
+        osmoBanner: "100% 0,100% 100%",
       },
     },
   },

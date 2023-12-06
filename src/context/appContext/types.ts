@@ -3,6 +3,10 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
+  osmoData: {
+    apy: number;
+    tvl: number;
+  };
   bnbData: {
     apy: number;
     tvl: number;

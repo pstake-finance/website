@@ -62,6 +62,13 @@ const Banner = () => {
                   height={26}
                   className={"mx-2"}
                 />
+                <img
+                  src={"/images/networks/osmo.svg"}
+                  alt={"atom"}
+                  width={26}
+                  height={26}
+                  className={"mx-2"}
+                />
               </div>
             </div>
             <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#fff] mx-8 drop-shadow-lg">

@@ -3,6 +3,7 @@ import { AccordionData } from "./types";
 
 import { RefObject } from "react";
 import Icon from "../../molecules/Icon";
+import { useRouter } from "next/router";
 
 export function getRefValue<C>(ref: RefObject<C>) {
   return ref.current as C;
@@ -17,6 +18,7 @@ function AccordionItem({
   isOpen: boolean;
   btnOnClick: () => void;
 }) {
+  const router = useRouter();
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
@@ -31,12 +33,19 @@ function AccordionItem({
 
   return (
     <li className={`mb-2 ${isOpen ? "active" : ""}`}>
-      <h2 className="bg-[#25252a] py-3 px-5 mb-4 rounded-xl">
+      <h2
+        className={`${
+          router.pathname === "/osmo" ? "bg-[#201B43]" : "bg-[#25252a]"
+        }  py-3 px-5 mb-4 rounded-xl`}
+      >
         <button className="flex justify-between w-full" onClick={btnOnClick}>
           <span className="text-light-high font-medium text-sm leading-normal">
             {data.title}
           </span>
-          <Icon viewClass="icon w-[20px]" icon={isOpen ? "minus" : "plus"} />
+          <Icon
+            viewClass="icon !w-[16px] fill-[#70747C]"
+            icon={isOpen ? "minus" : "plus"}
+          />
         </button>
       </h2>
       <div

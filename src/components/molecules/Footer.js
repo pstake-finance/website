@@ -29,6 +29,8 @@ const Footer = () => {
     twitterUrl = STK_BNB_TWITTER_URL;
   } else if (router.pathname === "/atom") {
     twitterUrl = STK_ATOM_TWITTER_URL;
+  } else if (router.pathname === "/osmo") {
+    twitterUrl = STK_ATOM_TWITTER_URL;
   } else {
     twitterUrl = STK_ETH_TWITTER;
   }
@@ -73,7 +75,11 @@ const Footer = () => {
   ];
 
   return (
-    <div className={`bg-[#1d1d22] aos-init aos-animate ${router.pathname}`}>
+    <div
+      className={`${
+        router.pathname === "/osmo" ? "bg-[#140F34]" : "bg-[#1d1d22]"
+      }  aos-init aos-animate ${router.pathname}`}
+    >
       <div className="sectionContainer py-[100px] md:py-[40px]">
         <h3 className="sectionTitle mb-4">{t("Explore the Community")}</h3>
         <p className="sectionSubTitle max-w-[700px] mx-auto mb-8">
@@ -92,7 +98,11 @@ const Footer = () => {
                   <a
                     href={item.url}
                     target="_blank"
-                    className="bg-[#25252a] flex items-center md:m-2 md:p-4 m-4 p-6 rounded-xl group"
+                    className={`${
+                      router.pathname === "/osmo"
+                        ? "bg-[#201B43]"
+                        : "bg-[#25252a]"
+                    }  flex items-center md:m-2 md:p-4 m-4 p-6 rounded-xl group`}
                     rel="noopener noreferrer"
                   >
                     <div
@@ -102,11 +112,13 @@ const Footer = () => {
                             ? "group-hover:bg-[#f0b90b]"
                             : router.pathname === "/atom"
                             ? "group-hover:bg-[#595d7b]"
+                            : router.pathname === "/osmo"
+                            ? "group-hover:bg-[#3f3f45]"
                             : "group-hover:bg-[#e50913]"
                         }`}
                     >
                       <Icon
-                        viewClass={`social_icon_img w-[22px] fill-[#70747c] group-hover:fill-[#fff]`}
+                        viewClass={`social_icon_img w-[22px] fill-[#fff] group-hover:fill-[#fff]`}
                         icon={item.icon}
                       />
                     </div>
