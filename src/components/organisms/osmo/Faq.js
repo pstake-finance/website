@@ -13,7 +13,7 @@ const accordionItems = [
   {
     title: "Why do I get less OSMO for my OSMO?",
     content:
-      "stkOSMO follows an exchange rate model (also known as the cToken Model), which results in stkOSMO increasing in value against OSMO as the protocol accrues staking rewards. Thus, 1 stkATOM is worth more after each reward epoch or 24 hours. Liquid stakers are given stkOSMO tokens at the prevailing exchange rate at the moment they stake.",
+      "stkOSMO follows an exchange rate model (also known as the cToken Model), which results in stkOSMO increasing in value against OSMO as the protocol accrues staking rewards. Thus, 1 stkOSMO is worth more after each reward epoch or 24 hours. Liquid stakers are given stkOSMO tokens at the prevailing exchange rate at the moment they stake.",
   },
   {
     title: "What is the unbonding period for stkOSMO?",
@@ -23,7 +23,7 @@ const accordionItems = [
   {
     title: "Does pSTAKE charge any fees for liquid staking OSMO?",
     content:
-      "Yes, pSTAKE charges a 10% protocol fee solely on auto-compounded staking rewards. No additional fees are applied for standard staking or unstaking operations. Please also note that for the ‘flash unstake’ feature, a nominal xx% fee is charged to offer instant redemptions.",
+      "Yes, pSTAKE charges a 10% protocol fee solely on auto-compounded staking rewards. No additional fees are applied for standard staking or unstaking operations. Please also note that for the ‘flash unstake’ feature, a nominal 1% fee is charged to offer instant redemptions.",
   },
   {
     title: "Where is stkOSMO minted?",
