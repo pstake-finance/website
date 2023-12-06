@@ -18,7 +18,7 @@ const accordionItems = [
   {
     title: "What is the unbonding period for stkOSMO?",
     content:
-      "Usually, the onbonding process of staked OSMO is 14 days. If regularly unstaked, users can get the underlying OSMO back for stkOSMO in ~14 days. Interestingly, pSTAKE provides a unique ‘Flash Unstake’ feature, which allows for instant unbonding if the daily deposits match withdrawal requests.",
+      "Usually, the unbonding process of staked OSMO is 14-17 days. If regularly unstaked, users can get the underlying OSMO back for stkOSMO in ~14 days. Interestingly, pSTAKE provides a unique ‘Flash Unstake’ feature, which allows for instant unbonding if the daily deposits match withdrawal requests.",
   },
   {
     title: "Does pSTAKE charge any fees for liquid staking OSMO?",

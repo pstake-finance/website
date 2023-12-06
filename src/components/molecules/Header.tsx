@@ -36,6 +36,9 @@ import {
   STK_ETH_DOCS,
   STK_OSMO_FAQ_URL,
   STK_OSMO_SECURITY_AUDIT_URL,
+  OSMOSIS_URL,
+  STK_ODMO_TWITTER_URL,
+  OSMO_URL,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -117,8 +120,8 @@ const Header = () => {
     auditURL = STK_OSMO_SECURITY_AUDIT_URL;
     docsURL = STK_ATOM_DOCS_URL;
     faqURL = STK_OSMO_FAQ_URL;
-    appURL = ATOM_URL;
-    twitterUrl = STK_ATOM_TWITTER_URL;
+    appURL = OSMO_URL;
+    twitterUrl = STK_ODMO_TWITTER_URL;
   } else if (router.pathname === "/eth/testnet") {
     auditURL = STK_ATOM_SECURITY_AUDIT_URL;
     docsURL = STK_ETH_DOCS;
@@ -235,17 +238,17 @@ const Header = () => {
           >
             <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
               <img
-                src={"/images/stkAtom.svg"}
+                src={"/images/stkOsmo.svg"}
                 alt={"stkAtom"}
                 width={"16px"}
                 height={"16px"}
                 className="logo mr-2.5"
               />
-              LSM support now live on pSTAKE. Liquid stake your already staked
-              ATOM&nbsp;
+              stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
+              validators&nbsp;
               <a
                 className="link underline"
-                href={"https://cosmos.pstake.finance/"}
+                href={OSMOSIS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >

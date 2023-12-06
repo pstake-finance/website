@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
-import { ATOM_URL } from "../../../utils/config";
+import { ATOM_URL, OSMO_URL } from "../../../utils/config";
 import { decimalize, formatNumber } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
@@ -40,7 +40,7 @@ const Banner = () => {
           <ButtonLink
             className={`w-[200px] mx-auto md:py-2 md:text-sm`}
             variant={"custom"}
-            href={ATOM_URL}
+            href={OSMO_URL}
             scale="lg"
             customButtonClass="bg-osmoPrimaryButton text-light-high"
             target={"_blank"}
