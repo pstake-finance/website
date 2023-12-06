@@ -17,7 +17,7 @@ const Features = () => {
         "Swap stkOSMO on Osmosis or use pSTAKE's unique Flash Unstake feature to receive liquid OSMO.",
     },
     {
-      title: "Safe, Secure, and Solid OSMO liquid staking",
+      title: "Safe, Secure, and Solid",
       icon: "usecase3",
       content:
         "pSTAKE’s implementation on the Persistence core-1 chain is audited by leading security firms like Halborn and Oak Security with an active Immunefi Bug Bounty program",

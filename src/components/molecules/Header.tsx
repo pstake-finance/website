@@ -34,6 +34,8 @@ import {
   ETH_URL,
   STK_ETH_TWITTER,
   STK_ETH_DOCS,
+  STK_OSMO_FAQ_URL,
+  STK_OSMO_SECURITY_AUDIT_URL,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -109,6 +111,12 @@ const Header = () => {
     auditURL = STK_ATOM_SECURITY_AUDIT_URL;
     docsURL = STK_ATOM_DOCS_URL;
     faqURL = STK_ATOM_FAQ_URL;
+    appURL = ATOM_URL;
+    twitterUrl = STK_ATOM_TWITTER_URL;
+  } else if (router.pathname === "/osmo") {
+    auditURL = STK_OSMO_SECURITY_AUDIT_URL;
+    docsURL = STK_ATOM_DOCS_URL;
+    faqURL = STK_OSMO_FAQ_URL;
     appURL = ATOM_URL;
     twitterUrl = STK_ATOM_TWITTER_URL;
   } else if (router.pathname === "/eth/testnet") {

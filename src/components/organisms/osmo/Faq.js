@@ -54,7 +54,7 @@ const accordionItems = [
 const Faq = () => {
   return (
     <>
-      <div id="stkAtomFaqs" className="bg-[#140F34]">
+      <div id="stkOsmoFaqs" className="bg-[#140F34]">
         <div className="sectionContainer py-[65px] md:py-[35px]">
           <h1 className="sectionTitle mb-8">FAQs about OSMO Liquid Staking</h1>
           <div className="max-w-[700px] mx-auto">

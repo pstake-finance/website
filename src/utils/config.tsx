@@ -197,9 +197,11 @@ export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
 export const STK_ATOM_SECURITY_AUDIT_URL =
   "https://github.com/persistenceOne/pStake-auditReports/tree/main/stkATOM";
-export const STK_ATOM_DOCS_URL =
-  "https://blog.pstake.finance/category/stkatom/";
+export const STK_ATOM_DOCS_URL = "https://blog.pstake.finance";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
+export const STK_OSMO_FAQ_URL = "#stkOsmoFaqs";
+export const STK_OSMO_SECURITY_AUDIT_URL =
+  "https://github.com/persistenceOne/pStake-auditReports";
 export const ATOM_URL = "https://app.pstake.finance";
 export const OSMO_URL = "https://app.pstake.finance";
 export const ETH_URL = "https://testnet.app.pstake.finance/eth";

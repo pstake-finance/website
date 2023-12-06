@@ -29,6 +29,8 @@ const Footer = () => {
     twitterUrl = STK_BNB_TWITTER_URL;
   } else if (router.pathname === "/atom") {
     twitterUrl = STK_ATOM_TWITTER_URL;
+  } else if (router.pathname === "/osmo") {
+    twitterUrl = STK_ATOM_TWITTER_URL;
   } else {
     twitterUrl = STK_ETH_TWITTER;
   }
