@@ -10,6 +10,8 @@ import {
   STK_ATOM_BLOG_THREE_IMAGE_URL,
   STK_OSMO_BLOG_ONE_URL,
   STK_OSMO_BLOG_ONE_IMAGE_URL,
+  STK_OSMO_BLOG_TWO_URL,
+  STK_OSMO_BLOG_TWO_IMAGE_URL,
 } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
@@ -21,6 +23,11 @@ const FeaturedBlogs = () => {
       title: "OSMO Liquid Staking",
       blogLink: STK_OSMO_BLOG_ONE_URL,
       imageLink: STK_OSMO_BLOG_ONE_IMAGE_URL,
+    },
+    {
+      title: "OSMO liquid staking NOW LIVE",
+      blogLink: STK_OSMO_BLOG_TWO_URL,
+      imageLink: STK_OSMO_BLOG_TWO_IMAGE_URL,
     },
   ];
   return (
