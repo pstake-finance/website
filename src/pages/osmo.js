@@ -17,7 +17,7 @@ const Atom = () => {
       <Features />
       {/*<Comparison />*/}
       <LiquidStakingSteps />
-      <EcosystemSlider />
+      {/*<EcosystemSlider />*/}
       {/*<Guides />*/}
       {/*<Validators />*/}
       <Audited />

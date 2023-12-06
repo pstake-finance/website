@@ -13,11 +13,11 @@ const Audited = () => {
     },
     {
       link: STKATOM_OAK_AUDIT_REPORT,
-      image: "immunefi_blue",
+      image: "oak_blue",
     },
     {
       link: STKATOM_OAK_AUDIT_REPORT,
-      image: "oak_blue",
+      image: "immunefi_blue",
     },
   ];
   return (

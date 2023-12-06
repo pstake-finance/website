@@ -8,7 +8,7 @@ const Features = () => {
       title: "Decentralize your OSMO stake",
       icon: "usecase1",
       content:
-        "Your OSMO deposits on pSTAKE get staked with 75 Osmosis validators in the background based on on-chain data that optimizes for decentralization",
+        "Deposit any non-zero amount of OSMO to stake through pSTAKE’s diverse validator set of 75 automatically selected validators to decentralize the Osmosis network & earn staking rewards.",
     },
     {
       title: "Get OSMO liquidity in a flash",

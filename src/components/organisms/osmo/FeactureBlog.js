@@ -8,6 +8,8 @@ import {
   STK_ATOM_BLOG_URL,
   STK_ATOM_BLOG_THREE_URL,
   STK_ATOM_BLOG_THREE_IMAGE_URL,
+  STK_OSMO_BLOG_ONE_URL,
+  STK_OSMO_BLOG_ONE_IMAGE_URL,
 } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
@@ -16,19 +18,9 @@ const FeaturedBlogs = () => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: "Cosmos LSM",
-      blogLink: STK_ATOM_BLOG_ONE_URL,
-      imageLink: STK_ATOM_BLOG_ONE_IMAGE_URL,
-    },
-    {
-      title: "stkATOM User Guide",
-      blogLink: STK_ATOM_BLOG_TWO_URL,
-      imageLink: STK_ATOM_BLOG_TWO_IMAGE_URL,
-    },
-    {
-      title: "stkATOM Exchange Rate Mechanics",
-      blogLink: STK_ATOM_BLOG_THREE_URL,
-      imageLink: STK_ATOM_BLOG_THREE_IMAGE_URL,
+      title: "OSMO Liquid Staking",
+      blogLink: STK_OSMO_BLOG_ONE_URL,
+      imageLink: STK_OSMO_BLOG_ONE_IMAGE_URL,
     },
   ];
   return (
@@ -38,7 +30,7 @@ const FeaturedBlogs = () => {
         data-aos="fade-up"
       >
         <h3 className="sectionTitle mb-8">{t("FEATURED_BLOGS")}</h3>
-        <div className="flex flex-wrap justify-center mb-8">
+        <div className="flex flex-wrap justify-center mb-4">
           {list.map((item, index) => (
             <div
               className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
@@ -69,24 +61,6 @@ const FeaturedBlogs = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="">
-          <ButtonLink
-            className={`w-[200px] mx-auto md:py-2 md:text-sm`}
-            variant={"custom"}
-            customButtonClass={"bg-[#595d7b] text-light-high"}
-            href={STK_ATOM_BLOG_URL}
-            scale="lg"
-            target={"_blank"}
-            isDisabled={false}
-            focusEffect={true}
-          >
-            {t("READ_ALL")}
-            <Icon
-              viewClass="right-arrow w-[14px] fill-[#fff]"
-              icon="right-arrow"
-            />
-          </ButtonLink>
         </div>
       </div>
     </div>

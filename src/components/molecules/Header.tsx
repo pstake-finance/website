@@ -127,6 +127,12 @@ const Header = () => {
       symbol: "ATOM",
     },
     {
+      optionName: "Osmosis",
+      optionLink: "/osmo",
+      imgUrl: "/images/networks/osmo.svg",
+      symbol: "OSMO",
+    },
+    {
       optionName: "Ethereum",
       optionLink: "/eth/testnet",
       imgUrl: "/images/networks/ethereum.svg",
@@ -137,12 +143,6 @@ const Header = () => {
       optionLink: "/bnb",
       imgUrl: "/images/networks/bnb.svg",
       symbol: "BNB",
-    },
-    {
-      optionName: "Osmosis",
-      optionLink: "/osmo",
-      imgUrl: "/images/networks/osmo.svg",
-      symbol: "OSMO",
     },
   ];
 
@@ -177,10 +177,6 @@ const Header = () => {
     {
       optionName: t("GOVERNANCE"),
       optionLink: SNANPSHOT_URL,
-    },
-    {
-      optionName: "Crew3",
-      optionLink: CREW3_URL,
     },
   ];
 

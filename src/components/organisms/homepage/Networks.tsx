@@ -24,7 +24,7 @@ const Networks = () => {
     {
       asset: "Osmosis",
       network: "osmosis",
-      imageUrl: "/images/networks/atom.svg",
+      imageUrl: "/images/networks/osmo.svg",
       apy: osmoData!.apy === -1 ? 9.94 : osmoData.apy,
       buttonText: "Start Staking",
       buttonUrl: "/osmo",
