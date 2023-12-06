@@ -200,7 +200,8 @@ export const STK_ATOM_SECURITY_AUDIT_URL =
 export const STK_ATOM_DOCS_URL =
   "https://blog.pstake.finance/category/stkatom/";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
-export const ATOM_URL = "https://cosmos.pstake.finance/";
+export const ATOM_URL = "https://app.pstake.finance";
+export const OSMO_URL = "https://app.pstake.finance";
 export const ETH_URL = "https://testnet.app.pstake.finance/eth";
 export const STK_ETH_TWITTER = "https://twitter.com/pSTAKE_ETH";
 export const STK_ETH_DOCS = "https://blog.pstake.finance/category/stketh/";

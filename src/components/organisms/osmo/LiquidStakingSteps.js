@@ -1,5 +1,5 @@
 import React from "react";
-import { ATOM_URL } from "../../../utils/config";
+import { ATOM_URL, OSMO_URL } from "../../../utils/config";
 
 const LiquidStakingSteps = () => {
   const list = [
@@ -35,7 +35,7 @@ const LiquidStakingSteps = () => {
                 key={index}
               >
                 <a
-                  href={ATOM_URL}
+                  href={OSMO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="icon-box w-[70px] h-[70px] bg-[#1F1A42] cursor-pointer
