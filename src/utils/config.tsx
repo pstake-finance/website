@@ -172,7 +172,10 @@ export const IMMUNEFI_STK_ATOM_URL =
   "https://immunefi.com/bounty/pstakeoncosmos/";
 export const STK_ATOM_MIGRATION_URL =
   "https://forum.pstake.finance/t/discussion-on-migration-of-stkatom-from-ethereum-to-persistence-core-1/417";
-export const COSMOS_URL = "https://cosmos.pstake.finance/";
+export const COSMOS_URL =
+  "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos/";
+export const OSMOSIS_URL =
+  "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis";
 export const STK_OSMO_BLOG_ONE_URL =
   "https://blog.pstake.finance/2023/11/28/stkosmo-decentralizing-osmo-liquid-staking/";
 export const STK_OSMO_BLOG_ONE_IMAGE_URL =
@@ -183,6 +186,7 @@ export const STK_OSMO_BLOG_TWO_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2023/12/stkOSMO-Red-4-min.png";
 export const STK_ATOM_BLOG_URL =
   "https://blog.pstake.finance/category/stkatom/";
+export const STK_ODMO_TWITTER_URL = "https://twitter.com/pStakeFinance";
 export const STK_ATOM_TWITTER_URL =
   "https://twitter.com/pstake_cosmos?s=11&t=E_q2T3rK9Bwiywy_YCvo5A";
 export const STK_ATOM_BLOG_ONE_URL =
@@ -206,8 +210,10 @@ export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
 export const STK_OSMO_FAQ_URL = "#stkOsmoFaqs";
 export const STK_OSMO_SECURITY_AUDIT_URL =
   "https://github.com/persistenceOne/pStake-auditReports";
-export const ATOM_URL = "https://app.pstake.finance";
-export const OSMO_URL = "https://app.pstake.finance";
+export const ATOM_URL =
+  "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos/";
+export const OSMO_URL =
+  "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis";
 export const ETH_URL = "https://testnet.app.pstake.finance/eth";
 export const STK_ETH_TWITTER = "https://twitter.com/pSTAKE_ETH";
 export const STK_ETH_DOCS = "https://blog.pstake.finance/category/stketh/";

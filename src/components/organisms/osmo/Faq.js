@@ -11,14 +11,14 @@ const accordionItems = [
       "pSTAKE follows a new and decentralised automated stake delegation strategy that will distribute your OSMO stake evenly with 75 validators. These validators are selected automatically based on parameters such as voting power, commission, uptime, governance participation, and part of the active set without any slashing instance. \n",
   },
   {
-    title: "Why do I get less OSMO for my OSMO?",
+    title: "Why do I get less stkOSMO for my OSMO?",
     content:
       "stkOSMO follows an exchange rate model (also known as the cToken Model), which results in stkOSMO increasing in value against OSMO as the protocol accrues staking rewards. Thus, 1 stkOSMO is worth more after each reward epoch or 24 hours. Liquid stakers are given stkOSMO tokens at the prevailing exchange rate at the moment they stake.",
   },
   {
     title: "What is the unbonding period for stkOSMO?",
     content:
-      "Usually, the onbonding process of staked OSMO is 14 days. If regularly unstaked, users can get the underlying OSMO back for stkOSMO in ~14 days. Interestingly, pSTAKE provides a unique ‘Flash Unstake’ feature, which allows for instant unbonding if the daily deposits match withdrawal requests.",
+      "Usually, the unbonding process of staked OSMO is 14-17 days. If regularly unstaked, users can get the underlying OSMO back for stkOSMO in ~14 days. Interestingly, pSTAKE provides a unique ‘Flash Unstake’ feature, which allows for instant unbonding if the daily deposits match withdrawal requests.",
   },
   {
     title: "Does pSTAKE charge any fees for liquid staking OSMO?",
