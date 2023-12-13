@@ -31,6 +31,7 @@ const AppContext = createContext<AppState>({
   tokenPrices: {
     BNB: 0,
     ATOM: 0,
+    OSMO: 0,
   },
 });
 
@@ -54,6 +55,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
   const [prices, setPrices] = useState<any>({
     BNB: 0,
     ATOM: 0,
+    OSMO: 0,
   });
 
   useEffect(() => {

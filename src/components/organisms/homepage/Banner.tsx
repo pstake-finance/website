@@ -7,7 +7,7 @@ import { useApp } from "../../../context/appContext/AppContext";
 import { numberFormat } from "../../../utils/helpers";
 
 const Banner = () => {
-  const { cosmosData, bnbData, tokenPrices } = useApp();
+  const { cosmosData, bnbData, tokenPrices, osmoData } = useApp();
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#fff] bg-cover bg-no-repeat">
@@ -79,7 +79,8 @@ const Banner = () => {
                 $
                 {numberFormat(
                   Number(cosmosData.tvl * tokenPrices.ATOM) +
-                    Number(bnbData.tvl * tokenPrices.BNB),
+                    Number(bnbData.tvl * tokenPrices.BNB) +
+                    Number(osmoData.tvl * tokenPrices.OSMO),
                   3
                 )}
               </p>

@@ -52,21 +52,23 @@ export const fetchTokenPrices = async () => {
   let data = {
     BNB: 0,
     ATOM: 0,
+    OSMO: 0,
   };
   try {
-    const [stkBnb, stkatom] = await Promise.all([
-      Axios.get(`https://api.coingecko.com/api/v3/coins/binancecoin`),
-      Axios.get(`https://api.coingecko.com/api/v3/coins/cosmos`),
-    ]);
-    console.log(stkBnb, stkatom, "prices fetchTokenPrices");
-    if (stkBnb && stkBnb.data) {
-      const stkBnbPrice: number = stkBnb.data.market_data.current_price.usd;
-      data.BNB = stkBnbPrice;
-    }
-    if (stkatom && stkatom.data) {
-      const stkAtomPrice: number = stkatom.data.market_data.current_price.usd;
-      data.ATOM = stkAtomPrice;
-    }
+    const tokens = ["cosmos", "osmosis", "binancecoin"];
+    const pricesResponse = await Axios.get(
+      `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
+        ","
+      )}&vs_currencies=usd`,
+      {
+        headers: {
+          "x-cg-pro-api-key": process.env.NEXT_PUBLIC_COINGECKO_API_KEY,
+        },
+      }
+    );
+    data.BNB = Number(pricesResponse.data["binancecoin"].usd);
+    data.ATOM = Number(pricesResponse.data["cosmos"].usd);
+    data.OSMO = Number(pricesResponse.data["osmosis"].usd);
     return data;
   } catch (e) {
     return data;
