@@ -14,6 +14,7 @@ export interface AppState {
   tokenPrices: {
     BNB: number;
     ATOM: number;
+    OSMO: 0;
   };
 }
 

@@ -35,6 +35,8 @@ export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
 export const STK_OSMO_APY_API = "https://api.persistence.one/osmosis-apr";
 export const STK_ATOM_TVL_URL =
   "https://api.persistence.one/pstake/stkatom/atom_tvu";
+export const STK_OSMO_TVL_API =
+  "https://api.persistence.one/pstake/stkosmo/osmo_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const UMEE_URL =
@@ -50,21 +52,23 @@ export const fetchTokenPrices = async () => {
   let data = {
     BNB: 0,
     ATOM: 0,
+    OSMO: 0,
   };
   try {
-    const [stkBnb, stkatom] = await Promise.all([
-      Axios.get(`https://api.coingecko.com/api/v3/coins/binancecoin`),
-      Axios.get(`https://api.coingecko.com/api/v3/coins/cosmos`),
-    ]);
-    console.log(stkBnb, stkatom, "prices fetchTokenPrices");
-    if (stkBnb && stkBnb.data) {
-      const stkBnbPrice: number = stkBnb.data.market_data.current_price.usd;
-      data.BNB = stkBnbPrice;
-    }
-    if (stkatom && stkatom.data) {
-      const stkAtomPrice: number = stkatom.data.market_data.current_price.usd;
-      data.ATOM = stkAtomPrice;
-    }
+    const tokens = ["cosmos", "osmosis", "binancecoin"];
+    const pricesResponse = await Axios.get(
+      `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
+        ","
+      )}&vs_currencies=usd`,
+      {
+        headers: {
+          "x-cg-pro-api-key": process.env.NEXT_PUBLIC_COINGECKO_API_KEY,
+        },
+      }
+    );
+    data.BNB = Number(pricesResponse.data["binancecoin"].usd);
+    data.ATOM = Number(pricesResponse.data["cosmos"].usd);
+    data.OSMO = Number(pricesResponse.data["osmosis"].usd);
     return data;
   } catch (e) {
     return data;
@@ -439,9 +443,11 @@ export const fetchShadeCollateral = async () => {
   }
 };
 
-export const getCosmosTVL = async () => {
+export const getCosmosTVL = async (prefix: string) => {
   try {
-    const res = await Axios.get(STK_ATOM_TVL_URL);
+    const res = await Axios.get(
+      prefix === "cosmos" ? STK_ATOM_TVL_URL : STK_OSMO_TVL_API
+    );
     if (res && res.data) {
       return res!.data!.amount!.amount;
     }
