@@ -62,13 +62,15 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         cosmosApyResponse,
         osmoApyResponse,
         cosmosTvlResponse,
+        osmoTvlResponse,
         bnbApyResponse,
         bnbTvlResponse,
         tokenPrices,
       ] = await Promise.all([
         getCosmosAPY("cosmos"),
         getCosmosAPY("osmo"),
-        getCosmosTVL(),
+        getCosmosTVL("cosmos"),
+        getCosmosTVL("osmo"),
         getBnbApy(),
         getBnbTVL(),
         fetchTokenPrices(),
@@ -77,10 +79,9 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         apy: cosmosApyResponse,
         tvl: Number(decimalize(cosmosTvlResponse)),
       });
-      console.log(osmoApyResponse, "osmoApyResponse");
       setOsmoData({
         apy: osmoApyResponse,
-        tvl: 0,
+        tvl: Number(decimalize(osmoTvlResponse)),
       });
       setBnbData({
         apy: bnbApyResponse,

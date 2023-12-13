@@ -35,6 +35,8 @@ export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
 export const STK_OSMO_APY_API = "https://api.persistence.one/osmosis-apr";
 export const STK_ATOM_TVL_URL =
   "https://api.persistence.one/pstake/stkatom/atom_tvu";
+export const STK_OSMO_TVL_API =
+  "https://api.persistence.one/pstake/stkosmo/osmo_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const UMEE_URL =
@@ -439,9 +441,11 @@ export const fetchShadeCollateral = async () => {
   }
 };
 
-export const getCosmosTVL = async () => {
+export const getCosmosTVL = async (prefix: string) => {
   try {
-    const res = await Axios.get(STK_ATOM_TVL_URL);
+    const res = await Axios.get(
+      prefix === "cosmos" ? STK_ATOM_TVL_URL : STK_OSMO_TVL_API
+    );
     if (res && res.data) {
       return res!.data!.amount!.amount;
     }
