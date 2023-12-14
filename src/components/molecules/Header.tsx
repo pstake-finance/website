@@ -244,7 +244,7 @@ const Header = () => {
                 height={"16px"}
                 className="logo mr-2.5"
               />
-              stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
+              stkOSMO is LIVE on pSTAKE. Liquid Stake your OSMO with 75
               validators&nbsp;
               <a
                 className="link underline"
