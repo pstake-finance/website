@@ -35,8 +35,9 @@ const ValidatorTable = ({ data, columns }: TableProps) => {
             </div>
           ),
           delegationAmount: (
-            <p key={index} className={"px-1.5 py-1 inline-flex"}>
-              {data.delegationAmount}
+            <p key={index} className={"px-1.5 py-1"}>
+              {data.delegationAmount}&nbsp;
+              <span className={"text-light-mid"}>OSMO</span>
             </p>
           ),
         })
