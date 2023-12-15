@@ -6,7 +6,7 @@ import Icon from "../../../molecules/Icon";
 const list = [
   {
     name: "stkATOM",
-    logoUrl: "/images/stkATOM.svg",
+    logoUrl: "/images/stkAtom.svg",
   },
 ];
 

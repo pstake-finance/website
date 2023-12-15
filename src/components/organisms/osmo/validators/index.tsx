@@ -13,6 +13,7 @@ const ValidatorsList = () => {
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
   const fetchInitialData = useAppStore((state) => state.fetchInitialData);
+
   const [validatorsInfo, validatorsInfoLoader] = useAppStore(
     (state) => [state.validatorsInfo, state.validatorsInfoLoader],
     shallow
@@ -29,6 +30,7 @@ const ValidatorsList = () => {
         setUpdatedTime(lastTime!);
       } else {
         const currentTime = new Date().toLocaleString();
+        setUpdatedTime(currentTime);
         localStorage.setItem("last-update", currentTime);
       }
       setDataList(validatorsInfo.osmo);
@@ -182,7 +184,7 @@ const ValidatorsList = () => {
                 validatorsInfoLoader ? (
                   <Spinner size={"medium"} />
                 ) : (
-                  "Assets not found"
+                  "Data not found"
                 )
               }
             />

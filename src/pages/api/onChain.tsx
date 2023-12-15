@@ -56,7 +56,7 @@ export const getValidators = async (
             validators.push({
               name: res.description!.moniker!,
               identity: `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/osmosis/moniker/${res.operatorAddress}.png`,
-              weight: Number(decimalize(item.weight, 18)).toFixed(6),
+              weight: (Number(decimalize(item.weight, 18)) * 100).toFixed(6),
               delegationAmount: Number(
                 decimalize(item.delegatedAmount, 6)
               ).toFixed(),
