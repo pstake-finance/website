@@ -96,7 +96,7 @@ const Header = () => {
   let docsURL;
   let faqURL;
   let twitterUrl;
-  let appURL;
+  let appURL = "https://app.pstake.finance/";
 
   if (router.pathname === "/") {
     auditURL = SECURITY_AUDIT_URL;

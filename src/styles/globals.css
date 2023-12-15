@@ -209,3 +209,150 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+.custom-table thead tr th:first-child{
+  text-align: left;
+  width: 50%;
+  /*border-top-left-radius: 6px;*/
+  /*border-bottom-left-radius: 6px;*/
+}
+.custom-table table, th, td {
+  border:  0.5px solid #3E3E3E;
+  border-collapse: collapse;
+}
+
+.custom-table thead tr th{
+  padding: 12px 40px;
+  font-size: 14px;
+  height: 42px;
+  color: #FBFBFB;
+  font-weight: 600;
+  position: sticky;
+  top: -1px;
+  background: #1D1D1F;
+  text-align: right;
+}
+
+/*.custom-table thead tr th:last-child{*/
+/*  text-align: center;*/
+/*  padding:12px 32px 12px 16px;*/
+/*  !*border-top-right-radius: 6px;*!*/
+/*  !*border-bottom-right-radius: 6px;*!*/
+/*}*/
+
+.custom-table tbody{
+  @apply bg-black-600;
+}
+
+.custom-table tbody tr:first-child td{
+  padding-top: 20px !important;
+}
+.custom-table tbody tr:last-child td{
+  padding-bottom: 20px !important;
+}
+.custom-table tbody tr td {
+  padding: 12px 40px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+  color: #FBFBFB;
+}
+
+.custom-table tbody tr td:first-child{
+  padding: 12px 4px 12px 40px;
+  width: 50%;
+  font-size: 16px;
+}
+
+.custom-table tbody tr td:nth-child(2), .custom-table thead tr th:nth-child(2){
+  width: 20%;
+}
+
+.custom-table tbody tr td:last-child, .custom-table thead tr th:last-child{
+  width: 30%;
+}
+
+.spinner.large {
+  width: 2rem;
+  height: 2rem;
+}
+
+.spinner.medium {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.spinner.small {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+
+/* custom spinner */
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.spinnerSecondary::after {
+  border: 0.2em solid #47c28b;
+  border-right-color: #9bccb6;
+  border-bottom-color: #9bccb6;
+  border-radius: 50%;
+  -webkit-animation: spinner-border 0.75s linear infinite;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.spinner {
+  border: 0.15em solid currentColor;
+  border-right-color: transparent;
+  -webkit-animation: spinner-border 0.75s linear infinite;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.spinner.secondary {
+  border: 0.15em solid #A6A6A6;
+  border-right-color: #FFFFFF;
+  -webkit-animation: spinner-border 0.75s linear infinite;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.spinner.light {
+  color: #f8f9fa !important;
+}
+
+.dropDownButton.large {
+  font-size: 20px;
+  padding: 8px 16px;
+  font-weight: 600;
+  line-height: 30px;
+  height: 48px;
+}
+
+.dropDownButton.medium {
+  font-size: 16px;
+  padding: 8px 16px;
+  font-weight: 600;
+  line-height: 24px;
+  height: 40px;
+}
+
+.dropDownButton.small {
+  font-size: 12px;
+  padding: 8px 16px;
+  font-weight: 600;
+  line-height: 18px;
+  height: 32px;
+}
+
+

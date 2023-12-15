@@ -281,6 +281,45 @@ export const CHAIN_ID: any = {
   },
 };
 
+export const ChainExternalInfo: any = {
+  Testnet: {
+    persistence: {
+      chainID: "test-core-2",
+      explorer: "https://testnet.mintscan.io/persistence-testnet",
+    },
+    cosmos: {
+      chainID: "theta-testnet-001",
+      explorer: "https://testnet.mintscan.io/cosmoshub-testnet",
+    },
+    osmosis: {
+      chainID: "osmo-test-5",
+      explorer: "https://testnet.mintscan.io/osmosis-testnet",
+    },
+    dydx: {
+      chainID: "tytx-test-1",
+      explorer: "https://testnet.mintscan.io/dydx-testnet",
+    },
+  },
+  Mainnet: {
+    persistence: {
+      chainID: "core-1",
+      explorer: "https://mintscan.io/persistence",
+    },
+    cosmos: {
+      chainID: "cosmoshub-4",
+      explorer: "https://mintscan.io/cosmos",
+    },
+    osmosis: {
+      chainID: "osmosis-1",
+      explorer: "https://mintscan.io/osmosis",
+    },
+    dydx: {
+      chainID: "dydx-mainnet-1",
+      explorer: "https://mintscan.io/dydx",
+    },
+  },
+};
+
 export const ExternalChains: ExternalChainData = {
   Devnet: [
     {
@@ -456,9 +495,9 @@ export const ExternalChains: ExternalChainData = {
   ],
   Mainnet: [
     {
-      rpc: "https://rpc.cosmos.audit.one",
-      rest: "https://rest.cosmos.audit.one",
-      chainId: "cosmoshub-4",
+      rpc: "https://rpc.cosmos.audit.one/",
+      rest: "https://rest.cosmos.audit.one/",
+      chainId: ChainExternalInfo["Mainnet"].cosmos.chainID,
       chainName: "Cosmos Hub",
       stakeCurrency: {
         coinDenom: "ATOM",
@@ -497,7 +536,7 @@ export const ExternalChains: ExternalChainData = {
     {
       rpc: "https://rpc.core.persistence.one/",
       rest: "https://rest.core.persistence.one/",
-      chainId: "core-1",
+      chainId: ChainExternalInfo["Mainnet"].persistence.chainID,
       chainName: "Persistence",
       stakeCurrency: {
         coinDenom: "XPRT",
@@ -521,6 +560,12 @@ export const ExternalChains: ExternalChainData = {
           coinDecimals: 6,
           coinGeckoId: "persistence",
         },
+        {
+          coinDenom: "STKOSMO",
+          coinMinimalDenom: "stk/uosmo",
+          coinDecimals: 6,
+          coinGeckoId: "stk/uosmo",
+        },
       ],
       feeCurrencies: [
         {
@@ -538,6 +583,82 @@ export const ExternalChains: ExternalChainData = {
         bech32PrefixConsAddr: "persistencevalcons",
         bech32PrefixConsPub: "persistencevalconspub",
       },
+    },
+    {
+      rpc: "https://osmosis-rpc.polkachu.com",
+      rest: "https://osmosis-api.polkachu.com",
+      chainId: ChainExternalInfo["Mainnet"].osmosis.chainID,
+      chainName: "Osmosis",
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: {
+        bech32PrefixAccAddr: "osmo",
+        bech32PrefixAccPub: "osmopub",
+        bech32PrefixValAddr: "osmovaloper",
+        bech32PrefixValPub: "osmovaloperpub",
+        bech32PrefixConsAddr: "osmovalcons",
+        bech32PrefixConsPub: "osmovalconspub",
+      },
+      currencies: [
+        {
+          coinDenom: "OSMO",
+          coinMinimalDenom: "uosmo",
+          coinDecimals: 6,
+          coinGeckoId: "uosmo",
+        },
+      ],
+      feeCurrencies: [
+        {
+          coinDenom: "OSMO",
+          coinMinimalDenom: "uosmo",
+          coinDecimals: 6,
+          coinGeckoId: "uosmo",
+        },
+      ],
+      stakeCurrency: {
+        coinDenom: "OSMO",
+        coinMinimalDenom: "uosmo",
+        coinDecimals: 6,
+        coinGeckoId: "uosmo",
+      },
+    },
+    {
+      rpc: "https://rpc-dydx.keplr.app",
+      rest: "https://lcd-dydx.keplr.app",
+      chainId: "dydx-mainnet-1",
+      chainName: "dYdX",
+      stakeCurrency: {
+        coinDenom: "DYDX",
+        coinDecimals: 18,
+        coinMinimalDenom: "adydx",
+      },
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: {
+        bech32PrefixAccAddr: "dydx",
+        bech32PrefixAccPub: "dydxpub",
+        bech32PrefixValAddr: "dydxvaloper",
+        bech32PrefixValPub: "dydxvaloperpub",
+        bech32PrefixConsAddr: "dydxvalcons",
+        bech32PrefixConsPub: "dydxvalconspub",
+      },
+      currencies: [
+        {
+          coinDenom: "DYDX",
+          coinDecimals: 18,
+          coinMinimalDenom: "adydx",
+        },
+      ],
+      feeCurrencies: [
+        {
+          coinDenom: "DYDX",
+          coinDecimals: 18,
+          coinMinimalDenom: "adydx",
+        },
+      ],
+      features: [],
     },
   ],
 };

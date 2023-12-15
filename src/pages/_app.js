@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "../components/molecules/Header";
 import { ANALYTICS } from "../utils/config";
-import OneSignalReact from "react-onesignal";
 import Head from "next/head";
 import AppProvider from "../context/appContext/AppContext";
 import Script from "next/script";
@@ -19,6 +18,7 @@ const App = ({ Component, pageProps }) => {
   }, []);
 
   const router = useRouter();
+
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
@@ -30,7 +30,6 @@ const App = ({ Component, pageProps }) => {
   }, [router.events]);
 
   useEffect(() => {
-    OneSignalReact.init({ appId: process.env.NEXT_PUBLIC_ONE_SIGNAL_APP_ID });
     document.body.classList = "";
     document.getElementById("nav-bar").classList.add("navbar-white");
   });

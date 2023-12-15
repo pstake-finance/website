@@ -31,12 +31,13 @@ const STK_BNB_SUBGRAPH_API =
 
 export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
 export const OSMOSIS_POOL_APR_URL = "https://api.osmosis.zone/apr/v2/886";
-export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
-export const STK_OSMO_APY_API = "https://api.persistence.one/osmosis-apr";
+export const APY_API = "https://staging.api.persistence.one/pstake/stkatom/apy";
+export const STK_OSMO_APY_API =
+  "https://staging.api.persistence.one/osmosis-apr";
 export const STK_ATOM_TVL_URL =
-  "https://api.persistence.one/pstake/stkatom/atom_tvu";
+  "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
 export const STK_OSMO_TVL_API =
-  "https://api.persistence.one/pstake/stkosmo/osmo_tvu";
+  "https://staging.api.persistence.one/pstake/stkosmo/osmo_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const UMEE_URL =
@@ -331,7 +332,6 @@ export const fetchDexterPoolInfo = async () => {
       }),
     });
     const responseJson = await res.json();
-    console.log(responseJson, "responseJson");
     if (responseJson && responseJson.data) {
       const poolAggregate = responseJson.data.pool_weekly_aggregate_with_apr[0];
       const poolIncentiveAprList =
@@ -386,7 +386,6 @@ export const fetchShadeInfo = async () => {
       const atomStkATOM = res.data.find(
         (item: any) => item.id === "1d7f9ba8-b4be-4a34-a54d-63554f14f8fb"
       );
-      console.log(stkATOMSilk, "stkATOMSilk", atomStkATOM);
       return {
         stkATOMSilk: {
           apy: Number(stkATOMSilk.apr.total).toFixed(2),
@@ -503,5 +502,21 @@ export const getBnbApy = async () => {
   } catch (e) {
     console.log(e);
     return 0;
+  }
+};
+
+export const getAvatar = async (identity: string) => {
+  try {
+    const urlLink =
+      "https://keybase.io/_/api/1.0/user/lookup.json" +
+      `?key_suffix=${identity}&fields=pictures`;
+    const res = await Axios.get(urlLink);
+    const url = res?.data?.them[0]?.pictures?.primary?.url;
+    if (url) {
+      return url;
+    }
+    return "/images/profile.svg"; // return profile icon if url not exists
+  } catch (e) {
+    return "/images/profile.svg";
   }
 };
