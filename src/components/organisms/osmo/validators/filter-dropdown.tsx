@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useOnClickOutside } from "../../../../customHooks/useOnClickOutside";
 import Icon from "../../../molecules/Icon";
 
@@ -12,7 +12,6 @@ const list = [
 
 const FilterDropdown = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [activeList, setActiveList] = useState([]);
 
   const dropDownRef = useRef<HTMLDivElement>(null);
 
@@ -33,11 +32,7 @@ const FilterDropdown = () => {
         >
           <>
             <div
-              className={`${
-                activeList.length <= 0
-                  ? ""
-                  : "border-r-[1.5px] border-[#0F0F0F]"
-              } flex items-center !justify-between px-4 flex-1 h-[40px]`}
+              className={`flex items-center !justify-between px-4 flex-1 h-[40px]`}
             >
               <Image
                 width={24}
