@@ -63,6 +63,10 @@ body {
   fill: #fcfcfc;
 }
 
+.osmo-validators.navbar .dropDown .dropDownButton .icon {
+  fill: #fcfcfc;
+}
+
 .feature-circle-red {
   width: 97px;
   height: 96px;

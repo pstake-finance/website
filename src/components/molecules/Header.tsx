@@ -47,6 +47,7 @@ import ButtonLink from "../atoms/buttonLink/ButtonLink";
 import { useOnClickOutside } from "../../customHooks/useOnClickOutside";
 import { useWindowSize } from "../../customHooks/useWindowSize";
 import Button from "../atoms/button/Button";
+import OsmoHeader from "./osmo-header";
 
 const Header = () => {
   const { t } = useTranslation("common");
@@ -227,44 +228,45 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <div id="is-sticky" className="top-bar w-full fixed z-[100]">
-        {router.pathname !== "/bnb" ? (
-          <div
-            className={
-              !banner
-                ? "hidden"
-                : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
-            }
-          >
-            <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
-              <img
-                src={"/images/stkOsmo.svg"}
-                alt={"stkAtom"}
-                width={"16px"}
-                height={"16px"}
-                className="logo mr-2.5"
-              />
-              stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
-              validators&nbsp;
-              <a
-                className="link underline"
-                href={OSMOSIS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                now.
-              </a>
-            </p>
-            <div onClick={closeBanner}>
-              <Icon
-                viewClass="close w-[10px] h-[10px] fill-[#fff] absolute top-[13px] right-[20px] cursor-pointer"
-                icon="close"
-              />
+      {router.pathname !== "/osmo/validators" ? (
+        <div id="is-sticky" className="top-bar w-full fixed z-[100]">
+          {router.pathname !== "/bnb" ? (
+            <div
+              className={
+                !banner
+                  ? "hidden"
+                  : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
+              }
+            >
+              <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
+                <img
+                  src={"/images/stkOsmo.svg"}
+                  alt={"stkAtom"}
+                  width={"16px"}
+                  height={"16px"}
+                  className="logo mr-2.5"
+                />
+                stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
+                validators&nbsp;
+                <a
+                  className="link underline"
+                  href={OSMOSIS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  now.
+                </a>
+              </p>
+              <div onClick={closeBanner}>
+                <Icon
+                  viewClass="close w-[10px] h-[10px] fill-[#fff] absolute top-[13px] right-[20px] cursor-pointer"
+                  icon="close"
+                />
+              </div>
             </div>
-          </div>
-        ) : null}
-        <nav
-          className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
+          ) : null}
+          <nav
+            className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
             md:flex-wrap justify-start ${
               router.pathname !== "/osmo" &&
@@ -277,200 +279,118 @@ const Header = () => {
                 : ""
             } ${router.pathname.split("/")[1]}
           `}
-          id="nav-bar"
-        >
-          <div className="container  mx-auto px-4 flex flex-wrap items-center justify-between ">
-            <Link
-              className="bg-logoDark
+            id="nav-bar"
+          >
+            <div className="container  mx-auto px-4 flex flex-wrap items-center justify-between ">
+              <Link
+                className="bg-logoDark
                       [.is-sticky_&]:bg-logoLight w-[108px] h-[26px] bg-no-repeat bg-center"
-              href="/"
-            />
-            <Button
-              className={`${
-                router.pathname === "/"
-                  ? "[.is-sticky_&]:bg-red"
-                  : router.pathname === "/atom"
-                  ? "[.is-sticky_&]:bg-atomPrimary"
-                  : router.pathname === "/bnb"
-                  ? "[.is-sticky_&]:bg-bnbPrimary"
-                  : "[.is-sticky_&]:bg-red"
-              } -md:hidden md:py-2 !py-2.5 md:text-sm`}
-              variant={"custom"}
-              onClick={toggleMenu}
-              id={"toggleButton"}
-              scale="lg"
-              isDisabled={false}
-              customButtonClass={`bg-black-800 text-light-high ${
-                router.pathname === "/bnb"
-                  ? "[.is-sticky_&]:text-dark-high"
-                  : router.pathname === "/"
-              } text-[12px]`}
-            >
-              <Icon
-                viewClass="w-[14px] h-[14px] fill-[#fff]"
-                icon="hamberger"
+                href="/"
               />
-            </Button>
-            <div
-              className={`${
-                isOpen ? "md:transform-none" : "md:-translate-x-full"
-              } md:fixed md:top-0 md:left-0 md:z-40 md:w-[200px] md:h-screen md:transition-transform 
-               md:basis-auto md:basis-full md:grow menu-open
-               `}
-              id="navbarCollapse"
-            >
+              <Button
+                className={`${
+                  router.pathname === "/"
+                    ? "[.is-sticky_&]:bg-red"
+                    : router.pathname === "/atom"
+                    ? "[.is-sticky_&]:bg-atomPrimary"
+                    : router.pathname === "/bnb"
+                    ? "[.is-sticky_&]:bg-bnbPrimary"
+                    : "[.is-sticky_&]:bg-red"
+                } -md:hidden md:py-2 !py-2.5 md:text-sm`}
+                variant={"custom"}
+                onClick={toggleMenu}
+                id={"toggleButton"}
+                scale="lg"
+                isDisabled={false}
+                customButtonClass={`bg-black-800 text-light-high ${
+                  router.pathname === "/bnb"
+                    ? "[.is-sticky_&]:text-dark-high"
+                    : router.pathname === "/"
+                } text-[12px]`}
+              >
+                <Icon
+                  viewClass="w-[14px] h-[14px] fill-[#fff]"
+                  icon="hamberger"
+                />
+              </Button>
               <div
                 className={`${
-                  isOpen ? "md:fixed" : "md:relative"
-                } -md:hidden md:left-0 md:right-0 md:bottom-0
-              md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}
-              />
-              <ul
-                className={`flex items-center md:flex-row -md:ml-auto md:flex-col md:bg-white-high 
-                md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-4`}
-                id="mySidenav"
-                ref={sideBarRef}
+                  isOpen ? "md:transform-none" : "md:-translate-x-full"
+                } md:fixed md:top-0 md:left-0 md:z-40 md:w-[200px] md:h-screen md:transition-transform 
+               md:basis-auto md:basis-full md:grow menu-open
+               `}
+                id="navbarCollapse"
               >
-                <li className="nav-item nav__menu-item">
-                  <Dropdown
-                    className="[.is-sticky_&]:text-light-high"
-                    dropDownVariant="custom"
-                    dropDownButtonClass="md:hidden uppercase"
-                    dropDownVariantBg="bg-transparent text-[12px]"
-                    dropdownLabel={isMobile ? "" : t("Networks")}
-                    dropDownIcon={!isMobile}
-                    dropdownType={"hover"}
-                    dropDownContentClass="!bg-white-high drop-shadow-md
-                      round-md py-4 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0 !w-[150px] md:!flex md:!justify-center md:flex-wrap"
-                  >
-                    {networks.map((item, index) => (
-                      <div
-                        className="px-4 py-2 flex items-center md:py-3
-                        hover:cursor-pointer text-dark-high whitespace-nowrap "
-                        key={index}
-                        onClick={() => {
-                          handleRouter(item.optionLink);
-                        }}
-                      >
-                        <img
-                          src={item.imgUrl}
-                          alt={item.optionName}
-                          className={
-                            "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
-                          }
-                        />
-                        <div className={"flex flex-col md:hidden"}>
-                          <p className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
-                            {item.optionName}
-                          </p>
-                          <span className="text-dark-low text-xsm font-medium leading-normal">
-                            {item.symbol}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </Dropdown>
-                </li>
-                <li className="nav-item nav__menu-item">
-                  <Dropdown
-                    className="[.is-sticky_&]:text-light-high"
-                    dropDownVariant="custom"
-                    dropDownButtonClass="md:hidden uppercase"
-                    dropDownVariantBg="bg-transparent text-[12px]"
-                    dropdownLabel={isMobile ? "" : t("LEARN")}
-                    dropDownIcon={!isMobile}
-                    dropdownType={"hover"}
-                    dropDownContentClass="!bg-white-high drop-shadow-md
-                      round-md py-4 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0"
-                  >
-                    {learnList.map((item, index) => (
-                      <a
-                        className="px-4 py-2 flex items-center md:py-3
-                        hover:cursor-pointer text-dark-high whitespace-nowrap"
-                        href={item.optionLink}
-                        key={index}
-                        target={"_blank"}
-                        rel="noreferrer"
-                      >
-                        <span
-                          className="ml-4 text-dark-emphasis text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
-                        >
-                          {item.optionName}
-                        </span>
-                      </a>
-                    ))}
-                  </Dropdown>
-                </li>
-
-                <li className="nav-item nav__menu-item">
-                  <Dropdown
-                    className="[.is-sticky_&]:text-light-high"
-                    dropDownVariant="custom"
-                    dropDownButtonClass="md:hidden uppercase"
-                    dropDownVariantBg="bg-transparent text-[12px]"
-                    dropdownLabel={isMobile ? "" : t("COMMUNITY")}
-                    dropdownType={"hover"}
-                    dropDownIcon={!isMobile}
-                    dropDownContentClass="!bg-white-high drop-shadow-md round-md
-                       py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
-                  >
-                    <>
-                      {communityList.map((item, index) => (
-                        <a
-                          className="px-4 py-2 flex items-center md:py-3
-                           hover:cursor-pointer text-dark-high whitespace-nowrap"
-                          href={item.optionLink}
-                          key={index}
-                          target={"_blank"}
-                          rel="noreferrer"
-                        >
-                          <span
-                            className="ml-4 text-dark-emphasis text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
-                          >
-                            {item.optionName}
-                          </span>
-                        </a>
-                      ))}
-                      <div className="flex items-center justify-center">
-                        {socialList.map((item, index) => (
-                          <a
-                            key={index}
-                            href={item.optionLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={"px-1 py-2"}
-                          >
-                            <Icon
-                              viewClass="social_icon_img w-[14px]"
-                              icon={item.icon}
-                            />
-                          </a>
-                        ))}
-                      </div>
-                    </>
-                  </Dropdown>
-                </li>
-                {router.pathname === "/" ? (
+                <div
+                  className={`${
+                    isOpen ? "md:fixed" : "md:relative"
+                  } -md:hidden md:left-0 md:right-0 md:bottom-0
+              md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}
+                />
+                <ul
+                  className={`flex items-center md:flex-row -md:ml-auto md:flex-col md:bg-white-high 
+                md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-4`}
+                  id="mySidenav"
+                  ref={sideBarRef}
+                >
                   <li className="nav-item nav__menu-item">
                     <Dropdown
                       className="[.is-sticky_&]:text-light-high"
                       dropDownVariant="custom"
                       dropDownButtonClass="md:hidden uppercase"
                       dropDownVariantBg="bg-transparent text-[12px]"
-                      dropdownLabel={isMobile ? "" : t("BRIDGE")}
+                      dropdownLabel={isMobile ? "" : t("Networks")}
                       dropDownIcon={!isMobile}
                       dropdownType={"hover"}
-                      dropDownContentClass="!bg-white-high drop-shadow-md round-md py-4
-                         py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
+                      dropDownContentClass="!bg-white-high drop-shadow-md
+                      round-md py-4 md:visible md:relative md:opacity-100
+                      md:!bg-transparent md:p-0 !w-[150px] md:!flex md:!justify-center md:flex-wrap"
                     >
-                      {bridgeList.map((item, index) => (
+                      {networks.map((item, index) => (
+                        <div
+                          className="px-4 py-2 flex items-center md:py-3
+                        hover:cursor-pointer text-dark-high whitespace-nowrap "
+                          key={index}
+                          onClick={() => {
+                            handleRouter(item.optionLink);
+                          }}
+                        >
+                          <img
+                            src={item.imgUrl}
+                            alt={item.optionName}
+                            className={
+                              "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
+                            }
+                          />
+                          <div className={"flex flex-col md:hidden"}>
+                            <p className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
+                              {item.optionName}
+                            </p>
+                            <span className="text-dark-low text-xsm font-medium leading-normal">
+                              {item.symbol}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </Dropdown>
+                  </li>
+                  <li className="nav-item nav__menu-item">
+                    <Dropdown
+                      className="[.is-sticky_&]:text-light-high"
+                      dropDownVariant="custom"
+                      dropDownButtonClass="md:hidden uppercase"
+                      dropDownVariantBg="bg-transparent text-[12px]"
+                      dropdownLabel={isMobile ? "" : t("LEARN")}
+                      dropDownIcon={!isMobile}
+                      dropdownType={"hover"}
+                      dropDownContentClass="!bg-white-high drop-shadow-md
+                      round-md py-4 md:visible md:relative md:opacity-100
+                      md:!bg-transparent md:p-0"
+                    >
+                      {learnList.map((item, index) => (
                         <a
                           className="px-4 py-2 flex items-center md:py-3
-                           hover:cursor-pointer text-dark-high whitespace-nowrap"
+                        hover:cursor-pointer text-dark-high whitespace-nowrap"
                           href={item.optionLink}
                           key={index}
                           target={"_blank"}
@@ -486,75 +406,160 @@ const Header = () => {
                       ))}
                     </Dropdown>
                   </li>
-                ) : (
-                  ""
-                )}
 
-                {router.pathname === "/bnb" || router.pathname === "/atom" ? (
-                  <li className="nav-item md:w-full md:mb-2">
+                  <li className="nav-item nav__menu-item">
+                    <Dropdown
+                      className="[.is-sticky_&]:text-light-high"
+                      dropDownVariant="custom"
+                      dropDownButtonClass="md:hidden uppercase"
+                      dropDownVariantBg="bg-transparent text-[12px]"
+                      dropdownLabel={isMobile ? "" : t("COMMUNITY")}
+                      dropdownType={"hover"}
+                      dropDownIcon={!isMobile}
+                      dropDownContentClass="!bg-white-high drop-shadow-md round-md
+                       py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
+                    >
+                      <>
+                        {communityList.map((item, index) => (
+                          <a
+                            className="px-4 py-2 flex items-center md:py-3
+                           hover:cursor-pointer text-dark-high whitespace-nowrap"
+                            href={item.optionLink}
+                            key={index}
+                            target={"_blank"}
+                            rel="noreferrer"
+                          >
+                            <span
+                              className="ml-4 text-dark-emphasis text-sm
+                        font-medium leading-normal md:text-xsm md:ml-2"
+                            >
+                              {item.optionName}
+                            </span>
+                          </a>
+                        ))}
+                        <div className="flex items-center justify-center">
+                          {socialList.map((item, index) => (
+                            <a
+                              key={index}
+                              href={item.optionLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={"px-1 py-2"}
+                            >
+                              <Icon
+                                viewClass="social_icon_img w-[14px]"
+                                icon={item.icon}
+                              />
+                            </a>
+                          ))}
+                        </div>
+                      </>
+                    </Dropdown>
+                  </li>
+                  {router.pathname === "/" ? (
+                    <li className="nav-item nav__menu-item">
+                      <Dropdown
+                        className="[.is-sticky_&]:text-light-high"
+                        dropDownVariant="custom"
+                        dropDownButtonClass="md:hidden uppercase"
+                        dropDownVariantBg="bg-transparent text-[12px]"
+                        dropdownLabel={isMobile ? "" : t("BRIDGE")}
+                        dropDownIcon={!isMobile}
+                        dropdownType={"hover"}
+                        dropDownContentClass="!bg-white-high drop-shadow-md round-md py-4
+                         py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
+                      >
+                        {bridgeList.map((item, index) => (
+                          <a
+                            className="px-4 py-2 flex items-center md:py-3
+                           hover:cursor-pointer text-dark-high whitespace-nowrap"
+                            href={item.optionLink}
+                            key={index}
+                            target={"_blank"}
+                            rel="noreferrer"
+                          >
+                            <span
+                              className="ml-4 text-dark-emphasis text-sm
+                        font-medium leading-normal md:text-xsm md:ml-2"
+                            >
+                              {item.optionName}
+                            </span>
+                          </a>
+                        ))}
+                      </Dropdown>
+                    </li>
+                  ) : (
+                    ""
+                  )}
+
+                  {router.pathname === "/bnb" || router.pathname === "/atom" ? (
+                    <li className="nav-item md:w-full md:mb-2">
+                      <ButtonLink
+                        className={`${
+                          router.pathname === "/bnb"
+                            ? "[.is-sticky_&]:bg-bnbPrimary"
+                            : " [.is-sticky_&]:bg-atomPrimary"
+                        } dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
+                        variant={"custom"}
+                        href={
+                          router.pathname === "/bnb"
+                            ? IMMUNEFI_WEB_URL
+                            : IMMUNEFI_STK_ATOM_URL
+                        }
+                        scale="lg"
+                        target={"_blank"}
+                        isDisabled={false}
+                        customButtonClass={"bg-black-800 text-light-high"}
+                      >
+                        <div
+                          className={`${
+                            router.pathname === "/bnb"
+                              ? "[.is-sticky_&]:bg-immunifyBlack"
+                              : ""
+                          } bg-immunefiWhite w-[90px] h-[18px] bg-no-repeat bg-center`}
+                        />
+                      </ButtonLink>
+                    </li>
+                  ) : (
+                    ""
+                  )}
+
+                  <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
                     <ButtonLink
-                      className={`${
+                      className={`dropDownButton ${
                         router.pathname === "/bnb"
                           ? "[.is-sticky_&]:bg-bnbPrimary"
-                          : " [.is-sticky_&]:bg-atomPrimary"
-                      } dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
-                      variant={"custom"}
-                      href={
-                        router.pathname === "/bnb"
-                          ? IMMUNEFI_WEB_URL
-                          : IMMUNEFI_STK_ATOM_URL
+                          : router.pathname === "/atom"
+                          ? "[.is-sticky_&]:bg-atomPrimary"
+                          : router.pathname === "/osmo"
+                          ? "[.is-sticky_&]:bg-osmoPrimaryButton"
+                          : "[.is-sticky_&]:bg-red"
                       }
+                       w-full md:py-2 !py-2.5 md:text-sm`}
+                      variant={"custom"}
+                      href={appURL}
                       scale="lg"
                       target={"_blank"}
                       isDisabled={false}
-                      customButtonClass={"bg-black-800 text-light-high"}
+                      customButtonClass={`bg-black-800 text-light-high ${
+                        router.pathname === "/bnb"
+                          ? "[.is-sticky_&]:text-dark-high"
+                          : router.pathname === "/"
+                      } text-[12px]`}
                     >
-                      <div
-                        className={`${
-                          router.pathname === "/bnb"
-                            ? "[.is-sticky_&]:bg-immunifyBlack"
-                            : ""
-                        } bg-immunefiWhite w-[90px] h-[18px] bg-no-repeat bg-center`}
-                      />
+                      <span className="nav-link pophover tooltip-multiline app-btn uppercase">
+                        {t("GO_TO_APP")}
+                      </span>
                     </ButtonLink>
                   </li>
-                ) : (
-                  ""
-                )}
-
-                <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                  <ButtonLink
-                    className={`dropDownButton ${
-                      router.pathname === "/bnb"
-                        ? "[.is-sticky_&]:bg-bnbPrimary"
-                        : router.pathname === "/atom"
-                        ? "[.is-sticky_&]:bg-atomPrimary"
-                        : router.pathname === "/osmo"
-                        ? "[.is-sticky_&]:bg-osmoPrimaryButton"
-                        : "[.is-sticky_&]:bg-red"
-                    }
-                       w-full md:py-2 !py-2.5 md:text-sm`}
-                    variant={"custom"}
-                    href={appURL}
-                    scale="lg"
-                    target={"_blank"}
-                    isDisabled={false}
-                    customButtonClass={`bg-black-800 text-light-high ${
-                      router.pathname === "/bnb"
-                        ? "[.is-sticky_&]:text-dark-high"
-                        : router.pathname === "/"
-                    } text-[12px]`}
-                  >
-                    <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                      {t("GO_TO_APP")}
-                    </span>
-                  </ButtonLink>
-                </li>
-              </ul>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
+      ) : (
+        <OsmoHeader />
+      )}
     </React.Fragment>
   );
 };

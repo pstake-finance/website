@@ -6,8 +6,8 @@ import ValidatorTable from "./table";
 import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
-import Icon from "../../../molecules/Icon";
 import FilterDropdown from "./filter-dropdown";
+import moment from "moment";
 
 const ValidatorsList = () => {
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
@@ -25,14 +25,17 @@ const ValidatorsList = () => {
 
   useEffect(() => {
     if (validatorsInfo.osmo.length > 0) {
-      const lastTime = localStorage.getItem("last-update");
-      if (lastTime !== null) {
-        setUpdatedTime(lastTime!);
+      let currentLocalTime = moment().format();
+      const updateTime = moment("14:10:00", "H:mm:ss").utc();
+      const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
+      const ctimeUtcFormat = moment(ctime, "H:mm:ss").utc();
+      let dd: string;
+      if (ctimeUtcFormat.isAfter(updateTime)) {
+        dd = moment().format("DD MMM YYYY");
       } else {
-        const currentTime = new Date().toLocaleString();
-        setUpdatedTime(currentTime);
-        localStorage.setItem("last-update", currentTime);
+        dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
+      setUpdatedTime(dd!);
       setDataList(validatorsInfo.osmo);
     }
   }, [validatorsInfo]);
@@ -56,15 +59,9 @@ const ValidatorsList = () => {
     },
   ];
 
-  const refreshHandler = () => {
-    const currentTime = new Date().toLocaleString();
-    localStorage.setItem("last-update", currentTime);
-    fetchInitialData("https://rpc.core.persistence.one", "osmosis-1");
-  };
-
   return (
     <div className="bg-[#030303]">
-      <div className={"sectionContainer pt-[170px] pb-[100px]"}>
+      <div className={"sectionContainer pt-[120px] pb-[100px]"}>
         <p
           className={"text-[40px] text-light-high font-medium mb-6 lg:text-lg"}
         >
@@ -158,18 +155,11 @@ const ValidatorsList = () => {
                 List of Validators
               </p>
               <p className={"text-sm text-light-emphasis flex items-center"}>
-                Refreshed:&nbsp;
+                Updated on:&nbsp;
                 <span className={"font-medium"}>
-                  {updatedTime !== null || updatedTime !== "" ? updatedTime : 0}
-                </span>
-                <span
-                  className={"block cursor-pointer"}
-                  onClick={refreshHandler}
-                >
-                  <Icon
-                    icon={"refresh"}
-                    viewClass={` ml-1 inline !w-[16px] !h-[16px] mb-1`}
-                  />
+                  {`~${
+                    updatedTime !== null || updatedTime !== "" ? updatedTime : 0
+                  } 14:00 UTC`}
                 </span>
               </p>
             </div>

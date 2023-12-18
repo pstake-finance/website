@@ -52,7 +52,10 @@ export const getValidators = async (
           const res = validatorInfo?.find(
             (valItem) => valItem.operatorAddress === item.operatorAddress
           );
-          if (res) {
+          if (
+            res &&
+            (Number(item.delegatedAmount) > 0 || Number(item.weight) > 0)
+          ) {
             validators.push({
               name: res.description!.moniker!,
               identity: `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/osmosis/moniker/${res.operatorAddress}.png`,
