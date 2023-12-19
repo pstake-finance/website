@@ -56,7 +56,6 @@ const EcosystemSlider = ({ deviceType }) => {
           fetchShadeInfo(),
           fetchShadeCollateral(),
         ]);
-      console.log(shadeLending, "shadeLending-te", shade);
       setOsmosisInfo(osmosis);
       setCrescentInfo(crescent);
       setDexterInfo(dexter);

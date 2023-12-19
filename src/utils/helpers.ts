@@ -3,6 +3,19 @@ import { Decimal } from "@cosmjs/math";
 import stakepool from "../utils/ABIs/StakePool.json";
 import { ethers, utils } from "ethers";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
+import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
+
+import {
+  createProtobufRpcClient,
+  QueryClient,
+  setupIbcExtension,
+} from "@cosmjs/stargate";
+
+export async function RpcClient(rpc: string) {
+  const tendermintClient = await Tendermint34Client.connect(rpc);
+  const queryClient = new QueryClient(tendermintClient);
+  return createProtobufRpcClient(queryClient);
+}
 
 export const stakePoolContractAddress =
   process.env.NEXT_PUBLIC_STAKE_POOL_CONTRACT_ADDRESS;
@@ -25,23 +38,24 @@ export const sdkInstance = StkBNBWebSDK.getInstance({
   env: SDK_ENV,
 });
 
-export const bigNumberToEther = (bigNumber) => {
+export const bigNumberToEther = (bigNumber: any) => {
   return utils.formatEther(bigNumber);
 };
 
-export const removeCommas = (str) => _.replace(str, new RegExp(",", "g"), "");
+export const removeCommas = (str: any) =>
+  _.replace(str, new RegExp(",", "g"), "");
 
-const reverseString = (str) =>
+export const reverseString = (str: any) =>
   removeCommas(_.toString(_.reverse(_.toArray(str))));
 
-const recursiveReverse = (input) => {
+export const recursiveReverse = (input: any): string => {
   if (_.isArray(input))
-    return _.toString(_.reverse(_.map(input, (v) => recursiveReverse(v))));
+    return _.toString(_.reverse(_.map(input, (v: any) => recursiveReverse(v))));
   if (_.isString()) return reverseString(input);
   return reverseString(`${input}`);
 };
 
-export const sixDigitsNumber = (value, length = 6) => {
+export const sixDigitsNumber = (value: string, length = 6): string => {
   let inputValue = value.toString();
   if (inputValue.length >= length) {
     return inputValue.substring(0, length);
@@ -55,7 +69,7 @@ export const sixDigitsNumber = (value, length = 6) => {
   }
 };
 
-export const formatNumber = (v = 0, size = 3, decimalLength = 6) => {
+export const formatNumber = (v = 0, size = 3, decimalLength = 6): string => {
   let str = `${v}`;
   if (!str) return "NaN";
   let substr = str.split(".");
@@ -74,7 +88,7 @@ export const formatNumber = (v = 0, size = 3, decimalLength = 6) => {
   return `${recursiveReverse(arr)}${substr[1] ? `.${substr[1]}` : ""}`;
 };
 
-export const decimalize = (valueString, decimals = 6) => {
+export const decimalize = (valueString: any, decimals = 6) => {
   let truncate;
   if (typeof valueString === "string") {
     truncate = Number(valueString);
@@ -87,13 +101,13 @@ export const decimalize = (valueString, decimals = 6) => {
   ).toString();
 };
 
-export const decimalizeRaw = (valueString, decimals = 6) => {
+export const decimalizeRaw = (valueString: any, decimals = 6) => {
   return Decimal.fromAtomics(valueString, decimals).toString();
 };
 
 export const emptyFunc = () => ({});
 
-export const numberFormat = (number, decPlaces) => {
+export const numberFormat = (number: any, decPlaces: number) => {
   // 2 decimal places => 100, 3 => 1000, etc
   decPlaces = Math.pow(10, decPlaces);
 
