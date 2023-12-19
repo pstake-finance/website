@@ -5,8 +5,10 @@ import { TableProps } from "../../../molecules/table/types";
 import { useSortableTable } from "../../../../customHooks/useSortableTable";
 import TableHead from "../../../molecules/table/table-head";
 import TableBody from "../../../molecules/table/table-body";
+import { useApp } from "../../../../context/appContext/AppContext";
 
 const ValidatorTable = ({ data, columns }: TableProps) => {
+  const { osmoData } = useApp();
   const [tableData, handleSorting] = useSortableTable(data, columns);
   const updateData: any[] = [];
   tableData.length
@@ -33,6 +35,15 @@ const ValidatorTable = ({ data, columns }: TableProps) => {
             <div key={index}>
               <p className={"pb-[2px]"}>{data.weight}%</p>
             </div>
+          ),
+          targetDelegation: (
+            <p key={index} className={"px-1.5 py-1"}>
+              {(Number(data.targetDelegation) * Number(osmoData.tvl)).toFixed(
+                2
+              )}
+              &nbsp;
+              <span className={"text-light-mid"}>OSMO</span>
+            </p>
           ),
           delegationAmount: (
             <p key={index} className={"px-1.5 py-1"}>

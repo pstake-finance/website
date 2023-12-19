@@ -51,12 +51,18 @@ const ValidatorsList = () => {
       sortable: true,
     },
     {
-      label: "Weight",
+      label: "Target Weight",
       accessor: "weight",
       sortable: true,
     },
     {
-      label: "pSTAKE OSMO Delegation",
+      label: "Target Delegation",
+      accessor: "targetDelegation",
+      sortable: true,
+      sortbyOrder: "desc",
+    },
+    {
+      label: "Current Delegation",
       accessor: "delegationAmount",
       sortable: true,
       sortbyOrder: "desc",
