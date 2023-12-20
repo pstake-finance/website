@@ -65,7 +65,6 @@ const ValidatorsList = () => {
       label: "Current Delegation",
       accessor: "delegationAmount",
       sortable: true,
-      sortbyOrder: "desc",
     },
   ];
 
@@ -117,8 +116,14 @@ const ValidatorsList = () => {
                 "flex flex-col justify-center items-center border-r border-[#3E3E3E] pl-4 pr-12 w-[200px] lg:flex-row lg:w-auto lg:border-0 lg:justify-start"
               }
             >
-              <p className={"text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4"}>
+              <p
+                className={
+                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
+                }
+              >
                 Voting Power
+                <br />
+                (Last 180 Days)
               </p>
               <p className={"text-xl font-medium text-light-high md:text-base"}>
                 0.05% to 5%
@@ -129,8 +134,14 @@ const ValidatorsList = () => {
                 "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] px-4 lg:border-0 lg:flex-row lg:justify-start"
               }
             >
-              <p className={"text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4"}>
+              <p
+                className={
+                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
+                }
+              >
                 Commission
+                <br />
+                (Last 180 Days)
               </p>
               <p className={"text-xl font-medium text-light-high md:text-base"}>
                 5% to 10%
@@ -141,8 +152,14 @@ const ValidatorsList = () => {
                 "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] px-4 lg:border-0 lg:flex-row lg:justify-start"
               }
             >
-              <p className={"text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4"}>
+              <p
+                className={
+                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
+                }
+              >
                 Uptime
+                <br />
+                (Last 30 Days)
               </p>
               <p className={"text-xl font-medium text-light-high md:text-base"}>
                 95% to 100%
@@ -153,8 +170,14 @@ const ValidatorsList = () => {
                 "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] px-4 lg:border-0 lg:flex-row lg:justify-start"
               }
             >
-              <p className={"text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4"}>
+              <p
+                className={
+                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
+                }
+              >
                 Governance Participation
+                <br />
+                (Last 180 Days)
               </p>
               <p className={"text-xl font-medium text-light-high md:text-base"}>
                 60% to 100%
@@ -171,6 +194,8 @@ const ValidatorsList = () => {
                 }
               >
                 Part of the active set without any slashing instance
+                <br />
+                (Last 180 Days)
               </p>
             </div>
           </div>
