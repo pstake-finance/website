@@ -6,6 +6,7 @@ export interface ValidatorInfo {
   name: string;
   weight: string;
   delegationAmount: string;
+  targetDelegation: string;
 }
 
 export interface ValidatorsInfo {

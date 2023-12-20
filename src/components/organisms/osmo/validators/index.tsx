@@ -8,8 +8,12 @@ import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
 import FilterDropdown from "./filter-dropdown";
 import moment from "moment";
+import { useApp } from "../../../../context/appContext/AppContext";
+import { formatNumber } from "../../../../utils/helpers";
+import Image from "next/image";
 
 const ValidatorsList = () => {
+  const { osmoData } = useApp();
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
   const fetchInitialData = useAppStore((state) => state.fetchInitialData);
@@ -47,12 +51,18 @@ const ValidatorsList = () => {
       sortable: true,
     },
     {
-      label: "Weight",
+      label: "Target Weight",
       accessor: "weight",
       sortable: true,
     },
     {
-      label: "pSTAKE OSMO Delegation",
+      label: "Target Delegation",
+      accessor: "targetDelegation",
+      sortable: true,
+      sortbyOrder: "desc",
+    },
+    {
+      label: "Current Delegation",
       accessor: "delegationAmount",
       sortable: true,
       sortbyOrder: "desc",
@@ -67,7 +77,32 @@ const ValidatorsList = () => {
         >
           Validator Distribution Leaderboard
         </p>
-        <FilterDropdown />
+        <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
+          <div className={"flex items-center justify-between"}>
+            <div className={`flex items-center flex-1 h-[40px]`}>
+              <Image
+                width={40}
+                height={40}
+                src={"/images/stkOsmo.svg"}
+                alt="stkATOM logo"
+              />
+              <span className="text-[30px] font-medium text-light-high leading-normal md:text-xsm px-2">
+                stkOSMO
+              </span>
+            </div>
+            <p
+              className={
+                "text-xl font-medium text-light-emphasis md:text-base text-right"
+              }
+            >
+              <span className={"text-[14px] font-normal text-[#A6A6A6] block"}>
+                {" "}
+                Total Value Unlocked(TVU)
+              </span>
+              {formatNumber(Number(osmoData.tvl), 3, 2)} OSMO
+            </p>
+          </div>
+        </div>
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <p
             className={

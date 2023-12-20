@@ -22,11 +22,11 @@ const FilterDropdown = () => {
   return (
     <>
       <div
-        className={`text-white-100 mb-8 filter-dropdown relative inline-block dropDown dropDownClick`}
+        className={`text-white-100 filter-dropdown relative inline-block dropDown dropDownClick`}
         ref={dropDownRef}
       >
         <button
-          className={`bg-[#1F1F1F] !text-light-high rounded-[48px] w-max 
+          className={`bg-transparent !text-light-high rounded-[48px] w-max 
             font-medium w-full md:text-sm flex items-center w-[180px] h-[46px]`}
           onClick={() => setDropdownOpen(!dropdownOpen)}
         >
@@ -35,12 +35,12 @@ const FilterDropdown = () => {
               className={`flex items-center !justify-between px-4 flex-1 h-[40px]`}
             >
               <Image
-                width={24}
-                height={24}
+                width={40}
+                height={40}
                 src={"/images/stkOsmo.svg"}
                 alt="stkATOM logo"
               />
-              <span className="text-[20px] leading-normal md:text-xsm px-2">
+              <span className="text-[30px] leading-normal md:text-xsm px-2">
                 stkOSMO
               </span>
               <span

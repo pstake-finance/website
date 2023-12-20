@@ -8,7 +8,7 @@ import { useApp } from "../../../context/appContext/AppContext";
 
 const Banner = () => {
   const { t } = useTranslation("common");
-  const { cosmosData } = useApp();
+  const { osmoData } = useApp();
 
   return (
     <div className="text-center aos-init aos-animate bg-osmoBanner bg-no-repeat bg-[#FCFBFE]">
@@ -54,14 +54,14 @@ const Banner = () => {
             />
           </ButtonLink>
         </div>
-        {/*<div className="my-6">*/}
-        {/*  <h6 className="font-bold text-[36px] sm:text-2xl text-dark-black-high leading-snug">*/}
-        {/*    {formatNumber(Number(cosmosData.tvl), 3, 2)} OSMO*/}
-        {/*  </h6>*/}
-        {/*  <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">*/}
-        {/*    {t("TOTAL_VALUE_UNLOCKED")}*/}
-        {/*  </h6>*/}
-        {/*</div>*/}
+        <div className="my-6">
+          <h6 className="font-bold text-[36px] sm:text-2xl text-dark-black-high leading-snug">
+            {formatNumber(Number(osmoData.tvl), 3, 2)} OSMO
+          </h6>
+          <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">
+            {t("TOTAL_VALUE_UNLOCKED")}
+          </h6>
+        </div>
       </div>
     </div>
   );

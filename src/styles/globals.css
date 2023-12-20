@@ -217,7 +217,7 @@ body {
 
 .custom-table thead tr th:first-child{
   text-align: left;
-  width: 50%;
+  width: 40%;
   /*border-top-left-radius: 6px;*/
   /*border-bottom-left-radius: 6px;*/
 }
@@ -265,7 +265,7 @@ body {
 
 .custom-table tbody tr td:first-child{
   padding: 12px 4px 12px 40px;
-  width: 50%;
+  width: 40%;
   font-size: 16px;
 }
 
@@ -273,8 +273,12 @@ body {
   width: 20%;
 }
 
+.custom-table tbody tr td:nth-child(3), .custom-table thead tr th:nth-child(3){
+  width: 20%;
+}
+
 .custom-table tbody tr td:last-child, .custom-table thead tr th:last-child{
-  width: 30%;
+  width: 20%;
 }
 
 .spinner.large {
