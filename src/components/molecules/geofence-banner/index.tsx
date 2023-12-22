@@ -29,15 +29,16 @@ const GeofenceNotice = () => {
         />
         <p className="text-[#fcfcfc] text-xsm font-medium">
           <span className={"font-semibold"}>IMPORTANT NOTICE:</span>&nbsp;
-          Starting 15/01/2024, this site won&apos;t be accessible anymore from
-          your location. See more details{" "}
+          Please note that from 15 January 2024, applications on the
+          pstake.finance domain will no longer be accessible from your location.
+          See more details{" "}
           <a
             className="underline"
             href="https://geofence-notice.pages.dev/?ref=pstake"
             target="_blank"
             rel="noreferrer"
           >
-            here
+            here.
           </a>
         </p>
       </div>
