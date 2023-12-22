@@ -47,6 +47,7 @@ import ButtonLink from "../atoms/buttonLink/ButtonLink";
 import { useOnClickOutside } from "../../customHooks/useOnClickOutside";
 import { useWindowSize } from "../../customHooks/useWindowSize";
 import Button from "../atoms/button/Button";
+import GeofenceNotice from "./geofence-banner";
 
 const OsmoHeader = () => {
   const { t } = useTranslation("common");
@@ -130,6 +131,7 @@ const OsmoHeader = () => {
   return (
     <React.Fragment>
       <div id="is-sticky" className="top-bar w-full fixed z-[100]">
+        <GeofenceNotice />
         <nav
           className={`bg-[#030303] py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
