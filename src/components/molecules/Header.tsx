@@ -48,6 +48,7 @@ import { useOnClickOutside } from "../../customHooks/useOnClickOutside";
 import { useWindowSize } from "../../customHooks/useWindowSize";
 import Button from "../atoms/button/Button";
 import OsmoHeader from "./osmo-header";
+import GeofenceNotice from "./geofence-banner";
 
 const Header = () => {
   const { t } = useTranslation("common");
@@ -230,41 +231,7 @@ const Header = () => {
     <React.Fragment>
       {router.pathname !== "/osmo/validators" ? (
         <div id="is-sticky" className="top-bar w-full fixed z-[100]">
-          {router.pathname !== "/bnb" ? (
-            <div
-              className={
-                !banner
-                  ? "hidden"
-                  : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
-              }
-            >
-              <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
-                <img
-                  src={"/images/stkOsmo.svg"}
-                  alt={"stkAtom"}
-                  width={"16px"}
-                  height={"16px"}
-                  className="logo mr-2.5"
-                />
-                stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
-                validators&nbsp;
-                <a
-                  className="link underline"
-                  href={OSMOSIS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  now.
-                </a>
-              </p>
-              <div onClick={closeBanner}>
-                <Icon
-                  viewClass="close w-[10px] h-[10px] fill-[#fff] absolute top-[13px] right-[20px] cursor-pointer"
-                  icon="close"
-                />
-              </div>
-            </div>
-          ) : null}
+          <GeofenceNotice />
           <nav
             className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
