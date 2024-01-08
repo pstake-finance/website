@@ -64,7 +64,7 @@ export const getValidators = async (
               delegationAmount: Number(
                 decimalize(item.delegatedAmount, 6)
               ).toFixed(),
-              targetDelegation: decimalize(item.weight, 18),
+               targetDelegation: Number(decimalize(item.weight, 18)).toFixed(6),
             });
           }
         });
