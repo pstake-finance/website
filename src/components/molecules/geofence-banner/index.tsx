@@ -36,7 +36,7 @@ const GeofenceNotice = () => {
           />
           <p className="text-[#fcfcfc] text-xsm font-medium">
             <span className={"font-semibold"}>IMPORTANT NOTICE:</span>&nbsp;
-            Please note that from 1 February 2024, applications on the
+            Please note that from 1 March 2024, applications on the
             pstake.finance domain will no longer be accessible from your
             location. See more details{" "}
             <a
