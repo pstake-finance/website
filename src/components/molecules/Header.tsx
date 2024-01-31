@@ -39,6 +39,8 @@ import {
   OSMOSIS_URL,
   STK_ODMO_TWITTER_URL,
   OSMO_URL,
+  STK_DYDX_FAQ_URL,
+  DYDX,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -124,6 +126,12 @@ const Header = () => {
     faqURL = STK_OSMO_FAQ_URL;
     appURL = OSMO_URL;
     twitterUrl = STK_ODMO_TWITTER_URL;
+  } else if (router.pathname === "/dydx") {
+    auditURL = STK_OSMO_SECURITY_AUDIT_URL;
+    docsURL = STK_ATOM_DOCS_URL;
+    faqURL = STK_DYDX_FAQ_URL;
+    appURL = DYDX;
+    twitterUrl = STK_ODMO_TWITTER_URL;
   } else if (router.pathname === "/eth/testnet") {
     auditURL = STK_ATOM_SECURITY_AUDIT_URL;
     docsURL = STK_ETH_DOCS;
@@ -144,6 +152,12 @@ const Header = () => {
       optionLink: "/osmo",
       imgUrl: "/images/networks/osmo.svg",
       symbol: "OSMO",
+    },
+    {
+      optionName: "Dydx",
+      optionLink: "/dydx",
+      imgUrl: "/images/networks/dydx.svg",
+      symbol: "DYDX",
     },
     {
       optionName: "Ethereum",
@@ -236,6 +250,7 @@ const Header = () => {
             className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
             md:flex-wrap justify-start ${
+              router.pathname !== "/dydx" &&
               router.pathname !== "/osmo" &&
               router.pathname !== "/" &&
               router.pathname !== "/atom" &&
@@ -493,22 +508,23 @@ const Header = () => {
 
                   <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
                     <ButtonLink
-                      className={`dropDownButton ${
-                        router.pathname === "/bnb"
-                          ? "[.is-sticky_&]:bg-bnbPrimary"
-                          : router.pathname === "/atom"
-                          ? "[.is-sticky_&]:bg-atomPrimary"
-                          : router.pathname === "/osmo"
-                          ? "[.is-sticky_&]:bg-osmoPrimaryButton"
-                          : "[.is-sticky_&]:bg-red"
-                      }
-                       w-full md:py-2 !py-2.5 md:text-sm`}
+                      className={`dropDownButton  w-full md:py-2 !py-2.5 md:text-sm`}
                       variant={"custom"}
                       href={appURL}
                       scale="lg"
                       target={"_blank"}
                       isDisabled={false}
-                      customButtonClass={`bg-black-800 text-light-high ${
+                      customButtonClass={`${
+                        router.pathname === "/bnb"
+                          ? "bg-bnbPrimary"
+                          : router.pathname === "/atom"
+                          ? "bg-atomPrimary"
+                          : router.pathname === "/osmo"
+                          ? "bg-osmoPrimaryButton text-light-high"
+                          : router.pathname === "/dydx"
+                          ? "bg-dydxPrimary text-light-high"
+                          : "bg-black-800 text-light-high"
+                      } ${
                         router.pathname === "/bnb"
                           ? "[.is-sticky_&]:text-dark-high"
                           : router.pathname === "/"

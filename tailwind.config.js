@@ -12,6 +12,7 @@ module.exports = {
       },
       atomPrimary: "#595d7b",
       bnbPrimary: "#f0b90b",
+      dydxPrimary: "#6966FF",
       transparent: "transparent",
       dark: {
         full: "#000",
@@ -69,10 +70,13 @@ module.exports = {
         "url('/images/bg_images/osmoBanner2.svg'), radial-gradient(87.58% 251.27% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(215, 199, 245, 0.3) 100%) ",
       bnbBanner:
         "url('/images/bg_images/binance_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0,#fff 0,#fffef8 45.83%,#fffffd 100%)",
+      dydxBanner:
+        "url('/images/bg_images/dydxBanner2.svg'), radial-gradient(87.58% 251.27% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(215, 199, 245, 0.3) 100%) ",
       lsmTag:
         "linear-gradient(91deg, rgba(196, 3, 11, 0.60) -15.72%, rgba(30, 0, 3, 0.60) 125.37%)",
       lsmHighlight:
         "linear-gradient(rgba(140, 2, 8, 1), rgba(211, 73, 79, 1), rgba(140, 2, 8, 1))",
+      title_bg: "url('/images/bg_images/title_bg_grid.svg')",
     },
     backgroundColor: {
       none: "none",
@@ -105,6 +109,7 @@ module.exports = {
       atomPrimary: "#595d7b",
       bnbPrimary: "#f0b90b",
       ethPrimary: "#C73238",
+      dydxPrimary: "#6966FF",
     },
     fontFamily: {
       primary: ["Poppins", "sans-serif"],
@@ -169,14 +174,22 @@ module.exports = {
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
         osmoBanner: "25%, cover",
+        dydxBanner: "20%, cover",
+        title_bg: "auto",
       },
       backgroundPosition: {
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",
         ethBanner: "100% 0,100% 100%",
         osmoBanner: "100% 0,100% 100%",
+        dydxBanner: "100% 5%,100% 100%",
+        title_bg: "50% -75%",
       },
     },
   },
   plugins: [],
 };
+//
+// background-size: auto;
+// background-position: 50% -75%;
+// background-repeat: no-repeat;

@@ -24,6 +24,10 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
+  dydxData: {
+    apy: 0,
+    tvl: 0,
+  },
   bnbData: {
     apy: 0,
     tvl: 0,
@@ -32,6 +36,7 @@ const AppContext = createContext<AppState>({
     BNB: 0,
     ATOM: 0,
     OSMO: 0,
+    DYDX: 0,
   },
 });
 
@@ -52,10 +57,15 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [dydxData, setDydxData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
   const [prices, setPrices] = useState<any>({
     BNB: 0,
     ATOM: 0,
     OSMO: 0,
+    DYDX: 0,
   });
 
   useEffect(() => {
@@ -65,6 +75,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         osmoApyResponse,
         cosmosTvlResponse,
         osmoTvlResponse,
+        dydxApyResponse,
+        dydxTvlResponse,
         bnbApyResponse,
         bnbTvlResponse,
         tokenPrices,
@@ -73,6 +85,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getCosmosAPY("osmo"),
         getCosmosTVL("cosmos"),
         getCosmosTVL("osmo"),
+        getCosmosAPY("dydx"),
+        getCosmosTVL("dydx"),
         getBnbApy(),
         getBnbTVL(),
         fetchTokenPrices(),
@@ -84,6 +98,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
       setOsmoData({
         apy: osmoApyResponse,
         tvl: Number(decimalize(osmoTvlResponse)),
+      });
+      setDydxData({
+        apy: dydxApyResponse,
+        tvl: Number(decimalize(dydxTvlResponse, 18)).toFixed(2),
       });
       setBnbData({
         apy: bnbApyResponse,
@@ -99,6 +117,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     bnbData: bnbData,
     tokenPrices: prices,
     osmoData,
+    dydxData,
   };
 
   return (

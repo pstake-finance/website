@@ -4,29 +4,38 @@ import { ATOM_URL, OSMO_URL } from "../../../utils/config";
 const LiquidStakingSteps = () => {
   const list = [
     {
-      title: "Stake OSMO",
+      title: "Stake DYDX",
       icon: "step1",
       content:
-        "Deposit any non-zero amount of OSMO to stake through pSTAKE’s diverse validator set (automated stake delegation and rebalancing) & earn staking rewards.",
+        "Connect your wallet and deposit any non-zero amount of DYDX on pSTAKE.",
     },
     {
-      title: "Receive stkOSMO",
+      title: "Receive stkDYDX",
       icon: "step2",
       content:
-        "Get liquid stkOSMO in return which increases in value relative to your staked amount every staking rewards epoch.",
+        "Get liquid stkDYDX in return. Pat yourself on the back for contributing to the dYdX chain decentralization, as your stake is now delegated to 30+ validators.",
     },
     {
       title: "Participate in DeFi",
       icon: "step3",
       content:
-        "Put your stkOSMO to work across Osmosis and Cosmos Ecosystems with various opportunities in the DeFi tab on pSTAKE’s application.",
+        "Find various yield opportunities to put your stkDYDX to work through pSTAKE’s DeFi tab. stkDYDX’s value will increase daily as DYDX and USDC staking rewards are auto-compounded.",
     },
   ];
   return (
     <>
-      <div className="bg-[#140F34]">
-        <div className="sectionContainer py-[65px] md:py-[35px]">
-          <h3 className="sectionTitle mb-10">Liquid Staking OSMO</h3>
+      <div className="bg-[#1C1C28]">
+        <div className="sectionContainer py-[65px] md:py-[35px] bg-no-repeat">
+          <div className="sectionTitle mb-10 relative">
+            <h3 className={"inline-flex relative"}>
+              Liquid Staking DYDX{" "}
+              <img
+                src={`/images/sparkle.svg`}
+                alt="Liquid ATOM Staking"
+                className={"absolute -right-[40px] -top-[24px]"}
+              />
+            </h3>
+          </div>
           <div className="flex flex-wrap">
             {list.map((item, index) => (
               <div
@@ -38,7 +47,7 @@ const LiquidStakingSteps = () => {
                   href={OSMO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="icon-box w-[70px] h-[70px] bg-[#1F1A42] cursor-pointer
+                  className="icon-box w-[70px] h-[70px] bg-[#36364F] cursor-pointer
                   rounded-2xl flex items-center justify-center mx-auto mb-8"
                 >
                   <img

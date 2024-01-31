@@ -12,6 +12,10 @@ import {
   STK_OSMO_BLOG_ONE_IMAGE_URL,
   STK_OSMO_BLOG_TWO_URL,
   STK_OSMO_BLOG_TWO_IMAGE_URL,
+  STK_DYDX_BLOG_ONE_URL,
+  STK_DYDX_BLOG_ONE_IMAGE_URL,
+  STK_DYDX_BLOG_TWO_URL,
+  STK_DYDX_BLOG_TWO_IMAGE_URL,
 } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
@@ -20,18 +24,18 @@ const FeaturedBlogs = () => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: "OSMO Liquid Staking",
-      blogLink: STK_OSMO_BLOG_ONE_URL,
-      imageLink: STK_OSMO_BLOG_ONE_IMAGE_URL,
+      title: "Introducing stkDYDX",
+      blogLink: STK_DYDX_BLOG_ONE_URL,
+      imageLink: STK_DYDX_BLOG_ONE_IMAGE_URL,
     },
     {
-      title: "OSMO liquid staking NOW LIVE",
-      blogLink: STK_OSMO_BLOG_TWO_URL,
-      imageLink: STK_OSMO_BLOG_TWO_IMAGE_URL,
+      title: "DYDX liquid staking on Testnet",
+      blogLink: STK_DYDX_BLOG_TWO_URL,
+      imageLink: STK_DYDX_BLOG_TWO_IMAGE_URL,
     },
   ];
   return (
-    <div className="bg-[#140F34]">
+    <div className="bg-[#1C1C28]">
       <div
         className="sectionContainer py-[65px] md:py-[35px]"
         data-aos="fade-up"

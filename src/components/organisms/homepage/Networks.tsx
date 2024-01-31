@@ -9,7 +9,7 @@ import Icon from "../../molecules/Icon";
 const Networks = () => {
   const { t } = useTranslation("common");
 
-  const { cosmosData, bnbData, osmoData } = useApp();
+  const { cosmosData, bnbData, osmoData, dydxData } = useApp();
   const { isMobile } = useWindowSize();
   const networkList = [
     {
@@ -29,6 +29,15 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl: "/osmo",
       hoverBg: "hover:bg-osmoCard",
+    },
+    {
+      asset: "Dydx",
+      network: "dydx",
+      imageUrl: "/images/networks/dydx.svg",
+      apy: dydxData!.apy === -1 ? 9.94 : dydxData.apy,
+      buttonText: "Start Staking",
+      buttonUrl: "/dydx",
+      hoverBg: "hover:bg-cosmosCard",
     },
     {
       asset: "BNB",
@@ -73,7 +82,7 @@ const Networks = () => {
         <p className="sectionTitle mb-8">{t("SUPPORTED_NETWORKS")}</p>
         <div className="pt-8">
           <div className="flex flex-wrap items-center justify-center">
-            {networkList.slice(0, 2).map((item, index) => (
+            {networkList.slice(0, 3).map((item, index) => (
               <div
                 className={`${item.hoverBg} p-8 bg-[#26262b] m-4 md:mx-2 min-w-[300px] 
                 md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
@@ -129,7 +138,7 @@ const Networks = () => {
             ))}
           </div>
           <div className="flex flex-wrap justify-center pt-8 md:pt-2">
-            {networkList.slice(2, networkList.length + 1).map((item, index) => (
+            {networkList.slice(3, networkList.length + 1).map((item, index) => (
               <div
                 className={`${item.hoverBg} p-8 bg-[#26262b] m-4 md:mx-2 min-w-[300px] 
                 md:max-w-full md:min-w-full md:w-automax-w-[500px] rounded-xl
