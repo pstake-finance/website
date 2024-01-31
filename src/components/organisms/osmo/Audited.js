@@ -22,7 +22,7 @@ const Audited = () => {
   ];
   return (
     <div className="bg-[#1C1C28]">
-      <div className="sectionContainer py-[65px] md:py-[35px]">
+      <div className="sectionContainer py-[65px] md:py-[35px]  bg-title_bg bg-no-repeat">
         <h3 className="sectionTitle mb-8">stkDYDX Security Partners</h3>
         <div className="flex text-center justify-center items-center flex-wrap">
           {auditList.slice(0, 4).map((item, index) => (

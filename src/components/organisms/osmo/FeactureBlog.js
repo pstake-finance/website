@@ -37,7 +37,7 @@ const FeaturedBlogs = () => {
   return (
     <div className="bg-[#1C1C28]">
       <div
-        className="sectionContainer py-[65px] md:py-[35px]"
+        className="sectionContainer py-[65px] md:py-[35px]  bg-title_bg bg-no-repeat"
         data-aos="fade-up"
       >
         <h3 className="sectionTitle mb-8">{t("FEATURED_BLOGS")}</h3>

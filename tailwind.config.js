@@ -183,7 +183,7 @@ module.exports = {
         ethBanner: "100% 0,100% 100%",
         osmoBanner: "100% 0,100% 100%",
         dydxBanner: "100% 5%,100% 100%",
-        title_bg: "50% -75%",
+        title_bg: "0% -150px",
       },
     },
   },

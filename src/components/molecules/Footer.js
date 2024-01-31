@@ -44,7 +44,7 @@ const Footer = () => {
       text: "Chat with the community",
     },
     {
-      name: "Twitter",
+      name: "X (Formerly Twitter)",
       url: twitterUrl,
       icon: "twitter-logo",
       text: "Stay updated",

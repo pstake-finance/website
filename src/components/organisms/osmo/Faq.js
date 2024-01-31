@@ -96,8 +96,8 @@ const accordionItems = [
 const Faq = () => {
   return (
     <>
-      <div id="stkOsmoFaqs" className="bg-[#1C1C28]">
-        <div className="sectionContainer py-[65px] md:py-[35px]">
+      <div id="stkOsmoFaqs" className="bg-[#1C1C28] ">
+        <div className="sectionContainer py-[65px] md:py-[35px]  bg-title_bg bg-no-repeat">
           <div className="sectionTitle mb-8">
             <h1 className="inline-flex relative">
               FAQ

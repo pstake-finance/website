@@ -25,7 +25,7 @@ const LiquidStakingSteps = () => {
   return (
     <>
       <div className="bg-[#1C1C28]">
-        <div className="sectionContainer py-[65px] md:py-[35px] bg-no-repeat">
+        <div className="sectionContainer py-[65px] md:py-[35px] bg-title_bg bg-no-repeat">
           <div className="sectionTitle mb-10 relative">
             <h3 className={"inline-flex relative"}>
               Liquid Staking DYDX{" "}
