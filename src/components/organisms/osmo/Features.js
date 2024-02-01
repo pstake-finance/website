@@ -5,67 +5,59 @@ import Icon from "../../molecules/Icon";
 const Features = () => {
   const list = [
     {
-      title: "Decentralize your DYDX stake. And the dYdX chain.",
-      icon: "dydx_usecase1",
+      title: "Decentralize your OSMO stake",
+      icon: "usecase1",
       content:
-        "DYDX deposits on pSTAKE get staked with 30+ dYdX validators with the help of a transparent, on-chain data-driven algorithm focused on chain decentralization.",
+        "Deposit any non-zero amount of OSMO to stake through pSTAKE’s diverse validator set of 75 automatically selected validators to decentralize the Osmosis network & earn staking rewards.",
     },
     {
-      title: "Built for DYDX. Built On Persistence One.",
-      icon: "dydx_usecase2",
+      title: "Get OSMO liquidity in a flash",
+      icon: "usecase2",
       content:
-        "Never worry about repeatedly claiming rewards with no-click auto compounding of DYDX and USDC staking rewards with stkDYDX. Enjoy 0% fees for DYDX liquid staking until April 2024.",
+        "Swap stkOSMO on Osmosis or use pSTAKE's unique Flash Unstake feature to receive liquid OSMO.",
     },
     {
-      title: "Safe, Secure, and Solid.",
-      icon: "dydx_usecase3",
+      title: "Safe, Secure, and Solid",
+      icon: "usecase3",
       content:
-        "Liquid staking with pSTAKE is audited by leading security firms like Halborn and Notional, along with an active Immunefi Bug Bounty program. stkDYDX is also audited separately by Oak Security.",
-    },
-    {
-      title: "Get DYDX liquidity in a flash",
-      icon: "dydx_usecase4",
-      content:
-        "Swap stkDYDX on DEXs like Dexter or use pSTAKE’s unique Flash Unstake feature to get liquid DYDX.",
+        "pSTAKE’s implementation on the Persistence core-1 chain is audited by leading security firms like Halborn and Oak Security with an active Immunefi Bug Bounty program",
     },
   ];
   return (
-    <div className="bg-[#1C1C28]">
-      <div className="sectionContainer py-[65px] md:py-[35px] dydx-usecase bg-title_bg bg-no-repeat">
+    <div className="bg-[#140F34]">
+      <div className="sectionContainer py-[65px] md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6">
-          Why Liquid Stake your <br /> DYDX with pSTAKE?
+          Why liquid stake your <br /> OSMO with pSTAKE?
         </h3>
         <div className="flex flex-wrap">
           {list.map((item, index) => (
             <div
-              className="-lg:basis-[25%] -lg:max-w-[25%] px-4 mt-4 pt-12 md:pt-4"
+              className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4 pt-12 md:pt-4"
               data-aos="fade-up"
               key={index}
             >
               {index === 0 ? (
-                <div className="feature-circle-one lavender" />
-              ) : index === 3 ? (
-                <div className="feature-circle-two lavender" />
+                <div className="feature-circle-one purple" />
+              ) : index === 2 ? (
+                <div className="feature-circle-two purple" />
               ) : null}
               <div
-                className="bg-[#232334] md:p-4 h-full z-100 relative
-              rounded-md box"
+                className="bg-[#201B43] md:p-4 p-8 h-full opacity-90
+              rounded-md"
               >
-                <div className={"p-6"}>
-                  <div className="py-6">
-                    <Icon
-                      viewClass="use-case w-[34px] fill-[#FFFFFF]"
-                      icon={item.icon}
-                    />
-                  </div>
-                  <div className="content">
-                    <p className="font-bold leading-snug text-[18px] text-light-high mb-6">
-                      {item.title}
-                    </p>
-                    <p className="font-normal text-sm leading-loose text-[#E0E0E0]">
-                      {item.content}
-                    </p>
-                  </div>
+                <div className="py-6">
+                  <Icon
+                    viewClass="use-case w-[34px] fill-[#FFFFFF]"
+                    icon={item.icon}
+                  />
+                </div>
+                <div className="content">
+                  <p className="font-bold leading-snug text-[18px] text-light-high mb-6">
+                    {item.title}
+                  </p>
+                  <p className="font-normal text-sm leading-loose text-[#E0E0E0]">
+                    {item.content}
+                  </p>
                 </div>
               </div>
             </div>

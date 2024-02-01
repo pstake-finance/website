@@ -19,7 +19,11 @@ export interface InitialDataSliceState {
 }
 
 export interface InitialDataSliceActions {
-  fetchInitialData: (rpc: string, chainID: string) => Promise<void>;
+  fetchInitialData: (
+    rpc: string,
+    chainID: string,
+    env: string
+  ) => Promise<void>;
   resetInitialDataSlice: () => void;
   setValidatorInfo: (value: ValidatorsInfo) => void;
   setValidatorInfoLoader: (value: boolean) => void;
@@ -38,11 +42,12 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
   set
 ) => ({
   ...initialState,
-  fetchInitialData: async (rpc, chainID) => {
+  fetchInitialData: async (rpc, chainID, env) => {
     set({
       validatorsInfoLoader: true,
     });
-    const valResponse = await getValidators(rpc, chainID);
+    const valResponse = await getValidators(rpc, chainID, env);
+    console.log(valResponse, "valResponse");
     set({
       validatorsInfo: {
         osmo: valResponse,

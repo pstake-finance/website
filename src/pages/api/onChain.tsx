@@ -4,9 +4,9 @@ import { QueryClientImpl as StakeQuery } from "cosmjs-types/cosmos/staking/v1bet
 import { ValidatorInfo } from "../../store/slices/initial-data-slice";
 import { ExternalChains } from "../../utils/config";
 
-export const getValidatorInfo = async (chainId: string) => {
+export const getValidatorInfo = async (chainId: string, env: string) => {
   try {
-    const chainInfo = ExternalChains["Mainnet"].find(
+    const chainInfo = ExternalChains[env].find(
       (item) => item.chainId === chainId
     );
     const rpcClient = await RpcClient(chainInfo!.rpc);
@@ -33,9 +33,21 @@ export const getValidatorInfo = async (chainId: string) => {
   }
 };
 
+export const getIdentityChain = (chainID: string) => {
+  switch (chainID) {
+    case "osmosis-1":
+      return "osmosis";
+    case "dydx-testnet-4":
+      return "dydx-testnet";
+    default:
+      return "cosmos";
+  }
+};
+
 export const getValidators = async (
   rpc: string,
-  hostChainId: string
+  hostChainId: string,
+  env: string
 ): Promise<ValidatorInfo[]> => {
   try {
     let validators: ValidatorInfo[] = [];
@@ -46,25 +58,33 @@ export const getValidators = async (
     });
     if (chainParamsResponse && chainParamsResponse.hostChain?.validators) {
       if (chainParamsResponse.hostChain?.validators.length > 0) {
-        const validatorInfo = await getValidatorInfo(hostChainId);
+        const validatorInfo = await getValidatorInfo(hostChainId, env);
         const hostChainValidators = chainParamsResponse.hostChain?.validators;
         hostChainValidators?.forEach((item) => {
           const res = validatorInfo?.find(
             (valItem) => valItem.operatorAddress === item.operatorAddress
+          );
+          const chainInfo = ExternalChains[env].find(
+            (item) => item.chainId === hostChainId
           );
           console.log(Number(decimalize(item.weight, 18)), "info111");
           if (
             res &&
             (Number(item.delegatedAmount) > 0 || Number(item.weight) > 0)
           ) {
+            const chainIdentity = getIdentityChain(hostChainId);
+            console.log(chainIdentity, "chainIdentity");
             validators.push({
               name: res.description!.moniker!,
-              identity: `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/osmosis/moniker/${res.operatorAddress}.png`,
+              identity: `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`,
               weight: (Number(decimalize(item.weight, 18)) * 100).toFixed(2),
               delegationAmount: Number(
-                decimalize(item.delegatedAmount, 6)
+                decimalize(
+                  item.delegatedAmount,
+                  chainInfo!.stakeCurrency.coinDecimals
+                )
               ).toFixed(),
-               targetDelegation: Number(decimalize(item.weight, 18)).toFixed(6),
+              targetDelegation: Number(decimalize(item.weight, 18)).toFixed(6),
             });
           }
         });
@@ -72,6 +92,7 @@ export const getValidators = async (
     }
     return validators;
   } catch (e) {
+    console.log(e, "error-");
     return [];
   }
 };

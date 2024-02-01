@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const list = [
   {
-    name: "stkDYDX",
-    logoUrl: "/images/stk_dydx.svg",
-    url: "/dydx/validators",
+    name: "stkOSMO",
+    logoUrl: "/images/stkOsmo.svg",
+    url: "/osmo/validators",
   },
 ];
 
@@ -39,11 +39,11 @@ const FilterDropdown = () => {
               <Image
                 width={24}
                 height={24}
-                src={"/images/stkOsmo.svg"}
+                src={"/images/stk_dydx.svg"}
                 alt="stkATOM logo"
               />
               <span className="text-[20px] leading-normal md:text-xsm px-2">
-                stkOSMO
+                stkDYDX
               </span>
               <span
                 className={`${

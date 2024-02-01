@@ -504,6 +504,43 @@ export const ExternalChains: ExternalChainData = {
         bech32PrefixConsPub: "persistencevalconspub",
       },
     },
+    {
+      rpc: "https://dydx-testnet-rpc.publicnode.com",
+      rest: "https://dydx-testnet-rest.publicnode.com",
+      chainId: "dydx-testnet-4",
+      chainName: "Dydx-Test",
+      stakeCurrency: {
+        coinDenom: "DV4TNT",
+        coinDecimals: 18,
+        coinMinimalDenom: "adv4tnt",
+      },
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: {
+        bech32PrefixAccAddr: "dydx",
+        bech32PrefixAccPub: "dydxpub",
+        bech32PrefixValAddr: "dydxvaloper",
+        bech32PrefixValPub: "dydxvaloperpub",
+        bech32PrefixConsAddr: "dydxvalcons",
+        bech32PrefixConsPub: "dydxvalconspub",
+      },
+      currencies: [
+        {
+          coinDenom: "DV4TNT",
+          coinDecimals: 18,
+          coinMinimalDenom: "adv4tnt",
+        },
+      ],
+      feeCurrencies: [
+        {
+          coinDenom: "DV4TNT",
+          coinDecimals: 18,
+          coinMinimalDenom: "adv4tnt",
+        },
+      ],
+      features: [],
+    },
   ],
   Mainnet: [
     {

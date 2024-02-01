@@ -65,7 +65,8 @@ const Footer = () => {
 
   return (
     <>
-      {router.pathname !== "/osmo/validators" ? (
+      {router.pathname !== "/osmo/validators" &&
+      router.pathname !== "/dydx/validators" ? (
         <div
           className={`${
             router.pathname === "/osmo"
