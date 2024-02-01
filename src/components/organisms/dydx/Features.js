@@ -31,7 +31,7 @@ const Features = () => {
   ];
   return (
     <div className="bg-[#1C1C28]">
-      <div className="sectionContainer py-[65px] md:py-[35px] dydx-usecase bg-title_bg bg-no-repeat">
+      <div className="sectionContainer py-[65px] md:py-[35px] dydx-usecase">
         <h3 className="sectionTitle mb-8 md:mb-6">
           Why Liquid Stake your <br /> DYDX with pSTAKE?
         </h3>

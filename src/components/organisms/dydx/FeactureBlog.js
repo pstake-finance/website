@@ -37,7 +37,7 @@ const FeaturedBlogs = () => {
   return (
     <div className="bg-[#1C1C28]">
       <div
-        className="sectionContainer py-[65px] md:py-[35px]  bg-title_bg bg-no-repeat"
+        className="sectionContainer py-[65px] md:py-[35px]"
         data-aos="fade-up"
       >
         <h3 className="sectionTitle mb-8">{t("FEATURED_BLOGS")}</h3>
@@ -53,7 +53,7 @@ const FeaturedBlogs = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="blog-image h-auto -md:max-h-[205px]">
+                  <div className="blog-image h-auto">
                     <img alt="blog2" src={item.imageLink} />
                   </div>
 
