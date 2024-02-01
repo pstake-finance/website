@@ -38,7 +38,7 @@ const Features = () => {
         <div className="flex flex-wrap">
           {list.map((item, index) => (
             <div
-              className="-lg:basis-[25%] -lg:max-w-[25%] px-4 mt-4 pt-12 md:pt-4"
+              className={`-lg:basis-[25%] -lg:max-w-[25%] px-3 mt-4 pt-12 md:pt-4`}
               data-aos="fade-up"
               key={index}
             >
@@ -59,7 +59,11 @@ const Features = () => {
                     />
                   </div>
                   <div className="content">
-                    <p className="font-bold leading-snug text-[18px] text-light-high mb-6">
+                    <p
+                      className={`font-bold leading-snug text-light-high ${
+                        index === 2 || index === 3 ? "mb-11" : "mb-6 "
+                      }`}
+                    >
                       {item.title}
                     </p>
                     <p className="font-normal text-sm leading-loose text-[#E0E0E0]">

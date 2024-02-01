@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
 import { OSMOSIS_URL } from "../../../utils/config";
+import { useAppStore } from "../../../store/store";
+import { shallow } from "zustand/shallow";
+import { Spinner } from "../spinner";
 
 const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
 
@@ -8,7 +11,10 @@ const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
   const [country, setCountry] = useState("");
   const [banner, setBanner] = useState(true);
-
+  const [validatorsInfo, validatorsInfoLoader] = useAppStore(
+    (state) => [state.validatorsInfo, state.validatorsInfoLoader],
+    shallow
+  );
   useEffect(() => {
     fetch(workerUrl)
       .then((response) => response.json())
@@ -80,8 +86,15 @@ const GeofenceNotice = () => {
           height={"16px"}
           className="logo mr-2.5"
         />
-        stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
-        validators&nbsp;
+        <span>
+          stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with&nbsp;
+        </span>
+        {validatorsInfoLoader ? (
+          <Spinner size={"small"} className={"!w-3 !h-3"} />
+        ) : (
+          validatorsInfo.osmo.length
+        )}
+        &nbsp;validators&nbsp;
         <a
           className="link underline"
           href={OSMOSIS_URL}

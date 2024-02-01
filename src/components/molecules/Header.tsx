@@ -51,6 +51,7 @@ import { useWindowSize } from "../../customHooks/useWindowSize";
 import Button from "../atoms/button/Button";
 import OsmoHeader from "./osmo-header";
 import GeofenceNotice from "./geofence-banner";
+import { useAppStore } from "../../store/store";
 
 const Header = () => {
   const { t } = useTranslation("common");
@@ -240,6 +241,16 @@ const Header = () => {
   const handleRouter = (link: string) => {
     router.push(link);
   };
+
+  const fetchInitialData = useAppStore((state) => state.fetchInitialData);
+
+  useEffect(() => {
+    fetchInitialData(
+      "https://rpc.core.persistence.one",
+      "osmosis-1",
+      "Mainnet"
+    );
+  }, []);
 
   return (
     <React.Fragment>

@@ -6,7 +6,6 @@ import ValidatorTable from "./table";
 import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
-import FilterDropdown from "./filter-dropdown";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
@@ -16,20 +15,11 @@ const ValidatorsList = () => {
   const { osmoData } = useApp();
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
-  const fetchInitialData = useAppStore((state) => state.fetchInitialData);
 
   const [validatorsInfo, validatorsInfoLoader] = useAppStore(
     (state) => [state.validatorsInfo, state.validatorsInfoLoader],
     shallow
   );
-
-  useEffect(() => {
-    fetchInitialData(
-      "https://rpc.core.persistence.one",
-      "osmosis-1",
-      "Mainnet"
-    );
-  }, []);
 
   useEffect(() => {
     if (validatorsInfo.osmo.length > 0) {
