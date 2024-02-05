@@ -89,7 +89,7 @@ const GeofenceNotice = () => {
         <span>
           stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with&nbsp;
         </span>
-        {validatorsInfoLoader ? (
+        {validatorsInfoLoader.loader && validatorsInfoLoader.name === "osmo" ? (
           <Spinner size={"small"} className={"!w-3 !h-3"} />
         ) : (
           validatorsInfo.osmo.length

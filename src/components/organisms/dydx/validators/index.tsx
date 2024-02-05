@@ -10,13 +10,49 @@ import FilterDropdown from "./filter-dropdown";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
-import Image from "next/image";
+import ValidatorCriteria from "../../common/criteria-table";
+import Icon from "../../../molecules/Icon";
+
+const criteriaList = [
+  {
+    parameter: "Voting Power",
+    criteria: "0.05% to 5%",
+    weightage: "15%",
+    time: "Last 30 Days",
+  },
+  {
+    parameter: "Commission",
+    criteria: "5% to 10%",
+    weightage: "25%",
+    time: "Last 30 Days",
+  },
+  {
+    parameter: "Uptime",
+    criteria: "95% to 100%",
+    weightage: "20%",
+    time: "Last 30 Days",
+  },
+  {
+    parameter: "Governance Participation",
+    criteria: "60% to 100%",
+    weightage: "40%",
+    time: "Last 30 Days",
+  },
+  {
+    parameter: "Validator-Bond",
+    criteria: "0.1% to 20%",
+    weightage: "-",
+    time: "Last 30 Days",
+  },
+];
 
 const ValidatorsList = () => {
   const { dydxData } = useApp();
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
-  const fetchInitialData = useAppStore((state) => state.fetchInitialData);
+  const fetchDydxValidatorsData = useAppStore(
+    (state) => state.fetchDydxValidatorsData
+  );
 
   const [validatorsInfo, validatorsInfoLoader] = useAppStore(
     (state) => [state.validatorsInfo, state.validatorsInfoLoader],
@@ -24,15 +60,15 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    fetchInitialData(
-      "https://rpc.testnet2.persistence.one/",
-      "dydx-testnet-4",
-      "Testnet"
+    fetchDydxValidatorsData(
+      "https://rpc.core.persistence.one",
+      "dydx-mainnet-1",
+      "Mainnet"
     );
   }, []);
 
   useEffect(() => {
-    if (validatorsInfo.osmo.length > 0) {
+    if (validatorsInfo.dydx.length > 0) {
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -44,7 +80,7 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
-      setDataList(validatorsInfo.osmo);
+      setDataList(validatorsInfo.dydx);
     }
   }, [validatorsInfo]);
 
@@ -83,17 +119,6 @@ const ValidatorsList = () => {
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <div className={"flex items-center justify-between"}>
             <FilterDropdown />
-            {/*<div className={`flex items-center flex-1 h-[40px]`}>*/}
-            {/*  <Image*/}
-            {/*    width={40}*/}
-            {/*    height={40}*/}
-            {/*    src={"/images/stk_dydx.svg"}*/}
-            {/*    alt="stkATOM logo"*/}
-            {/*  />*/}
-            {/*  <span className="text-[30px] font-medium text-light-high leading-normal md:text-xsm px-2">*/}
-            {/*    stkDYDX*/}
-            {/*  </span>*/}
-            {/*</div>*/}
             <p
               className={
                 "text-xl font-medium text-light-emphasis md:text-base text-right"
@@ -107,104 +132,28 @@ const ValidatorsList = () => {
             </p>
           </div>
         </div>
-        <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
+        <div className={"mb-6"}>
           <p
             className={
-              "font-medium text-xl text-light-emphasis mb-6 md:text-lg"
+              "font-semibold text-xl text-light-emphasis md:text-lg flex items-center mb-1"
             }
           >
             pSTAKE Delegation Model Criteria
+            <a className="ml-1.5" href="/" target="_blank" rel="noreferrer">
+              <Icon
+                viewClass="!w-[16px] !h-[16px] fill-[#FBFBFB]"
+                icon="new-tab"
+              />
+            </a>
           </p>
-          <div className={"flex justify-between items-center lg:block"}>
-            <div
-              className={
-                "flex flex-col justify-center items-center border-r border-[#3E3E3E] pl-4 pr-12 w-[200px] lg:flex-row lg:w-auto lg:border-0 lg:justify-start"
-              }
-            >
-              <p
-                className={
-                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
-                }
-              >
-                Voting Power
-                <br />
-                (Last 180 Days)
-              </p>
-              <p className={"text-xl font-medium text-light-high md:text-base"}>
-                0.05% to 5%
-              </p>
-            </div>
-            <div
-              className={
-                "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] px-4 lg:border-0 lg:flex-row lg:justify-start"
-              }
-            >
-              <p
-                className={
-                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
-                }
-              >
-                Commission
-                <br />
-                (Last 180 Days)
-              </p>
-              <p className={"text-xl font-medium text-light-high md:text-base"}>
-                5% to 10%
-              </p>
-            </div>
-            <div
-              className={
-                "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] px-4 lg:border-0 lg:flex-row lg:justify-start"
-              }
-            >
-              <p
-                className={
-                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
-                }
-              >
-                Uptime
-                <br />
-                (Last 30 Days)
-              </p>
-              <p className={"text-xl font-medium text-light-high md:text-base"}>
-                95% to 100%
-              </p>
-            </div>
-            <div
-              className={
-                "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] px-4 lg:border-0 lg:flex-row lg:justify-start"
-              }
-            >
-              <p
-                className={
-                  "text-sm text-light-mid mb-2 lg:mb-0 lg:mr-4 text-center"
-                }
-              >
-                Governance Participation
-                <br />
-                (Last 180 Days)
-              </p>
-              <p className={"text-xl font-medium text-light-high md:text-base"}>
-                60% to 100%
-              </p>
-            </div>
-            <div
-              className={
-                "flex flex-col justify-center items-center flex-1 px-4 lg:justify-start"
-              }
-            >
-              <p
-                className={
-                  "text-sm text-light-mid mb-2 text-center lg:text-left lg:mr-auto md:text-base"
-                }
-              >
-                Part of the active set without any slashing instance
-                <br />
-                (Last 180 Days)
-              </p>
-            </div>
-          </div>
+          <p className={"text-[#E0E0E0] md:text-sm flex items-center"}>
+            <Icon viewClass="!w-[16px] !h-[16px] mr-1" icon="warning" />
+            <span className={"font-medium"}>Eligibility:</span>&nbsp;Must be
+            part of the active set and free of any slashing events within the
+            past 180 days.
+          </p>
         </div>
+        <ValidatorCriteria criteriaList={criteriaList} />
         <div className="pb-4">
           <div
             className={
@@ -229,14 +178,14 @@ const ValidatorsList = () => {
               </p>
             </div>
           </div>
-          {!validatorsInfoLoader && dataList.length > 0 ? (
+          {!validatorsInfoLoader.loader && dataList.length > 0 ? (
             <ValidatorTable data={dataList} columns={columns} />
           ) : (
             <EmptyTable
               columns={columns}
               loader={false}
               text={
-                validatorsInfoLoader ? (
+                validatorsInfoLoader.loader ? (
                   <Spinner size={"medium"} />
                 ) : (
                   "Data not found"

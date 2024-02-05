@@ -292,6 +292,19 @@ body {
   width: 20%;
 }
 
+.criteria.custom-table thead tr th:first-child{
+  border-top-left-radius: 6px;
+}
+
+.criteria.custom-table thead tr th:last-child{
+  border-top-right-radius: 6px;
+}
+
+.criteria.custom-table, .criteria.custom-table th, td {
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+
 .spinner.large {
   width: 2rem;
   height: 2rem;

@@ -39,6 +39,8 @@ export const getIdentityChain = (chainID: string) => {
       return "osmosis";
     case "dydx-testnet-4":
       return "dydx-testnet";
+    case "dydx-mainnet-1":
+      return "dydx";
     default:
       return "cosmos";
   }
@@ -56,6 +58,13 @@ export const getValidators = async (
     const chainParamsResponse = await pstakeQueryService.HostChain({
       chainId: hostChainId,
     });
+    console.log(
+      chainParamsResponse,
+      "chainParamsResponse",
+      rpc,
+      hostChainId,
+      env
+    );
     if (chainParamsResponse && chainParamsResponse.hostChain?.validators) {
       if (chainParamsResponse.hostChain?.validators.length > 0) {
         const validatorInfo = await getValidatorInfo(hostChainId, env);

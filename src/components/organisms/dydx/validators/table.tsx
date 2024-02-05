@@ -20,7 +20,7 @@ const ValidatorTable = ({ data, columns }: TableProps) => {
                 {index + 1}
               </span>
               <Image
-                src={data.identity}
+                src={data.identity || "/images/atom.svg"}
                 alt={data.name}
                 width={24}
                 height={24}

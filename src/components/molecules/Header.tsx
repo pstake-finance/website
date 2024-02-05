@@ -242,10 +242,12 @@ const Header = () => {
     router.push(link);
   };
 
-  const fetchInitialData = useAppStore((state) => state.fetchInitialData);
+  const fetchOsmoValidatorsData = useAppStore(
+    (state) => state.fetchOsmoValidatorsData
+  );
 
   useEffect(() => {
-    fetchInitialData(
+    fetchOsmoValidatorsData(
       "https://rpc.core.persistence.one",
       "osmosis-1",
       "Mainnet"

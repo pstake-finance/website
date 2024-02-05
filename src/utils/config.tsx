@@ -673,8 +673,8 @@ export const ExternalChains: ExternalChainData = {
       },
     },
     {
-      rpc: "https://rpc-dydx.keplr.app",
-      rest: "https://lcd-dydx.keplr.app",
+      rpc: "https://dydx-dao-rpc.polkachu.com",
+      rest: "https://dydx-dao-api.polkachu.com",
       chainId: "dydx-mainnet-1",
       chainName: "dYdX",
       stakeCurrency: {

@@ -28,7 +28,7 @@ const FilterDropdown = () => {
         ref={dropDownRef}
       >
         <button
-          className={`bg-[#3c3c3c] !text-light-high rounded-[48px] w-max 
+          className={`bg-[#383838] !text-light-high rounded-[48px] w-max 
             font-medium w-full md:text-sm flex items-center w-[180px] h-[46px]`}
           onClick={() => setDropdownOpen(!dropdownOpen)}
         >
@@ -60,7 +60,7 @@ const FilterDropdown = () => {
         </button>
 
         <div
-          className={`bg-[#3e3e3e] round-md md:p-0 dropDownContent min-w-full w-fit absolute opacity-0 transition-opacity transform ease duration-200 left-0 ${
+          className={`bg-[#383838] round-md md:p-0 dropDownContent min-w-full w-fit absolute opacity-0 transition-opacity transform ease duration-200 left-0 ${
             dropdownOpen ? `visible translate-y-[4px] opacity-100` : `invisible`
           } rounded-md z-10`}
         >
@@ -79,7 +79,7 @@ const FilterDropdown = () => {
                     alt="stkATOM logo"
                   />
                   <span
-                    className="font-medium text-white-200
+                    className="text-white-high
                   leading-normal md:text-xsm md:ml-2 "
                   >
                     {item.name}
