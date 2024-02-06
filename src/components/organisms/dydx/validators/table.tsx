@@ -19,13 +19,21 @@ const ValidatorTable = ({ data, columns }: TableProps) => {
               <span className={"text-sm text-[#FBFBFB] mr-[14px]"}>
                 {index + 1}
               </span>
-              <Image
-                src={data.identity || "/images/atom.svg"}
-                alt={data.name}
-                width={24}
-                height={24}
-                className="mr-2 rounded-full"
-              />
+              {data.identity !== "" ? (
+                <Image
+                  src={data.identity}
+                  alt={data.name}
+                  width={24}
+                  height={24}
+                  className="mr-2 rounded-full"
+                />
+              ) : (
+                <div
+                  className={
+                    "w-[24px] h-[24px] rounded-full bg-black-full mr-2"
+                  }
+                ></div>
+              )}
               <div className={"text-left"}>
                 <p className="">{data.name}</p>
               </div>

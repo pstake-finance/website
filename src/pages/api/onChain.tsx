@@ -46,6 +46,25 @@ export const getIdentityChain = (chainID: string) => {
   }
 };
 
+const noAvatarValidators = [
+  "dydxvaloper1tl75dqhdgm0akll92aaq8cufez0hn4kqrn4zpl",
+  "dydxvaloper1y29mkku4zqz8phrxc8zgu7jfnw504leqdwvzzg",
+  "dydxvaloper1ywm48fet6n4jgrenl6dsuzprrgxv3pd89n97zt",
+  "dydxvaloper14hz2lp7t8nrzl8esfg3hnj4efj0a53cdz0lzc9",
+  "dydxvaloper1a4mcl5d6h2ak4hn6nj8vg8vtew6t3mnwzd4sqn",
+  "dydxvaloper1m7cz0m5mmrc9j5crxjjk5p39nv4kyednjz8c7e",
+  "dydxvaloper1ql40pjftdwl6qtmgk0fn0r02spvss96enayy3q",
+  "dydxvaloper1jxv0u20scum4trha72c7ltfgfqef6nsc7dvalf",
+  "dydxvaloper1hv2jdxyfdkfk4vja52dj0p80mk85nmuaklx55e",
+  "dydxvaloper1dnm7e7jw9r48vsw4h6q5x0s0z0ugu0wqeqxyzt",
+  "dydxvaloper1u0exa7dqlsgvfje9sg0emxrmtdmvakp7d0f697",
+  "dydxvaloper19sk0mm69k5lgzwywzr9335pqj5mqcadnprclam",
+  "dydxvaloper1mklf4k26dff0vueyqy2rvqhgjjkvdzam6p4na0",
+  "dydxvaloper1zts523wqvtrhd2a9mznfc83msgs6mgwczvj7kw",
+  "dydxvaloper1sstrskpg70tumvwsaldwym2dgs0flj67vsfx4r",
+  "dydxvaloper1nwtp8t5vl86zdm5ag85st5czv7d0kscq2zzvgl",
+  "dydxvaloper1zhyan2t9w5z7yw20l9e97zc030d2ddq4awdyys",
+];
 export const getValidators = async (
   rpc: string,
   hostChainId: string,
@@ -76,16 +95,22 @@ export const getValidators = async (
           const chainInfo = ExternalChains[env].find(
             (item) => item.chainId === hostChainId
           );
-          console.log(Number(decimalize(item.weight, 18)), "info111");
+          console.log(item, Number(decimalize(item.weight, 18)), "info111");
           if (
             res &&
             (Number(item.delegatedAmount) > 0 || Number(item.weight) > 0)
           ) {
             const chainIdentity = getIdentityChain(hostChainId);
+            const avatarCheck = noAvatarValidators.find(
+              (item) => item === res.operatorAddress
+            );
+
             console.log(chainIdentity, "chainIdentity");
             validators.push({
               name: res.description!.moniker!,
-              identity: `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`,
+              identity: !avatarCheck
+                ? `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`
+                : "",
               weight: (Number(decimalize(item.weight, 18)) * 100).toFixed(2),
               delegationAmount: Number(
                 decimalize(
