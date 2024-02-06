@@ -61,13 +61,11 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    if (validatorsInfo.osmo.length <= 0) {
-      fetchOsmoValidatorsData(
-        "https://rpc.core.persistence.one",
-        "osmosis-1",
-        "Mainnet"
-      );
-    }
+    fetchOsmoValidatorsData(
+      "https://rpc.core.persistence.one",
+      "osmosis-1",
+      "Mainnet"
+    );
   }, [validatorsInfo]);
 
   useEffect(() => {
@@ -139,7 +137,7 @@ const ValidatorsList = () => {
         <div className={"mb-6"}>
           <p
             className={
-              "font-semibold text-xl text-light-emphasis md:text-lg flex items-center mb-1"
+              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1"
             }
           >
             pSTAKE Delegation Model Criteria

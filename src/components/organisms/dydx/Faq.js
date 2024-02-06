@@ -58,14 +58,14 @@ const accordionItems = [
     content: (
       <div>
         stkDYDX is non-custodial and is built using the IBC tech stack on the
-        Persistence Core-1 chain, similar to stkATOM. Learn more about it
+        Persistence Core-1 chain, similar to stkATOM.&nbsp;
         <a
           href="https://docs.pstake.finance/stkATOM_Technical_Architecture/"
           target="_blank"
           rel="noopener noreferrer"
           className={"underline"}
         >
-          here.
+          Learn more here.
         </a>
       </div>
     ),
@@ -79,14 +79,14 @@ const accordionItems = [
         Flash Unstake, UX improvements like no-click DYDX and USDC staking
         rewards auto-compounding, and a 0% liquid staking fee initially after
         launch. In addition, stkDYDX is custom-built to help decentralize the
-        dYdX chain further.
+        dYdX chain further.&nbsp;
         <a
           href="https://docs.pstake.finance/stkATOM_Technical_Architecture/"
           target="_blank"
           rel="noopener noreferrer"
           className={"underline"}
         >
-          here.
+          Learn more here.
         </a>
       </div>
     ),

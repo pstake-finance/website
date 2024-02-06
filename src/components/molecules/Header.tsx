@@ -242,14 +242,14 @@ const Header = () => {
     router.push(link);
   };
 
-  const fetchOsmoValidatorsData = useAppStore(
-    (state) => state.fetchOsmoValidatorsData
+  const fetchDydxValidatorsData = useAppStore(
+    (state) => state.fetchDydxValidatorsData
   );
 
   useEffect(() => {
-    fetchOsmoValidatorsData(
+    fetchDydxValidatorsData(
       "https://rpc.core.persistence.one",
-      "osmosis-1",
+      "dydx-mainnet-1",
       "Mainnet"
     );
   }, []);

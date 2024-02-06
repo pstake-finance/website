@@ -47,7 +47,7 @@ const FeaturedBlogs = () => {
               className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
               key={index}
             >
-              <div className="bg-black-full hover:bg-black-emphasis">
+              <div className="bg-[#232334] hover:bg-black-emphasis rounded-md">
                 <a
                   href={item.blogLink}
                   target="_blank"
@@ -58,12 +58,12 @@ const FeaturedBlogs = () => {
                   </div>
 
                   <div className="md:p-4 px-6 py-4">
-                    <p className="text-[#555] leading-normal font-semibold text-[12px]">
+                    <p className="text-[#D1D1D1] leading-normal text-[14px]">
                       {item.title}
                     </p>
                     <p
-                      className="inline-flex items-center border-b-2 border-[#5064FB]
-                    border-solid text-[12px] text-light-full pb-2"
+                      className="text-[#FFFFFF] inline-flex items-center border-b-2 border-[#6966FF]
+                    border-solid text-[12px] text-light-full pb-1"
                     >
                       {t("LEARN_MORE")}
                     </p>

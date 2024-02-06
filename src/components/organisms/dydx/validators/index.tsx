@@ -60,12 +60,14 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    fetchDydxValidatorsData(
-      "https://rpc.core.persistence.one",
-      "dydx-mainnet-1",
-      "Mainnet"
-    );
-  }, []);
+    if (validatorsInfo.osmo.length <= 0) {
+      fetchDydxValidatorsData(
+        "https://rpc.core.persistence.one",
+        "dydx-mainnet-1",
+        "Mainnet"
+      );
+    }
+  }, [validatorsInfo]);
 
   useEffect(() => {
     if (validatorsInfo.dydx.length > 0) {
@@ -135,7 +137,7 @@ const ValidatorsList = () => {
         <div className={"mb-6"}>
           <p
             className={
-              "font-semibold text-xl text-light-emphasis md:text-lg flex items-center mb-1"
+              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1"
             }
           >
             pSTAKE Delegation Model Criteria

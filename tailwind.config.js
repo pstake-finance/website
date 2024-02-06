@@ -49,7 +49,7 @@ module.exports = {
       "body-bg":
         "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
       topBanner: `url('/images/bg_images/atom_topbar.svg'), 
-      linear-gradient(80.17deg, #7268FD -4.31%, #CA2EBD 111.08%, #CA2EBD 127.68%)`,
+      linear-gradient(80.17deg, #232334 -4.31%, #6866ff 111.08%, #6866ff 127.68%)`,
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
       homePageBanner: `url('/images/bg_images/bg.svg'),

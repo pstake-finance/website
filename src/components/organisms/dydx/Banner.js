@@ -27,8 +27,8 @@ const Banner = () => {
           className="banner-heading font-bold text-[54px] leading-tight
         text-dark-black-high mt-4 md:text-[40px] sm:text-3xl"
         >
-          Secure, decentralized
-          <br /> DYDX liquid staking
+          Secure, Decentralized
+          <br /> DYDX Liquid Staking
         </h1>
         <h6
           className="max-w-[700px] mx-auto mt-8 font-medium text-base
