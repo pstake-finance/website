@@ -17,7 +17,7 @@ const criteriaList = [
   {
     parameter: "Voting Power",
     criteria: "0.05% to 5%",
-    weightage: "10%",
+    weightage: "15%",
     time: "Last 180 Days",
   },
   {
@@ -36,12 +36,6 @@ const criteriaList = [
     parameter: "Governance Participation",
     criteria: "60% to 100%",
     weightage: "40%",
-    time: "Last 180 Days",
-  },
-  {
-    parameter: "Validator-Bond",
-    criteria: "0.1% to 20%",
-    weightage: "10%",
     time: "Last 180 Days",
   },
 ];

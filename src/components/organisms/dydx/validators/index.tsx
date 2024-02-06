@@ -29,7 +29,7 @@ const criteriaList = [
   {
     parameter: "Uptime",
     criteria: "95% to 100%",
-    weightage: "20%",
+    weightage: "15%",
     time: "Last 30 Days",
   },
   {
