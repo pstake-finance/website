@@ -95,7 +95,6 @@ export const getValidators = async (
           const chainInfo = ExternalChains[env].find(
             (item) => item.chainId === hostChainId
           );
-          console.log(item, Number(decimalize(item.weight, 18)), "info111");
           if (
             res &&
             (Number(item.delegatedAmount) > 0 || Number(item.weight) > 0)
@@ -105,7 +104,6 @@ export const getValidators = async (
               (item) => item === res.operatorAddress
             );
 
-            console.log(chainIdentity, "chainIdentity");
             validators.push({
               name: res.description!.moniker!,
               identity: !avatarCheck

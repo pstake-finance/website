@@ -70,7 +70,6 @@ const ValidatorsList = () => {
 
   useEffect(() => {
     if (validatorsInfo.osmo.length > 0) {
-      console.log(validatorsInfo, " validatorsInfo");
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -85,7 +84,6 @@ const ValidatorsList = () => {
       setDataList(validatorsInfo.osmo);
     }
   }, [validatorsInfo]);
-  console.log(dataList, validatorsInfoLoader, " dataList");
   const columns: TableColumnsProps[] = [
     {
       label: "Validator",

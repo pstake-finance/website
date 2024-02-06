@@ -84,7 +84,7 @@ const GeofenceNotice = () => {
           alt={"stkAtom"}
           width={"16px"}
           height={"16px"}
-          className="logo mr-2.5"
+          className="logo mr-1"
         />
         <span>stkDYDX is NOW LIVE. Liquid Stake your DYDX with&nbsp;</span>
         {validatorsInfoLoader.loader && validatorsInfoLoader.name === "dydx" ? (

@@ -8,7 +8,6 @@ import { numberFormat } from "../../../utils/helpers";
 
 const Banner = () => {
   const { cosmosData, bnbData, tokenPrices, osmoData, dydxData } = useApp();
-  console.log(dydxData, "dydxData", tokenPrices);
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#fff] bg-cover bg-no-repeat">

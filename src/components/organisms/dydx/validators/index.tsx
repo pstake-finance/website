@@ -67,7 +67,7 @@ const ValidatorsList = () => {
         "Mainnet"
       );
     }
-  }, [validatorsInfo]);
+  }, []);
 
   useEffect(() => {
     if (validatorsInfo.dydx.length > 0) {

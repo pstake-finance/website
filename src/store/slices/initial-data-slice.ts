@@ -63,7 +63,6 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       },
     }));
     const valResponse = await getValidators(rpc, chainID, env);
-    console.log(valResponse, "valResponse");
     set((state) => ({
       validatorsInfo: {
         ...state.validatorsInfo,
@@ -78,7 +77,6 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
     }));
   },
   fetchDydxValidatorsData: async (rpc, chainID, env) => {
-    console.log(rpc, chainID, env, "inside store");
     set((state) => ({
       validatorsInfoLoader: {
         name: "dydx",
@@ -86,7 +84,6 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       },
     }));
     const valResponse = await getValidators(rpc, chainID, env);
-    console.log(valResponse, "valResponse");
     set((state) => ({
       validatorsInfo: {
         ...state.validatorsInfo,
