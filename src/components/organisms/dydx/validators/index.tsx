@@ -29,7 +29,7 @@ const criteriaList = [
   {
     parameter: "Uptime",
     criteria: "95% to 100%",
-    weightage: "15%",
+    weightage: "20%",
     time: "Last 30 Days",
   },
   {
@@ -38,12 +38,12 @@ const criteriaList = [
     weightage: "40%",
     time: "Last 30 Days",
   },
-  {
-    parameter: "Validator-Bond",
-    criteria: "0.1% to 20%",
-    weightage: "-",
-    time: "Last 30 Days",
-  },
+  // {
+  //   parameter: "Validator-Bond",
+  //   criteria: "0.1% to 20%",
+  //   weightage: "-",
+  //   time: "Last 30 Days",
+  // },
 ];
 
 const ValidatorsList = () => {
@@ -139,7 +139,12 @@ const ValidatorsList = () => {
             }
           >
             pSTAKE Delegation Model Criteria
-            <a className="ml-1.5" href="/" target="_blank" rel="noreferrer">
+            <a
+              className="ml-1.5 hidden"
+              href="/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Icon
                 viewClass="!w-[16px] !h-[16px] fill-[#FBFBFB]"
                 icon="new-tab"
