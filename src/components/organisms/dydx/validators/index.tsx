@@ -60,7 +60,7 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    if (validatorsInfo.osmo.length <= 0) {
+    if (validatorsInfo.dydx.length <= 0) {
       fetchDydxValidatorsData(
         "https://rpc.core.persistence.one",
         "dydx-mainnet-1",

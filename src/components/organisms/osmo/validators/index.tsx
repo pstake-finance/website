@@ -66,7 +66,7 @@ const ValidatorsList = () => {
       "osmosis-1",
       "Mainnet"
     );
-  }, [validatorsInfo]);
+  }, []);
 
   useEffect(() => {
     if (validatorsInfo.osmo.length > 0) {
