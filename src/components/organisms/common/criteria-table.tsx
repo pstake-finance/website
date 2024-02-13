@@ -7,6 +7,8 @@ export interface CriteriaList {
   criteria: string;
   weightage: string;
   time: string;
+  tooltipTitle: string | null;
+  tooltipContent: string | null;
 }
 
 interface Props {
@@ -15,57 +17,70 @@ interface Props {
 
 const ValidatorCriteria = ({ criteriaList }: Props) => {
   return (
-    <div className="mb-8">
-      <div className="max-h-[700px] overflow-auto ">
-        <table className="w-full custom-table criteria">
-          <thead>
-            <tr className="h-14">
-              <th>Parameter</th>
-              <th className={"!text-center"}>Criteria</th>
-              <th className={"!text-center"}>Weightage</th>
-              <th className={"!text-center"}>Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {criteriaList.map((item: any, index: number) => (
-              <tr key={index}>
-                <td className={"!text-left  h-[66px]"}>
-                  {index === 0 || index === 1 ? (
-                    <Tooltip
-                      placement="right"
-                      overlay={
-                        <span className={"text-sm text-light-high font-light"}>
-                          Current {item.parameter}
-                        </span>
-                      }
-                    >
-                      <button className="flex items-center px-1">
-                        {item.parameter}
-                        <Icon
-                          viewClass="arrow-right !w-[14px] ml-1"
-                          icon="info"
-                        />
-                      </button>
-                    </Tooltip>
-                  ) : (
-                    item.parameter
-                  )}
-                </td>
-                <td className={"!text-center"}>{item.criteria}</td>
-                <td className={"!text-center"}>
-                  <span
-                    className={
-                      "bg-[#A6A6A633] rounded-[34px] px-[18px] py-[4px]"
-                    }
-                  >
-                    {item.weightage}
-                  </span>
-                </td>
-                <td className={"!text-center"}>{item.time}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div className="mt-8 mb-2">
+      <div className={"flex justify-between items-center lg:block"}>
+        {criteriaList.map((item: CriteriaList, index: number) => (
+          <div
+            key={item.parameter}
+            className={
+              index === 0
+                ? "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] w-[200px] lg:flex-row lg:w-auto lg:border-0 lg:justify-start"
+                : index === criteriaList.length - 1
+                ? "flex flex-col justify-center items-center flex-1 lg:justify-start"
+                : "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] lg:border-0 lg:flex-row lg:justify-start"
+            }
+          >
+            <div className="flex">
+              <p
+                className={"text-sm text-light-mid lg:mb-0 lg:mr-4 text-center"}
+              >
+                {item.parameter}{" "}
+                <span className="bg-[#A6A6A633] border-radius-[34px] px-[12px] py-[2px] rounded-[34px] text-[#FCFCFC] text-[12px]">
+                  {item.weightage}
+                </span>
+              </p>
+              {item.tooltipTitle || item.tooltipContent ? (
+                <Tooltip
+                  placement="bottom"
+                  showArrow
+                  overlay={
+                    <span className={"text-sm text-light-high font-light"}>
+                      <div className="flex flex-col items-center justify-center max-w-[320px]">
+                        {item.tooltipTitle ? (
+                          <p className="font-medium text-[12px]">
+                            {item.tooltipTitle}
+                          </p>
+                        ) : null}
+                        {item.tooltipContent ? (
+                          <p className="text-center text-[12px]">
+                            {item.tooltipContent}
+                          </p>
+                        ) : null}
+                      </div>
+                    </span>
+                  }
+                >
+                  {/* <button className="flex items-center"> */}
+                  <div className="hover:cursor-pointer">
+                    <Icon
+                      viewClass="arrow-right !w-[18px] ml-1 mt-0.5"
+                      icon="info"
+                    />
+                  </div>
+                  {/* </button> */}
+                </Tooltip>
+              ) : null}
+            </div>
+
+            <p
+              className={
+                "text-xl font-medium text-light-high md:text-base mt-1"
+              }
+            >
+              {item.criteria}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
