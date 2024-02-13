@@ -37,7 +37,7 @@ const criteriaList = [
     time: "Last 30 Days",
     tooltipTitle: "Uptime over 30 days",
     tooltipContent:
-      "Based on the % of blocks that you have missed over the last 90 days",
+      "Based on the % of blocks that you have missed over the last 30 days",
   },
   {
     parameter: "Governance Participation",
