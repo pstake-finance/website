@@ -19,7 +19,7 @@ const criteriaList = [
     criteria: "0.05% to 5%",
     weightage: "15%",
     time: "Last 30 Days",
-    tooltipTitle: null,
+    tooltipTitle: "Current Voting Power",
     tooltipContent: null,
   },
   {
@@ -27,7 +27,7 @@ const criteriaList = [
     criteria: "5% to 10%",
     weightage: "25%",
     time: "Last 30 Days",
-    tooltipTitle: null,
+    tooltipTitle: "Current Validator Commission",
     tooltipContent: null,
   },
   {
