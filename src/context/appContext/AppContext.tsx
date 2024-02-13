@@ -13,7 +13,7 @@ import {
   getCosmosAPY,
   getCosmosTVL,
 } from "../../pages/api/api";
-import { decimalize } from "../../utils/helpers";
+import { decimalize, decimalizeRaw } from "../../utils/helpers";
 
 const AppContext = createContext<AppState>({
   cosmosData: {
@@ -101,7 +101,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
       });
       setDydxData({
         apy: dydxApyResponse,
-        tvl: Number(decimalize(dydxTvlResponse, 18)).toFixed(2),
+        tvl: Number(decimalizeRaw(dydxTvlResponse, 18)),
       });
       setBnbData({
         apy: bnbApyResponse,
