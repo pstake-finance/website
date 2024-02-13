@@ -7,7 +7,7 @@ import { useApp } from "../../../context/appContext/AppContext";
 import { numberFormat } from "../../../utils/helpers";
 
 const Banner = () => {
-  const { cosmosData, bnbData, tokenPrices, osmoData } = useApp();
+  const { cosmosData, bnbData, tokenPrices, osmoData, dydxData } = useApp();
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#fff] bg-cover bg-no-repeat">
@@ -69,6 +69,13 @@ const Banner = () => {
                   height={26}
                   className={"mx-2"}
                 />
+                <img
+                  src={"/images/networks/dydx.svg"}
+                  alt={"atom"}
+                  width={20}
+                  height={20}
+                  className={"mx-2"}
+                />
               </div>
             </div>
             <div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#fff] mx-8 drop-shadow-lg">
@@ -80,7 +87,8 @@ const Banner = () => {
                 {numberFormat(
                   Number(cosmosData.tvl * tokenPrices.ATOM) +
                     Number(bnbData.tvl * tokenPrices.BNB) +
-                    Number(osmoData.tvl * tokenPrices.OSMO),
+                    Number(osmoData.tvl * tokenPrices.OSMO) +
+                    Number(dydxData.tvl * tokenPrices.DYDX),
                   3
                 )}
               </p>

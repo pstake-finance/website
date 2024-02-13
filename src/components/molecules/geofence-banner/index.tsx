@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../Icon";
 import { OSMOSIS_URL } from "../../../utils/config";
+import { useAppStore } from "../../../store/store";
+import { shallow } from "zustand/shallow";
+import { Spinner } from "../spinner";
 
 const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
 
@@ -8,7 +11,10 @@ const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
   const [country, setCountry] = useState("");
   const [banner, setBanner] = useState(true);
-
+  const [validatorsInfo, validatorsInfoLoader] = useAppStore(
+    (state) => [state.validatorsInfo, state.validatorsInfoLoader],
+    shallow
+  );
   useEffect(() => {
     fetch(workerUrl)
       .then((response) => response.json())
@@ -74,17 +80,22 @@ const GeofenceNotice = () => {
     >
       <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
         <img
-          src={"/images/stkOsmo.svg"}
+          src={"/images/stk_dydx.svg"}
           alt={"stkAtom"}
           width={"16px"}
           height={"16px"}
-          className="logo mr-2.5"
+          className="logo mr-1"
         />
-        stkOsmo is LIVE on pSTAKE. Liquid Stake your OSMO with 75
-        validators&nbsp;
+        <span>stkDYDX is NOW LIVE. Liquid Stake your DYDX with&nbsp;</span>
+        {validatorsInfoLoader.loader && validatorsInfoLoader.name === "dydx" ? (
+          <Spinner size={"small"} className={"!w-3 !h-3"} />
+        ) : (
+          validatorsInfo.dydx.length
+        )}
+        &nbsp;validators&nbsp;
         <a
           className="link underline"
-          href={OSMOSIS_URL}
+          href={"https://app.pstake.finance/cosmos"}
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -35,7 +35,11 @@ function AccordionItem({
     <li className={`mb-2 ${isOpen ? "active" : ""}`}>
       <h2
         className={`${
-          router.pathname === "/osmo" ? "bg-[#201B43]" : "bg-[#25252a]"
+          router.pathname === "/osmo"
+            ? "bg-[#201B43]"
+            : router.pathname === "/dydx"
+            ? "bg-[#232334]"
+            : "bg-[#25252a]"
         }  py-3 px-5 mb-4 rounded-xl`}
       >
         <button className="flex justify-between w-full" onClick={btnOnClick}>

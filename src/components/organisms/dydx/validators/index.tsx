@@ -6,10 +6,10 @@ import ValidatorTable from "./table";
 import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
+import FilterDropdown from "./filter-dropdown";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
-import FilterDropdown from "./filter-dropdown";
 import ValidatorCriteria from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
 
@@ -18,7 +18,7 @@ const criteriaList = [
     parameter: "Voting Power",
     criteria: "0.05% to 5%",
     weightage: "15%",
-    time: "Last 180 Days",
+    time: "Last 30 Days",
     tooltipTitle: "Current Voting Power",
     tooltipContent: null,
   },
@@ -26,7 +26,7 @@ const criteriaList = [
     parameter: "Commission",
     criteria: "5% to 10%",
     weightage: "25%",
-    time: "Last 180 Days",
+    time: "Last 30 Days",
     tooltipTitle: "Current Validator Commission",
     tooltipContent: null,
   },
@@ -43,10 +43,10 @@ const criteriaList = [
     parameter: "Governance Participation",
     criteria: "60% to 100%",
     weightage: "40%",
-    time: "Last 180 Days",
-    tooltipTitle: "Governance Participation over 180 days",
+    time: "Last 30 Days",
+    tooltipTitle: "Governance Participation over 30 days",
     tooltipContent:
-      "Track participation in governance proposals over the past 180 days.",
+      "Track participation in governance proposals over the past 30 days.",
   },
   // {
   //   parameter: "Validator-Bond",
@@ -57,29 +57,30 @@ const criteriaList = [
 ];
 
 const ValidatorsList = () => {
-  const { osmoData } = useApp();
+  const { dydxData } = useApp();
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
+  const fetchDydxValidatorsData = useAppStore(
+    (state) => state.fetchDydxValidatorsData
+  );
 
   const [validatorsInfo, validatorsInfoLoader] = useAppStore(
     (state) => [state.validatorsInfo, state.validatorsInfoLoader],
     shallow
   );
 
-  const fetchOsmoValidatorsData = useAppStore(
-    (state) => state.fetchOsmoValidatorsData
-  );
-
   useEffect(() => {
-    fetchOsmoValidatorsData(
-      "https://rpc.core.persistence.one",
-      "osmosis-1",
-      "Mainnet"
-    );
+    if (validatorsInfo.dydx.length <= 0) {
+      fetchDydxValidatorsData(
+        "https://rpc.core.persistence.one",
+        "dydx-mainnet-1",
+        "Mainnet"
+      );
+    }
   }, []);
 
   useEffect(() => {
-    if (validatorsInfo.osmo.length > 0) {
+    if (validatorsInfo.dydx.length > 0) {
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -91,9 +92,10 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
-      setDataList(validatorsInfo.osmo);
+      setDataList(validatorsInfo.dydx);
     }
   }, [validatorsInfo]);
+
   const columns: TableColumnsProps[] = [
     {
       label: "Validator",
@@ -138,7 +140,7 @@ const ValidatorsList = () => {
                 {" "}
                 Total Value Unlocked(TVU)
               </span>
-              {formatNumber(Number(osmoData.tvl), 3, 2)} OSMO
+              {formatNumber(Number(dydxData.tvl), 3, 2)} DYDX
             </p>
           </div>
         </div>

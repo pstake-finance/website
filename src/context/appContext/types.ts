@@ -7,6 +7,10 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
+  dydxData: {
+    apy: number;
+    tvl: number;
+  };
   bnbData: {
     apy: number;
     tvl: number;
@@ -14,7 +18,8 @@ export interface AppState {
   tokenPrices: {
     BNB: number;
     ATOM: number;
-    OSMO: 0;
+    OSMO: number;
+    DYDX: number;
   };
 }
 

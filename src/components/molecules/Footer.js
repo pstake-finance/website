@@ -12,9 +12,8 @@ import {
   PSTAKE_MEDIUM_URL,
   STK_BNB_TWITTER_URL,
   STK_ATOM_TWITTER_URL,
-  DISCORD_URL,
-  PSTAKE_REDDIT_URL,
   STK_ETH_TWITTER,
+  pstake_cosmos_twitter_url,
 } from "../../utils/config";
 
 const Footer = () => {
@@ -30,7 +29,9 @@ const Footer = () => {
   } else if (router.pathname === "/atom") {
     twitterUrl = STK_ATOM_TWITTER_URL;
   } else if (router.pathname === "/osmo") {
-    twitterUrl = STK_ATOM_TWITTER_URL;
+    twitterUrl = pstake_cosmos_twitter_url;
+  } else if (router.pathname === "/dydx") {
+    twitterUrl = pstake_cosmos_twitter_url;
   } else {
     twitterUrl = STK_ETH_TWITTER;
   }
@@ -43,7 +44,7 @@ const Footer = () => {
       text: "Chat with the community",
     },
     {
-      name: "Twitter",
+      name: "X (Formerly Twitter)",
       url: twitterUrl,
       icon: "twitter-logo",
       text: "Stay updated",
@@ -60,26 +61,19 @@ const Footer = () => {
       icon: "youtube",
       text: "Subscribe for tutorials",
     },
-    {
-      name: "Discord",
-      url: DISCORD_URL,
-      icon: "discord",
-      text: "Ask Questions",
-    },
-    {
-      name: "Reddit",
-      url: PSTAKE_REDDIT_URL,
-      icon: "reddit",
-      text: "Interact with community",
-    },
   ];
 
   return (
     <>
-      {router.pathname !== "/osmo/validators" ? (
+      {router.pathname !== "/osmo/validators" &&
+      router.pathname !== "/dydx/validators" ? (
         <div
           className={`${
-            router.pathname === "/osmo" ? "bg-[#140F34]" : "bg-[#1d1d22]"
+            router.pathname === "/osmo"
+              ? "bg-[#140F34]"
+              : router.pathname === "/dydx"
+              ? "bg-[#1C1C28]"
+              : "bg-[#1d1d22]"
           }  aos-init aos-animate ${router.pathname}`}
         >
           <div className="sectionContainer py-[100px] md:py-[40px]">
@@ -103,6 +97,8 @@ const Footer = () => {
                         className={`${
                           router.pathname === "/osmo"
                             ? "bg-[#201B43]"
+                            : router.pathname === "/dydx"
+                            ? "bg-[#232334]"
                             : "bg-[#25252a]"
                         }  flex items-center md:m-2 md:p-4 m-4 p-6 rounded-xl group`}
                         rel="noopener noreferrer"
@@ -111,12 +107,14 @@ const Footer = () => {
                           className={`w-[46px] h-[46px] bg-[#3f3f45] flex 
                         items-center justify-center rounded-full mx-2.5  ${
                           router.pathname === "/bnb"
-                            ? "group-hover:bg-[#f0b90b]"
+                            ? "bg-[#f0b90b]"
                             : router.pathname === "/atom"
-                            ? "group-hover:bg-[#595d7b]"
+                            ? "bg-[#595d7b]"
                             : router.pathname === "/osmo"
-                            ? "group-hover:bg-[#3f3f45]"
-                            : "group-hover:bg-[#e50913]"
+                            ? "bg-[#3f3f45]"
+                            : router.pathname === "/dydx"
+                            ? "bg-[#393953]"
+                            : "bg-[#e50913]"
                         }`}
                         >
                           <Icon
@@ -128,7 +126,7 @@ const Footer = () => {
                           <p className="font-semibold text-base leading-normal text-light-full">
                             {item.name}
                           </p>
-                          <p className="font-medium text-sm leading-normal text-light-low">
+                          <p className="font-medium text-sm leading-normal text-[#D1D1D1]">
                             {item.text}
                           </p>
                         </div>

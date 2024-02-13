@@ -180,12 +180,22 @@ export const STK_OSMO_BLOG_ONE_URL =
   "https://blog.pstake.finance/2023/11/28/stkosmo-decentralizing-osmo-liquid-staking/";
 export const STK_OSMO_BLOG_ONE_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2023/11/stkOSMO-Blog-1-min.png";
+export const STK_DYDX_BLOG_ONE_URL =
+  "https://blog.pstake.finance/2024/01/04/dydx-liquidstaking/";
+export const STK_DYDX_BLOG_ONE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/01/photo_6104996802823567697_w-2048x1150.jpg";
+export const STK_DYDX_BLOG_TWO_URL =
+  "https://blog.pstake.finance/2024/01/11/dydx-liquid-staking-now-live-on-pstake-testnet/";
+export const STK_DYDX_BLOG_TWO_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/01/stkDYDX-Testnet-Guide-min-1-2.png";
 export const STK_OSMO_BLOG_TWO_URL =
   "https://blog.pstake.finance/2023/12/06/osmo-liquid-staking-now-live-on-pstake-with-stkosmo/";
 export const STK_OSMO_BLOG_TWO_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2023/12/stkOSMO-Red-4-min.png";
 export const STK_ATOM_BLOG_URL =
   "https://blog.pstake.finance/category/stkatom/";
+export const pstake_cosmos_twitter_url =
+  "https://twitter.com/pstake_cosmos?s=11&t=E_q2T3rK9Bwiywy_YCvo5A";
 export const STK_ODMO_TWITTER_URL = "https://twitter.com/pStakeFinance";
 export const STK_ATOM_TWITTER_URL =
   "https://twitter.com/pstake_cosmos?s=11&t=E_q2T3rK9Bwiywy_YCvo5A";
@@ -208,12 +218,14 @@ export const STK_ATOM_SECURITY_AUDIT_URL =
 export const STK_ATOM_DOCS_URL = "https://blog.pstake.finance";
 export const STK_ATOM_FAQ_URL = "#stkAtomFaqs";
 export const STK_OSMO_FAQ_URL = "#stkOsmoFaqs";
+export const STK_DYDX_FAQ_URL = "#stkDydxFaqs";
 export const STK_OSMO_SECURITY_AUDIT_URL =
   "https://github.com/persistenceOne/pStake-auditReports";
 export const ATOM_URL =
   "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos/";
 export const OSMO_URL =
   "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis";
+export const DYDX = "https://app.pstake.finance/cosmos";
 export const ETH_URL = "https://testnet.app.pstake.finance/eth";
 export const STK_ETH_TWITTER = "https://twitter.com/pSTAKE_ETH";
 export const STK_ETH_DOCS = "https://blog.pstake.finance/category/stketh/";
@@ -492,6 +504,43 @@ export const ExternalChains: ExternalChainData = {
         bech32PrefixConsPub: "persistencevalconspub",
       },
     },
+    {
+      rpc: "https://dydx-testnet-rpc.publicnode.com",
+      rest: "https://dydx-testnet-rest.publicnode.com",
+      chainId: "dydx-testnet-4",
+      chainName: "Dydx-Test",
+      stakeCurrency: {
+        coinDenom: "DV4TNT",
+        coinDecimals: 18,
+        coinMinimalDenom: "adv4tnt",
+      },
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: {
+        bech32PrefixAccAddr: "dydx",
+        bech32PrefixAccPub: "dydxpub",
+        bech32PrefixValAddr: "dydxvaloper",
+        bech32PrefixValPub: "dydxvaloperpub",
+        bech32PrefixConsAddr: "dydxvalcons",
+        bech32PrefixConsPub: "dydxvalconspub",
+      },
+      currencies: [
+        {
+          coinDenom: "DV4TNT",
+          coinDecimals: 18,
+          coinMinimalDenom: "adv4tnt",
+        },
+      ],
+      feeCurrencies: [
+        {
+          coinDenom: "DV4TNT",
+          coinDecimals: 18,
+          coinMinimalDenom: "adv4tnt",
+        },
+      ],
+      features: [],
+    },
   ],
   Mainnet: [
     {
@@ -624,8 +673,8 @@ export const ExternalChains: ExternalChainData = {
       },
     },
     {
-      rpc: "https://rpc-dydx.keplr.app",
-      rest: "https://lcd-dydx.keplr.app",
+      rpc: "https://dydx-dao-rpc.polkachu.com",
+      rest: "https://dydx-dao-api.polkachu.com",
       chainId: "dydx-mainnet-1",
       chainName: "dYdX",
       stakeCurrency: {

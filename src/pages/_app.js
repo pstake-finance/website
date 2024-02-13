@@ -9,6 +9,7 @@ import AppProvider from "../context/appContext/AppContext";
 import Script from "next/script";
 import * as gtag from "../utils/gtag";
 import "../styles/globals.css";
+import "rc-tooltip/assets/bootstrap.css";
 
 const App = ({ Component, pageProps }) => {
   useEffect(() => {

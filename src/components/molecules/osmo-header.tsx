@@ -54,7 +54,6 @@ const OsmoHeader = () => {
   const router = useRouter();
   const [banner, setBanner] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [chevronChange, setChevronChange] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(true);
@@ -75,12 +74,11 @@ const OsmoHeader = () => {
   let docsURL;
   let faqURL;
   let twitterUrl;
-  let appURL = "https://app.pstake.finance/";
+  let appURL = "https://app.pstake.finance/cosmos";
 
   auditURL = STK_OSMO_SECURITY_AUDIT_URL;
   docsURL = STK_ATOM_DOCS_URL;
   faqURL = STK_OSMO_FAQ_URL;
-  appURL = OSMO_URL;
 
   const networks = [
     {
@@ -94,6 +92,12 @@ const OsmoHeader = () => {
       optionLink: "/osmo",
       imgUrl: "/images/networks/osmo.svg",
       symbol: "OSMO",
+    },
+    {
+      optionName: "Dydx",
+      optionLink: "/dydx",
+      imgUrl: "/images/networks/dydx.svg",
+      symbol: "DYDX",
     },
     {
       optionName: "Ethereum",

@@ -1,5 +1,6 @@
 import { StateCreator } from "zustand";
-import { getValidatorInfo, getValidators } from "../../pages/api/onChain";
+import { getValidators } from "../../pages/api/onChain";
+import osmo from "../../pages/osmo";
 
 export interface ValidatorInfo {
   identity: string;
@@ -11,25 +12,41 @@ export interface ValidatorInfo {
 
 export interface ValidatorsInfo {
   osmo: ValidatorInfo[];
+  dydx: ValidatorInfo[];
 }
 
 export interface InitialDataSliceState {
   validatorsInfo: ValidatorsInfo;
-  validatorsInfoLoader: boolean;
+  validatorsInfoLoader: {
+    name: string;
+    loader: boolean;
+  };
 }
 
 export interface InitialDataSliceActions {
-  fetchInitialData: (rpc: string, chainID: string) => Promise<void>;
+  fetchOsmoValidatorsData: (
+    rpc: string,
+    chainID: string,
+    env: string
+  ) => Promise<void>;
+  fetchDydxValidatorsData: (
+    rpc: string,
+    chainID: string,
+    env: string
+  ) => Promise<void>;
   resetInitialDataSlice: () => void;
-  setValidatorInfo: (value: ValidatorsInfo) => void;
-  setValidatorInfoLoader: (value: boolean) => void;
+  setValidatorInfoLoader: (name: string, value: boolean) => void;
 }
 
 const initialState: InitialDataSliceState = {
   validatorsInfo: {
     osmo: [],
+    dydx: [],
   },
-  validatorsInfoLoader: false,
+  validatorsInfoLoader: {
+    name: "",
+    loader: false,
+  },
 };
 
 export type InitialDataSlice = InitialDataSliceState & InitialDataSliceActions;
@@ -38,27 +55,54 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
   set
 ) => ({
   ...initialState,
-  fetchInitialData: async (rpc, chainID) => {
-    set({
-      validatorsInfoLoader: true,
-    });
-    const valResponse = await getValidators(rpc, chainID);
-    set({
+  fetchOsmoValidatorsData: async (rpc, chainID, env) => {
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "osmo",
+        loader: true,
+      },
+    }));
+    const valResponse = await getValidators(rpc, chainID, env);
+    set((state) => ({
       validatorsInfo: {
+        ...state.validatorsInfo,
         osmo: valResponse,
       },
-    });
-    set({
-      validatorsInfoLoader: false,
-    });
+    }));
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "",
+        loader: false,
+      },
+    }));
   },
-  setValidatorInfo: (value: ValidatorsInfo) =>
+  fetchDydxValidatorsData: async (rpc, chainID, env) => {
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "dydx",
+        loader: true,
+      },
+    }));
+    const valResponse = await getValidators(rpc, chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        dydx: valResponse,
+      },
+    }));
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "",
+        loader: false,
+      },
+    }));
+  },
+  setValidatorInfoLoader: (name, value) =>
     set(() => ({
-      validatorsInfo: value,
-    })),
-  setValidatorInfoLoader: (value: boolean) =>
-    set(() => ({
-      validatorsInfoLoader: value,
+      validatorsInfoLoader: {
+        name: name,
+        loader: value,
+      },
     })),
   resetInitialDataSlice: () => {
     set(initialState);
