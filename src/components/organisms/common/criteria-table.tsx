@@ -43,6 +43,9 @@ const ValidatorCriteria = ({ criteriaList }: Props) => {
                 <Tooltip
                   placement="bottom"
                   showArrow
+                  overlayStyle={{
+                    opacity: 1,
+                  }}
                   overlay={
                     <span className={"text-sm text-light-high font-light"}>
                       <div className="flex flex-col items-center justify-center max-w-[320px]">

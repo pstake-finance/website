@@ -145,7 +145,7 @@ const ValidatorsList = () => {
         <div className={"mb-6 rounded-xl bg-[#1D1D1F] py-5 px-6"}>
           <p
             className={
-              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1"
+              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1 justify-center"
             }
           >
             pSTAKE Delegation Model Criteria
@@ -161,7 +161,11 @@ const ValidatorsList = () => {
               />
             </a>
           </p>
-          <p className={"text-[#E0E0E0] md:text-sm flex items-center"}>
+          <p
+            className={
+              "text-[#E0E0E0] md:text-sm flex items-center justify-center"
+            }
+          >
             <Icon viewClass="!w-[16px] !h-[16px] mr-1" icon="warning" />
             <span className={"font-medium"}>Eligibility:</span>&nbsp;Must be
             part of the active set and free of any slashing events within the
