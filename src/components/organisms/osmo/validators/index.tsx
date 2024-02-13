@@ -34,7 +34,7 @@ const criteriaList = [
     parameter: "Uptime",
     criteria: "95% to 100%",
     weightage: "20%",
-    time: "Last 30 Days",
+    time: "Last 90 Days",
     tooltipTitle: "Uptime over 90 days",
     tooltipContent:
       "Based on the % of blocks that you have missed over the last 90 days",
@@ -43,10 +43,10 @@ const criteriaList = [
     parameter: "Governance Participation",
     criteria: "60% to 100%",
     weightage: "40%",
-    time: "Last 90 Days",
-    tooltipTitle: "Governance Participation over 90 days",
+    time: "Last 180 Days",
+    tooltipTitle: "Governance Participation over 180 days",
     tooltipContent:
-      "Track participation in governance proposals over the past 90 days.",
+      "Track participation in governance proposals over the past 180 days.",
   },
   // {
   //   parameter: "Validator-Bond",
