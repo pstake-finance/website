@@ -11,6 +11,10 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
+  starsData: {
+    apy: number;
+    tvl: number;
+  };
   bnbData: {
     apy: number;
     tvl: number;

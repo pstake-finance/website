@@ -1,5 +1,5 @@
 import { QueryClientImpl as LiquidStakeQueryClient } from "persistenceonejs/pstake/liquidstakeibc/v1beta1/query";
-import { decimalize, RpcClient } from "../../utils/helpers";
+import { decimalize, decimalizeRaw, RpcClient } from "../../utils/helpers";
 import { QueryClientImpl as StakeQuery } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { ValidatorInfo } from "../../store/slices/initial-data-slice";
 import { ExternalChains } from "../../utils/config";
@@ -77,16 +77,11 @@ export const getValidators = async (
     const chainParamsResponse = await pstakeQueryService.HostChain({
       chainId: hostChainId,
     });
-    console.log(
-      chainParamsResponse,
-      "chainParamsResponse",
-      rpc,
-      hostChainId,
-      env
-    );
+    console.log(chainParamsResponse, "chainParamsResponse");
     if (chainParamsResponse && chainParamsResponse.hostChain?.validators) {
       if (chainParamsResponse.hostChain?.validators.length > 0) {
         const validatorInfo = await getValidatorInfo(hostChainId, env);
+        console.log(validatorInfo, "validatorInfo");
         const hostChainValidators = chainParamsResponse.hostChain?.validators;
         hostChainValidators?.forEach((item) => {
           const res = validatorInfo?.find(
@@ -109,14 +104,16 @@ export const getValidators = async (
               identity: !avatarCheck
                 ? `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`
                 : "",
-              weight: (Number(decimalize(item.weight, 18)) * 100).toFixed(2),
+              weight: (Number(decimalizeRaw(item.weight, 18)) * 100).toFixed(2),
               delegationAmount: Number(
-                decimalize(
+                decimalizeRaw(
                   item.delegatedAmount,
                   chainInfo!.stakeCurrency.coinDecimals
                 )
               ).toFixed(),
-              targetDelegation: Number(decimalize(item.weight, 18)).toFixed(6),
+              targetDelegation: Number(decimalizeRaw(item.weight, 18)).toFixed(
+                6
+              ),
             });
           }
         });

@@ -226,6 +226,7 @@ export const ATOM_URL =
 export const OSMO_URL =
   "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis";
 export const DYDX = "https://app.pstake.finance/cosmos";
+export const STARS = "https://app.pstake.finance/cosmos";
 export const ETH_URL = "https://testnet.app.pstake.finance/eth";
 export const STK_ETH_TWITTER = "https://twitter.com/pSTAKE_ETH";
 export const STK_ETH_DOCS = "https://blog.pstake.finance/category/stketh/";
@@ -537,6 +538,45 @@ export const ExternalChains: ExternalChainData = {
           coinDenom: "DV4TNT",
           coinDecimals: 18,
           coinMinimalDenom: "adv4tnt",
+        },
+      ],
+      features: [],
+    },
+    {
+      rpc: "https://rpc.elgafar-1.stargaze-apis.com",
+      rest: "https://rest.elgafar-1.stargaze-apis.com",
+      chainId: "elgafar-1",
+      chainName: "Stargaze Testnet",
+      stakeCurrency: {
+        coinDenom: "STARS",
+        coinMinimalDenom: "ustars",
+        coinDecimals: 6,
+      },
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: {
+        bech32PrefixAccAddr: "stars",
+        bech32PrefixAccPub: "starspub",
+        bech32PrefixValAddr: "starsvaloper",
+        bech32PrefixValPub: "starsvaloperpub",
+        bech32PrefixConsAddr: "starsvalcons",
+        bech32PrefixConsPub: "starsvalconspub",
+      },
+      currencies: [
+        {
+          coinDenom: "STARS",
+          coinMinimalDenom: "ustars",
+          coinDecimals: 6,
+          coinGeckoId: "stars",
+        },
+      ],
+      feeCurrencies: [
+        {
+          coinDenom: "STARS",
+          coinMinimalDenom: "ustars",
+          coinDecimals: 6,
+          coinGeckoId: "stars",
         },
       ],
       features: [],

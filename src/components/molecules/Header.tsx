@@ -161,6 +161,12 @@ const Header = () => {
       symbol: "DYDX",
     },
     {
+      optionName: "Stars",
+      optionLink: "/stars",
+      imgUrl: "/images/stars.svg",
+      symbol: "STARS",
+    },
+    {
       optionName: "Ethereum",
       optionLink: "/eth/testnet",
       imgUrl: "/images/networks/ethereum.svg",
@@ -257,7 +263,8 @@ const Header = () => {
   return (
     <React.Fragment>
       {router.pathname !== "/osmo/validators" &&
-      router.pathname !== "/dydx/validators" ? (
+      router.pathname !== "/dydx/validators" &&
+      router.pathname !== "/stars/validators" ? (
         <div id="is-sticky" className="top-bar w-full fixed z-[100]">
           <GeofenceNotice />
           <nav
@@ -265,6 +272,7 @@ const Header = () => {
             items-center navbar navbar-expand-lg navbar-custom flex-column 
             md:flex-wrap justify-start ${
               router.pathname !== "/dydx" &&
+              router.pathname !== "/stars" &&
               router.pathname !== "/osmo" &&
               router.pathname !== "/" &&
               router.pathname !== "/atom" &&

@@ -34,12 +34,16 @@ export const OSMOSIS_POOL_APR_URL = "https://api.osmosis.zone/apr/v2/886";
 export const APY_API = "https://staging.api.persistence.one/pstake/stkatom/apy";
 export const STK_OSMO_APY_API =
   "https://staging.api.persistence.one/pstake/stkosmo/apy";
+export const STK_STARS_APY_API =
+  "https://staging.api.persistence.one/pstake/stkstars/apy";
 export const STK_DYDX_APY_API =
   "https://staging.api.persistence.one/pstake/stkdydx/apy";
 export const STK_ATOM_TVL_URL =
   "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
 export const STK_OSMO_TVL_API =
   "https://staging.api.persistence.one/pstake/stkosmo/osmo_tvu";
+export const STK_STAR_TVL_API =
+  "https://staging.api.persistence.one/pstake/stkstars/stars_tvu";
 export const STK_DYDX_TVL_API =
   "https://staging.api.persistence.one/pstake/stkdydx/dydx_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
@@ -455,6 +459,8 @@ export const getCosmosTVL = async (prefix: string) => {
         ? STK_ATOM_TVL_URL
         : prefix === "osmo"
         ? STK_OSMO_TVL_API
+        : prefix === "stars"
+        ? STK_STAR_TVL_API
         : STK_DYDX_TVL_API
     );
     if (res && res.data) {
@@ -473,6 +479,8 @@ export const getCosmosAPY = async (prefix: string) => {
         ? APY_API
         : prefix === "osmo"
         ? STK_OSMO_APY_API
+        : prefix === "stars"
+        ? STK_STARS_APY_API
         : STK_DYDX_APY_API;
     const res = await Axios.get(api);
     if (res && res.data) {

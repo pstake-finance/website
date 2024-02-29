@@ -10,6 +10,11 @@ const list = [
     logoUrl: "/images/stkOsmo.svg",
     url: "/osmo/validators",
   },
+  {
+    name: "stkSTARS",
+    logoUrl: "/images/stk_stars.svg",
+    url: "/stars/validators",
+  },
 ];
 
 const FilterDropdown = () => {
