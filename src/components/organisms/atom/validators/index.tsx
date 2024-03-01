@@ -9,34 +9,44 @@ import { Spinner } from "../../../molecules/spinner";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
-import ValidatorCriteria from "../../common/criteria-table";
+import ValidatorCriteria, { CriteriaList } from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
 import ValidatorsDropdown from "../../../molecules/validators-dropdown";
 
-const criteriaList = [
+const criteriaList: CriteriaList[] = [
   {
     parameter: "Voting Power",
     criteria: "0.05% to 5%",
     weightage: "15%",
     time: "Last 180 Days",
+    tooltipTitle: "Current Voting Power",
+    tooltipContent: null,
   },
   {
     parameter: "Commission",
     criteria: "5% to 10%",
     weightage: "25%",
     time: "Last 180 Days",
+    tooltipTitle: "Current Validator Commission",
+    tooltipContent: null,
   },
   {
     parameter: "Uptime",
     criteria: "95% to 100%",
     weightage: "20%",
     time: "Last 30 Days",
+    tooltipTitle: "Uptime over 30 days",
+    tooltipContent:
+      "Based on the % of blocks that you have missed over the last 30 days",
   },
   {
     parameter: "Governance Participation",
     criteria: "60% to 100%",
     weightage: "40%",
     time: "Last 180 Days",
+    tooltipTitle: "Governance Participation over 180 days",
+    tooltipContent:
+      "Track participation in governance proposals over the past 180 days.",
   },
   // {
   //   parameter: "Validator-Bond",

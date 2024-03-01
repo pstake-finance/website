@@ -128,28 +128,50 @@ export const getValidators = async (
   }
 };
 
-export const getExchangeRateFromRpc = async (
-  rpc: string,
-  chainId: string,
-  prefix: string
-): Promise<number> => {
+export const getExchangeRateFromRpc = async (chainId: string, env: string) => {
+  // try {
+  //   console.log(rpc, chainId, "chainIdchainId");
+  //   const rpcClient = await RpcClient("https://rpc.testnet2.persistence.one");
+  //   const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
+  //   const cvalue = await pstakeQueryService.States();
+  //   const liquidValidatorsResponse =
+  //     await pstakeQueryService.LiquidValidators();
+  //   const params = await pstakeQueryService.Params();
+  //   console.log(
+  //     liquidValidatorsResponse,
+  //     cvalue,
+  //     params,
+  //     "-persistence cvalue in getExchangeRateFromRpc"
+  //   );
+  //   return Number(decimalize(cvalue.netAmountState.mintRate, 18));
+  // } catch (e) {
+  //   console.log(e, "error-exte");
+  //   return 0;
+  // }
   try {
-    console.log(rpc, chainId, "chainIdchainId");
-    const rpcClient = await RpcClient("https://rpc.testnet2.persistence.one");
-    const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
-    const cvalue = await pstakeQueryService.States();
-    const liquidValidatorsResponse =
-      await pstakeQueryService.LiquidValidators();
-    const params = await pstakeQueryService.Params();
-    console.log(
-      liquidValidatorsResponse,
-      cvalue,
-      params,
-      "-persistence cvalue in getExchangeRateFromRpc"
+    const chainInfo = ExternalChains[env].find(
+      (item) => item.chainId === chainId
     );
-    return Number(decimalize(cvalue.netAmountState.mintRate, 18));
+    const rpcClient = await RpcClient(chainInfo!.rpc);
+    const stakingQueryService = new StakeQuery(rpcClient);
+    let key = new Uint8Array();
+    let validators = [];
+    do {
+      const response = await stakingQueryService.Validators({
+        status: "",
+        pagination: {
+          key: key,
+          offset: BigInt(0),
+          limit: BigInt(0),
+          countTotal: true,
+          reverse: false,
+        },
+      });
+      key = response!.pagination!.nextKey;
+      validators.push(...response.validators);
+    } while (key.length !== 0);
+    return validators;
   } catch (e) {
-    console.log(e, "error-exte");
-    return 0;
+    return null;
   }
 };

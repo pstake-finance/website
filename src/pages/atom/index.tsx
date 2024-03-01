@@ -20,9 +20,9 @@ const Atom = () => {
       <Features />
       <Comparison />
       <LiquidStakingSteps />
-      <EcosystemSlider />
+      <EcosystemSlider deviceType={""} />
       {/*<Guides />*/}
-      <ValidatorsContainer />
+      <ValidatorsContainer deviceType={""} />
       <Audited />
       <FeaturedBlogs />
       <Faq />
