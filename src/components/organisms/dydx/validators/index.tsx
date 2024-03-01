@@ -19,24 +19,34 @@ const criteriaList = [
     criteria: "0.05% to 5%",
     weightage: "15%",
     time: "Last 30 Days",
+    tooltipTitle: "Current Voting Power",
+    tooltipContent: null,
   },
   {
     parameter: "Commission",
     criteria: "5% to 10%",
     weightage: "25%",
     time: "Last 30 Days",
+    tooltipTitle: "Current Validator Commission",
+    tooltipContent: null,
   },
   {
     parameter: "Uptime",
     criteria: "95% to 100%",
     weightage: "20%",
     time: "Last 30 Days",
+    tooltipTitle: "Uptime over 30 days",
+    tooltipContent:
+      "Based on the % of blocks that you have missed over the last 30 days",
   },
   {
     parameter: "Governance Participation",
     criteria: "60% to 100%",
     weightage: "40%",
     time: "Last 30 Days",
+    tooltipTitle: "Governance Participation over 30 days",
+    tooltipContent:
+      "Track participation in governance proposals over the past 30 days.",
   },
   // {
   //   parameter: "Validator-Bond",
@@ -134,10 +144,10 @@ const ValidatorsList = () => {
             </p>
           </div>
         </div>
-        <div className={"mb-6"}>
+        <div className={"mb-6 rounded-xl bg-[#1D1D1F] py-5 px-6"}>
           <p
             className={
-              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1"
+              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1 justify-center"
             }
           >
             pSTAKE Delegation Model Criteria
@@ -153,14 +163,18 @@ const ValidatorsList = () => {
               />
             </a>
           </p>
-          <p className={"text-[#E0E0E0] md:text-sm flex items-center"}>
+          <p
+            className={
+              "text-[#E0E0E0] md:text-sm flex items-center justify-center"
+            }
+          >
             <Icon viewClass="!w-[16px] !h-[16px] mr-1" icon="warning" />
             <span className={"font-medium"}>Eligibility:</span>&nbsp;Must be
             part of the active set and free of any slashing events within the
             past 180 days.
           </p>
+          <ValidatorCriteria criteriaList={criteriaList} />
         </div>
-        <ValidatorCriteria criteriaList={criteriaList} />
         <div className="pb-4">
           <div
             className={

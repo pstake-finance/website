@@ -65,7 +65,7 @@ export const fetchTokenPrices = async () => {
     DYDX: 0,
   };
   try {
-    const tokens = ["cosmos", "osmosis", "binancecoin", "dydx"];
+    const tokens = ["cosmos", "osmosis", "binancecoin", "dydx-chain"];
     const pricesResponse = await Axios.get(
       `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
         ","
@@ -79,7 +79,7 @@ export const fetchTokenPrices = async () => {
     data.BNB = Number(pricesResponse.data["binancecoin"].usd);
     data.ATOM = Number(pricesResponse.data["cosmos"].usd);
     data.OSMO = Number(pricesResponse.data["osmosis"].usd);
-    data.DYDX = Number(pricesResponse.data["dydx"].usd);
+    data.DYDX = Number(pricesResponse.data["dydx-chain"].usd);
     return data;
   } catch (e) {
     return data;
