@@ -42,7 +42,7 @@ const ValidatorsDropdown = ({ name }: Props) => {
 
   const dropDownRef = useRef<HTMLDivElement>(null);
 
-  const selectedItem = list.find((item) => item!.name === name);
+  const selectedItem = list.find((item) => item && item!.name === name);
 
   useOnClickOutside(dropDownRef, () => {
     setDropdownOpen(false);
@@ -60,29 +60,31 @@ const ValidatorsDropdown = ({ name }: Props) => {
           onClick={() => setDropdownOpen(!dropdownOpen)}
         >
           <>
-            <div
-              className={`flex items-center !justify-between px-4 flex-1 h-[40px]`}
-            >
-              <Image
-                width={24}
-                height={24}
-                src={selectedItem!.logoUrl}
-                alt={selectedItem!.name}
-              />
-              <span className="text-[20px] leading-normal md:text-xsm px-2">
-                {selectedItem!.name}
-              </span>
-              <span
-                className={`${
-                  !dropdownOpen ? "rotate-90" : "-rotate-90"
-                } ease-in duration-200 flex items-center justify-center`}
+            {selectedItem && (
+              <div
+                className={`flex items-center !justify-between px-4 flex-1 h-[40px]`}
               >
-                <Icon
-                  viewClass={` !fill-[#FCFCFC] arrow-right !w-[10px]`}
-                  icon="chevron"
+                <Image
+                  width={24}
+                  height={24}
+                  src={selectedItem!.logoUrl}
+                  alt={selectedItem!.name}
                 />
-              </span>
-            </div>
+                <span className="text-[20px] leading-normal md:text-xsm px-2">
+                  {selectedItem?.name}
+                </span>
+                <span
+                  className={`${
+                    !dropdownOpen ? "rotate-90" : "-rotate-90"
+                  } ease-in duration-200 flex items-center justify-center`}
+                >
+                  <Icon
+                    viewClass={` !fill-[#FCFCFC] arrow-right !w-[10px]`}
+                    icon="chevron"
+                  />
+                </span>
+              </div>
+            )}
           </>
         </button>
 
@@ -92,7 +94,7 @@ const ValidatorsDropdown = ({ name }: Props) => {
           } rounded-md z-10`}
         >
           {list.map((item, index) => {
-            return item!.name !== name ? (
+            return item && item?.name !== name ? (
               <div
                 className={`px-4 py-3 flex items-center md:py-3 hover:cursor-pointer hover:rounded-md hover:bg-[#2828288a] !text-light-high whitespace-nowrap`}
                 key={index}
@@ -113,7 +115,7 @@ const ValidatorsDropdown = ({ name }: Props) => {
                       className="text-white-high
                   leading-normal md:text-xsm md:ml-2 "
                     >
-                      {item!.name}
+                      {item?.name}
                     </span>
                   </span>
                 </Link>
