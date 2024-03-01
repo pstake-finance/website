@@ -17,7 +17,7 @@ const criteriaList: CriteriaList[] = [
   {
     parameter: "Voting Power",
     criteria: "0.05% to 5%",
-    weightage: "15%",
+    weightage: "10%",
     time: "Last 180 Days",
     tooltipTitle: "Current Voting Power",
     tooltipContent: null,
@@ -33,7 +33,7 @@ const criteriaList: CriteriaList[] = [
   {
     parameter: "Uptime",
     criteria: "95% to 100%",
-    weightage: "20%",
+    weightage: "15%",
     time: "Last 30 Days",
     tooltipTitle: "Uptime over 30 days",
     tooltipContent:
@@ -48,12 +48,14 @@ const criteriaList: CriteriaList[] = [
     tooltipContent:
       "Track participation in governance proposals over the past 180 days.",
   },
-  // {
-  //   parameter: "Validator-Bond",
-  //   criteria: "0.1% to 20%",
-  //   weightage: "-",
-  //   time: "Last 30 Days",
-  // },
+  {
+    parameter: "Validator-Bond",
+    criteria: "0.1% to 20%",
+    weightage: "10%",
+    time: "Last 30 Days",
+    tooltipTitle: "Validator Bond",
+    tooltipContent: null,
+  },
 ];
 
 const ValidatorsList = () => {

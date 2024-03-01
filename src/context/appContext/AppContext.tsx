@@ -46,6 +46,7 @@ const AppContext = createContext<AppState>({
     OSMO: 0,
     DYDX: 0,
     STARS: 0,
+    XPRT: 0,
   },
 });
 
@@ -83,6 +84,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     ATOM: 0,
     OSMO: 0,
     DYDX: 0,
+    STARS: 0,
+    XPRT: 0,
   });
 
   useEffect(() => {
@@ -116,6 +119,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getBnbTVL(),
         fetchTokenPrices(),
       ]);
+      console.log(tokenPrices, "tokenPrices");
       setCosmosData({
         apy: cosmosApyResponse,
         tvl: Number(decimalizeRaw(cosmosTvlResponse)),

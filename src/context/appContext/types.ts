@@ -29,6 +29,7 @@ export interface AppState {
     OSMO: number;
     DYDX: number;
     STARS: number;
+    XPRT: number;
   };
 }
 

@@ -48,12 +48,6 @@ const criteriaList: CriteriaList[] = [
     tooltipContent:
       "Track participation in governance proposals over the past 180 days.",
   },
-  // {
-  //   parameter: "Validator-Bond",
-  //   criteria: "0.1% to 20%",
-  //   weightage: "-",
-  //   time: "Last 30 Days",
-  // },
 ];
 
 const ValidatorsList = () => {
