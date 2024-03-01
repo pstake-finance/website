@@ -25,11 +25,11 @@ const list = [
     logoUrl: "/images/stk_stars.svg",
     url: "/stars/validators",
   },
-  {
-    name: "stkXPRT",
-    logoUrl: "/images/stk_xprt.svg",
-    url: "/xprt/validators",
-  },
+  // {
+  //   name: "stkXPRT",
+  //   logoUrl: "/images/stk_xprt.svg",
+  //   url: "/xprt/validators",
+  // },
 ];
 
 interface Props {
