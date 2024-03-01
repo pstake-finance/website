@@ -74,9 +74,9 @@ const ValidatorsList = () => {
 
   useEffect(() => {
     fetchCosmosValidatorsData(
-      "https://rpc.core.persistence.one",
-      "cosmoshub-4",
-      "Mainnet"
+      "https://rpc.testnet2.persistence.one",
+      "theta-testnet-001",
+      "Testnet"
     );
   }, []);
 

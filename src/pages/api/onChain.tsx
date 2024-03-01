@@ -141,10 +141,8 @@ export const getXprtValidators = async (chainID: string, env: string) => {
     console.log(chainID, "chainIdchainId");
     const rpcClient = await RpcClient(chainInfo!.rpc);
     const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
-    // const cvalue = await pstakeQueryService.States();
     const liquidValidatorsResponse =
       await pstakeQueryService.LiquidValidators();
-    // const params = await pstakeQueryService.Params();
     const validatorInfo = await getValidatorInfo(chainID, env);
     console.log(
       liquidValidatorsResponse,
@@ -183,30 +181,4 @@ export const getXprtValidators = async (chainID: string, env: string) => {
     console.log(e, "error-");
     return [];
   }
-  // try {
-  //   const chainInfo = ExternalChains[env].find(
-  //     (item) => item.chainId === chainId
-  //   );
-  //   const rpcClient = await RpcClient(chainInfo!.rpc);
-  //   const stakingQueryService = new StakeQuery(rpcClient);
-  //   let key = new Uint8Array();
-  //   let validators = [];
-  //   do {
-  //     const response = await stakingQueryService.Validators({
-  //       status: "",
-  //       pagination: {
-  //         key: key,
-  //         offset: BigInt(0),
-  //         limit: BigInt(0),
-  //         countTotal: true,
-  //         reverse: false,
-  //       },
-  //     });
-  //     key = response!.pagination!.nextKey;
-  //     validators.push(...response.validators);
-  //   } while (key.length !== 0);
-  //   return validators;
-  // } catch (e) {
-  //   return null;
-  // }
 };

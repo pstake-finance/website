@@ -25,11 +25,13 @@ const list = [
     logoUrl: "/images/stk_stars.svg",
     url: "/stars/validators",
   },
-  // {
-  //   name: "stkXPRT",
-  //   logoUrl: "/images/stk_xprt.svg",
-  //   url: "/xprt/validators",
-  // },
+  process.env.NODE_ENV !== "production"
+    ? {
+        name: "stkXPRT",
+        logoUrl: "/images/stk_xprt.svg",
+        url: "/xprt/validators",
+      }
+    : null,
 ];
 
 interface Props {
@@ -40,7 +42,7 @@ const ValidatorsDropdown = ({ name }: Props) => {
 
   const dropDownRef = useRef<HTMLDivElement>(null);
 
-  const selectedItem = list.find((item) => item.name === name);
+  const selectedItem = list.find((item) => item!.name === name);
 
   useOnClickOutside(dropDownRef, () => {
     setDropdownOpen(false);
@@ -90,13 +92,13 @@ const ValidatorsDropdown = ({ name }: Props) => {
           } rounded-md z-10`}
         >
           {list.map((item, index) => {
-            return item.name !== name ? (
+            return item!.name !== name ? (
               <div
                 className={`px-4 py-3 flex items-center md:py-3 hover:cursor-pointer hover:rounded-md hover:bg-[#2828288a] !text-light-high whitespace-nowrap`}
                 key={index}
               >
                 <Link
-                  href={item.url}
+                  href={item!.url}
                   className={"flex justify-between flex-1 "}
                 >
                   <span className="flex items-center">
@@ -104,14 +106,14 @@ const ValidatorsDropdown = ({ name }: Props) => {
                       width={26}
                       height={26}
                       className="mr-2"
-                      src={item.logoUrl}
+                      src={item!.logoUrl}
                       alt="stkATOM logo"
                     />
                     <span
                       className="text-white-high
                   leading-normal md:text-xsm md:ml-2 "
                     >
-                      {item.name}
+                      {item!.name}
                     </span>
                   </span>
                 </Link>
