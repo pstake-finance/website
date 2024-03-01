@@ -22,7 +22,7 @@ const responsive = {
   },
 };
 
-const Validators = ({ deviceType }) => {
+const ValidatorsContainer = ({ deviceType }) => {
   const { isMobile } = useWindowSize();
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
@@ -97,4 +97,4 @@ const Validators = ({ deviceType }) => {
   );
 };
 
-export default Validators;
+export default ValidatorsContainer;

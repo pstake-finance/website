@@ -18,13 +18,13 @@ const criteriaList = [
     parameter: "Voting Power",
     criteria: "0.05% to 5%",
     weightage: "15%",
-    time: "Last 30 Days",
+    time: "Last 180 Days",
   },
   {
     parameter: "Commission",
     criteria: "5% to 10%",
     weightage: "25%",
-    time: "Last 30 Days",
+    time: "Last 180 Days",
   },
   {
     parameter: "Uptime",
@@ -36,7 +36,7 @@ const criteriaList = [
     parameter: "Governance Participation",
     criteria: "60% to 100%",
     weightage: "40%",
-    time: "Last 30 Days",
+    time: "Last 180 Days",
   },
   // {
   //   parameter: "Validator-Bond",
@@ -47,30 +47,29 @@ const criteriaList = [
 ];
 
 const ValidatorsList = () => {
-  const { dydxData } = useApp();
+  const { cosmosData } = useApp();
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
-  const fetchDydxValidatorsData = useAppStore(
-    (state) => state.fetchDydxValidatorsData
-  );
 
   const [validatorsInfo, validatorsInfoLoader] = useAppStore(
     (state) => [state.validatorsInfo, state.validatorsInfoLoader],
     shallow
   );
 
+  const fetchCosmosValidatorsData = useAppStore(
+    (state) => state.fetchCosmosValidatorsData
+  );
+
   useEffect(() => {
-    if (validatorsInfo.dydx.length <= 0) {
-      fetchDydxValidatorsData(
-        "https://rpc.core.persistence.one",
-        "dydx-mainnet-1",
-        "Mainnet"
-      );
-    }
+    fetchCosmosValidatorsData(
+      "https://rpc.core.persistence.one",
+      "cosmoshub-4",
+      "Mainnet"
+    );
   }, []);
 
   useEffect(() => {
-    if (validatorsInfo.dydx.length > 0) {
+    if (validatorsInfo.cosmos.length > 0) {
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -82,10 +81,9 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
-      setDataList(validatorsInfo.dydx);
+      setDataList(validatorsInfo.cosmos);
     }
   }, [validatorsInfo]);
-
   const columns: TableColumnsProps[] = [
     {
       label: "Validator",
@@ -120,7 +118,7 @@ const ValidatorsList = () => {
         </p>
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <div className={"flex items-center justify-between"}>
-            <ValidatorsDropdown name={"stkDYDX"} />
+            <ValidatorsDropdown name={"stkATOM"} />
             <p
               className={
                 "text-xl font-medium text-light-emphasis md:text-base text-right"
@@ -130,7 +128,7 @@ const ValidatorsList = () => {
                 {" "}
                 Total Value Unlocked(TVU)
               </span>
-              {formatNumber(Number(dydxData.tvl), 3, 2)} DYDX
+              {formatNumber(Number(cosmosData.tvl), 3, 2)} ATOM
             </p>
           </div>
         </div>

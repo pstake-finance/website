@@ -262,9 +262,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      {router.pathname !== "/osmo/validators" &&
-      router.pathname !== "/dydx/validators" &&
-      router.pathname !== "/stars/validators" ? (
+      {!router.pathname.includes("/validators") ? (
         <div id="is-sticky" className="top-bar w-full fixed z-[100]">
           <GeofenceNotice />
           <nav

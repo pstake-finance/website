@@ -6,12 +6,13 @@ import ValidatorTable from "./table";
 import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
+import FilterDropdown from "./filter-dropdown";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
 import ValidatorCriteria from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
-import ValidatorsDropdown from "../../../molecules/validators-dropdown";
+import { getExchangeRateFromRpc } from "../../../../pages/api/onChain";
 
 const criteriaList = [
   {
@@ -38,12 +39,6 @@ const criteriaList = [
     weightage: "40%",
     time: "Last 30 Days",
   },
-  // {
-  //   parameter: "Validator-Bond",
-  //   criteria: "0.1% to 20%",
-  //   weightage: "-",
-  //   time: "Last 30 Days",
-  // },
 ];
 
 const ValidatorsList = () => {
@@ -60,13 +55,11 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    if (validatorsInfo.dydx.length <= 0) {
-      fetchDydxValidatorsData(
-        "https://rpc.core.persistence.one",
-        "dydx-mainnet-1",
-        "Mainnet"
-      );
-    }
+    getExchangeRateFromRpc(
+      "https://rpc.testnet2.persistence.one",
+      "elgafar-1",
+      "Testnet"
+    );
   }, []);
 
   useEffect(() => {
@@ -120,7 +113,7 @@ const ValidatorsList = () => {
         </p>
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <div className={"flex items-center justify-between"}>
-            <ValidatorsDropdown name={"stkDYDX"} />
+            <FilterDropdown />
             <p
               className={
                 "text-xl font-medium text-light-emphasis md:text-base text-right"

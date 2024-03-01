@@ -14,6 +14,7 @@ export interface ValidatorsInfo {
   osmo: ValidatorInfo[];
   dydx: ValidatorInfo[];
   stars: ValidatorInfo[];
+  cosmos: ValidatorInfo[];
 }
 
 export interface InitialDataSliceState {
@@ -40,6 +41,11 @@ export interface InitialDataSliceActions {
     chainID: string,
     env: string
   ) => Promise<void>;
+  fetchCosmosValidatorsData: (
+    rpc: string,
+    chainID: string,
+    env: string
+  ) => Promise<void>;
   resetInitialDataSlice: () => void;
   setValidatorInfoLoader: (name: string, value: boolean) => void;
 }
@@ -49,6 +55,7 @@ const initialState: InitialDataSliceState = {
     osmo: [],
     dydx: [],
     stars: [],
+    cosmos: [],
   },
   validatorsInfoLoader: {
     name: "",
@@ -116,6 +123,27 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       validatorsInfo: {
         ...state.validatorsInfo,
         stars: valResponse,
+      },
+    }));
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "",
+        loader: false,
+      },
+    }));
+  },
+  fetchCosmosValidatorsData: async (rpc, chainID, env) => {
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "cosmos",
+        loader: true,
+      },
+    }));
+    const valResponse = await getValidators(rpc, chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        cosmos: valResponse,
       },
     }));
     set((state) => ({

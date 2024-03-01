@@ -1,10 +1,20 @@
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import { useOnClickOutside } from "../../../../customHooks/useOnClickOutside";
-import Icon from "../../../molecules/Icon";
 import Link from "next/link";
+import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
+import Icon from "../Icon";
 
 const list = [
+  {
+    name: "stkATOM",
+    logoUrl: "/images/stkAtom.svg",
+    url: "/atom/validators",
+  },
+  {
+    name: "stkOSMO",
+    logoUrl: "/images/stkOsmo.svg",
+    url: "/osmo/validators",
+  },
   {
     name: "stkDYDX",
     logoUrl: "/images/stk_dydx.svg",
@@ -17,10 +27,15 @@ const list = [
   },
 ];
 
-const FilterDropdown = () => {
+interface Props {
+  name: string;
+}
+const ValidatorsDropdown = ({ name }: Props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const dropDownRef = useRef<HTMLDivElement>(null);
+
+  const selectedItem = list.find((item) => item.name === name);
 
   useOnClickOutside(dropDownRef, () => {
     setDropdownOpen(false);
@@ -44,11 +59,11 @@ const FilterDropdown = () => {
               <Image
                 width={24}
                 height={24}
-                src={"/images/stkOsmo.svg"}
-                alt="stkATOM logo"
+                src={selectedItem!.logoUrl}
+                alt={selectedItem!.name}
               />
               <span className="text-[20px] leading-normal md:text-xsm px-2">
-                stkOSMO
+                {selectedItem!.name}
               </span>
               <span
                 className={`${
@@ -69,33 +84,40 @@ const FilterDropdown = () => {
             dropdownOpen ? `visible translate-y-[4px] opacity-100` : `invisible`
           } rounded-md z-10`}
         >
-          {list.map((item, index) => (
-            <div
-              className={`px-4 py-3 flex items-center md:py-3 hover:cursor-pointer hover:rounded-md hover:bg-[#2828288a] !text-light-high whitespace-nowrap`}
-              key={index}
-            >
-              <Link href={item.url} className={"flex justify-between flex-1 "}>
-                <span className="flex items-center">
-                  <Image
-                    width={26}
-                    height={26}
-                    className="mr-2"
-                    src={item.logoUrl}
-                    alt="stkATOM logo"
-                  />
-                  <span
-                    className="text-white-high
+          {list.map((item, index) => {
+            return item.name !== name ? (
+              <div
+                className={`px-4 py-3 flex items-center md:py-3 hover:cursor-pointer hover:rounded-md hover:bg-[#2828288a] !text-light-high whitespace-nowrap`}
+                key={index}
+              >
+                <Link
+                  href={item.url}
+                  className={"flex justify-between flex-1 "}
+                >
+                  <span className="flex items-center">
+                    <Image
+                      width={26}
+                      height={26}
+                      className="mr-2"
+                      src={item.logoUrl}
+                      alt="stkATOM logo"
+                    />
+                    <span
+                      className="text-white-high
                   leading-normal md:text-xsm md:ml-2 "
-                  >
-                    {item.name}
+                    >
+                      {item.name}
+                    </span>
                   </span>
-                </span>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ) : (
+              ""
+            );
+          })}
         </div>
       </div>
     </>
   );
 };
-export default FilterDropdown;
+export default ValidatorsDropdown;

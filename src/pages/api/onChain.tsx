@@ -3,6 +3,7 @@ import { decimalize, decimalizeRaw, RpcClient } from "../../utils/helpers";
 import { QueryClientImpl as StakeQuery } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { ValidatorInfo } from "../../store/slices/initial-data-slice";
 import { ExternalChains } from "../../utils/config";
+import { QueryClientImpl as NativeLiquidStakeQueryClient } from "persistenceonejs/pstake/liquidstake/v1beta1/query";
 
 export const getValidatorInfo = async (chainId: string, env: string) => {
   try {
@@ -87,6 +88,7 @@ export const getValidators = async (
           const res = validatorInfo?.find(
             (valItem) => valItem.operatorAddress === item.operatorAddress
           );
+          console.log(res, "validatorInfo-res");
           const chainInfo = ExternalChains[env].find(
             (item) => item.chainId === hostChainId
           );
@@ -123,5 +125,31 @@ export const getValidators = async (
   } catch (e) {
     console.log(e, "error-");
     return [];
+  }
+};
+
+export const getExchangeRateFromRpc = async (
+  rpc: string,
+  chainId: string,
+  prefix: string
+): Promise<number> => {
+  try {
+    console.log(rpc, chainId, "chainIdchainId");
+    const rpcClient = await RpcClient("https://rpc.testnet2.persistence.one");
+    const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
+    const cvalue = await pstakeQueryService.States();
+    const liquidValidatorsResponse =
+      await pstakeQueryService.LiquidValidators();
+    const params = await pstakeQueryService.Params();
+    console.log(
+      liquidValidatorsResponse,
+      cvalue,
+      params,
+      "-persistence cvalue in getExchangeRateFromRpc"
+    );
+    return Number(decimalize(cvalue.netAmountState.mintRate, 18));
+  } catch (e) {
+    console.log(e, "error-exte");
+    return 0;
   }
 };
