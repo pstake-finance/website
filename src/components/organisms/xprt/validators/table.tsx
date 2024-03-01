@@ -8,7 +8,7 @@ import TableBody from "../../../molecules/table/table-body";
 import { useApp } from "../../../../context/appContext/AppContext";
 
 const ValidatorTable = ({ data, columns }: TableProps) => {
-  const { dydxData } = useApp();
+  const { xprtData } = useApp();
   const [tableData, handleSorting] = useSortableTable(data, columns);
   const updateData: any[] = [];
   tableData.length
@@ -46,17 +46,17 @@ const ValidatorTable = ({ data, columns }: TableProps) => {
           ),
           targetDelegation: (
             <p key={index} className={"px-1.5 py-1"}>
-              {(Number(data.targetDelegation) * Number(dydxData.tvl)).toFixed(
+              {(Number(data.targetDelegation) * Number(xprtData.tvl)).toFixed(
                 2
               )}
               &nbsp;
-              <span className={"text-light-mid"}>DYDX</span>
+              <span className={"text-light-mid"}>XPRT</span>
             </p>
           ),
           delegationAmount: (
             <p key={index} className={"px-1.5 py-1"}>
               {data.delegationAmount}&nbsp;
-              <span className={"text-light-mid"}>DYDX</span>
+              <span className={"text-light-mid"}>XPRT</span>
             </p>
           ),
         })

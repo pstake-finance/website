@@ -15,6 +15,10 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
+  xprtData: {
+    apy: number;
+    tvl: number;
+  };
   bnbData: {
     apy: number;
     tvl: number;
@@ -24,6 +28,7 @@ export interface AppState {
     ATOM: number;
     OSMO: number;
     DYDX: number;
+    STARS: number;
   };
 }
 

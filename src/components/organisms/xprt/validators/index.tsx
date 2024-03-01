@@ -6,13 +6,12 @@ import ValidatorTable from "./table";
 import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
-import FilterDropdown from "./filter-dropdown";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
 import ValidatorCriteria, { CriteriaList } from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
-import { getExchangeRateFromRpc } from "../../../../pages/api/onChain";
+import ValidatorsDropdown from "../../../molecules/validators-dropdown";
 
 const criteriaList: CriteriaList[] = [
   {
@@ -58,11 +57,11 @@ const criteriaList: CriteriaList[] = [
 ];
 
 const ValidatorsList = () => {
-  const { dydxData } = useApp();
+  const { xprtData } = useApp();
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
-  const fetchDydxValidatorsData = useAppStore(
-    (state) => state.fetchDydxValidatorsData
+  const fetchXprtValidatorsData = useAppStore(
+    (state) => state.fetchXprtValidatorsData
   );
 
   const [validatorsInfo, validatorsInfoLoader] = useAppStore(
@@ -71,11 +70,12 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    getExchangeRateFromRpc("https://rpc.testnet2.persistence.one", "elgafar-1");
+    const respon = fetchXprtValidatorsData("test-core-2", "Testnet");
+    console.log(respon, "respon");
   }, []);
 
   useEffect(() => {
-    if (validatorsInfo.dydx.length > 0) {
+    if (validatorsInfo.xprt.length > 0) {
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -87,7 +87,7 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
-      setDataList(validatorsInfo.dydx);
+      setDataList(validatorsInfo.xprt);
     }
   }, [validatorsInfo]);
 
@@ -125,7 +125,7 @@ const ValidatorsList = () => {
         </p>
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <div className={"flex items-center justify-between"}>
-            <FilterDropdown />
+            <ValidatorsDropdown name={"stkXPRT"} />
             <p
               className={
                 "text-xl font-medium text-light-emphasis md:text-base text-right"
@@ -135,14 +135,14 @@ const ValidatorsList = () => {
                 {" "}
                 Total Value Unlocked(TVU)
               </span>
-              {formatNumber(Number(dydxData.tvl), 3, 2)} DYDX
+              {formatNumber(Number(xprtData.tvl), 3, 2)} XPRT
             </p>
           </div>
         </div>
-        <div className={"mb-6"}>
+        <div className={"mb-6 rounded-xl bg-[#1D1D1F] py-5 px-6"}>
           <p
             className={
-              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1"
+              "font-semibold text-[24px] text-light-emphasis md:text-lg flex items-center mb-1 justify-center"
             }
           >
             pSTAKE Delegation Model Criteria
@@ -158,14 +158,18 @@ const ValidatorsList = () => {
               />
             </a>
           </p>
-          <p className={"text-[#E0E0E0] md:text-sm flex items-center"}>
+          <p
+            className={
+              "text-[#E0E0E0] md:text-sm flex items-center justify-center"
+            }
+          >
             <Icon viewClass="!w-[16px] !h-[16px] mr-1" icon="warning" />
             <span className={"font-medium"}>Eligibility:</span>&nbsp;Must be
             part of the active set and free of any slashing events within the
             past 180 days.
           </p>
+          <ValidatorCriteria criteriaList={criteriaList} />
         </div>
-        <ValidatorCriteria criteriaList={criteriaList} />
         <div className="pb-4">
           <div
             className={

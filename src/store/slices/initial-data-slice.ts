@@ -1,5 +1,5 @@
 import { StateCreator } from "zustand";
-import { getValidators } from "../../pages/api/onChain";
+import { getValidators, getXprtValidators } from "../../pages/api/onChain";
 import osmo from "../../pages/osmo";
 
 export interface ValidatorInfo {
@@ -15,6 +15,7 @@ export interface ValidatorsInfo {
   dydx: ValidatorInfo[];
   stars: ValidatorInfo[];
   cosmos: ValidatorInfo[];
+  xprt: ValidatorInfo[];
 }
 
 export interface InitialDataSliceState {
@@ -46,6 +47,7 @@ export interface InitialDataSliceActions {
     chainID: string,
     env: string
   ) => Promise<void>;
+  fetchXprtValidatorsData: (chainID: string, env: string) => Promise<void>;
   resetInitialDataSlice: () => void;
   setValidatorInfoLoader: (name: string, value: boolean) => void;
 }
@@ -56,6 +58,7 @@ const initialState: InitialDataSliceState = {
     dydx: [],
     stars: [],
     cosmos: [],
+    xprt: [],
   },
   validatorsInfoLoader: {
     name: "",
@@ -144,6 +147,27 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       validatorsInfo: {
         ...state.validatorsInfo,
         cosmos: valResponse,
+      },
+    }));
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "",
+        loader: false,
+      },
+    }));
+  },
+  fetchXprtValidatorsData: async (chainID, env) => {
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "xprt",
+        loader: true,
+      },
+    }));
+    const valResponse = await getXprtValidators(chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        xprt: valResponse,
       },
     }));
     set((state) => ({

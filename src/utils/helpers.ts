@@ -90,7 +90,6 @@ export const formatNumber = (v = 0, size = 3, decimalLength = 6): string => {
 
 export const decimalize = (valueString: any, decimals = 6) => {
   let truncate;
-  console.log(valueString, decimals, "decimals");
   if (typeof valueString === "string") {
     truncate = Number(valueString);
   } else {
@@ -103,7 +102,6 @@ export const decimalize = (valueString: any, decimals = 6) => {
 };
 
 export const decimalizeRaw = (valueString: any, decimals = 6) => {
-  console.log(valueString, decimals, "decimals", Number(valueString));
   return Decimal.fromAtomics(valueString, decimals).toString();
 };
 

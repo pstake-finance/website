@@ -42,6 +42,10 @@ export const getIdentityChain = (chainID: string) => {
       return "dydx-testnet";
     case "dydx-mainnet-1":
       return "dydx";
+    case "elgafar-1":
+      return "stargaze";
+    case "stargaze-1":
+      return "stargaze";
     default:
       return "cosmos";
   }
@@ -128,50 +132,81 @@ export const getValidators = async (
   }
 };
 
-export const getExchangeRateFromRpc = async (chainId: string, env: string) => {
-  // try {
-  //   console.log(rpc, chainId, "chainIdchainId");
-  //   const rpcClient = await RpcClient("https://rpc.testnet2.persistence.one");
-  //   const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
-  //   const cvalue = await pstakeQueryService.States();
-  //   const liquidValidatorsResponse =
-  //     await pstakeQueryService.LiquidValidators();
-  //   const params = await pstakeQueryService.Params();
-  //   console.log(
-  //     liquidValidatorsResponse,
-  //     cvalue,
-  //     params,
-  //     "-persistence cvalue in getExchangeRateFromRpc"
-  //   );
-  //   return Number(decimalize(cvalue.netAmountState.mintRate, 18));
-  // } catch (e) {
-  //   console.log(e, "error-exte");
-  //   return 0;
-  // }
+export const getXprtValidators = async (chainID: string, env: string) => {
   try {
     const chainInfo = ExternalChains[env].find(
-      (item) => item.chainId === chainId
+      (item) => item.chainId === chainID
     );
+    let validators: ValidatorInfo[] = [];
+    console.log(chainID, "chainIdchainId");
     const rpcClient = await RpcClient(chainInfo!.rpc);
-    const stakingQueryService = new StakeQuery(rpcClient);
-    let key = new Uint8Array();
-    let validators = [];
-    do {
-      const response = await stakingQueryService.Validators({
-        status: "",
-        pagination: {
-          key: key,
-          offset: BigInt(0),
-          limit: BigInt(0),
-          countTotal: true,
-          reverse: false,
-        },
+    const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
+    // const cvalue = await pstakeQueryService.States();
+    const liquidValidatorsResponse =
+      await pstakeQueryService.LiquidValidators();
+    // const params = await pstakeQueryService.Params();
+    const validatorInfo = await getValidatorInfo(chainID, env);
+    console.log(
+      liquidValidatorsResponse,
+      "-persistence cvalue in getExchangeRateFromRpc"
+    );
+    if (liquidValidatorsResponse && liquidValidatorsResponse.liquidValidators) {
+      liquidValidatorsResponse.liquidValidators?.forEach((item) => {
+        const res = validatorInfo?.find(
+          (valItem) => valItem.operatorAddress === item.operatorAddress
+        );
+        if (res && (Number(item.liquidTokens) > 0 || Number(item.weight) > 0)) {
+          const chainIdentity = getIdentityChain(chainID);
+          const avatarCheck = noAvatarValidators.find(
+            (item) => item === res.operatorAddress
+          );
+
+          validators.push({
+            name: res.description!.moniker!,
+            identity: !avatarCheck
+              ? `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`
+              : "",
+            weight: (Number(decimalizeRaw(item.weight, 18)) * 100).toFixed(2),
+            delegationAmount: Number(
+              decimalizeRaw(
+                item.liquidTokens,
+                chainInfo!.stakeCurrency.coinDecimals
+              )
+            ).toFixed(),
+            targetDelegation: Number(decimalizeRaw(item.weight, 18)).toFixed(6),
+          });
+        }
       });
-      key = response!.pagination!.nextKey;
-      validators.push(...response.validators);
-    } while (key.length !== 0);
+    }
     return validators;
   } catch (e) {
-    return null;
+    console.log(e, "error-");
+    return [];
   }
+  // try {
+  //   const chainInfo = ExternalChains[env].find(
+  //     (item) => item.chainId === chainId
+  //   );
+  //   const rpcClient = await RpcClient(chainInfo!.rpc);
+  //   const stakingQueryService = new StakeQuery(rpcClient);
+  //   let key = new Uint8Array();
+  //   let validators = [];
+  //   do {
+  //     const response = await stakingQueryService.Validators({
+  //       status: "",
+  //       pagination: {
+  //         key: key,
+  //         offset: BigInt(0),
+  //         limit: BigInt(0),
+  //         countTotal: true,
+  //         reverse: false,
+  //       },
+  //     });
+  //     key = response!.pagination!.nextKey;
+  //     validators.push(...response.validators);
+  //   } while (key.length !== 0);
+  //   return validators;
+  // } catch (e) {
+  //   return null;
+  // }
 };

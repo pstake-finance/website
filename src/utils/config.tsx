@@ -422,9 +422,9 @@ export const ExternalChains: ExternalChainData = {
   ],
   Testnet: [
     {
-      rpc: "https://rpc.testnet.persistence.one",
-      rest: "https://rest.testnet.persistence.one/",
-      chainId: "test-core-1",
+      rpc: "https://rpc.testnet2.persistence.one",
+      rest: "https://rest.testnet2.persistence.one/",
+      chainId: "test-core-2",
       chainName: "Persistence test-net",
       stakeCurrency: {
         coinDenom: "XPRT",

@@ -32,6 +32,10 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
+  xprtData: {
+    apy: 0,
+    tvl: 0,
+  },
   bnbData: {
     apy: 0,
     tvl: 0,
@@ -41,6 +45,7 @@ const AppContext = createContext<AppState>({
     ATOM: 0,
     OSMO: 0,
     DYDX: 0,
+    STARS: 0,
   },
 });
 
@@ -69,6 +74,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [xprtData, setXprtData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
   const [prices, setPrices] = useState<any>({
     BNB: 0,
     ATOM: 0,
@@ -82,11 +91,13 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         cosmosApyResponse,
         osmoApyResponse,
         starsApyResponse,
+        xprtApyResponse,
         cosmosTvlResponse,
         osmoTvlResponse,
         dydxApyResponse,
         dydxTvlResponse,
         starsTvlResponse,
+        xprtTvlResponse,
         bnbApyResponse,
         bnbTvlResponse,
         tokenPrices,
@@ -94,11 +105,13 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getCosmosAPY("cosmos"),
         getCosmosAPY("osmo"),
         getCosmosAPY("stars"),
+        getCosmosAPY("persistence"),
         getCosmosTVL("cosmos"),
         getCosmosTVL("osmo"),
         getCosmosAPY("dydx"),
         getCosmosTVL("dydx"),
         getCosmosTVL("stars"),
+        getCosmosTVL("persistence"),
         getBnbApy(),
         getBnbTVL(),
         fetchTokenPrices(),
@@ -119,6 +132,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         apy: starsApyResponse,
         tvl: Number(decimalizeRaw(starsTvlResponse)),
       });
+      setXprtData({
+        apy: xprtApyResponse,
+        tvl: Number(decimalizeRaw(xprtTvlResponse)),
+      });
       setBnbData({
         apy: bnbApyResponse,
         tvl: bnbTvlResponse,
@@ -135,6 +152,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     osmoData,
     dydxData,
     starsData,
+    xprtData,
   };
 
   return (

@@ -46,6 +46,10 @@ export const STK_STAR_TVL_API =
   "https://staging.api.persistence.one/pstake/stkstars/stars_tvu";
 export const STK_DYDX_TVL_API =
   "https://staging.api.persistence.one/pstake/stkdydx/dydx_tvu";
+export const STK_XPRT_APY_API =
+  "https://staging.api.persistence.one/pstake/stkxprt/apy";
+export const STK_XPRT_TVL_API =
+  "https://staging.api.persistence.one/pstake/stkxprt/xprt_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const UMEE_URL =
@@ -451,7 +455,7 @@ export const fetchShadeCollateral = async () => {
     return { tvl: 0, fees: 0 };
   }
 };
-
+STK_XPRT_TVL_API;
 export const getCosmosTVL = async (prefix: string) => {
   try {
     const res = await Axios.get(
@@ -461,6 +465,8 @@ export const getCosmosTVL = async (prefix: string) => {
         ? STK_OSMO_TVL_API
         : prefix === "stars"
         ? STK_STAR_TVL_API
+        : prefix === "persistence"
+        ? STK_XPRT_TVL_API
         : STK_DYDX_TVL_API
     );
     if (res && res.data) {
@@ -481,6 +487,8 @@ export const getCosmosAPY = async (prefix: string) => {
         ? STK_OSMO_APY_API
         : prefix === "stars"
         ? STK_STARS_APY_API
+        : prefix === "persistence"
+        ? STK_XPRT_APY_API
         : STK_DYDX_APY_API;
     const res = await Axios.get(api);
     if (res && res.data) {
