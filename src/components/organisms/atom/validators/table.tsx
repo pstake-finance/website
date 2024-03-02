@@ -42,13 +42,13 @@ const ValidatorTable = ({ data, columns }: TableProps) => {
                 2
               )}
               &nbsp;
-              <span className={"text-light-mid"}>OSMO</span>
+              <span className={"text-light-mid"}>ATOM</span>
             </p>
           ),
           delegationAmount: (
             <p key={index} className={"px-1.5 py-1"}>
               {data.delegationAmount}&nbsp;
-              <span className={"text-light-mid"}>OSMO</span>
+              <span className={"text-light-mid"}>ATOM</span>
             </p>
           ),
         })

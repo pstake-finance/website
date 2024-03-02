@@ -67,9 +67,9 @@ const ValidatorsList = () => {
   useEffect(() => {
     if (validatorsInfo.stars.length <= 0) {
       fetchStarsValidatorsData(
-        "https://rpc.testnet2.persistence.one",
-        "elgafar-1",
-        "Testnet"
+        "https://rpc.core.persistence.one",
+        "stargaze-1",
+        "Mainnet"
       );
     }
   }, []);
