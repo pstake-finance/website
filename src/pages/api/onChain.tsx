@@ -82,17 +82,14 @@ export const getValidators = async (
     const chainParamsResponse = await pstakeQueryService.HostChain({
       chainId: hostChainId,
     });
-    console.log(chainParamsResponse, "chainParamsResponse");
     if (chainParamsResponse && chainParamsResponse.hostChain?.validators) {
       if (chainParamsResponse.hostChain?.validators.length > 0) {
         const validatorInfo = await getValidatorInfo(hostChainId, env);
-        console.log(validatorInfo, "validatorInfo");
         const hostChainValidators = chainParamsResponse.hostChain?.validators;
         hostChainValidators?.forEach((item) => {
           const res = validatorInfo?.find(
             (valItem) => valItem.operatorAddress === item.operatorAddress
           );
-          console.log(res, "validatorInfo-res");
           const chainInfo = ExternalChains[env].find(
             (item) => item.chainId === hostChainId
           );
@@ -127,7 +124,7 @@ export const getValidators = async (
     }
     return validators;
   } catch (e) {
-    console.log(e, "error-");
+    console.log(e, "error-getValidators");
     return [];
   }
 };
