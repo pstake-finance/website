@@ -31,21 +31,21 @@ const STK_BNB_SUBGRAPH_API =
 
 export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
 export const OSMOSIS_POOL_APR_URL = "https://api.osmosis.zone/apr/v2/886";
-export const APY_API = "https://staging.api.persistence.one/pstake/stkatom/apy";
+export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
 export const STK_OSMO_APY_API =
-  "https://staging.api.persistence.one/pstake/stkosmo/apy";
+  "https://api.persistence.one/pstake/stkosmo/apy";
 export const STK_STARS_APY_API =
-  "https://staging.api.persistence.one/pstake/stkstars/apy";
+  "https://api.persistence.one/pstake/stkstars/apy";
 export const STK_DYDX_APY_API =
-  "https://staging.api.persistence.one/pstake/stkdydx/apy";
+  "https://api.persistence.one/pstake/stkdydx/apy";
 export const STK_ATOM_TVL_URL =
-  "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
+  "https://api.persistence.one/pstake/stkatom/atom_tvu";
 export const STK_OSMO_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkosmo/osmo_tvu";
+  "https://api.persistence.one/pstake/stkosmo/osmo_tvu";
 export const STK_STAR_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkstars/stars_tvu";
+  "https://api.persistence.one/pstake/stkstars/stars_tvu";
 export const STK_DYDX_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkdydx/dydx_tvu";
+  "https://api.persistence.one/pstake/stkdydx/dydx_tvu";
 export const STK_XPRT_APY_API =
   "https://staging.api.persistence.one/pstake/stkxprt/apy";
 export const STK_XPRT_TVL_API =
