@@ -9,7 +9,7 @@ import Icon from "../../molecules/Icon";
 const Networks = () => {
   const { t } = useTranslation("common");
 
-  const { cosmosData, bnbData, osmoData, dydxData } = useApp();
+  const { cosmosData, bnbData, osmoData, dydxData, starsData } = useApp();
   const { isMobile } = useWindowSize();
   const networkList = [
     {
@@ -18,7 +18,7 @@ const Networks = () => {
       imageUrl: "/images/networks/atom.svg",
       apy: cosmosData!.apy === -1 ? APR_DEFAULT : cosmosData!.apy,
       buttonText: "Start Staking",
-      buttonUrl: "/atom",
+      buttonUrl: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
       hoverBg: "hover:bg-cosmosCard",
     },
     {
@@ -27,7 +27,7 @@ const Networks = () => {
       imageUrl: "/images/networks/osmo.svg",
       apy: osmoData!.apy === -1 ? 9.94 : osmoData.apy,
       buttonText: "Start Staking",
-      buttonUrl: "/osmo",
+      buttonUrl: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
       hoverBg: "hover:bg-osmoCard",
     },
     {
@@ -36,7 +36,17 @@ const Networks = () => {
       imageUrl: "/images/networks/dydx.svg",
       apy: dydxData!.apy === -1 ? 9.94 : dydxData.apy,
       buttonText: "Start Staking",
-      buttonUrl: "/dydx",
+      buttonUrl: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
+      hoverBg: "hover:bg-cosmosCard",
+    },
+    {
+      asset: "STARS",
+      network: "stars",
+      imageUrl: "/images/networks/stars.svg",
+      apy: starsData!.apy === -1 ? 9.94 : starsData.apy,
+      buttonText: "Start Staking",
+      buttonUrl:
+        "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
       hoverBg: "hover:bg-cosmosCard",
     },
     {
@@ -45,7 +55,7 @@ const Networks = () => {
       imageUrl: "/images/networks/bnb.svg",
       apy: bnbData!.apy,
       buttonText: "Start Staking",
-      buttonUrl: "/bnb",
+      buttonUrl: "https://app.pstake.finance/bnb",
       hoverBg: "hover:bg-bnbCard",
     },
     {
@@ -118,7 +128,7 @@ const Networks = () => {
                   variant={"custom"}
                   href={item.buttonUrl}
                   scale="lg"
-                  target={"_self"}
+                  target={"_blank"}
                   isDisabled={false}
                   customButtonClass={
                     "bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
@@ -189,6 +199,7 @@ const Networks = () => {
                     variant={"custom"}
                     href={item.buttonUrl}
                     scale="lg"
+                    target={"_blank"}
                     isDisabled={false}
                     customButtonClass={
                       "mt-9 bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
