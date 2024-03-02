@@ -52,7 +52,6 @@ const criteriaList: CriteriaList[] = [
 
 const ValidatorsList = () => {
   const { starsData } = useApp();
-  console.log(starsData, "starsData");
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
   const fetchStarsValidatorsData = useAppStore(
