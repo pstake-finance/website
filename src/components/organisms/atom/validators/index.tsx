@@ -63,8 +63,8 @@ const ValidatorsList = () => {
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
 
-  const [validatorsInfo, validatorsInfoLoader] = useAppStore(
-    (state) => [state.validatorsInfo, state.validatorsInfoLoader],
+  const [validatorsInfo] = useAppStore(
+    (state) => [state.validatorsInfo],
     shallow
   );
 
@@ -81,7 +81,7 @@ const ValidatorsList = () => {
   }, []);
 
   useEffect(() => {
-    if (validatorsInfo.cosmos.length > 0) {
+    if (validatorsInfo.cosmos.list.length > 0) {
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -93,7 +93,7 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
-      setDataList(validatorsInfo.cosmos);
+      setDataList(validatorsInfo.cosmos.list);
     }
   }, [validatorsInfo]);
   const columns: TableColumnsProps[] = [
@@ -199,14 +199,14 @@ const ValidatorsList = () => {
               </p>
             </div>
           </div>
-          {!validatorsInfoLoader.loader && dataList.length > 0 ? (
+          {!validatorsInfo.cosmos.loader && dataList.length > 0 ? (
             <ValidatorTable data={dataList} columns={columns} />
           ) : (
             <EmptyTable
               columns={columns}
               loader={false}
               text={
-                validatorsInfoLoader.loader ? (
+                validatorsInfo.cosmos.loader ? (
                   <Spinner size={"medium"} />
                 ) : (
                   "Data not found"
