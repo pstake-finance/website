@@ -20,18 +20,6 @@ const list = [
     logoUrl: "/images/stk_dydx.svg",
     url: "/dydx/validators",
   },
-  {
-    name: "stkSTARS",
-    logoUrl: "/images/stk_stars.svg",
-    url: "/stars/validators",
-  },
-  // process.env.NODE_ENV !== "production"
-  //   ? {
-  //       name: "stkXPRT",
-  //       logoUrl: "/images/stk_xprt.svg",
-  //       url: "/xprt/validators",
-  //     }
-  //   : null,
 ];
 
 interface Props {
