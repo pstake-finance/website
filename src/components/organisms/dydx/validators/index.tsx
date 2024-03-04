@@ -6,12 +6,12 @@ import ValidatorTable from "./table";
 import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
-import FilterDropdown from "./filter-dropdown";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
 import ValidatorCriteria from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
+import ValidatorsDropdown from "../../../molecules/validators-dropdown";
 
 const criteriaList = [
   {
@@ -130,7 +130,7 @@ const ValidatorsList = () => {
         </p>
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <div className={"flex items-center justify-between"}>
-            <FilterDropdown />
+            <ValidatorsDropdown name={"stkDYDX"} />
             <p
               className={
                 "text-xl font-medium text-light-emphasis md:text-base text-right"
