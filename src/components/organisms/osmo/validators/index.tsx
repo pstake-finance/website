@@ -9,9 +9,9 @@ import { Spinner } from "../../../molecules/spinner";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
-import FilterDropdown from "./filter-dropdown";
 import ValidatorCriteria from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
+import ValidatorsDropdown from "../../../molecules/validators-dropdown";
 
 const criteriaList = [
   {
@@ -128,7 +128,7 @@ const ValidatorsList = () => {
         </p>
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <div className={"flex items-center justify-between"}>
-            <FilterDropdown />
+            <ValidatorsDropdown name={"stkOSMO"} />
             <p
               className={
                 "text-xl font-medium text-light-emphasis md:text-base text-right"

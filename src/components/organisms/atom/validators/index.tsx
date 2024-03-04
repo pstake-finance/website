@@ -9,16 +9,16 @@ import { Spinner } from "../../../molecules/spinner";
 import moment from "moment";
 import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
-import ValidatorCriteria from "../../common/criteria-table";
+import ValidatorCriteria, { CriteriaList } from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
 import ValidatorsDropdown from "../../../molecules/validators-dropdown";
 
-const criteriaList = [
+const criteriaList: CriteriaList[] = [
   {
     parameter: "Voting Power",
     criteria: "0.05% to 5%",
-    weightage: "15%",
-    time: "Last 30 Days",
+    weightage: "10%",
+    time: "Last 180 Days",
     tooltipTitle: "Current Voting Power",
     tooltipContent: null,
   },
@@ -26,14 +26,14 @@ const criteriaList = [
     parameter: "Commission",
     criteria: "5% to 10%",
     weightage: "25%",
-    time: "Last 30 Days",
+    time: "Last 180 Days",
     tooltipTitle: "Current Validator Commission",
     tooltipContent: null,
   },
   {
     parameter: "Uptime",
     criteria: "95% to 100%",
-    weightage: "20%",
+    weightage: "15%",
     time: "Last 30 Days",
     tooltipTitle: "Uptime over 30 days",
     tooltipContent:
@@ -43,44 +43,45 @@ const criteriaList = [
     parameter: "Governance Participation",
     criteria: "60% to 100%",
     weightage: "40%",
-    time: "Last 30 Days",
-    tooltipTitle: "Governance Participation over 30 days",
+    time: "Last 180 Days",
+    tooltipTitle: "Governance Participation over 180 days",
     tooltipContent:
-      "Track participation in governance proposals over the past 30 days.",
+      "Track participation in governance proposals over the past 180 days.",
   },
-  // {
-  //   parameter: "Validator-Bond",
-  //   criteria: "0.1% to 20%",
-  //   weightage: "-",
-  //   time: "Last 30 Days",
-  // },
+  {
+    parameter: "Validator-Bond",
+    criteria: "0.1% to 20%",
+    weightage: "10%",
+    time: "Last 30 Days",
+    tooltipTitle: "Validator Bond",
+    tooltipContent: null,
+  },
 ];
 
 const ValidatorsList = () => {
-  const { dydxData } = useApp();
+  const { cosmosData } = useApp();
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [updatedTime, setUpdatedTime] = useState<string>("");
-  const fetchDydxValidatorsData = useAppStore(
-    (state) => state.fetchDydxValidatorsData
-  );
 
-  const [validatorsInfo, validatorsInfoLoader] = useAppStore(
-    (state) => [state.validatorsInfo, state.validatorsInfoLoader],
+  const [validatorsInfo] = useAppStore(
+    (state) => [state.validatorsInfo],
     shallow
   );
 
+  const fetchCosmosValidatorsData = useAppStore(
+    (state) => state.fetchCosmosValidatorsData
+  );
+
   useEffect(() => {
-    if (validatorsInfo.dydx.length <= 0) {
-      fetchDydxValidatorsData(
-        "https://rpc.core.persistence.one",
-        "dydx-mainnet-1",
-        "Mainnet"
-      );
-    }
+    fetchCosmosValidatorsData(
+      "https://rpc.core.persistence.one",
+      "cosmoshub-4",
+      "Mainnet"
+    );
   }, []);
 
   useEffect(() => {
-    if (validatorsInfo.dydx.length > 0) {
+    if (validatorsInfo.cosmos.list.length > 0) {
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -92,10 +93,9 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
-      setDataList(validatorsInfo.dydx);
+      setDataList(validatorsInfo.cosmos.list);
     }
   }, [validatorsInfo]);
-
   const columns: TableColumnsProps[] = [
     {
       label: "Validator",
@@ -130,7 +130,7 @@ const ValidatorsList = () => {
         </p>
         <div className={"rounded-xl bg-[#1D1D1F] py-5 px-6 mb-8"}>
           <div className={"flex items-center justify-between"}>
-            <ValidatorsDropdown name={"stkDYDX"} />
+            <ValidatorsDropdown name={"stkATOM"} />
             <p
               className={
                 "text-xl font-medium text-light-emphasis md:text-base text-right"
@@ -140,7 +140,7 @@ const ValidatorsList = () => {
                 {" "}
                 Total Value Unlocked(TVU)
               </span>
-              {formatNumber(Number(dydxData.tvl), 3, 2)} DYDX
+              {formatNumber(Number(cosmosData.tvl), 3, 2)} ATOM
             </p>
           </div>
         </div>
@@ -199,14 +199,14 @@ const ValidatorsList = () => {
               </p>
             </div>
           </div>
-          {!validatorsInfoLoader.loader && dataList.length > 0 ? (
+          {!validatorsInfo.cosmos.loader && dataList.length > 0 ? (
             <ValidatorTable data={dataList} columns={columns} />
           ) : (
             <EmptyTable
               columns={columns}
               loader={false}
               text={
-                validatorsInfoLoader.loader ? (
+                validatorsInfo.cosmos.loader ? (
                   <Spinner size={"medium"} />
                 ) : (
                   "Data not found"

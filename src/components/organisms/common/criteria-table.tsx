@@ -30,7 +30,7 @@ const ValidatorCriteria = ({ criteriaList }: Props) => {
                 : "flex flex-col justify-center items-center flex-1 border-r border-[#3E3E3E] lg:border-0 lg:flex-row lg:justify-start"
             }
           >
-            <div className="flex">
+            <div className="flex mx-2 relative">
               <p
                 className={"text-sm text-light-mid lg:mb-0 lg:mr-4 text-center"}
               >
