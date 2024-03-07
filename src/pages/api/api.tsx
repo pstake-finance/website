@@ -31,17 +31,25 @@ const STK_BNB_SUBGRAPH_API =
 
 export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
 export const OSMOSIS_POOL_APR_URL = "https://api.osmosis.zone/apr/v2/886";
-export const APY_API = "https://staging.api.persistence.one/pstake/stkatom/apy";
+export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";
 export const STK_OSMO_APY_API =
-  "https://staging.api.persistence.one/pstake/stkosmo/apy";
+  "https://api.persistence.one/pstake/stkosmo/apy";
+export const STK_STARS_APY_API =
+  "https://api.persistence.one/pstake/stkstars/apy";
 export const STK_DYDX_APY_API =
-  "https://staging.api.persistence.one/pstake/stkdydx/apy";
+  "https://api.persistence.one/pstake/stkdydx/apy";
 export const STK_ATOM_TVL_URL =
-  "https://staging.api.persistence.one/pstake/stkatom/atom_tvu";
+  "https://api.persistence.one/pstake/stkatom/atom_tvu";
 export const STK_OSMO_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkosmo/osmo_tvu";
+  "https://api.persistence.one/pstake/stkosmo/osmo_tvu";
+export const STK_STAR_TVL_API =
+  "https://api.persistence.one/pstake/stkstars/stars_tvu";
 export const STK_DYDX_TVL_API =
-  "https://staging.api.persistence.one/pstake/stkdydx/dydx_tvu";
+  "https://api.persistence.one/pstake/stkdydx/dydx_tvu";
+export const STK_XPRT_APY_API =
+  "https://staging.api.persistence.one/pstake/stkxprt/apy";
+export const STK_XPRT_TVL_API =
+  "https://staging.api.persistence.one/pstake/stkxprt/xprt_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const UMEE_URL =
@@ -59,9 +67,18 @@ export const fetchTokenPrices = async () => {
     ATOM: 0,
     OSMO: 0,
     DYDX: 0,
+    STARS: 0,
+    XPRT: 0,
   };
   try {
-    const tokens = ["cosmos", "osmosis", "binancecoin", "dydx-chain"];
+    const tokens = [
+      "cosmos",
+      "osmosis",
+      "binancecoin",
+      "dydx-chain",
+      "stargaze",
+      "persistence",
+    ];
     const pricesResponse = await Axios.get(
       `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
         ","
@@ -76,6 +93,8 @@ export const fetchTokenPrices = async () => {
     data.ATOM = Number(pricesResponse.data["cosmos"].usd);
     data.OSMO = Number(pricesResponse.data["osmosis"].usd);
     data.DYDX = Number(pricesResponse.data["dydx-chain"].usd);
+    data.STARS = Number(pricesResponse.data["stargaze"].usd);
+    data.XPRT = Number(pricesResponse.data["persistence"].usd);
     return data;
   } catch (e) {
     return data;
@@ -447,7 +466,7 @@ export const fetchShadeCollateral = async () => {
     return { tvl: 0, fees: 0 };
   }
 };
-
+STK_XPRT_TVL_API;
 export const getCosmosTVL = async (prefix: string) => {
   try {
     const res = await Axios.get(
@@ -455,6 +474,10 @@ export const getCosmosTVL = async (prefix: string) => {
         ? STK_ATOM_TVL_URL
         : prefix === "osmo"
         ? STK_OSMO_TVL_API
+        : prefix === "stars"
+        ? STK_STAR_TVL_API
+        : prefix === "persistence"
+        ? STK_XPRT_TVL_API
         : STK_DYDX_TVL_API
     );
     if (res && res.data) {
@@ -473,6 +496,10 @@ export const getCosmosAPY = async (prefix: string) => {
         ? APY_API
         : prefix === "osmo"
         ? STK_OSMO_APY_API
+        : prefix === "stars"
+        ? STK_STARS_APY_API
+        : prefix === "persistence"
+        ? STK_XPRT_APY_API
         : STK_DYDX_APY_API;
     const res = await Axios.get(api);
     if (res && res.data) {

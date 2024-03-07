@@ -28,6 +28,14 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
+  starsData: {
+    apy: 0,
+    tvl: 0,
+  },
+  xprtData: {
+    apy: 0,
+    tvl: 0,
+  },
   bnbData: {
     apy: 0,
     tvl: 0,
@@ -37,6 +45,8 @@ const AppContext = createContext<AppState>({
     ATOM: 0,
     OSMO: 0,
     DYDX: 0,
+    STARS: 0,
+    XPRT: 0,
   },
 });
 
@@ -61,11 +71,21 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [starsData, setStarsData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
+  const [xprtData, setXprtData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
   const [prices, setPrices] = useState<any>({
     BNB: 0,
     ATOM: 0,
     OSMO: 0,
     DYDX: 0,
+    STARS: 0,
+    XPRT: 0,
   });
 
   useEffect(() => {
@@ -73,35 +93,52 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
       const [
         cosmosApyResponse,
         osmoApyResponse,
+        starsApyResponse,
+        xprtApyResponse,
         cosmosTvlResponse,
         osmoTvlResponse,
         dydxApyResponse,
         dydxTvlResponse,
+        starsTvlResponse,
+        xprtTvlResponse,
         bnbApyResponse,
         bnbTvlResponse,
         tokenPrices,
       ] = await Promise.all([
         getCosmosAPY("cosmos"),
         getCosmosAPY("osmo"),
+        getCosmosAPY("stars"),
+        getCosmosAPY("persistence"),
         getCosmosTVL("cosmos"),
         getCosmosTVL("osmo"),
         getCosmosAPY("dydx"),
         getCosmosTVL("dydx"),
+        getCosmosTVL("stars"),
+        getCosmosTVL("persistence"),
         getBnbApy(),
         getBnbTVL(),
         fetchTokenPrices(),
       ]);
+      console.log(tokenPrices, "tokenPrices");
       setCosmosData({
         apy: cosmosApyResponse,
-        tvl: Number(decimalize(cosmosTvlResponse)),
+        tvl: Number(decimalizeRaw(cosmosTvlResponse)),
       });
       setOsmoData({
         apy: osmoApyResponse,
-        tvl: Number(decimalize(osmoTvlResponse)),
+        tvl: Number(decimalizeRaw(osmoTvlResponse)),
       });
       setDydxData({
         apy: dydxApyResponse,
-        tvl: Number(decimalizeRaw(dydxTvlResponse, 18)),
+        tvl: Number(decimalizeRaw(dydxTvlResponse, 18)).toFixed(2),
+      });
+      setStarsData({
+        apy: starsApyResponse,
+        tvl: Number(decimalizeRaw(starsTvlResponse)),
+      });
+      setXprtData({
+        apy: xprtApyResponse,
+        tvl: Number(decimalizeRaw(xprtTvlResponse)),
       });
       setBnbData({
         apy: bnbApyResponse,
@@ -118,6 +155,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     tokenPrices: prices,
     osmoData,
     dydxData,
+    starsData,
+    xprtData,
   };
 
   return (

@@ -3,6 +3,7 @@ import { decimalize, decimalizeRaw, RpcClient } from "../../utils/helpers";
 import { QueryClientImpl as StakeQuery } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { ValidatorInfo } from "../../store/slices/initial-data-slice";
 import { ExternalChains } from "../../utils/config";
+import { QueryClientImpl as NativeLiquidStakeQueryClient } from "persistenceonejs/pstake/liquidstake/v1beta1/query";
 
 export const getValidatorInfo = async (chainId: string, env: string) => {
   try {
@@ -41,6 +42,10 @@ export const getIdentityChain = (chainID: string) => {
       return "dydx-testnet";
     case "dydx-mainnet-1":
       return "dydx";
+    case "elgafar-1":
+      return "stargaze";
+    case "stargaze-1":
+      return "stargaze";
     default:
       return "cosmos";
   }
@@ -77,13 +82,6 @@ export const getValidators = async (
     const chainParamsResponse = await pstakeQueryService.HostChain({
       chainId: hostChainId,
     });
-    console.log(
-      chainParamsResponse,
-      "chainParamsResponse",
-      rpc,
-      hostChainId,
-      env
-    );
     if (chainParamsResponse && chainParamsResponse.hostChain?.validators) {
       if (chainParamsResponse.hostChain?.validators.length > 0) {
         const validatorInfo = await getValidatorInfo(hostChainId, env);
@@ -123,6 +121,57 @@ export const getValidators = async (
           }
         });
       }
+    }
+    return validators;
+  } catch (e) {
+    console.log(e, "error-getValidators");
+    return [];
+  }
+};
+
+export const getXprtValidators = async (chainID: string, env: string) => {
+  try {
+    const chainInfo = ExternalChains[env].find(
+      (item) => item.chainId === chainID
+    );
+    let validators: ValidatorInfo[] = [];
+    console.log(chainID, "chainIdchainId");
+    const rpcClient = await RpcClient(chainInfo!.rpc);
+    const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
+    const liquidValidatorsResponse =
+      await pstakeQueryService.LiquidValidators();
+    const validatorInfo = await getValidatorInfo(chainID, env);
+    console.log(
+      liquidValidatorsResponse,
+      "-persistence cvalue in getExchangeRateFromRpc"
+    );
+    if (liquidValidatorsResponse && liquidValidatorsResponse.liquidValidators) {
+      liquidValidatorsResponse.liquidValidators?.forEach((item) => {
+        const res = validatorInfo?.find(
+          (valItem) => valItem.operatorAddress === item.operatorAddress
+        );
+        if (res && (Number(item.liquidTokens) > 0 || Number(item.weight) > 0)) {
+          const chainIdentity = getIdentityChain(chainID);
+          const avatarCheck = noAvatarValidators.find(
+            (item) => item === res.operatorAddress
+          );
+
+          validators.push({
+            name: res.description!.moniker!,
+            identity: !avatarCheck
+              ? `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`
+              : "",
+            weight: (Number(decimalizeRaw(item.weight, 18)) * 100).toFixed(2),
+            delegationAmount: Number(
+              decimalizeRaw(
+                item.liquidTokens,
+                chainInfo!.stakeCurrency.coinDecimals
+              )
+            ).toFixed(),
+            targetDelegation: Number(decimalizeRaw(item.weight, 18)).toFixed(6),
+          });
+        }
+      });
     }
     return validators;
   } catch (e) {

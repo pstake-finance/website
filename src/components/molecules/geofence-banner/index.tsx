@@ -80,22 +80,23 @@ const GeofenceNotice = () => {
     >
       <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
         <img
-          src={"/images/stk_dydx.svg"}
+          src={"/images/stk_stars.svg"}
           alt={"stkAtom"}
           width={"16px"}
           height={"16px"}
           className="logo mr-1"
         />
-        <span>stkDYDX is NOW LIVE. Liquid Stake your DYDX with&nbsp;</span>
-        {validatorsInfoLoader.loader && validatorsInfoLoader.name === "dydx" ? (
+        <span>stkSTARS is NOW LIVE. Liquid Stake your STARS with&nbsp;</span>
+        {validatorsInfoLoader.loader &&
+        validatorsInfoLoader.name === "stars" ? (
           <Spinner size={"small"} className={"!w-3 !h-3"} />
         ) : (
-          validatorsInfo.dydx.length
+          validatorsInfo.stars.length
         )}
         &nbsp;validators&nbsp;
         <a
           className="link underline"
-          href={"https://app.pstake.finance/cosmos"}
+          href={"https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze"}
           target="_blank"
           rel="noopener noreferrer"
         >

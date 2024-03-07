@@ -1,5 +1,5 @@
 import { StateCreator } from "zustand";
-import { getValidators } from "../../pages/api/onChain";
+import { getValidators, getXprtValidators } from "../../pages/api/onChain";
 import osmo from "../../pages/osmo";
 
 export interface ValidatorInfo {
@@ -17,6 +17,8 @@ export interface ValidatorsInfo {
     list: ValidatorInfo[];
     loader: boolean;
   };
+  stars: ValidatorInfo[];
+  xprt: ValidatorInfo[];
 }
 
 export interface InitialDataSliceState {
@@ -43,6 +45,12 @@ export interface InitialDataSliceActions {
     chainID: string,
     env: string
   ) => Promise<void>;
+  fetchStarsValidatorsData: (
+    rpc: string,
+    chainID: string,
+    env: string
+  ) => Promise<void>;
+  fetchXprtValidatorsData: (chainID: string, env: string) => Promise<void>;
   resetInitialDataSlice: () => void;
   setValidatorInfoLoader: (name: string, value: boolean) => void;
 }
@@ -55,6 +63,8 @@ const initialState: InitialDataSliceState = {
       list: [],
       loader: false,
     },
+    stars: [],
+    xprt: [],
   },
   validatorsInfoLoader: {
     name: "",
@@ -101,6 +111,48 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       validatorsInfo: {
         ...state.validatorsInfo,
         dydx: valResponse,
+      },
+    }));
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "",
+        loader: false,
+      },
+    }));
+  },
+  fetchStarsValidatorsData: async (rpc, chainID, env) => {
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "stars",
+        loader: true,
+      },
+    }));
+    const valResponse = await getValidators(rpc, chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        stars: valResponse,
+      },
+    }));
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "",
+        loader: false,
+      },
+    }));
+  },
+  fetchXprtValidatorsData: async (chainID, env) => {
+    set((state) => ({
+      validatorsInfoLoader: {
+        name: "xprt",
+        loader: true,
+      },
+    }));
+    const valResponse = await getXprtValidators(chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        xprt: valResponse,
       },
     }));
     set((state) => ({
