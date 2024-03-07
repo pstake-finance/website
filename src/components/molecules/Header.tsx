@@ -163,7 +163,7 @@ const Header = () => {
     {
       optionName: "Stars",
       optionLink:
-        "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
+        "https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
       imgUrl: "/images/stars.svg",
       symbol: "STARS",
     },

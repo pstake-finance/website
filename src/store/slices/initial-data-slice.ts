@@ -13,8 +13,11 @@ export interface ValidatorInfo {
 export interface ValidatorsInfo {
   osmo: ValidatorInfo[];
   dydx: ValidatorInfo[];
+  cosmos: {
+    list: ValidatorInfo[];
+    loader: boolean;
+  };
   stars: ValidatorInfo[];
-  cosmos: ValidatorInfo[];
   xprt: ValidatorInfo[];
 }
 
@@ -37,12 +40,12 @@ export interface InitialDataSliceActions {
     chainID: string,
     env: string
   ) => Promise<void>;
-  fetchStarsValidatorsData: (
+  fetchCosmosValidatorsData: (
     rpc: string,
     chainID: string,
     env: string
   ) => Promise<void>;
-  fetchCosmosValidatorsData: (
+  fetchStarsValidatorsData: (
     rpc: string,
     chainID: string,
     env: string
@@ -56,8 +59,11 @@ const initialState: InitialDataSliceState = {
   validatorsInfo: {
     osmo: [],
     dydx: [],
+    cosmos: {
+      list: [],
+      loader: false,
+    },
     stars: [],
-    cosmos: [],
     xprt: [],
   },
   validatorsInfoLoader: {
@@ -135,27 +141,6 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       },
     }));
   },
-  fetchCosmosValidatorsData: async (rpc, chainID, env) => {
-    set((state) => ({
-      validatorsInfoLoader: {
-        name: "cosmos",
-        loader: true,
-      },
-    }));
-    const valResponse = await getValidators(rpc, chainID, env);
-    set((state) => ({
-      validatorsInfo: {
-        ...state.validatorsInfo,
-        cosmos: valResponse,
-      },
-    }));
-    set((state) => ({
-      validatorsInfoLoader: {
-        name: "",
-        loader: false,
-      },
-    }));
-  },
   fetchXprtValidatorsData: async (chainID, env) => {
     set((state) => ({
       validatorsInfoLoader: {
@@ -174,6 +159,27 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       validatorsInfoLoader: {
         name: "",
         loader: false,
+      },
+    }));
+  },
+  fetchCosmosValidatorsData: async (rpc, chainID, env) => {
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        cosmos: {
+          ...state.validatorsInfo.cosmos,
+          loader: true,
+        },
+      },
+    }));
+    const valResponse = await getValidators(rpc, chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        cosmos: {
+          list: valResponse,
+          loader: false,
+        },
       },
     }));
   },

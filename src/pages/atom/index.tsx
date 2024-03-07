@@ -8,7 +8,7 @@ import FeaturedBlogs from "../../components/organisms/atom/FeactureBlog";
 import LiquidStakingSteps from "../../components/organisms/atom/LiquidStakingSteps";
 import Audited from "../../components/organisms/atom/Audited";
 import Faq from "../../components/organisms/atom/Faq";
-import ValidatorsContainer from "../../components/organisms/atom/ValidatorsContainer";
+import ValidatorContainer from "../../components/organisms/atom/ValidatorContainer";
 import EcosystemSlider from "../../components/organisms/atom/EcosystemSilder";
 import MigrationCard from "../../components/organisms/atom/Migration";
 
@@ -22,7 +22,7 @@ const Atom = () => {
       <LiquidStakingSteps />
       <EcosystemSlider deviceType={""} />
       {/*<Guides />*/}
-      <ValidatorsContainer deviceType={""} />
+      <ValidatorContainer deviceType={""} />
       <Audited />
       <FeaturedBlogs />
       <Faq />
