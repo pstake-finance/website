@@ -249,14 +249,14 @@ const Header = () => {
     router.push(link);
   };
 
-  const fetchDydxValidatorsData = useAppStore(
-    (state) => state.fetchDydxValidatorsData
+  const fetchStarsValidatorsData = useAppStore(
+    (state) => state.fetchStarsValidatorsData
   );
 
   useEffect(() => {
-    fetchDydxValidatorsData(
+    fetchStarsValidatorsData(
       "https://rpc.core.persistence.one",
-      "dydx-mainnet-1",
+      "stargaze-1",
       "Mainnet"
     );
   }, []);

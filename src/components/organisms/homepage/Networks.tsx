@@ -20,6 +20,7 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
       hoverBg: "hover:bg-cosmosCard",
+      erc20: false,
     },
     {
       asset: "Osmosis",
@@ -29,6 +30,7 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
       hoverBg: "hover:bg-osmoCard",
+      erc20: false,
     },
     {
       asset: "Dydx",
@@ -38,6 +40,7 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
       hoverBg: "hover:bg-cosmosCard",
+      erc20: false,
     },
     {
       asset: "STARS",
@@ -48,6 +51,7 @@ const Networks = () => {
       buttonUrl:
         "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
       hoverBg: "hover:bg-cosmosCard",
+      erc20: false,
     },
     {
       asset: "BNB",
@@ -57,6 +61,7 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/bnb",
       hoverBg: "hover:bg-bnbCard",
+      erc20: false,
     },
     {
       asset: "Ethereum",
@@ -66,6 +71,7 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl: "https://eth.pstake.finance",
       hoverBg: "hover:bg-ethCard",
+      erc20: true,
     },
     {
       asset: "Persistence",
@@ -75,6 +81,7 @@ const Networks = () => {
       buttonText: "Withdraw Assets",
       buttonUrl: "https://migration.pstake.finance/",
       hoverBg: "hover:bg-xprtCard",
+      erc20: true,
     },
     {
       asset: "Cosmos",
@@ -84,6 +91,7 @@ const Networks = () => {
       buttonText: "Withdraw Assets",
       buttonUrl: "https://migration.pstake.finance/",
       hoverBg: "hover:bg-cosmosCard",
+      erc20: true,
     },
   ];
   return (
@@ -170,9 +178,11 @@ const Networks = () => {
                     leading-normal text-center md:text-base"
                     >
                       {item.asset}
-                      <span className="text-light-emphasis text-xsm">
-                        (ERC20)
-                      </span>
+                      {item.erc20 ? (
+                        <span className="text-light-emphasis text-xsm">
+                          (ERC20)
+                        </span>
+                      ) : null}
                     </h5>
                     {item.network === "ethereum" &&
                     (item.asset === "Persistence" ||
