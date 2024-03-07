@@ -356,6 +356,7 @@ const Header = () => {
                           key={index}
                           href={item.optionLink}
                           target={"_blank"}
+                          rel="noopener noreferrer"
                         >
                           <img
                             src={item.imgUrl}
