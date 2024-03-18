@@ -788,5 +788,79 @@ export const ExternalChains: ExternalChainData = {
       ],
       features: [],
     },
+    {
+      rpc: "https://agoric-rpc.polkachu.com",
+      rest: "https://agoric-api.polkachu.com",
+      chainId: "agoric-3",
+      chainName: "Agoric",
+      stakeCurrency: {
+        coinDenom: "BLD",
+        coinMinimalDenom: "ubld",
+        coinDecimals: 6,
+      },
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: {
+        bech32PrefixAccAddr: "agoric",
+        bech32PrefixAccPub: "agoricpub",
+        bech32PrefixValAddr: "agoricvaloper",
+        bech32PrefixValPub: "agoricvaloperpub",
+        bech32PrefixConsAddr: "agoricvalcons",
+        bech32PrefixConsPub: "agoricvalconspub",
+      },
+      currencies: [
+        {
+          coinDenom: "BLD",
+          coinMinimalDenom: "ubld",
+          coinDecimals: 6,
+        },
+      ],
+      feeCurrencies: [
+        {
+          coinDenom: "BLD",
+          coinMinimalDenom: "ubld",
+          coinDecimals: 6,
+        },
+      ],
+      features: [],
+    },
+    {
+      rpc: "https://chihuahua-rpc.polkachu.com",
+      rest: "https://chihuahua-api.polkachu.com",
+      chainId: "chihuahua-1",
+      chainName: "Chihuahua",
+      stakeCurrency: {
+        coinDenom: "HUAHUA",
+        coinMinimalDenom: "uhuahua",
+        coinDecimals: 6,
+      },
+      bip44: {
+        coinType: 118,
+      },
+      bech32Config: {
+        bech32PrefixAccAddr: "chihuahua",
+        bech32PrefixAccPub: "chihuahuapub",
+        bech32PrefixValAddr: "chihuahuavaloper",
+        bech32PrefixValPub: "chihuahuavaloperpub",
+        bech32PrefixConsAddr: "chihuahuavalcons",
+        bech32PrefixConsPub: "chihuahuavalconspub",
+      },
+      currencies: [
+        {
+          coinDenom: "HUAHUA",
+          coinMinimalDenom: "uhuahua",
+          coinDecimals: 6,
+        },
+      ],
+      feeCurrencies: [
+        {
+          coinDenom: "HUAHUA",
+          coinMinimalDenom: "uhuahua",
+          coinDecimals: 6,
+        },
+      ],
+      features: [],
+    },
   ],
 };

@@ -48,8 +48,16 @@ export const STK_DYDX_TVL_API =
   "https://api.persistence.one/pstake/stkdydx/dydx_tvu";
 export const STK_XPRT_APY_API =
   "https://staging.api.persistence.one/pstake/stkxprt/apy";
+export const STK_BLD_APY_API =
+  "https://staging.api.persistence.one/pstake/stkbld/apy";
+export const STK_HUAHUA_APY_API =
+  "https://staging.api.persistence.one/pstake/stkhuahua/apy";
 export const STK_XPRT_TVL_API =
   "https://staging.api.persistence.one/pstake/stkxprt/xprt_tvu";
+export const STK_BLD_TVL_API =
+  "https://staging.api.persistence.one/pstake/stkbld/bld_tvu";
+export const STK_HUAHUA_TVL_API =
+  "https://staging.api.persistence.one/pstake/stkhuahua/huahua_tvu";
 export const CRESCENT_POOL_URL = "https://apigw-v3.crescent.network/pool/live";
 export const DEXTER_POOL_URL = "https://api.core-1.dexter.zone/v1/graphql";
 export const UMEE_URL =
@@ -69,6 +77,8 @@ export const fetchTokenPrices = async () => {
     DYDX: 0,
     STARS: 0,
     XPRT: 0,
+    BLD: 0,
+    HUAHUA: 0,
   };
   try {
     const tokens = [
@@ -78,6 +88,8 @@ export const fetchTokenPrices = async () => {
       "dydx-chain",
       "stargaze",
       "persistence",
+      "agoric",
+      "chihuahua",
     ];
     const pricesResponse = await Axios.get(
       `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
@@ -95,6 +107,8 @@ export const fetchTokenPrices = async () => {
     data.DYDX = Number(pricesResponse.data["dydx-chain"].usd);
     data.STARS = Number(pricesResponse.data["stargaze"].usd);
     data.XPRT = Number(pricesResponse.data["persistence"].usd);
+    data.BLD = Number(pricesResponse.data["agoric"].usd);
+    data.HUAHUA = Number(pricesResponse.data["chihuahua"].usd);
     return data;
   } catch (e) {
     return data;
@@ -478,6 +492,10 @@ export const getCosmosTVL = async (prefix: string) => {
         ? STK_STAR_TVL_API
         : prefix === "persistence"
         ? STK_XPRT_TVL_API
+        : prefix === "agoric"
+        ? STK_BLD_TVL_API
+        : prefix === "chihuahua"
+        ? STK_HUAHUA_TVL_API
         : STK_DYDX_TVL_API
     );
     if (res && res.data) {
@@ -500,6 +518,10 @@ export const getCosmosAPY = async (prefix: string) => {
         ? STK_STARS_APY_API
         : prefix === "persistence"
         ? STK_XPRT_APY_API
+        : prefix === "agoric"
+        ? STK_BLD_APY_API
+        : prefix === "chihuahua"
+        ? STK_HUAHUA_APY_API
         : STK_DYDX_APY_API;
     const res = await Axios.get(api);
     if (res && res.data) {

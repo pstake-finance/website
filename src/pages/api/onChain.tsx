@@ -44,8 +44,10 @@ export const getIdentityChain = (chainID: string) => {
       return "dydx";
     case "elgafar-1":
       return "stargaze";
-    case "stargaze-1":
-      return "stargaze";
+    case "agoric-3":
+      return "agoric";
+    case "chihuahua-1":
+      return "chihuahua";
     default:
       return "cosmos";
   }
