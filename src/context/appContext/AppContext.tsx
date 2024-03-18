@@ -55,6 +55,8 @@ const AppContext = createContext<AppState>({
     DYDX: 0,
     STARS: 0,
     XPRT: 0,
+    BLD: 0,
+    HUAHUA: 0,
   },
 });
 

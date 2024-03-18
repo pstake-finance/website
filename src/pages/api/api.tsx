@@ -480,7 +480,6 @@ export const fetchShadeCollateral = async () => {
     return { tvl: 0, fees: 0 };
   }
 };
-STK_XPRT_TVL_API;
 export const getCosmosTVL = async (prefix: string) => {
   try {
     const res = await Axios.get(

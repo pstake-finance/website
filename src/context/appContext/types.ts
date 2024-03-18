@@ -38,6 +38,8 @@ export interface AppState {
     DYDX: number;
     STARS: number;
     XPRT: number;
+    BLD: 0;
+    HUAHUA: 0;
   };
 }
 

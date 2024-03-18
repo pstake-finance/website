@@ -9,7 +9,15 @@ import Icon from "../../molecules/Icon";
 const Networks = () => {
   const { t } = useTranslation("common");
 
-  const { cosmosData, bnbData, osmoData, dydxData, starsData } = useApp();
+  const {
+    cosmosData,
+    bnbData,
+    osmoData,
+    dydxData,
+    starsData,
+    bldData,
+    huahuaData,
+  } = useApp();
   const { isMobile } = useWindowSize();
   const networkList = [
     {
@@ -50,6 +58,28 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl:
         "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
+      hoverBg: "hover:bg-cosmosCard",
+      erc20: false,
+    },
+    {
+      asset: "BLD",
+      network: "agoric",
+      imageUrl: "/images/networks/bld.svg",
+      apy: bldData!.apy === -1 ? 11 : bldData.apy,
+      buttonText: "Start Staking",
+      buttonUrl:
+        "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
+      hoverBg: "hover:bg-cosmosCard",
+      erc20: false,
+    },
+    {
+      asset: "HUAHUA",
+      network: "chihuahua",
+      imageUrl: "/images/networks/huahua.svg",
+      apy: huahuaData!.apy === -1 ? 10 : huahuaData.apy,
+      buttonText: "Start Staking",
+      buttonUrl:
+        "https://staging.app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
       hoverBg: "hover:bg-cosmosCard",
       erc20: false,
     },
