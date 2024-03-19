@@ -578,8 +578,8 @@ export const getAvatar = async (identity: string) => {
     if (url) {
       return url;
     }
-    return "/images/profile.svg"; // return profile icon if url not exists
+    return ""; // return null icon if url not exists
   } catch (e) {
-    return "/images/profile.svg";
+    return "";
   }
 };
