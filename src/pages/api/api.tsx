@@ -89,7 +89,7 @@ export const fetchTokenPrices = async () => {
       "stargaze",
       "persistence",
       "agoric",
-      "chihuahua",
+      "chihuahua-token",
     ];
     const pricesResponse = await Axios.get(
       `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
@@ -108,7 +108,7 @@ export const fetchTokenPrices = async () => {
     data.STARS = Number(pricesResponse.data["stargaze"].usd);
     data.XPRT = Number(pricesResponse.data["persistence"].usd);
     data.BLD = Number(pricesResponse.data["agoric"].usd);
-    data.HUAHUA = Number(pricesResponse.data["chihuahua"].usd);
+    data.HUAHUA = Number(pricesResponse.data["chihuahua-token"].usd);
     return data;
   } catch (e) {
     return data;
