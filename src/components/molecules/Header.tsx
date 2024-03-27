@@ -167,13 +167,13 @@ const Header = () => {
       imgUrl: "/images/stars.svg",
       symbol: "STARS",
     },
-    {
-      optionName: "Agoric",
-      optionLink:
-        "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
-      imgUrl: "/images/networks/bld.svg",
-      symbol: "BLD",
-    },
+    // {
+    //   optionName: "Agoric",
+    //   optionLink:
+    //     "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
+    //   imgUrl: "/images/networks/bld.svg",
+    //   symbol: "BLD",
+    // },
     {
       optionName: "CHIHUAHUA",
       optionLink:
@@ -263,14 +263,14 @@ const Header = () => {
     router.push(link);
   };
 
-  const fetchStarsValidatorsData = useAppStore(
-    (state) => state.fetchStarsValidatorsData
+  const fetchHuahuaValidatorsData = useAppStore(
+    (state) => state.fetchHuahuaValidatorsData
   );
 
   useEffect(() => {
-    fetchStarsValidatorsData(
+    fetchHuahuaValidatorsData(
       "https://rpc.core.persistence.one",
-      "stargaze-1",
+      "chihuahua-1",
       "Mainnet"
     );
   }, []);

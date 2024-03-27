@@ -61,17 +61,17 @@ const Networks = () => {
       hoverBg: "hover:bg-cosmosCard",
       erc20: false,
     },
-    {
-      asset: "BLD",
-      network: "agoric",
-      imageUrl: "/images/networks/bld.svg",
-      apy: bldData!.apy === -1 ? 11 : bldData.apy,
-      buttonText: "Start Staking",
-      buttonUrl:
-        "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
-      hoverBg: "hover:bg-cosmosCard",
-      erc20: false,
-    },
+    // {
+    //   asset: "BLD",
+    //   network: "agoric",
+    //   imageUrl: "/images/networks/bld.svg",
+    //   apy: bldData!.apy === -1 ? 11 : bldData.apy,
+    //   buttonText: "Start Staking",
+    //   buttonUrl:
+    //     "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
+    //   hoverBg: "hover:bg-cosmosCard",
+    //   erc20: false,
+    // },
     {
       asset: "HUAHUA",
       network: "chihuahua",
