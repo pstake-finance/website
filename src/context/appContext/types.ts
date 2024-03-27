@@ -19,6 +19,14 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
+  bldData: {
+    apy: number;
+    tvl: number;
+  };
+  huahuaData: {
+    apy: number;
+    tvl: number;
+  };
   bnbData: {
     apy: number;
     tvl: number;
@@ -30,6 +38,8 @@ export interface AppState {
     DYDX: number;
     STARS: number;
     XPRT: number;
+    BLD: 0;
+    HUAHUA: 0;
   };
 }
 

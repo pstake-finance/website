@@ -36,6 +36,14 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
+  bldData: {
+    apy: 0,
+    tvl: 0,
+  },
+  huahuaData: {
+    apy: 0,
+    tvl: 0,
+  },
   bnbData: {
     apy: 0,
     tvl: 0,
@@ -47,6 +55,8 @@ const AppContext = createContext<AppState>({
     DYDX: 0,
     STARS: 0,
     XPRT: 0,
+    BLD: 0,
+    HUAHUA: 0,
   },
 });
 
@@ -79,6 +89,14 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [huahuaData, setHuahuaData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
+  const [bldData, setBldData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
   const [prices, setPrices] = useState<any>({
     BNB: 0,
     ATOM: 0,
@@ -86,6 +104,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     DYDX: 0,
     STARS: 0,
     XPRT: 0,
+    BLD: 0,
+    HUAHUA: 0,
   });
 
   useEffect(() => {
@@ -95,12 +115,16 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         osmoApyResponse,
         starsApyResponse,
         xprtApyResponse,
+        dydxApyResponse,
+        bldApyResponse,
+        huahuaApyResponse,
         cosmosTvlResponse,
         osmoTvlResponse,
-        dydxApyResponse,
         dydxTvlResponse,
         starsTvlResponse,
         xprtTvlResponse,
+        bldTvlResponse,
+        huahuaTvlResponse,
         bnbApyResponse,
         bnbTvlResponse,
         tokenPrices,
@@ -109,12 +133,16 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getCosmosAPY("osmo"),
         getCosmosAPY("stars"),
         getCosmosAPY("persistence"),
+        getCosmosAPY("dydx"),
+        getCosmosAPY("agoric"),
+        getCosmosAPY("chihuahua"),
         getCosmosTVL("cosmos"),
         getCosmosTVL("osmo"),
-        getCosmosAPY("dydx"),
         getCosmosTVL("dydx"),
         getCosmosTVL("stars"),
         getCosmosTVL("persistence"),
+        getCosmosTVL("agoric"),
+        getCosmosTVL("chihuahua"),
         getBnbApy(),
         getBnbTVL(),
         fetchTokenPrices(),
@@ -140,6 +168,14 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         apy: xprtApyResponse,
         tvl: Number(decimalizeRaw(xprtTvlResponse)),
       });
+      setBldData({
+        apy: bldApyResponse,
+        tvl: Number(decimalizeRaw(bldTvlResponse)),
+      });
+      setHuahuaData({
+        apy: huahuaApyResponse,
+        tvl: Number(decimalizeRaw(huahuaTvlResponse)),
+      });
       setBnbData({
         apy: bnbApyResponse,
         tvl: bnbTvlResponse,
@@ -157,6 +193,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     dydxData,
     starsData,
     xprtData,
+    bldData,
+    huahuaData,
   };
 
   return (

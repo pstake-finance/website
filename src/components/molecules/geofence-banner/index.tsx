@@ -11,8 +11,8 @@ const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
   const [country, setCountry] = useState("");
   const [banner, setBanner] = useState(true);
-  const [validatorsInfo, validatorsInfoLoader] = useAppStore(
-    (state) => [state.validatorsInfo, state.validatorsInfoLoader],
+  const [validatorsInfo] = useAppStore(
+    (state) => [state.validatorsInfo],
     shallow
   );
   useEffect(() => {
@@ -80,18 +80,17 @@ const GeofenceNotice = () => {
     >
       <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
         <img
-          src={"/images/stk_stars.svg"}
+          src={"/images/stk_huahua.svg"}
           alt={"stkAtom"}
           width={"16px"}
           height={"16px"}
           className="logo mr-1"
         />
-        <span>stkSTARS is NOW LIVE. Liquid Stake your STARS with&nbsp;</span>
-        {validatorsInfoLoader.loader &&
-        validatorsInfoLoader.name === "stars" ? (
+        <span>stkHUAHUA is NOW LIVE. Liquid Stake your HUAHUA with&nbsp;</span>
+        {validatorsInfo.huahua.loader ? (
           <Spinner size={"small"} className={"!w-3 !h-3"} />
         ) : (
-          validatorsInfo.stars.length
+          validatorsInfo.huahua.list.length
         )}
         &nbsp;validators&nbsp;
         <a

@@ -4,6 +4,7 @@ import { QueryClientImpl as StakeQuery } from "cosmjs-types/cosmos/staking/v1bet
 import { ValidatorInfo } from "../../store/slices/initial-data-slice";
 import { ExternalChains } from "../../utils/config";
 import { QueryClientImpl as NativeLiquidStakeQueryClient } from "persistenceonejs/pstake/liquidstake/v1beta1/query";
+import { getAvatar } from "./api";
 
 export const getValidatorInfo = async (chainId: string, env: string) => {
   try {
@@ -44,8 +45,10 @@ export const getIdentityChain = (chainID: string) => {
       return "dydx";
     case "elgafar-1":
       return "stargaze";
-    case "stargaze-1":
-      return "stargaze";
+    case "agoric-3":
+      return "agoric";
+    case "chihuahua-1":
+      return "chihuahua";
     default:
       return "cosmos";
   }
@@ -86,7 +89,7 @@ export const getValidators = async (
       if (chainParamsResponse.hostChain?.validators.length > 0) {
         const validatorInfo = await getValidatorInfo(hostChainId, env);
         const hostChainValidators = chainParamsResponse.hostChain?.validators;
-        hostChainValidators?.forEach((item) => {
+        for (const item of hostChainValidators) {
           const res = validatorInfo?.find(
             (valItem) => valItem.operatorAddress === item.operatorAddress
           );
@@ -102,11 +105,10 @@ export const getValidators = async (
               (item) => item === res.operatorAddress
             );
 
+            const avatarUrl = await getAvatar(res.description.identity);
             validators.push({
               name: res.description!.moniker!,
-              identity: !avatarCheck
-                ? `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`
-                : "",
+              identity: avatarUrl,
               weight: (Number(decimalizeRaw(item.weight, 18)) * 100).toFixed(2),
               delegationAmount: Number(
                 decimalizeRaw(
@@ -119,7 +121,7 @@ export const getValidators = async (
               ),
             });
           }
-        });
+        }
       }
     }
     return validators;

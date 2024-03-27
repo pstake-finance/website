@@ -15,6 +15,8 @@ const Banner = () => {
     dydxData,
     xprtData,
     starsData,
+    bldData,
+    huahuaData,
   } = useApp();
 
   const { t } = useTranslation("common");
@@ -106,7 +108,9 @@ const Banner = () => {
                     Number(starsData.tvl * tokenPrices.STARS) +
                     Number(osmoData.tvl * tokenPrices.OSMO) +
                     Number(xprtData.tvl * tokenPrices.XPRT) +
-                    Number(dydxData.tvl * tokenPrices.DYDX),
+                    Number(dydxData.tvl * tokenPrices.DYDX) +
+                    Number(bldData.tvl * tokenPrices.BLD) +
+                    Number(huahuaData.tvl * tokenPrices.HUAHUA),
                   3
                 )}
               </p>

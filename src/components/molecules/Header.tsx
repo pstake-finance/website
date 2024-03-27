@@ -167,6 +167,20 @@ const Header = () => {
       imgUrl: "/images/stars.svg",
       symbol: "STARS",
     },
+    // {
+    //   optionName: "Agoric",
+    //   optionLink:
+    //     "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
+    //   imgUrl: "/images/networks/bld.svg",
+    //   symbol: "BLD",
+    // },
+    {
+      optionName: "CHIHUAHUA",
+      optionLink:
+        "https://staging.app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
+      imgUrl: "/images/networks/huahua.svg",
+      symbol: "HUAHUA",
+    },
     {
       optionName: "Ethereum",
       optionLink: "/eth/testnet",
@@ -249,14 +263,14 @@ const Header = () => {
     router.push(link);
   };
 
-  const fetchStarsValidatorsData = useAppStore(
-    (state) => state.fetchStarsValidatorsData
+  const fetchHuahuaValidatorsData = useAppStore(
+    (state) => state.fetchHuahuaValidatorsData
   );
 
   useEffect(() => {
-    fetchStarsValidatorsData(
+    fetchHuahuaValidatorsData(
       "https://rpc.core.persistence.one",
-      "stargaze-1",
+      "chihuahua-1",
       "Mainnet"
     );
   }, []);
@@ -338,21 +352,21 @@ const Header = () => {
                 >
                   <li className="nav-item nav__menu-item">
                     <Dropdown
-                      className="[.is-sticky_&]:text-light-high"
+                      className="[.is-sticky_&]:text-light-high !block"
                       dropDownVariant="custom"
                       dropDownButtonClass="md:hidden uppercase"
                       dropDownVariantBg="bg-transparent text-[12px]"
                       dropdownLabel={isMobile ? "" : t("Networks")}
                       dropDownIcon={!isMobile}
                       dropdownType={"hover"}
-                      dropDownContentClass="!bg-white-high drop-shadow-md
+                      dropDownContentClass="flex flex-wrap !bg-white-high drop-shadow-md
                       round-md py-4 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0 !w-[150px] md:!flex md:!justify-center md:flex-wrap"
+                      md:!bg-transparent md:p-0 !w-[320px] md:!w-[150px] md:!flex md:!justify-center md:flex-wrap"
                     >
                       {networks.map((item, index) => (
                         <a
                           className="px-4 py-2 flex items-center md:py-3
-                        hover:cursor-pointer text-dark-high whitespace-nowrap "
+                        hover:cursor-pointer text-dark-high whitespace-nowrap w-[50%] md:w-[100%]"
                           key={index}
                           href={item.optionLink}
                           target={"_blank"}

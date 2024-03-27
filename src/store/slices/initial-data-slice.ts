@@ -19,6 +19,14 @@ export interface ValidatorsInfo {
   };
   stars: ValidatorInfo[];
   xprt: ValidatorInfo[];
+  huahua: {
+    list: ValidatorInfo[];
+    loader: boolean;
+  };
+  bld: {
+    list: ValidatorInfo[];
+    loader: boolean;
+  };
 }
 
 export interface InitialDataSliceState {
@@ -51,6 +59,16 @@ export interface InitialDataSliceActions {
     env: string
   ) => Promise<void>;
   fetchXprtValidatorsData: (chainID: string, env: string) => Promise<void>;
+  fetchHuahuaValidatorsData: (
+    rpc: string,
+    chainID: string,
+    env: string
+  ) => Promise<void>;
+  fetchBldValidatorsData: (
+    rpc: string,
+    chainID: string,
+    env: string
+  ) => Promise<void>;
   resetInitialDataSlice: () => void;
   setValidatorInfoLoader: (name: string, value: boolean) => void;
 }
@@ -65,6 +83,14 @@ const initialState: InitialDataSliceState = {
     },
     stars: [],
     xprt: [],
+    bld: {
+      list: [],
+      loader: false,
+    },
+    huahua: {
+      list: [],
+      loader: false,
+    },
   },
   validatorsInfoLoader: {
     name: "",
@@ -177,6 +203,48 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       validatorsInfo: {
         ...state.validatorsInfo,
         cosmos: {
+          list: valResponse,
+          loader: false,
+        },
+      },
+    }));
+  },
+  fetchBldValidatorsData: async (rpc, chainID, env) => {
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        bld: {
+          ...state.validatorsInfo.bld,
+          loader: true,
+        },
+      },
+    }));
+    const valResponse = await getValidators(rpc, chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        bld: {
+          list: valResponse,
+          loader: false,
+        },
+      },
+    }));
+  },
+  fetchHuahuaValidatorsData: async (rpc, chainID, env) => {
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        huahua: {
+          ...state.validatorsInfo.huahua,
+          loader: true,
+        },
+      },
+    }));
+    const valResponse = await getValidators(rpc, chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        huahua: {
           list: valResponse,
           loader: false,
         },
