@@ -25,11 +25,11 @@ const list = [
     logoUrl: "/images/stk_stars.svg",
     url: "/stars/validators",
   },
-  {
-    name: "stkBLD",
-    logoUrl: "/images/stk_bld.svg",
-    url: "/bld/validators",
-  },
+  // {
+  //   name: "stkBLD",
+  //   logoUrl: "/images/stk_bld.svg",
+  //   url: "/bld/validators",
+  // },
   {
     name: "stkHUAHUA",
     logoUrl: "/images/stk_huahua.svg",
