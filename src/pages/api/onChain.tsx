@@ -105,10 +105,11 @@ export const getValidators = async (
               (item) => item === res.operatorAddress
             );
 
-            const avatarUrl = await getAvatar(res.description.identity);
             validators.push({
               name: res.description!.moniker!,
-              identity: avatarUrl,
+              identity: !avatarCheck
+                ? `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`
+                : "",
               weight: (Number(decimalizeRaw(item.weight, 18)) * 100).toFixed(2),
               delegationAmount: Number(
                 decimalizeRaw(
