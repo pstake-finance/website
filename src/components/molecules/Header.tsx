@@ -177,7 +177,7 @@ const Header = () => {
     {
       optionName: "CHIHUAHUA",
       optionLink:
-        "https://staging.app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
+        "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
       imgUrl: "/images/networks/huahua.svg",
       symbol: "HUAHUA",
     },
