@@ -79,7 +79,7 @@ const Networks = () => {
       apy: huahuaData!.apy === -1 ? 10 : huahuaData.apy,
       buttonText: "Start Staking",
       buttonUrl:
-        "https://staging.app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
+        "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
       hoverBg: "hover:bg-cosmosCard",
       erc20: false,
     },
