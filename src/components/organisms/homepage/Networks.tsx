@@ -214,9 +214,9 @@ const Networks = () => {
                         </span>
                       ) : null}
                     </h5>
-                    {item.network === "ethereum" &&
-                    (item.asset === "Persistence" ||
-                      item.asset === "Cosmos") ? (
+                    {item.asset === "Ethereum" ||
+                    item.asset === "Persistence" ||
+                    item.asset === "Cosmos" ? (
                       <h4
                         className="text-light-mid text-xsm md:text-sm
                       font-medium leading-normal text-center"
@@ -240,7 +240,7 @@ const Networks = () => {
                     href={item.buttonUrl}
                     scale="lg"
                     target={"_blank"}
-                    isDisabled={false}
+                    isDisabled={item.asset === "Ethereum" ? true : false}
                     customButtonClass={
                       "mt-9 bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
                     }
