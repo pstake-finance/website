@@ -91,7 +91,7 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonProps>(
           SIZES[scale]
         } min-w-fit ${
           isDisabled
-            ? `cursor-not-allowed text-opacity-70`
+            ? `cursor-not-allowed text-opacity-70 pointer-events-none`
             : `${
                 variant === "ghost" || variant === "solid"
                   ? ENABLED_STYLES["solid"][color]
