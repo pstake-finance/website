@@ -14,7 +14,17 @@ import {
   STK_ATOM_TWITTER_URL,
   STK_ETH_TWITTER,
   pstake_cosmos_twitter_url,
+  PSTAKE_DISCORD,
+  GITHUB_URL,
+  PSTAKE_FORUM_URL,
+  PSTAKE_APP_URL,
 } from "../../utils/config";
+import FooterBottom from "./FooterBottom";
+import ButtonLink from "../atoms/buttonLink/ButtonLink";
+
+const getLogoUrl = (logoName: string) => {
+  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
+};
 
 const Footer = () => {
   const { t } = useTranslation("common");
@@ -36,7 +46,7 @@ const Footer = () => {
     twitterUrl = STK_ETH_TWITTER;
   }
 
-  const list = [
+  const iconFooterList = [
     {
       name: "Telegram",
       url: PSTAKE_TELEGRAM_URL,
@@ -63,25 +73,60 @@ const Footer = () => {
     },
   ];
 
+  const list = [
+    {
+      name: "X (Formerly Twitter)",
+      url: twitterUrl,
+      image: "twitter_full",
+      text: "Follow pSTAKE Finance",
+    },
+    {
+      name: "Telegram",
+      url: PSTAKE_TELEGRAM_URL,
+      image: "telegram_full",
+      text: "Join the Community Chat",
+    },
+    {
+      name: "Discard",
+      url: PSTAKE_DISCORD,
+      image: "discord_full",
+      text: "Join Our Community",
+    },
+    {
+      name: "Blogs",
+      url: PSTAKE_MEDIUM_URL,
+      image: "medium_full",
+      text: "Learn about pSTAKE",
+    },
+    {
+      name: "Github",
+      url: GITHUB_URL,
+      image: "github_full",
+      text: "Contribute",
+    },
+    {
+      name: "Community Forum",
+      url: PSTAKE_FORUM_URL,
+      image: "forum_full",
+      text: "Join Discussions",
+    },
+  ];
+
   return (
     <>
-      {router.pathname !== "/osmo/validators" &&
-      router.pathname !== "/dydx/validators" ? (
-        <div
-          className={`${
-            router.pathname === "/osmo"
-              ? "bg-[#140F34]"
-              : router.pathname === "/dydx"
-              ? "bg-[#1C1C28]"
-              : "bg-[#1d1d22]"
-          }  aos-init aos-animate ${router.pathname}`}
-        >
-          <div className="sectionContainer py-[100px] md:py-[40px]">
-            <h3 className="sectionTitle mb-4">{t("Explore the Community")}</h3>
-            <p className="sectionSubTitle max-w-[700px] mx-auto mb-8">
-              {router.pathname === "/atom"
-                ? "Join the discussion on liquid staking ATOM. Learn about the pSTAKE Liquid Staking Ecosystem, meet others like you & make your voice heard."
-                : "Join the discussion on one of our many fronts. Learn about the pSTAKE Liquid Staking Ecosystem, meet others like you & make your voice heard."}
+      {!router.pathname.includes("/validators") ? (
+        <div className={`aos-init aos-animate ${router.pathname}`}>
+          <div className="sectionContainer py-[80px] md:py-[40px]">
+            <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE]">
+              Explore the Community
+            </p>
+            <p
+              className={
+                "text-[20px] text-center max-w-[700px] mx-auto text-[#D5D5D5] mb-8"
+              }
+            >
+              Learn more about pSTAKE Finance, chat with fellow pStakers, and
+              have your say in the future of liquid staking everything.
             </p>
             <div>
               <div className="max-w-[1000px] flex items-center justify-center mx-auto mb-12">
@@ -94,32 +139,18 @@ const Footer = () => {
                       <a
                         href={item.url}
                         target="_blank"
-                        className={`${
-                          router.pathname === "/osmo"
-                            ? "bg-[#201B43]"
-                            : router.pathname === "/dydx"
-                            ? "bg-[#232334]"
-                            : "bg-[#25252a]"
-                        }  flex items-center md:m-2 md:p-4 m-4 p-6 rounded-xl group`}
+                        className={`bg-[#1B1B1B] flex items-center md:m-2 md:p-4 m-4 p-6 rounded-xl group`}
                         rel="noopener noreferrer"
                       >
                         <div
                           className={`w-[46px] h-[46px] bg-[#3f3f45] flex 
-                        items-center justify-center rounded-full mx-2.5  ${
-                          router.pathname === "/bnb"
-                            ? "bg-[#f0b90b]"
-                            : router.pathname === "/atom"
-                            ? "bg-[#595d7b]"
-                            : router.pathname === "/osmo"
-                            ? "bg-[#3f3f45]"
-                            : router.pathname === "/dydx"
-                            ? "bg-[#393953]"
-                            : "bg-[#e50913]"
-                        }`}
+                        items-center justify-center rounded-full mx-2.5`}
                         >
-                          <Icon
-                            viewClass={`social_icon_img w-[22px] fill-[#fff] group-hover:fill-[#fff]`}
-                            icon={item.icon}
+                          <img
+                            src={getLogoUrl(item.image)}
+                            title={item.image}
+                            alt={item.image}
+                            className="w-[207px] md:w-[160px] mx-2"
                           />
                         </div>
                         <div className="sm:hidden">
@@ -135,42 +166,39 @@ const Footer = () => {
                   ))}
                 </div>
               </div>
-              <div className="flex items-center justify-evenly flex-wrap sm:block sm:text-center">
-                <Link
-                  href="/privacy"
-                  target="_blank"
-                  className="text-[#70747c] text-[12px] mx-4 sm:mb-4 block"
-                >
-                  {t("PRIVACY_POLICY")}
-                </Link>
-                <p className="text-[#70747c] text-[12px] mx-4 sm:mb-4">
-                  {new Date().getFullYear()} | Developed by
-                  <a
-                    href={PERSISTENCE_ONE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {" "}
-                    Persistence
-                  </a>
-                </p>
-                <Link
-                  href="/terms"
-                  target="_blank"
-                  className="text-[#70747c] text-[12px] mx-4 sm:mb-4 block"
-                >
-                  Terms of Use
-                </Link>
-              </div>
             </div>
           </div>
+          <div className={"py-[60px] bg-[#1B1B1B]"}>
+            <p
+              className={
+                "text-[30px] text-[#FCFCFC] font-semibold w-[1140px] mx-auto text-center mb-6"
+              }
+            >
+              pSTAKE Finance provides a secure and decentralized liquid staking
+              solution for the $170B+ market across BNB Chain, Solana, and
+              Cosmos.{" "}
+            </p>
+            <ButtonLink
+              className={`dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px] mx-auto`}
+              variant={"outline"}
+              href={PSTAKE_APP_URL}
+              scale="lg"
+              target={"_blank"}
+              isDisabled={false}
+            >
+              <span className="nav-link pophover tooltip-multiline app-btn">
+                Liquid Stake Now
+              </span>
+            </ButtonLink>
+          </div>
+          <FooterBottom />
         </div>
       ) : (
         <div className={"bg-[#030303] py-[30px]"}>
           <div className="flex items-center justify-center flex-wrap sm:block sm:text-center">
             <div>
               <div className={`socialLinks flex py-3 px-8 justify-between`}>
-                {list.map((item, index) => (
+                {iconFooterList.map((item, index) => (
                   <a
                     key={index}
                     href={item.url}

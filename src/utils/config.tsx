@@ -16,6 +16,7 @@ export const PSTAKE_MEDIUM_URL =
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
 export const DISCORD_URL = "https://discord.gg/2ek5rUyT8x";
+export const GITHUB_URL = "https://github.com/persistenceOne/";
 export const PSTAKE_AUDITS_URL =
   "https://github.com/persistenceOne/pStake-auditReports";
 export const PECKSHIELD_AUDIT_REPORT =
@@ -63,6 +64,7 @@ export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
 export const PSTAKE_TELEGRAM_URL = "https://t.me/pstakefinancechat";
+export const PSTAKE_DISCORD = "https://discord.com/invite/2ek5rUyT8x";
 export const PSTAKE_YOUTUBE_URL = "https://www.youtube.com/@pstakefinance";
 export const PSTAKE_REDDIT_URL = "https://www.reddit.com/r/pstake_official/";
 export const PERSISTENCE_ONE_URL =
@@ -86,6 +88,8 @@ export const GALAXY_DIGITAL_URL = "https://www.galaxydigital.io/";
 export const SPARTAN_CAPITAL = "https://spartancapital.com/";
 export const SINO_GLOBAL_CAPITAL = "https://www.sinoglobalcapital.com/";
 export const BINANCE_LABS = "https://labs.binance.com/";
+export const GOV_URL = "https://snapshot.org/#/pstakefinance.eth";
+
 export const STAKEFISH =
   "https://stake.fish/en/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const FIGMENT =
@@ -155,7 +159,7 @@ export const STK_FAQ_URL = "https://blog.pstake.finance/stkbnb-faqs/";
 export const GUIDES_URL = "https://blog.pstake.finance/category/guides/";
 export const STKATOM_BLOG_URL =
   "https://blog.pstake.finance/category/product/stkatom/";
-export const DOCS_URL = "http://docs.pstake.finance";
+export const DOCS_URL = "https://docs.pstake.finance";
 export const STK_BNB_DOCS_URL =
   "https://docs.pstake.finance/stkBNB_Staking_Overview/";
 export const SNANPSHOT_URL = "https://snapshot.org/#/pstakefinance.eth";

@@ -26,32 +26,83 @@ const StakingSteps = () => {
   ];
 
   return (
-    <div className="aos-init aos-animate bg-black-high" data-aos="fade-up">
-      <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-8">
+    <div className="aos-init aos-animate" data-aos="fade-up">
+      <div className="container pt-[60px] py-[70px] md:py-[35px]">
+        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE] mb-[47px]">
           Liquid Staking as simple as 1, 2, 3
-        </h3>
-        <div className="flex flex-wrap">
-          {list.map((item, index) => (
+        </p>
+        <div className="flex items-center justify-center mb-6 md:block max-w-[1240px] mx-auto md:mx-auto ">
+          <div
+            className={
+              "flex items-center md:flex-1 md:mb-2 relative md:justify-start"
+            }
+          >
             <div
-              className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
-              key={index}
+              className={
+                "text-[#C7323880] -lg:absolute -lg:-left-[65px] -lg:-top-[38px] -lg:text-[52px] text-[78px] mr-4 font-bold"
+              }
             >
-              <div className="md:p-4 p-8 h-full text-center">
-                <div className="bg-black-400 rounded-full w-[60px] h-[60px] m-auto flex justify-center items-center">
-                  <span className="text-3xl font-bold leading-normal text-center text-red">
-                    {item.icon}
-                  </span>
-                </div>
-                <h5 className="font-bold leading-snug text-light-full text-base my-4">
-                  {item.title}
-                </h5>
-                <p className="text-sm text-center text-light-emphasis">
-                  {item.content}
-                </p>
-              </div>
+              01
             </div>
-          ))}
+            <div className={""}>
+              <p className="text-light-full font-medium mb-3">Stake Token</p>
+              <p className="text-[#ECECEC] text-[12px]">
+                Stake any amount of your
+                <br /> tokens to get daily <br />
+                auto-compounded
+              </p>
+            </div>
+          </div>
+          <div
+            className={`bg-[#ECECEC] w-[156px] h-[1px] mx-4 md:mx-2 md:hidden`}
+          />
+          <div
+            className={
+              "flex items-center md:flex-1 md:mb-2 relative md:justify-start"
+            }
+          >
+            <div
+              className={
+                "text-[#C7323880] -lg:absolute -lg:-left-[75px] -lg:-top-[38px] -lg:text-[52px] text-[78px] mr-4 font-bold"
+              }
+            >
+              02
+            </div>
+            <div className={""}>
+              <p className="text-light-full font-medium mb-3">
+                Receive stkToken
+              </p>
+              <p className="text-[#ECECEC] text-[12px]">
+                Get liquid stkToken in return. Pat
+                <br /> yourself on the back for
+                <br />
+                contributing to network
+                <br /> decentralization.
+              </p>
+            </div>
+          </div>
+          <div
+            className={`bg-[#ECECEC] w-[156px] h-[1px] mx-4 md:mx-2 md:hidden `}
+          />
+          <div
+            className={"flex items-center md:flex-1 relative md:justify-start"}
+          >
+            <div
+              className={
+                "text-[#C7323880] -lg:absolute -lg:-left-[75px] -lg:-top-[38px] -lg:text-[52px] text-[78px] mr-4 font-bold"
+              }
+            >
+              03
+            </div>
+            <div className={""}>
+              <p className="text-light-full font-medium mb-3">Use in DeFi</p>
+              <p className="text-[#ECECEC] text-[12px]">
+                Put your stkToken to work with <br /> various yield
+                opportunities on
+                <br /> pSTAKE’s DeFi tab.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

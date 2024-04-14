@@ -56,7 +56,7 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
       >
         <Button
           name={"buttonConnect"}
-          className={`${dropDownButtonClass} dropDownButton w-full md:py-2 md:text-sm`}
+          className={`${dropDownButtonClass} dropDownButton w-full md:py-2 md:text-sm flex items-center justify-center`}
           variant={dropDownVariant === "primary" ? "solid" : "custom"}
           scale="lg"
           isDisabled={false}
@@ -88,9 +88,9 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
           )}
         </Button>
         <div
-          className={`${dropDownContentClass} dropDownContent min-w-full w-fit absolute opacity-0 transition-opacity transform ease duration-200 bg-dropDown left-0 right-0 ${
-            open ? "visible translate-y-0 opacity-100" : "invisible"
-          } text-light-high rounded-md z-10`}
+          className={`${dropDownContentClass} dropDownContent min-w-full w-fit absolute opacity-0 transition-opacity transform ease duration-200 bg-black-500 right-0 ${
+            open ? `visible translate-y-0 opacity-100` : `invisible`
+          } text-white-100 rounded-md z-10`}
         >
           {children}
         </div>

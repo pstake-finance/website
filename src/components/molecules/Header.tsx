@@ -41,6 +41,9 @@ import {
   OSMO_URL,
   STK_DYDX_FAQ_URL,
   DYDX,
+  PSTAKE_DISCORD,
+  PSTAKE_MEDIUM_URL,
+  GITHUB_URL,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -52,6 +55,49 @@ import Button from "../atoms/button/Button";
 import OsmoHeader from "./osmo-header";
 import GeofenceNotice from "./geofence-banner";
 import { useAppStore } from "../../store/store";
+
+const getLogoUrl = (logoName: string) => {
+  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
+};
+
+const socialList = [
+  {
+    name: "X (Formerly Twitter)",
+    url: PSTAKE_TWITTER_URL,
+    image: "twitter_full",
+    text: "Follow pSTAKE Finance",
+  },
+  {
+    name: "Telegram",
+    url: PSTAKE_TELEGRAM_URL,
+    image: "telegram_full",
+    text: "Join the Community Chat",
+  },
+  {
+    name: "Discard",
+    url: PSTAKE_DISCORD,
+    image: "discord_full",
+    text: "Join Our Community",
+  },
+  {
+    name: "Blogs",
+    url: PSTAKE_MEDIUM_URL,
+    image: "medium_full",
+    text: "Learn about pSTAKE",
+  },
+  {
+    name: "Github",
+    url: GITHUB_URL,
+    image: "github_full",
+    text: "Contribute",
+  },
+  {
+    name: "Community Forum",
+    url: PSTAKE_FORUM_URL,
+    image: "forum_full",
+    text: "Join Discussions",
+  },
+];
 
 const Header = () => {
   const { t } = useTranslation("common");
@@ -155,13 +201,19 @@ const Header = () => {
       symbol: "OSMO",
     },
     {
+      optionName: "Solana",
+      optionLink: "",
+      imgUrl: "/images/networks/sol.svg",
+      symbol: "SOL",
+    },
+    {
       optionName: "Dydx",
       optionLink: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
       imgUrl: "/images/networks/dydx.svg",
       symbol: "DYDX",
     },
     {
-      optionName: "Stars",
+      optionName: "Stargaze",
       optionLink:
         "https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
       imgUrl: "/images/stars.svg",
@@ -175,17 +227,11 @@ const Header = () => {
     //   symbol: "BLD",
     // },
     {
-      optionName: "CHIHUAHUA",
+      optionName: "Chihuahua",
       optionLink:
         "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
       imgUrl: "/images/networks/huahua.svg",
       symbol: "HUAHUA",
-    },
-    {
-      optionName: "Ethereum",
-      optionLink: "/eth/testnet",
-      imgUrl: "/images/networks/ethereum.svg",
-      symbol: "ETH",
     },
     {
       optionName: "BNB",
@@ -198,22 +244,32 @@ const Header = () => {
   const learnList = [
     {
       optionName: t("SECURITY_AUDITS"),
+      icon: "code",
+      iconType: "stroke",
       optionLink: auditURL,
     },
     {
       optionName: t("GUIDES_TUTORIALS"),
+      icon: "docs",
       optionLink: GUIDES_URL,
+      iconType: "stroke",
     },
     {
       optionName: t("DOCS"),
+      icon: "docs",
+      iconType: "stroke",
       optionLink: docsURL,
     },
     {
       optionName: t("FAQs"),
+      icon: "faq",
       optionLink: faqURL,
+      iconType: "stroke",
     },
     {
       optionName: "Blogs",
+      icon: "blog",
+      iconType: "stroke",
       optionLink: "https://blog.pstake.finance/",
     },
   ];
@@ -231,31 +287,16 @@ const Header = () => {
 
   const bridgeList = [
     {
-      optionName: "Bridge to Ethereum",
+      imgUrl: "/images/networks/ethereum.svg",
+      optionName: "ETH to BSC bridge",
       optionLink: PSTAKE_BRIDGE_URL,
+      subText: "Bridge PSTAKE to BSC Chain",
     },
     {
-      optionName: "Bridge to BSC",
+      imgUrl: "/images/networks/atom.svg",
+      optionName: "ETH to Cosmos bridge",
       optionLink: BSC_BRIDGE_URL,
-    },
-  ];
-
-  const socialList = [
-    {
-      icon: "twitter-logo",
-      optionLink: twitterUrl,
-    },
-    {
-      icon: "telegram-plane",
-      optionLink: PSTAKE_TELEGRAM_URL,
-    },
-    {
-      icon: "discord",
-      optionLink: DISCORD_URL,
-    },
-    {
-      icon: "reddit",
-      optionLink: PSTAKE_REDDIT_URL,
+      subText: "Bridge PSTAKE to Persistence One",
     },
   ];
 
@@ -298,12 +339,21 @@ const Header = () => {
           `}
             id="nav-bar"
           >
-            <div className="container  mx-auto px-4 flex flex-wrap items-center justify-between ">
-              <Link
-                className="bg-logoDark
-                      [.is-sticky_&]:bg-logoLight w-[108px] h-[26px] bg-no-repeat bg-center"
-                href="/"
-              />
+            <div className="container max-w-[1300px] mx-auto px-4 flex flex-wrap items-center justify-between ">
+              {router.pathname === "/" ? (
+                <Link
+                  className="bg-logoLight
+                      [.is-sticky_&]:bg-logoLight bg-[length:150px] w-[150px] h-[36px] bg-no-repeat bg-center"
+                  href="/"
+                />
+              ) : (
+                <Link
+                  className="bg-logoDark
+                      [.is-sticky_&]:bg-logoLight  bg-[length:150px] w-[150px] h-[36px]  bg-no-repeat bg-center"
+                  href="/"
+                />
+              )}
+
               <Button
                 className={`${
                   router.pathname === "/"
@@ -345,28 +395,32 @@ const Header = () => {
               md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}
                 />
                 <ul
-                  className={`flex items-center md:flex-row -md:ml-auto md:flex-col md:bg-white-high 
+                  className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col md:bg-white-high 
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-4`}
                   id="mySidenav"
                   ref={sideBarRef}
                 >
                   <li className="nav-item nav__menu-item">
                     <Dropdown
-                      className="[.is-sticky_&]:text-light-high !block"
+                      className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
+                        router.pathname === "/" ? "text-[#D5D5D5]" : ""
+                      }`}
                       dropDownVariant="custom"
-                      dropDownButtonClass="md:hidden uppercase"
-                      dropDownVariantBg="bg-transparent text-[12px]"
+                      dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
+                      dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal"
                       dropdownLabel={isMobile ? "" : t("Networks")}
-                      dropDownIcon={!isMobile}
+                      dropDownIcon={false}
                       dropdownType={"hover"}
-                      dropDownContentClass="flex flex-wrap !bg-white-high drop-shadow-md
-                      round-md py-4 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0 !w-[320px] md:!w-[150px] md:!flex md:!justify-center md:flex-wrap"
+                      dropDownContentClass="flex flex-wrap !bg-[#1B1B1B] translate-y-[1px] drop-shadow-md
+                      round-md py-2 md:visible md:relative md:opacity-100
+                      md:!bg-transparent md:p-0 !w-[420px] md:!w-[200px] md:!flex md:!justify-center md:flex-wrap"
                     >
                       {networks.map((item, index) => (
                         <a
-                          className="px-4 py-2 flex items-center md:py-3
-                        hover:cursor-pointer text-dark-high whitespace-nowrap w-[50%] md:w-[100%]"
+                          className={`px-6 py-3 flex items-center md:py-3
+                        hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] ${
+                          item.optionLink === "" ? "pointer-events-none" : ""
+                        }`}
                           key={index}
                           href={item.optionLink}
                           target={"_blank"}
@@ -380,10 +434,24 @@ const Header = () => {
                             }
                           />
                           <span className={"flex flex-col md:hidden"}>
-                            <span className="text-dark-emphasis text-sm font-medium leading-normal md:text-xsm">
+                            <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
                               {item.optionName}
+                              {item.optionLink === "" ? (
+                                <span
+                                  className={
+                                    "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[6px] border-[#0C8B8B] ml-2"
+                                  }
+                                >
+                                  Coming Soon
+                                </span>
+                              ) : (
+                                <Icon
+                                  viewClass="dropDownIcon !w-[10px] ml-2"
+                                  icon="chevroncolorchange"
+                                />
+                              )}
                             </span>
-                            <span className="text-dark-low text-xsm font-medium leading-normal">
+                            <span className="text-[#D5D5D5] text-xsm font-light leading-normal">
                               {item.symbol}
                             </span>
                           </span>
@@ -393,28 +461,43 @@ const Header = () => {
                   </li>
                   <li className="nav-item nav__menu-item">
                     <Dropdown
-                      className="[.is-sticky_&]:text-light-high"
+                      className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
+                        router.pathname === "/" ? "text-[#D5D5D5]" : ""
+                      }`}
                       dropDownVariant="custom"
-                      dropDownButtonClass="md:hidden uppercase"
-                      dropDownVariantBg="bg-transparent text-[12px]"
+                      dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
+                      dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] !font-normal"
                       dropdownLabel={isMobile ? "" : t("LEARN")}
-                      dropDownIcon={!isMobile}
+                      dropDownIcon={false}
                       dropdownType={"hover"}
-                      dropDownContentClass="!bg-white-high drop-shadow-md
-                      round-md py-4 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0"
+                      dropDownContentClass="!bg-[#1B1B1B] translate-y-[1px] drop-shadow-md
+                      round-md py-2 md:visible md:relative md:opacity-100 md:p-0"
                     >
                       {learnList.map((item, index) => (
                         <a
-                          className="px-4 py-2 flex items-center md:py-3
-                        hover:cursor-pointer text-dark-high whitespace-nowrap"
+                          className="px-6 py-3 flex items-center md:py-3
+                        hover:cursor-pointer text-light-high whitespace-nowrap"
                           href={item.optionLink}
                           key={index}
                           target={"_blank"}
                           rel="noreferrer"
                         >
                           <span
-                            className="ml-4 text-dark-emphasis text-sm
+                            className={
+                              "w-[40px] h-[40px] justify-center items-center flex rounded-full bg-[#FFFFFF0D]"
+                            }
+                          >
+                            <Icon
+                              viewClass={` !w-[22px] ${
+                                item.iconType === "stroke"
+                                  ? "stroke-[#C73238] fill-transparent"
+                                  : "fill-[#C73238]"
+                              }`}
+                              icon={item.icon}
+                            />
+                          </span>
+                          <span
+                            className="ml-4 text-light-high text-sm
                         font-medium leading-normal md:text-xsm md:ml-2"
                           >
                             {item.optionName}
@@ -426,80 +509,97 @@ const Header = () => {
 
                   <li className="nav-item nav__menu-item">
                     <Dropdown
-                      className="[.is-sticky_&]:text-light-high"
+                      className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
+                        router.pathname === "/" ? "text-[#D5D5D5]" : ""
+                      }`}
                       dropDownVariant="custom"
-                      dropDownButtonClass="md:hidden uppercase"
-                      dropDownVariantBg="bg-transparent text-[12px]"
+                      dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
+                      dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] !font-normal"
                       dropdownLabel={isMobile ? "" : t("COMMUNITY")}
                       dropdownType={"hover"}
-                      dropDownIcon={!isMobile}
-                      dropDownContentClass="!bg-white-high drop-shadow-md round-md
-                       py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
+                      dropDownIcon={false}
+                      dropDownContentClass="flex flex-wrap !bg-[#1B1B1B] translate-y-[1px] drop-shadow-md
+                      round-md py-2 md:visible md:relative md:opacity-100
+                      md:!bg-transparent md:p-0 !w-[520px] md:!w-[250px] md:!flex md:!justify-center md:flex-wrap"
                     >
                       <>
-                        {communityList.map((item, index) => (
+                        {socialList.map((item, index) => (
                           <a
-                            className="px-4 py-2 flex items-center md:py-3
-                           hover:cursor-pointer text-dark-high whitespace-nowrap"
-                            href={item.optionLink}
+                            className={`px-6 py-3 flex items-center md:py-3
+                        hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] ${
+                          item.url === "" ? "pointer-events-none" : ""
+                        }`}
                             key={index}
+                            href={item.url}
                             target={"_blank"}
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                           >
-                            <span
-                              className="ml-4 text-dark-emphasis text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
-                            >
-                              {item.optionName}
+                            <img
+                              src={getLogoUrl(item.image)}
+                              alt={item.name}
+                              className={
+                                "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
+                              }
+                            />
+                            <span className={"flex flex-col md:hidden"}>
+                              <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
+                                {item.name}
+                                <Icon
+                                  viewClass="dropDownIcon !w-[10px] ml-2"
+                                  icon="chevroncolorchange"
+                                />
+                              </span>
                             </span>
                           </a>
                         ))}
-                        <div className="flex items-center justify-center">
-                          {socialList.map((item, index) => (
-                            <a
-                              key={index}
-                              href={item.optionLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className={"px-1 py-2"}
-                            >
-                              <Icon
-                                viewClass="social_icon_img w-[14px]"
-                                icon={item.icon}
-                              />
-                            </a>
-                          ))}
-                        </div>
                       </>
                     </Dropdown>
                   </li>
                   {router.pathname === "/" ? (
                     <li className="nav-item nav__menu-item">
                       <Dropdown
-                        className="[.is-sticky_&]:text-light-high"
+                        className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
+                          router.pathname === "/" ? "text-[#D5D5D5]" : ""
+                        }`}
                         dropDownVariant="custom"
-                        dropDownButtonClass="md:hidden uppercase"
-                        dropDownVariantBg="bg-transparent text-[12px]"
+                        dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
+                        dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] !font-normal"
                         dropdownLabel={isMobile ? "" : t("BRIDGE")}
-                        dropDownIcon={!isMobile}
+                        dropDownIcon={false}
                         dropdownType={"hover"}
-                        dropDownContentClass="!bg-white-high drop-shadow-md round-md py-4
-                         py-4 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0"
+                        dropDownContentClass="!bg-[#1B1B1B] translate-y-[1px]  drop-shadow-md round-md py-4
+                         py-2 md:visible md:relative md:opacity-100 !w-max md:!bg-transparent md:p-0"
                       >
                         {bridgeList.map((item, index) => (
                           <a
-                            className="px-4 py-2 flex items-center md:py-3
-                           hover:cursor-pointer text-dark-high whitespace-nowrap"
-                            href={item.optionLink}
+                            className={`px-6 py-2 flex items-center  hover:cursor-pointer text-light-high whitespace-nowrap ${
+                              item.optionLink === ""
+                                ? "pointer-events-none"
+                                : ""
+                            }`}
                             key={index}
+                            href={item.optionLink}
                             target={"_blank"}
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                           >
-                            <span
-                              className="ml-4 text-dark-emphasis text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
-                            >
-                              {item.optionName}
+                            <img
+                              src={item.imgUrl}
+                              alt={item.optionName}
+                              className={
+                                "mr-4 md:mr-2 w-[40px] h-[40px] md:w-[20px] md:h-[20px]"
+                              }
+                            />
+                            <span className={"flex flex-col md:hidden"}>
+                              <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
+                                {item.optionName}
+                                <Icon
+                                  viewClass="dropDownIcon !w-[10px] ml-2"
+                                  icon="chevroncolorchange"
+                                />
+                              </span>
+                              <span className={"text-[#D5D5D5] text-[12px]"}>
+                                {item.subText}
+                              </span>
                             </span>
                           </a>
                         ))}
@@ -542,33 +642,48 @@ const Header = () => {
                   )}
 
                   <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                    <ButtonLink
-                      className={`dropDownButton  w-full md:py-2 !py-2.5 md:text-sm`}
-                      variant={"custom"}
-                      href={appURL}
-                      scale="lg"
-                      target={"_blank"}
-                      isDisabled={false}
-                      customButtonClass={`${
-                        router.pathname === "/bnb"
-                          ? "bg-bnbPrimary"
-                          : router.pathname === "/atom"
-                          ? "bg-atomPrimary"
-                          : router.pathname === "/osmo"
-                          ? "bg-osmoPrimaryButton text-light-high"
-                          : router.pathname === "/dydx"
-                          ? "bg-dydxPrimary text-light-high"
-                          : "bg-black-800 text-light-high"
-                      } ${
-                        router.pathname === "/bnb"
-                          ? "[.is-sticky_&]:text-dark-high"
-                          : router.pathname === "/"
-                      } text-[12px]`}
-                    >
-                      <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                        {t("GO_TO_APP")}
-                      </span>
-                    </ButtonLink>
+                    {router.pathname !== "/" ? (
+                      <ButtonLink
+                        className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
+                        variant={"custom"}
+                        href={appURL}
+                        scale="lg"
+                        target={"_blank"}
+                        isDisabled={false}
+                        customButtonClass={`${
+                          router.pathname === "/bnb"
+                            ? "bg-bnbPrimary"
+                            : router.pathname === "/atom"
+                            ? "bg-atomPrimary"
+                            : router.pathname === "/osmo"
+                            ? "bg-osmoPrimaryButton text-light-high"
+                            : router.pathname === "/dydx"
+                            ? "bg-dydxPrimary text-light-high"
+                            : "bg-black-800 text-light-high"
+                        } ${
+                          router.pathname === "/bnb"
+                            ? "[.is-sticky_&]:text-dark-high"
+                            : router.pathname === "/"
+                        } text-[12px]`}
+                      >
+                        <span className="nav-link pophover tooltip-multiline app-btn uppercase">
+                          Liquid Stake Now
+                        </span>
+                      </ButtonLink>
+                    ) : (
+                      <ButtonLink
+                        className={`dropDownButton !w-[193px] md:py-2 !py-2 md:text-sm !text-[18px] !font-normal`}
+                        variant={"outline"}
+                        href={appURL}
+                        scale="lg"
+                        target={"_blank"}
+                        isDisabled={false}
+                      >
+                        <span className="nav-link pophover tooltip-multiline app-btn">
+                          Liquid Stake Now
+                        </span>
+                      </ButtonLink>
+                    )}
                   </li>
                 </ul>
               </div>

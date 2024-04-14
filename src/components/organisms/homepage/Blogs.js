@@ -32,37 +32,40 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="aos-init aos-animate bg-black-high" data-aos="fade-up">
-      <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-8">{t("FEATURED_BLOGS")}</h3>
+    <div className="aos-init aos-animate" data-aos="fade-up">
+      <div className="max-w-[1240px] mx-auto pt-[60px] py-[70px] md:py-[35px]">
+        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE] mb-[40px]">
+          Featured Blogs
+        </p>
         <div className="flex flex-wrap mb-8">
           {list.map((item, index) => (
             <div
               className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
               key={index}
             >
-              <div className="bg-black-full hover:bg-black-emphasis">
+              <div className="bg-[#1B1B1B] rounded-[10px]">
                 <a
                   href={item.blogLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <div className="blog-image h-auto">
-                    <img alt="blog2" src={item.imageLink} />
+                    <img
+                      alt="blog2"
+                      className={"rounded-tr-[10px] rounded-tl-[10px]"}
+                      src={item.imageLink}
+                    />
                   </div>
 
-                  <div className="md:p-4 px-6 py-4">
-                    <p className="text-[#555] leading-normal font-semibold text-[12px]">
+                  <div className="md:p-4 px-6 py-5">
+                    <p className="text-[#D1D1D1] leading-normal text-[14px] mb-2">
                       {item.title}
                     </p>
-                    <p
-                      className="inline-flex items-center border-b-2 border-[#e50913]
-                    border-solid text-[12px] text-light-full pb-2"
-                    >
+                    <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
                       {t("LEARN_MORE")}
                       <Icon
                         viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
-                        icon="right-arrow"
+                        icon="right-arrow2"
                       />
                     </p>
                   </div>
@@ -71,7 +74,7 @@ const Blogs = () => {
             </div>
           ))}
         </div>
-        <div className="">
+        <div className="hidden">
           <ButtonLink
             className={`w-[200px] mx-auto md:py-2 md:text-sm`}
             variant={"solid"}

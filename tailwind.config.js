@@ -43,7 +43,7 @@ module.exports = {
     },
     backgroundImage: {
       osmoPrimaryButton: "linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%)",
-      homeBannerBg: "url('/images/bg_images/home_bg.svg')",
+      homeBannerBg: "url('/images/bg_images/home_hero_bg.svg')",
       immunefiWhite: "url('/images/audits/immunefi_header.svg')",
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
@@ -144,6 +144,8 @@ module.exports = {
       lg: { max: "1023px" },
       md: { max: "767px" },
       sm: { max: "511px" },
+
+      tall: { raw: "(min-height: 800px)" },
     },
     extend: {
       keyframes: {
@@ -170,6 +172,7 @@ module.exports = {
         "-sm": { min: "640px" },
       },
       backgroundSize: {
+        homeBannerBg: "cover",
         atomBanner: "30%, cover",
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
@@ -184,6 +187,20 @@ module.exports = {
         osmoBanner: "100% 0,100% 100%",
         dydxBanner: "100% 5%,100% 100%",
         title_bg: "0% -150px",
+      },
+    },
+    container: {
+      // you can configure the container to be centered
+      center: true,
+
+      // or have default horizontal padding
+      padding: "1rem",
+      screens: {
+        sm: "600px",
+        md: "728px",
+        lg: "984px",
+        xl: "1240px",
+        xxl: "1440px",
       },
     },
   },

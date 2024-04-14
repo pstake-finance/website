@@ -34,9 +34,10 @@ const ENABLED_STYLES: Record<"solid" | "ghost", any> = {
     primary: "hover:bg-red-light",
   },
   ghost: {
-    primary: "hover:bg-red",
+    primary: "",
   },
 };
+``;
 
 const COLORS = (variant: ButtonVariants, color: CSType) => {
   const colors = {
@@ -47,7 +48,7 @@ const COLORS = (variant: ButtonVariants, color: CSType) => {
       primary: "text-light-high",
     },
     outline: {
-      primary: "border-red",
+      primary: "border-[#E50913]",
     },
   };
   // @ts-ignore
@@ -116,11 +117,11 @@ const ButtonLink = forwardRef<HTMLAnchorElement, ButtonProps>(
                 "primary"
               )}`
             : variant === "outline"
-            ? `border hover:outline-none bg-transparent ${COLORS(
-                "ghost",
+            ? `border bg-[#E509131A] ${COLORS("ghost", "primary")} ${COLORS(
+                "outline",
                 "primary"
-              )} ${COLORS("outline", "primary")}`
-            : `hover:bg-opacity-50 ${customButtonClass}`
+              )}`
+            : ` ${customButtonClass}`
         }`}
         {...props}
       >

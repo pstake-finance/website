@@ -6,6 +6,99 @@ import { useApp } from "../../../context/appContext/AppContext";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
 import Icon from "../../molecules/Icon";
 
+const getItemsPerRow = (
+  networkList: any[],
+  initialLength: number,
+  targetLength: number,
+  isMobile: boolean
+) => {
+  return networkList.slice(initialLength, targetLength).map((item, index) => (
+    <div
+      className={`p-6 bg-[#202020] m-4 md:mx-2 min-w-[365px] 
+                md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
+                md:flex md:items-center md:py-4 md:px-6
+                 md:justify-between relative overflow-hidden relative`}
+      key={index}
+    >
+      <div className="mb-2 md:flex md:items-center md:m-0">
+        <div className={"mb-6 md:m-0 flex items-center"}>
+          <img
+            src={item.imageUrl}
+            alt={item.asset}
+            className="w-[40px] h-[40px] mr-2"
+          />
+          <p
+            className="text-[#FFFFFF] text-[24px] font-semibold
+                    leading-normal text-center md:text-base mr-1"
+          >
+            {item.asset}
+          </p>
+          <a href={item.buttonUrl} target="_blank" rel="noreferrer">
+            <Icon
+              viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913]"
+              icon="external-link"
+            />
+          </a>
+        </div>
+        <div className={"flex items-center mb-6"}>
+          <div className={"mr-[40px]"}>
+            <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>
+              Total Value Locked
+            </p>
+            <p
+              className={
+                "text-[#FFFFFF] font-medium text-[18px] leading-[32px]"
+              }
+            >
+              656,926.59 BNB
+            </p>
+          </div>
+          <div>
+            <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>
+              Validators
+            </p>
+            <p
+              className={
+                "text-[#FFFFFF] font-medium text-[18px] leading-[32px]"
+              }
+            >
+              120
+            </p>
+          </div>
+        </div>
+        {/*<div className="md:px-4">*/}
+        {/*  <h4*/}
+        {/*    className="text-green text-lg font-semibold*/}
+        {/*  leading-normal text-center md:text-sm"*/}
+        {/*  >*/}
+        {/*    {item.apy}% APY*/}
+        {/*  </h4>*/}
+        {/*</div>*/}
+      </div>
+      <ButtonLink
+        className={`w-full md:p-2 !py-3 h-[45px] md:text-sm md:p-0 md:w-auto md:bg-transparent`}
+        variant={"custom"}
+        href={item.buttonUrl}
+        scale="lg"
+        target={"_blank"}
+        isDisabled={false}
+        customButtonClass={
+          "bg-[#8c8c8c4f] text-[#FEFEFE] !font-normal !text-[14px] transition ease-in-out duration-200 "
+        }
+      >
+        {isMobile ? (
+          <Icon
+            viewClass="dropDownIcon !w-[14px] ease-in duration-200 rotate-360
+                group-hover:rotate-90 fill-[#ECECEC]"
+            icon="chevron"
+          />
+        ) : (
+          item.buttonText
+        )}
+      </ButtonLink>
+    </div>
+  ));
+};
 const Networks = () => {
   const { t } = useTranslation("common");
 
@@ -21,13 +114,31 @@ const Networks = () => {
   const { isMobile } = useWindowSize();
   const networkList = [
     {
-      asset: "Cosmos",
+      asset: "BNB Chain",
+      network: "binance",
+      imageUrl: "/images/networks/bnb.svg",
+      apy: bnbData!.apy,
+      buttonText: "Start Staking",
+      buttonUrl: "https://app.pstake.finance/bnb",
+      hoverBg: "hover:bg-bnbCard",
+      erc20: false,
+    },
+    {
+      asset: "Cosmos Hub",
       network: "cosmos",
       imageUrl: "/images/networks/atom.svg",
       apy: cosmosData!.apy === -1 ? APR_DEFAULT : cosmosData!.apy,
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
-      hoverBg: "hover:bg-cosmosCard",
+      erc20: false,
+    },
+    {
+      asset: "Solana",
+      network: "solana",
+      imageUrl: "/images/networks/sol.svg",
+      apy: bldData!.apy === -1 ? 11 : bldData.apy,
+      buttonText: "Start Staking",
+      buttonUrl: "",
       erc20: false,
     },
     {
@@ -37,7 +148,6 @@ const Networks = () => {
       apy: osmoData!.apy === -1 ? 9.94 : osmoData.apy,
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
-      hoverBg: "hover:bg-osmoCard",
       erc20: false,
     },
     {
@@ -47,7 +157,6 @@ const Networks = () => {
       apy: dydxData!.apy === -1 ? 9.94 : dydxData.apy,
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
-      hoverBg: "hover:bg-cosmosCard",
       erc20: false,
     },
     {
@@ -58,7 +167,6 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl:
         "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
-      hoverBg: "hover:bg-cosmosCard",
       erc20: false,
     },
     // {
@@ -69,7 +177,6 @@ const Networks = () => {
     //   buttonText: "Start Staking",
     //   buttonUrl:
     //     "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
-    //   hoverBg: "hover:bg-cosmosCard",
     //   erc20: false,
     // },
     {
@@ -80,184 +187,29 @@ const Networks = () => {
       buttonText: "Start Staking",
       buttonUrl:
         "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
-      hoverBg: "hover:bg-cosmosCard",
       erc20: false,
-    },
-    {
-      asset: "BNB",
-      network: "binance",
-      imageUrl: "/images/networks/bnb.svg",
-      apy: bnbData!.apy,
-      buttonText: "Start Staking",
-      buttonUrl: "https://app.pstake.finance/bnb",
-      hoverBg: "hover:bg-bnbCard",
-      erc20: false,
-    },
-    {
-      asset: "Ethereum",
-      network: "ethereum",
-      imageUrl: "/images/networks/ethereum.svg",
-      apy: t("ETH_APR"),
-      buttonText: "Start Staking",
-      buttonUrl: "https://eth.pstake.finance",
-      hoverBg: "hover:bg-ethCard",
-      erc20: true,
-    },
-    {
-      asset: "Persistence",
-      network: "ethereum",
-      imageUrl: "/images/networks/persistence.svg",
-      apy: "0",
-      buttonText: "Withdraw Assets",
-      buttonUrl: "https://migration.pstake.finance/",
-      hoverBg: "hover:bg-xprtCard",
-      erc20: true,
-    },
-    {
-      asset: "Cosmos",
-      network: "ethereum",
-      imageUrl: "/images/networks/atom.svg",
-      apy: "0",
-      buttonText: "Withdraw Assets",
-      buttonUrl: "https://migration.pstake.finance/",
-      hoverBg: "hover:bg-cosmosCard",
-      erc20: true,
     },
   ];
+
   return (
-    <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
-      <div className="sectionContainer pt-[140px] pb-[65px] md:py-[35px]">
-        <p className="sectionTitle mb-8">{t("SUPPORTED_NETWORKS")}</p>
+    <div className="aos-init aos-animate" data-aos="fade-up">
+      <div className="sectionContainer pt-[80px] pb-[80px] md:py-[35px]">
+        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE]">
+          Truly Multi-Chain Liquid Staking
+        </p>
+        <p className={"text-[20px] text-center text-[#D5D5D5]"}>
+          Liquid Stake your favorite tokens across BNB Chain, Solana, and
+          Cosmos.
+        </p>
         <div className="pt-8">
           <div className="flex flex-wrap items-center justify-center">
-            {networkList.slice(0, 3).map((item, index) => (
-              <div
-                className={`${item.hoverBg} p-8 bg-[#26262b] m-4 md:mx-2 min-w-[300px] 
-                md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
-                md:flex md:items-center md:py-4 md:px-6
-                 md:justify-between relative overflow-hidden relative`}
-                key={index}
-              >
-                <div className="mb-2 md:flex md:items-center md:m-0">
-                  <div className={"text-center mb-2 md:m-0"}>
-                    <img
-                      src={item.imageUrl}
-                      alt={item.asset}
-                      className="w-[40px] h-[40px] m-auto"
-                    />
-                  </div>
-                  <div className="md:px-4">
-                    <h5
-                      className="text-light-high text-lg font-semibold
-                    leading-normal text-center md:text-base"
-                    >
-                      {item.asset}
-                    </h5>
-                    <h4
-                      className="text-green text-lg font-semibold
-                    leading-normal text-center md:text-sm"
-                    >
-                      {item.apy}% APY
-                    </h4>
-                  </div>
-                </div>
-                <ButtonLink
-                  className={`w-full md:p-2 !py-2.5 md:text-sm md:p-0 md:w-auto md:bg-transparent`}
-                  variant={"custom"}
-                  href={item.buttonUrl}
-                  scale="lg"
-                  target={"_blank"}
-                  isDisabled={false}
-                  customButtonClass={
-                    "bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
-                  }
-                >
-                  {isMobile ? (
-                    <Icon
-                      viewClass="dropDownIcon !w-[14px] ease-in duration-200 rotate-360
-                group-hover:rotate-90 fill-[#ECECEC]"
-                      icon="chevron"
-                    />
-                  ) : (
-                    item.buttonText
-                  )}
-                </ButtonLink>
-              </div>
-            ))}
+            {getItemsPerRow(networkList, 0, 3, isMobile)}
           </div>
           <div className="flex flex-wrap justify-center pt-8 md:pt-2">
-            {networkList.slice(3, networkList.length + 1).map((item, index) => (
-              <div
-                className={`${item.hoverBg} p-8 bg-[#26262b] m-4 md:mx-2 min-w-[300px] 
-                md:max-w-full md:min-w-full md:w-automax-w-[500px] rounded-xl
-                 md:flex md:items-center md:py-4 md:px-6
-                 md:justify-between`}
-                key={index}
-              >
-                <div className="mb-2 md:flex md:items-center md:m-0">
-                  <div className={"text-center mb-2 md:m-0"}>
-                    <img
-                      src={item.imageUrl}
-                      alt={item.asset}
-                      className="w-[40px] h-[40px] m-auto"
-                    />
-                  </div>
-                  <div className="md:px-4">
-                    <h5
-                      className="text-light-high text-lg font-semibold
-                    leading-normal text-center md:text-base"
-                    >
-                      {item.asset}
-                      {item.erc20 ? (
-                        <span className="text-light-emphasis text-xsm">
-                          (ERC20)
-                        </span>
-                      ) : null}
-                    </h5>
-                    {item.asset === "Ethereum" ||
-                    item.asset === "Persistence" ||
-                    item.asset === "Cosmos" ? (
-                      <h4
-                        className="text-light-mid text-xsm md:text-sm
-                      font-medium leading-normal text-center"
-                      >
-                        (Deprecated)
-                      </h4>
-                    ) : (
-                      <h4
-                        className="text-green text-lg font-semibold
-                    leading-normal text-center md:text-sm"
-                      >
-                        {item.apy}% APY
-                      </h4>
-                    )}
-                  </div>
-                </div>
-                <div className="">
-                  <ButtonLink
-                    className={`w-full md:p-2 !py-2.5 md:m-0 md:text-sm md:w-auto md:bg-transparent`}
-                    variant={"custom"}
-                    href={item.buttonUrl}
-                    scale="lg"
-                    target={"_blank"}
-                    isDisabled={item.asset === "Ethereum" ? true : false}
-                    customButtonClass={
-                      "mt-9 bg-[#8c8c8c4f] text-light-high text-[12px] transition ease-in-out duration-200 hover:bg-[#262626]"
-                    }
-                  >
-                    {isMobile ? (
-                      <Icon
-                        viewClass="dropDownIcon !w-[14px] ease-in duration-200 rotate-360
-                group-hover:rotate-90 fill-[#ECECEC]"
-                        icon="chevron"
-                      />
-                    ) : (
-                      item.buttonText
-                    )}
-                  </ButtonLink>
-                </div>
-              </div>
-            ))}
+            {getItemsPerRow(networkList, 3, 5, isMobile)}
+          </div>
+          <div className="flex flex-wrap justify-center pt-8 md:pt-2">
+            {getItemsPerRow(networkList, 5, networkList.length + 1, isMobile)}
           </div>
         </div>
       </div>
