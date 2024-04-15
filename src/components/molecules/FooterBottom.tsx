@@ -130,7 +130,7 @@ const FooterBottom = () => {
   return (
     <>
       <div className={`aos-init aos-animate ${router.pathname}`}>
-        <div className="container py-[80px] md:py-[40px]">
+        <div className="container py-[50px] md:py-[30px]">
           <div>
             <div className="max-w-[1240px] mx-auto flex items-center">
               <div className="flex flex-wrap justify-between w-full">
@@ -145,7 +145,7 @@ const FooterBottom = () => {
                   </p>
                   <p
                     className={
-                      "font-semibold text-[#FCFCFC] flex items-center mb-4"
+                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3"
                     }
                   >
                     Download Media Kit

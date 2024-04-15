@@ -29,12 +29,29 @@ const getItemsPerRow = (
             alt={item.asset}
             className="w-[40px] h-[40px] mr-2"
           />
-          <p
-            className="text-[#FFFFFF] text-[24px] font-semibold
-                    leading-normal text-center md:text-base mr-1"
-          >
-            {item.asset}
-          </p>
+          <div className={"mr-1"}>
+            <p
+              className="text-[#FFFFFF] text-[24px] leading-[36px] font-semibold
+                    leading-normal text-center md:text-base flex items-center"
+            >
+              {item.asset}
+              {item.externUrl !== "" ? (
+                <a href={item.externUrl} target="_blank" rel="noreferrer">
+                  <Icon
+                    viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913] ml-2"
+                    icon="external-link"
+                  />
+                </a>
+              ) : null}
+            </p>
+            <p
+              className={
+                "text-[13px] -mt-[8px] leading-[25px] font-light text-[#D5D5D5CC]"
+              }
+            >
+              {item.symbol}
+            </p>
+          </div>
           {item.network === "solana" ? (
             <span
               className={
@@ -43,14 +60,6 @@ const getItemsPerRow = (
             >
               Coming Soon
             </span>
-          ) : null}
-          {item.externUrl !== "" ? (
-            <a href={item.externUrl} target="_blank" rel="noreferrer">
-              <Icon
-                viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913]"
-                icon="external-link"
-              />
-            </a>
           ) : null}
         </div>
         <div className={"flex items-center mb-6 md:mb-0"}>
@@ -111,68 +120,74 @@ const Networks = () => {
   const networkList = [
     {
       asset: "BNB Chain",
+      symbol: "BNB",
       network: "binance",
       imageUrl: "/images/networks/bnb.svg",
       tvl: `${numberFormat(bnbData.tvl, 3)} BNB`,
       apy: `${bnbData!.apy}%`,
       externUrl: "/bnb",
-      buttonText: "Start Staking",
+      buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/bnb",
       hoverBg: "hover:bg-bnbCard",
       erc20: false,
     },
     {
       asset: "Cosmos Hub",
+      symbol: "ATOM",
       network: "cosmos",
       externUrl: "/atom",
       imageUrl: "/images/networks/atom.svg",
       apy: `${cosmosData!.apy === -1 ? APR_DEFAULT : cosmosData!.apy}%`,
       tvl: `${numberFormat(cosmosData.tvl, 3)} ATOM`,
-      buttonText: "Start Staking",
+      buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
       erc20: false,
     },
     {
       asset: "Solana",
+      symbol: "SOL",
       network: "solana",
       externUrl: "",
       imageUrl: "/images/networks/sol.svg",
       apy: "--",
       tvl: "--",
-      buttonText: "Start Staking",
+      buttonText: "Coming Soon",
       buttonUrl: "",
       erc20: false,
     },
     {
       asset: "Osmosis",
+      symbol: "OSMO",
       network: "osmosis",
       externUrl: "/osmo",
       imageUrl: "/images/networks/osmo.svg",
       apy: `${osmoData!.apy === -1 ? 9.94 : osmoData.apy}%`,
       tvl: `${numberFormat(osmoData.tvl, 3)} OSMO`,
-      buttonText: "Start Staking",
+      buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
       erc20: false,
     },
     {
       asset: "dYdX",
+      symbol: "DYDX",
       network: "dydx",
       externUrl: "/dydx",
       imageUrl: "/images/networks/dydx.svg",
       apy: `${dydxData!.apy === -1 ? 9.94 : dydxData.apy}%`,
       tvl: `${numberFormat(dydxData.tvl, 3)} DYDX`,
-      buttonText: "Start Staking",
+      buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
       erc20: false,
     },
     {
-      asset: "STARS",
+      asset: "Stargaze",
+      symbol: "STARS",
       network: "stars",
       externUrl: "",
       imageUrl: "/images/networks/stars.svg",
       apy: `${starsData!.apy === -1 ? 9.94 : starsData.apy}%`,
       tvl: `${numberFormat(starsData.tvl, 3)} STARS`,
-      buttonText: "Start Staking",
+      buttonText: "Liquid Stake Now",
       buttonUrl:
         "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
       erc20: false,
@@ -188,13 +203,14 @@ const Networks = () => {
     //   erc20: false,
     // },
     {
-      asset: "HUAHUA",
+      asset: "CHIHUAHUA",
+      symbol: "HUAHUA",
       network: "chihuahua",
       externUrl: "",
       imageUrl: "/images/networks/huahua.svg",
       apy: `${huahuaData!.apy === -1 ? 10 : huahuaData.apy}%`,
       tvl: `${numberFormat(huahuaData.tvl, 3)} HUAHUA`,
-      buttonText: "Start Staking",
+      buttonText: "Liquid Stake Now",
       buttonUrl:
         "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
       erc20: false,
