@@ -49,6 +49,8 @@ export const getIdentityChain = (chainID: string) => {
       return "agoric";
     case "chihuahua-1":
       return "chihuahua";
+    case "core-1":
+      return "persistence";
     default:
       return "cosmos";
   }

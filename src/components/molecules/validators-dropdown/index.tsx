@@ -35,13 +35,11 @@ const list = [
     logoUrl: "/images/stk_huahua.svg",
     url: "/huahua/validators",
   },
-  // process.env.NODE_ENV !== "production"
-  //   ? {
-  //       name: "stkXPRT",
-  //       logoUrl: "/images/stk_xprt.svg",
-  //       url: "/xprt/validators",
-  //     }
-  //   : null,
+  {
+    name: "stkXPRT",
+    logoUrl: "/images/stk_xprt.svg",
+    url: "/xprt/validators",
+  },
 ];
 
 interface Props {

@@ -72,12 +72,12 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    const respon = fetchXprtValidatorsData("test-core-2", "Testnet");
+    const respon = fetchXprtValidatorsData("core-1", "Mainnet");
     console.log(respon, "respon");
   }, []);
 
   useEffect(() => {
-    if (validatorsInfo.xprt.length > 0) {
+    if (validatorsInfo.xprt.list.length > 0) {
       let currentLocalTime = moment().format();
       const updateTime = moment("14:10:00", "H:mm:ss").utc();
       const ctime = moment.utc(currentLocalTime).format("H:mm:ss");
@@ -89,7 +89,7 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
-      setDataList(validatorsInfo.xprt);
+      setDataList(validatorsInfo.xprt.list);
     }
   }, [validatorsInfo]);
 
@@ -196,14 +196,14 @@ const ValidatorsList = () => {
               </p>
             </div>
           </div>
-          {!validatorsInfoLoader.loader && dataList.length > 0 ? (
+          {!validatorsInfo.xprt.loader && dataList.length > 0 ? (
             <ValidatorTable data={dataList} columns={columns} />
           ) : (
             <EmptyTable
               columns={columns}
               loader={false}
               text={
-                validatorsInfoLoader.loader ? (
+                validatorsInfo.xprt.loader ? (
                   <Spinner size={"medium"} />
                 ) : (
                   "Data not found"

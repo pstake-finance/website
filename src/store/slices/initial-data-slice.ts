@@ -18,12 +18,15 @@ export interface ValidatorsInfo {
     loader: boolean;
   };
   stars: ValidatorInfo[];
-  xprt: ValidatorInfo[];
   huahua: {
     list: ValidatorInfo[];
     loader: boolean;
   };
   bld: {
+    list: ValidatorInfo[];
+    loader: boolean;
+  };
+  xprt: {
     list: ValidatorInfo[];
     loader: boolean;
   };
@@ -82,7 +85,10 @@ const initialState: InitialDataSliceState = {
       loader: false,
     },
     stars: [],
-    xprt: [],
+    xprt: {
+      list: [],
+      loader: false,
+    },
     bld: {
       list: [],
       loader: false,
@@ -167,27 +173,27 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       },
     }));
   },
-  fetchXprtValidatorsData: async (chainID, env) => {
-    set((state) => ({
-      validatorsInfoLoader: {
-        name: "xprt",
-        loader: true,
-      },
-    }));
-    const valResponse = await getXprtValidators(chainID, env);
-    set((state) => ({
-      validatorsInfo: {
-        ...state.validatorsInfo,
-        xprt: valResponse,
-      },
-    }));
-    set((state) => ({
-      validatorsInfoLoader: {
-        name: "",
-        loader: false,
-      },
-    }));
-  },
+  // fetchXprtValidatorsData: async (chainID, env) => {
+  //   set((state) => ({
+  //     validatorsInfoLoader: {
+  //       name: "xprt",
+  //       loader: true,
+  //     },
+  //   }));
+  //   const valResponse = await getXprtValidators(chainID, env);
+  //   set((state) => ({
+  //     validatorsInfo: {
+  //       ...state.validatorsInfo,
+  //       xprt: valResponse,
+  //     },
+  //   }));
+  //   set((state) => ({
+  //     validatorsInfoLoader: {
+  //       name: "",
+  //       loader: false,
+  //     },
+  //   }));
+  // },
   fetchCosmosValidatorsData: async (rpc, chainID, env) => {
     set((state) => ({
       validatorsInfo: {
@@ -224,6 +230,27 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       validatorsInfo: {
         ...state.validatorsInfo,
         bld: {
+          list: valResponse,
+          loader: false,
+        },
+      },
+    }));
+  },
+  fetchXprtValidatorsData: async (chainID, env) => {
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        xprt: {
+          ...state.validatorsInfo.xprt,
+          loader: true,
+        },
+      },
+    }));
+    const valResponse = await getXprtValidators(chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        xprt: {
           list: valResponse,
           loader: false,
         },
