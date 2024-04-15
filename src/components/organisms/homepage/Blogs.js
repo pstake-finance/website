@@ -119,7 +119,7 @@ const Blogs = ({ deviceType }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="blog-image h-auto h-[212px] overflow-hidden">
+                    <div className="blog-image h-[212px] overflow-hidden">
                       <img
                         alt="blog2"
                         className={"rounded-tr-[10px] rounded-tl-[10px]"}
