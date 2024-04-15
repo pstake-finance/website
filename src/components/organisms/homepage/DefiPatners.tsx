@@ -16,58 +16,58 @@ import Marquee from "react-fast-marquee";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
 
 const getLogoUrl = (logoName: string) => {
-  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/defi_patners/${logoName}.svg`;
+  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/defi_patners/dark/${logoName}.svg`;
 };
 
 const DefiPatners = () => {
   const defiList = [
     {
-      image: "defi_osmo",
+      image: "osmosis",
     },
     {
-      image: "defi_thena",
+      image: "thena",
     },
     {
-      image: "defi_dexter",
+      image: "dexter",
     },
     {
-      image: "defi_nolus",
+      image: "nolus",
     },
     {
-      image: "defi_pancake",
+      image: "pancake",
     },
     {
-      image: "defi_mars",
+      image: "mars",
     },
     {
-      image: "defi_skip",
+      image: "skip",
     },
     {
-      image: "defi_venus",
+      image: "venus",
     },
     {
-      image: "defi_radiant",
+      image: "radiant",
     },
     {
-      image: "defi_astroport",
+      image: "astroport",
     },
     {
-      image: "defi_inter_proto",
+      image: "inter_protocol",
     },
     {
-      image: "defi_shade",
+      image: "shade",
     },
     {
-      image: "defi_umee",
+      image: "umee",
     },
     {
-      image: "defi_quasar",
+      image: "quasar",
     },
     {
-      image: "defi_beefy",
+      image: "beefy",
     },
     {
-      image: "defi_kujira",
+      image: "kujira",
     },
   ];
 
