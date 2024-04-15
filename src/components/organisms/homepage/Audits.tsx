@@ -82,7 +82,7 @@ const Audits = ({ deviceType }: any) => {
           Blockchain security leaders have partnered with and audited liquid
           staking with pSTAKE Finance.
         </p>
-        <div className={"ml-[100px] md:ml-0"}>
+        <div className={"md:ml-0"}>
           <Carousel
             ssr
             className={`flex items-center`}

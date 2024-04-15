@@ -61,8 +61,8 @@ const Banner = () => {
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#141414] h-screen bg-cover bg-center bg-no-repeat">
-      <div className="pt-[250px] pb-[200px] relative h-full max-w-[1240px] md:px-4 mx-auto">
-        <div className={"flex h-full md:h-auto"}>
+      <div className="pt-[200px] pb-[200px] relative h-full max-w-[1240px] px-4 mx-auto">
+        <div className={"flex mb-[140px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
             <h1 className="text-[48px] md:text-[20px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
               Liquid Stake Everything
