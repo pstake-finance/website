@@ -33,7 +33,7 @@ const Token = () => {
               Finance’s liquid staking ecosystem.
             </p>
             <ButtonLink
-              className={`dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px]`}
+              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px]`}
               variant={"outline"}
               href={PSTAKE_APP_URL}
               scale="lg"

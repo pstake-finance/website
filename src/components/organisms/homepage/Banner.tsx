@@ -72,7 +72,7 @@ const Banner = () => {
               additional yield in DeFi.
             </h6>
             <ButtonLink
-              className={`dropDownButton py-3" md:text-sm !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[200px]`}
+              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[200px]`}
               variant={"outline"}
               href={PSTAKE_APP_URL}
               scale="lg"

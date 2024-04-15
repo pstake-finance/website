@@ -679,7 +679,7 @@ const Header = () => {
                       </ButtonLink>
                     ) : (
                       <ButtonLink
-                        className={`dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
+                        className={`hover:!bg-[#E509134D] dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
                         variant={"outline"}
                         href={appURL}
                         scale="lg"

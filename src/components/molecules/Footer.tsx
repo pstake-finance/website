@@ -170,7 +170,7 @@ const Footer = () => {
               Cosmos.{" "}
             </p>
             <ButtonLink
-              className={`dropDownButton py-3" md:text-sm !w-[293px] md:!w-[200px] md:!h-[40px] font-semibold !h-[48px] mx-auto`}
+              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] md:!w-[200px] md:!h-[40px] font-semibold !h-[48px] mx-auto`}
               variant={"outline"}
               href={PSTAKE_APP_URL}
               scale="lg"
