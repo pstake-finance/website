@@ -1,9 +1,30 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
-import { HALBOR_AUDIT_REPORT, PSTAKE_OAK_AUDIT } from "../../../utils/config";
+import {
+  BNB_IMMUNEFI,
+  CONSENSYS_DILLIGENCE,
+  COSMOS_IMMUNEFI,
+  COSMOS_NOTIANAL,
+  COSMOS_OAK_SECURITY,
+  FORT_MONITERING,
+  HALBOR_AUDIT_REPORT,
+  HALBORN_BNB_MODULE,
+  HALBORN_COSMOS_MODULE,
+  HALBORN_COSMOS_STAKING,
+  KUDELSKI_SECURITY_SOLANA,
+  PECKSHIELD_BNB,
+  PECKSHIELD_ETHEREUM,
+  PSTAKE_OAK_AUDIT,
+  SOLIDIFIED,
+  TRAIL_OF_BITS,
+} from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
+
+const getLogoUrl = (logoName: string) => {
+  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/audits/${logoName}.svg`;
+};
 
 const responsive = {
   desktop: {
@@ -25,44 +46,88 @@ const responsive = {
 
 const auditList = [
   {
-    link: HALBOR_AUDIT_REPORT,
+    link: COSMOS_IMMUNEFI,
+    image: "immunefi",
+    title: "pSTAKE Cosmos Module",
+    date: "April 2023",
+  },
+  {
+    link: BNB_IMMUNEFI,
+    image: "immunefi",
+    title: "pSTAKE on BNB Chain",
+    date: "Aug 2022",
+  },
+  {
+    link: FORT_MONITERING,
+    image: "forta",
+    title: "pSTAKE on BNB Chain Monitoring",
+    date: "Aug 2022",
+  },
+  {
+    link: COSMOS_OAK_SECURITY,
+    image: "oak",
+    title: "pSTAKE Cosmos Module",
+    date: "Feb 2023",
+  },
+  {
+    link: COSMOS_NOTIANAL,
+    image: "notional",
+    title: "pSTAKE Cosmos Module",
+    date: "Aug 2023",
+  },
+  {
+    link: HALBORN_COSMOS_STAKING,
     image: "halborn",
+    title: "Cosmos Hub Liquid Staking Module support",
+    date: "Aug 2023",
   },
   {
-    link: PSTAKE_OAK_AUDIT,
-    image: "oak_white",
-  },
-  {
-    link: HALBOR_AUDIT_REPORT,
+    link: HALBORN_COSMOS_MODULE,
     image: "halborn",
+    title: "pSTAKE Cosmos Module",
+    date: "Oct 2022",
   },
   {
-    link: PSTAKE_OAK_AUDIT,
-    image: "oak_white",
-  },
-  {
-    link: HALBOR_AUDIT_REPORT,
+    link: HALBORN_BNB_MODULE,
     image: "halborn",
+    title: "pSTAKE on BNB Chain",
+    date: "Aug 2022",
   },
   {
-    link: PSTAKE_OAK_AUDIT,
-    image: "oak_white",
+    link: PECKSHIELD_BNB,
+    image: "peckshield",
+    title: "pSTAKE on BNB Chain",
+    date: "July 2022",
   },
   {
-    link: HALBOR_AUDIT_REPORT,
-    image: "halborn",
+    link: KUDELSKI_SECURITY_SOLANA,
+    image: "kudelski",
+    title: "pSTAKE on Solana",
+    date: "May 2022",
   },
   {
-    link: PSTAKE_OAK_AUDIT,
-    image: "oak_white",
+    link: TRAIL_OF_BITS,
+    image: "trail_of_bits",
+    title: "pSTAKE Cosmos on Ethereum",
+    date: "",
   },
   {
-    link: HALBOR_AUDIT_REPORT,
-    image: "halborn",
+    link: CONSENSYS_DILLIGENCE,
+    image: "diligence",
+    title: "pSTAKE Cosmos on Ethereum",
+    date: "Aug 2021",
   },
   {
-    link: PSTAKE_OAK_AUDIT,
-    image: "oak_white",
+    link: PECKSHIELD_ETHEREUM,
+    image: "peckshield",
+    title: "pSTAKE Cosmos on Ethereum",
+    date: "July 2021",
+  },
+  {
+    link: SOLIDIFIED,
+    image: "solidified",
+    title: "pSTAKE Cosmos on Ethereum",
+    date: "Aug 2021",
   },
 ];
 
@@ -102,7 +167,7 @@ const Audits = ({ deviceType }: any) => {
                 >
                   <div className={"mb-[60px]"}>
                     <img
-                      src={`/images/audits/${item.image}.svg`}
+                      src={getLogoUrl(item.image)}
                       title="item.link"
                       className="w-auto mb-[40px]"
                       alt={item.image}
@@ -113,9 +178,9 @@ const Audits = ({ deviceType }: any) => {
                           "text-left font-semibold text-[20px] text-[#D5D5D5] mb-2"
                         }
                       >
-                        Title
+                        {item.title}
                       </p>
-                      <p className={"text-[#9E9E9E] text-left"}>Info</p>
+                      <p className={"text-[#9E9E9E] text-left"}>{item.date}</p>
                     </div>
                   </div>
                   <a

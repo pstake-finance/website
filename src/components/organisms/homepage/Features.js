@@ -5,28 +5,28 @@ const Features = () => {
     {
       title: "Decentralize your stake. Help the network state.",
       icon: "liquidity",
-      image: "/images/network_state.svg",
+      image: "/images/galaxy.svg",
       content:
         "Deposits on pSTAKE Finance get staked with multiple validators with the help of a transparent, on-chain data-driven algorithm focused on chain decentralization.",
     },
     {
       title: "Yields. Yields. Yields. ",
       icon: "cash",
-      image: "/images/yields.svg",
+      image: "/images/pstake_shield.svg",
       content:
         "pSTAKE Finance offers one of the highest DeFi yields, thanks to low liquid staking fees and partnerships with the biggest DeFi ecosystems.",
     },
     {
       title: "Safe, Secure, and Solid.",
       icon: "redemption",
-      image: "/images/solid.svg",
+      image: "/images/pstake_hand.svg",
       content:
         "Leading blockchain security firms like Halborn, Hexens, Oak Security, Immunefi, Forta, and more help prosper secure liquid staking with pSTAKE Finance.",
     },
     {
       title: "Made for everyone from crypto bros to your grandma",
       icon: "cash",
-      image: "/images/galaxy.svg",
+      image: "/images/pstake_web.svg",
       content:
         "The only liquid staking protocol to be integrated with Ceffu Global (Binance Custody) and a simple and effective user experience makes pSTAKE Finance a friendly option for all. ",
     },
@@ -42,13 +42,13 @@ const Features = () => {
           <div className="flex flex-col gap-3 md:block">
             {list.slice(0, 2).map((item, index) => (
               <div
-                className="-lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border-r border-l border-b
+                className="-lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border
                 bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md md:mb-2"
                 key={index}
               >
                 <div className="icon-box">
                   <img
-                    // className="pt-4 pb-4 md:w-[26px] w-[34px]"
+                    className="rounded-tl-lg rounded-tr-lg"
                     src={item.image}
                     title="Asset"
                     alt="Asset"
@@ -70,12 +70,12 @@ const Features = () => {
               <div
                 className={`${
                   index === 1 ? "flex-1" : "mb-[40px] md:mb-2"
-                } -lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border-r border-l border-b bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md md:mb-2`}
+                } -lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md md:mb-2`}
                 key={index}
               >
                 <div className="icon-box">
                   <img
-                    // className="pt-4 pb-4 md:w-[26px] w-[34px]"
+                    className="rounded-tl-lg rounded-tr-lg"
                     src={item.image}
                     title="Asset"
                     alt="Asset"

@@ -16,13 +16,13 @@ const getItemsPerRow = (
   console.log(networkList, "networkList-1");
   return networkList.slice(initialLength, targetLength).map((item, index) => (
     <div
-      className={`p-6 bg-[#202020] ${
+      className={`p-6 md:p-4 bg-[#202020] ${
         targetLength === 3 ? "w-[436px] xl:w-[340px]" : "w-[323px] xl:w-[300px]"
-      } md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl md:items-center md:py-4 md:px-6 md:justify-between
+      } md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl md:items-center md:py-4 md:px-3 md:justify-between
        relative overflow-hidden relative flex flex-col justify-between`}
       key={index}
     >
-      <div className="mb-2 md:items-center">
+      <div className="mb-2 md:w-full">
         <div className={"mb-6 md:mb-2 flex justify-between items-center"}>
           <div className={"flex items-center"}>
             <img
@@ -81,8 +81,12 @@ const getItemsPerRow = (
             </p>
           </div>
         </div>
-        <div className={"flex items-center mb-[22px] md:mb-0"}>
-          <div className={"mr-[40px]"}>
+        <div
+          className={
+            "flex items-center mb-[22px] md:mb-0 md:justify-between md:text-center"
+          }
+        >
+          <div className={"mr-[40px] md:mr-2"}>
             <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>
               Total Value Locked
             </p>
@@ -114,7 +118,7 @@ const getItemsPerRow = (
         </div>
       </div>
       <ButtonLink
-        className={`w-full md:p-2 !py-3 h-[45px] md:h-[40px] md:text-sm md:p-0 md:w-auto `}
+        className={`w-full md:p-2 !py-3 h-[45px] md:h-[40px] md:text-sm md:p-0 md:w-full `}
         variant={"custom"}
         href={item.buttonUrl}
         scale="lg"

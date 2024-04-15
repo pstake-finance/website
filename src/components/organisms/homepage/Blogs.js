@@ -37,17 +37,17 @@ const Blogs = ({ deviceType }) => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: t("pSTAKE Migration Utility"),
+      title: "PSTAKE Airdrop on Solana",
       blogLink: PSTAKE_BLOG_ONE_URL,
       imageLink: PSTAKE_BLOG_ONE_IMG_URL,
     },
     {
-      title: t("Why Liquid Staking is a Game-Changer for BNB"),
+      title: "pSTAKE’s Road to Traction in 2024",
       blogLink: PSTAKE_BLOG_TWO_URL,
       imageLink: PSTAKE_BLOG_TWO_IMG_URL,
     },
     {
-      title: t("stkATOM User Guide"),
+      title: "pSTAKE x Pancakeswap",
       blogLink: PSTAKE_BLOG_THREE_URL,
       imageLink: PSTAKE_BLOG_THREE_IMG_URL,
     },
@@ -81,7 +81,7 @@ const Blogs = ({ deviceType }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="blog-image h-auto">
+                    <div className="blog-image h-auto max-h-[233px]">
                       <img
                         alt="blog2"
                         className={"rounded-tr-[10px] rounded-tl-[10px]"}
@@ -94,7 +94,7 @@ const Blogs = ({ deviceType }) => {
                         {item.title}
                       </p>
                       <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
-                        {t("LEARN_MORE")}
+                        Read
                         <Icon
                           viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
                           icon="right-arrow2"
@@ -119,7 +119,7 @@ const Blogs = ({ deviceType }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="blog-image h-auto">
+                    <div className="blog-image h-auto h-[212px] overflow-hidden">
                       <img
                         alt="blog2"
                         className={"rounded-tr-[10px] rounded-tl-[10px]"}
@@ -132,7 +132,7 @@ const Blogs = ({ deviceType }) => {
                         {item.title}
                       </p>
                       <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
-                        {t("LEARN_MORE")}
+                        Read
                         <Icon
                           viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
                           icon="right-arrow2"
