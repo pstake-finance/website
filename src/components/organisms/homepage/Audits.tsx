@@ -3,6 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import React from "react";
 import { HALBOR_AUDIT_REPORT, PSTAKE_OAK_AUDIT } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
+import { useWindowSize } from "../../../customHooks/useWindowSize";
 
 const responsive = {
   desktop: {
@@ -66,26 +67,31 @@ const auditList = [
 ];
 
 const Audits = ({ deviceType }: any) => {
+  const { isMobile } = useWindowSize();
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
-        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE]">
+        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
           Safety and Security Partners
         </p>
-        <p className={"text-[20px] text-center text-[#D5D5D5] mb-[50px]"}>
+        <p
+          className={
+            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px]"
+          }
+        >
           Blockchain security leaders have partnered with and audited
           <br /> liquid staking with pSTAKE Finance.
         </p>
-        <div className={"ml-[100px]"}>
+        <div className={"ml-[100px] md:ml-0"}>
           <Carousel
             ssr
-            className={`flex items-center ${
-              auditList.length <= 2 ? "-md:justify-center" : ""
-            }`}
-            partialVisbile
+            className={`flex items-center`}
+            partialVisbile={!isMobile}
             deviceType={deviceType}
             responsive={responsive}
             autoPlay={true}
+            autoPlaySpeed={1000}
+            infinite={true}
           >
             {auditList.map((item, index) => (
               <div key={index} className={"px-2 flex h-full"}>

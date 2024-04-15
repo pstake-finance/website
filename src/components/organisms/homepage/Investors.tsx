@@ -13,7 +13,6 @@ import {
   SINO_GLOBAL_CAPITAL,
   BINANCE_LABS,
 } from "../../../utils/config";
-import Carousel from "react-multi-carousel";
 
 const Investors = () => {
   const investorList = [

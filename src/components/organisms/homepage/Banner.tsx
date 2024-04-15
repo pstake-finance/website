@@ -61,18 +61,18 @@ const Banner = () => {
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#141414] h-screen bg-cover bg-center bg-no-repeat">
-      <div className="pt-[250px] pb-[200px] relative h-full max-w-[1240px] mx-auto">
-        <div className={"flex h-full"}>
+      <div className="pt-[250px] pb-[200px] relative h-full max-w-[1240px] md:px-4 mx-auto">
+        <div className={"flex h-full md:h-auto"}>
           <div className={"flex-1"}>
-            <h1 className="text-[48px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
+            <h1 className="text-[48px] md:text-[20px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
               Liquid Stake Everything
             </h1>
-            <h6 className="text-[20px] text-[#D5D5D5] text-left mb-8 w-[450px] break-words">
+            <h6 className="text-[20px] md:text-[14px] text-[#D5D5D5] text-left mb-8 max-w-[450px] break-words">
               Securely liquid stake the biggest crypto assets and generate
               additional yield in DeFi.
             </h6>
             <ButtonLink
-              className={`dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px]`}
+              className={`dropDownButton py-3" md:text-sm !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[200px]`}
               variant={"outline"}
               href={PSTAKE_APP_URL}
               scale="lg"
@@ -84,38 +84,11 @@ const Banner = () => {
               </span>
             </ButtonLink>
           </div>
-          <div className={"relative w-[635px] h-[460px] hidden"}>
-            <img
-              src={"/images/pstake_icon.svg"}
-              alt={"atom"}
-              className={"absolute right-[112px] top-[20px]"}
-            />
-            <img
-              src={"/images/solana_icon.svg"}
-              alt={"atom"}
-              className={"absolute right-[0] bottom-[13px]"}
-            />
-            <img
-              src={"/images/atom_icon.svg"}
-              alt={"atom"}
-              className={"absolute left-[0] top-[121px]"}
-            />
-            <img
-              src={"/images/bitcoin_icon.svg"}
-              alt={"atom"}
-              className={"absolute left-[143px] top-[0px]"}
-            />
-            <img
-              src={"/images/bnb_icon.svg"}
-              alt={"atom"}
-              className={"absolute left-[140px] bottom-[0]"}
-            />
-          </div>
         </div>
         <div className="">
           <div className={"flex flex-wrap pt-10"}>
-            <div className={"pr-8 border-r border-[#FCFCFC]"}>
-              <p className="text-light-high font-bold text-[44px]">
+            <div className={"pr-8 md:border-0 border-r border-[#FCFCFC]"}>
+              <p className="text-light-high font-bold text-[44px] md:text-[30px] md:text-left">
                 $
                 {numberFormat(
                   Number(cosmosData.tvl * tokenPrices.ATOM) +
@@ -133,7 +106,11 @@ const Banner = () => {
                 Total Volume Unlocked
               </p>
             </div>
-            <div className={"pl-8 border-l border-[#FCFCFC] pt-4"}>
+            <div
+              className={
+                "pl-8 md:pl-0 md:border-0 border-l border-[#FCFCFC] pt-4"
+              }
+            >
               <div className="flex items-center justify-center pb-3">
                 {netWorkList.map((item, index) => (
                   <Tooltip
@@ -180,14 +157,6 @@ const Banner = () => {
                 Supported Assets
               </p>
             </div>
-            {/*<div className="max-w-[350px] min-w-[250px] rounded-md px-4 py-6 my-2 bg-[#fff] drop-shadow-lg">*/}
-            {/*  <p className="text-dark-full font-medium mb-3">*/}
-            {/*    Total Defi partners*/}
-            {/*  </p>*/}
-            {/*  <p className="text-dark-full font-semibold text-lg text-2xl">*/}
-            {/*    12*/}
-            {/*  </p>*/}
-            {/*</div>*/}
           </div>
         </div>
       </div>

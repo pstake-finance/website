@@ -395,12 +395,12 @@ const Header = () => {
               md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}
                 />
                 <ul
-                  className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col md:bg-white-high 
-                md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-4`}
+                  className={`flex md:gap-10 items-center md:flex-row -md:ml-auto md:flex-col md:bg-[#141414]
+                md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-2`}
                   id="mySidenav"
                   ref={sideBarRef}
                 >
-                  <li className="nav-item nav__menu-item">
+                  <li className="nav-item nav__menu-item md:hidden">
                     <Dropdown
                       className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
                         router.pathname === "/" ? "text-[#D5D5D5]" : ""
@@ -461,7 +461,7 @@ const Header = () => {
                   </li>
                   <li className="nav-item nav__menu-item">
                     <Dropdown
-                      className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
+                      className={`[.is-sticky_&]:text-[#D5D5D5] -md:!block ${
                         router.pathname === "/" ? "text-[#D5D5D5]" : ""
                       }`}
                       dropDownVariant="custom"
@@ -475,7 +475,7 @@ const Header = () => {
                     >
                       {learnList.map((item, index) => (
                         <a
-                          className="px-6 py-3 flex items-center md:py-3
+                          className="px-6 md:px-3 py-3 flex items-center md:py-3
                         hover:cursor-pointer text-light-high whitespace-nowrap"
                           href={item.optionLink}
                           key={index}
@@ -507,7 +507,7 @@ const Header = () => {
                     </Dropdown>
                   </li>
 
-                  <li className="nav-item nav__menu-item">
+                  <li className="nav-item nav__menu-item md:hidden">
                     <Dropdown
                       className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
                         router.pathname === "/" ? "text-[#D5D5D5]" : ""
@@ -556,7 +556,7 @@ const Header = () => {
                     </Dropdown>
                   </li>
                   {router.pathname === "/" ? (
-                    <li className="nav-item nav__menu-item">
+                    <li className="nav-item nav__menu-item md:hidden">
                       <Dropdown
                         className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
                           router.pathname === "/" ? "text-[#D5D5D5]" : ""
@@ -672,7 +672,7 @@ const Header = () => {
                       </ButtonLink>
                     ) : (
                       <ButtonLink
-                        className={`dropDownButton !w-[193px] md:py-2 !py-2 md:text-sm !text-[18px] !font-normal`}
+                        className={`dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
                         variant={"outline"}
                         href={appURL}
                         scale="lg"

@@ -35,14 +35,15 @@ const Features = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
-        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE] mb-[60px]">
+        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE] mb-[60px]">
           Why liquid stake with pSTAKE?
         </p>
-        <div className={"flex gap-3 max-w-[1240px] mx-auto"}>
-          <div className="flex flex-col gap-3">
+        <div className={"flex gap-3 max-w-[1240px] mx-auto md:block"}>
+          <div className="flex flex-col gap-3 md:block">
             {list.slice(0, 2).map((item, index) => (
               <div
-                className="-lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border-r border-l border-b bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md"
+                className="-lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border-r border-l border-b
+                bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md md:mb-2"
                 key={index}
               >
                 <div className="icon-box">
@@ -68,8 +69,8 @@ const Features = () => {
             {list.slice(2, list.length + 1).map((item, index) => (
               <div
                 className={`${
-                  index === 1 ? "flex-1" : "mb-[40px]"
-                } -lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border-r border-l border-b bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md`}
+                  index === 1 ? "flex-1" : "mb-[40px] md:mb-2"
+                } -lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border-r border-l border-b bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md md:mb-2`}
                 key={index}
               >
                 <div className="icon-box">

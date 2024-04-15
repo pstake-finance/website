@@ -117,12 +117,12 @@ const Footer = () => {
       {!router.pathname.includes("/validators") ? (
         <div className={`aos-init aos-animate ${router.pathname}`}>
           <div className="sectionContainer py-[80px] md:py-[40px]">
-            <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE]">
+            <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
               Explore the Community
             </p>
             <p
               className={
-                "text-[20px] text-center max-w-[700px] mx-auto text-[#D5D5D5] mb-8"
+                "text-[20px] md:text-[16px] text-center max-w-[700px] mx-auto text-[#D5D5D5] mb-8"
               }
             >
               Learn more about pSTAKE Finance, chat with fellow pStakers, and
@@ -171,7 +171,7 @@ const Footer = () => {
           <div className={"py-[60px] bg-[#1B1B1B]"}>
             <p
               className={
-                "text-[30px] text-[#FCFCFC] font-semibold w-[1140px] mx-auto text-center mb-6"
+                "text-[30px] md:text-[18px] text-[#FCFCFC] font-semibold max-w-[1140px] px-[20px] mx-auto text-center mb-6"
               }
             >
               pSTAKE Finance provides a secure and decentralized liquid staking
@@ -179,7 +179,7 @@ const Footer = () => {
               Cosmos.{" "}
             </p>
             <ButtonLink
-              className={`dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px] mx-auto`}
+              className={`dropDownButton py-3" md:text-sm !w-[293px] md:!w-[200px] md:!h-[40px] font-semibold !h-[48px] mx-auto`}
               variant={"outline"}
               href={PSTAKE_APP_URL}
               scale="lg"

@@ -20,7 +20,11 @@ const Token = () => {
       <div className="container ">
         <div className="flex flex-wrap justify-between py-[60px] max-w-[1240px] mx-auto">
           <div className={"max-w-[648px]"}>
-            <p className={"font-bold text-[44px] text-[#fcfcfc] mb-6"}>
+            <p
+              className={
+                "font-bold text-[44px] md:text-[22px] text-[#fcfcfc] mb-6"
+              }
+            >
               Fueling Multi-Chain <br /> Liquid Staking
             </p>
             <p className={"text-[18px] text-[#D5D5D5] mb-[48px]"}>
@@ -46,7 +50,7 @@ const Token = () => {
             <img
               src={"/images/pstake_coin.svg"}
               alt={"pstake"}
-              className="w-[270px] h-[270px]"
+              className="w-[270px] h-[270px] md:absolute md:top-0 md:opacity-[0.1] md:w-[200px]"
             />
           </div>
         </div>

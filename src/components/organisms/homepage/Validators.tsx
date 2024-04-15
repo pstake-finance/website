@@ -89,12 +89,15 @@ const Validators = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
-        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE]">
+        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
           Validators
         </p>
-        <p className={"text-[20px] text-center text-[#D5D5D5] mb-[50px]"}>
+        <p
+          className={
+            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px]"
+          }
+        >
           Institutional-grade validators help grow liquid staking
-          <br />
           decentralization with pSTAKE Finance.
         </p>
         <div className="flex flex-wrap gap-6 justify-center items-center text-center mx-auto">

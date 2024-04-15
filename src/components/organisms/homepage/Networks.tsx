@@ -16,12 +16,12 @@ const getItemsPerRow = (
     <div
       className={`p-6 bg-[#202020] m-4 md:mx-2 min-w-[365px] 
                 md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
-                md:flex md:items-center md:py-4 md:px-6
+                md:items-center md:py-4 md:px-6
                  md:justify-between relative overflow-hidden relative`}
       key={index}
     >
-      <div className="mb-2 md:flex md:items-center md:m-0">
-        <div className={"mb-6 md:m-0 flex items-center"}>
+      <div className="mb-2 md:items-center">
+        <div className={"mb-6 md:mb-2 flex items-center"}>
           <img
             src={item.imageUrl}
             alt={item.asset}
@@ -40,14 +40,14 @@ const getItemsPerRow = (
             />
           </a>
         </div>
-        <div className={"flex items-center mb-6"}>
+        <div className={"flex items-center mb-6 md:mb-0"}>
           <div className={"mr-[40px]"}>
             <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>
               Total Value Locked
             </p>
             <p
               className={
-                "text-[#FFFFFF] font-medium text-[18px] leading-[32px]"
+                "text-[#FFFFFF] font-medium text-[18px] md:text-[14px] leading-[32px]"
               }
             >
               656,926.59 BNB
@@ -59,7 +59,7 @@ const getItemsPerRow = (
             </p>
             <p
               className={
-                "text-[#FFFFFF] font-medium text-[18px] leading-[32px]"
+                "text-[#FFFFFF] font-medium text-[18px] md:text-[14px] leading-[32px]"
               }
             >
               120
@@ -76,7 +76,7 @@ const getItemsPerRow = (
         {/*</div>*/}
       </div>
       <ButtonLink
-        className={`w-full md:p-2 !py-3 h-[45px] md:text-sm md:p-0 md:w-auto md:bg-transparent`}
+        className={`w-full md:p-2 !py-3 h-[45px] md:h-[40px] md:text-sm md:p-0 md:w-auto `}
         variant={"custom"}
         href={item.buttonUrl}
         scale="lg"
@@ -86,15 +86,7 @@ const getItemsPerRow = (
           "bg-[#8c8c8c4f] text-[#FEFEFE] !font-normal !text-[14px] transition ease-in-out duration-200 "
         }
       >
-        {isMobile ? (
-          <Icon
-            viewClass="dropDownIcon !w-[14px] ease-in duration-200 rotate-360
-                group-hover:rotate-90 fill-[#ECECEC]"
-            icon="chevron"
-          />
-        ) : (
-          item.buttonText
-        )}
+        {item.buttonText}
       </ButtonLink>
     </div>
   ));
@@ -194,10 +186,10 @@ const Networks = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer pt-[80px] pb-[80px] md:py-[35px]">
-        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE]">
+        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
           Truly Multi-Chain Liquid Staking
         </p>
-        <p className={"text-[20px] text-center text-[#D5D5D5]"}>
+        <p className={"text-[20px] md:text-[16px] text-center text-[#D5D5D5]"}>
           Liquid Stake your favorite tokens across BNB Chain, Solana, and
           Cosmos.
         </p>

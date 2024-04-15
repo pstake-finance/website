@@ -28,7 +28,7 @@ const StakingSteps = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
-        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE] mb-[47px]">
+        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE] mb-[47px]">
           Liquid Staking as simple as 1, 2, 3
         </p>
         <div className="flex items-center justify-center mb-6 md:block max-w-[1240px] mx-auto md:mx-auto ">
@@ -39,7 +39,7 @@ const StakingSteps = () => {
           >
             <div
               className={
-                "text-[#C7323880] -lg:absolute -lg:-left-[65px] -lg:-top-[38px] -lg:text-[52px] text-[78px] mr-4 font-bold"
+                "text-[#C7323880] -lg:absolute -lg:-left-[65px] -lg:-top-[38px] -lg:text-[52px] text-[78px] md:text-[32px] mr-4 font-bold"
               }
             >
               01
@@ -63,7 +63,7 @@ const StakingSteps = () => {
           >
             <div
               className={
-                "text-[#C7323880] -lg:absolute -lg:-left-[75px] -lg:-top-[38px] -lg:text-[52px] text-[78px] mr-4 font-bold"
+                "text-[#C7323880] -lg:absolute -lg:-left-[75px] -lg:-top-[38px] -lg:text-[52px] text-[78px] mr-4 md:text-[32px] font-bold"
               }
             >
               02
@@ -89,7 +89,7 @@ const StakingSteps = () => {
           >
             <div
               className={
-                "text-[#C7323880] -lg:absolute -lg:-left-[75px] -lg:-top-[38px] -lg:text-[52px] text-[78px] mr-4 font-bold"
+                "text-[#C7323880] -lg:absolute -lg:-left-[75px] -lg:-top-[38px] -lg:text-[52px] text-[78px] md:text-[32px] mr-4 font-bold"
               }
             >
               03

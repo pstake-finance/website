@@ -134,18 +134,22 @@ const FooterBottom = () => {
           <div>
             <div className="max-w-[1240px] mx-auto flex items-center">
               <div className="flex flex-wrap justify-between w-full">
-                <div className={"w-[500px]"}>
+                <div className={"w-[500px] md:mb-3"}>
                   <img
                     src={"/images/logo.svg"}
                     alt={"logo"}
-                    className="w-[172px] md:w-[160px] mb-2"
+                    className="w-[172px] md:w-[160px] mb-2 md:mx-auto"
                   />
-                  <p className={"text-[12px] text-[#D5D5D5B0] mb-4"}>
+                  <p
+                    className={
+                      "text-[12px] text-[#D5D5D5B0] mb-4 md:text-center"
+                    }
+                  >
                     Managed by Persistence Labs
                   </p>
                   <p
                     className={
-                      "font-semibold text-[#FCFCFC] flex items-center mb-8"
+                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:justify-center"
                     }
                   >
                     Download Media Kit
@@ -154,7 +158,11 @@ const FooterBottom = () => {
                       icon={"right-arrow2"}
                     />
                   </p>
-                  <div className={"flex items-center justify-start"}>
+                  <div
+                    className={
+                      "flex items-center justify-start md:justify-center"
+                    }
+                  >
                     {iconFooterList.map((item, index) => (
                       <a
                         key={index}
@@ -176,8 +184,8 @@ const FooterBottom = () => {
                     ))}
                   </div>
                 </div>
-                <div className={"flex-1 flex justify-end"}>
-                  <div className={"mr-[80px]"}>
+                <div className={"flex-1 flex justify-end md:block"}>
+                  <div className={"mr-[80px] md:mr-0 md:text-center md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -198,7 +206,7 @@ const FooterBottom = () => {
                       );
                     })}
                   </div>
-                  <div className={"mr-[80px]"}>
+                  <div className={"mr-[80px] md:mr-0 md:text-center md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -211,7 +219,7 @@ const FooterBottom = () => {
                         <div
                           key={index}
                           className={
-                            "text-[#D5D5D5B0]  mb-[6px] flex items-center"
+                            "text-[#D5D5D5B0]  mb-[6px] flex items-center md:justify-center"
                           }
                         >
                           <Link
@@ -232,7 +240,7 @@ const FooterBottom = () => {
                       );
                     })}
                   </div>
-                  <div>
+                  <div className={"md:mr-0 md:text-center md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -245,7 +253,7 @@ const FooterBottom = () => {
                         <div
                           key={index}
                           className={
-                            "text-[#D5D5D5B0]  mb-[6px] flex items-center"
+                            "text-[#D5D5D5B0]  mb-[6px] flex items-center md:justify-center"
                           }
                         >
                           <Link
@@ -273,17 +281,17 @@ const FooterBottom = () => {
         </div>
         <div
           className="max-w-[1240px] mx-auto flex items-center justify-between flex-wrap sm:block sm:text-center
-        pb-[60px] pt-[20px] border-t border-[#D5D5D533]"
+        pb-[60px] pt-[20px] border-t border-[#D5D5D533] md:pb-4"
         >
-          <p className="text-[#70747c] text-[12px] sm:mb-4">
+          <p className="text-[#70747c] text-[12px] sm:mb-4 md:text-center">
             © Copyright
             {new Date().getFullYear()} PSTAKE Finance. All rights reserved.
           </p>
-          <div className={"flex items-center"}>
+          <div className={"flex items-center md:justify-between md:px-4"}>
             <Link
               href="/terms"
               target="_blank"
-              className="text-[#70747c] text-[12px] mx-4 sm:mb-4 block"
+              className="text-[#70747c] text-[12px] mx-4 block md:m-0"
             >
               Terms of Use
             </Link>

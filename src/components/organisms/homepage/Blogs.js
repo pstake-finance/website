@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "react-multi-carousel";
 import { useTranslation } from "next-export-i18n";
 import {
   PSTAKE_BLOG_ONE_URL,
@@ -11,7 +12,28 @@ import {
 } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-const Blogs = () => {
+import { useWindowSize } from "../../../customHooks/useWindowSize";
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1280 },
+    items: 4,
+    partialVisibilityGutter: 30,
+  },
+  tablet: {
+    breakpoint: { max: 1280, min: 768 },
+    items: 2,
+    partialVisibilityGutter: 30,
+  },
+  mobile: {
+    breakpoint: { max: 768, min: 0 },
+    items: 1,
+    partialVisibilityGutter: 30,
+  },
+};
+
+const Blogs = ({ deviceType }) => {
+  const { isMobile } = useWindowSize();
   const { t } = useTranslation("common");
   const list = [
     {
@@ -34,46 +56,95 @@ const Blogs = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="max-w-[1240px] mx-auto pt-[60px] py-[70px] md:py-[35px]">
-        <p className="text-[40px] text-center font-bold mb-0 text-[#FEFEFE] mb-[40px]">
+        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE] mb-[40px]">
           Featured Blogs
         </p>
-        <div className="flex flex-wrap mb-8">
-          {list.map((item, index) => (
-            <div
-              className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
-              key={index}
-            >
-              <div className="bg-[#1B1B1B] rounded-[10px]">
-                <a
-                  href={item.blogLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="blog-image h-auto">
-                    <img
-                      alt="blog2"
-                      className={"rounded-tr-[10px] rounded-tl-[10px]"}
-                      src={item.imageLink}
-                    />
-                  </div>
-
-                  <div className="md:p-4 px-6 py-5">
-                    <p className="text-[#D1D1D1] leading-normal text-[14px] mb-2">
-                      {item.title}
-                    </p>
-                    <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
-                      {t("LEARN_MORE")}
-                      <Icon
-                        viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
-                        icon="right-arrow2"
+        {isMobile ? (
+          <Carousel
+            ssr
+            className={`flex items-center`}
+            partialVisbile={!isMobile}
+            deviceType={deviceType}
+            responsive={responsive}
+            autoPlay={true}
+            autoPlaySpeed={1000}
+            infinite={true}
+          >
+            {list.map((item, index) => (
+              <div
+                className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
+                key={index}
+              >
+                <div className="bg-[#1B1B1B] rounded-[10px]">
+                  <a
+                    href={item.blogLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="blog-image h-auto">
+                      <img
+                        alt="blog2"
+                        className={"rounded-tr-[10px] rounded-tl-[10px]"}
+                        src={item.imageLink}
                       />
-                    </p>
-                  </div>
-                </a>
+                    </div>
+
+                    <div className="md:p-4 px-6 py-5">
+                      <p className="text-[#D1D1D1] leading-normal text-[14px] mb-2">
+                        {item.title}
+                      </p>
+                      <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
+                        {t("LEARN_MORE")}
+                        <Icon
+                          viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
+                          icon="right-arrow2"
+                        />
+                      </p>
+                    </div>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </Carousel>
+        ) : (
+          <div className="flex flex-wrap mb-8">
+            {list.map((item, index) => (
+              <div
+                className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
+                key={index}
+              >
+                <div className="bg-[#1B1B1B] rounded-[10px]">
+                  <a
+                    href={item.blogLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="blog-image h-auto">
+                      <img
+                        alt="blog2"
+                        className={"rounded-tr-[10px] rounded-tl-[10px]"}
+                        src={item.imageLink}
+                      />
+                    </div>
+
+                    <div className="md:p-4 px-6 py-5">
+                      <p className="text-[#D1D1D1] leading-normal text-[14px] mb-2">
+                        {item.title}
+                      </p>
+                      <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
+                        {t("LEARN_MORE")}
+                        <Icon
+                          viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
+                          icon="right-arrow2"
+                        />
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
         <div className="hidden">
           <ButtonLink
             className={`w-[200px] mx-auto md:py-2 md:text-sm`}
