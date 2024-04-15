@@ -12,14 +12,14 @@ const Features = () => {
     {
       title: "Yields. Yields. Yields. ",
       icon: "cash",
-      image: "/images/pstake_shield.svg",
+      image: "/images/pstake_hand.svg",
       content:
         "pSTAKE Finance offers one of the highest DeFi yields, thanks to low liquid staking fees and partnerships with the biggest DeFi ecosystems.",
     },
     {
       title: "Safe, Secure, and Solid.",
       icon: "redemption",
-      image: "/images/pstake_hand.svg",
+      image: "/images/pstake_shield.svg",
       content:
         "Leading blockchain security firms like Halborn, Hexens, Oak Security, Immunefi, Forta, and more help prosper secure liquid staking with pSTAKE Finance.",
     },
@@ -36,7 +36,7 @@ const Features = () => {
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
         <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE] mb-[60px]">
-          Why liquid stake with pSTAKE?
+          Why Liquid Stake with pSTAKE?
         </p>
         <div className={"flex gap-3 max-w-[1240px] mx-auto md:block"}>
           <div className="flex flex-col gap-3 md:block">

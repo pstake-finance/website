@@ -155,7 +155,7 @@ const Audits = ({ deviceType }: any) => {
             deviceType={deviceType}
             responsive={responsive}
             autoPlay={true}
-            autoPlaySpeed={1000}
+            autoPlaySpeed={2000}
             infinite={true}
           >
             {auditList.map((item, index) => (

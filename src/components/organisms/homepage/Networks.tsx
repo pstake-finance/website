@@ -44,6 +44,15 @@ const getItemsPerRow = (
                     />
                   </a>
                 ) : null}
+                {item.network === "solana" ? (
+                  <span
+                    className={
+                      "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[8px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
+                    }
+                  >
+                    Coming Soon
+                  </span>
+                ) : null}
               </p>
               <p
                 className={
@@ -53,15 +62,6 @@ const getItemsPerRow = (
                 {item.symbol}
               </p>
             </div>
-            {item.network === "solana" ? (
-              <span
-                className={
-                  "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[8px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
-                }
-              >
-                Coming Soon
-              </span>
-            ) : null}
           </div>
           <div>
             <p
@@ -74,7 +74,7 @@ const getItemsPerRow = (
             </p>
             <p
               className={
-                "text-[#B2A6A6] font-light text-[14px] md:text-[12px] leading-[32px] -mt-[8px]"
+                "text-[#B2A6A6] font-light text-right text-[14px] md:text-[12px] leading-[32px] -mt-[8px]"
               }
             >
               APY
