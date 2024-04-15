@@ -34,7 +34,7 @@ const StakingSteps = () => {
         <div className="flex items-center justify-center mb-6 md:block max-w-[1240px] mx-auto md:mx-auto ">
           <div
             className={
-              "flex items-center md:flex-1 md:mb-2 relative md:justify-start"
+              "flex items-center md:flex-1 md:mb-2 relative md:justify-center"
             }
           >
             <div
@@ -58,7 +58,7 @@ const StakingSteps = () => {
           />
           <div
             className={
-              "flex items-center md:flex-1 md:mb-2 relative md:justify-start"
+              "flex items-center md:flex-1 md:mb-2 relative md:justify-center"
             }
           >
             <div
@@ -85,7 +85,9 @@ const StakingSteps = () => {
             className={`bg-[#ECECEC] w-[156px] h-[1px] mx-4 md:mx-2 md:hidden `}
           />
           <div
-            className={"flex items-center md:flex-1 relative md:justify-start"}
+            className={
+              "flex items-center md:flex-1 relative  md:justify-center"
+            }
           >
             <div
               className={

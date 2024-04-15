@@ -14,8 +14,9 @@ const getItemsPerRow = (
 ) => {
   return networkList.slice(initialLength, targetLength).map((item, index) => (
     <div
-      className={`p-6 bg-[#202020] m-4 md:mx-2 min-w-[365px] 
-                md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
+      className={`p-6 bg-[#202020] ${
+        targetLength === 3 ? "w-[436px]" : "w-[323px]"
+      } md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
                 md:items-center md:py-4 md:px-6
                  md:justify-between relative overflow-hidden relative`}
       key={index}
@@ -143,7 +144,7 @@ const Networks = () => {
       erc20: false,
     },
     {
-      asset: "Dydx",
+      asset: "dYdX",
       network: "dydx",
       imageUrl: "/images/networks/dydx.svg",
       apy: dydxData!.apy === -1 ? 9.94 : dydxData.apy,
@@ -194,15 +195,15 @@ const Networks = () => {
           Cosmos.
         </p>
         <div className="pt-8">
-          <div className="flex flex-wrap items-center justify-center">
+          <div className="flex flex-wrap items-center gap-5 justify-center">
             {getItemsPerRow(networkList, 0, 3, isMobile)}
           </div>
-          <div className="flex flex-wrap justify-center pt-8 md:pt-2">
-            {getItemsPerRow(networkList, 3, 5, isMobile)}
+          <div className="flex flex-wrap justify-center gap-5 pt-[22px] md:pt-2">
+            {getItemsPerRow(networkList, 3, networkList.length + 1, isMobile)}
           </div>
-          <div className="flex flex-wrap justify-center pt-8 md:pt-2">
-            {getItemsPerRow(networkList, 5, networkList.length + 1, isMobile)}
-          </div>
+          {/*<div className="flex flex-wrap justify-center gap-5 pt-8 md:pt-2">*/}
+          {/*  {getItemsPerRow(networkList, 5, networkList.length + 1, isMobile)}*/}
+          {/*</div>*/}
         </div>
       </div>
     </div>

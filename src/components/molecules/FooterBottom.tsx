@@ -134,22 +134,18 @@ const FooterBottom = () => {
           <div>
             <div className="max-w-[1240px] mx-auto flex items-center">
               <div className="flex flex-wrap justify-between w-full">
-                <div className={"w-[500px] md:mb-3"}>
+                <div className={"w-[500px] md:mb-4"}>
                   <img
                     src={"/images/logo.svg"}
                     alt={"logo"}
-                    className="w-[172px] md:w-[160px] mb-2 md:mx-auto"
+                    className="w-[172px] md:w-[160px] mb-2"
                   />
-                  <p
-                    className={
-                      "text-[12px] text-[#D5D5D5B0] mb-4 md:text-center"
-                    }
-                  >
+                  <p className={"text-[12px] text-[#D5D5D5B0] mb-4 "}>
                     Managed by Persistence Labs
                   </p>
                   <p
                     className={
-                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:justify-center"
+                      "font-semibold text-[#FCFCFC] flex items-center mb-4"
                     }
                   >
                     Download Media Kit
@@ -158,11 +154,7 @@ const FooterBottom = () => {
                       icon={"right-arrow2"}
                     />
                   </p>
-                  <div
-                    className={
-                      "flex items-center justify-start md:justify-center"
-                    }
-                  >
+                  <div className={"flex items-center justify-start"}>
                     {iconFooterList.map((item, index) => (
                       <a
                         key={index}
@@ -184,8 +176,12 @@ const FooterBottom = () => {
                     ))}
                   </div>
                 </div>
-                <div className={"flex-1 flex justify-end md:block"}>
-                  <div className={"mr-[80px] md:mr-0 md:text-center md:mb-3"}>
+                <div
+                  className={
+                    "flex-1 flex justify-end md:justify-start flex-wrap"
+                  }
+                >
+                  <div className={"mr-[80px] md:mr-4 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -206,7 +202,7 @@ const FooterBottom = () => {
                       );
                     })}
                   </div>
-                  <div className={"mr-[80px] md:mr-0 md:text-center md:mb-3"}>
+                  <div className={"mr-[80px] md:mr-0 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -218,9 +214,7 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={
-                            "text-[#D5D5D5B0]  mb-[6px] flex items-center md:justify-center"
-                          }
+                          className={"text-[#D5D5D5B0]  mb-[6px] flex"}
                         >
                           <Link
                             href={item.link}
@@ -240,7 +234,7 @@ const FooterBottom = () => {
                       );
                     })}
                   </div>
-                  <div className={"md:mr-0 md:text-center md:mb-3"}>
+                  <div className={"md:mr-0 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -253,7 +247,7 @@ const FooterBottom = () => {
                         <div
                           key={index}
                           className={
-                            "text-[#D5D5D5B0]  mb-[6px] flex items-center md:justify-center"
+                            "text-[#D5D5D5B0]  mb-[6px] flex items-center "
                           }
                         >
                           <Link
