@@ -94,7 +94,7 @@ const Validators = () => {
         </p>
         <p
           className={
-            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px]"
+            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px] mx-auto"
           }
         >
           Institutional-grade validators help grow liquid staking

@@ -76,11 +76,11 @@ const Audits = ({ deviceType }: any) => {
         </p>
         <p
           className={
-            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px]"
+            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px] mx-auto"
           }
         >
-          Blockchain security leaders have partnered with and audited
-          <br /> liquid staking with pSTAKE Finance.
+          Blockchain security leaders have partnered with and audited liquid
+          staking with pSTAKE Finance.
         </p>
         <div className={"ml-[100px] md:ml-0"}>
           <Carousel
