@@ -1,84 +1,40 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
-import Slider, { Settings } from "react-slick";
 import Marquee from "react-fast-marquee";
-import {
-  SEQUOIA_URL,
-  COINBASE_VENTURES_URL,
-  KRAKEN_VENTURES_URL,
-  TENDERMINT_URL,
-  DEFI_CAPITAL_URL,
-  GALAXY_DIGITAL_URL,
-  SPARTAN_CAPITAL,
-  SINO_GLOBAL_CAPITAL,
-  BINANCE_LABS,
-} from "../../../utils/config";
+
+const getLogoUrl = (logoName: string) => {
+  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/investors/${logoName}.svg`;
+};
 
 const Investors = () => {
   const investorList = [
     {
-      link: SPARTAN_CAPITAL,
-      image: "spartan.svg",
+      image: "spartan",
     },
     {
-      link: COINBASE_VENTURES_URL,
-      image: "coinbase_v.svg",
+      image: "coinbase_ventures",
     },
     {
-      link: BINANCE_LABS,
-      image: "binance_labs.svg",
+      image: "bnb_labs",
     },
     {
-      link: DEFI_CAPITAL_URL,
-      image: "defi_cap.svg",
+      image: "defi_capital",
     },
 
     {
-      link: KRAKEN_VENTURES_URL,
-      image: "kraken.svg",
+      image: "mraken",
     },
     {
-      link: BINANCE_LABS,
-      image: "binance_labs.svg",
+      image: "coinbase",
     },
     {
-      link: DEFI_CAPITAL_URL,
-      image: "defi_cap.svg",
+      image: "galaxy",
     },
 
     {
-      link: KRAKEN_VENTURES_URL,
-      image: "kraken.svg",
+      image: "lattice",
     },
   ];
-
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1280 },
-      items: 5,
-      // partialVisibilityGutter: 10,
-    },
-    tablet: {
-      breakpoint: { max: 1280, min: 768 },
-      items: 3,
-      // partialVisibilityGutter: 10,
-    },
-    mobile: {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
-      // partialVisibilityGutter: 10,
-    },
-  };
-
-  const settings: Settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1,
-  };
 
   const { t } = useTranslation("common");
   return (
@@ -93,7 +49,7 @@ const Investors = () => {
               <div key={index}>
                 <img
                   key={index}
-                  src={`/images/investors/${item.image}`}
+                  src={getLogoUrl(item.image)}
                   title={item.image}
                   className="w-[207px] h-[70px] sm:w-[160px] md:w-[180px] mr-[25px]"
                   alt={item.image}
