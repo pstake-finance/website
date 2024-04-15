@@ -395,7 +395,7 @@ const Header = () => {
               md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}
                 />
                 <ul
-                  className={`flex md:gap-10 items-center md:flex-row -md:ml-auto md:flex-col md:bg-[#141414]
+                  className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col md:bg-[#141414]
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-2`}
                   id="mySidenav"
                   ref={sideBarRef}

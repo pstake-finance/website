@@ -48,8 +48,7 @@ module.exports = {
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
         "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
-      topBanner: `url('/images/bg_images/atom_topbar.svg'), 
-      linear-gradient(80.17deg, #232334 -4.31%, #6866ff 111.08%, #6866ff 127.68%)`,
+      topBanner: `linear-gradient(90.03deg, #B7E2F7 2.08%, #873BA2 99.98%)`,
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
       homePageBanner: `url('/images/bg_images/bg.svg'),
