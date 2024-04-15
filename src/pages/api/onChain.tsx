@@ -73,6 +73,7 @@ const noAvatarValidators = [
   "dydxvaloper1nwtp8t5vl86zdm5ag85st5czv7d0kscq2zzvgl",
   "dydxvaloper1zhyan2t9w5z7yw20l9e97zc030d2ddq4awdyys",
 ];
+
 export const getValidators = async (
   rpc: string,
   hostChainId: string,
@@ -129,6 +130,34 @@ export const getValidators = async (
   } catch (e) {
     console.log(e, "error-getValidators");
     return [];
+  }
+};
+
+export const getValidatorLength = async (chainID: string): Promise<any> => {
+  const chainInfo = ExternalChains["Mainnet"].find(
+    (item) => item.chainId === chainID
+  );
+  let list: any = {
+    uatom: 0,
+    uosmo: 0,
+    adydx: 0,
+    ustars: 0,
+    uhuahua: 0,
+    ubld: 0,
+  };
+  try {
+    const rpcClient = await RpcClient(chainInfo!.rpc);
+    const pstakeQueryService = new LiquidStakeQueryClient(rpcClient);
+    const chainParamsResponse = await pstakeQueryService.HostChains();
+    chainParamsResponse.hostChains.forEach((item) => {
+      const filteredList = item.validators.filter(
+        (item) => Number(item.delegatedAmount) > 0 || Number(item.weight) > 0
+      );
+      list[item.hostDenom] = filteredList.length;
+    });
+    return list;
+  } catch (e) {
+    return list;
   }
 };
 

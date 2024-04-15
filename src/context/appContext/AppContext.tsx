@@ -14,6 +14,7 @@ import {
   getCosmosTVL,
 } from "../../pages/api/api";
 import { decimalize, decimalizeRaw } from "../../utils/helpers";
+import { getValidatorLength } from "../../pages/api/onChain";
 
 const AppContext = createContext<AppState>({
   cosmosData: {
@@ -47,6 +48,14 @@ const AppContext = createContext<AppState>({
   bnbData: {
     apy: 0,
     tvl: 0,
+  },
+  validatorsList: {
+    uatom: 0,
+    uosmo: 0,
+    adydx: 0,
+    ustars: 0,
+    uhuahua: 0,
+    ubld: 0,
   },
   tokenPrices: {
     BNB: 0,
@@ -96,6 +105,14 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
   const [bldData, setBldData] = useState<any>({
     apy: 0,
     tvl: 0,
+  });
+  const [chainValidators, setChainValidators] = useState<any>({
+    uatom: 0,
+    uosmo: 0,
+    adydx: 0,
+    ustars: 0,
+    uhuahua: 0,
+    ubld: 0,
   });
   const [prices, setPrices] = useState<any>({
     BNB: 0,
@@ -147,7 +164,8 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getBnbTVL(),
         fetchTokenPrices(),
       ]);
-      console.log(tokenPrices, "tokenPrices");
+      const list = await getValidatorLength("core-1");
+      setChainValidators(list);
       setCosmosData({
         apy: cosmosApyResponse,
         tvl: Number(decimalizeRaw(cosmosTvlResponse)),
@@ -195,6 +213,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     xprtData,
     bldData,
     huahuaData,
+    validatorsList: chainValidators,
   };
 
   return (
