@@ -75,9 +75,7 @@ const getItemsPerRow = (
             </p>
           </div>
           <div>
-            <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>
-              Validators
-            </p>
+            <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>APY</p>
             <p
               className={
                 "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px]"
@@ -96,7 +94,7 @@ const getItemsPerRow = (
         target={"_blank"}
         isDisabled={item.buttonUrl === ""}
         customButtonClass={
-          "bg-[#8c8c8c4f] text-[#FEFEFE] !font-normal !text-[14px] transition ease-in-out duration-200 "
+          "hover:bg-[#2F2F32] bg-[#454549] text-[#FEFEFE] !font-normal !text-[14px] transition ease-in-out duration-200 "
         }
       >
         {item.buttonText}
