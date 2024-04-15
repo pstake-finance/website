@@ -17,9 +17,8 @@ const getItemsPerRow = (
     <div
       className={`p-6 bg-[#202020] ${
         targetLength === 3 ? "w-[436px] xl:w-[340px]" : "w-[323px] xl:w-[300px]"
-      } md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
-                md:items-center md:py-4 md:px-6
-                 md:justify-between relative overflow-hidden relative`}
+      } md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl md:items-center md:py-4 md:px-6 md:justify-between
+       relative overflow-hidden relative flex flex-col justify-between`}
       key={index}
     >
       <div className="mb-2 md:items-center">
@@ -62,14 +61,14 @@ const getItemsPerRow = (
             </span>
           ) : null}
         </div>
-        <div className={"flex items-center mb-6 md:mb-0"}>
+        <div className={"flex items-center mb-[22px] md:mb-0"}>
           <div className={"mr-[40px]"}>
             <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>
               Total Value Locked
             </p>
             <p
               className={
-                "text-[#FFFFFF] font-medium text-[18px] md:text-[14px] leading-[32px]"
+                "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px]"
               }
             >
               {item.tvl}
@@ -81,7 +80,7 @@ const getItemsPerRow = (
             </p>
             <p
               className={
-                "text-[#FFFFFF] font-medium text-[18px] md:text-[14px] leading-[32px]"
+                "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px]"
               }
             >
               {item.apy}
@@ -123,7 +122,7 @@ const Networks = () => {
       symbol: "BNB",
       network: "binance",
       imageUrl: "/images/networks/bnb.svg",
-      tvl: `${numberFormat(bnbData.tvl, 3)} BNB`,
+      tvl: `${numberFormat(bnbData.tvl, 2)} BNB`,
       apy: `${bnbData!.apy}%`,
       externUrl: "/bnb",
       buttonText: "Liquid Stake Now",
@@ -138,7 +137,7 @@ const Networks = () => {
       externUrl: "/atom",
       imageUrl: "/images/networks/atom.svg",
       apy: `${cosmosData!.apy === -1 ? APR_DEFAULT : cosmosData!.apy}%`,
-      tvl: `${numberFormat(cosmosData.tvl, 3)} ATOM`,
+      tvl: `${numberFormat(cosmosData.tvl, 2)} ATOM`,
       buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
       erc20: false,
@@ -162,7 +161,7 @@ const Networks = () => {
       externUrl: "/osmo",
       imageUrl: "/images/networks/osmo.svg",
       apy: `${osmoData!.apy === -1 ? 9.94 : osmoData.apy}%`,
-      tvl: `${numberFormat(osmoData.tvl, 3)} OSMO`,
+      tvl: `${numberFormat(osmoData.tvl, 2)} OSMO`,
       buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
       erc20: false,
@@ -174,7 +173,7 @@ const Networks = () => {
       externUrl: "/dydx",
       imageUrl: "/images/networks/dydx.svg",
       apy: `${dydxData!.apy === -1 ? 9.94 : dydxData.apy}%`,
-      tvl: `${numberFormat(dydxData.tvl, 3)} DYDX`,
+      tvl: `${numberFormat(dydxData.tvl, 2)} DYDX`,
       buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
       erc20: false,
@@ -186,7 +185,7 @@ const Networks = () => {
       externUrl: "",
       imageUrl: "/images/networks/stars.svg",
       apy: `${starsData!.apy === -1 ? 9.94 : starsData.apy}%`,
-      tvl: `${numberFormat(starsData.tvl, 3)} STARS`,
+      tvl: `${numberFormat(starsData.tvl, 2)} STARS`,
       buttonText: "Liquid Stake Now",
       buttonUrl:
         "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
@@ -209,7 +208,7 @@ const Networks = () => {
       externUrl: "",
       imageUrl: "/images/networks/huahua.svg",
       apy: `${huahuaData!.apy === -1 ? 10 : huahuaData.apy}%`,
-      tvl: `${numberFormat(huahuaData.tvl, 3)} HUAHUA`,
+      tvl: `${numberFormat(huahuaData.tvl, 2)} HUAHUA`,
       buttonText: "Liquid Stake Now",
       buttonUrl:
         "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
