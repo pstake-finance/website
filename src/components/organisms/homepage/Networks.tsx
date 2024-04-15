@@ -5,6 +5,7 @@ import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
 import Icon from "../../molecules/Icon";
+import { numberFormat } from "../../../utils/helpers";
 
 const getItemsPerRow = (
   networkList: any[],
@@ -15,7 +16,7 @@ const getItemsPerRow = (
   return networkList.slice(initialLength, targetLength).map((item, index) => (
     <div
       className={`p-6 bg-[#202020] ${
-        targetLength === 3 ? "w-[436px]" : "w-[323px]"
+        targetLength === 3 ? "w-[436px] xl:w-[340px]" : "w-[323px] xl:w-[300px]"
       } md:max-w-full md:min-w-full md:w-auto max-w-[500px] rounded-xl 
                 md:items-center md:py-4 md:px-6
                  md:justify-between relative overflow-hidden relative`}
@@ -34,12 +35,23 @@ const getItemsPerRow = (
           >
             {item.asset}
           </p>
-          <a href={item.buttonUrl} target="_blank" rel="noreferrer">
-            <Icon
-              viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913]"
-              icon="external-link"
-            />
-          </a>
+          {item.network === "solana" ? (
+            <span
+              className={
+                "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[8px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
+              }
+            >
+              Coming Soon
+            </span>
+          ) : null}
+          {item.externUrl !== "" ? (
+            <a href={item.externUrl} target="_blank" rel="noreferrer">
+              <Icon
+                viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913]"
+                icon="external-link"
+              />
+            </a>
+          ) : null}
         </div>
         <div className={"flex items-center mb-6 md:mb-0"}>
           <div className={"mr-[40px]"}>
@@ -51,7 +63,7 @@ const getItemsPerRow = (
                 "text-[#FFFFFF] font-medium text-[18px] md:text-[14px] leading-[32px]"
               }
             >
-              656,926.59 BNB
+              {item.tvl}
             </p>
           </div>
           <div>
@@ -63,18 +75,10 @@ const getItemsPerRow = (
                 "text-[#FFFFFF] font-medium text-[18px] md:text-[14px] leading-[32px]"
               }
             >
-              120
+              {item.apy}
             </p>
           </div>
         </div>
-        {/*<div className="md:px-4">*/}
-        {/*  <h4*/}
-        {/*    className="text-green text-lg font-semibold*/}
-        {/*  leading-normal text-center md:text-sm"*/}
-        {/*  >*/}
-        {/*    {item.apy}% APY*/}
-        {/*  </h4>*/}
-        {/*</div>*/}
       </div>
       <ButtonLink
         className={`w-full md:p-2 !py-3 h-[45px] md:h-[40px] md:text-sm md:p-0 md:w-auto `}
@@ -82,7 +86,7 @@ const getItemsPerRow = (
         href={item.buttonUrl}
         scale="lg"
         target={"_blank"}
-        isDisabled={false}
+        isDisabled={item.buttonUrl === ""}
         customButtonClass={
           "bg-[#8c8c8c4f] text-[#FEFEFE] !font-normal !text-[14px] transition ease-in-out duration-200 "
         }
@@ -93,8 +97,6 @@ const getItemsPerRow = (
   ));
 };
 const Networks = () => {
-  const { t } = useTranslation("common");
-
   const {
     cosmosData,
     bnbData,
@@ -105,12 +107,15 @@ const Networks = () => {
     huahuaData,
   } = useApp();
   const { isMobile } = useWindowSize();
+
   const networkList = [
     {
       asset: "BNB Chain",
       network: "binance",
       imageUrl: "/images/networks/bnb.svg",
-      apy: bnbData!.apy,
+      tvl: `${numberFormat(bnbData.tvl, 3)} BNB`,
+      apy: `${bnbData!.apy}%`,
+      externUrl: "/bnb",
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/bnb",
       hoverBg: "hover:bg-bnbCard",
@@ -119,8 +124,10 @@ const Networks = () => {
     {
       asset: "Cosmos Hub",
       network: "cosmos",
+      externUrl: "/atom",
       imageUrl: "/images/networks/atom.svg",
-      apy: cosmosData!.apy === -1 ? APR_DEFAULT : cosmosData!.apy,
+      apy: `${cosmosData!.apy === -1 ? APR_DEFAULT : cosmosData!.apy}%`,
+      tvl: `${numberFormat(cosmosData.tvl, 3)} ATOM`,
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
       erc20: false,
@@ -128,8 +135,10 @@ const Networks = () => {
     {
       asset: "Solana",
       network: "solana",
+      externUrl: "",
       imageUrl: "/images/networks/sol.svg",
-      apy: bldData!.apy === -1 ? 11 : bldData.apy,
+      apy: "--",
+      tvl: "--",
       buttonText: "Start Staking",
       buttonUrl: "",
       erc20: false,
@@ -137,8 +146,10 @@ const Networks = () => {
     {
       asset: "Osmosis",
       network: "osmosis",
+      externUrl: "/osmo",
       imageUrl: "/images/networks/osmo.svg",
-      apy: osmoData!.apy === -1 ? 9.94 : osmoData.apy,
+      apy: `${osmoData!.apy === -1 ? 9.94 : osmoData.apy}%`,
+      tvl: `${numberFormat(osmoData.tvl, 3)} OSMO`,
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
       erc20: false,
@@ -146,8 +157,10 @@ const Networks = () => {
     {
       asset: "dYdX",
       network: "dydx",
+      externUrl: "/dydx",
       imageUrl: "/images/networks/dydx.svg",
-      apy: dydxData!.apy === -1 ? 9.94 : dydxData.apy,
+      apy: `${dydxData!.apy === -1 ? 9.94 : dydxData.apy}%`,
+      tvl: `${numberFormat(dydxData.tvl, 3)} DYDX`,
       buttonText: "Start Staking",
       buttonUrl: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
       erc20: false,
@@ -155,8 +168,10 @@ const Networks = () => {
     {
       asset: "STARS",
       network: "stars",
+      externUrl: "",
       imageUrl: "/images/networks/stars.svg",
-      apy: starsData!.apy === -1 ? 9.94 : starsData.apy,
+      apy: `${starsData!.apy === -1 ? 9.94 : starsData.apy}%`,
+      tvl: `${numberFormat(starsData.tvl, 3)} STARS`,
       buttonText: "Start Staking",
       buttonUrl:
         "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
@@ -175,8 +190,10 @@ const Networks = () => {
     {
       asset: "HUAHUA",
       network: "chihuahua",
+      externUrl: "",
       imageUrl: "/images/networks/huahua.svg",
-      apy: huahuaData!.apy === -1 ? 10 : huahuaData.apy,
+      apy: `${huahuaData!.apy === -1 ? 10 : huahuaData.apy}%`,
+      tvl: `${numberFormat(huahuaData.tvl, 3)} HUAHUA`,
       buttonText: "Start Staking",
       buttonUrl:
         "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
@@ -186,7 +203,7 @@ const Networks = () => {
 
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
-      <div className="sectionContainer pt-[80px] pb-[80px] md:py-[35px]">
+      <div className="container pt-[80px] pb-[80px] md:py-[35px]">
         <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
           Truly Multi-Chain Liquid Staking
         </p>

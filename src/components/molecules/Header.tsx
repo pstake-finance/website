@@ -44,6 +44,7 @@ import {
   PSTAKE_DISCORD,
   PSTAKE_MEDIUM_URL,
   GITHUB_URL,
+  GOV_URL,
 } from "../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Icon from "./Icon";
@@ -90,6 +91,12 @@ const socialList = [
     url: GITHUB_URL,
     image: "github_full",
     text: "Contribute",
+  },
+  {
+    name: "Governance",
+    url: GOV_URL,
+    image: "governance_full",
+    text: "Join Discussions",
   },
   {
     name: "Community Forum",
@@ -439,7 +446,7 @@ const Header = () => {
                               {item.optionLink === "" ? (
                                 <span
                                   className={
-                                    "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[6px] border-[#0C8B8B] ml-2"
+                                    "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[6px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
                                   }
                                 >
                                   Coming Soon
@@ -520,13 +527,13 @@ const Header = () => {
                       dropDownIcon={false}
                       dropDownContentClass="flex flex-wrap !bg-[#1B1B1B] translate-y-[1px] drop-shadow-md
                       round-md py-2 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0 !w-[520px] md:!w-[250px] md:!flex md:!justify-center md:flex-wrap"
+                      md:!bg-transparent md:p-0 !w-max md:!w-[250px] md:!flex md:!justify-center md:flex-wrap !grid !grid-cols-2"
                     >
                       <>
                         {socialList.map((item, index) => (
                           <a
-                            className={`px-6 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] ${
+                            className={`px-5 py-3 flex items-center md:py-3
+                        hover:cursor-pointer text-light-high whitespace-nowrap w-max ${
                           item.url === "" ? "pointer-events-none" : ""
                         }`}
                             key={index}
@@ -538,14 +545,14 @@ const Header = () => {
                               src={getLogoUrl(item.image)}
                               alt={item.name}
                               className={
-                                "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
+                                "mr-4 md:mr-2 w-[39px] h-[39px] md:w-[20px] md:h-[20px]"
                               }
                             />
                             <span className={"flex flex-col md:hidden"}>
                               <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
                                 {item.name}
                                 <Icon
-                                  viewClass="dropDownIcon !w-[10px] ml-2"
+                                  viewClass="dropDownIcon !w-[10px] ml-1"
                                   icon="chevroncolorchange"
                                 />
                               </span>

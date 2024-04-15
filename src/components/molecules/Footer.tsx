@@ -129,40 +129,31 @@ const Footer = () => {
               have your say in the future of liquid staking everything.
             </p>
             <div>
-              <div className="max-w-[1000px] flex items-center justify-center mx-auto mb-12">
-                <div className="flex items-center justify-center m-auto flex-wrap">
+              <div className="max-w-[1000px] mx-auto mb-12">
+                <div className="grid grid-cols-2 gap-4">
                   {list.map((item, index) => (
-                    <div
-                      className="item sm:w-auto sm:p-0 -lg:basis-[50%] -lg:max-w-[440px] md:max-w-full w-full px-4"
+                    <a
                       key={index}
+                      href={item.url}
+                      target="_blank"
+                      className={`bg-[#1B1B1B] flex items-center md:p-4 p-6 rounded-xl group`}
+                      rel="noopener noreferrer"
                     >
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        className={`bg-[#1B1B1B] flex items-center md:m-2 md:p-4 m-4 p-6 rounded-xl group`}
-                        rel="noopener noreferrer"
-                      >
-                        <div
-                          className={`w-[46px] h-[46px] bg-[#3f3f45] flex 
-                        items-center justify-center rounded-full mx-2.5`}
-                        >
-                          <img
-                            src={getLogoUrl(item.image)}
-                            title={item.image}
-                            alt={item.image}
-                            className="w-[207px] md:w-[160px] mx-2"
-                          />
-                        </div>
-                        <div className="sm:hidden">
-                          <p className="font-semibold text-base leading-normal text-light-full">
-                            {item.name}
-                          </p>
-                          <p className="font-medium text-sm leading-normal text-[#D1D1D1]">
-                            {item.text}
-                          </p>
-                        </div>
-                      </a>
-                    </div>
+                      <img
+                        src={getLogoUrl(item.image)}
+                        title={item.image}
+                        alt={item.image}
+                        className="w-[46px] h-[46px] mx-2"
+                      />
+                      <div className="sm:hidden">
+                        <p className="font-semibold text-base leading-normal text-light-full">
+                          {item.name}
+                        </p>
+                        <p className="font-medium text-sm leading-normal text-[#D1D1D1]">
+                          {item.text}
+                        </p>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </div>

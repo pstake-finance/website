@@ -163,7 +163,7 @@ module.exports = {
         "menu-open": "menu-open 200ms ease-in-out",
       },
       screens: {
-        "-2xl": { min: "1536px" },
+        "-2xl": { min: "1440px" },
         // => @media (max-width: 1535px) { ... }
         "-xl": { min: "1280px" },
         "-lg": { min: "1024px" },
