@@ -1,20 +1,7 @@
 import React from "react";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { PSTAKE_APP_URL } from "../../../utils/config";
 
 const Token = () => {
-  const list = [
-    {
-      logo: "",
-    },
-    {
-      logo: "",
-    },
-    {
-      logo: "",
-    },
-  ];
-
   return (
     <div className="bg-[#1B1B1B] aos-init aos-animate" data-aos="fade-up">
       <div className="container ">
@@ -35,7 +22,7 @@ const Token = () => {
             <ButtonLink
               className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px]`}
               variant={"outline"}
-              href={PSTAKE_APP_URL}
+              href={"https://www.coingecko.com/en/coins/pstake-finance"}
               scale="lg"
               target={"_blank"}
               isDisabled={false}

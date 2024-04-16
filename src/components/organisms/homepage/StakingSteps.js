@@ -6,8 +6,7 @@ const StakingSteps = () => {
       title: "Stake your PoS ASSET",
       icon: "1",
       content:
-        "Select a non-zero amount of tokens to stake through pSTAKE’s\n" +
-        "                  robust validator set & earn staking rewards",
+        "Stake any amount of your tokens to get daily auto-compounded staking rewards.",
     },
     {
       title: "Receive stkASSET",
