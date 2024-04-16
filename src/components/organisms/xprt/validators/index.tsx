@@ -73,7 +73,6 @@ const ValidatorsList = () => {
 
   useEffect(() => {
     const respon = fetchXprtValidatorsData("core-1", "Mainnet");
-    console.log(respon, "respon");
   }, []);
 
   useEffect(() => {

@@ -13,7 +13,6 @@ const getItemsPerRow = (
   targetLength: number,
   isMobile: boolean
 ) => {
-  console.log(networkList, "networkList-1");
   return networkList.slice(initialLength, targetLength).map((item, index) => (
     <div
       className={`p-6 md:p-4 bg-[#202020] ${
@@ -146,7 +145,6 @@ const Networks = () => {
   } = useApp();
   const { isMobile } = useWindowSize();
 
-  console.log(validatorsList, "validatorsList");
   const networkList = [
     {
       asset: "BNB Chain",

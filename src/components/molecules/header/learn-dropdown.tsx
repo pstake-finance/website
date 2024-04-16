@@ -48,19 +48,22 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
   );
 
   return (
-    <Dropdown
-      overlay={menu}
-      placement={isTablet ? "bottomRight" : "bottom"}
-      trigger={"hover"}
-    >
-      <button
-        className={` [.is-sticky_&]:text-[#D5D5D5] !block ${
-          router.pathname === "/" ? "text-[#D5D5D5]" : ""
-        } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal`}
+    <>
+      <Dropdown
+        overlay={menu}
+        placement={isTablet ? "bottomRight" : "bottom"}
+        trigger={"hover"}
       >
-        Learn
-      </button>
-    </Dropdown>
+        <button
+          className={` [.is-sticky_&]:text-[#D5D5D5] !block ${
+            router.pathname === "/" ? "text-[#D5D5D5]" : ""
+          } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal md:!hidden`}
+        >
+          Learn
+        </button>
+      </Dropdown>
+      <div className={"hidden md:!block "}>{menu}</div>
+    </>
   );
 };
 export default LearnDropdown;

@@ -136,7 +136,7 @@ const Footer = () => {
                       key={index}
                       href={item.url}
                       target="_blank"
-                      className={`bg-[#1B1B1B] border border-trasparent hover:border hover:border-[#C73238] flex items-center md:p-4 p-6 rounded-xl group`}
+                      className={`bg-[#1B1B1B] border border-[#1B1B1B] hover:border hover:border-[#C73238] flex items-center md:p-4 p-6 rounded-xl group`}
                       rel="noopener noreferrer"
                     >
                       <img

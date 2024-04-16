@@ -406,7 +406,7 @@ const Header = () => {
                       isTablet={isLandScape}
                     />
                   </li>
-                  <li className="nav-item nav__menu-item md:hidden">
+                  <li className="nav-item nav__menu-item">
                     <LearnDropdown
                       learnList={learnList}
                       isTablet={isLandScape}
