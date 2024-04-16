@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Header from "../components/molecules/Header";
+import Header from "../components/molecules/header";
 import { ANALYTICS } from "../utils/config";
 import Head from "next/head";
 import AppProvider from "../context/appContext/AppContext";

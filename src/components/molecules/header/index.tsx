@@ -45,17 +45,21 @@ import {
   PSTAKE_MEDIUM_URL,
   GITHUB_URL,
   GOV_URL,
-} from "../../utils/config";
+} from "../../../utils/config";
 import { useTranslation } from "next-export-i18n";
-import Icon from "./Icon";
-import Dropdown from "../atoms/dropdown/Dropdown";
-import ButtonLink from "../atoms/buttonLink/ButtonLink";
-import { useOnClickOutside } from "../../customHooks/useOnClickOutside";
-import { useWindowSize } from "../../customHooks/useWindowSize";
-import Button from "../atoms/button/Button";
-import OsmoHeader from "./osmo-header";
-import GeofenceNotice from "./geofence-banner";
-import { useAppStore } from "../../store/store";
+import Icon from "../Icon";
+import Dropdown from "../../atoms/dropdown/Dropdown";
+import ButtonLink from "../../atoms/buttonLink/ButtonLink";
+import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
+import { useWindowSize } from "../../../customHooks/useWindowSize";
+import Button from "../../atoms/button/Button";
+import OsmoHeader from ".././osmo-header";
+import GeofenceNotice from ".././geofence-banner";
+import { useAppStore } from "../../../store/store";
+import NetworkDropdown from "./network-dropdown";
+import LearnDropdown from "./learn-dropdown";
+import CommunityDropdown from "./community-dropdown";
+import BridgeDropdown from "./bridge-dropdown";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -117,7 +121,7 @@ const Header = () => {
     setIsOpen(true);
   };
 
-  const { isMobile } = useWindowSize();
+  const { isMobile, isLandScape } = useWindowSize();
 
   const sideBarRef = useRef<HTMLUListElement>(null);
   useOnClickOutside(sideBarRef, () => {
@@ -214,7 +218,7 @@ const Header = () => {
       symbol: "SOL",
     },
     {
-      optionName: "Dydx",
+      optionName: "dYdX",
       optionLink: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
       imgUrl: "/images/networks/dydx.svg",
       symbol: "DYDX",
@@ -281,28 +285,17 @@ const Header = () => {
     },
   ];
 
-  const communityList = [
-    {
-      optionName: t("FORUM"),
-      optionLink: PSTAKE_FORUM_URL,
-    },
-    {
-      optionName: t("GOVERNANCE"),
-      optionLink: SNANPSHOT_URL,
-    },
-  ];
-
   const bridgeList = [
     {
       imgUrl: "/images/networks/ethereum.svg",
       optionName: "ETH to BSC bridge",
-      optionLink: PSTAKE_BRIDGE_URL,
+      optionLink: BSC_BRIDGE_URL,
       subText: "Bridge PSTAKE to BSC Chain",
     },
     {
       imgUrl: "/images/networks/atom.svg",
       optionName: "ETH to Cosmos bridge",
-      optionLink: BSC_BRIDGE_URL,
+      optionLink: PSTAKE_BRIDGE_URL,
       subText: "Bridge PSTAKE to Persistence One",
     },
   ];
@@ -346,7 +339,7 @@ const Header = () => {
           `}
             id="nav-bar"
           >
-            <div className="container max-w-[1300px] mx-auto px-4 flex flex-wrap items-center justify-between ">
+            <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
               {router.pathname === "/" ? (
                 <Link
                   className="bg-logoLight
@@ -408,214 +401,31 @@ const Header = () => {
                   ref={sideBarRef}
                 >
                   <li className="nav-item nav__menu-item md:hidden">
-                    <Dropdown
-                      className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
-                        router.pathname === "/" ? "text-[#D5D5D5]" : ""
-                      }`}
-                      dropDownVariant="custom"
-                      dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
-                      dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal"
-                      dropdownLabel={isMobile ? "" : t("Networks")}
-                      dropDownIcon={false}
-                      dropdownType={"hover"}
-                      dropDownContentClass="flex flex-wrap !bg-[#1B1B1B] translate-y-[1px] drop-shadow-md
-                      round-md py-2 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0 !w-[420px] md:!w-[200px] md:!flex md:!justify-center md:flex-wrap"
-                    >
-                      {networks.map((item, index) => (
-                        <a
-                          className={`px-6 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] ${
-                          item.optionLink === "" ? "pointer-events-none" : ""
-                        }`}
-                          key={index}
-                          href={item.optionLink}
-                          target={"_blank"}
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={item.imgUrl}
-                            alt={item.optionName}
-                            className={
-                              "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"
-                            }
-                          />
-                          <span className={"flex flex-col md:hidden"}>
-                            <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
-                              {item.optionName}
-                              {item.optionLink === "" ? (
-                                <span
-                                  className={
-                                    "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[6px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
-                                  }
-                                >
-                                  Coming Soon
-                                </span>
-                              ) : (
-                                <Icon
-                                  viewClass="dropDownIcon !w-[10px] ml-2"
-                                  icon="chevroncolorchange"
-                                />
-                              )}
-                            </span>
-                            <span className="text-[#D5D5D5] text-xsm font-light leading-normal">
-                              {item.symbol}
-                            </span>
-                          </span>
-                        </a>
-                      ))}
-                    </Dropdown>
+                    <NetworkDropdown
+                      networks={networks}
+                      isTablet={isLandScape}
+                    />
                   </li>
-                  <li className="nav-item nav__menu-item">
-                    <Dropdown
-                      className={`[.is-sticky_&]:text-[#D5D5D5] -md:!block ${
-                        router.pathname === "/" ? "text-[#D5D5D5]" : ""
-                      }`}
-                      dropDownVariant="custom"
-                      dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
-                      dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] !font-normal"
-                      dropdownLabel={isMobile ? "" : t("LEARN")}
-                      dropDownIcon={false}
-                      dropdownType={"hover"}
-                      dropDownContentClass="!bg-[#1B1B1B] translate-y-[1px] drop-shadow-md
-                      round-md py-2 md:visible md:relative md:opacity-100 md:p-0"
-                    >
-                      {learnList.map((item, index) => (
-                        <a
-                          className="px-6 md:px-3 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap"
-                          href={item.optionLink}
-                          key={index}
-                          target={"_blank"}
-                          rel="noreferrer"
-                        >
-                          <span
-                            className={
-                              "w-[40px] h-[40px] justify-center items-center flex rounded-full bg-[#FFFFFF0D]"
-                            }
-                          >
-                            <Icon
-                              viewClass={` !w-[22px] ${
-                                item.iconType === "stroke"
-                                  ? "stroke-[#C73238] fill-transparent"
-                                  : "fill-[#C73238]"
-                              }`}
-                              icon={item.icon}
-                            />
-                          </span>
-                          <span
-                            className="ml-4 text-light-high text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
-                          >
-                            {item.optionName}
-                          </span>
-                        </a>
-                      ))}
-                    </Dropdown>
-                  </li>
-
                   <li className="nav-item nav__menu-item md:hidden">
-                    <Dropdown
-                      className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
-                        router.pathname === "/" ? "text-[#D5D5D5]" : ""
-                      }`}
-                      dropDownVariant="custom"
-                      dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
-                      dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] !font-normal"
-                      dropdownLabel={isMobile ? "" : t("COMMUNITY")}
-                      dropdownType={"hover"}
-                      dropDownIcon={false}
-                      dropDownContentClass="flex flex-wrap !bg-[#1B1B1B] translate-y-[1px] drop-shadow-md
-                      round-md py-2 md:visible md:relative md:opacity-100
-                      md:!bg-transparent md:p-0 !w-max md:!w-[250px] md:!flex md:!justify-center md:flex-wrap !grid !grid-cols-2"
-                    >
-                      <>
-                        {socialList.map((item, index) => (
-                          <a
-                            className={`px-5 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap w-max ${
-                          item.url === "" ? "pointer-events-none" : ""
-                        }`}
-                            key={index}
-                            href={item.url}
-                            target={"_blank"}
-                            rel="noopener noreferrer"
-                          >
-                            <img
-                              src={getLogoUrl(item.image)}
-                              alt={item.name}
-                              className={
-                                "mr-4 md:mr-2 w-[39px] h-[39px] md:w-[20px] md:h-[20px]"
-                              }
-                            />
-                            <span className={"flex flex-col md:hidden"}>
-                              <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
-                                {item.name}
-                                <Icon
-                                  viewClass="dropDownIcon !w-[10px] ml-1"
-                                  icon="chevroncolorchange"
-                                />
-                              </span>
-                            </span>
-                          </a>
-                        ))}
-                      </>
-                    </Dropdown>
+                    <LearnDropdown
+                      learnList={learnList}
+                      isTablet={isLandScape}
+                    />
+                  </li>
+                  <li className="nav-item nav__menu-item md:hidden">
+                    <CommunityDropdown
+                      communityList={socialList}
+                      isTablet={isLandScape}
+                    />
                   </li>
                   {router.pathname === "/" ? (
                     <li className="nav-item nav__menu-item md:hidden">
-                      <Dropdown
-                        className={`[.is-sticky_&]:text-[#D5D5D5] !block ${
-                          router.pathname === "/" ? "text-[#D5D5D5]" : ""
-                        }`}
-                        dropDownVariant="custom"
-                        dropDownButtonClass="md:hidden Capitalize !text-[18px] !py-2 !px-3 "
-                        dropDownVariantBg="text-[18px] hover:!bg-[#C732381A] !font-normal"
-                        dropdownLabel={isMobile ? "" : t("BRIDGE")}
-                        dropDownIcon={false}
-                        dropdownType={"hover"}
-                        dropDownContentClass="!bg-[#1B1B1B] translate-y-[1px]  drop-shadow-md round-md py-4
-                         py-2 md:visible md:relative md:opacity-100 !w-max md:!bg-transparent md:p-0"
-                      >
-                        {bridgeList.map((item, index) => (
-                          <a
-                            className={`px-6 py-2 flex items-center  hover:cursor-pointer text-light-high whitespace-nowrap ${
-                              item.optionLink === ""
-                                ? "pointer-events-none"
-                                : ""
-                            }`}
-                            key={index}
-                            href={item.optionLink}
-                            target={"_blank"}
-                            rel="noopener noreferrer"
-                          >
-                            <img
-                              src={item.imgUrl}
-                              alt={item.optionName}
-                              className={
-                                "mr-4 md:mr-2 w-[40px] h-[40px] md:w-[20px] md:h-[20px]"
-                              }
-                            />
-                            <span className={"flex flex-col md:hidden"}>
-                              <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
-                                {item.optionName}
-                                <Icon
-                                  viewClass="dropDownIcon !w-[10px] ml-2"
-                                  icon="chevroncolorchange"
-                                />
-                              </span>
-                              <span className={"text-[#D5D5D5] text-[12px]"}>
-                                {item.subText}
-                              </span>
-                            </span>
-                          </a>
-                        ))}
-                      </Dropdown>
+                      <BridgeDropdown
+                        list={bridgeList}
+                        isTablet={isLandScape}
+                      />
                     </li>
-                  ) : (
-                    ""
-                  )}
-
+                  ) : null}
                   {router.pathname === "/bnb" || router.pathname === "/atom" ? (
                     <li className="nav-item md:w-full md:mb-2">
                       <ButtonLink

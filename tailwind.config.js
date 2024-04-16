@@ -144,7 +144,7 @@ module.exports = {
       md: { max: "767px" },
       sm: { max: "511px" },
 
-      tall: { raw: "(min-height: 800px)" },
+      tall: { raw: "(min-height: 750px)" },
     },
     extend: {
       keyframes: {

@@ -7,6 +7,9 @@ body {
   background: #141414;
   font-family: "Poppins", sans-serif !important;
 }
+.rc-dropdown{
+  font-family: "Poppins", sans-serif !important;
+}
 
 .sectionContainer {
   @apply container; 
