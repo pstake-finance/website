@@ -88,7 +88,7 @@ export const GALAXY_DIGITAL_URL = "https://www.galaxydigital.io/";
 export const SPARTAN_CAPITAL = "https://spartancapital.com/";
 export const SINO_GLOBAL_CAPITAL = "https://www.sinoglobalcapital.com/";
 export const BINANCE_LABS = "https://labs.binance.com/";
-export const GOV_URL = "https://snapshot.org/#/pstakefinance.eth";
+export const GOV_URL = "https://forum.pstake.finance/";
 
 export const STAKEFISH =
   "https://stake.fish/en/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
