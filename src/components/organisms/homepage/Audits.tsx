@@ -166,12 +166,14 @@ const Audits = ({ deviceType }: any) => {
                   }
                 >
                   <div className={"mb-[60px]"}>
-                    <img
-                      src={getLogoUrl(item.image)}
-                      title="item.link"
-                      className="w-auto mb-[40px]"
-                      alt={item.image}
-                    />
+                    <div className={"h-[70px]"}>
+                      <img
+                        src={getLogoUrl(item.image)}
+                        title="item.link"
+                        className="w-auto mb-[10px]"
+                        alt={item.image}
+                      />
+                    </div>
                     <div>
                       <p
                         className={
