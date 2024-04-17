@@ -56,8 +56,8 @@
         <symbol id="icon-chevron"  viewBox="0 0 266 438">
             <path d="M258.476 235.971L64.132 430.314c-9.373 9.373-24.569 9.373-33.941 0L7.524 407.647c-9.357-9.357-9.375-24.522-.04-33.901L161.505 219 7.484 64.255c-9.335-9.379-9.317-24.544.04-33.901L30.191 7.687c9.373-9.373 24.569-9.373 33.941 0L258.475 202.03c9.373 9.372 9.373 24.568.001 33.941z"/>
         </symbol>
-        <symbol id="icon-chevroncolorchange" fill="none" viewBox="0 0 266 438">
-            <path d="M258.476 235.971L64.132 430.314c-9.373 9.373-24.569 9.373-33.941 0L7.524 407.647c-9.357-9.357-9.375-24.522-.04-33.901L161.505 219 7.484 64.255c-9.335-9.379-9.317-24.544.04-33.901L30.191 7.687c9.373-9.373 24.569-9.373 33.941 0L258.475 202.03c9.373 9.372 9.373 24.568.001 33.941z" fill="#fff"/>
+        <symbol id="icon-chevroncolorchange" viewBox="0 0 266 438">
+            <path d="M258.476 235.971L64.132 430.314c-9.373 9.373-24.569 9.373-33.941 0L7.524 407.647c-9.357-9.357-9.375-24.522-.04-33.901L161.505 219 7.484 64.255c-9.335-9.379-9.317-24.544.04-33.901L30.191 7.687c9.373-9.373 24.569-9.373 33.941 0L258.475 202.03c9.373 9.372 9.373 24.568.001 33.941z"/>
         </symbol>
         <symbol id="icon-announcements" viewBox="0 0 12 8">
             <title>Announcements</title>
@@ -317,9 +317,9 @@
                 <path d="M11.75 2.36536H16.25V6.86536" stroke-linecap="round" stroke-linejoin="round"></path>
                 <path d="M8 10.6154L16.25 2.36536"  stroke-linecap="round" stroke-linejoin="round"></path>
             </symbol>
-                <symbol fill="none" viewBox="0 0 16 16" id="icon-right-arrow2">
-                    <path d="M1 8H15" stroke="#F8EAEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M8 1L15 8L8 15" stroke="#F8EAEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <symbol viewBox="0 0 16 16" id="icon-right-arrow2">
+                    <path d="M1 8H15"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M8 1L15 8L8 15"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </symbol>
         </symbol>
     </defs>

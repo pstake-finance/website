@@ -24,7 +24,7 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
       {communityList.map((item, index) => (
         <a
           className={`px-5 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap w-max ${
+                        hover:cursor-pointer text-light-high whitespace-nowrap w-max group${
                           item.url === "" ? "pointer-events-none" : ""
                         }`}
           key={index}
@@ -38,10 +38,10 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
             className={"mr-4 md:mr-2 w-[39px] h-[39px] md:w-[20px] md:h-[20px]"}
           />
           <span className={"flex flex-col md:hidden"}>
-            <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
+            <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center group-hover:text-[#C73238]">
               {item.name}
               <Icon
-                viewClass="dropDownIcon !w-[10px] ml-1"
+                viewClass="dropDownIcon !w-[10px] ml-1 fill-[#fff] group-hover:fill-[#C73238]"
                 icon="chevroncolorchange"
               />
             </span>
