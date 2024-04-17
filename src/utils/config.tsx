@@ -16,6 +16,7 @@ export const PSTAKE_MEDIUM_URL =
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
 export const PSTAKE_DOCS_URL = "https://docs.pstake.finance";
 export const DISCORD_URL = "https://discord.gg/2ek5rUyT8x";
+export const GITHUB_URL = "https://github.com/persistenceOne/";
 export const PSTAKE_AUDITS_URL =
   "https://github.com/persistenceOne/pStake-auditReports";
 export const PECKSHIELD_AUDIT_REPORT =
@@ -48,21 +49,22 @@ export const PSTAKE_TRAIL_OF_BITS =
 export const PSTAKE_CERTORA =
   "https://github.com/persistenceOne/stkBNB-contracts/tree/main/certora?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
 export const PSTAKE_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2023/03/02/pstake-erc-20-liquid-staking-migration-utility/";
+  "https://blog.pstake.finance/2024/04/09/introducing-pp-pstake-airdrop-on-solana/";
 export const PSTAKE_BLOG_ONE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2023/03/migration-min-1160x622.png";
+  "https://blog.pstake.finance/wp-content/uploads/2024/04/OP11-1-1160x725.png";
 export const PSTAKE_BLOG_TWO_URL =
-  "https://blog.pstake.finance/2022/07/28/why-liquid-staking-is-a-game-changer-for-bnb/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_BNB_liquid_staking";
+  "https://blog.pstake.finance/2024/03/06/road-to-liquid-staking-traction-in-2024/";
 export const PSTAKE_BLOG_TWO_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2022/07/1-1160x619.png";
+  "https://blog.pstake.finance/wp-content/uploads/2024/03/Road-to-Traction-1160x653.png";
 export const PSTAKE_BLOG_THREE_URL =
-  "https://blog.pstake.finance/2023/01/15/stkatom-user-guide-atom-liquid-staking-tutorial/";
+  "https://blog.pstake.finance/2024/03/18/pstake-x-pancakeswap-making-stkbnb-the-most-liquid-bnb-lst/";
 export const PSTAKE_BLOG_THREE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2023/01/image1-min.png";
+  "https://blog.pstake.finance/wp-content/uploads/2024/03/photo_6323317880334172328_w-1160x647.jpg";
 export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const STK_BNB_TWITTER_URL = "https://twitter.com/pSTAKE_stkBNB";
 export const PSTAKE_TELEGRAM_URL = "https://t.me/pstakefinancechat";
+export const PSTAKE_DISCORD = "https://discord.com/invite/2ek5rUyT8x";
 export const PSTAKE_YOUTUBE_URL = "https://www.youtube.com/@pstakefinance";
 export const PSTAKE_REDDIT_URL = "https://www.reddit.com/r/pstake_official/";
 export const PERSISTENCE_ONE_URL =
@@ -86,6 +88,8 @@ export const GALAXY_DIGITAL_URL = "https://www.galaxydigital.io/";
 export const SPARTAN_CAPITAL = "https://spartancapital.com/";
 export const SINO_GLOBAL_CAPITAL = "https://www.sinoglobalcapital.com/";
 export const BINANCE_LABS = "https://labs.binance.com/";
+export const GOV_URL = "https://forum.pstake.finance/";
+
 export const STAKEFISH =
   "https://stake.fish/en/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const FIGMENT =
@@ -155,7 +159,7 @@ export const STK_FAQ_URL = "https://blog.pstake.finance/stkbnb-faqs/";
 export const GUIDES_URL = "https://blog.pstake.finance/category/guides/";
 export const STKATOM_BLOG_URL =
   "https://blog.pstake.finance/category/product/stkatom/";
-export const DOCS_URL = "http://docs.pstake.finance";
+export const DOCS_URL = "https://docs.pstake.finance";
 export const STK_BNB_DOCS_URL =
   "https://docs.pstake.finance/stkBNB_Staking_Overview/";
 export const SNANPSHOT_URL = "https://snapshot.org/#/pstakefinance.eth";
@@ -235,6 +239,31 @@ export const CRESCENT_STK_ATOM_DENOM =
 export const IBC_DENOM =
   "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2";
 
+export const COSMOS_IMMUNEFI = "https://immunefi.com/bounty/pstakeoncosmos/";
+export const BNB_IMMUNEFI = "https://immunefi.com/bounty/pstake/";
+export const FORT_MONITERING = "https://app.forta.network/agents/pstake";
+export const COSMOS_OAK_SECURITY =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkATOM/2023-02-17%20Audit%20Report%20-%20pSTAKE%20Native%20v1.0.pdf";
+export const COSMOS_NOTIANAL =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkATOM/Notional%20-%20Persistence%20Security%20Audit.pdf";
+export const HALBORN_COSMOS_STAKING =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkATOM/Persistence_Liquid_Staking_Module_Cosmos_Security_Assessment_Report_Halborn_Final.pdf";
+export const HALBORN_COSMOS_MODULE =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkATOM/Persistence_stkATOM_Cosmos_Security_Audit_Report_Halborn_Final.pdf";
+export const HALBORN_BNB_MODULE =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pSTAKE_stkBNB_Smart_Contract_Audit_Halborn%20%5B05.08.2022%5D.pdf";
+export const PECKSHIELD_BNB =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/stkBNB/pStake_stkBNB_Smart_Contract_Audit_Peckshield%20%5B04.07.2022%5D.pdf";
+export const KUDELSKI_SECURITY_SOLANA =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/pSTAKE%20Solana%20Staking%20audit%20-%20Kudelski%20Security%20%5B10.05.2022%5D.pdf";
+export const TRAIL_OF_BITS =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/pStake%20Smart%20Contracts%20%2B%20Bridge%20Audit%20-%20Trail%20of%20Bits%20%5B26.04.22%5D.pdf";
+export const CONSENSYS_DILLIGENCE =
+  "https://consensys.io/diligence/audits/2021/08/pstake-finance/";
+export const PECKSHIELD_ETHEREUM =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/pSTAKE%20Smart%20Contract%20Audit%20-%20PeckShield%20%5B09.07.2021%5D.pdf";
+export const SOLIDIFIED =
+  "https://github.com/persistenceOne/pStake-auditReports/blob/main/pSTAKE%20Smart%20Contract%20Audit%20-%20Solidified%20%5B02.08.2021%5D.pdf";
 export const TVL = "tvl";
 export const STK_ATOM_MINIMAL_DENOM = "stk/uatom";
 export const APR_BASE_RATE = 18.92;

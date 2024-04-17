@@ -43,13 +43,12 @@ module.exports = {
     },
     backgroundImage: {
       osmoPrimaryButton: "linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%)",
-      homeBannerBg: "url('/images/bg_images/home_bg.svg')",
+      homeBannerBg: "url('/images/bg_images/home_hero_bg.svg')",
       immunefiWhite: "url('/images/audits/immunefi_header.svg')",
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
         "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
-      topBanner: `url('/images/bg_images/atom_topbar.svg'), 
-      linear-gradient(80.17deg, #232334 -4.31%, #6866ff 111.08%, #6866ff 127.68%)`,
+      topBanner: `linear-gradient(90.03deg, #B7E2F7 2.08%, #873BA2 99.98%)`,
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
       homePageBanner: `url('/images/bg_images/bg.svg'),
@@ -144,6 +143,8 @@ module.exports = {
       lg: { max: "1023px" },
       md: { max: "767px" },
       sm: { max: "511px" },
+
+      tall: { raw: "(min-height: 750px)" },
     },
     extend: {
       keyframes: {
@@ -162,7 +163,7 @@ module.exports = {
         "menu-open": "menu-open 200ms ease-in-out",
       },
       screens: {
-        "-2xl": { min: "1536px" },
+        "-2xl": { min: "1440px" },
         // => @media (max-width: 1535px) { ... }
         "-xl": { min: "1280px" },
         "-lg": { min: "1024px" },
@@ -170,6 +171,7 @@ module.exports = {
         "-sm": { min: "640px" },
       },
       backgroundSize: {
+        homeBannerBg: "cover",
         atomBanner: "30%, cover",
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
@@ -184,6 +186,20 @@ module.exports = {
         osmoBanner: "100% 0,100% 100%",
         dydxBanner: "100% 5%,100% 100%",
         title_bg: "0% -150px",
+      },
+    },
+    container: {
+      // you can configure the container to be centered
+      center: true,
+
+      // or have default horizontal padding
+      padding: "1rem",
+      screens: {
+        sm: "600px",
+        md: "728px",
+        lg: "984px",
+        xl: "1240px",
+        xxl: "1440px",
       },
     },
   },

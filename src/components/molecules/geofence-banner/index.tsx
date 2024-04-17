@@ -78,33 +78,32 @@ const GeofenceNotice = () => {
           : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
       }
     >
-      <p className="text-light-high text-[12px] flex items-center flex-wrap text-center justify-center">
-        <img
-          src={"/images/stk_huahua.svg"}
-          alt={"stkAtom"}
-          width={"16px"}
-          height={"16px"}
-          className="logo mr-1"
+      <p className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center">
+        pSTAKE Finance is expanding to Solana with a BIG airdrop for the
+        upcoming stkSOL launch
+        <Icon
+          viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"
+          icon="right-arrow-bold"
         />
-        <span>stkHUAHUA is NOW LIVE. Liquid Stake your HUAHUA with&nbsp;</span>
-        {validatorsInfo.huahua.loader ? (
-          <Spinner size={"small"} className={"!w-3 !h-3"} />
-        ) : (
-          validatorsInfo.huahua.list.length
-        )}
-        &nbsp;validators&nbsp;
-        <a
-          className="link underline"
-          href={"https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          now.
-        </a>
+        {/*<span>stkHUAHUA is NOW LIVE. Liquid Stake your HUAHUA with&nbsp;</span>*/}
+        {/*{validatorsInfo.huahua.loader ? (*/}
+        {/*  <Spinner size={"small"} className={"!w-3 !h-3"} />*/}
+        {/*) : (*/}
+        {/*  validatorsInfo.huahua.list.length*/}
+        {/*)}*/}
+        {/*&nbsp;validators&nbsp;*/}
+        {/*<a*/}
+        {/*  className="link underline"*/}
+        {/*  href={"https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze"}*/}
+        {/*  target="_blank"*/}
+        {/*  rel="noopener noreferrer"*/}
+        {/*>*/}
+        {/*  now.*/}
+        {/*</a>*/}
       </p>
       <div onClick={closeBanner}>
         <Icon
-          viewClass="close w-[10px] h-[10px] fill-[#fff] absolute top-[13px] right-[20px] cursor-pointer"
+          viewClass="close w-[10px] h-[10px] fill-[#000] absolute top-[13px] right-[20px] cursor-pointer"
           icon="close"
         />
       </div>

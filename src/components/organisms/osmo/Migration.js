@@ -19,7 +19,7 @@ const MigrationCard = () => {
                   className="w-[52px] h-[52px] sm:w-[36px] sm:h-[36px]"
                 />
                 <Icon
-                  viewClass="right-arrow w-[16px] h-[16px] mx-8"
+                  viewClass="right-arrow w-[16px] h-[16px] mx-8 fill-[#fff]"
                   icon="right-arrow-bold"
                 />
                 <img

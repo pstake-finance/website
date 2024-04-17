@@ -7,17 +7,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1280 },
     items: 3,
-    paritialVisibilityGutter: 10,
+    partialVisibilityGutter: 10,
   },
   tablet: {
     breakpoint: { max: 1280, min: 768 },
     items: 2,
-    paritialVisibilityGutter: 10,
+    partialVisibilityGutter: 10,
   },
   mobile: {
     breakpoint: { max: 768, min: 0 },
     items: 1,
-    paritialVisibilityGutter: 10,
+    partialVisibilityGutter: 10,
   },
 };
 

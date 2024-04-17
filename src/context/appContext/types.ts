@@ -41,6 +41,14 @@ export interface AppState {
     BLD: 0;
     HUAHUA: 0;
   };
+  validatorsList: {
+    uatom: number;
+    uosmo: number;
+    adydx: number;
+    ustars: number;
+    uhuahua: number;
+    ubld: number;
+  };
 }
 
 export interface AppProviderProps {
