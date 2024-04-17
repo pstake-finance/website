@@ -15,7 +15,7 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
     <div className={"bg-[#1B1B1B] rounded-md py-2"}>
       {list.map((item, index) => (
         <a
-          className={`px-6 py-2 flex items-center  hover:cursor-pointer text-light-high whitespace-nowrap ${
+          className={`px-6 py-2 flex items-center hover:cursor-pointer text-light-high whitespace-nowrap group ${
             item.optionLink === "" ? "pointer-events-none" : ""
           }`}
           key={index}
@@ -29,10 +29,10 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
             className={"mr-4 md:mr-2 w-[40px] h-[40px] md:w-[20px] md:h-[20px]"}
           />
           <span className={"flex flex-col md:hidden"}>
-            <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
+            <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center group-hover:text-[#C73238]">
               {item.optionName}
               <Icon
-                viewClass="dropDownIcon !w-[10px] ml-2"
+                viewClass="dropDownIcon !w-[10px] ml-2 fill-[#fff] group-hover:fill-[#C73238]"
                 icon="chevroncolorchange"
               />
             </span>

@@ -16,7 +16,7 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
       {learnList.map((item, index) => (
         <a
           className="px-6 md:px-3 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap"
+                        hover:cursor-pointer text-light-high whitespace-nowrap group"
           href={item.optionLink}
           key={index}
           target={"_blank"}
@@ -38,7 +38,7 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
           </span>
           <span
             className="ml-4 text-light-high text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
+                        font-medium leading-normal md:text-xsm md:ml-2 group-hover:text-[#C73238]"
           >
             {item.optionName}
           </span>

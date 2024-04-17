@@ -73,7 +73,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
       {networks.map((item, index) => (
         <a
           className={`px-6 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] ${
+                        hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] group ${
                           item.optionLink === "" ? "pointer-events-none" : ""
                         }`}
           key={index}
@@ -87,7 +87,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
             className={"mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"}
           />
           <span className={"flex flex-col md:hidden"}>
-            <span className="text-light-high font-medium leading-normal text-base md:text-xsm flex items-center">
+            <span className="text-light-high font-medium leading-normal text-base md:text-xsm flex items-center group-hover:text-[#C73238]">
               {item.optionName}
               {item.optionLink === "" ? (
                 <span
@@ -99,7 +99,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
                 </span>
               ) : (
                 <Icon
-                  viewClass="dropDownIcon !w-[10px] ml-2"
+                  viewClass="dropDownIcon !w-[10px] ml-2 fill-[#fff] group-hover:fill-[#C73238]"
                   icon="chevroncolorchange"
                 />
               )}

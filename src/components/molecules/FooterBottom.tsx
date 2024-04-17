@@ -150,7 +150,7 @@ const FooterBottom = () => {
                   >
                     Download Media Kit
                     <Icon
-                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px]"
+                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent"
                       icon={"right-arrow2"}
                     />
                   </p>

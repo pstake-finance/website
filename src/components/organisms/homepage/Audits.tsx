@@ -188,13 +188,13 @@ const Audits = ({ deviceType }: any) => {
                   <a
                     href={item.link}
                     target="_blank"
-                    className="text-left font-semibold text-[#F8EAEA] flex items-center"
+                    className="text-left font-semibold text-[#F8EAEA] flex items-center hover:text-[#C73238] group"
                     rel="noopener noreferrer"
                     key={index}
                   >
                     See Report
                     <Icon
-                      viewClass="arrow-right w-[14px] ml-2"
+                      viewClass="arrow-right w-[14px] ml-2 stroke-[#F8EAEA] group-hover:stroke-[#C73238] fill-transparent"
                       icon="right-arrow2"
                     />
                   </a>

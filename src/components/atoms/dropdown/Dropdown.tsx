@@ -79,7 +79,7 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(
               />
             ) : (
               <Icon
-                viewClass="dropDownIcon !w-[10px]"
+                viewClass="dropDownIcon !w-[10px] fill-[#fff]"
                 icon="chevroncolorchange"
               />
             )

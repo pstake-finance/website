@@ -96,7 +96,7 @@ const Blogs = ({ deviceType }) => {
                       <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
                         Read
                         <Icon
-                          viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
+                          viewClass="arrow-right w-[14px] stroke-[#F8EAEA] mx-2 fill-transparent"
                           icon="right-arrow2"
                         />
                       </p>
@@ -113,32 +113,32 @@ const Blogs = ({ deviceType }) => {
                 className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
                 key={index}
               >
-                <div className="bg-[#1B1B1B] rounded-[10px]">
+                <div className="bg-[#1B1B1B] rounded-[10px] group">
                   <a
                     href={item.blogLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="blog-image h-[212px] overflow-hidden">
+                    <span className="blog-image h-[212px] overflow-hidden block">
                       <img
                         alt="blog2"
                         className={"rounded-tr-[10px] rounded-tl-[10px]"}
                         src={item.imageLink}
                       />
-                    </div>
+                    </span>
 
-                    <div className="md:p-4 px-6 py-5">
-                      <p className="text-[#D1D1D1] leading-normal text-[14px] mb-2">
+                    <span className="md:p-4 px-6 py-5 block">
+                      <span className="text-[#D1D1D1] leading-normal text-[14px] mb-2 block">
                         {item.title}
-                      </p>
-                      <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
+                      </span>
+                      <span className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2 group-hover:text-[#C73238] group block">
                         Read
                         <Icon
-                          viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
+                          viewClass="arrow-right w-[14px] stroke-[#F8EAEA] mx-2 group-hover:stroke-[#C73238] fill-transparent"
                           icon="right-arrow2"
                         />
-                      </p>
-                    </div>
+                      </span>
+                    </span>
                   </a>
                 </div>
               </div>

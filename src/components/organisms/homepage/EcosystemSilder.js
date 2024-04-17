@@ -132,7 +132,7 @@ const EcosystemSlider = ({ deviceType }) => {
                   >
                     See Report
                     <Icon
-                      viewClass="arrow-right w-[14px] ml-2"
+                      viewClass="arrow-right w-[14px] ml-2 stroke-[#F8EAEA] fill-transparent"
                       icon="right-arrow2"
                     />
                   </a>
