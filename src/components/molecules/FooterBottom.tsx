@@ -200,8 +200,20 @@ const FooterBottom = () => {
                           key={index}
                           className={"text-[#D5D5D5B0] mb-[6px]"}
                         >
-                          <Link href={item.link} className="nav-link" passHref>
+                          <Link
+                            href={item.link}
+                            className="nav-link group flex items-center"
+                            passHref
+                          >
                             {item.text}
+                            {item.link !== "" ? (
+                              <Icon
+                                viewClass="arrow-right w-[14px] stroke-[#D5D5D5B2] ml-1 group-hover:stroke-[#C73238] fill-transparent"
+                                icon="external-link"
+                              />
+                            ) : (
+                              ""
+                            )}
                           </Link>
                         </div>
                       );
@@ -219,22 +231,24 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={"text-[#D5D5D5B0]  mb-[6px] flex"}
+                          className={
+                            "text-[#D5D5D5B0] mb-[6px] flex items-center"
+                          }
                         >
                           <Link
                             href={item.link}
-                            className="nav-link"
+                            className="nav-link group flex items-center"
                             passHref
                             target={item.externLink ? "_blank" : "_self"}
                           >
                             {item.text}
+                            {item.externLink ? (
+                              <Icon
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 mt-[3px] group-hover:stroke-[#C73238]"
+                                icon="external-link"
+                              />
+                            ) : null}
                           </Link>
-                          {item.externLink ? (
-                            <Icon
-                              viewClass="fill-transparent stroke-[#fff] !w-[16px] !h-[16px] ml-2 mt-[3px]"
-                              icon="external-link"
-                            />
-                          ) : null}
                         </div>
                       );
                     })}
@@ -251,24 +265,22 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={
-                            "text-[#D5D5D5B0]  mb-[6px] flex items-center "
-                          }
+                          className={"text-[#D5D5D5B0]  mb-[6px]  "}
                         >
                           <Link
                             href={item.link}
-                            className="nav-link"
+                            className="nav-link group flex items-center"
                             passHref
                             target={item.externLink ? "_blank" : "_self"}
                           >
                             {item.text}
+                            {item.externLink ? (
+                              <Icon
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 group-hover:stroke-[#C73238]"
+                                icon="external-link"
+                              />
+                            ) : null}
                           </Link>
-                          {item.externLink ? (
-                            <Icon
-                              viewClass="fill-transparent stroke-[#fff] !w-[16px] !h-[16px] ml-2"
-                              icon="external-link"
-                            />
-                          ) : null}
                         </div>
                       );
                     })}

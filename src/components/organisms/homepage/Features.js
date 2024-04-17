@@ -69,7 +69,7 @@ const Features = () => {
             {list.slice(2, list.length + 1).map((item, index) => (
               <div
                 className={`${
-                  index === 1 ? "flex-1" : "mb-[40px] md:mb-2"
+                  index === 1 ? "flex-1" : "mb-[20px] md:mb-2"
                 } -lg:max-w-[608px] border-[#000000] bg-[#1B1B1B] rounded-[8px] border bg-[#1B1B1B] border-[#3A3A3A] rounded-bl-md rounded-br-md md:mb-2`}
                 key={index}
               >
