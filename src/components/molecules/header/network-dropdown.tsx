@@ -104,7 +104,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
                 />
               )}
             </span>
-            <span className="text-[#D5D5D5] text-xsm font-light leading-normal">
+            <span className="text-[#D5D5D5] text-xsm font-light leading-normal group-hover:text-[#C73238]">
               {item.symbol}
             </span>
           </span>

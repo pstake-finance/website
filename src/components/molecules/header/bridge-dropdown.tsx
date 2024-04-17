@@ -28,7 +28,7 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
             alt={item.optionName}
             className={"mr-4 md:mr-2 w-[40px] h-[40px] md:w-[20px] md:h-[20px]"}
           />
-          <span className={"flex flex-col md:hidden"}>
+          <span className={"flex flex-col md:hidden text-base"}>
             <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center group-hover:text-[#C73238]">
               {item.optionName}
               <Icon
@@ -36,7 +36,13 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
                 icon="chevroncolorchange"
               />
             </span>
-            <span className={"text-[#D5D5D5] text-[12px]"}>{item.subText}</span>
+            <span
+              className={
+                "text-[#D5D5D5] text-[12px] group-hover:text-[#C73238]"
+              }
+            >
+              {item.subText}
+            </span>
           </span>
         </a>
       ))}

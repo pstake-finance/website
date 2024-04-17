@@ -287,7 +287,7 @@ const Header = () => {
 
   const bridgeList = [
     {
-      imgUrl: "/images/networks/ethereum.svg",
+      imgUrl: "/images/networks/bnb.svg",
       optionName: "ETH to BSC bridge",
       optionLink: BSC_BRIDGE_URL,
       subText: "Bridge PSTAKE to BSC Chain",

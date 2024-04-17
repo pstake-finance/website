@@ -37,7 +37,7 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
             />
           </span>
           <span
-            className="ml-4 text-light-high text-sm
+            className="ml-4 text-light-high text-base md:text-sm
                         font-medium leading-normal md:text-xsm md:ml-2 group-hover:text-[#C73238]"
           >
             {item.optionName}

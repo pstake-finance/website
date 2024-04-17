@@ -88,7 +88,7 @@ const Banner = () => {
         <div className="">
           <div className={"flex flex-wrap pt-10"}>
             <div className={"pr-8 md:border-0 border-r border-[#FCFCFC]"}>
-              <p className="text-light-high font-bold text-[44px] md:text-[30px] md:text-left">
+              <p className="text-light-high font-bold text-[44px] md:text-[30px] text-left">
                 $
                 {numberFormat(
                   Number(cosmosData.tvl * tokenPrices.ATOM) +
