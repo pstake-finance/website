@@ -102,16 +102,26 @@ const getItemsPerRow = (
               <p className={"text-[#B2A6A6] text-sm leading-[25px]"}>
                 Validators
               </p>
-              <a
-                href={item.validatorsLink}
-                target="_blank"
-                rel="noreferrer"
+              <p
                 className={
-                  "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] hover:underline"
+                  "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] flex items-center"
                 }
               >
                 {item.validatorsLength}
-              </a>
+                <a
+                  href={item.validatorsLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={
+                    "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] hover:underline"
+                  }
+                >
+                  <Icon
+                    viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913] ml-1"
+                    icon="external-link"
+                  />
+                </a>
+              </p>
             </div>
           ) : null}
         </div>

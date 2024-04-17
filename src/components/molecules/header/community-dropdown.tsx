@@ -38,7 +38,7 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
             className={"mr-4 md:mr-2 w-[39px] h-[39px] md:w-[20px] md:h-[20px]"}
           />
           <span className={"flex flex-col md:hidden text-base md:text-sm"}>
-            <span className="text-light-high font-medium leading-normal flex items-center group-hover:text-[#C73238]">
+            <span className="text-light-high font-medium leading-normal flex items-center">
               {item.name}
               <Icon
                 viewClass="dropDownIcon !w-[10px] ml-1 fill-[#fff] group-hover:fill-[#C73238]"

@@ -38,10 +38,14 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
           </span>
           <span
             className="ml-4 text-light-high text-base md:text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2 group-hover:text-[#C73238]"
+                        font-medium leading-normal md:text-xsm md:ml-2"
           >
             {item.optionName}
           </span>
+          <Icon
+            viewClass="dropDownIcon !w-[10px] ml-1 fill-[#fff] group-hover:fill-[#C73238]"
+            icon="chevroncolorchange"
+          />
         </a>
       ))}
     </div>

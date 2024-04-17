@@ -21,6 +21,7 @@ import {
   GUIDES_FAQ_URL,
   GUIDES_URL,
   GOV_URL,
+  DOCS_URL,
 } from "../../utils/config";
 
 const FooterBottom = () => {
@@ -110,7 +111,7 @@ const FooterBottom = () => {
     },
     {
       externLink: true,
-      link: "DOCS_URL",
+      link: DOCS_URL,
       text: "Documentation",
     },
   ];
@@ -143,17 +144,21 @@ const FooterBottom = () => {
                   <p className={"text-[12px] text-[#D5D5D5B0] mb-4 "}>
                     Managed by Persistence Labs
                   </p>
-                  <p
-                    className={
-                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3"
+                  <a
+                    href={
+                      "https://persistence.notion.site/pSTAKE-Media-Kit-a2190b24b1194a24934677c7272d1cf8"
                     }
+                    className={
+                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#C73238] group"
+                    }
+                    rel="noopener noreferrer"
                   >
                     Download Media Kit
                     <Icon
-                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent"
+                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent group-hover:stroke-[#C73238]"
                       icon={"right-arrow2"}
                     />
-                  </p>
+                  </a>
                   <div className={"flex items-center justify-start"}>
                     {iconFooterList.map((item, index) => (
                       <a
@@ -226,7 +231,7 @@ const FooterBottom = () => {
                           </Link>
                           {item.externLink ? (
                             <Icon
-                              viewClass="fill-transparent stroke-[#fff] !w-[16px] !h-[16px] ml-2"
+                              viewClass="fill-transparent stroke-[#fff] !w-[16px] !h-[16px] ml-2 mt-[3px]"
                               icon="external-link"
                             />
                           ) : null}
