@@ -292,7 +292,7 @@ const FooterBottom = () => {
         </div>
         <div
           className="max-w-[1240px] mx-auto flex items-center justify-between flex-wrap sm:block sm:text-center
-        pb-[60px] px-4 pt-[20px] border-t border-[#D5D5D533] md:pb-4"
+        pb-[60px] md:px-4 pt-[20px] border-t border-[#D5D5D533] md:pb-4"
         >
           <p className="text-[#70747c] text-[12px] sm:mb-4 md:text-center">
             © Copyright

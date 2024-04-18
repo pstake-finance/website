@@ -76,7 +76,7 @@ const StakingSteps = () => {
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
                   Receive stkToken
                 </p>
-                <p className="text-[#ECECEC] text-[14px] w-[234px] break-words leading-[21px]">
+                <p className="text-[#ECECEC] text-[14px] w-[260px] break-words leading-[21px]">
                   Get liquid stkToken in return. Pat yourself on the back for
                   contributing to network decentralization.
                 </p>
