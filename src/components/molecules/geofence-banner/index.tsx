@@ -78,7 +78,12 @@ const GeofenceNotice = () => {
           : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
       }
     >
-      <p className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center">
+      <a
+        href={"https://pp.pstake.finance/"}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center"
+      >
         pSTAKE Finance is expanding to Solana with a BIG airdrop for the
         upcoming stkSOL launch
         <Icon
@@ -100,7 +105,7 @@ const GeofenceNotice = () => {
         {/*>*/}
         {/*  now.*/}
         {/*</a>*/}
-      </p>
+      </a>
       <div onClick={closeBanner}>
         <Icon
           viewClass="close w-[10px] h-[10px] fill-[#000] absolute top-[13px] right-[20px] cursor-pointer"

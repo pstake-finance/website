@@ -21,6 +21,7 @@ import {
   GUIDES_FAQ_URL,
   GUIDES_URL,
   GOV_URL,
+  DOCS_URL,
 } from "../../utils/config";
 
 const FooterBottom = () => {
@@ -77,12 +78,12 @@ const FooterBottom = () => {
     },
     {
       externLink: false,
-      link: "/stars",
+      link: "",
       text: "STARS",
     },
     {
       externLink: false,
-      link: "/huahua",
+      link: "",
       text: "HUAHUA",
     },
   ];
@@ -110,7 +111,7 @@ const FooterBottom = () => {
     },
     {
       externLink: true,
-      link: "DOCS_URL",
+      link: DOCS_URL,
       text: "Documentation",
     },
   ];
@@ -132,7 +133,7 @@ const FooterBottom = () => {
       <div className={`aos-init aos-animate ${router.pathname}`}>
         <div className="container py-[50px] md:py-[30px]">
           <div>
-            <div className="max-w-[1240px] mx-auto flex items-center">
+            <div className="max-w-[1240px] mx-auto flex items-center md:block">
               <div className="flex flex-wrap justify-between w-full">
                 <div className={"w-[500px] md:mb-4"}>
                   <img
@@ -143,18 +144,22 @@ const FooterBottom = () => {
                   <p className={"text-[12px] text-[#D5D5D5B0] mb-4 "}>
                     Managed by Persistence Labs
                   </p>
-                  <p
-                    className={
-                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3"
+                  <a
+                    href={
+                      "https://persistence.notion.site/pSTAKE-Media-Kit-a2190b24b1194a24934677c7272d1cf8"
                     }
+                    className={
+                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#C73238] group"
+                    }
+                    rel="noopener noreferrer"
                   >
                     Download Media Kit
                     <Icon
-                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent"
+                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent group-hover:stroke-[#C73238]"
                       icon={"right-arrow2"}
                     />
-                  </p>
-                  <div className={"flex items-center justify-start"}>
+                  </a>
+                  <div className={"flex items-center justify-start lg:hidden"}>
                     {iconFooterList.map((item, index) => (
                       <a
                         key={index}
@@ -195,8 +200,20 @@ const FooterBottom = () => {
                           key={index}
                           className={"text-[#D5D5D5B0] mb-[6px]"}
                         >
-                          <Link href={item.link} className="nav-link" passHref>
+                          <Link
+                            href={item.link}
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
+                            passHref
+                          >
                             {item.text}
+                            {item.link !== "" ? (
+                              <Icon
+                                viewClass="arrow-right w-[14px] stroke-[#D5D5D5B2] ml-1 group-hover:stroke-[#C73238] fill-transparent"
+                                icon="external-link"
+                              />
+                            ) : (
+                              ""
+                            )}
                           </Link>
                         </div>
                       );
@@ -214,22 +231,24 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={"text-[#D5D5D5B0]  mb-[6px] flex"}
+                          className={
+                            "text-[#D5D5D5B0] mb-[6px] flex items-center"
+                          }
                         >
                           <Link
                             href={item.link}
-                            className="nav-link"
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
                             passHref
                             target={item.externLink ? "_blank" : "_self"}
                           >
                             {item.text}
+                            {item.externLink ? (
+                              <Icon
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 mt-[3px] group-hover:stroke-[#C73238]"
+                                icon="external-link"
+                              />
+                            ) : null}
                           </Link>
-                          {item.externLink ? (
-                            <Icon
-                              viewClass="fill-transparent stroke-[#fff] !w-[16px] !h-[16px] ml-2"
-                              icon="external-link"
-                            />
-                          ) : null}
                         </div>
                       );
                     })}
@@ -246,36 +265,55 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={
-                            "text-[#D5D5D5B0]  mb-[6px] flex items-center "
-                          }
+                          className={"text-[#D5D5D5B0]  mb-[6px]  "}
                         >
                           <Link
                             href={item.link}
-                            className="nav-link"
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
                             passHref
                             target={item.externLink ? "_blank" : "_self"}
                           >
                             {item.text}
+                            {item.externLink ? (
+                              <Icon
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 group-hover:stroke-[#C73238]"
+                                icon="external-link"
+                              />
+                            ) : null}
                           </Link>
-                          {item.externLink ? (
-                            <Icon
-                              viewClass="fill-transparent stroke-[#fff] !w-[16px] !h-[16px] ml-2"
-                              icon="external-link"
-                            />
-                          ) : null}
                         </div>
                       );
                     })}
                   </div>
                 </div>
               </div>
+              <div className={"flex items-center justify-start -lg:hidden"}>
+                {iconFooterList.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.url}
+                    target="_blank"
+                    className={`flex items-center rounded-full group`}
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`w-[24px] h-[24px] bg-[#434343] flex 
+                        items-center justify-center rounded-full mr-3`}
+                    >
+                      <Icon
+                        viewClass="socialIcon fill-[#000] !w-[12px] !h-[12px]"
+                        icon={item.icon}
+                      />
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
         <div
           className="max-w-[1240px] mx-auto flex items-center justify-between flex-wrap sm:block sm:text-center
-        pb-[60px] px-4 pt-[20px] border-t border-[#D5D5D533] md:pb-4"
+        pb-[60px] md:px-4 pt-[20px] border-t border-[#D5D5D533] md:pb-4"
         >
           <p className="text-[#70747c] text-[12px] sm:mb-4 md:text-center">
             © Copyright

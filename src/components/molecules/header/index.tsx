@@ -60,6 +60,7 @@ import NetworkDropdown from "./network-dropdown";
 import LearnDropdown from "./learn-dropdown";
 import CommunityDropdown from "./community-dropdown";
 import BridgeDropdown from "./bridge-dropdown";
+import MobileHeader from "./mobile-header";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -201,13 +202,15 @@ const Header = () => {
   const networks = [
     {
       optionName: "Cosmos",
-      optionLink: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
+      optionLink:
+        "https://app.pstake.finance/cosmos/stake?token=ATOM&chain=cosmos",
       imgUrl: "/images/networks/atom.svg",
       symbol: "ATOM",
     },
     {
       optionName: "Osmosis",
-      optionLink: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
+      optionLink:
+        "https://app.pstake.finance/cosmos/stake?token=OSMO&chain=osmosis",
       imgUrl: "/images/networks/osmo.svg",
       symbol: "OSMO",
     },
@@ -219,14 +222,15 @@ const Header = () => {
     },
     {
       optionName: "dYdX",
-      optionLink: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
+      optionLink:
+        "https://app.pstake.finance/cosmos/stake?token=DYDX&chain=Dydx",
       imgUrl: "/images/networks/dydx.svg",
       symbol: "DYDX",
     },
     {
       optionName: "Stargaze",
       optionLink:
-        "https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
+        "https://app.pstake.finance/cosmos/stake?token=STARS&chain=Stargaze",
       imgUrl: "/images/stars.svg",
       symbol: "STARS",
     },
@@ -240,7 +244,7 @@ const Header = () => {
     {
       optionName: "Chihuahua",
       optionLink:
-        "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
+        "https://app.pstake.finance/cosmos/stake?token=HUAHUA&chain=persistence",
       imgUrl: "/images/networks/huahua.svg",
       symbol: "HUAHUA",
     },
@@ -287,7 +291,7 @@ const Header = () => {
 
   const bridgeList = [
     {
-      imgUrl: "/images/networks/ethereum.svg",
+      imgUrl: "/images/networks/bnb.svg",
       optionName: "ETH to BSC bridge",
       optionLink: BSC_BRIDGE_URL,
       subText: "Bridge PSTAKE to BSC Chain",
@@ -363,7 +367,7 @@ const Header = () => {
                     : router.pathname === "/bnb"
                     ? "[.is-sticky_&]:bg-bnbPrimary"
                     : "[.is-sticky_&]:bg-red"
-                } -md:hidden md:py-2 !py-2.5 md:text-sm`}
+                } -lg:hidden md:py-2 !py-2.5 md:text-sm`}
                 variant={"custom"}
                 onClick={toggleMenu}
                 id={"toggleButton"}
@@ -382,127 +386,133 @@ const Header = () => {
               </Button>
               <div
                 className={`${
-                  isOpen ? "md:transform-none" : "md:-translate-x-full"
-                } md:fixed md:top-0 md:left-0 md:z-40 md:w-[200px] md:h-screen md:transition-transform 
-               md:basis-auto md:basis-full md:grow menu-open
+                  isOpen ? "lg:transform-none" : "lg:-translate-x-full"
+                } lg:fixed lg:top-0 lg:left-0 md:z-40 lg:w-[100%] lg:h-screen lg:transition-transform lg:bg-[#141414]
+               lg:basis-auto lg:basis-full lg:grow menu-open
                `}
                 id="navbarCollapse"
               >
-                <div
-                  className={`${
-                    isOpen ? "md:fixed" : "md:relative"
-                  } -md:hidden md:left-0 md:right-0 md:bottom-0
-              md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}
-                />
-                <ul
-                  className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col md:bg-[#141414]
+                {isLandScape ? (
+                  <MobileHeader
+                    networks={networks}
+                    learnList={learnList}
+                    communityList={socialList}
+                    bridgeList={bridgeList}
+                    closeMenu={() => {
+                      setIsOpen(false);
+                    }}
+                    className={"-lg:hidden"}
+                  />
+                ) : (
+                  <ul
+                    className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col 
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-2`}
-                  id="mySidenav"
-                  ref={sideBarRef}
-                >
-                  <li className="nav-item nav__menu-item md:hidden">
-                    <NetworkDropdown
-                      networks={networks}
-                      isTablet={isLandScape}
-                    />
-                  </li>
-                  <li className="nav-item nav__menu-item">
-                    <LearnDropdown
-                      learnList={learnList}
-                      isTablet={isLandScape}
-                    />
-                  </li>
-                  <li className="nav-item nav__menu-item md:hidden">
-                    <CommunityDropdown
-                      communityList={socialList}
-                      isTablet={isLandScape}
-                    />
-                  </li>
-                  {router.pathname === "/" ? (
-                    <li className="nav-item nav__menu-item md:hidden">
-                      <BridgeDropdown
-                        list={bridgeList}
+                  >
+                    <li className="nav-item nav__menu-item lg:hidden">
+                      <NetworkDropdown
+                        networks={networks}
                         isTablet={isLandScape}
                       />
                     </li>
-                  ) : null}
-                  {router.pathname === "/bnb" || router.pathname === "/atom" ? (
-                    <li className="nav-item md:w-full md:mb-2">
-                      <ButtonLink
-                        className={`${
-                          router.pathname === "/bnb"
-                            ? "[.is-sticky_&]:bg-bnbPrimary"
-                            : " [.is-sticky_&]:bg-atomPrimary"
-                        } dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
-                        variant={"custom"}
-                        href={
-                          router.pathname === "/bnb"
-                            ? IMMUNEFI_WEB_URL
-                            : IMMUNEFI_STK_ATOM_URL
-                        }
-                        scale="lg"
-                        target={"_blank"}
-                        isDisabled={false}
-                        customButtonClass={"bg-black-800 text-light-high"}
-                      >
-                        <div
+                    <li className="nav-item nav__menu-item lg:hidden">
+                      <LearnDropdown
+                        learnList={learnList}
+                        isTablet={isLandScape}
+                      />
+                    </li>
+                    <li className="nav-item nav__menu-item lg:hidden">
+                      <CommunityDropdown
+                        communityList={socialList}
+                        isTablet={isLandScape}
+                      />
+                    </li>
+                    {router.pathname === "/" ? (
+                      <li className="nav-item nav__menu-item lg:hidden">
+                        <BridgeDropdown
+                          list={bridgeList}
+                          isTablet={isLandScape}
+                        />
+                      </li>
+                    ) : null}
+                    {router.pathname === "/bnb" ||
+                    router.pathname === "/atom" ? (
+                      <li className="nav-item md:w-full md:mb-2">
+                        <ButtonLink
                           className={`${
                             router.pathname === "/bnb"
-                              ? "[.is-sticky_&]:bg-immunifyBlack"
-                              : ""
-                          } bg-immunefiWhite w-[90px] h-[18px] bg-no-repeat bg-center`}
-                        />
-                      </ButtonLink>
-                    </li>
-                  ) : (
-                    ""
-                  )}
-
-                  <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                    {router.pathname !== "/" ? (
-                      <ButtonLink
-                        className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
-                        variant={"custom"}
-                        href={appURL}
-                        scale="lg"
-                        target={"_blank"}
-                        isDisabled={false}
-                        customButtonClass={`${
-                          router.pathname === "/bnb"
-                            ? "bg-bnbPrimary"
-                            : router.pathname === "/atom"
-                            ? "bg-atomPrimary"
-                            : router.pathname === "/osmo"
-                            ? "bg-osmoPrimaryButton text-light-high"
-                            : router.pathname === "/dydx"
-                            ? "bg-dydxPrimary text-light-high"
-                            : "bg-black-800 text-light-high"
-                        } ${
-                          router.pathname === "/bnb"
-                            ? "[.is-sticky_&]:text-dark-high"
-                            : router.pathname === "/"
-                        } text-[12px]`}
-                      >
-                        <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                          Liquid Stake Now
-                        </span>
-                      </ButtonLink>
+                              ? "[.is-sticky_&]:bg-bnbPrimary"
+                              : " [.is-sticky_&]:bg-atomPrimary"
+                          } dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
+                          variant={"custom"}
+                          href={
+                            router.pathname === "/bnb"
+                              ? IMMUNEFI_WEB_URL
+                              : IMMUNEFI_STK_ATOM_URL
+                          }
+                          scale="lg"
+                          target={"_blank"}
+                          isDisabled={false}
+                          customButtonClass={"bg-black-800 text-light-high"}
+                        >
+                          <div
+                            className={`${
+                              router.pathname === "/bnb"
+                                ? "[.is-sticky_&]:bg-immunifyBlack"
+                                : ""
+                            } bg-immunefiWhite w-[90px] h-[18px] bg-no-repeat bg-center`}
+                          />
+                        </ButtonLink>
+                      </li>
                     ) : (
-                      <ButtonLink
-                        className={`hover:!bg-[#E509134D] dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
-                        variant={"outline"}
-                        href={appURL}
-                        scale="lg"
-                        target={"_blank"}
-                        isDisabled={false}
-                      >
-                        <span className="nav-link pophover tooltip-multiline app-btn">
-                          Liquid Stake Now
-                        </span>
-                      </ButtonLink>
+                      ""
                     )}
-                  </li>
-                </ul>
+
+                    <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
+                      {router.pathname !== "/" ? (
+                        <ButtonLink
+                          className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
+                          variant={"custom"}
+                          href={appURL}
+                          scale="lg"
+                          target={"_blank"}
+                          isDisabled={false}
+                          customButtonClass={`${
+                            router.pathname === "/bnb"
+                              ? "bg-bnbPrimary"
+                              : router.pathname === "/atom"
+                              ? "bg-atomPrimary"
+                              : router.pathname === "/osmo"
+                              ? "bg-osmoPrimaryButton text-light-high"
+                              : router.pathname === "/dydx"
+                              ? "bg-dydxPrimary text-light-high"
+                              : "bg-black-800 text-light-high"
+                          } ${
+                            router.pathname === "/bnb"
+                              ? "[.is-sticky_&]:text-dark-high"
+                              : router.pathname === "/"
+                          } text-[12px]`}
+                        >
+                          <span className="nav-link pophover tooltip-multiline app-btn uppercase">
+                            Liquid Stake Now
+                          </span>
+                        </ButtonLink>
+                      ) : (
+                        <ButtonLink
+                          className={`hover:!bg-[#E509134D] dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
+                          variant={"outline"}
+                          href={appURL}
+                          scale="lg"
+                          target={"_blank"}
+                          isDisabled={false}
+                        >
+                          <span className="nav-link pophover tooltip-multiline app-btn">
+                            Liquid Stake Now
+                          </span>
+                        </ButtonLink>
+                      )}
+                    </li>
+                  </ul>
+                )}
               </div>
             </div>
           </nav>

@@ -1,6 +1,9 @@
 import { ReactNode } from "react";
 
 export type AccordionData = {
-  title: string;
-  content: ReactNode;
+  title: any;
+  content: ReactNode | any;
+  headerClass?: string;
+  hideIcon?: boolean;
+  contentClass?: string;
 };
