@@ -15,7 +15,7 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
     <div className={"bg-[#1B1B1B] rounded-md py-2"}>
       {list.map((item, index) => (
         <a
-          className={`px-6 py-2 flex items-center hover:cursor-pointer text-light-high whitespace-nowrap group ${
+          className={`px-5 py-3 flex items-center hover:cursor-pointer text-light-high whitespace-nowrap group ${
             item.optionLink === "" ? "pointer-events-none" : ""
           }`}
           key={index}

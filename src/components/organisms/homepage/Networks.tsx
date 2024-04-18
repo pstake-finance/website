@@ -108,19 +108,21 @@ const getItemsPerRow = (
                 }
               >
                 {item.validatorsLength}
-                <a
-                  href={item.validatorsLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={
-                    "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] hover:underline"
-                  }
-                >
-                  <Icon
-                    viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913] ml-1"
-                    icon="external-link"
-                  />
-                </a>
+                {item.network !== "solana" ? (
+                  <a
+                    href={item.validatorsLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={
+                      "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] hover:underline"
+                    }
+                  >
+                    <Icon
+                      viewClass="dropDownIcon !w-[14px] fill-transparent stroke-[#454549] hover:stroke-[#E50913] ml-1"
+                      icon="external-link"
+                    />
+                  </a>
+                ) : null}
               </p>
             </div>
           ) : null}

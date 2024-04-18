@@ -201,13 +201,15 @@ const Header = () => {
   const networks = [
     {
       optionName: "Cosmos",
-      optionLink: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
+      optionLink:
+        "https://app.pstake.finance/cosmos/stake?token=ATOM&chain=cosmos",
       imgUrl: "/images/networks/atom.svg",
       symbol: "ATOM",
     },
     {
       optionName: "Osmosis",
-      optionLink: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
+      optionLink:
+        "https://app.pstake.finance/cosmos/stake?token=OSMO&chain=osmosis",
       imgUrl: "/images/networks/osmo.svg",
       symbol: "OSMO",
     },
@@ -219,14 +221,15 @@ const Header = () => {
     },
     {
       optionName: "dYdX",
-      optionLink: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
+      optionLink:
+        "https://app.pstake.finance/cosmos/stake?token=DYDX&chain=Dydx",
       imgUrl: "/images/networks/dydx.svg",
       symbol: "DYDX",
     },
     {
       optionName: "Stargaze",
       optionLink:
-        "https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
+        "https://app.pstake.finance/cosmos/stake?token=STARS&chain=Stargaze",
       imgUrl: "/images/stars.svg",
       symbol: "STARS",
     },
@@ -240,7 +243,7 @@ const Header = () => {
     {
       optionName: "Chihuahua",
       optionLink:
-        "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
+        "https://app.pstake.finance/cosmos/stake?token=HUAHUA&chain=persistence",
       imgUrl: "/images/networks/huahua.svg",
       symbol: "HUAHUA",
     },

@@ -78,12 +78,12 @@ const FooterBottom = () => {
     },
     {
       externLink: false,
-      link: "/stars",
+      link: "",
       text: "STARS",
     },
     {
       externLink: false,
-      link: "/huahua",
+      link: "",
       text: "HUAHUA",
     },
   ];
