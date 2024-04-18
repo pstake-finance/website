@@ -62,12 +62,12 @@ interface Props {
   isTablet: boolean;
 }
 
-const NetworkDropdown = ({ networks, isTablet }: Props) => {
-  const router = useRouter();
-  const menu = (
+export const networkDropdownContent = (networks: any[]) => {
+  return (
     <div
       className={
-        "flex flex-wrap !bg-[#1B1B1B] drop-shadow-md rounded-md py-2 md:visible md:relative md:opacity-100 md:p-0 !w-[420px] md:!w-[200px] md:!flex md:!justify-center md:flex-wrap"
+        "flex flex-wrap !bg-[#1B1B1B] drop-shadow-md rounded-md py-2 md:visible md:relative md:opacity-100 md:p-0 " +
+        "!w-[420px] md:!w-[100%] rounded-tr-0 md:!flex md:!justify-center md:flex-wrap"
       }
     >
       {networks.map((item, index) => (
@@ -84,7 +84,9 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
           <img
             src={item.imgUrl}
             alt={item.optionName}
-            className={"mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"}
+            className={
+              "mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px] "
+            }
           />
           <span className={"flex flex-col"}>
             <span className="text-light-high font-medium leading-normal text-base md:text-xsm flex items-center">
@@ -112,10 +114,14 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
       ))}
     </div>
   );
+};
+
+const NetworkDropdown = ({ networks, isTablet }: Props) => {
+  const router = useRouter();
 
   return (
     <Dropdown
-      overlay={menu}
+      overlay={networkDropdownContent(networks)}
       placement={isTablet ? "bottomLeft" : "bottom"}
       trigger={isTablet ? "click" : "hover"}
     >

@@ -32,7 +32,7 @@ function AccordionItem({
   }, [isOpen]);
 
   return (
-    <li className={`mb-2 ${isOpen ? "active" : ""}`}>
+    <li className={`mb-2 ${isOpen ? "active" : ""} accordion`}>
       <h2
         className={`${
           router.pathname === "/osmo"
@@ -40,21 +40,23 @@ function AccordionItem({
             : router.pathname === "/dydx"
             ? "bg-[#232334]"
             : "bg-[#25252a]"
-        }  py-3 px-5 mb-4 rounded-xl`}
+        }  py-3 px-5 mb-4 rounded-md accordion-item-title text-light-high font-medium text-sm leading-normal ${
+          data.headerClass
+        }`}
       >
-        <button className="flex justify-between w-full" onClick={btnOnClick}>
-          <span className="text-light-high font-medium text-sm leading-normal">
-            {data.title}
-          </span>
-          <Icon
-            viewClass="icon !w-[16px] fill-[#70747C]"
-            icon={isOpen ? "minus" : "plus"}
-          />
+        <button className={`flex justify-between w-full`} onClick={btnOnClick}>
+          <span className="">{data.title}</span>
+          {!data.hideIcon ? (
+            <Icon
+              viewClass="icon !w-[16px] fill-[#70747C]"
+              icon={isOpen ? "minus" : "plus"}
+            />
+          ) : null}
         </button>
       </h2>
       <div
-        className="text-sm leading-loose text-light-emphasis px-5 overflow-hidden transition-height
-         duration-200 ease-in-out"
+        className={`text-sm leading-loose text-light-emphasis px-4 overflow-hidden transition-height
+         duration-200 ease-in-out ${data.contentClass}`}
         style={{ height }}
       >
         <div ref={contentRef} className="accordion-item-content">

@@ -13,17 +13,16 @@ interface Props {
   isTablet: boolean;
 }
 
-const CommunityDropdown = ({ communityList, isTablet }: Props) => {
-  const router = useRouter();
-  const menu = (
+export const communityDropdownContent = (communityList: any[]) => {
+  return (
     <div
       className={
-        "!grid !grid-cols-2 !bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0 md:flex-wrap"
+        "!grid !grid-cols-2 !bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2 md:visible md:relative md:opacity-100 md:flex-wrap"
       }
     >
       {communityList.map((item, index) => (
         <a
-          className={`px-5 py-3 flex items-center md:py-3
+          className={`px-5 py-3 flex items-center 
                         hover:cursor-pointer text-light-high whitespace-nowrap w-max group${
                           item.url === "" ? "pointer-events-none" : ""
                         }`}
@@ -37,7 +36,7 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
             alt={item.name}
             className={"mr-4 md:mr-2 w-[39px] h-[39px] md:w-[20px] md:h-[20px]"}
           />
-          <span className={"flex flex-col md:hidden text-base md:text-sm"}>
+          <span className={"flex flex-col text-base md:text-sm"}>
             <span className="text-light-high font-medium leading-normal flex items-center">
               {item.name}
               <Icon
@@ -50,10 +49,14 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
       ))}
     </div>
   );
+};
+
+const CommunityDropdown = ({ communityList, isTablet }: Props) => {
+  const router = useRouter();
 
   return (
     <Dropdown
-      overlay={menu}
+      overlay={communityDropdownContent(communityList)}
       placement={isTablet ? "bottomRight" : "bottom"}
       trigger={isTablet ? "click" : "hover"}
     >

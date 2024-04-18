@@ -9,9 +9,8 @@ interface Props {
   isTablet: boolean;
 }
 
-const LearnDropdown = ({ learnList, isTablet }: Props) => {
-  const router = useRouter();
-  const menu = (
+export const learnDropDownContent = (learnList: any[]) => {
+  return (
     <div className={"!bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2"}>
       {learnList.map((item, index) => (
         <a
@@ -50,11 +49,14 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
       ))}
     </div>
   );
+};
 
+const LearnDropdown = ({ learnList, isTablet }: Props) => {
+  const router = useRouter();
   return (
     <>
       <Dropdown
-        overlay={menu}
+        overlay={learnDropDownContent(learnList)}
         placement={isTablet ? "bottomRight" : "bottom"}
         trigger={isTablet ? "click" : "hover"}
       >
@@ -66,7 +68,9 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
           Learn
         </button>
       </Dropdown>
-      <div className={"hidden md:!block "}>{menu}</div>
+      <div className={"hidden md:!block "}>
+        {learnDropDownContent(learnList)}
+      </div>
     </>
   );
 };

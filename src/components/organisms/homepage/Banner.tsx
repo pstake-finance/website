@@ -86,10 +86,10 @@ const Banner = () => {
           </div>
         </div>
         <div className="">
-          <div className={"flex flex-wrap pt-10 md:justify-start"}>
+          <div className={"flex flex-wrap pt-10 md:justify-start lg:block"}>
             <div
               className={
-                "pr-8 md:border-r-0 md:border-b-[0.5px] border-r border-[#FCFCFC] md:flex-1 md:pb-4"
+                "pr-8 lg:border-r-0 lg:border-b-[0.5px] border-r border-[#FCFCFC] md:flex-1 lg:pb-4"
               }
             >
               <p className="text-light-high font-bold text-[44px] md:text-[24px] text-left">
@@ -108,7 +108,7 @@ const Banner = () => {
               </p>
               <p
                 className={
-                  "text-[#D5D5D5] text-[18px] md:text-[14px] md:text-left"
+                  "text-[#D5D5D5] text-[18px] md:text-[14px] lg:text-left"
                 }
               >
                 Total Volume Unlocked
@@ -116,10 +116,10 @@ const Banner = () => {
             </div>
             <div
               className={
-                "pl-8 md:pl-0 md:border-0 border-l border-[#FCFCFC] pt-4"
+                "pl-8 md:pl-0 lg:border-0 border-l border-[#FCFCFC] pt-4"
               }
             >
-              <div className="flex items-center justify-center pb-3">
+              <div className="flex items-center justify-center pb-3 lg:justify-start">
                 {netWorkList.map((item, index) => (
                   <Tooltip
                     key={index}
@@ -140,7 +140,7 @@ const Banner = () => {
                         alt={"atom"}
                         width={36}
                         height={36}
-                        className={`${index !== 0 ? "mx-2" : "mrr-2"}`}
+                        className={`${index !== 0 ? "mx-2" : "mr-2"}`}
                       />
                     ) : (
                       <a
