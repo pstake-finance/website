@@ -91,7 +91,7 @@ const getItemsPerRow = (
             </p>
             <p
               className={
-                "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px]"
+                "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] md:text-left"
               }
             >
               {item.tvl}
@@ -104,7 +104,7 @@ const getItemsPerRow = (
               </p>
               <p
                 className={
-                  "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] flex items-center"
+                  "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] flex items-center md:justify-end"
                 }
               >
                 {item.validatorsLength}
@@ -114,7 +114,7 @@ const getItemsPerRow = (
                     target="_blank"
                     rel="noreferrer"
                     className={
-                      "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] hover:underline"
+                      "text-[#FFFFFF] font-medium text-[16px] md:text-[14px] leading-[32px] hover:underline md:text-center"
                     }
                   >
                     <Icon
@@ -281,10 +281,10 @@ const Networks = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[80px] pb-[80px] md:py-[35px]">
-        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
+        <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE]">
           Truly Multi-Chain Liquid Staking
         </p>
-        <p className={"text-[20px] md:text-[16px] text-center text-[#D5D5D5]"}>
+        <p className={"text-[20px] md:text-[14px] text-center text-[#D5D5D5]"}>
           Liquid Stake your favorite tokens across BNB Chain, Solana, and
           Cosmos.
         </p>

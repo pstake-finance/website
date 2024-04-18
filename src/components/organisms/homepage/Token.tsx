@@ -9,18 +9,20 @@ const Token = () => {
           <div className={"max-w-[648px]"}>
             <p
               className={
-                "font-bold text-[44px] md:text-[22px] text-[#fcfcfc] mb-6"
+                "font-bold text-[44px] md:text-[32px] text-[#fcfcfc] mb-6"
               }
             >
               Fueling Multi-Chain <br /> Liquid Staking
             </p>
-            <p className={"text-[18px] text-[#D5D5D5] mb-[48px]"}>
+            <p
+              className={"text-[18px] text-[#D5D5D5] md:text-[16px] mb-[48px]"}
+            >
               PSTAKE is the governance and incentivization token of pSTAKE
               <br />
               Finance’s liquid staking ecosystem.
             </p>
             <ButtonLink
-              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px]`}
+              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px] md:!w-[100%]`}
               variant={"outline"}
               href={"https://www.coingecko.com/en/coins/pstake-finance"}
               scale="lg"

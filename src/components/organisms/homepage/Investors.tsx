@@ -40,7 +40,7 @@ const Investors = () => {
   return (
     <div className="aos-init aos-animate py-8" data-aos="fade-up">
       <div className="container">
-        <p className="text-[20px] text-[#D5D5D5] text-center mb-8">
+        <p className="text-[20px] md:text-[18px] text-[#D5D5D5] text-center mb-8">
           Trusted by the best in business and blockchain
         </p>
         <div className="">

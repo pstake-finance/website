@@ -27,7 +27,7 @@ const StakingSteps = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] lg:py-[35px]">
-        <p className="text-[40px] lg:text-[20px] text-center font-bold mb-0 text-[#FEFEFE] mb-[70px]">
+        <p className="text-[40px] lg:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[70px]">
           Liquid Staking as simple as 1, 2, 3
         </p>
         <div className="mb-6 max-w-[1240px] mx-auto ">
@@ -38,12 +38,12 @@ const StakingSteps = () => {
           >
             <div
               className={
-                "flex items-center lg:flex-1 lg:mb-2 relative lg:justify-center"
+                "flex items-center lg:flex-1 lg:mb-2 relative lg:justify-center lg:block"
               }
             >
               <div
                 className={
-                  "text-[#C7323880] -lg:absolute -lg:-left-[85px] -lg:-top-[56px] text-[78px] lg:text-[32px] mr-4 font-bold"
+                  "text-[#C7323880] -lg:absolute -lg:-left-[85px] -lg:-top-[56px] text-[78px] lg:text-[32px] mr-4 font-bold "
                 }
               >
                 01
@@ -52,7 +52,7 @@ const StakingSteps = () => {
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
                   Stake Token
                 </p>
-                <p className="text-[#ECECEC] text-[14px] w-[220px] break-words leading-[21px]">
+                <p className="text-[#ECECEC] text-[14px] w-[220px] break-words leading-[21px] lg:w-fit">
                   Stake any amount of your tokens to get daily auto-compounded
                 </p>
               </div>
@@ -62,7 +62,7 @@ const StakingSteps = () => {
             />
             <div
               className={
-                "flex items-center lg:flex-1 lg:mb-2 relative lg:justify-center"
+                "flex items-center lg:flex-1 lg:mb-2 relative lg:justify-center lg:block"
               }
             >
               <div
@@ -76,7 +76,7 @@ const StakingSteps = () => {
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
                   Receive stkToken
                 </p>
-                <p className="text-[#ECECEC] text-[14px] w-[260px] break-words leading-[21px]">
+                <p className="text-[#ECECEC] text-[14px] w-[260px] break-words leading-[21px] lg:w-fit">
                   Get liquid stkToken in return. Pat yourself on the back for
                   contributing to network decentralization.
                 </p>
@@ -87,7 +87,7 @@ const StakingSteps = () => {
             />
             <div
               className={
-                "flex items-center lg:flex-1 relative  lg:justify-center"
+                "flex items-center lg:flex-1 relative  lg:justify-center lg:block"
               }
             >
               <div
@@ -101,7 +101,7 @@ const StakingSteps = () => {
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
                   Use in DeFi
                 </p>
-                <p className="text-[#ECECEC] text-[14px] w-[212px] break-words leading-[21px]">
+                <p className="text-[#ECECEC] text-[14px] w-[212px] break-words leading-[21px] lg:w-fit">
                   Put your stkToken to work with various yield opportunities on
                   pSTAKE’s DeFi tab.
                 </p>

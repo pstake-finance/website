@@ -47,7 +47,7 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
     <Dropdown
       overlay={menu}
       placement={isTablet ? "bottomRight" : "bottom"}
-      trigger={"hover"}
+      trigger={isTablet ? "click" : "hover"}
     >
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block ${

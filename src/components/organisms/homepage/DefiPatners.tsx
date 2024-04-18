@@ -77,7 +77,7 @@ const DefiPatners = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="mx-auto pt-[60px] py-[70px] md:py-[35px]">
-        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
+        <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE]">
           DeFi Partners
         </p>
         <p

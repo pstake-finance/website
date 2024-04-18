@@ -67,7 +67,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
   const menu = (
     <div
       className={
-        "flex flex-wrap !bg-[#1B1B1B] drop-shadow-md rounded-md py-2 md:visible md:relative md:opacity-100 md:!bg-transparent md:p-0 !w-[420px] md:!w-[200px] md:!flex md:!justify-center md:flex-wrap"
+        "flex flex-wrap !bg-[#1B1B1B] drop-shadow-md rounded-md py-2 md:visible md:relative md:opacity-100 md:p-0 !w-[420px] md:!w-[200px] md:!flex md:!justify-center md:flex-wrap"
       }
     >
       {networks.map((item, index) => (
@@ -86,7 +86,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
             alt={item.optionName}
             className={"mr-4 md:mr-2 w-[28px] h-[28px] md:w-[20px] md:h-[20px]"}
           />
-          <span className={"flex flex-col md:hidden"}>
+          <span className={"flex flex-col"}>
             <span className="text-light-high font-medium leading-normal text-base md:text-xsm flex items-center">
               {item.optionName}
               {item.optionLink === "" ? (
@@ -117,7 +117,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
     <Dropdown
       overlay={menu}
       placement={isTablet ? "bottomLeft" : "bottom"}
-      trigger={"hover"}
+      trigger={isTablet ? "click" : "hover"}
     >
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block ${

@@ -386,24 +386,24 @@ const Header = () => {
               <div
                 className={`${
                   isOpen ? "md:transform-none" : "md:-translate-x-full"
-                } md:fixed md:top-0 md:left-0 md:z-40 md:w-[200px] md:h-screen md:transition-transform 
+                } md:fixed md:top-0 md:left-0 md:z-40 md:w-[100%] md:h-screen md:transition-transform md:bg-[#141414]
                md:basis-auto md:basis-full md:grow menu-open
                `}
                 id="navbarCollapse"
               >
-                <div
-                  className={`${
-                    isOpen ? "md:fixed" : "md:relative"
-                  } -md:hidden md:left-0 md:right-0 md:bottom-0
-              md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}
-                />
+                {/*  <div*/}
+                {/*    className={`${*/}
+                {/*      isOpen ? "md:fixed" : "md:relative"*/}
+                {/*    } -md:hidden md:left-0 md:right-0 md:bottom-0*/}
+                {/*md:top-0 md:h-full md:w-full md:bg-black-full md:opacity-50`}*/}
+                {/*  />*/}
                 <ul
-                  className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col md:bg-[#141414]
+                  className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col 
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-2`}
                   id="mySidenav"
                   ref={sideBarRef}
                 >
-                  <li className="nav-item nav__menu-item md:hidden">
+                  <li className="nav-item nav__menu-item">
                     <NetworkDropdown
                       networks={networks}
                       isTablet={isLandScape}

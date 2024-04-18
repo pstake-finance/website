@@ -133,7 +133,7 @@ const FooterBottom = () => {
       <div className={`aos-init aos-animate ${router.pathname}`}>
         <div className="container py-[50px] md:py-[30px]">
           <div>
-            <div className="max-w-[1240px] mx-auto flex items-center">
+            <div className="max-w-[1240px] mx-auto flex items-center md:block">
               <div className="flex flex-wrap justify-between w-full">
                 <div className={"w-[500px] md:mb-4"}>
                   <img
@@ -159,7 +159,7 @@ const FooterBottom = () => {
                       icon={"right-arrow2"}
                     />
                   </a>
-                  <div className={"flex items-center justify-start"}>
+                  <div className={"flex items-center justify-start lg:hidden"}>
                     {iconFooterList.map((item, index) => (
                       <a
                         key={index}
@@ -202,7 +202,7 @@ const FooterBottom = () => {
                         >
                           <Link
                             href={item.link}
-                            className="nav-link group flex items-center"
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
                             passHref
                           >
                             {item.text}
@@ -237,7 +237,7 @@ const FooterBottom = () => {
                         >
                           <Link
                             href={item.link}
-                            className="nav-link group flex items-center"
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
                             passHref
                             target={item.externLink ? "_blank" : "_self"}
                           >
@@ -269,7 +269,7 @@ const FooterBottom = () => {
                         >
                           <Link
                             href={item.link}
-                            className="nav-link group flex items-center"
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
                             passHref
                             target={item.externLink ? "_blank" : "_self"}
                           >
@@ -286,6 +286,27 @@ const FooterBottom = () => {
                     })}
                   </div>
                 </div>
+              </div>
+              <div className={"flex items-center justify-start -lg:hidden"}>
+                {iconFooterList.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.url}
+                    target="_blank"
+                    className={`flex items-center rounded-full group`}
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`w-[24px] h-[24px] bg-[#434343] flex 
+                        items-center justify-center rounded-full mr-3`}
+                    >
+                      <Icon
+                        viewClass="socialIcon fill-[#000] !w-[12px] !h-[12px]"
+                        icon={item.icon}
+                      />
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

@@ -61,18 +61,18 @@ const Banner = () => {
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#141414] tall:h-screen h-max bg-cover bg-center bg-no-repeat">
-      <div className="pt-[200px] -2xl:pt-[300px] pb-[200px] relative h-full max-w-[1240px] md:px-2 mx-auto">
+      <div className="pt-[200px] -2xl:pt-[300px] pb-[200px] relative h-full max-w-[1280px] container mx-auto">
         <div className={"flex mb-[100px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
-            <h1 className="text-[48px] md:text-[20px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
+            <h1 className="text-[48px] md:text-[42px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
               Liquid Stake Everything
             </h1>
-            <h6 className="text-[20px] md:text-[14px] text-[#D5D5D5] text-left mb-8 max-w-[450px] break-words">
+            <h6 className="text-[20px] md:text-[16px] text-[#D5D5D5] text-left mb-8 max-w-[450px] break-words">
               Securely liquid stake the biggest crypto assets and generate
               additional yield in DeFi.
             </h6>
             <ButtonLink
-              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[200px]`}
+              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
               variant={"outline"}
               href={PSTAKE_APP_URL}
               scale="lg"
@@ -86,9 +86,13 @@ const Banner = () => {
           </div>
         </div>
         <div className="">
-          <div className={"flex flex-wrap pt-10"}>
-            <div className={"pr-8 md:border-0 border-r border-[#FCFCFC]"}>
-              <p className="text-light-high font-bold text-[44px] md:text-[30px] text-left">
+          <div className={"flex flex-wrap pt-10 md:justify-start"}>
+            <div
+              className={
+                "pr-8 md:border-r-0 md:border-b-[0.5px] border-r border-[#FCFCFC] md:flex-1 md:pb-4"
+              }
+            >
+              <p className="text-light-high font-bold text-[44px] md:text-[24px] text-left">
                 $
                 {numberFormat(
                   Number(cosmosData.tvl * tokenPrices.ATOM) +
@@ -102,7 +106,11 @@ const Banner = () => {
                   3
                 )}
               </p>
-              <p className={"text-[#D5D5D5] text-[18px]"}>
+              <p
+                className={
+                  "text-[#D5D5D5] text-[18px] md:text-[14px] md:text-left"
+                }
+              >
                 Total Volume Unlocked
               </p>
             </div>
@@ -153,7 +161,11 @@ const Banner = () => {
                   </Tooltip>
                 ))}
               </div>
-              <p className={"text-[#D5D5D5] text-[18px] text-left"}>
+              <p
+                className={
+                  "text-[#D5D5D5] text-[18px] md:text-[14px] text-left"
+                }
+              >
                 Supported Assets
               </p>
             </div>
