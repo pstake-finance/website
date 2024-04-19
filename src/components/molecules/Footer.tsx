@@ -169,7 +169,7 @@ const Footer = () => {
               solution for the $170B+ market across BNB Chain, Solana, and
               Cosmos.{" "}
             </p>
-            <div className={"max-w-[1140px] px-[20px]"}>
+            <div className={"max-w-[1140px] px-[20px] mx-auto"}>
               <ButtonLink
                 className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] md:!w-[100%] md:!h-[40px] font-semibold !h-[48px] mx-auto`}
                 variant={"outline"}
