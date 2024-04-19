@@ -111,7 +111,7 @@ const Banner = () => {
                   "text-[#D5D5D5] text-[18px] md:text-[14px] lg:text-left"
                 }
               >
-                Total Volume Unlocked
+                Total Value Unlocked
               </p>
             </div>
             <div
