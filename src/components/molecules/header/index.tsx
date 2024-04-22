@@ -80,7 +80,7 @@ const socialList = [
     text: "Join the Community Chat",
   },
   {
-    name: "Discard",
+    name: "Discord",
     url: PSTAKE_DISCORD,
     image: "discord_full",
     text: "Join Our Community",
