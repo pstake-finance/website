@@ -4,59 +4,6 @@ import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
 
-const networks = [
-  {
-    optionName: "Cosmos",
-    optionLink: "https://app.pstake.finance/cosmos?token=ATOM&chain=cosmos",
-    imgUrl: "/images/networks/atom.svg",
-    symbol: "ATOM",
-  },
-  {
-    optionName: "Osmosis",
-    optionLink: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
-    imgUrl: "/images/networks/osmo.svg",
-    symbol: "OSMO",
-  },
-  {
-    optionName: "Solana",
-    optionLink: "",
-    imgUrl: "/images/networks/sol.svg",
-    symbol: "SOL",
-  },
-  {
-    optionName: "Dydx",
-    optionLink: "https://app.pstake.finance/cosmos?token=DYDX&chain=Dydx",
-    imgUrl: "/images/networks/dydx.svg",
-    symbol: "DYDX",
-  },
-  {
-    optionName: "Stargaze",
-    optionLink: "https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
-    imgUrl: "/images/stars.svg",
-    symbol: "STARS",
-  },
-  // {
-  //   optionName: "Agoric",
-  //   optionLink:
-  //     "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
-  //   imgUrl: "/images/networks/bld.svg",
-  //   symbol: "BLD",
-  // },
-  {
-    optionName: "Chihuahua",
-    optionLink:
-      "https://app.pstake.finance/cosmos?token=HUAHUA&chain=persistence",
-    imgUrl: "/images/networks/huahua.svg",
-    symbol: "HUAHUA",
-  },
-  {
-    optionName: "BNB",
-    optionLink: "https://app.pstake.finance/bnb",
-    imgUrl: "/images/networks/bnb.svg",
-    symbol: "BNB",
-  },
-];
-
 interface Props {
   networks: any[];
   isTablet: boolean;
@@ -91,7 +38,7 @@ export const networkDropdownContent = (networks: any[]) => {
           <span className={"flex flex-col"}>
             <span className="text-light-high font-medium leading-normal text-base md:text-xsm flex items-center">
               {item.optionName}
-              {item.optionLink === "" ? (
+              {item.optionName === "Solana" ? (
                 <span
                   className={
                     "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[6px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
@@ -99,12 +46,12 @@ export const networkDropdownContent = (networks: any[]) => {
                 >
                   Coming Soon
                 </span>
-              ) : (
+              ) : item.optionLink !== "" ? (
                 <Icon
                   viewClass="dropDownIcon !w-[10px] ml-2 fill-[#fff] group-hover:fill-[#C73238]"
                   icon="chevroncolorchange"
                 />
-              )}
+              ) : null}
             </span>
             <span className="text-[#D5D5D5] text-xsm font-light leading-normal ">
               {item.symbol}
