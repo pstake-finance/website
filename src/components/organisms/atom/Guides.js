@@ -1,17 +1,15 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { useTranslation } from "next-export-i18n";
 import { GUIDE_VIDEO_URL } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 
 const Guides = () => {
-  const { t } = useTranslation("common");
   return (
     <React.Fragment>
       <section className="guides-section">
         <div className="container">
           <h3 className="section-title">
-            {t("GUIDES_TUTORIALS")}: How to Liquid Stake ATOM
+            Guides & Tutorials: How to Liquid Stake ATOM
           </h3>
           <div className="row">
             <Card className="col-md-6">

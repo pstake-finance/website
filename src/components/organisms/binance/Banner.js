@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
-import { decimalize, formatNumber, getTVL } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { ATOM_URL, BNB_URL } from "../../../utils/config";
 
 const Banner = ({ maxApy, tvl }) => {
-  const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-bnbBanner bg-no-repeat">
       <div
@@ -26,7 +23,7 @@ const Banner = ({ maxApy, tvl }) => {
             className="banner-heading font-bold text-[54px] leading-tight
         text-dark-black-high mt-6 md:text-[40px] sm:text-3xl"
           >
-            {t("BANNER_HEADING")}
+            Unlock Liquidity of BNB
           </h1>
           <h6
             className="max-w-[700px] mx-auto mt-6 font-medium text-base
@@ -49,7 +46,7 @@ const Banner = ({ maxApy, tvl }) => {
               isDisabled={false}
               focusEffect={true}
             >
-              {t("LIQUID_STAKE_BNB")}
+              Liquid Stake BNB
               <Icon
                 viewClass="right-arrow w-[14px] fill-[#1B1B1B]"
                 icon="right-arrow"
@@ -61,7 +58,7 @@ const Banner = ({ maxApy, tvl }) => {
               {tvl} BNB
             </h6>
             <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">
-              {t("TOTAL_VALUE_UNLOCKED")}
+              Total Value Unlocked(TVU)
             </h6>
           </div>
         </div>

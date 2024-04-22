@@ -1,16 +1,6 @@
 import React from "react";
-import { useTranslation } from "next-export-i18n";
-import { Table } from "react-bootstrap";
-import Footer from "../components/molecules/Footer";
-import {
-  PSTAKE_WEB_URL,
-  CHORME_URL,
-  FIREFOX_URL,
-  SAFARI_URL,
-  IE_URL,
-} from "../utils/config";
+
 const Privacy = () => {
-  const { t } = useTranslation("common");
   const mainHeading = "font-semibold text-4xl text-light-high mb-4 md:text-xl";
   const subHeading =
     "font-medium text-lg text-light-emphasis mb-4 md:text-base";
@@ -19,9 +9,7 @@ const Privacy = () => {
     <div className="container-fluid p-0 terms-sections">
       <div className="sectionContainer pb-8">
         <div className="pt-[200px] pb-[50px]">
-          <h1 className={`${mainHeading} text-center`}>
-            {t("TERMS_OF_SERVICE_SUBTITLE")}
-          </h1>
+          <h1 className={`${mainHeading} text-center`}>TERMS OF SERVICE</h1>
         </div>
         <p className="text-red mb-4">Last Updated Date: 13 July 2023</p>
         <div>

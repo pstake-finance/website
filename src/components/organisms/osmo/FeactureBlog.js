@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "next-export-i18n";
 import {
   STK_ATOM_BLOG_ONE_URL,
   STK_ATOM_BLOG_ONE_IMAGE_URL,
@@ -13,11 +12,8 @@ import {
   STK_OSMO_BLOG_TWO_URL,
   STK_OSMO_BLOG_TWO_IMAGE_URL,
 } from "../../../utils/config";
-import Icon from "../../molecules/Icon";
-import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 
 const FeaturedBlogs = () => {
-  const { t } = useTranslation("common");
   const list = [
     {
       title: "OSMO Liquid Staking",
@@ -36,7 +32,7 @@ const FeaturedBlogs = () => {
         className="sectionContainer py-[65px] md:py-[35px]"
         data-aos="fade-up"
       >
-        <h3 className="sectionTitle mb-8">{t("FEATURED_BLOGS")}</h3>
+        <h3 className="sectionTitle mb-8">"Featured Blogs</h3>
         <div className="flex flex-wrap justify-center mb-4">
           {list.map((item, index) => (
             <div
