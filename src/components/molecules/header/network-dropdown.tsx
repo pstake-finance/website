@@ -1,6 +1,6 @@
 import Dropdown from "rc-dropdown";
 import "rc-dropdown/assets/index.css";
-import React, { PureComponent } from "react";
+import React from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
 
