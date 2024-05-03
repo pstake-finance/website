@@ -10,7 +10,7 @@ const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
 const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
   const [country, setCountry] = useState("");
-  const [banner, setBanner] = useState(true);
+  const [banner, setBanner] = useState(false);
   const [validatorsInfo] = useAppStore(
     (state) => [state.validatorsInfo],
     shallow
