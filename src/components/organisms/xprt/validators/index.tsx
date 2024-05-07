@@ -41,7 +41,7 @@ const criteriaList: CriteriaList[] = [
   },
   {
     parameter: "Governance Participation",
-    criteria: "60% to 100%",
+    criteria: "90% to 100%",
     weightage: "40%",
     time: "Last 180 Days",
     tooltipTitle: "Governance Participation over 180 days",
