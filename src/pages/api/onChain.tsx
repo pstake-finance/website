@@ -92,6 +92,7 @@ export const getValidators = async (
       if (chainParamsResponse.hostChain?.validators.length > 0) {
         const validatorInfo = await getValidatorInfo(hostChainId, env);
         const hostChainValidators = chainParamsResponse.hostChain?.validators;
+        console.log(hostChainValidators, "-hostChainValidators");
         for (const item of hostChainValidators) {
           const res = validatorInfo?.find(
             (valItem) => valItem.operatorAddress === item.operatorAddress
@@ -189,24 +190,29 @@ export const getXprtValidators = async (chainID: string, env: string) => {
           const avatarCheck = noAvatarValidators.find(
             (item) => item === res.operatorAddress
           );
-
+          console.log(
+            item.weight,
+            decimalizeRaw(item.weight, 18),
+            "validators-info"
+          );
           validators.push({
             name: res.description!.moniker!,
             identity: !avatarCheck
               ? `https://raw.githubusercontent.com/cosmostation/chainlist/master/chain/${chainIdentity}/moniker/${res.operatorAddress}.png`
               : "",
-            weight: (Number(decimalizeRaw(item.weight, 18)) * 100).toFixed(2),
+            weight: ((Number(item.weight) / 10000) * 100).toFixed(2),
             delegationAmount: Number(
               decimalizeRaw(
                 item.liquidTokens,
                 chainInfo!.stakeCurrency.coinDecimals
               )
             ).toFixed(),
-            targetDelegation: Number(decimalizeRaw(item.weight, 18)).toFixed(6),
+            targetDelegation: (Number(item.weight) / 10000).toFixed(6),
           });
         }
       });
     }
+    console.log(validators, "validators-");
     return validators;
   } catch (e) {
     console.log(e, "error-");
