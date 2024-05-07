@@ -1,12 +1,5 @@
 import React from "react";
 import {
-  STK_ATOM_BLOG_ONE_URL,
-  STK_ATOM_BLOG_ONE_IMAGE_URL,
-  STK_ATOM_BLOG_TWO_URL,
-  STK_ATOM_BLOG_TWO_IMAGE_URL,
-  STK_ATOM_BLOG_URL,
-  STK_ATOM_BLOG_THREE_URL,
-  STK_ATOM_BLOG_THREE_IMAGE_URL,
   STK_OSMO_BLOG_ONE_URL,
   STK_OSMO_BLOG_ONE_IMAGE_URL,
   STK_OSMO_BLOG_TWO_URL,
@@ -32,7 +25,7 @@ const FeaturedBlogs = () => {
         className="sectionContainer py-[65px] md:py-[35px]"
         data-aos="fade-up"
       >
-        <h3 className="sectionTitle mb-8">"Featured Blogs</h3>
+        <h3 className="sectionTitle mb-8">Featured Blogs</h3>
         <div className="flex flex-wrap justify-center mb-4">
           {list.map((item, index) => (
             <div
@@ -57,7 +50,7 @@ const FeaturedBlogs = () => {
                       className="inline-flex items-center border-b-2 border-[#5064FB]
                     border-solid text-[12px] text-light-full pb-2"
                     >
-                      {t("LEARN_MORE")}
+                      Learn More
                     </p>
                   </div>
                 </a>
