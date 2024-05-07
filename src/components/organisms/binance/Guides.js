@@ -1,15 +1,12 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import { useTranslation } from "next-export-i18n";
 import { GUIDE_VIDEO_URL } from "../../../utils/config";
 import Icon from "../../molecules/Icon";
 
 const Guides = () => {
-  const { t } = useTranslation("common");
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-6 md:mb-4">{t("GUIDES_TUTORIALS")}</h3>
+        <h3 className="sectionTitle mb-6 md:mb-4">Guides & Tutorials</h3>
         <div className="">
           <div className="max-w-[50%] md:max-w-full mx-auto mb-8">
             <a

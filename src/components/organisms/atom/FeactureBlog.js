@@ -38,7 +38,7 @@ const FeaturedBlogs = () => {
         data-aos="fade-up"
       >
         <h3 className="sectionTitle mb-8">
-          {t("FEATURED_BLOGS")} on Liquid Staking ATOM
+          Featured Blogs on Liquid Staking ATOM
         </h3>
         <div className="flex flex-wrap justify-center mb-8">
           {list.map((item, index) => (
@@ -64,7 +64,7 @@ const FeaturedBlogs = () => {
                       className="inline-flex items-center border-b-2 border-[#595d7b]
                     border-solid text-[12px] text-light-full pb-2"
                     >
-                      {t("LEARN_MORE")}
+                      Learn More
                       <Icon
                         viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
                         icon="right-arrow"

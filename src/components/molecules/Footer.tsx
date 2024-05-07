@@ -1,7 +1,6 @@
 import React from "react";
 import Icon from "./Icon";
 import Link from "next/link";
-import { useTranslation } from "next-export-i18n";
 import { useRouter } from "next/router";
 
 import {
@@ -27,7 +26,6 @@ const getLogoUrl = (logoName: string) => {
 };
 
 const Footer = () => {
-  const { t } = useTranslation("common");
   const router = useRouter();
 
   let twitterUrl;
@@ -87,7 +85,7 @@ const Footer = () => {
       text: "Join the Community Chat",
     },
     {
-      name: "Discard",
+      name: "Discord",
       url: PSTAKE_DISCORD,
       image: "discord_full",
       text: "Join Our Community",
@@ -212,7 +210,7 @@ const Footer = () => {
                   target="_blank"
                   className="text-[#787878] text-[11px] mx-4 sm:mb-4 block"
                 >
-                  {t("PRIVACY_POLICY")}
+                  Privacy Policy
                 </Link>
                 <Link
                   href="/terms"
