@@ -303,16 +303,12 @@ const Header = () => {
     router.push(link);
   };
 
-  const fetchHuahuaValidatorsData = useAppStore(
-    (state) => state.fetchHuahuaValidatorsData
+  const fetchXprtValidatorsData = useAppStore(
+    (state) => state.fetchXprtValidatorsData
   );
 
   useEffect(() => {
-    fetchHuahuaValidatorsData(
-      "https://rpc.core.persistence.one",
-      "chihuahua-1",
-      "Mainnet"
-    );
+    fetchXprtValidatorsData("core-1", "Mainnet");
   }, []);
 
   return (

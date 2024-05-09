@@ -10,7 +10,7 @@ const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
 const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
   const [country, setCountry] = useState("");
-  const [banner, setBanner] = useState(false);
+  const [banner, setBanner] = useState(true);
   const [validatorsInfo] = useAppStore(
     (state) => [state.validatorsInfo],
     shallow
@@ -78,34 +78,31 @@ const GeofenceNotice = () => {
           : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
       }
     >
-      <a
-        href={"https://pp.pstake.finance/"}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center"
-      >
-        pSTAKE Finance is expanding to Solana with a BIG airdrop for the
-        upcoming stkSOL launch
-        <Icon
-          viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"
-          icon="right-arrow-bold"
-        />
-        {/*<span>stkHUAHUA is NOW LIVE. Liquid Stake your HUAHUA with&nbsp;</span>*/}
-        {/*{validatorsInfo.huahua.loader ? (*/}
-        {/*  <Spinner size={"small"} className={"!w-3 !h-3"} />*/}
-        {/*) : (*/}
-        {/*  validatorsInfo.huahua.list.length*/}
-        {/*)}*/}
-        {/*&nbsp;validators&nbsp;*/}
-        {/*<a*/}
-        {/*  className="link underline"*/}
-        {/*  href={"https://app.pstake.finance/cosmos?token=STARS&chain=Stargaze"}*/}
-        {/*  target="_blank"*/}
-        {/*  rel="noopener noreferrer"*/}
-        {/*>*/}
-        {/*  now.*/}
-        {/*</a>*/}
-      </a>
+      <p className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center">
+        {/*pSTAKE Finance is expanding to Solana with a BIG airdrop for the*/}
+        {/*upcoming stkSOL launch*/}
+        {/*<Icon*/}
+        {/*  viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"*/}
+        {/*  icon="right-arrow-bold"*/}
+        {/*/>*/}
+        <span>stkXPRT is NOW LIVE. Liquid Stake your XPRT with&nbsp;</span>
+        {validatorsInfo.xprt.loader ? (
+          <Spinner size={"small"} className={"!w-3 !h-3"} />
+        ) : (
+          validatorsInfo.xprt.list.length
+        )}
+        &nbsp;validators&nbsp;
+        <a
+          className="link underline"
+          href={
+            "https://app.pstake.finance/cosmos?stake?token=XPRT&chain=persistence"
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          now.
+        </a>
+      </p>
       <div onClick={closeBanner}>
         <Icon
           viewClass="close w-[10px] h-[10px] fill-[#000] absolute top-[13px] right-[20px] cursor-pointer"
