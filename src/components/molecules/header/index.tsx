@@ -232,7 +232,7 @@ const Header = () => {
     },
     {
       optionName: "Persistence",
-      optionLink: "https://staging.app.pstake.finance/cosmos",
+      optionLink: "",
       imgUrl: "/images/networks/persistence.svg",
       symbol: "XPRT",
     },
