@@ -72,7 +72,9 @@ const ValidatorsList = () => {
   );
 
   useEffect(() => {
-    const respon = fetchXprtValidatorsData("core-1", "Mainnet");
+    if (validatorsInfo.xprt.list.length <= 0) {
+      fetchXprtValidatorsData("core-1", "Mainnet");
+    }
   }, []);
 
   useEffect(() => {
