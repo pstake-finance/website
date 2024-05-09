@@ -47,7 +47,7 @@ export const STK_STAR_TVL_API =
 export const STK_DYDX_TVL_API =
   "https://api.persistence.one/pstake/stkdydx/dydx_tvu";
 export const STK_XPRT_APY_API =
-  "https://staging.api.persistence.one/pstake/stkxprt/apy";
+  "https://api.persistence.one/pstake/stkxprt/apy";
 export const STK_BLD_APY_API =
   "https://staging.api.persistence.one/pstake/stkbld/apy";
 export const STK_HUAHUA_APY_API =

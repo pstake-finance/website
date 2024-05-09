@@ -136,6 +136,31 @@ export const getValidators = async (
   }
 };
 
+export const getXprtValidatorsLength = async (rpc: string) => {
+  try {
+    let filteredList: any[] = [];
+    const rpcClient = await RpcClient(rpc);
+    const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
+    const liquidValidatorsResponse =
+      await pstakeQueryService.LiquidValidators();
+    console.log(
+      liquidValidatorsResponse,
+      "-persistence cvalue in getExchangeRateFromRpc"
+    );
+    if (liquidValidatorsResponse && liquidValidatorsResponse.liquidValidators) {
+      liquidValidatorsResponse.liquidValidators?.forEach((item) => {
+        filteredList = liquidValidatorsResponse.liquidValidators.filter(
+          (item) => Number(item.liquidTokens) > 0 || Number(item.weight) > 0
+        );
+      });
+    }
+    return filteredList.length;
+  } catch (e) {
+    console.log(e, "error-");
+    return 0;
+  }
+};
+
 export const getValidatorLength = async (chainID: string): Promise<any> => {
   const chainInfo = ExternalChains["Mainnet"].find(
     (item) => item.chainId === chainID
@@ -147,6 +172,7 @@ export const getValidatorLength = async (chainID: string): Promise<any> => {
     ustars: 0,
     uhuahua: 0,
     ubld: 0,
+    uxprt: 0,
   };
   try {
     const rpcClient = await RpcClient(chainInfo!.rpc);
@@ -158,6 +184,8 @@ export const getValidatorLength = async (chainID: string): Promise<any> => {
       );
       list[item.hostDenom] = filteredList.length;
     });
+    const xprtValsetLength = await getXprtValidatorsLength(chainInfo!.rpc);
+    list["uxprt"] = xprtValsetLength;
     return list;
   } catch (e) {
     return list;

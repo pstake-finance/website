@@ -44,6 +44,11 @@ const netWorkList = [
     tooltip: "Chihuahua",
     link: "https://app.pstake.finance/cosmos",
   },
+  {
+    logoUrl: "/images/networks/persistence.svg",
+    tooltip: "Persistence",
+    link: "https://app.pstake.finance/cosmos",
+  },
 ];
 const Banner = () => {
   const {
