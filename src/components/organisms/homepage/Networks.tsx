@@ -154,6 +154,7 @@ const Networks = () => {
     bldData,
     huahuaData,
     validatorsList,
+    xprtData,
   } = useApp();
   const { isMobile } = useWindowSize();
 
@@ -217,6 +218,22 @@ const Networks = () => {
       tvl: `${numberFormat(osmoData.tvl, 2)} OSMO`,
       buttonText: "Liquid Stake Now",
       buttonUrl: "https://app.pstake.finance/cosmos?token=OSMO&chain=osmosis",
+      erc20: false,
+    },
+    {
+      asset: "Persistence",
+      symbol: "XPRT",
+      network: "persistence",
+      denom: "uxprt",
+      externUrl: "",
+      validatorsLink: "/xprt/validators",
+      imageUrl: "/images/networks/persistence.svg",
+      validatorsLength: validatorsList["uxprt"],
+      apy: `${xprtData!.apy === -1 ? 14.94 : xprtData.apy}%`,
+      tvl: `${numberFormat(xprtData.tvl, 2)} XPRT`,
+      buttonText: "Liquid Stake Now",
+      buttonUrl:
+        "https://app.pstake.finance/cosmos/stake?token=XPRT&chain=persistence",
       erc20: false,
     },
     {
@@ -290,10 +307,10 @@ const Networks = () => {
         </p>
         <div className="pt-8">
           <div className="flex flex-wrap items-center gap-5 justify-center">
-            {getItemsPerRow(networkList, 0, 3, isMobile)}
+            {getItemsPerRow(networkList, 0, 4, isMobile)}
           </div>
           <div className="flex flex-wrap justify-center gap-5 pt-[22px] md:pt-2">
-            {getItemsPerRow(networkList, 3, networkList.length + 1, isMobile)}
+            {getItemsPerRow(networkList, 4, networkList.length + 1, isMobile)}
           </div>
           {/*<div className="flex flex-wrap justify-center gap-5 pt-8 md:pt-2">*/}
           {/*  {getItemsPerRow(networkList, 5, networkList.length + 1, isMobile)}*/}

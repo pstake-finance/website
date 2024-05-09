@@ -230,13 +230,12 @@ const Header = () => {
       imgUrl: "/images/stars.svg",
       symbol: "STARS",
     },
-    // {
-    //   optionName: "Agoric",
-    //   optionLink:
-    //     "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
-    //   imgUrl: "/images/networks/bld.svg",
-    //   symbol: "BLD",
-    // },
+    {
+      optionName: "Persistence",
+      optionLink: "",
+      imgUrl: "/images/networks/persistence.svg",
+      symbol: "XPRT",
+    },
     {
       optionName: "Chihuahua",
       optionLink: "",

@@ -56,6 +56,7 @@ const AppContext = createContext<AppState>({
     ustars: 0,
     uhuahua: 0,
     ubld: 0,
+    uxprt: 0,
   },
   tokenPrices: {
     BNB: 0,
@@ -113,6 +114,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     ustars: 0,
     uhuahua: 0,
     ubld: 0,
+    uxprt: 0,
   });
   const [prices, setPrices] = useState<any>({
     BNB: 0,

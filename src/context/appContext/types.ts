@@ -48,6 +48,7 @@ export interface AppState {
     ustars: number;
     uhuahua: number;
     ubld: number;
+    uxprt: number;
   };
 }
 
