@@ -60,7 +60,9 @@ const criteriaList: CriteriaList[] = [
 
 const ValidatorsList = () => {
   const { xprtData } = useApp();
+  const [baseList, setBaseList] = useState<ValidatorInfo[]>([]);
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
+  const [searchKey, setSearchKey] = useState<string>("");
   const [updatedTime, setUpdatedTime] = useState<string>("");
   const fetchXprtValidatorsData = useAppStore(
     (state) => state.fetchXprtValidatorsData
@@ -90,6 +92,7 @@ const ValidatorsList = () => {
         dd = moment().subtract(1, "days").format("DD MMM YYYY");
       }
       setUpdatedTime(dd!);
+      setBaseList(validatorsInfo.xprt.list);
       setDataList(validatorsInfo.xprt.list);
     }
   }, [validatorsInfo]);
@@ -117,6 +120,15 @@ const ValidatorsList = () => {
       sortable: true,
     },
   ];
+
+  const searchHandler = (evt: any) => {
+    const searchTerm = evt.target.value;
+    const filtered = baseList.filter((asset) => {
+      return asset.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    setDataList(filtered);
+    setSearchKey(searchTerm);
+  };
 
   return (
     <div className="bg-[#030303]">
@@ -187,14 +199,41 @@ const ValidatorsList = () => {
               >
                 List of Validators
               </p>
-              <p className={"text-sm text-light-emphasis flex items-center"}>
-                Updated on:&nbsp;
-                <span className={"font-medium"}>
-                  {`~${
-                    updatedTime !== null || updatedTime !== "" ? updatedTime : 0
-                  } 14:00 UTC`}
-                </span>
-              </p>
+              <div className={"flex items-center"}>
+                <p className={"text-sm text-light-emphasis flex items-center"}>
+                  Updated on:&nbsp;
+                  <span className={"font-medium"}>
+                    {`~${
+                      updatedTime !== null || updatedTime !== ""
+                        ? updatedTime
+                        : 0
+                    } 14:00 UTC`}
+                  </span>
+                </p>
+                <div>
+                  <div
+                    className={`w-[196px] relative my-2 ml-4 md:w-full flex-1`}
+                  >
+                    <input
+                      type="text"
+                      className={
+                        "bg-[#303030] py-2 pl-[40px] pr-4 text-sm text-light-emphasis " +
+                        "rounded-md font-normal border border-solid border-light-low outline-none md:py:1.5 pl-2.5 w-full " +
+                        "text-white-300 h-[37px] placeholder:text-light-mid"
+                      }
+                      value={searchKey}
+                      disabled={false}
+                      placeholder={"Search"}
+                      autoFocus={false}
+                      onChange={searchHandler}
+                    />
+                    <Icon
+                      icon="search"
+                      viewClass={`w-[18px] h-[18px] left-[15px] top-[11px] !fill-light-mid absolute`}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           {!validatorsInfo.xprt.loader && dataList.length > 0 ? (

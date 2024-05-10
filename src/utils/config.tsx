@@ -613,8 +613,8 @@ export const ExternalChains: ExternalChainData = {
   ],
   Mainnet: [
     {
-      rpc: "https://rpc.cosmos.audit.one/",
-      rest: "https://rest.cosmos.audit.one/",
+      rpc: "https://cosmos-rpc.polkachu.com/",
+      rest: "https://cosmos-rest.staketab.org",
       chainId: ChainExternalInfo["Mainnet"].cosmos.chainID,
       chainName: "Cosmos Hub",
       stakeCurrency: {
