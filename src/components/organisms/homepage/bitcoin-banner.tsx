@@ -53,7 +53,9 @@ const BitcoinBanner = () => {
             </p>
             <p className="text-[18px] md:text-[14px]  text-[#D5D5D5] mb-[44px]">
               pSTAKE Finance is building a premier BTC Liquid Staking solution
-              in collaboration with Babylon.
+              in collaboration with Babylon. Users will be able to securely
+              generate yield on their Bitcoin by securing app chains with
+              Babylon’s staking protocol.
             </p>
             <ButtonLink
               className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
