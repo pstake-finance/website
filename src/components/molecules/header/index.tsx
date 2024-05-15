@@ -213,10 +213,10 @@ const Header = () => {
       symbol: "OSMO",
     },
     {
-      optionName: "Solana",
+      optionName: "Bitcoin Blockchain",
       optionLink: "",
-      imgUrl: "/images/networks/sol.svg",
-      symbol: "SOL",
+      imgUrl: "/images/networks/btc.svg",
+      symbol: "BTC",
     },
     {
       optionName: "dYdX",
@@ -225,22 +225,10 @@ const Header = () => {
       symbol: "DYDX",
     },
     {
-      optionName: "Stargaze",
-      optionLink: "",
-      imgUrl: "/images/stars.svg",
-      symbol: "STARS",
-    },
-    {
       optionName: "Persistence",
       optionLink: "",
       imgUrl: "/images/networks/persistence.svg",
       symbol: "XPRT",
-    },
-    {
-      optionName: "Chihuahua",
-      optionLink: "",
-      imgUrl: "/images/networks/huahua.svg",
-      symbol: "HUAHUA",
     },
     {
       optionName: "BNB",

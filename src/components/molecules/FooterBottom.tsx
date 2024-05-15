@@ -69,22 +69,12 @@ const FooterBottom = () => {
     {
       externLink: false,
       link: "",
-      text: "SOL (Coming Soon)",
+      text: "BTC (Coming Soon)",
     },
     {
       externLink: false,
       link: "/dydx",
       text: "DYDX",
-    },
-    {
-      externLink: false,
-      link: "",
-      text: "STARS",
-    },
-    {
-      externLink: false,
-      link: "",
-      text: "HUAHUA",
     },
   ];
 

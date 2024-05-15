@@ -164,8 +164,8 @@ const Footer = () => {
               }
             >
               pSTAKE Finance provides a secure and decentralized liquid staking
-              solution for the $170B+ market across BNB Chain, Solana, and
-              Cosmos.{" "}
+              solution for the $1T+ market across Bitcoin, BNB Chain, and
+              Cosmos.
             </p>
             <div className={"max-w-[1140px] px-[20px] mx-auto"}>
               <ButtonLink

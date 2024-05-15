@@ -12,7 +12,7 @@ const Features = () => {
     {
       title: "Yields. Yields. Yields. ",
       icon: "cash",
-      image: "/images/pstake_hand.svg",
+      image: "/images/pstake_yields.svg",
       content:
         "pSTAKE Finance offers one of the highest DeFi yields, thanks to low liquid staking fees and partnerships with the biggest DeFi ecosystems.",
     },

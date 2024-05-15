@@ -3,24 +3,21 @@ import React from "react";
 const StakingSteps = () => {
   const list = [
     {
-      title: "Stake your PoS ASSET",
+      title: "Stake",
       icon: "1",
-      content:
-        "Stake any amount of your tokens to get daily auto-compounded staking rewards.",
+      content: "Stake any amount to get daily auto-compounded rewards",
     },
     {
-      title: "Receive stkASSET",
+      title: "Receive LSTT",
       icon: "2",
       content:
-        " Get your stkASSET token which increases in value relative to\n" +
-        "                your staked amount each epoch from staking rewards",
+        "Get liquid LSTs in return. Pat yourself on the back for contributing to network decentralization.",
     },
     {
-      title: "Participate in DeFi",
+      title: "Use in DeFi",
       icon: "3",
       content:
-        "Put your stkASSET to work with various opportunities in the DeFi\n" +
-        "                tab on pSTAKE’s application",
+        "Put your LST to work with various yield opportunities on pSTAKE’s DeFi tab.",
     },
   ];
 
