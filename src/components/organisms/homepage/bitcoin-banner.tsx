@@ -49,7 +49,7 @@ const BitcoinBanner = () => {
           </div>
           <div className={"flex-1 max-w-[645px]"}>
             <p className="text-[40px] md:text-[32px] font-bold mb-0 text-[#FCFCFC] mb-[24px]">
-              Bitcoin Liquid Staking is coming coon
+              Bitcoin Liquid Staking is coming soon
             </p>
             <p className="text-[18px] md:text-[14px]  text-[#D5D5D5] mb-[44px]">
               pSTAKE Finance is building a premier BTC Liquid Staking solution
