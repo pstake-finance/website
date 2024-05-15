@@ -75,7 +75,7 @@ const GeofenceNotice = () => {
       className={
         !banner
           ? "hidden"
-          : "top-banner-section bg-topBanner bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
+          : "top-banner-section bg-[#EE972C] bg-contain bg-no-repeat py-2.5 pr-12 pl-4"
       }
     >
       <p className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center">
@@ -85,22 +85,20 @@ const GeofenceNotice = () => {
         {/*  viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"*/}
         {/*  icon="right-arrow-bold"*/}
         {/*/>*/}
-        <span>stkXPRT is NOW LIVE. Liquid Stake your XPRT with&nbsp;</span>
-        {validatorsInfo.xprt.loader ? (
-          <Spinner size={"small"} className={"!w-3 !h-3"} />
-        ) : (
-          validatorsInfo.xprt.list.length
-        )}
-        &nbsp;validators&nbsp;
         <a
-          className="link underline"
+          className="link flex items-center"
           href={
             "https://app.pstake.finance/cosmos?stake?token=XPRT&chain=persistence"
           }
           target="_blank"
           rel="noopener noreferrer"
         >
-          now.
+          Breaking: pSTAKE Finance is launching liquid staking for Bitcoin in
+          collaboration with Babylon soon.
+          <Icon
+            viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"
+            icon="right-arrow-bold"
+          />
         </a>
       </p>
       <div onClick={closeBanner}>
