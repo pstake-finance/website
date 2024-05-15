@@ -60,7 +60,7 @@ const Banner = () => {
         <div className={"flex mb-[100px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
             <h1 className="max-w-[630px] break-words text-[48px] md:text-[42px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
-              Unlocking Liquidity for Staked Assets
+              Multichain Liquid Staking
             </h1>
             <h6 className="text-[20px] md:text-[16px] text-[#D5D5D5] text-left mb-8 max-w-[550px] break-words">
               Securely liquid stake the biggest crypto assets like Bitcoin and
