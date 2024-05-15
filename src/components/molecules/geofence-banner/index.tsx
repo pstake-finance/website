@@ -87,9 +87,7 @@ const GeofenceNotice = () => {
         {/*/>*/}
         <a
           className="link flex items-center"
-          href={
-            "https://app.pstake.finance/cosmos?stake?token=XPRT&chain=persistence"
-          }
+          href={"/"}
           target="_blank"
           rel="noopener noreferrer"
         >
