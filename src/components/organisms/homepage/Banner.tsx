@@ -10,14 +10,14 @@ import { keys } from "lodash";
 
 const netWorkList = [
   {
+    logoUrl: "/images/networks/btc.svg",
+    tooltip: "Bitcoin(Coming Soon)",
+    link: "",
+  },
+  {
     logoUrl: "/images/networks/bnb.svg",
     tooltip: "BNB Chain",
     link: "https://app.pstake.finance/bnb",
-  },
-  {
-    logoUrl: "/images/networks/sol.svg",
-    tooltip: "Solana(Coming Soon)",
-    link: "",
   },
   {
     logoUrl: "/images/networks/atom.svg",
@@ -32,16 +32,6 @@ const netWorkList = [
   {
     logoUrl: "/images/networks/dydx.svg",
     tooltip: "dYdX",
-    link: "https://app.pstake.finance/cosmos",
-  },
-  {
-    logoUrl: "/images/networks/stars.svg",
-    tooltip: "Stargaze",
-    link: "https://app.pstake.finance/cosmos",
-  },
-  {
-    logoUrl: "/images/networks/huahua.svg",
-    tooltip: "Chihuahua",
     link: "https://app.pstake.finance/cosmos",
   },
   {
@@ -69,12 +59,12 @@ const Banner = () => {
       <div className="pt-[200px] -2xl:pt-[300px] pb-[200px] relative h-full max-w-[1280px] container mx-auto">
         <div className={"flex mb-[100px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
-            <h1 className="text-[48px] md:text-[42px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
-              Liquid Stake Everything
+            <h1 className="max-w-[630px] break-words text-[48px] md:text-[42px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
+              Multichain Liquid Staking
             </h1>
-            <h6 className="text-[20px] md:text-[16px] text-[#D5D5D5] text-left mb-8 max-w-[450px] break-words">
-              Securely liquid stake the biggest crypto assets and generate
-              additional yield in DeFi.
+            <h6 className="text-[20px] md:text-[16px] text-[#D5D5D5] text-left mb-8 max-w-[550px] break-words">
+              Securely liquid stake the biggest crypto assets like Bitcoin and
+              generate additional yield in DeFi.
             </h6>
             <ButtonLink
               className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}

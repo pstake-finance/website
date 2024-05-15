@@ -58,6 +58,11 @@ const FooterBottom = () => {
   const liveNetworks = [
     {
       externLink: false,
+      link: "",
+      text: "BTC (Coming Soon)",
+    },
+    {
+      externLink: false,
       link: "/atom",
       text: "ATOM",
     },
@@ -66,25 +71,11 @@ const FooterBottom = () => {
       link: "/bnb",
       text: "BNB",
     },
-    {
-      externLink: false,
-      link: "",
-      text: "SOL (Coming Soon)",
-    },
+
     {
       externLink: false,
       link: "/dydx",
       text: "DYDX",
-    },
-    {
-      externLink: false,
-      link: "",
-      text: "STARS",
-    },
-    {
-      externLink: false,
-      link: "",
-      text: "HUAHUA",
     },
   ];
 
@@ -146,7 +137,7 @@ const FooterBottom = () => {
                   </p>
                   <a
                     href={
-                      "https://persistence.notion.site/pSTAKE-Media-Kit-a2190b24b1194a24934677c7272d1cf8"
+                      "https://short-stool-639.notion.site/pSTAKE-Brand-Press-Kit-388bb93bd0c947d6a225d5058d3f9acc"
                     }
                     className={
                       "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#C73238] group"
@@ -192,7 +183,7 @@ const FooterBottom = () => {
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
                       }
                     >
-                      Live Networks
+                      Networks
                     </p>
                     {liveNetworks.map((item, index) => {
                       return (

@@ -37,17 +37,17 @@ const Blogs = ({ deviceType }) => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: "PSTAKE Airdrop on Solana",
+      title: "pSTAKE Finance to Launch BTC Liquid",
       blogLink: PSTAKE_BLOG_ONE_URL,
       imageLink: PSTAKE_BLOG_ONE_IMG_URL,
     },
     {
-      title: "pSTAKE’s Road to Traction in 2024",
+      title: "Bitcoin Capital Efficiency with Liquid Staking",
       blogLink: PSTAKE_BLOG_TWO_URL,
       imageLink: PSTAKE_BLOG_TWO_IMG_URL,
     },
     {
-      title: "pSTAKE x Pancakeswap",
+      title: "pSTAKE Incentives Program",
       blogLink: PSTAKE_BLOG_THREE_URL,
       imageLink: PSTAKE_BLOG_THREE_IMG_URL,
     },

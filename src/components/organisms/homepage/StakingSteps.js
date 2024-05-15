@@ -3,24 +3,21 @@ import React from "react";
 const StakingSteps = () => {
   const list = [
     {
-      title: "Stake your PoS ASSET",
+      title: "Stake",
       icon: "1",
-      content:
-        "Stake any amount of your tokens to get daily auto-compounded staking rewards.",
+      content: "Stake any amount to get daily auto-compounded rewards",
     },
     {
-      title: "Receive stkASSET",
+      title: "Receive LSTT",
       icon: "2",
       content:
-        " Get your stkASSET token which increases in value relative to\n" +
-        "                your staked amount each epoch from staking rewards",
+        "Get liquid LSTs in return. Pat yourself on the back for contributing to network decentralization.",
     },
     {
-      title: "Participate in DeFi",
+      title: "Use in DeFi",
       icon: "3",
       content:
-        "Put your stkASSET to work with various opportunities in the DeFi\n" +
-        "                tab on pSTAKE’s application",
+        "Put your LST to work with various yield opportunities on pSTAKE’s DeFi tab.",
     },
   ];
 
@@ -50,10 +47,11 @@ const StakingSteps = () => {
               </div>
               <div className={""}>
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
-                  Stake Token
+                  Stake
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[220px] break-words leading-[21px] lg:w-fit">
-                  Stake any amount of your tokens to get daily auto-compounded
+                  Stake any amount to get daily auto-compounded rewards{" "}
+                  <span className={"invisible"}>dummy text </span>
                 </p>
               </div>
             </div>
@@ -74,10 +72,10 @@ const StakingSteps = () => {
               </div>
               <div className={""}>
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
-                  Receive stkToken
+                  Receive LST
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[260px] break-words leading-[21px] lg:w-fit">
-                  Get liquid stkToken in return. Pat yourself on the back for
+                  Get liquid LSTs in return. Pat yourself on the back for
                   contributing to network decentralization.
                 </p>
               </div>
@@ -102,7 +100,7 @@ const StakingSteps = () => {
                   Use in DeFi
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[212px] break-words leading-[21px] lg:w-fit">
-                  Put your stkToken to work with various yield opportunities on
+                  Put your LST to work with various yield opportunities on
                   pSTAKE’s DeFi tab.
                 </p>
               </div>

@@ -10,13 +10,14 @@ import Footer from "../components/molecules/Footer";
 import Investors from "../components/organisms/homepage/Investors";
 import Token from "../components/organisms/homepage/Token";
 import DefiPatners from "../components/organisms/homepage/DefiPatners";
+import BitcoinBanner from "../components/organisms/homepage/bitcoin-banner";
 
 const homePage = () => {
   return (
     <div>
       <Banner />
       <Investors />
-      <Networks />
+      <BitcoinBanner />
       <Features />
       <StakingSteps />
       <Token />

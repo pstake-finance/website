@@ -201,6 +201,12 @@ const Header = () => {
 
   const networks = [
     {
+      optionName: "Bitcoin",
+      optionLink: "",
+      imgUrl: "/images/networks/btc.svg",
+      symbol: "BTC",
+    },
+    {
       optionName: "Cosmos",
       optionLink: "/atom",
       imgUrl: "/images/networks/atom.svg",
@@ -213,34 +219,16 @@ const Header = () => {
       symbol: "OSMO",
     },
     {
-      optionName: "Solana",
-      optionLink: "",
-      imgUrl: "/images/networks/sol.svg",
-      symbol: "SOL",
-    },
-    {
       optionName: "dYdX",
       optionLink: "/dydx",
       imgUrl: "/images/networks/dydx.svg",
       symbol: "DYDX",
     },
     {
-      optionName: "Stargaze",
-      optionLink: "",
-      imgUrl: "/images/stars.svg",
-      symbol: "STARS",
-    },
-    {
       optionName: "Persistence",
       optionLink: "",
       imgUrl: "/images/networks/persistence.svg",
       symbol: "XPRT",
-    },
-    {
-      optionName: "Chihuahua",
-      optionLink: "",
-      imgUrl: "/images/networks/huahua.svg",
-      symbol: "HUAHUA",
     },
     {
       optionName: "BNB",

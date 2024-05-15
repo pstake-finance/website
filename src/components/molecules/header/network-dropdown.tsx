@@ -38,7 +38,16 @@ export const networkDropdownContent = (networks: any[]) => {
           <span className={"flex flex-col"}>
             <span className="text-light-high font-medium leading-normal text-base md:text-xsm flex items-center">
               {item.optionName}
-              {item.optionName === "Solana" ? (
+              {item.optionLink !== "" ? (
+                <Icon
+                  viewClass="dropDownIcon !w-[10px] ml-2 fill-[#fff] group-hover:fill-[#C73238]"
+                  icon="chevroncolorchange"
+                />
+              ) : null}
+            </span>
+            <span className="text-[#D5D5D5] text-xsm font-light leading-normal flex items-center">
+              {item.symbol}
+              {item.optionName === "Bitcoin" ? (
                 <span
                   className={
                     "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[6px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
@@ -46,15 +55,7 @@ export const networkDropdownContent = (networks: any[]) => {
                 >
                   Coming Soon
                 </span>
-              ) : item.optionLink !== "" ? (
-                <Icon
-                  viewClass="dropDownIcon !w-[10px] ml-2 fill-[#fff] group-hover:fill-[#C73238]"
-                  icon="chevroncolorchange"
-                />
               ) : null}
-            </span>
-            <span className="text-[#D5D5D5] text-xsm font-light leading-normal ">
-              {item.symbol}
             </span>
           </span>
         </a>
@@ -77,7 +78,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
           router.pathname === "/" ? "text-[#D5D5D5]" : ""
         } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal`}
       >
-        Live Networks
+        Networks
       </button>
     </Dropdown>
   );

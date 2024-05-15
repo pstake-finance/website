@@ -4,21 +4,20 @@ import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 const Token = () => {
   return (
     <div className="bg-[#1B1B1B] aos-init aos-animate" data-aos="fade-up">
-      <div className="container ">
+      <div className="container">
         <div className="flex flex-wrap justify-between py-[60px] max-w-[1240px] mx-auto">
-          <div className={"max-w-[648px]"}>
+          <div className={"max-w-[600px]"}>
             <p
               className={
                 "font-bold text-[44px] md:text-[32px] text-[#fcfcfc] mb-6"
               }
             >
-              Fueling Multi-Chain <br /> Liquid Staking
+              Fueling Multi-Chain Liquid Staking
             </p>
             <p
               className={"text-[18px] text-[#D5D5D5] md:text-[16px] mb-[48px]"}
             >
               PSTAKE is the governance and incentivization token of pSTAKE
-              <br />
               Finance’s liquid staking ecosystem.
             </p>
             <ButtonLink
