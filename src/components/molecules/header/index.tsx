@@ -201,6 +201,12 @@ const Header = () => {
 
   const networks = [
     {
+      optionName: "Bitcoin Blockchain",
+      optionLink: "",
+      imgUrl: "/images/networks/btc.svg",
+      symbol: "BTC",
+    },
+    {
       optionName: "Cosmos",
       optionLink: "/atom",
       imgUrl: "/images/networks/atom.svg",
@@ -211,12 +217,6 @@ const Header = () => {
       optionLink: "/osmo",
       imgUrl: "/images/networks/osmo.svg",
       symbol: "OSMO",
-    },
-    {
-      optionName: "Bitcoin Blockchain",
-      optionLink: "",
-      imgUrl: "/images/networks/btc.svg",
-      symbol: "BTC",
     },
     {
       optionName: "dYdX",

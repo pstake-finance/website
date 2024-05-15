@@ -12,7 +12,7 @@ const Token = () => {
                 "font-bold text-[44px] md:text-[32px] text-[#fcfcfc] mb-6"
               }
             >
-              Fueling Bitcoin Liquid Staking
+              Fueling Multi-Chain Liquid Staking
             </p>
             <p
               className={"text-[18px] text-[#D5D5D5] md:text-[16px] mb-[48px]"}

@@ -51,13 +51,9 @@ const BitcoinBanner = () => {
             <p className="text-[40px] md:text-[32px] font-bold mb-0 text-[#FCFCFC] mb-[24px]">
               Ushering into a new era with Bitcoin Liquid Staking
             </p>
-            <p className="text-[18px] md:text-[14px]  text-[#D5D5D5] mb-3">
-              pSTAKE Finance is building a secure and diversified BTC yield
-              product with liquid staking at its heart.
-            </p>
             <p className="text-[18px] md:text-[14px]  text-[#D5D5D5] mb-[44px]">
-              Our focus will be to aggregate and offer the best BTC yield to
-              retail and institutions safely.
+              pSTAKE Finance is building a premier BTC Liquid Staking solution
+              in collaboration with Babylon.
             </p>
             <ButtonLink
               className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
@@ -68,7 +64,7 @@ const BitcoinBanner = () => {
               isDisabled={false}
             >
               <span className="nav-link pophover tooltip-multiline app-btn">
-                Liquid Stake Now
+                Learn More
               </span>
             </ButtonLink>
           </div>

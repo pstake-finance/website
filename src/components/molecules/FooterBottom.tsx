@@ -136,7 +136,7 @@ const FooterBottom = () => {
                   </p>
                   <a
                     href={
-                      "https://persistence.notion.site/pSTAKE-Media-Kit-a2190b24b1194a24934677c7272d1cf8"
+                      "https://short-stool-639.notion.site/pSTAKE-Brand-Press-Kit-388bb93bd0c947d6a225d5058d3f9acc"
                     }
                     className={
                       "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#C73238] group"
