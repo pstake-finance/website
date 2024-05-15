@@ -47,7 +47,7 @@ export const networkDropdownContent = (networks: any[]) => {
             </span>
             <span className="text-[#D5D5D5] text-xsm font-light leading-normal flex items-center">
               {item.symbol}
-              {item.optionName === "Bitcoin Blockchain" ? (
+              {item.optionName === "Bitcoin" ? (
                 <span
                   className={
                     "border-[0.5px] rounded-[80px] px-2 py-1 font-medium text-[6px] border-[#0C8B8B] ml-2 text-light-high bg-[#0C8B8B1A]"
@@ -78,7 +78,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
           router.pathname === "/" ? "text-[#D5D5D5]" : ""
         } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal`}
       >
-        Live Networks
+        Networks
       </button>
     </Dropdown>
   );

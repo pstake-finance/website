@@ -58,6 +58,11 @@ const FooterBottom = () => {
   const liveNetworks = [
     {
       externLink: false,
+      link: "",
+      text: "BTC (Coming Soon)",
+    },
+    {
+      externLink: false,
       link: "/atom",
       text: "ATOM",
     },
@@ -66,11 +71,7 @@ const FooterBottom = () => {
       link: "/bnb",
       text: "BNB",
     },
-    {
-      externLink: false,
-      link: "",
-      text: "BTC (Coming Soon)",
-    },
+
     {
       externLink: false,
       link: "/dydx",
@@ -182,7 +183,7 @@ const FooterBottom = () => {
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
                       }
                     >
-                      Live Networks
+                      Networks
                     </p>
                     {liveNetworks.map((item, index) => {
                       return (

@@ -201,7 +201,7 @@ const Header = () => {
 
   const networks = [
     {
-      optionName: "Bitcoin Blockchain",
+      optionName: "Bitcoin",
       optionLink: "",
       imgUrl: "/images/networks/btc.svg",
       symbol: "BTC",

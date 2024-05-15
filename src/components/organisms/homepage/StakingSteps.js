@@ -50,7 +50,8 @@ const StakingSteps = () => {
                   Stake
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[220px] break-words leading-[21px] lg:w-fit">
-                  Stake any amount to get daily auto-compounded rewards
+                  Stake any amount to get daily auto-compounded rewards{" "}
+                  <span className={"invisible"}>dummy text </span>
                 </p>
               </div>
             </div>
