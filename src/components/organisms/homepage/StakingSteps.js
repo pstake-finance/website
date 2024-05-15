@@ -47,10 +47,10 @@ const StakingSteps = () => {
               </div>
               <div className={""}>
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
-                  Stake Token
+                  Stake
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[220px] break-words leading-[21px] lg:w-fit">
-                  Stake any amount of your tokens to get daily auto-compounded
+                  Stake any amount to get daily auto-compounded rewards
                 </p>
               </div>
             </div>
@@ -71,10 +71,10 @@ const StakingSteps = () => {
               </div>
               <div className={""}>
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
-                  Receive stkToken
+                  Receive LST
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[260px] break-words leading-[21px] lg:w-fit">
-                  Get liquid stkToken in return. Pat yourself on the back for
+                  Get liquid LSTs in return. Pat yourself on the back for
                   contributing to network decentralization.
                 </p>
               </div>
@@ -99,7 +99,7 @@ const StakingSteps = () => {
                   Use in DeFi
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[212px] break-words leading-[21px] lg:w-fit">
-                  Put your stkToken to work with various yield opportunities on
+                  Put your LST to work with various yield opportunities on
                   pSTAKE’s DeFi tab.
                 </p>
               </div>
