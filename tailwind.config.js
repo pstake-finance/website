@@ -75,6 +75,8 @@ module.exports = {
         "linear-gradient(91deg, rgba(196, 3, 11, 0.60) -15.72%, rgba(30, 0, 3, 0.60) 125.37%)",
       lsmHighlight:
         "linear-gradient(rgba(140, 2, 8, 1), rgba(211, 73, 79, 1), rgba(140, 2, 8, 1))",
+      btcBanner:
+        "url('/images/bg_images/btcBanner.svg'), url('/images/bg_images/btcBanner2.svg') ",
       title_bg: "url('/images/bg_images/title_bg_grid.svg')",
     },
     backgroundColor: {
@@ -109,6 +111,7 @@ module.exports = {
       bnbPrimary: "#f0b90b",
       ethPrimary: "#C73238",
       dydxPrimary: "#6966FF",
+      btcPrimary: "#EE972C",
     },
     fontFamily: {
       primary: ["Poppins", "sans-serif"],
@@ -177,6 +180,7 @@ module.exports = {
         ethBanner: "30%, cover",
         osmoBanner: "25%, cover",
         dydxBanner: "20%, cover",
+        btcBanner: "30%, cover",
         title_bg: "auto",
       },
       backgroundPosition: {
@@ -185,6 +189,7 @@ module.exports = {
         ethBanner: "100% 0,100% 100%",
         osmoBanner: "100% 0,100% 100%",
         dydxBanner: "100% 5%,100% 100%",
+        btcBanner: "100% 0,100% 100%",
         title_bg: "0% -150px",
       },
     },

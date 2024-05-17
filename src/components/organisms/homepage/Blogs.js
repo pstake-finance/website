@@ -37,7 +37,7 @@ const Blogs = ({ deviceType }) => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: "pSTAKE Finance to Launch BTC Liquid",
+      title: "pSTAKE Finance to Launch BTC Liquid Staking",
       blogLink: PSTAKE_BLOG_ONE_URL,
       imageLink: PSTAKE_BLOG_ONE_IMG_URL,
     },

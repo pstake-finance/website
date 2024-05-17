@@ -202,7 +202,7 @@ const Header = () => {
   const networks = [
     {
       optionName: "Bitcoin",
-      optionLink: "",
+      optionLink: "/btc",
       imgUrl: "/images/networks/btc.svg",
       symbol: "BTC",
     },
@@ -314,7 +314,8 @@ const Header = () => {
               router.pathname !== "/atom" &&
               router.pathname !== "/bnb" &&
               router.pathname !== "/eth" &&
-              router.pathname !== "/eth/testnet"
+              router.pathname !== "/eth/testnet" &&
+              router.pathname !== "/btc"
                 ? "bg-white-emphasis"
                 : ""
             } ${router.pathname.split("/")[1]}
@@ -447,33 +448,48 @@ const Header = () => {
 
                     <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
                       {router.pathname !== "/" ? (
-                        <ButtonLink
-                          className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
-                          variant={"custom"}
-                          href={appURL}
-                          scale="lg"
-                          target={"_blank"}
-                          isDisabled={false}
-                          customButtonClass={`${
-                            router.pathname === "/bnb"
-                              ? "bg-bnbPrimary"
-                              : router.pathname === "/atom"
-                              ? "bg-atomPrimary"
-                              : router.pathname === "/osmo"
-                              ? "bg-osmoPrimaryButton text-light-high"
-                              : router.pathname === "/dydx"
-                              ? "bg-dydxPrimary text-light-high"
-                              : "bg-black-800 text-light-high"
-                          } ${
-                            router.pathname === "/bnb"
-                              ? "[.is-sticky_&]:text-dark-high"
-                              : router.pathname === "/"
-                          } text-[12px]`}
-                        >
-                          <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                            Liquid Stake Now
-                          </span>
-                        </ButtonLink>
+                        router.pathname === "/btc" ? (
+                          <ButtonLink
+                            className={`!bg-btcPrimary !w-[132px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
+                            variant={"solid"}
+                            href={appURL}
+                            scale="lg"
+                            target={"_blank"}
+                            isDisabled={false}
+                          >
+                            <span className="nav-link pophover tooltip-multiline app-btn">
+                              GO TO APP
+                            </span>
+                          </ButtonLink>
+                        ) : (
+                          <ButtonLink
+                            className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
+                            variant={"custom"}
+                            href={appURL}
+                            scale="lg"
+                            target={"_blank"}
+                            isDisabled={false}
+                            customButtonClass={`${
+                              router.pathname === "/bnb"
+                                ? "bg-bnbPrimary"
+                                : router.pathname === "/atom"
+                                ? "bg-atomPrimary"
+                                : router.pathname === "/osmo"
+                                ? "bg-osmoPrimaryButton text-light-high"
+                                : router.pathname === "/dydx"
+                                ? "bg-dydxPrimary text-light-high"
+                                : "bg-black-800 text-light-high"
+                            } ${
+                              router.pathname === "/bnb"
+                                ? "[.is-sticky_&]:text-dark-high"
+                                : router.pathname === "/"
+                            } text-[12px]`}
+                          >
+                            <span className="nav-link pophover tooltip-multiline app-btn uppercase">
+                              Liquid Stake Now
+                            </span>
+                          </ButtonLink>
+                        )
                       ) : (
                         <ButtonLink
                           className={`hover:!bg-[#E509134D] dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
