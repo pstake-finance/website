@@ -48,7 +48,7 @@ const Banner = () => {
             isDisabled={true}
             focusEffect={false}
           >
-            Coming soon
+            Coming Soon
           </ButtonLink>
           <ButtonLink
             className={`w-[200px] md:py-2 md:text-sm !border-[#EE972C] hover:!bg-btcPrimary !bg-transparent !text-dark-high`}
