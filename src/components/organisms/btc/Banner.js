@@ -34,8 +34,8 @@ const Banner = () => {
           className="max-w-[700px] mx-auto mt-6 font-medium text-base
         text-dark-black-high leading-loose sm:text-sm"
         >
-          Liquid Stake BTC to get rewards from Babylon's staking protocol for
-          securing multiple app chains while maintaining your liquidity.
+          Liquid Stake BTC to get rewards from Babylon&apos;s staking protocol
+          for securing multiple app chains while maintaining your liquidity.
         </h6>
         <div className="mt-6 flex justify-center mx-auto gap-5">
           <ButtonLink
