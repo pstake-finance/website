@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
 import { ATOM_URL, OSMO_URL } from "../../../utils/config";
 import { decimalize, formatNumber } from "../../../utils/helpers";

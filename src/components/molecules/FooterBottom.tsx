@@ -308,7 +308,7 @@ const FooterBottom = () => {
         >
           <p className="text-[#70747c] text-[12px] sm:mb-4 md:text-center">
             © Copyright
-            {new Date().getFullYear()} PSTAKE Finance. All rights reserved.
+            {new Date().getFullYear()} PSTAKE Finance. {t("RIGHTS_RESERVE")}
           </p>
           <div className={"flex items-center md:justify-between md:px-4"}>
             <LinkWithLocale

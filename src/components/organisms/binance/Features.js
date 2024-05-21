@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
 
 const Features = () => {

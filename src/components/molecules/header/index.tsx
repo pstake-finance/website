@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 import {
@@ -52,7 +51,6 @@ import {
   LinkWithLocale,
 } from "next-export-i18n";
 import Icon from "../Icon";
-import Dropdown from "../../atoms/dropdown/Dropdown";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
@@ -65,7 +63,7 @@ import LearnDropdown from "./learn-dropdown";
 import CommunityDropdown from "./community-dropdown";
 import BridgeDropdown from "./bridge-dropdown";
 import MobileHeader from "./mobile-header";
-// import LanguageSwitcher from "../../organisms/language-switch";
+import LangDropdown from "./lang-dropdown";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -213,19 +211,19 @@ const Header = () => {
     },
     {
       optionName: "Cosmos",
-      optionLink: "/atom",
+      optionLink: "/atom?lang=en",
       imgUrl: "/images/networks/atom.svg",
       symbol: "ATOM",
     },
     {
       optionName: "Osmosis",
-      optionLink: "/osmo",
+      optionLink: "/osmo?lang=en",
       imgUrl: "/images/networks/osmo.svg",
       symbol: "OSMO",
     },
     {
       optionName: "dYdX",
-      optionLink: "/dydx",
+      optionLink: "/dydx?lang=en",
       imgUrl: "/images/networks/dydx.svg",
       symbol: "DYDX",
     },
@@ -288,6 +286,19 @@ const Header = () => {
       optionName: t("ETH_TO_COSMOS_BRIDGE"),
       optionLink: PSTAKE_BRIDGE_URL,
       subText: t("ETH_TO_COSMOS_BRIDGE_HELPER_TEXT"),
+    },
+  ];
+
+  const langList = [
+    {
+      imgUrl: "/images/lang/en.png",
+      code: "en",
+      name: "ENGLISH",
+    },
+    {
+      imgUrl: "/images/lang/cn.png",
+      code: "cn",
+      name: "CHINESE",
     },
   ];
 
@@ -510,21 +521,16 @@ const Header = () => {
                         </ButtonLink>
                       )}
                     </li>
+                    <li className="nav-item nav__menu-item lg:hidden">
+                      <LangDropdown
+                        langList={langList}
+                        isTablet={isLandScape}
+                      />
+                    </li>
                   </ul>
                 )}
               </div>
             </div>
-            <LanguageSwitcher lang="en">
-              {/*<a className={`btn ${query.lang === "pr" ? "bg-gray-400" : ""}`}>*/}
-              English
-              {/*</a>*/}
-            </LanguageSwitcher>
-
-            <LanguageSwitcher lang="cn">
-              {/*<a className={`btn ${query.lang === "cn" ? "bg-gray-400" : ""}`}>*/}
-              中文
-              {/*</a>*/}
-            </LanguageSwitcher>
           </nav>
         </div>
       ) : (

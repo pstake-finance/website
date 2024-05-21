@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-export-i18n";
 
 import {
   fetchAlpaca,
