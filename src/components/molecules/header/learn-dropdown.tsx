@@ -3,6 +3,7 @@ import "rc-dropdown/assets/index.css";
 import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-export-i18n";
 
 interface Props {
   learnList: any[];
@@ -53,6 +54,7 @@ export const learnDropDownContent = (learnList: any[]) => {
 
 const LearnDropdown = ({ learnList, isTablet }: Props) => {
   const router = useRouter();
+  const { t } = useTranslation();
   return (
     <>
       <Dropdown
@@ -65,7 +67,7 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
             router.pathname === "/" ? "text-[#D5D5D5]" : ""
           } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal md:!hidden`}
         >
-          Learn
+          {t("LEARN")}
         </button>
       </Dropdown>
       <div className={"hidden md:!block "}>

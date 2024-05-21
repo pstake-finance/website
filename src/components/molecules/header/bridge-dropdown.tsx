@@ -3,6 +3,7 @@ import "rc-dropdown/assets/index.css";
 import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-export-i18n";
 
 interface Props {
   list: any[];
@@ -45,7 +46,7 @@ export const bridgeDropdownContent = (list: any[]) => {
 
 const BridgeDropdown = ({ list, isTablet }: Props) => {
   const router = useRouter();
-
+  const { t } = useTranslation();
   return (
     <Dropdown
       overlay={bridgeDropdownContent(list)}
@@ -57,7 +58,7 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
           router.pathname === "/" ? "text-[#D5D5D5]" : ""
         } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal`}
       >
-        Bridges
+        {t("BRIDGES")}
       </button>
     </Dropdown>
   );

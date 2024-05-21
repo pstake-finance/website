@@ -1,7 +1,9 @@
 import React from "react";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
+import { useTranslation } from "next-export-i18n";
 
 const Token = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-[#1B1B1B] aos-init aos-animate" data-aos="fade-up">
       <div className="container">
@@ -12,13 +14,12 @@ const Token = () => {
                 "font-bold text-[44px] md:text-[32px] text-[#fcfcfc] mb-6"
               }
             >
-              Fueling Multi-Chain Liquid Staking
+              {t("HOME_TOKEN_TITLE")}
             </p>
             <p
               className={"text-[18px] text-[#D5D5D5] md:text-[16px] mb-[48px]"}
             >
-              PSTAKE is the governance and incentivization token of pSTAKE
-              Finance’s liquid staking ecosystem.
+              {t("HOME_TOKEN_CONTENT")}
             </p>
             <ButtonLink
               className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] font-semibold !h-[48px] md:!w-[100%]`}
@@ -29,7 +30,7 @@ const Token = () => {
               isDisabled={false}
             >
               <span className="nav-link pophover tooltip-multiline app-btn">
-                Get PSTAKE
+                {t("GET_PSTAKE")}
               </span>
             </ButtonLink>
           </div>

@@ -46,7 +46,11 @@ import {
   GITHUB_URL,
   GOV_URL,
 } from "../../../utils/config";
-import { useTranslation } from "next-export-i18n";
+import {
+  useTranslation,
+  LanguageSwitcher,
+  LinkWithLocale,
+} from "next-export-i18n";
 import Icon from "../Icon";
 import Dropdown from "../../atoms/dropdown/Dropdown";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
@@ -61,6 +65,7 @@ import LearnDropdown from "./learn-dropdown";
 import CommunityDropdown from "./community-dropdown";
 import BridgeDropdown from "./bridge-dropdown";
 import MobileHeader from "./mobile-header";
+// import LanguageSwitcher from "../../organisms/language-switch";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -112,7 +117,7 @@ const socialList = [
 ];
 
 const Header = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const router = useRouter();
   const [banner, setBanner] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -258,13 +263,13 @@ const Header = () => {
       optionLink: docsURL,
     },
     {
-      optionName: t("FAQs"),
+      optionName: t("FAQS"),
       icon: "faq",
       optionLink: faqURL,
       iconType: "stroke",
     },
     {
-      optionName: "Blogs",
+      optionName: t("BLOGS"),
       icon: "blog",
       iconType: "stroke",
       optionLink: "https://blog.pstake.finance/",
@@ -274,15 +279,15 @@ const Header = () => {
   const bridgeList = [
     {
       imgUrl: "/images/networks/bnb.svg",
-      optionName: "ETH to BSC bridge",
+      optionName: t("ETH_TO_BSC_BRIDGE"),
       optionLink: BSC_BRIDGE_URL,
-      subText: "Bridge PSTAKE to BSC Chain",
+      subText: t("ETH_TO_BSC_BRIDGE_HELPER_TEXT"),
     },
     {
       imgUrl: "/images/networks/atom.svg",
-      optionName: "ETH to Cosmos bridge",
+      optionName: t("ETH_TO_COSMOS_BRIDGE"),
       optionLink: PSTAKE_BRIDGE_URL,
-      subText: "Bridge PSTAKE to Persistence One",
+      subText: t("ETH_TO_COSMOS_BRIDGE_HELPER_TEXT"),
     },
   ];
 
@@ -324,13 +329,13 @@ const Header = () => {
           >
             <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
               {router.pathname === "/" ? (
-                <Link
+                <LinkWithLocale
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:150px] w-[150px] h-[36px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
-                <Link
+                <LinkWithLocale
                   className="bg-logoDark
                       [.is-sticky_&]:bg-logoLight  bg-[length:150px] w-[150px] h-[36px]  bg-no-repeat bg-center"
                   href="/"
@@ -458,7 +463,7 @@ const Header = () => {
                             isDisabled={false}
                           >
                             <span className="nav-link pophover tooltip-multiline app-btn">
-                              GO TO APP
+                              {t("GO_TO_APP")}
                             </span>
                           </ButtonLink>
                         ) : (
@@ -486,7 +491,7 @@ const Header = () => {
                             } text-[12px]`}
                           >
                             <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                              Liquid Stake Now
+                              {t("LIQUID_STAKE_NOW")}
                             </span>
                           </ButtonLink>
                         )
@@ -500,7 +505,7 @@ const Header = () => {
                           isDisabled={false}
                         >
                           <span className="nav-link pophover tooltip-multiline app-btn">
-                            Liquid Stake Now
+                            {t("LIQUID_STAKE_NOW")}
                           </span>
                         </ButtonLink>
                       )}
@@ -509,6 +514,17 @@ const Header = () => {
                 )}
               </div>
             </div>
+            <LanguageSwitcher lang="en">
+              {/*<a className={`btn ${query.lang === "pr" ? "bg-gray-400" : ""}`}>*/}
+              English
+              {/*</a>*/}
+            </LanguageSwitcher>
+
+            <LanguageSwitcher lang="cn">
+              {/*<a className={`btn ${query.lang === "cn" ? "bg-gray-400" : ""}`}>*/}
+              中文
+              {/*</a>*/}
+            </LanguageSwitcher>
           </nav>
         </div>
       ) : (

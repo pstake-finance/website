@@ -34,20 +34,20 @@ const responsive = {
 
 const Blogs = ({ deviceType }) => {
   const { isMobile } = useWindowSize();
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const list = [
     {
-      title: "pSTAKE Finance to Launch BTC Liquid Staking",
+      title: t("HOME_BLOG_ONE_TITLE"),
       blogLink: PSTAKE_BLOG_ONE_URL,
       imageLink: PSTAKE_BLOG_ONE_IMG_URL,
     },
     {
-      title: "Bitcoin Capital Efficiency with Liquid Staking",
+      title: t("HOME_BLOG_TWO_TITLE"),
       blogLink: PSTAKE_BLOG_TWO_URL,
       imageLink: PSTAKE_BLOG_TWO_IMG_URL,
     },
     {
-      title: "pSTAKE Incentives Program",
+      title: t("HOME_BLOG_THREE_TITLE"),
       blogLink: PSTAKE_BLOG_THREE_URL,
       imageLink: PSTAKE_BLOG_THREE_IMG_URL,
     },
@@ -57,7 +57,7 @@ const Blogs = ({ deviceType }) => {
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="max-w-[1240px] mx-auto pt-[60px] py-[70px] md:py-[35px]">
         <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[40px]">
-          Featured Blogs
+          {t("FEATURED_BLOGS")}
         </p>
         {isMobile ? (
           <Carousel
@@ -94,7 +94,7 @@ const Blogs = ({ deviceType }) => {
                         {item.title}
                       </p>
                       <p className="inline-flex font-semibold text-[14px] text-[#F8EAEA] pb-2">
-                        Read
+                        {t("READ")}
                         <Icon
                           viewClass="arrow-right w-[14px] stroke-[#F8EAEA] mx-2 fill-transparent"
                           icon="right-arrow2"

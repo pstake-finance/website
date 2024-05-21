@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "./Icon";
 import Link from "next/link";
-import { useTranslation } from "next-export-i18n";
+import { useTranslation, LinkWithLocale } from "next-export-i18n";
 import { useRouter } from "next/router";
 
 import {
@@ -25,7 +25,7 @@ import {
 } from "../../utils/config";
 
 const FooterBottom = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const router = useRouter();
 
   const iconFooterList = [
@@ -59,7 +59,7 @@ const FooterBottom = () => {
     {
       externLink: false,
       link: "",
-      text: "BTC (Coming Soon)",
+      text: `BTC ${t("COMING_SOON")}`,
     },
     {
       externLink: false,
@@ -83,27 +83,27 @@ const FooterBottom = () => {
     {
       externLink: true,
       link: PSTAKE_MEDIUM_URL,
-      text: "Blogs",
+      text: t("BLOGS"),
     },
     {
       externLink: true,
       link: PSTAKE_AUDITS_URL,
-      text: "Security Audits",
+      text: t("SECURITY_AUDITS"),
     },
     {
       externLink: true,
       link: GUIDES_FAQ_URL,
-      text: "FAQs",
+      text: t("FAQS"),
     },
     {
       externLink: true,
       link: GUIDES_URL,
-      text: "Guides & Tutorials",
+      text: t("GUIDES_TUTORIALS"),
     },
     {
       externLink: true,
       link: DOCS_URL,
-      text: "Documentation",
+      text: t("DOCS"),
     },
   ];
 
@@ -111,12 +111,12 @@ const FooterBottom = () => {
     {
       externLink: true,
       link: GOV_URL,
-      text: "Governance",
+      text: t("GOVERNANCE"),
     },
     {
       externLink: true,
       link: PSTAKE_FORUM_URL,
-      text: "Community Forum",
+      text: t("COMMUNITY_FORUM"),
     },
   ];
   return (
@@ -133,7 +133,7 @@ const FooterBottom = () => {
                     className="w-[172px] md:w-[160px] mb-2"
                   />
                   <p className={"text-[12px] text-[#D5D5D5B0] mb-4 "}>
-                    Managed by Persistence Labs
+                    {t("FOOTER_MANAGED_TEXT")}
                   </p>
                   <a
                     href={
@@ -144,7 +144,7 @@ const FooterBottom = () => {
                     }
                     rel="noopener noreferrer"
                   >
-                    Download Media Kit
+                    {t("FOOTER_DOWNLOAD_MEDIA")}
                     <Icon
                       viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent group-hover:stroke-[#C73238]"
                       icon={"right-arrow2"}
@@ -183,7 +183,7 @@ const FooterBottom = () => {
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
                       }
                     >
-                      Networks
+                      {t("NETWORKS")}
                     </p>
                     {liveNetworks.map((item, index) => {
                       return (
@@ -216,7 +216,7 @@ const FooterBottom = () => {
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
                       }
                     >
-                      Learn
+                      {t("LEARN")}
                     </p>
                     {learnList.map((item, index) => {
                       return (
@@ -250,7 +250,7 @@ const FooterBottom = () => {
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
                       }
                     >
-                      Community
+                      {t("COMMUNITY")}
                     </p>
                     {communityList.map((item, index) => {
                       return (
@@ -311,20 +311,20 @@ const FooterBottom = () => {
             {new Date().getFullYear()} PSTAKE Finance. All rights reserved.
           </p>
           <div className={"flex items-center md:justify-between md:px-4"}>
-            <Link
+            <LinkWithLocale
               href="/terms"
               target="_blank"
               className="text-[#70747c] text-[12px] mx-4 block md:m-0"
             >
-              Terms of Use
-            </Link>
-            <Link
+              {t("TERMS_OF_USE")}
+            </LinkWithLocale>
+            <LinkWithLocale
               href="/privacy"
               target="_blank"
               className="text-[#70747c] text-[12px] sm:mb-4 block"
             >
               {t("PRIVACY_POLICY")}
-            </Link>
+            </LinkWithLocale>
           </div>
         </div>
       </div>

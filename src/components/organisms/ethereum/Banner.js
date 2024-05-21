@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "next-export-i18n";
+import { useTranslation } from "next-i18next";
 import { ATOM_URL } from "../../../utils/config";
 import Button from "../../atoms/button/Button";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";

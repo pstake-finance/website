@@ -40,7 +40,7 @@ import {
   STK_ODMO_TWITTER_URL,
   OSMO_URL,
 } from "../../utils/config";
-import { useTranslation } from "next-export-i18n";
+import { useTranslation } from "next-i18next";
 import Icon from "./Icon";
 import Dropdown from "../atoms/dropdown/Dropdown";
 import ButtonLink from "../atoms/buttonLink/ButtonLink";

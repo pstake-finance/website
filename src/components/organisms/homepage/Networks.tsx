@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "next-export-i18n";
+import { useTranslation } from "next-i18next";
 import { APR_DEFAULT } from "../../../utils/config";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";

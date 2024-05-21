@@ -3,6 +3,7 @@ import "rc-dropdown/assets/index.css";
 import React from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
+import { useTranslation, LinkWithLocale } from "next-export-i18n";
 
 interface Props {
   networks: any[];
@@ -18,14 +19,13 @@ export const networkDropdownContent = (networks: any[]) => {
       }
     >
       {networks.map((item, index) => (
-        <a
+        <LinkWithLocale
           className={`px-6 py-3 flex items-center md:py-3
                         hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] group ${
                           item.optionLink === "" ? "pointer-events-none" : ""
                         }`}
           key={index}
           href={item.optionLink}
-          target={"_blank"}
           rel="noopener noreferrer"
         >
           <img
@@ -58,13 +58,14 @@ export const networkDropdownContent = (networks: any[]) => {
               ) : null}
             </span>
           </span>
-        </a>
+        </LinkWithLocale>
       ))}
     </div>
   );
 };
 
 const NetworkDropdown = ({ networks, isTablet }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   return (
@@ -78,7 +79,7 @@ const NetworkDropdown = ({ networks, isTablet }: Props) => {
           router.pathname === "/" ? "text-[#D5D5D5]" : ""
         } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal`}
       >
-        Networks
+        {t("NETWORKS")}
       </button>
     </Dropdown>
   );

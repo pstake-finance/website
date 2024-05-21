@@ -1,31 +1,13 @@
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const StakingSteps = () => {
-  const list = [
-    {
-      title: "Stake",
-      icon: "1",
-      content: "Stake any amount to get daily auto-compounded rewards",
-    },
-    {
-      title: "Receive LSTT",
-      icon: "2",
-      content:
-        "Get liquid LSTs in return. Pat yourself on the back for contributing to network decentralization.",
-    },
-    {
-      title: "Use in DeFi",
-      icon: "3",
-      content:
-        "Put your LST to work with various yield opportunities on pSTAKE’s DeFi tab.",
-    },
-  ];
-
+  const { t } = useTranslation();
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] lg:py-[35px]">
         <p className="text-[40px] lg:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[70px]">
-          Liquid Staking as simple as 1, 2, 3
+          {t("HOME_STAKING_STEPS_TITLE")}
         </p>
         <div className="mb-6 max-w-[1240px] mx-auto ">
           <div
@@ -47,10 +29,10 @@ const StakingSteps = () => {
               </div>
               <div className={""}>
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
-                  Stake
+                  {t("HOME_STAKING_STEPS_ONE_TITLE")}
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[220px] break-words leading-[21px] lg:w-fit">
-                  Stake any amount to get daily auto-compounded rewards{" "}
+                  {t("HOME_STAKING_STEPS_ONE_CONTENT")}
                   <span className={"invisible"}>dummy text </span>
                 </p>
               </div>
@@ -72,11 +54,10 @@ const StakingSteps = () => {
               </div>
               <div className={""}>
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
-                  Receive LST
+                  {t("HOME_STAKING_STEPS_TWO_TITLE")}
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[260px] break-words leading-[21px] lg:w-fit">
-                  Get liquid LSTs in return. Pat yourself on the back for
-                  contributing to network decentralization.
+                  {t("HOME_STAKING_STEPS_TWO_CONTENT")}
                 </p>
               </div>
             </div>
@@ -97,11 +78,10 @@ const StakingSteps = () => {
               </div>
               <div className={""}>
                 <p className="text-[#FCFCFC] font-semibold mb-3 text-[26px] leading-[39px]">
-                  Use in DeFi
+                  {t("HOME_STAKING_STEPS_THREE_TITLE")}
                 </p>
                 <p className="text-[#ECECEC] text-[14px] w-[212px] break-words leading-[21px] lg:w-fit">
-                  Put your LST to work with various yield opportunities on
-                  pSTAKE’s DeFi tab.
+                  {t("HOME_STAKING_STEPS_THREE_CONTENT")}
                 </p>
               </div>
             </div>

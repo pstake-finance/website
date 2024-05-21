@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useTranslation } from "next-export-i18n";
 import React from "react";
 import {
   BNB_IMMUNEFI,
@@ -132,20 +133,20 @@ const auditList = [
 ];
 
 const Audits = ({ deviceType }: any) => {
+  const { t } = useTranslation();
   const { isMobile } = useWindowSize();
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
         <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
-          Safety and Security Partners
+          {t("HOME_SECURITY_TITLE")}
         </p>
         <p
           className={
             "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px] mx-auto"
           }
         >
-          Blockchain security leaders have partnered with and audited liquid
-          staking with pSTAKE Finance.
+          {t("HOME_SECURITY_CONTENT")}
         </p>
         <div className={"md:ml-0"}>
           <Carousel
@@ -192,7 +193,7 @@ const Audits = ({ deviceType }: any) => {
                     rel="noopener noreferrer"
                     key={index}
                   >
-                    See Report
+                    {t("SEE_REPORT")}
                     <Icon
                       viewClass="arrow-right w-[14px] ml-2 stroke-[#F8EAEA] group-hover:stroke-[#C73238] fill-transparent"
                       icon="right-arrow2"

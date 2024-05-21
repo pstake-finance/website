@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "next-export-i18n";
+import { useTranslation } from "next-i18next";
 import {
   STK_ATOM_BLOG_ONE_URL,
   STK_ATOM_BLOG_ONE_IMAGE_URL,

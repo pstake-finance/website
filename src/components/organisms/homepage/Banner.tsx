@@ -60,11 +60,10 @@ const Banner = () => {
         <div className={"flex mb-[100px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
             <h1 className="max-w-[630px] break-words text-[48px] md:text-[42px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
-              Multichain Liquid Staking
+              {t("HOME_HERO_SECTION_TITLE")}
             </h1>
             <h6 className="text-[20px] md:text-[16px] text-[#D5D5D5] text-left mb-8 max-w-[550px] break-words">
-              Securely liquid stake the biggest crypto assets like Bitcoin and
-              generate additional yield in DeFi.
+              {t("HOME_HERO_SECTION_SUB_TITLE")}
             </h6>
             <ButtonLink
               className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
@@ -75,7 +74,7 @@ const Banner = () => {
               isDisabled={false}
             >
               <span className="nav-link pophover tooltip-multiline app-btn">
-                Liquid Stake Now
+                {t("LIQUID_STAKE_NOW")}
               </span>
             </ButtonLink>
           </div>
@@ -106,7 +105,7 @@ const Banner = () => {
                   "text-[#D5D5D5] text-[18px] md:text-[14px] lg:text-left"
                 }
               >
-                Total Value Unlocked
+                {t("TOTAL_VALUE_UNLOCKED")}
               </p>
             </div>
             <div
@@ -161,7 +160,7 @@ const Banner = () => {
                   "text-[#D5D5D5] text-[18px] md:text-[14px] text-left"
                 }
               >
-                Supported Assets
+                {t("SUPPORTED_Assets")}
               </p>
             </div>
           </div>

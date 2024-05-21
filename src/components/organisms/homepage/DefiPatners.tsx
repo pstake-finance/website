@@ -1,16 +1,4 @@
 import React from "react";
-import {
-  CHORUS,
-  COSMOSTATION,
-  EVERSTAKE,
-  FIGMENT,
-  STAKEFISH,
-  VALIDATOR_COINBASE,
-  VALIDATOR_LEGEND,
-  VALIDATOR_MATH,
-  VALIDATOR_NODE_REAL,
-  VALIDATOR_TRANCHES,
-} from "../../../utils/config";
 import { useTranslation } from "next-export-i18n";
 import Marquee from "react-fast-marquee";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
@@ -73,20 +61,19 @@ const DefiPatners = () => {
 
   const { isMobile } = useWindowSize();
 
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="mx-auto pt-[60px] py-[70px] md:py-[35px]">
         <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE]">
-          DeFi Partners
+          {t("HOME_DEFI_TITLE")}
         </p>
         <p
           className={
             "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px] mx-auto"
           }
         >
-          Industry-leading DeFi protocols help grow liquid staking yield with
-          pSTAKE Finance.
+          {t("HOME_DEFI_CONTENT")}
         </p>
         <div className="flex flex-wrap gap-6 justify-center items-center text-center max-w-[1240px] mx-auto">
           {isMobile ? (

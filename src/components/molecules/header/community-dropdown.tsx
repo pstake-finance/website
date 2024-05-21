@@ -3,6 +3,7 @@ import "rc-dropdown/assets/index.css";
 import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
+import { useTranslation } from "next-export-i18n";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -53,7 +54,7 @@ export const communityDropdownContent = (communityList: any[]) => {
 
 const CommunityDropdown = ({ communityList, isTablet }: Props) => {
   const router = useRouter();
-
+  const { t } = useTranslation();
   return (
     <Dropdown
       overlay={communityDropdownContent(communityList)}
@@ -65,7 +66,7 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
           router.pathname === "/" ? "text-[#D5D5D5]" : ""
         } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-normal`}
       >
-        Community
+        {t("COMMUNITY")}
       </button>
     </Dropdown>
   );
