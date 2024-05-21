@@ -46,7 +46,7 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
   const selectedLang = langList.find((item) => item.code === search);
 
   const activeLang = selectedLang === undefined ? defaultItem : selectedLang;
-  console.log(activeLang, search, "activeLang");
+  console.log(activeLang, search, "activeLang", router.pathname);
 
   return (
     <>
@@ -69,7 +69,11 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
           />
           {activeLang?.code}
           <Icon
-            viewClass="dropDownIcon !w-[13px] ml-[6px] fill-[#fff] group-hover:fill-[#C73238] rotate-90"
+            viewClass={` ${
+              router.pathname === "/"
+                ? "fill-[#fff] "
+                : "fill-[#181818]  [.is-sticky_&]:fill-[#fff]"
+            } dropDownIcon !w-[13px] ml-[6px]  group-hover:fill-[#C73238] rotate-90`}
             icon="chevroncolorchange"
           />
         </button>

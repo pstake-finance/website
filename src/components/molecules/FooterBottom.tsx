@@ -313,14 +313,12 @@ const FooterBottom = () => {
           <div className={"flex items-center md:justify-between md:px-4"}>
             <LinkWithLocale
               href="/terms"
-              target="_blank"
               className="text-[#70747c] text-[12px] mx-4 block md:m-0"
             >
               {t("TERMS_OF_USE")}
             </LinkWithLocale>
             <LinkWithLocale
               href="/privacy"
-              target="_blank"
               className="text-[#70747c] text-[12px] sm:mb-4 block"
             >
               {t("PRIVACY_POLICY")}
