@@ -91,24 +91,43 @@ export const fetchTokenPrices = async () => {
       "agoric",
       "chihuahua-token",
     ];
-    const pricesResponse = await Axios.get(
-      `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
-        ","
-      )}&vs_currencies=usd`,
-      {
-        headers: {
-          "x-cg-pro-api-key": process.env.NEXT_PUBLIC_COINGECKO_API_KEY,
-        },
-      }
-    );
-    data.BNB = Number(pricesResponse.data["binancecoin"].usd);
-    data.ATOM = Number(pricesResponse.data["cosmos"].usd);
-    data.OSMO = Number(pricesResponse.data["osmosis"].usd);
-    data.DYDX = Number(pricesResponse.data["dydx-chain"].usd);
-    data.STARS = Number(pricesResponse.data["stargaze"].usd);
-    data.XPRT = Number(pricesResponse.data["persistence"].usd);
-    data.BLD = Number(pricesResponse.data["agoric"].usd);
-    data.HUAHUA = Number(pricesResponse.data["chihuahua-token"].usd);
+
+    const coingeckoTokenApi =
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=cosmos,osmosis,binancecoin,dydx-chain,stargaze,persistence,agoric,chihuahua-token";
+    const pricesResponse = await Axios.get(coingeckoTokenApi);
+    if (pricesResponse && pricesResponse.data) {
+      const binanceCoinRsp = pricesResponse.data.find(
+        (item: any) => item.id === "binancecoin"
+      ).current_price;
+      const cosmosCoinRsp = pricesResponse.data.find(
+        (item: any) => item.id === "cosmos"
+      ).current_price;
+      const osmosisCoinRsp = pricesResponse.data.find(
+        (item: any) => item.id === "osmosis"
+      ).current_price;
+      const dydxCoinRsp = pricesResponse.data.find(
+        (item: any) => item.id === "dydx-chain"
+      ).current_price;
+      const stargazeCoinRsp = pricesResponse.data.find(
+        (item: any) => item.id === "stargaze"
+      ).current_price;
+      const persistenceCoinRsp = pricesResponse.data.find(
+        (item: any) => item.id === "persistence"
+      ).current_price;
+      const huahuaCoinRsp = pricesResponse.data.find(
+        (item: any) => item.id === "chihuahua-token"
+      ).current_price;
+
+      data.BNB = binanceCoinRsp ? Number(binanceCoinRsp) : 0;
+      data.ATOM = cosmosCoinRsp ? Number(cosmosCoinRsp) : 0;
+      data.OSMO = osmosisCoinRsp ? Number(osmosisCoinRsp) : 0;
+      data.DYDX = dydxCoinRsp ? Number(dydxCoinRsp) : 0;
+      data.STARS = stargazeCoinRsp ? Number(stargazeCoinRsp) : 0;
+      data.XPRT = persistenceCoinRsp ? Number(persistenceCoinRsp) : 0;
+      data.BLD = 0;
+      data.HUAHUA = huahuaCoinRsp ? Number(huahuaCoinRsp) : 0;
+    }
+
     return data;
   } catch (e) {
     return data;
