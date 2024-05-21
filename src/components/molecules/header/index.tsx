@@ -300,6 +300,11 @@ const Header = () => {
       code: "cn",
       name: "CHINESE",
     },
+    {
+      imgUrl: "/images/lang/kr.png",
+      code: "ko",
+      name: "KOREAN",
+    },
   ];
 
   const handleRouter = (link: string) => {
