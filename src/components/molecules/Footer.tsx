@@ -42,7 +42,7 @@ const Footer = () => {
   } else if (router.pathname === "/dydx") {
     twitterUrl = pstake_cosmos_twitter_url;
   } else {
-    twitterUrl = STK_ETH_TWITTER;
+    twitterUrl = PSTAKE_TWITTER_URL;
   }
 
   const iconFooterList = [
