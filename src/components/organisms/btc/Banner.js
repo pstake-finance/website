@@ -47,20 +47,6 @@ const Banner = () => {
           >
             {t("COMING_SOON")}
           </ButtonLink>
-          <ButtonLink
-            className={`w-[200px] md:py-2 md:text-sm !border-[#EE972C] hover:!bg-btcPrimary !bg-transparent !text-dark-high`}
-            variant={"outline"}
-            href={
-              "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/"
-            }
-            scale="lg"
-            customButtonClass="  !text-black-high"
-            target={"_blank"}
-            isDisabled={false}
-            focusEffect={false}
-          >
-            {t("LEARN_MORE")}
-          </ButtonLink>
         </div>
       </div>
     </div>

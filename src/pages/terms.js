@@ -394,8 +394,8 @@ const Terms = () => {
             <p className={contentClass}>9.3 {t("TERMS_9_3")}</p>
             <p className={contentClass}>9.4 {t("TERMS_9_4")}</p>
             <ul className={"list-disc pl-5"}>
-              <li className={contentClass}>{t("TERMS_9_4_1")}</li>
-              <li className={contentClass}>{t("TERMS_9_4_2")}</li>
+              <li className={contentClass}>{t("TERMS_9_4_LIST_1")}</li>
+              <li className={contentClass}>{t("TERMS_9_4_LIST_2")}</li>
             </ul>
             <p className={contentClass}>{t("TERMS_9_5")}</p>
           </div>

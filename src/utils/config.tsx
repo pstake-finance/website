@@ -218,6 +218,20 @@ export const STK_ATOM_BLOG_THREE_URL =
   "https://blog.pstake.finance/2022/11/11/stkatom-exchange-rate-mechanics/";
 export const STK_ATOM_BLOG_THREE_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/11/stkATOM-Exchange-rate-mechanics-3-1160x621.jpg";
+
+export const STK_BTC_BLOG_ONE_URL =
+  "https://blog.pstake.finance/2024/05/21/pstake-btc-liquid-staking-and-yield-thesis/";
+export const STK_BTC_BLOG_ONE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/PSTAKE-BTC-YIELD-THESIS01-18-17-min-1160x652.jpg";
+export const STK_BTC_BLOG_TWO_URL =
+  "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/";
+export const STK_BTC_BLOG_TWO_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC@1.5x-min-1160x650.png";
+export const STK_BTC_BLOG_THREE_URL =
+  "https://blog.pstake.finance/2024/05/20/bitcoin-101-series-1-what-is-bitcoin/";
+export const STK_BTC_BLOG_THREE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/Bitcoin-101-Series-1-1160x652.jpg";
+
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
 export const STK_ATOM_SECURITY_AUDIT_URL =

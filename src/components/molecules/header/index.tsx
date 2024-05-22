@@ -298,7 +298,7 @@ const Header = () => {
     {
       imgUrl: "/images/lang/cn.png",
       code: "cn",
-      name: "中国语",
+      name: "CHINESE",
     },
     {
       imgUrl: "/images/lang/kr.png",
@@ -471,7 +471,7 @@ const Header = () => {
                       {router.pathname !== "/" ? (
                         router.pathname === "/btc" ? (
                           <ButtonLink
-                            className={`!bg-btcPrimary !w-[132px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
+                            className={`!bg-[#EE972C4D] border !border-[#EE972C] !text-[#181818] !w-[190px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
                             variant={"solid"}
                             href={appURL}
                             scale="lg"
@@ -479,7 +479,7 @@ const Header = () => {
                             isDisabled={false}
                           >
                             <span className="nav-link pophover tooltip-multiline app-btn">
-                              {t("GO_TO_APP")}
+                              {t("LIQUID_STAKE_NOW")}
                             </span>
                           </ButtonLink>
                         ) : (
