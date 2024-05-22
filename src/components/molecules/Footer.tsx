@@ -115,7 +115,7 @@ const Footer = () => {
     <>
       {!router.pathname.includes("/validators") ? (
         <div className={`aos-init aos-animate ${router.pathname}`}>
-          <div className="sectionContainer pt-[80px] pb-[40px] md:py-[40px]">
+          <div className="sectionContainer py-[80px] md:py-[40px]">
             <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE]">
               {t("FOOTER_TITLE")}
             </p>
@@ -157,31 +157,29 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {router.pathname === "/" ? (
-            <div className={"py-[60px] bg-[#1B1B1B]"}>
-              <p
-                className={
-                  "text-[30px] md:text-[16px] text-[#FCFCFC] font-semibold max-w-[1140px] px-[20px] mx-auto text-center mb-6"
-                }
+          <div className={"py-[60px] bg-[#1B1B1B]"}>
+            <p
+              className={
+                "text-[30px] md:text-[16px] text-[#FCFCFC] font-semibold max-w-[1140px] px-[20px] mx-auto text-center mb-6"
+              }
+            >
+              {t("HOME_QUOTE_CONTENT")}
+            </p>
+            <div className={"max-w-[1140px] px-[20px] mx-auto"}>
+              <ButtonLink
+                className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] md:!w-[100%] md:!h-[40px] font-semibold !h-[48px] mx-auto`}
+                variant={"outline"}
+                href={PSTAKE_APP_URL}
+                scale="lg"
+                target={"_blank"}
+                isDisabled={false}
               >
-                {t("HOME_QUOTE_CONTENT")}
-              </p>
-              <div className={"max-w-[1140px] px-[20px] mx-auto"}>
-                <ButtonLink
-                  className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] md:!w-[100%] md:!h-[40px] font-semibold !h-[48px] mx-auto`}
-                  variant={"outline"}
-                  href={PSTAKE_APP_URL}
-                  scale="lg"
-                  target={"_blank"}
-                  isDisabled={false}
-                >
-                  <span className="nav-link pophover tooltip-multiline app-btn">
-                    {t("LIQUID_STAKE_NOW")}
-                  </span>
-                </ButtonLink>
-              </div>
+                <span className="nav-link pophover tooltip-multiline app-btn">
+                  {t("LIQUID_STAKE_NOW")}
+                </span>
+              </ButtonLink>
             </div>
-          ) : null}
+          </div>
           <FooterBottom />
         </div>
       ) : (

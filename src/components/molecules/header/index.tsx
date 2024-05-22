@@ -471,7 +471,7 @@ const Header = () => {
                       {router.pathname !== "/" ? (
                         router.pathname === "/btc" ? (
                           <ButtonLink
-                            className={`!bg-[#EE972C4D] border !border-[#EE972C] !text-[#181818] !w-[190px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
+                            className={`[.is-sticky_&]:!text-light-high !bg-[#EE972C4D] border !border-[#EE972C] !text-[#181818] !w-[190px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
                             variant={"solid"}
                             href={appURL}
                             scale="lg"

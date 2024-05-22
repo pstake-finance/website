@@ -57,8 +57,14 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
       >
         <button
           className={` [.is-sticky_&]:text-[#D5D5D5] flex items-center ${
-            router.pathname === "/" ? "text-[#D5D5D5]" : ""
-          } !py-2 !px-3 rounded-md text-[18px] hover:!bg-[#C732381A] hover:text-light-high !font-semibold md:!hidden uppercase`}
+            router.pathname === "/"
+              ? "text-[#D5D5D5] hover:!bg-[#C732381A] hover:text-light-high"
+              : ""
+          } ${
+            router.pathname === "/btc"
+              ? "text-[#000] hover:!bg-[#EE972C33]"
+              : ""
+          } !py-2 !px-3 rounded-md text-[18px] !font-semibold md:!hidden uppercase`}
         >
           <Image
             src={activeLang?.imgUrl}
