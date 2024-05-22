@@ -407,7 +407,7 @@ background-image: linear-gradient(to right, #232334, #232334), linear-gradient(t
 }
 
 
-.slick-slide {
+.btc-assets .slick-slide {
   height:500px !important;
   display: flex !important;
   align-items: center !important;
@@ -415,19 +415,19 @@ background-image: linear-gradient(to right, #232334, #232334), linear-gradient(t
   padding-bottom: 10px;
 }
 
-.slick-slide>div img{
-  transition: all .2s ease-in-out;
+.btc-assets .slick-slide>div img{
+  transition: all .4s ease-in-out;
   border-radius: 40px;
 
 }
-.slick-slide.slick-center img{
-  transition: all .3s ease-in-out;
+.btc-assets .slick-slide.slick-center img{
+  transition: all .5s ease-in-out;
   transform: scale(2);
 }
-.slick-dots{
+.btc-assets .slick-dots{
   bottom: -40px !important;
 }
-.slick-dots li button{
+.btc-assets .slick-dots li button{
   background: #999999 !important;
   color: #999999 !important;
   border-radius: 100%;
@@ -435,7 +435,7 @@ background-image: linear-gradient(to right, #232334, #232334), linear-gradient(t
   height: 12px !important;
 }
 
-.slick-dots li.slick-active button{
+.btc-assets .slick-dots li.slick-active button{
   background: #EE972C !important;
   color: #EE972C !important;
   width: 16px !important;

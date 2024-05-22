@@ -23,7 +23,7 @@ const AssetSlider = () => {
     centerPadding: "0",
     slidesToShow: 3,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     dots: true,
     responsive: [
       {
@@ -49,7 +49,7 @@ const AssetSlider = () => {
 
   return (
     <div className="bg-[#030200]">
-      <div className="max-w-[1300px] mx-auto py-[65px] md:py-[35px]">
+      <div className="max-w-[1272px] mx-auto  md:mx-4 py-[65px] md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1130px] mx-auto">
           {t("BTC_CAROUSEL_TITLE")}{" "}
           <span className={"text-[#EE972C]"}>
@@ -57,7 +57,7 @@ const AssetSlider = () => {
           </span>{" "}
           {t("BTC_CAROUSEL_TITLE_CONTINUE2")}
         </h3>
-        <Slider {...settings}>
+        <Slider {...settings} className={"btc-assets"}>
           {imgList.map((item, index) => (
             <img src={item.path} alt={"ss"} key={index} />
           ))}

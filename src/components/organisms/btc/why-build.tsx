@@ -29,14 +29,14 @@ const Reasons = () => {
   ];
   return (
     <div className="bg-[#030200]">
-      <div className="sectionContainer py-[65px] md:py-[35px]">
+      <div className="max-w-[1272px] mx-auto py-[65px]  md:mx-4 md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1060px] mx-auto">
           {t("BTC_WHY_BUILD_HEADING")}
         </h3>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap gap-5 md:block">
           {list.map((item, index) => (
             <div
-              className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4 pt-12 md:pt-4"
+              className="flex-1 mt-4 pt-12 md:pt-4"
               data-aos="fade-up"
               key={index}
             >

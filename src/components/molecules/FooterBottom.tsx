@@ -144,7 +144,7 @@ const FooterBottom = () => {
                     }
                     rel="noopener noreferrer"
                   >
-                    {t("FOOTER_DOWNLOAD_MEDIA")}
+                    {t("FOOTER_VIEW_PRESS_KIT")}
                     <Icon
                       viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent group-hover:stroke-[#C73238]"
                       icon={"right-arrow2"}

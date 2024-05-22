@@ -29,7 +29,7 @@ const Features = () => {
   ];
   return (
     <div className="bg-[#030200]">
-      <div className="sectionContainer py-[65px] md:py-[35px]">
+      <div className="max-w-[1272px] mx-auto  md:mx-4 py-[65px] md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[700px] mx-auto">
           {t("BTC_FEATURES_TITLE")}
         </h3>
@@ -44,7 +44,7 @@ const Features = () => {
                 className="bg-[#1B1B1B] md:p-4 p-8 h-full opacity-90
               rounded-md border border-solid border-[#FFFFFF00]"
               >
-                <div className="py-6">
+                <div className="pb-6">
                   <Icon viewClass=" w-[40px]" icon={item.icon} />
                 </div>
                 <div className="content">
