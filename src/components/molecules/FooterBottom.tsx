@@ -59,7 +59,7 @@ const FooterBottom = () => {
     {
       externLink: false,
       link: "",
-      text: `BTC ${t("COMING_SOON")}`,
+      text: `BTC (${t("COMING_SOON")})`,
     },
     {
       externLink: false,
