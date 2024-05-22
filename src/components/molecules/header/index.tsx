@@ -298,12 +298,12 @@ const Header = () => {
     {
       imgUrl: "/images/lang/cn.png",
       code: "cn",
-      name: "CHINESE",
+      name: "中国语",
     },
     {
       imgUrl: "/images/lang/kr.png",
       code: "ko",
-      name: "KOREAN",
+      name: "한국어",
     },
   ];
 
