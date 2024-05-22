@@ -85,20 +85,19 @@ const Validators = () => {
     },
   ];
 
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
         <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE]">
-          Validators
+          {t("VALIDATORS")}
         </p>
         <p
           className={
             "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px] mx-auto"
           }
         >
-          Institutional-grade validators help grow liquid staking
-          decentralization with pSTAKE Finance.
+          {t("HOME_VALIDATORS_CONTENT")}
         </p>
         <div className="flex flex-wrap gap-6 justify-center items-center text-center mx-auto">
           <Marquee className={"flex"}>

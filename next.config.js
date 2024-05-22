@@ -11,10 +11,6 @@ const nextConfig = {
     domains: ["raw.githubusercontent.com"],
     unoptimized: true,
   },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
   async redirects() {
     return [
       {

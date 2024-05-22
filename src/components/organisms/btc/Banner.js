@@ -1,13 +1,10 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
-import Icon from "../../molecules/Icon";
-import { ATOM_URL } from "../../../utils/config";
-import { decimalize, formatNumber } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
 
 const Banner = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const { cosmosData } = useApp();
 
   return (
@@ -25,17 +22,17 @@ const Banner = () => {
         </div>
         <h1
           className="banner-heading font-bold text-[54px] leading-tight
-        text-dark-black-high mt-6 md:text-[40px] sm:text-3xl"
+        text-dark-black-high mt-6 md:text-[40px] sm:text-3xl max-w-[900px] mx-auto "
         >
-          Secure and Reliable Bitcoin
-          <br /> Yields with BTC Liquid Staking
+          {t("BTC_HERO_TITLE")}
+          {/*Secure and Reliable Bitcoin*/}
+          {/*<br /> Yields with BTC Liquid Staking*/}
         </h1>
         <h6
           className="max-w-[700px] mx-auto mt-6 font-medium text-base
         text-dark-black-high leading-loose sm:text-sm"
         >
-          Liquid Stake BTC to get rewards from Babylon&apos;s staking protocol
-          for securing multiple app chains while maintaining your liquidity.
+          {t("BTC_HERO_SUB_TITLE")}
         </h6>
         <div className="mt-6 flex justify-center mx-auto gap-5">
           <ButtonLink
@@ -48,21 +45,7 @@ const Banner = () => {
             isDisabled={true}
             focusEffect={false}
           >
-            Coming Soon
-          </ButtonLink>
-          <ButtonLink
-            className={`w-[200px] md:py-2 md:text-sm !border-[#EE972C] hover:!bg-btcPrimary !bg-transparent !text-dark-high`}
-            variant={"outline"}
-            href={
-              "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/"
-            }
-            scale="lg"
-            customButtonClass="  !text-black-high"
-            target={"_blank"}
-            isDisabled={false}
-            focusEffect={false}
-          >
-            Learn More
+            {t("COMING_SOON")}
           </ButtonLink>
         </div>
       </div>

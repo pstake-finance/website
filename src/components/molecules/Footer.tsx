@@ -20,6 +20,7 @@ import {
 } from "../../utils/config";
 import FooterBottom from "./FooterBottom";
 import ButtonLink from "../atoms/buttonLink/ButtonLink";
+import { useTranslation } from "next-export-i18n";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -27,7 +28,7 @@ const getLogoUrl = (logoName: string) => {
 
 const Footer = () => {
   const router = useRouter();
-
+  const { t } = useTranslation();
   let twitterUrl;
 
   if (router.pathname === "/") {
@@ -76,37 +77,37 @@ const Footer = () => {
       name: "X (Formerly Twitter)",
       url: twitterUrl,
       image: "twitter_full",
-      text: "Follow pSTAKE Finance",
+      text: t("FOOTER_ITEM_TEXT_1"),
     },
     {
       name: "Telegram",
       url: PSTAKE_TELEGRAM_URL,
       image: "telegram_full",
-      text: "Join the Community Chat",
+      text: t("FOOTER_ITEM_TEXT_2"),
     },
     {
       name: "Discord",
       url: PSTAKE_DISCORD,
       image: "discord_full",
-      text: "Join Our Community",
+      text: t("FOOTER_ITEM_TEXT_3"),
     },
     {
       name: "Blogs",
       url: PSTAKE_MEDIUM_URL,
       image: "medium_full",
-      text: "Learn about pSTAKE",
+      text: t("FOOTER_ITEM_TEXT_4"),
     },
     {
       name: "Github",
       url: GITHUB_URL,
       image: "github_full",
-      text: "Contribute",
+      text: t("FOOTER_ITEM_TEXT_5"),
     },
     {
       name: "Community Forum",
       url: PSTAKE_FORUM_URL,
       image: "forum_full",
-      text: "Join Discussions",
+      text: t("FOOTER_ITEM_TEXT_6"),
     },
   ];
 
@@ -116,15 +117,14 @@ const Footer = () => {
         <div className={`aos-init aos-animate ${router.pathname}`}>
           <div className="sectionContainer py-[80px] md:py-[40px]">
             <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE]">
-              Explore the Community
+              {t("FOOTER_TITLE")}
             </p>
             <p
               className={
                 "text-[20px] md:text-[16px] text-center max-w-[700px] mx-auto text-[#D5D5D5] mb-8"
               }
             >
-              Learn more about pSTAKE Finance, chat with fellow pStakers, and
-              have your say in the future of liquid staking everything.
+              {t("FOOTER_SUB_TITLE")}
             </p>
             <div>
               <div className="max-w-[1000px] mx-auto mb-12">
@@ -163,9 +163,7 @@ const Footer = () => {
                 "text-[30px] md:text-[16px] text-[#FCFCFC] font-semibold max-w-[1140px] px-[20px] mx-auto text-center mb-6"
               }
             >
-              pSTAKE Finance provides a secure and decentralized liquid staking
-              solution for the $1T+ market across Bitcoin, BNB Chain, and
-              Cosmos.
+              {t("HOME_QUOTE_CONTENT")}
             </p>
             <div className={"max-w-[1140px] px-[20px] mx-auto"}>
               <ButtonLink
@@ -177,7 +175,7 @@ const Footer = () => {
                 isDisabled={false}
               >
                 <span className="nav-link pophover tooltip-multiline app-btn">
-                  Liquid Stake Now
+                  {t("LIQUID_STAKE_NOW")}
                 </span>
               </ButtonLink>
             </div>
@@ -210,14 +208,14 @@ const Footer = () => {
                   target="_blank"
                   className="text-[#787878] text-[11px] mx-4 sm:mb-4 block"
                 >
-                  Privacy Policy
+                  {t("PRIVACY_POLICY")}
                 </Link>
                 <Link
                   href="/terms"
                   target="_blank"
                   className="text-[#787878] text-[11px] mx-4 sm:mb-4 block"
                 >
-                  Terms of Use
+                  {t("TERMS_OF_SERVICE")}
                 </Link>
               </div>
             </div>

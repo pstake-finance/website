@@ -1,34 +1,32 @@
 import React from "react";
+import { useTranslation } from "next-export-i18n";
 
 const Features = () => {
+  const { t } = useTranslation("common");
   const list = [
     {
-      title: "Decentralize your stake. Help the network state.",
+      title: t("HOME_FEATURES_FIRST_TITLE"),
       icon: "liquidity",
       image: "/images/galaxy.svg",
-      content:
-        "Deposits on pSTAKE Finance get staked with multiple validators with the help of a transparent, on-chain data-driven algorithm focused on chain decentralization.",
+      content: t("HOME_FEATURES_FIRST_CONTENT"),
     },
     {
-      title: "Yields. Yields. Yields. ",
+      title: t("HOME_FEATURES_THIRD_TITLE"),
       icon: "cash",
       image: "/images/pstake_yields.svg",
-      content:
-        "pSTAKE Finance offers one of the highest DeFi yields, thanks to low liquid staking fees and partnerships with the biggest DeFi ecosystems.",
+      content: t("HOME_FEATURES_THIRD_CONTENT"),
     },
     {
-      title: "Safe, Secure, and Solid.",
+      title: t("HOME_FEATURES_SECOND_TITLE"),
       icon: "redemption",
       image: "/images/pstake_shield.svg",
-      content:
-        "Leading blockchain security firms like Halborn, Hexens, Oak Security, Immunefi, Forta, and more help prosper secure liquid staking with pSTAKE Finance.",
+      content: t("HOME_FEATURES_SECOND_CONTENT"),
     },
     {
-      title: "Made for everyone from crypto bros to your grandma",
+      title: t("HOME_FEATURES_FOURTH_TITLE"),
       icon: "cash",
       image: "/images/pstake_web.svg",
-      content:
-        "The only liquid staking protocol to be integrated with Ceffu Global (Binance Custody) and a simple and effective user experience makes pSTAKE Finance a friendly option for all. ",
+      content: t("HOME_FEATURES_FOURTH_CONTENT"),
     },
   ];
 
@@ -36,7 +34,7 @@ const Features = () => {
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
         <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[60px]">
-          Why Liquid Stake with pSTAKE?
+          {t("HOME_FEATURES_TITLE")}
         </p>
         <div className={"flex gap-3 max-w-[1240px] mx-auto md:block"}>
           <div className="flex flex-col gap-3 md:block">

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 import {
@@ -46,9 +45,12 @@ import {
   GITHUB_URL,
   GOV_URL,
 } from "../../../utils/config";
-import { useTranslation } from "next-export-i18n";
+import {
+  useTranslation,
+  LanguageSwitcher,
+  LinkWithLocale,
+} from "next-export-i18n";
 import Icon from "../Icon";
-import Dropdown from "../../atoms/dropdown/Dropdown";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
@@ -61,6 +63,8 @@ import LearnDropdown from "./learn-dropdown";
 import CommunityDropdown from "./community-dropdown";
 import BridgeDropdown from "./bridge-dropdown";
 import MobileHeader from "./mobile-header";
+import LangDropdown from "./lang-dropdown";
+import Link from "next/link";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -112,7 +116,7 @@ const socialList = [
 ];
 
 const Header = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const router = useRouter();
   const [banner, setBanner] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -258,13 +262,13 @@ const Header = () => {
       optionLink: docsURL,
     },
     {
-      optionName: t("FAQs"),
+      optionName: t("FAQS"),
       icon: "faq",
       optionLink: faqURL,
       iconType: "stroke",
     },
     {
-      optionName: "Blogs",
+      optionName: t("BLOGS"),
       icon: "blog",
       iconType: "stroke",
       optionLink: "https://blog.pstake.finance/",
@@ -274,15 +278,33 @@ const Header = () => {
   const bridgeList = [
     {
       imgUrl: "/images/networks/bnb.svg",
-      optionName: "ETH to BSC bridge",
+      optionName: t("ETH_TO_BSC_BRIDGE"),
       optionLink: BSC_BRIDGE_URL,
-      subText: "Bridge PSTAKE to BSC Chain",
+      subText: t("ETH_TO_BSC_BRIDGE_HELPER_TEXT"),
     },
     {
       imgUrl: "/images/networks/atom.svg",
-      optionName: "ETH to Cosmos bridge",
+      optionName: t("ETH_TO_COSMOS_BRIDGE"),
       optionLink: PSTAKE_BRIDGE_URL,
-      subText: "Bridge PSTAKE to Persistence One",
+      subText: t("ETH_TO_COSMOS_BRIDGE_HELPER_TEXT"),
+    },
+  ];
+
+  const langList = [
+    {
+      imgUrl: "/images/lang/en.png",
+      code: "en",
+      name: "ENGLISH",
+    },
+    {
+      imgUrl: "/images/lang/cn.png",
+      code: "cn",
+      name: "CHINESE",
+    },
+    {
+      imgUrl: "/images/lang/kr.png",
+      code: "ko",
+      name: "한국어",
     },
   ];
 
@@ -450,7 +472,7 @@ const Header = () => {
                       {router.pathname !== "/" ? (
                         router.pathname === "/btc" ? (
                           <ButtonLink
-                            className={`!bg-btcPrimary !w-[132px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
+                            className={`[.is-sticky_&]:!text-light-high !bg-[#EE972C4D] border !border-[#EE972C] !text-[#181818] !w-[190px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
                             variant={"solid"}
                             href={appURL}
                             scale="lg"
@@ -458,7 +480,7 @@ const Header = () => {
                             isDisabled={false}
                           >
                             <span className="nav-link pophover tooltip-multiline app-btn">
-                              GO TO APP
+                              {t("LIQUID_STAKE_NOW")}
                             </span>
                           </ButtonLink>
                         ) : (
@@ -486,7 +508,7 @@ const Header = () => {
                             } text-[12px]`}
                           >
                             <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                              Liquid Stake Now
+                              {t("LIQUID_STAKE_NOW")}
                             </span>
                           </ButtonLink>
                         )
@@ -500,11 +522,17 @@ const Header = () => {
                           isDisabled={false}
                         >
                           <span className="nav-link pophover tooltip-multiline app-btn">
-                            Liquid Stake Now
+                            {t("LIQUID_STAKE_NOW")}
                           </span>
                         </ButtonLink>
                       )}
                     </li>
+                    {/*<li className="nav-item nav__menu-item lg:hidden">*/}
+                    {/*  <LangDropdown*/}
+                    {/*    langList={langList}*/}
+                    {/*    isTablet={isLandScape}*/}
+                    {/*  />*/}
+                    {/*</li>*/}
                   </ul>
                 )}
               </div>

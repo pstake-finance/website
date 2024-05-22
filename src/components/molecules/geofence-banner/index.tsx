@@ -4,10 +4,12 @@ import { OSMOSIS_URL } from "../../../utils/config";
 import { useAppStore } from "../../../store/store";
 import { shallow } from "zustand/shallow";
 import { Spinner } from "../spinner";
+import { useTranslation } from "next-export-i18n";
 
 const countries = ["CM", "UM", "US", "GB", "CU", "CA"];
 
 const GeofenceNotice = () => {
+  const { t } = useTranslation();
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
   const [country, setCountry] = useState("");
   const [banner, setBanner] = useState(true);
@@ -93,8 +95,7 @@ const GeofenceNotice = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Breaking: pSTAKE Finance is launching liquid staking for Bitcoin in
-          collaboration with Babylon soon.
+          {t("BREAKING")}: {t("APP_BANNER_TEXT")}
           <Icon
             viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"
             icon="right-arrow-bold"

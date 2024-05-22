@@ -35,7 +35,9 @@ function AccordionItem({
     <li className={`mb-2 ${isOpen ? "active" : ""} accordion`}>
       <h2
         className={`${
-          router.pathname === "/osmo"
+          router.pathname === "/btc"
+            ? "bg-[#1B1B1B]"
+            : router.pathname === "/osmo"
             ? "bg-[#201B43]"
             : router.pathname === "/dydx"
             ? "bg-[#232334]"

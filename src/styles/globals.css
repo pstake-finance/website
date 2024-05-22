@@ -405,3 +405,48 @@ background-image: linear-gradient(to right, #232334, #232334), linear-gradient(t
 .accordion-mobile-header .accordion.active .accordion-item-title{
 
 }
+
+
+.btc-assets .slick-slide {
+  height:500px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btc-assets .slick-slide>div img{
+  transition: all .4s ease-in-out;
+  border-radius: 40px;
+
+}
+.btc-assets .slick-slide.slick-center img{
+  transition: all .5s ease-in-out;
+  transform: scale(2);
+}
+.btc-assets .slick-dots{
+  bottom: -40px !important;
+}
+.btc-assets .slick-dots li button{
+  background: #999999 !important;
+  color: #999999 !important;
+  border-radius: 100%;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.btc-assets .slick-dots li.slick-active button{
+  background: #EE972C !important;
+  color: #EE972C !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before{
+  color: transparent !important;
+}
+
+.slick-prev, .slick-next{
+  display: none !important;
+}
