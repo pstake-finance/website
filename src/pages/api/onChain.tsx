@@ -218,11 +218,7 @@ export const getXprtValidators = async (chainID: string, env: string) => {
           const avatarCheck = noAvatarValidators.find(
             (item) => item === res.operatorAddress
           );
-          console.log(
-            item.weight,
-            decimalizeRaw(item.weight, 18),
-            "validators-info"
-          );
+
           validators.push({
             name: res.description!.moniker!,
             identity: !avatarCheck
