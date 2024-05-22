@@ -2,6 +2,7 @@ import Dropdown from "rc-dropdown";
 import "rc-dropdown/assets/index.css";
 import React from "react";
 import Icon from "../Icon";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation, LinkWithLocale } from "next-export-i18n";
 
@@ -19,7 +20,7 @@ export const networkDropdownContent = (networks: any[]) => {
       }
     >
       {networks.map((item, index) => (
-        <LinkWithLocale
+        <Link
           className={`px-6 py-3 flex items-center md:py-3
                         hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] group ${
                           item.optionLink === "" ? "pointer-events-none" : ""
@@ -58,7 +59,7 @@ export const networkDropdownContent = (networks: any[]) => {
               ) : null}
             </span>
           </span>
-        </LinkWithLocale>
+        </Link>
       ))}
     </div>
   );

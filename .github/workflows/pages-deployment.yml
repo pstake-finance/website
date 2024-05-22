@@ -28,7 +28,7 @@ jobs:
           NEXT_PUBLIC_ONE_SIGNAL_APP_ID: 'd9ecac74-9446-4df2-9a04-ba68bee2caee'
           NEXT_PUBLIC_SHIELD_CONTRACT_ADDRESS: '0xb221dd27b05ff07704426d9bbecc4b6b9ab931c4'
           NEXT_PUBLIC_ENVIRONMENT: 'Mainnet'
-          NEXT_PUBLIC_COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       - run: npm run export --if-present
       - name: Publish

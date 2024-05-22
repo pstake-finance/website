@@ -64,6 +64,7 @@ import CommunityDropdown from "./community-dropdown";
 import BridgeDropdown from "./bridge-dropdown";
 import MobileHeader from "./mobile-header";
 import LangDropdown from "./lang-dropdown";
+import Link from "next/link";
 
 const getLogoUrl = (logoName: string) => {
   return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
@@ -211,19 +212,19 @@ const Header = () => {
     },
     {
       optionName: "Cosmos",
-      optionLink: "/atom?lang=en",
+      optionLink: "/atom",
       imgUrl: "/images/networks/atom.svg",
       symbol: "ATOM",
     },
     {
       optionName: "Osmosis",
-      optionLink: "/osmo?lang=en",
+      optionLink: "/osmo",
       imgUrl: "/images/networks/osmo.svg",
       symbol: "OSMO",
     },
     {
       optionName: "dYdX",
-      optionLink: "/dydx?lang=en",
+      optionLink: "/dydx",
       imgUrl: "/images/networks/dydx.svg",
       symbol: "DYDX",
     },
@@ -345,13 +346,13 @@ const Header = () => {
           >
             <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
               {router.pathname === "/" ? (
-                <LinkWithLocale
+                <Link
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:150px] w-[150px] h-[36px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
-                <LinkWithLocale
+                <Link
                   className="bg-logoDark
                       [.is-sticky_&]:bg-logoLight  bg-[length:150px] w-[150px] h-[36px]  bg-no-repeat bg-center"
                   href="/"
@@ -526,12 +527,12 @@ const Header = () => {
                         </ButtonLink>
                       )}
                     </li>
-                    <li className="nav-item nav__menu-item lg:hidden">
-                      <LangDropdown
-                        langList={langList}
-                        isTablet={isLandScape}
-                      />
-                    </li>
+                    {/*<li className="nav-item nav__menu-item lg:hidden">*/}
+                    {/*  <LangDropdown*/}
+                    {/*    langList={langList}*/}
+                    {/*    isTablet={isLandScape}*/}
+                    {/*  />*/}
+                    {/*</li>*/}
                   </ul>
                 )}
               </div>
