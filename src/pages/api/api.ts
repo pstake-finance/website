@@ -81,26 +81,8 @@ export const fetchTokenPrices = async () => {
     HUAHUA: 0,
   };
   try {
-    const tokens = [
-      "cosmos",
-      "osmosis",
-      "binancecoin",
-      "dydx-chain",
-      "stargaze",
-      "persistence",
-      "agoric",
-      "chihuahua-token",
-    ];
-    const pricesResponse = await Axios.get(
-      `https://pro-api.coingecko.com/api/v3/simple/price?ids=${tokens.join(
-        ","
-      )}&vs_currencies=usd`,
-      {
-        headers: {
-          "x-cg-pro-api-key": process.env.COINGECKO_API_KEY,
-        },
-      }
-    );
+    const response = await fetch(`/api/prices`);
+    const pricesResponse = await response.json();
     data.BNB = Number(pricesResponse.data["binancecoin"].usd);
     data.ATOM = Number(pricesResponse.data["cosmos"].usd);
     data.OSMO = Number(pricesResponse.data["osmosis"].usd);
