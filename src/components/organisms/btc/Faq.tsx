@@ -37,7 +37,7 @@ const Faq = () => {
       <div id="btcFaqs" className="bg-[#030200]">
         <div className="max-w-[1272px] mx-auto  md:mx-4 py-[65px] md:py-[35px]">
           <div className="sectionTitle mb-8">
-            <h1 className="inline-flex relative">{t("BTC_FAQ_TITLE")}</h1>
+            <p className="inline-flex relative">{t("BTC_FAQ_TITLE")}</p>
           </div>
           <div className="max-w-[940px] mx-auto">
             <div className="info">
