@@ -12,9 +12,7 @@ export default function Document() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets.
-           Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs,
-           which can then be used across DeFi to earn liquid staking rewards."
+          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets."
         />
         <meta
           name="keywords"
@@ -28,10 +26,15 @@ export default function Document() {
         />
         <meta property="og:image" content="/ogimage.jpeg" />
         <meta
+          content="pSTAKE | Unlocking liquidity of staked assets"
+          property="og:title"
+        />
+        <meta property="og:image" content="/ogimage.jpeg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pstake.finance" />
+        <meta
           property="og:description"
-          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets.
-           Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs,
-           which can then be used across DeFi to earn liquid staking rewards."
+          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets."
         />
         {/*Twitter Tags*/}
         <meta
@@ -39,9 +42,7 @@ export default function Document() {
           property="twitter:title"
         />
         <meta
-          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets.
-           Stakers of PoS tokens can stake their assets while unlocking liquidity in the form of stkASSETs,
-           which can then be used across DeFi to earn liquid staking rewards."
+          content="pSTAKE, developed by Persistence, is a liquid staking protocol unlocking the liquidity of staked assets."
           property="twitter:description"
         />
         <meta content="/ogimage.jpeg" property="twitter:image" />
