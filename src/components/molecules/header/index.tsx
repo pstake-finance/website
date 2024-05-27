@@ -346,13 +346,13 @@ const Header = () => {
           >
             <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
               {router.pathname === "/" ? (
-                <Link
+                <LinkWithLocale
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:150px] w-[150px] h-[36px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
-                <Link
+                <LinkWithLocale
                   className="bg-logoDark
                       [.is-sticky_&]:bg-logoLight  bg-[length:150px] w-[150px] h-[36px]  bg-no-repeat bg-center"
                   href="/"

@@ -311,18 +311,18 @@ const FooterBottom = () => {
             {new Date().getFullYear()} PSTAKE Finance. {t("RIGHTS_RESERVE")}
           </p>
           <div className={"flex items-center md:justify-between md:px-4"}>
-            <Link
+            <LinkWithLocale
               href="/terms"
               className="text-[#70747c] text-[12px] mx-4 block md:m-0"
             >
               {t("TERMS_OF_USE")}
-            </Link>
-            <Link
+            </LinkWithLocale>
+            <LinkWithLocale
               href="/privacy"
               className="text-[#70747c] text-[12px] sm:mb-4 block"
             >
               {t("PRIVACY_POLICY")}
-            </Link>
+            </LinkWithLocale>
           </div>
         </div>
       </div>
