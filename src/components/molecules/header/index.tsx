@@ -527,12 +527,12 @@ const Header = () => {
                         </ButtonLink>
                       )}
                     </li>
-                    {/*<li className="nav-item nav__menu-item lg:hidden">*/}
-                    {/*  <LangDropdown*/}
-                    {/*    langList={langList}*/}
-                    {/*    isTablet={isLandScape}*/}
-                    {/*  />*/}
-                    {/*</li>*/}
+                    <li className="nav-item nav__menu-item lg:hidden">
+                      <LangDropdown
+                        langList={langList}
+                        isTablet={isLandScape}
+                      />
+                    </li>
                   </ul>
                 )}
               </div>
