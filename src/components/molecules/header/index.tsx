@@ -301,12 +301,14 @@ const Header = () => {
       code: "cn",
       name: "CHINESE",
     },
-    {
+    process.env.NEXT_PUBLIC_DEPLOYMENT !== "production" && {
       imgUrl: "/images/lang/kr.png",
       code: "ko",
       name: "한국어",
     },
   ];
+
+  console.log(langList, "langList");
 
   const handleRouter = (link: string) => {
     router.push(link);
@@ -529,7 +531,7 @@ const Header = () => {
                     </li>
                     <li className="nav-item nav__menu-item lg:hidden">
                       <LangDropdown
-                        langList={langList}
+                        langList={langList.filter((item) => item)}
                         isTablet={isLandScape}
                       />
                     </li>
