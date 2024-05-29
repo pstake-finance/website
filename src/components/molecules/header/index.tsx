@@ -301,12 +301,14 @@ const Header = () => {
       code: "cn",
       name: "CHINESE",
     },
-    {
+    process.env.NEXT_PUBLIC_DEPLOYMENT !== "production" && {
       imgUrl: "/images/lang/kr.png",
       code: "ko",
       name: "한국어",
     },
   ];
+
+  console.log(langList, "langList");
 
   const handleRouter = (link: string) => {
     router.push(link);
@@ -346,13 +348,13 @@ const Header = () => {
           >
             <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
               {router.pathname === "/" ? (
-                <Link
+                <LinkWithLocale
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:150px] w-[150px] h-[36px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
-                <Link
+                <LinkWithLocale
                   className="bg-logoDark
                       [.is-sticky_&]:bg-logoLight  bg-[length:150px] w-[150px] h-[36px]  bg-no-repeat bg-center"
                   href="/"
@@ -527,12 +529,12 @@ const Header = () => {
                         </ButtonLink>
                       )}
                     </li>
-                    {/*<li className="nav-item nav__menu-item lg:hidden">*/}
-                    {/*  <LangDropdown*/}
-                    {/*    langList={langList}*/}
-                    {/*    isTablet={isLandScape}*/}
-                    {/*  />*/}
-                    {/*</li>*/}
+                    <li className="nav-item nav__menu-item lg:hidden">
+                      <LangDropdown
+                        langList={langList.filter((item) => item)}
+                        isTablet={isLandScape}
+                      />
+                    </li>
                   </ul>
                 )}
               </div>

@@ -20,7 +20,7 @@ export const networkDropdownContent = (networks: any[]) => {
       }
     >
       {networks.map((item, index) => (
-        <Link
+        <LinkWithLocale
           className={`px-6 py-3 flex items-center md:py-3
                         hover:cursor-pointer text-light-high whitespace-nowrap w-[50%] md:w-[100%] group ${
                           item.optionLink === "" ? "pointer-events-none" : ""
@@ -59,7 +59,7 @@ export const networkDropdownContent = (networks: any[]) => {
               ) : null}
             </span>
           </span>
-        </Link>
+        </LinkWithLocale>
       ))}
     </div>
   );
