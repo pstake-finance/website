@@ -56,6 +56,9 @@
     "ETH_TO_BSC_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to BSC Chain",
     "ETH_TO_COSMOS_BRIDGE": "ETH to Cosmos bridge",
     "ETH_TO_COSMOS_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Persistence One",
+    "ETH_TO_BASE_BRIDGE": " ETH to Base Bridge",
+    "ETH_TO_BASE_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Base L2",
+
 
     "HOME_HERO_SECTION_TITLE": "Multichain Liquid Staking",
     "HOME_HERO_SECTION_SUB_TITLE": "Securely liquid stake the biggest crypto assets like Bitcoin and generate additional yield in DeFi.",
@@ -93,9 +96,9 @@
     "HOME_SECURITY_CONTENT": "Blockchain security leaders have partnered with and audited liquid staking with pSTAKE Finance.",
     "SEE_REPORT": "See Report",
 
-    "HOME_BLOG_ONE_TITLE": "pSTAKE Finance to Launch BTC Liquid Staking",
-    "HOME_BLOG_TWO_TITLE": "Bitcoin Capital Efficiency with Liquid Staking",
-    "HOME_BLOG_THREE_TITLE": "pSTAKE Incentives Program",
+    "HOME_BLOG_ONE_TITLE": "BTC Liquid Staking on Babylon",
+    "HOME_BLOG_TWO_TITLE": "Babylon vs EigenLayer",
+    "HOME_BLOG_THREE_TITLE": "pSTAKE BTC Liquid Staking",
 
     "HOME_QUOTE_CONTENT": "pSTAKE Finance provides a secure and decentralized liquid staking solution for the $1T+ market across Bitcoin, BNB Chain, and Cosmos.",
 

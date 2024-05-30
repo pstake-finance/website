@@ -51,6 +51,8 @@
     "ETH_TO_BSC_BRIDGE_HELPER_TEXT": "桥梁 PSTAKE 到 BSC 链",
     "ETH_TO_COSMOS_BRIDGE": "ETH 到 Cosmos 桥梁",
     "ETH_TO_COSMOS_BRIDGE_HELPER_TEXT": "桥梁 PSTAKE 至 Persistence One",
+    "ETH_TO_BASE_BRIDGE": "ETH 至基桥",
+    "ETH_TO_BASE_BRIDGE_HELPER_TEXT": "桥 PSTAKE 到基地 L2",
 
     "HOME_HERO_SECTION_TITLE": "多链流动性质押",
     "HOME_HERO_SECTION_SUB_TITLE": "为比特币等加密资产提供安全地流动性质押，并在DeFi中生成额外收益。",
@@ -88,9 +90,9 @@
     "HOME_SECURITY_CONTENT": "区块链安全领导者已与pSTAKE Finance合作，并对其流动性质押进行审计。",
     "SEE_REPORT": "查看报告",
 
-    "HOME_BLOG_ONE_TITLE": "pSTAKE Finance即将推出比特币流动性质押。",
-    "HOME_BLOG_TWO_TITLE": "比特币的流动性质押资本效率",
-    "HOME_BLOG_THREE_TITLE": "pSTAKE激励计划",
+    "HOME_BLOG_ONE_TITLE": "BTC液体在巴比伦投注",
+    "HOME_BLOG_TWO_TITLE": "Babylon vs EigenLayer",
+    "HOME_BLOG_THREE_TITLE": "pSTAKE BTC Liquid Staking",
 
     "HOME_QUOTE_CONTENT": "pSTAKE Finance为超过1万亿美元的市场提供了安全和去中心化的流动性质押解决方案，涵盖了比特币、BNB链和Cosmos。",
 

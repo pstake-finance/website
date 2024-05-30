@@ -288,6 +288,12 @@ const Header = () => {
       optionLink: PSTAKE_BRIDGE_URL,
       subText: t("ETH_TO_COSMOS_BRIDGE_HELPER_TEXT"),
     },
+    {
+      imgUrl: "/images/networks/base.svg",
+      optionName: t("ETH_TO_BASE_BRIDGE"),
+      optionLink: "https://superbridge.app/base",
+      subText: t("ETH_TO_BASE_BRIDGE_HELPER_TEXT"),
+    },
   ];
 
   const langList = [

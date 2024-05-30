@@ -49,19 +49,19 @@ export const PSTAKE_TRAIL_OF_BITS =
 export const PSTAKE_CERTORA =
   "https://github.com/persistenceOne/stkBNB-contracts/tree/main/certora?utm_source=pstake_BNB_website_page&utm_medium=pstake_BNB&utm_campaign=pstake_BNB_liquid_staking";
 export const PSTAKE_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/";
+  "https://blog.pstake.finance/2024/05/23/why-we-are-building-on-babylon/";
 export const PSTAKE_BLOG_ONE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC@1.5x-min-1160x650.png";
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC-BABYLON-min-1160x652.jpg";
 
 export const PSTAKE_BLOG_TWO_URL =
-  "https://blog.pstake.finance/2024/04/24/bitcoin-capital-efficiency-with-liquid-staking/";
+  "https://blog.pstake.finance/2024/05/25/the-shared-security-war-babylon-vs-eigenlayer/";
 export const PSTAKE_BLOG_TWO_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2024/04/Screenshot-2024-04-24-at-19.15.31-1-1160x646.png";
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/GOQu3iuWkAA1XMG-1160x652.jpeg";
 
 export const PSTAKE_BLOG_THREE_URL =
-  "https://blog.pstake.finance/2024/05/06/pstake-incentives-program-may-2024/";
+  "https://blog.pstake.finance/2024/05/21/pstake-btc-liquid-staking-and-yield-thesis/";
 export const PSTAKE_BLOG_THREE_IMG_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2024/05/pStake-incentive-May-2024-1160x652.jpg";
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/PSTAKE-BTC-YIELD-THESIS01-18-17-min-1160x652.jpg";
 
 export const PSTAKE_TWITTER_URL =
   "https://twitter.com/pStakeFinance?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";

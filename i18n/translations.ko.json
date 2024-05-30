@@ -56,6 +56,8 @@
     "ETH_TO_BSC_BRIDGE_HELPER_TEXT": "브리지 PSTAKE BSC 체인",
     "ETH_TO_COSMOS_BRIDGE": "ETH - 코스모스 다리",
     "ETH_TO_COSMOS_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Persistence One",
+    "ETH_TO_BASE_BRIDGE": "ETH에서 베이스 브릿지로",
+    "ETH_TO_BASE_BRIDGE_HELPER_TEXT": "기지 L2로 브리지 PSTAKE",
 
     "HOME_HERO_SECTION_TITLE": "다중 체인 액체 스택",
     "HOME_HERO_SECTION_SUB_TITLE": "비트코인과 같은 가장 큰 암호화 자산을 안전하게 유동적으로 주고 DeFi에서 추가 수익을 창출합니다.",
@@ -93,9 +95,9 @@
     "HOME_SECURITY_CONTENT": "블록체인 보안 리더들은 pSTAKE Finance와의 유동 주식 거래와 파트너십을 맺고 감사했습니다.",
     "SEE_REPORT": "보고서 보기",
 
-    "HOME_BLOG_ONE_TITLE": "pSTAKE 금융 BTC 액체 스트라이킹을 시작",
-    "HOME_BLOG_TWO_TITLE": "액체 스택으로 비트코인 자본 효율성",
-    "HOME_BLOG_THREE_TITLE": "pSTAKE 인센티브 프로그램",
+    "HOME_BLOG_ONE_TITLE": "BTC Liquid가 바벨론에 도전하고 있습니다.",
+    "HOME_BLOG_TWO_TITLE": "Babylon vs EigenLayer",
+    "HOME_BLOG_THREE_TITLE": "pSTAKE BTC Liquid Staking",
 
     "HOME_QUOTE_CONTENT": "pSTAKE Finance는 비트코인, BNB 체인 및 코스모스에 걸쳐 $1T+ 시장에 대한 안전하고 분산형 액체 베팅 솔루션을 제공합니다.",
 
