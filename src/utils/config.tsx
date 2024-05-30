@@ -228,9 +228,9 @@ export const STK_BTC_BLOG_TWO_URL =
 export const STK_BTC_BLOG_TWO_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC@1.5x-min-1160x650.png";
 export const STK_BTC_BLOG_THREE_URL =
-  "https://blog.pstake.finance/2024/05/20/bitcoin-101-series-1-what-is-bitcoin/";
+  "https://blog.pstake.finance/2024/05/23/why-we-are-building-on-babylon/";
 export const STK_BTC_BLOG_THREE_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2024/05/Bitcoin-101-Series-1-1160x652.jpg";
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC-BABYLON-min-1160x652.jpg";
 
 export const BTC_SERIES_BLOG_ONE_URL =
   "https://blog.pstake.finance/2024/05/20/bitcoin-101-series-1-what-is-bitcoin/";
