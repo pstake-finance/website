@@ -27,9 +27,7 @@ const BitcoinBanner = () => {
             <ButtonLink
               className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
               variant={"outline"}
-              href={
-                "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/"
-              }
+              href={"/btc"}
               scale="lg"
               target={"_blank"}
               isDisabled={false}

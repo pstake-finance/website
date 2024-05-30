@@ -58,7 +58,7 @@ const FooterBottom = () => {
   const liveNetworks = [
     {
       externLink: false,
-      link: "",
+      link: "/btc",
       text: `BTC (${t("COMING_SOON")})`,
     },
     {

@@ -244,6 +244,12 @@ const Header = () => {
 
   const learnList = [
     {
+      optionName: t("BLOGS"),
+      icon: "blog",
+      iconType: "stroke",
+      optionLink: "https://blog.pstake.finance/",
+    },
+    {
       optionName: t("SECURITY_AUDITS"),
       icon: "code",
       iconType: "stroke",
@@ -256,31 +262,25 @@ const Header = () => {
       iconType: "stroke",
     },
     {
-      optionName: t("DOCS"),
-      icon: "docs",
-      iconType: "stroke",
-      optionLink: docsURL,
-    },
-    {
       optionName: t("FAQS"),
       icon: "faq",
       optionLink: faqURL,
       iconType: "stroke",
     },
     {
-      optionName: t("BLOGS"),
-      icon: "blog",
+      optionName: t("DOCS"),
+      icon: "docs",
       iconType: "stroke",
-      optionLink: "https://blog.pstake.finance/",
+      optionLink: docsURL,
     },
   ];
 
   const bridgeList = [
     {
-      imgUrl: "/images/networks/bnb.svg",
-      optionName: t("ETH_TO_BSC_BRIDGE"),
-      optionLink: BSC_BRIDGE_URL,
-      subText: t("ETH_TO_BSC_BRIDGE_HELPER_TEXT"),
+      imgUrl: "/images/networks/base.svg",
+      optionName: t("ETH_TO_BASE_BRIDGE"),
+      optionLink: "https://superbridge.app/base",
+      subText: t("ETH_TO_BASE_BRIDGE_HELPER_TEXT"),
     },
     {
       imgUrl: "/images/networks/atom.svg",
@@ -289,10 +289,10 @@ const Header = () => {
       subText: t("ETH_TO_COSMOS_BRIDGE_HELPER_TEXT"),
     },
     {
-      imgUrl: "/images/networks/base.svg",
-      optionName: t("ETH_TO_BASE_BRIDGE"),
-      optionLink: "https://superbridge.app/base",
-      subText: t("ETH_TO_BASE_BRIDGE_HELPER_TEXT"),
+      imgUrl: "/images/networks/bnb.svg",
+      optionName: t("ETH_TO_BSC_BRIDGE"),
+      optionLink: BSC_BRIDGE_URL,
+      subText: t("ETH_TO_BSC_BRIDGE_HELPER_TEXT"),
     },
   ];
 
