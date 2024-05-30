@@ -232,6 +232,22 @@ export const STK_BTC_BLOG_THREE_URL =
 export const STK_BTC_BLOG_THREE_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2024/05/Bitcoin-101-Series-1-1160x652.jpg";
 
+export const BTC_SERIES_BLOG_ONE_URL =
+  "https://blog.pstake.finance/2024/05/20/bitcoin-101-series-1-what-is-bitcoin/";
+export const BTC_SERIES_BLOG_ONE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/Bitcoin-101-Series-1-1160x652.jpg";
+
+export const BTC_SERIES_BLOG_TWO_URL =
+  "https://blog.pstake.finance/2024/05/26/bitcoin-101-series-2-what-is-proof-of-work-pow/";
+export const BTC_SERIES_BLOG_TWO_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/Bitcoin101-2-1160x653.jpg";
+
+export const BTC_SERIES_BLOG_THREE_URL =
+  "https://blog.pstake.finance/2024/05/28/bitcoin-101-series-3-what-is-blockchain/";
+
+export const BTC_SERIES_BLOG_THREE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/btc-101-3-1160x653.jpg";
+
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
 export const STK_ATOM_SECURITY_AUDIT_URL =
