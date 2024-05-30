@@ -12,7 +12,7 @@ const netWorkList = [
   {
     logoUrl: "/images/networks/btc.svg",
     tooltip: "Bitcoin(Coming Soon)",
-    link: "",
+    link: "/btc",
   },
   {
     logoUrl: "/images/networks/bnb.svg",
