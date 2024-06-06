@@ -174,7 +174,7 @@ module.exports = {
         "-sm": { min: "640px" },
       },
       backgroundSize: {
-        homeBannerBg: "cover",
+        homeBannerBg: "60%",
         atomBanner: "30%, cover",
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
@@ -184,6 +184,7 @@ module.exports = {
         title_bg: "auto",
       },
       backgroundPosition: {
+        homeBannerBg: "100% 100%",
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",
         ethBanner: "100% 0,100% 100%",
