@@ -12,10 +12,14 @@ interface Props {
 
 export const bridgeDropdownContent = (list: any[]) => {
   return (
-    <div className={"bg-[#1B1B1B] rounded-md py-2"}>
+    <div
+      className={
+        "!bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2 w-[340px]"
+      }
+    >
       {list.map((item, index) => (
         <a
-          className={`px-5 py-3 flex items-center hover:cursor-pointer text-light-high whitespace-nowrap group ${
+          className={`mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A] ${
             item.optionLink === "" ? "pointer-events-none" : ""
           }`}
           key={index}
@@ -32,7 +36,7 @@ export const bridgeDropdownContent = (list: any[]) => {
             <span className="text-light-high font-medium leading-normal md:text-xsm flex items-center">
               {item.optionName}
               <Icon
-                viewClass="dropDownIcon !w-[10px] ml-2 fill-[#fff] group-hover:fill-[#C73238]"
+                viewClass="dropDownIcon !w-[10px] ml-2 fill-[#fff] group-hover:fill-[#F6931A]"
                 icon="chevroncolorchange"
               />
             </span>
@@ -56,7 +60,7 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
           router.pathname === "/"
-            ? "text-[#D5D5D5] hover:!bg-[#C732381A] hover:text-light-high"
+            ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
             : ""
         } ${
           router.pathname === "/btc" ? "text-[#000] hover:!bg-[#EE972C33]" : ""
