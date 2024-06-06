@@ -126,8 +126,8 @@ const FeaturedBlogs = ({ bg }: Props) => {
             deviceType={"mobile"}
             partialVisbile={!isMobile}
             responsive={responsive}
-            autoPlay={false}
-            autoPlaySpeed={2000}
+            autoPlay={true}
+            autoPlaySpeed={2500}
             infinite={true}
           >
             {list.map((item, index) => (

@@ -66,10 +66,6 @@ import LangDropdown from "./lang-dropdown";
 import AboutDropdown from "./about-dropdown";
 import GoveranaceDropdown from "./governanace-dropdown";
 
-const getLogoUrl = (logoName: string) => {
-  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
-};
-
 const socialList = [
   {
     optionName: "X (Twitter)",
@@ -189,45 +185,6 @@ const Header = () => {
     twitterUrl = STK_ETH_TWITTER;
   }
 
-  const networks = [
-    {
-      optionName: "Bitcoin",
-      optionLink: "/btc",
-      imgUrl: "/images/networks/btc.svg",
-      symbol: "BTC",
-    },
-    {
-      optionName: "Cosmos",
-      optionLink: "/atom",
-      imgUrl: "/images/networks/atom.svg",
-      symbol: "ATOM",
-    },
-    {
-      optionName: "Osmosis",
-      optionLink: "/osmo",
-      imgUrl: "/images/networks/osmo.svg",
-      symbol: "OSMO",
-    },
-    {
-      optionName: "dYdX",
-      optionLink: "/dydx",
-      imgUrl: "/images/networks/dydx.svg",
-      symbol: "DYDX",
-    },
-    {
-      optionName: "Persistence",
-      optionLink: "",
-      imgUrl: "/images/networks/persistence.svg",
-      symbol: "XPRT",
-    },
-    {
-      optionName: "BNB",
-      optionLink: "/bnb",
-      imgUrl: "/images/networks/bnb.svg",
-      symbol: "BNB",
-    },
-  ];
-
   const learnList = [
     {
       optionName: t("NAV_LEARN_1_TITLE"),
@@ -291,13 +248,6 @@ const Header = () => {
       icon: "blog",
       iconType: "stroke",
       optionLink: "https://blog.pstake.finance/",
-    },
-    {
-      optionName: t("NAV_ABOUT_2_TITLE"),
-      subText: t("NAV_ABOUT_2_SUB_TITLE"),
-      icon: "faq",
-      iconType: "stroke",
-      optionLink: auditURL,
     },
     {
       optionName: t("NAV_ABOUT_3_TITLE"),

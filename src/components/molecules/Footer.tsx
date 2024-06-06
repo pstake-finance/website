@@ -74,10 +74,10 @@ const Footer = () => {
 
   const list = [
     {
-      name: "X (Formerly Twitter)",
+      name: "X (Twitter)",
       url: twitterUrl,
       image: "twitter_full",
-      text: t("FOOTER_ITEM_TEXT_1"),
+      text: "Follow @pStakeFinance",
     },
     {
       name: "Telegram",
@@ -107,7 +107,7 @@ const Footer = () => {
       name: "Governance Forum",
       url: PSTAKE_FORUM_URL,
       image: "forum_full",
-      text: t("NAV_GOVERNANCE_1_TITLE"),
+      text: "Join Discussions",
     },
   ];
 

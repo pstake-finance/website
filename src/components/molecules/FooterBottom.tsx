@@ -22,6 +22,8 @@ import {
   GUIDES_URL,
   GOV_URL,
   DOCS_URL,
+  PSTAKE_BRIDGE_URL,
+  BSC_BRIDGE_URL,
 } from "../../utils/config";
 
 const FooterBottom = () => {
@@ -82,41 +84,78 @@ const FooterBottom = () => {
   const learnList = [
     {
       externLink: true,
-      link: PSTAKE_MEDIUM_URL,
-      text: t("BLOGS"),
+      link: "https://blog.pstake.finance/category/bitcoin/",
+      text: t("NAV_LEARN_1_TITLE"),
+    },
+    {
+      externLink: true,
+      link: "https://blog.pstake.finance/category/bitcoin-101/",
+      text: t("NAV_LEARN_2_TITLE"),
+    },
+    {
+      externLink: true,
+      link: "https://blog.pstake.finance/category/guides/",
+      text: t("NAV_LEARN_3_TITLE"),
     },
     {
       externLink: true,
       link: PSTAKE_AUDITS_URL,
       text: t("SECURITY_AUDITS"),
     },
+  ];
+
+  const aboutList = [
     {
       externLink: true,
-      link: GUIDES_FAQ_URL,
-      text: t("FAQS"),
+      link: "https://blog.pstake.finance/",
+      text: t("BLOGS"),
+    },
+
+    {
+      externLink: true,
+      link: "https://immunefi.com/bug-bounty/pstakeoncosmos/",
+      text: t("NAV_ABOUT_3_TITLE"),
     },
     {
       externLink: true,
-      link: GUIDES_URL,
-      text: t("GUIDES_TUTORIALS"),
-    },
-    {
-      externLink: true,
-      link: DOCS_URL,
-      text: t("DOCS"),
+      link: "https://www.linkedin.com/company/pstake/jobs/",
+      text: t("NAV_ABOUT_4_TITLE"),
     },
   ];
 
   const communityList = [
     {
       externLink: true,
-      link: GOV_URL,
-      text: t("GOVERNANCE"),
+      link: "https://forum.pstake.finance/",
+      text: t("NAV_GOVERNANCE_1_TITLE"),
     },
     {
       externLink: true,
-      link: PSTAKE_FORUM_URL,
-      text: t("COMMUNITY_FORUM"),
+      link: "https://blog.pstake.finance/2022/03/24/introducing-pstake-community-governance/",
+      text: t("NAV_GOVERNANCE_2_TITLE"),
+    },
+    {
+      externLink: true,
+      link: "https://snapshot.org/#/pstakefinance.eth",
+      text: t("NAV_GOVERNANCE_3_TITLE"),
+    },
+  ];
+
+  const bridgeList = [
+    {
+      externLink: true,
+      link: "https://superbridge.app/base",
+      text: t("ETH_TO_BASE_BRIDGE"),
+    },
+    {
+      externLink: true,
+      link: PSTAKE_BRIDGE_URL,
+      text: t("ETH_TO_COSMOS_BRIDGE"),
+    },
+    {
+      externLink: true,
+      link: BSC_BRIDGE_URL,
+      text: t("ETH_TO_BSC_BRIDGE"),
     },
   ];
   return (
@@ -126,15 +165,12 @@ const FooterBottom = () => {
           <div>
             <div className="max-w-[1240px] mx-auto flex items-center md:block">
               <div className="flex flex-wrap justify-between w-full">
-                <div className={"w-[500px] md:mb-4"}>
+                <div className={"w-[300px] md:mb-4"}>
                   <img
                     src={"/images/logo.svg"}
                     alt={"logo"}
                     className="w-[172px] md:w-[160px] mb-2"
                   />
-                  <p className={"text-[12px] text-[#D5D5D5B0] mb-4 "}>
-                    {t("FOOTER_MANAGED_TEXT")}
-                  </p>
                   <a
                     href={
                       "https://persistence.notion.site/pSTAKE-Media-Kit-a2190b24b1194a24934677c7272d1cf8"
@@ -146,7 +182,7 @@ const FooterBottom = () => {
                   >
                     {t("FOOTER_VIEW_PRESS_KIT")}
                     <Icon
-                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent group-hover:stroke-[#C73238]"
+                      viewClass="socialIcon ml-2 !w-[16px] !h-[16px] stroke-[#F8EAEA] fill-transparent group-hover:stroke-[#EE972C]"
                       icon={"right-arrow2"}
                     />
                   </a>
@@ -177,40 +213,7 @@ const FooterBottom = () => {
                     "flex-1 flex justify-end md:justify-start md:flex-wrap"
                   }
                 >
-                  <div className={"mr-[80px] md:mr-4 md:mb-3"}>
-                    <p
-                      className={
-                        "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
-                      }
-                    >
-                      {t("NETWORKS")}
-                    </p>
-                    {liveNetworks.map((item, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className={"text-[#D5D5D5B0] mb-[6px]"}
-                        >
-                          <Link
-                            href={item.link}
-                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
-                            passHref
-                          >
-                            {item.text}
-                            {item.link !== "" ? (
-                              <Icon
-                                viewClass="arrow-right w-[14px] stroke-[#D5D5D5B2] ml-1 group-hover:stroke-[#C73238] fill-transparent"
-                                icon="external-link"
-                              />
-                            ) : (
-                              ""
-                            )}
-                          </Link>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className={"mr-[80px] md:mr-0 md:mb-3"}>
+                  <div className={"mr-[60px] md:mr-0 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -235,7 +238,7 @@ const FooterBottom = () => {
                             {item.text}
                             {item.externLink ? (
                               <Icon
-                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 mt-[3px] group-hover:stroke-[#C73238]"
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 mt-[3px] group-hover:stroke-[#EE972C]"
                                 icon="external-link"
                               />
                             ) : null}
@@ -244,13 +247,47 @@ const FooterBottom = () => {
                       );
                     })}
                   </div>
-                  <div className={"md:mr-0 md:mb-3"}>
+                  <div className={"mr-[60px] md:mr-0 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
                       }
                     >
-                      {t("COMMUNITY")}
+                      {t("ABOUT")}
+                    </p>
+                    {aboutList.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className={
+                            "text-[#D5D5D5B0] mb-[6px] flex items-center"
+                          }
+                        >
+                          <Link
+                            href={item.link}
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
+                            passHref
+                            target={item.externLink ? "_blank" : "_self"}
+                          >
+                            {item.text}
+                            {item.externLink ? (
+                              <Icon
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 mt-[3px] group-hover:stroke-[#EE972C]"
+                                icon="external-link"
+                              />
+                            ) : null}
+                          </Link>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className={"mr-[60px] md:mr-0 md:mb-3"}>
+                    <p
+                      className={
+                        "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
+                      }
+                    >
+                      {t("GOVERNANCE")}
                     </p>
                     {communityList.map((item, index) => {
                       return (
@@ -267,7 +304,39 @@ const FooterBottom = () => {
                             {item.text}
                             {item.externLink ? (
                               <Icon
-                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 group-hover:stroke-[#C73238]"
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 group-hover:stroke-[#EE972C]"
+                                icon="external-link"
+                              />
+                            ) : null}
+                          </Link>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className={" md:mr-0 md:mb-3"}>
+                    <p
+                      className={
+                        "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
+                      }
+                    >
+                      {t("BRIDGES")}
+                    </p>
+                    {bridgeList.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className={"text-[#D5D5D5B0]  mb-[6px]  "}
+                        >
+                          <Link
+                            href={item.link}
+                            className="nav-link group flex items-center text-base md:text-sm md:mb-3"
+                            passHref
+                            target={item.externLink ? "_blank" : "_self"}
+                          >
+                            {item.text}
+                            {item.externLink ? (
+                              <Icon
+                                viewClass="fill-transparent stroke-[#D5D5D5B2] !w-[14px] !h-[16px] ml-1 group-hover:stroke-[#EE972C]"
                                 icon="external-link"
                               />
                             ) : null}
