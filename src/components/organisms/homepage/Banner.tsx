@@ -15,29 +15,9 @@ const netWorkList = [
     link: "/btc",
   },
   {
-    logoUrl: "/images/networks/bnb.svg",
-    tooltip: "BNB Chain",
-    link: "https://app.pstake.finance/bnb",
-  },
-  {
-    logoUrl: "/images/networks/atom.svg",
-    tooltip: "Cosmos",
-    link: "https://app.pstake.finance/cosmos",
-  },
-  {
-    logoUrl: "/images/networks/osmo.svg",
-    tooltip: "Osmosis",
-    link: "https://app.pstake.finance/cosmos",
-  },
-  {
-    logoUrl: "/images/networks/dydx.svg",
-    tooltip: "dYdX",
-    link: "https://app.pstake.finance/cosmos",
-  },
-  {
-    logoUrl: "/images/networks/persistence.svg",
-    tooltip: "Persistence",
-    link: "https://app.pstake.finance/cosmos",
+    logoUrl: "/images/more.svg",
+    tooltip: "ATOM, OSMO, XPRT",
+    link: "",
   },
 ];
 const Banner = () => {
@@ -59,14 +39,14 @@ const Banner = () => {
       <div className="pt-[200px] -2xl:pt-[300px] pb-[200px] relative h-full max-w-[1280px] container mx-auto">
         <div className={"flex mb-[100px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
-            <h1 className="max-w-[630px] break-words text-[48px] md:text-[42px] lg:text-4xl font-bold leading-tight text-left text-[#FEFEFE] mb-6">
+            <h1 className="max-w-[630px] break-words text-[40px] md:text-[32px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
               {t("HOME_HERO_SECTION_TITLE")}
             </h1>
-            <h6 className="text-[20px] md:text-[16px] text-[#D5D5D5] text-left mb-8 max-w-[550px] break-words">
+            <h6 className="text-[18px] md:text-[14px] text-[#D5D5D5] text-left mb-10 max-w-[600px] break-words">
               {t("HOME_HERO_SECTION_SUB_TITLE")}
             </h6>
             <ButtonLink
-              className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
+              className={`!bg-[#EE972C4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
               variant={"outline"}
               href={PSTAKE_APP_URL}
               scale="lg"
@@ -79,7 +59,7 @@ const Banner = () => {
             </ButtonLink>
           </div>
         </div>
-        <div className="">
+        <div className="mb-4">
           <div className={"flex flex-wrap pt-10 md:justify-start lg:block"}>
             <div
               className={
@@ -113,7 +93,7 @@ const Banner = () => {
                 "pl-8 md:pl-0 lg:border-0 border-l border-[#FCFCFC] pt-4"
               }
             >
-              <div className="flex items-center justify-center pb-3 lg:justify-start">
+              <div className="flex items-center justify-start pb-3 lg:justify-start">
                 {netWorkList.map((item, index) => (
                   <Tooltip
                     key={index}

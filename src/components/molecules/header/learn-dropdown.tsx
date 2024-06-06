@@ -12,11 +12,14 @@ interface Props {
 
 export const learnDropDownContent = (learnList: any[]) => {
   return (
-    <div className={"!bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2"}>
+    <div
+      className={
+        "!bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2 w-[340px]"
+      }
+    >
       {learnList.map((item, index) => (
         <a
-          className="px-6 md:px-3 py-3 flex items-center md:py-3
-                        hover:cursor-pointer text-light-high whitespace-nowrap group"
+          className="mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A]"
           href={item.optionLink}
           key={index}
           target={"_blank"}
@@ -24,28 +27,45 @@ export const learnDropDownContent = (learnList: any[]) => {
         >
           <span
             className={
-              "w-[40px] h-[40px] justify-center items-center flex rounded-full bg-[#FFFFFF0D]"
+              "w-[44px] h-[44px] justify-center items-center flex rounded-full bg-[#FFFFFF0D] group-hover:fill-[#F6931A33] mr-[14px]"
             }
           >
-            <Icon
-              viewClass={` !w-[22px] ${
-                item.iconType === "stroke"
-                  ? "stroke-[#C73238] fill-transparent"
-                  : "fill-[#C73238]"
-              }`}
-              icon={item.icon}
-            />
+            {item.icon.startsWith("/images") ? (
+              <img
+                src={item.icon}
+                alt={item.icon}
+                className={"w-[44px] h-[44px]"}
+              />
+            ) : (
+              <Icon
+                viewClass={` !w-[22px] ${
+                  item.iconType === "stroke"
+                    ? "stroke-[#FFFFFF] fill-transparent group-hover:stroke-[#F6931A]"
+                    : item.iconType !== ""
+                    ? "fill-[#FFFFFF] group-hover:fill-[#F6931A]"
+                    : ""
+                } `}
+                icon={item.icon}
+              />
+            )}
           </span>
-          <span
-            className="ml-4 text-light-high text-base md:text-sm
-                        font-medium leading-normal md:text-xsm md:ml-2"
-          >
-            {item.optionName}
+          <span className={"flex-1"}>
+            <span className={"flex items-center"}>
+              <span
+                className="text-[#F5F5F5] text-base md:text-sm
+                        font-medium leading-normal md:text-xsm"
+              >
+                {item.optionName}
+              </span>
+              <Icon
+                viewClass="dropDownIcon !w-[10px] ml-1 fill-[#fff] group-hover:fill-[#F6931A]"
+                icon="chevroncolorchange"
+              />
+            </span>
+            <span className="text-[#D5D5D5] text-sm font-light">
+              {item.subText}
+            </span>
           </span>
-          <Icon
-            viewClass="dropDownIcon !w-[10px] ml-1 fill-[#fff] group-hover:fill-[#C73238]"
-            icon="chevroncolorchange"
-          />
         </a>
       ))}
     </div>
@@ -65,7 +85,7 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
         <button
           className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
             router.pathname === "/"
-              ? "text-[#D5D5D5] hover:!bg-[#C732381A] hover:text-light-high"
+              ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
               : ""
           } ${
             router.pathname === "/btc"

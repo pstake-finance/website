@@ -101,12 +101,6 @@ const auditList = [
     date: "July 2022",
   },
   {
-    link: KUDELSKI_SECURITY_SOLANA,
-    image: "kudelski",
-    title: "pSTAKE on Solana",
-    date: "May 2022",
-  },
-  {
     link: TRAIL_OF_BITS,
     image: "trail_of_bits",
     title: "pSTAKE Cosmos on Ethereum",
@@ -138,12 +132,12 @@ const Audits = ({ deviceType }: any) => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container pt-[60px] py-[70px] md:py-[35px]">
-        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE]">
+        <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE] mb-[50px]">
           {t("HOME_SECURITY_TITLE")}
         </p>
         <p
           className={
-            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px] mx-auto"
+            "text-[20px] md:text-[16px] text-center text-[#D5D5D5] mb-[50px] max-w-[540px] mx-auto hidden"
           }
         >
           {t("HOME_SECURITY_CONTENT")}
@@ -189,13 +183,13 @@ const Audits = ({ deviceType }: any) => {
                   <a
                     href={item.link}
                     target="_blank"
-                    className="text-left font-semibold text-[#F8EAEA] flex items-center hover:text-[#C73238] group"
+                    className="text-left font-semibold text-[#F8EAEA] flex items-center hover:text-[#F6931A] group"
                     rel="noopener noreferrer"
                     key={index}
                   >
                     {t("SEE_REPORT")}
                     <Icon
-                      viewClass="arrow-right w-[14px] ml-2 stroke-[#F8EAEA] group-hover:stroke-[#C73238] fill-transparent"
+                      viewClass="arrow-right w-[14px] ml-2 stroke-[#F8EAEA] group-hover:stroke-[#F6931A] fill-transparent"
                       icon="right-arrow2"
                     />
                   </a>

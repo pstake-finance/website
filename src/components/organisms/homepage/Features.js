@@ -5,10 +5,10 @@ const Features = () => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: t("HOME_FEATURES_FIRST_TITLE"),
+      title: t("BTC_FEATURES_TITLE_1"),
       icon: "liquidity",
       image: "/images/galaxy.svg",
-      content: t("HOME_FEATURES_FIRST_CONTENT"),
+      content: t("BTC_FEATURES_CONTENT_1"),
     },
     {
       title: t("HOME_FEATURES_THIRD_TITLE"),
@@ -17,22 +17,22 @@ const Features = () => {
       content: t("HOME_FEATURES_THIRD_CONTENT"),
     },
     {
-      title: t("HOME_FEATURES_SECOND_TITLE"),
+      title: t("BTC_FEATURES_TITLE_3"),
       icon: "redemption",
       image: "/images/pstake_shield.svg",
-      content: t("HOME_FEATURES_SECOND_CONTENT"),
+      content: t("BTC_FEATURES_CONTENT_3"),
     },
     {
-      title: t("HOME_FEATURES_FOURTH_TITLE"),
+      title: t("BTC_FEATURES_TITLE_2"),
       icon: "cash",
       image: "/images/pstake_web.svg",
-      content: t("HOME_FEATURES_FOURTH_CONTENT"),
+      content: t("BTC_FEATURES_CONTENT_2"),
     },
   ];
 
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
-      <div className="container pt-[60px] py-[70px] md:py-[35px]">
+      <div className="container py-[100px] md:py-[35px]">
         <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[60px]">
           {t("HOME_FEATURES_TITLE")}
         </p>

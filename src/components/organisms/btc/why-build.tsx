@@ -28,7 +28,7 @@ const Reasons = () => {
     },
   ];
   return (
-    <div className="bg-[#030200]">
+    <div className="bg-[#141414]">
       <div className="max-w-[1272px] mx-auto py-[65px]  md:mx-4 md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1060px] mx-auto">
           {t("BTC_WHY_BUILD_HEADING")}

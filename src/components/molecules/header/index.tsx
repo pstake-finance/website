@@ -58,59 +58,41 @@ import Button from "../../atoms/button/Button";
 import OsmoHeader from ".././osmo-header";
 import GeofenceNotice from ".././geofence-banner";
 import { useAppStore } from "../../../store/store";
-import NetworkDropdown from "./network-dropdown";
 import LearnDropdown from "./learn-dropdown";
 import CommunityDropdown from "./community-dropdown";
 import BridgeDropdown from "./bridge-dropdown";
 import MobileHeader from "./mobile-header";
 import LangDropdown from "./lang-dropdown";
-import Link from "next/link";
-
-const getLogoUrl = (logoName: string) => {
-  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
-};
+import AboutDropdown from "./about-dropdown";
+import GoveranaceDropdown from "./governanace-dropdown";
 
 const socialList = [
   {
-    name: "X (Formerly Twitter)",
-    url: PSTAKE_TWITTER_URL,
-    image: "twitter_full",
+    optionName: "X (Twitter)",
+    optionLink: "https://x.com/intent/follow?screen_name=pStakeFinance",
+    icon: "twitter-logo",
+    iconType: "fill",
     text: "Follow pSTAKE Finance",
   },
   {
-    name: "Telegram",
-    url: PSTAKE_TELEGRAM_URL,
-    image: "telegram_full",
+    optionName: "Telegram",
+    optionLink: "https://t.me/pstakefinancechat",
+    icon: "telegram-plane",
+    iconType: "fill",
     text: "Join the Community Chat",
   },
   {
-    name: "Discord",
-    url: PSTAKE_DISCORD,
-    image: "discord_full",
+    optionName: "Discord",
+    optionLink: "https://discord.com/invite/2ek5rUyT8x",
+    icon: "discord",
+    iconType: "fill",
     text: "Join Our Community",
   },
   {
-    name: "Blogs",
-    url: PSTAKE_MEDIUM_URL,
-    image: "medium_full",
-    text: "Learn about pSTAKE",
-  },
-  {
-    name: "Github",
-    url: GITHUB_URL,
-    image: "github_full",
-    text: "Contribute",
-  },
-  {
-    name: "Governance",
-    url: GOV_URL,
-    image: "governance_full",
-    text: "Join Discussions",
-  },
-  {
-    name: "Community Forum",
-    url: PSTAKE_FORUM_URL,
-    image: "forum_full",
+    optionName: "Governance Forum",
+    optionLink: "https://forum.pstake.finance/",
+    icon: "pstake",
+    iconType: "",
     text: "Join Discussions",
   },
 ];
@@ -203,75 +185,91 @@ const Header = () => {
     twitterUrl = STK_ETH_TWITTER;
   }
 
-  const networks = [
+  const learnList = [
     {
-      optionName: "Bitcoin",
-      optionLink: "/btc",
-      imgUrl: "/images/networks/btc.svg",
-      symbol: "BTC",
+      optionName: t("NAV_LEARN_1_TITLE"),
+      subText: t("NAV_LEARN_1_SUB_TITLE"),
+      icon: "btc-icon",
+      iconType: "",
+      optionLink: "https://blog.pstake.finance/category/bitcoin/",
     },
     {
-      optionName: "Cosmos",
-      optionLink: "/atom",
-      imgUrl: "/images/networks/atom.svg",
-      symbol: "ATOM",
+      optionName: t("NAV_LEARN_2_TITLE"),
+      subText: t("NAV_LEARN_2_SUB_TITLE"),
+      icon: "circle_info",
+      iconType: "stroke",
+      optionLink: "https://blog.pstake.finance/category/bitcoin-101/",
     },
     {
-      optionName: "Osmosis",
-      optionLink: "/osmo",
-      imgUrl: "/images/networks/osmo.svg",
-      symbol: "OSMO",
+      optionName: t("NAV_LEARN_3_TITLE"),
+      subText: t("NAV_LEARN_3_SUB_TITLE"),
+      icon: "guides",
+      optionLink: "https://blog.pstake.finance/category/guides/",
+      iconType: "stroke",
     },
     {
-      optionName: "dYdX",
-      optionLink: "/dydx",
-      imgUrl: "/images/networks/dydx.svg",
-      symbol: "DYDX",
-    },
-    {
-      optionName: "Persistence",
-      optionLink: "",
-      imgUrl: "/images/networks/persistence.svg",
-      symbol: "XPRT",
-    },
-    {
-      optionName: "BNB",
-      optionLink: "/bnb",
-      imgUrl: "/images/networks/bnb.svg",
-      symbol: "BNB",
+      optionName: t("NAV_LEARN_4_TITLE"),
+      subText: t("NAV_LEARN_4_SUB_TITLE"),
+      icon: "code",
+      optionLink: "https://github.com/persistenceOne/pStake-auditReports",
+      iconType: "stroke",
     },
   ];
 
-  const learnList = [
+  const governanceList = [
     {
-      optionName: t("BLOGS"),
+      optionName: t("NAV_GOVERNANCE_1_TITLE"),
+      subText: t("NAV_GOVERNANCE_1_SUB_TITLE"),
+      icon: "pstake",
+      iconType: "",
+      optionLink: "https://forum.pstake.finance/",
+    },
+    {
+      optionName: t("NAV_GOVERNANCE_2_TITLE"),
+      subText: t("NAV_GOVERNANCE_2_SUB_TITLE"),
+      icon: "governance_process",
+      iconType: "stroke",
+      optionLink:
+        "https://blog.pstake.finance/2022/03/24/introducing-pstake-community-governance/",
+    },
+    {
+      optionName: t("NAV_GOVERNANCE_3_TITLE"),
+      subText: t("NAV_GOVERNANCE_3_SUB_TITLE"),
+      icon: "snapshot",
+      optionLink: "https://snapshot.org/#/pstakefinance.eth",
+      iconType: "stroke",
+    },
+  ];
+
+  const aboutList = [
+    {
+      optionName: t("NAV_ABOUT_1_TITLE"),
+      subText: t("NAV_ABOUT_1_SUB_TITLE"),
       icon: "blog",
       iconType: "stroke",
       optionLink: "https://blog.pstake.finance/",
     },
     {
-      optionName: t("SECURITY_AUDITS"),
-      icon: "code",
-      iconType: "stroke",
-      optionLink: auditURL,
+      optionName: t("NAV_ABOUT_3_TITLE"),
+      subText: t("NAV_ABOUT_3_SUB_TITLE"),
+      icon: "bug_bounty",
+      optionLink: "https://immunefi.com/bug-bounty/pstakeoncosmos/",
+      iconType: "fill",
     },
     {
-      optionName: t("GUIDES_TUTORIALS"),
-      icon: "docs",
-      optionLink: GUIDES_URL,
-      iconType: "stroke",
-    },
-    {
-      optionName: t("FAQS"),
-      icon: "faq",
-      optionLink: faqURL,
+      optionName: t("NAV_ABOUT_4_TITLE"),
+      subText: t("NAV_ABOUT_4_SUB_TITLE"),
+      icon: "careers",
+      optionLink: "https://www.linkedin.com/company/pstake/jobs/",
       iconType: "stroke",
     },
     {
-      optionName: t("DOCS"),
-      icon: "docs",
-      iconType: "stroke",
-      optionLink: docsURL,
+      optionName: t("NAV_ABOUT_5_TITLE"),
+      subText: t("NAV_ABOUT_5_SUB_TITLE"),
+      icon: "download",
+      iconType: "fill",
+      optionLink:
+        "https://persistence.notion.site/pSTAKE-Media-Kit-a2190b24b1194a24934677c7272d1cf8",
     },
   ];
 
@@ -370,7 +368,7 @@ const Header = () => {
               <Button
                 className={`${
                   router.pathname === "/"
-                    ? "[.is-sticky_&]:bg-red"
+                    ? "[.is-sticky_&]:bg-[#EE972C]"
                     : router.pathname === "/atom"
                     ? "[.is-sticky_&]:bg-atomPrimary"
                     : router.pathname === "/bnb"
@@ -403,8 +401,9 @@ const Header = () => {
               >
                 {isLandScape ? (
                   <MobileHeader
-                    networks={networks}
+                    aboutList={aboutList}
                     learnList={learnList}
+                    governanceList={governanceList}
                     communityList={socialList}
                     bridgeList={bridgeList}
                     closeMenu={() => {
@@ -414,18 +413,24 @@ const Header = () => {
                   />
                 ) : (
                   <ul
-                    className={`flex gap-10 items-center md:flex-row -md:ml-auto md:flex-col 
+                    className={`flex gap-[24px] items-center md:flex-row -md:ml-auto md:flex-col 
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-2`}
                   >
                     <li className="nav-item nav__menu-item lg:hidden">
-                      <NetworkDropdown
-                        networks={networks}
+                      <LearnDropdown
+                        learnList={learnList}
                         isTablet={isLandScape}
                       />
                     </li>
                     <li className="nav-item nav__menu-item lg:hidden">
-                      <LearnDropdown
-                        learnList={learnList}
+                      <AboutDropdown
+                        aboutList={aboutList}
+                        isTablet={isLandScape}
+                      />
+                    </li>
+                    <li className="nav-item nav__menu-item lg:hidden">
+                      <GoveranaceDropdown
+                        govList={governanceList}
                         isTablet={isLandScape}
                       />
                     </li>
@@ -522,7 +527,7 @@ const Header = () => {
                         )
                       ) : (
                         <ButtonLink
-                          className={`hover:!bg-[#E509134D] dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
+                          className={`!bg-[#EE972C4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
                           variant={"outline"}
                           href={appURL}
                           scale="lg"

@@ -16,10 +16,10 @@ const Atom = () => {
       <Banner />
       <Reasons />
       <Features />
-      <AssetSlider />
-      <FeaturedBlogs />
-      <BTCFeaturedBlogs />
-      <Faq />
+      <AssetSlider bg={"#030200"} />
+      <FeaturedBlogs bg={"#030200"} />
+      <BTCFeaturedBlogs bg={"#030200"} />
+      <Faq bg={"#141414"} />
       <Footer />
     </>
   );

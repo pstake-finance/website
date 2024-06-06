@@ -228,9 +228,37 @@ export const STK_BTC_BLOG_TWO_URL =
 export const STK_BTC_BLOG_TWO_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC@1.5x-min-1160x650.png";
 export const STK_BTC_BLOG_THREE_URL =
-  "https://blog.pstake.finance/2024/05/23/why-we-are-building-on-babylon/";
+  "https://www.youtube.com/watch?v=8zhejOADKTY";
 export const STK_BTC_BLOG_THREE_IMAGE_URL =
+  "https://i3.ytimg.com/vi/8zhejOADKTY/maxresdefault.jpg";
+export const STK_BTC_BLOG_FOUR_URL =
+  "https://blog.pstake.finance/2024/05/23/why-we-are-building-on-babylon/";
+export const STK_BTC_BLOG_FOUR_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC-BABYLON-min-1160x652.jpg";
+export const STK_BTC_BLOG_FIVE_URL =
+  "https://blog.pstake.finance/2024/05/29/the-genesis-of-yield-changing-bitcoins-value-proposition/";
+export const STK_BTC_BLOG_FIVE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/genesis-of-yield-min-1160x652.jpg";
+export const STK_BTC_BLOG_SIX_URL =
+  "https://blog.pstake.finance/2024/05/28/speicherx-talks-bitcoin-exploring-btc-beyond-a-store-of-value/";
+export const STK_BTC_BLOG_SIX_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/image1-1160x653.jpg";
+export const STK_BTC_BLOG_SEVEN_URL =
+  "https://blog.pstake.finance/2024/05/25/the-shared-security-war-babylon-vs-eigenlayer/";
+export const STK_BTC_BLOG_SEVEN_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/GOQu3iuWkAA1XMG-1160x652.jpeg";
+export const STK_BTC_BLOG_EIGHT_URL =
+  "https://blog.pstake.finance/2024/04/24/bitcoin-capital-efficiency-with-liquid-staking/";
+export const STK_BTC_BLOG_EIGHT_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/04/Screenshot-2024-04-24-at-19.15.31-1-1160x646.png";
+export const STK_BTC_BLOG_NINE_URL =
+  "https://cointelegraph.com/news/bitcoins-op-cat-proposal-could-transform-the-bitcoin-blockchain";
+export const STK_BTC_BLOG_NINE_IMAGE_URL =
+  "https://images.cointelegraph.com/cdn-cgi/image/format=auto,onerror=redirect,quality=90,width=717/https://s3.cointelegraph.com/uploads/2024-05/d851b86b-668a-4dd7-9076-053ee1fb88a2.jpg";
+export const STK_BTC_BLOG_TEN_URL =
+  "https://crypto.news/hitting-the-icebergs-tip-the-untapped-potential-of-bitcoin-defi-opinion/";
+export const STK_BTC_BLOG_TEN_IMAGE_URL =
+  "https://crypto.news/app/uploads/2024/05/crypto-news-Hitting-the-icebergs-tip-option01.webp";
 
 export const BTC_SERIES_BLOG_ONE_URL =
   "https://blog.pstake.finance/2024/05/20/bitcoin-101-series-1-what-is-bitcoin/";
@@ -244,9 +272,13 @@ export const BTC_SERIES_BLOG_TWO_IMAGE_URL =
 
 export const BTC_SERIES_BLOG_THREE_URL =
   "https://blog.pstake.finance/2024/05/28/bitcoin-101-series-3-what-is-blockchain/";
-
 export const BTC_SERIES_BLOG_THREE_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2024/05/btc-101-3-1160x653.jpg";
+
+export const BTC_SERIES_BLOG_FOUR_URL =
+  "https://blog.pstake.finance/2024/06/04/what-are-bitcoin-layer-2s/";
+export const BTC_SERIES_BLOG_FOUR_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/06/Bitcoin-101-4-1160x653.jpg";
 
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";

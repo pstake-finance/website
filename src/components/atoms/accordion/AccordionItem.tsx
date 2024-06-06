@@ -41,7 +41,7 @@ function AccordionItem({
             ? "bg-[#201B43]"
             : router.pathname === "/dydx"
             ? "bg-[#232334]"
-            : "bg-[#25252a]"
+            : "bg-[#1B1B1B]"
         }  py-3 px-5 mb-4 rounded-md accordion-item-title text-light-high font-medium text-sm leading-normal ${
           data.headerClass
         }`}
