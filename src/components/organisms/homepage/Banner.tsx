@@ -35,11 +35,11 @@ const Banner = () => {
 
   const { t } = useTranslation("common");
   return (
-    <div className="text-center aos-init aos-animate bg-homeBannerBg bg-[#141414] tall:h-screen h-max bg-cover bg-center bg-no-repeat">
+    <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414] tall:h-screen h-max bg-cover bg-center bg-no-repeat">
       <div className="pt-[200px] -2xl:pt-[300px] pb-[200px] relative h-full max-w-[1280px] container mx-auto">
         <div className={"flex mb-[100px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
-            <h1 className="max-w-[630px] break-words text-[40px] md:text-[32px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
+            <h1 className="max-w-[630px] break-words text-[40px] md:text-[28px] md:leading-[40px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
               {t("HOME_HERO_SECTION_TITLE")}
             </h1>
             <h6 className="text-[18px] md:text-[14px] text-[#D5D5D5] text-left mb-10 max-w-[600px] break-words">
@@ -63,7 +63,7 @@ const Banner = () => {
           <div className={"flex flex-wrap pt-10 md:justify-start lg:block"}>
             <div
               className={
-                "pr-8 lg:border-r-0 lg:border-b-[0.5px] border-r border-[#FCFCFC] md:flex-1 lg:pb-4"
+                "pr-8 lg:border-r-0 lg:border-b-[0.5px] border-r border-[#FCFCFC] lg:border-[#fcfcfc59] md:flex-1 lg:pb-4"
               }
             >
               <p className="text-light-high font-bold text-[44px] md:text-[24px] text-left">

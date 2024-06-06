@@ -10,15 +10,8 @@ const BitcoinBanner = () => {
         <div
           className={"flex gap-3 max-w-[1240px] mx-auto md:block items-center"}
         >
-          {/*<div className={"w-[40%] mr-auto"}>*/}
-          {/*  <img*/}
-          {/*    src={"/images/btc_stake.svg"}*/}
-          {/*    alt={"btc_stake"}*/}
-          {/*    className={"max-w-[360px] mr-auto"}*/}
-          {/*  />*/}
-          {/*</div>*/}
           <div className={"flex-1 max-w-[705px]"}>
-            <p className="text-[43px] md:text-[32px] leading-[64px] font-semibold mb-0 text-[#FCFCFC] mb-[12px]">
+            <p className="text-[43px] lg:text-[28px] lg:leading-[40px] leading-[64px] font-semibold mb-0 text-[#FCFCFC] mb-[12px]">
               {t("HOME_BITCOIN_TITLE")}
             </p>
             <p className="text-[20px] md:text-[14px]  text-[#D5D5D5] ">
