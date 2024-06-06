@@ -33,7 +33,7 @@ const Features = () => {
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
       <div className="container py-[100px] md:py-[35px]">
-        <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[60px]">
+        <p className="sectionTitle md:text-[32px] text-center mb-[60px]">
           {t("HOME_FEATURES_TITLE")}
         </p>
         <div className={"flex gap-3 max-w-[1240px] mx-auto md:block"}>
