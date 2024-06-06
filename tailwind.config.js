@@ -44,6 +44,7 @@ module.exports = {
     backgroundImage: {
       osmoPrimaryButton: "linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%)",
       homeBannerBg: "url('/images/bg_images/home_hero_bg.svg')",
+      bitcoinBannerBg: "url('/images/bg_images/bitcoin_banner_bg.svg')",
       immunefiWhite: "url('/images/audits/immunefi_header.svg')",
       immunifyBlack: "url('/images/audits/immunefi_black.svg')",
       "body-bg":
@@ -78,6 +79,7 @@ module.exports = {
       btcBanner:
         "url('/images/bg_images/btcBanner.svg'),  url('/images/bg_images/btc_hero_bg3.svg'), url('/images/bg_images/btcBanner2.svg') ",
       title_bg: "url('/images/bg_images/title_bg_grid.svg')",
+      home_quote_bg: "url('/images/qoute_bg.svg')",
     },
     backgroundColor: {
       none: "none",
@@ -176,15 +178,18 @@ module.exports = {
       backgroundSize: {
         homeBannerBg: "60%",
         atomBanner: "30%, cover",
+        bitcoinBannerBg: "contain",
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
         osmoBanner: "25%, cover",
         dydxBanner: "20%, cover",
         btcBanner: "30%, 100%, cover",
         title_bg: "auto",
+        home_quote_bg: "cover",
       },
       backgroundPosition: {
         homeBannerBg: "100% 100%",
+        bitcoinBannerBg: "100% 100%",
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",
         ethBanner: "100% 0,100% 100%",
@@ -192,6 +197,7 @@ module.exports = {
         dydxBanner: "100% 5%,100% 100%",
         btcBanner: "100% 0,0 115%,100% 100%",
         title_bg: "0% -150px",
+        home_quote_bg: "100%",
       },
     },
     container: {

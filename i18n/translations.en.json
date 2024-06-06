@@ -59,6 +59,9 @@
     "ETH_TO_BASE_BRIDGE": " ETH to Base Bridge",
     "ETH_TO_BASE_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Base L2",
 
+
+
+    "EXPLORE_GOVERNANCE": "Explore Governance",
     "ABOUT" : "About",
     "NAV_LEARN_1_TITLE": "Bitcoin Liquid Staking",
     "NAV_LEARN_1_SUB_TITLE": "Learn about pSTAKE's Bitcoin Yield and Liquid Staking solution",
@@ -90,7 +93,21 @@
     "HOME_BITCOIN_SUB_TITLE": "With our four years of liquid staking expertise and expert-curated yield strategies, we help individuals and institutions put their BTC to work in BTCfi.",
     "HOME_TOKEN_TITLE": "Fueling Bitcoin Yields and Liquid Staking",
     "HOME_TOKEN_CONTENT": "PSTAKE is the governance and incentivization token of pSTAKE Finance’s Bitcoin liquid staking ecosystem.",
-    "HOME_QUOTE_CONTENT": "pSTAKE Finance provides a high-security and low-risk BTC yield solution for the $1T+ Bitcoin market with institutional custodians and curated yield strategies.\n",
+    "HOME_QUOTE_CONTENT": "pSTAKE Finance is making",
+    "HOME_QUOTE_CONTENT1": "BTC yield-generating",
+    "HOME_QUOTE_CONTENT2": "with a liquid staking solution for the $1T+ Bitcoin market.",
+    "BTC_SERIES_BLOG_FOUR_TITLE": "What Are Bitcoin Layer-2s?",
+    "BTC_BLOG1_TITLE": "pSTAKE BTC Liquid Staking and Yield Thesis",
+    "BTC_BLOG2_TITLE": "pSTAKE Finance to Launch BTC Liquid Staking",
+    "BTC_BLOG3_TITLE": "Staking Sats with pSTAKE",
+    "BTC_BLOG4_TITLE": "BTC Liquid Staking on Babylon",
+    "BTC_BLOG5_TITLE": "The Genesis of Yield",
+    "BTC_BLOG6_TITLE": "Exploring BTC Beyond a Store of Value",
+    "BTC_BLOG7_TITLE": "Babylon vs EigenLayer Shared Security",
+    "BTC_BLOG8_TITLE": "Bitcoin Capital Efficiency with Liquid Staking",
+    "BTC_BLOG9_TITLE": "Bitcoin's OP_CAT proposal",
+    "BTC_BLOG10_TITLE": "The untapped potential of Bitcoin defi",
+    "LISTEN_NOW":  "Listen Now",
 
 
     "HOME_INVESTORS_TITLE": "Trusted by the best in business and blockchain",
@@ -163,9 +180,6 @@
     "BTC_FAQ6_TITLE": "Is Babylon’s staking protocol secure?",
     "BTC_FAQ6_CONTENT": "Babylon has gone through great lengths to ensure the security of its protocol. For example, the project has eight security audits so far from high-profile security ferns including Red4Sec, Consensys, and Pessimistic. The protocol also has an ongoing Bug Bounty program in a partnership with Immunefi, offering rewards up to $100,000 for any critical vulnerabilities found.",
     "BTC_BLOG_HEADING": "Latest on Bitcoin Liquid Staking",
-    "BTC_BLOG1_TITLE": "pSTAKE BTC Liquid Staking and Yield Thesis",
-    "BTC_BLOG2_TITLE": "pSTAKE Finance to Launch BTC Liquid Staking",
-    "BTC_BLOG3_TITLE": "BTC Liquid Staking on Babylon",
     "BTC_SERIES_BLOGS_TITLE": "Get Started with Bitcoin",
     "BTC_SERIES_BLOG_ONE_TITLE": "What is Bitcoin?",
     "BTC_SERIES_BLOG_TWO_TITLE": "What is Proof of Work (PoW)?",

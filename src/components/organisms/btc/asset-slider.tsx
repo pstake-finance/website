@@ -3,7 +3,10 @@ import React, { useContext } from "react";
 import { useTranslation } from "next-export-i18n";
 import Slider from "react-slick";
 
-const AssetSlider = () => {
+interface Props {
+  bg: string;
+}
+const AssetSlider = ({ bg }: Props) => {
   const { t } = useTranslation();
 
   const imgList = [
@@ -48,7 +51,7 @@ const AssetSlider = () => {
   };
 
   return (
-    <div className="bg-[#030200]">
+    <div className={`bg-[${bg}]"`}>
       <div className="max-w-[1272px] mx-auto  md:mx-4 py-[65px] md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1130px] mx-auto">
           {t("BTC_CAROUSEL_TITLE")}{" "}

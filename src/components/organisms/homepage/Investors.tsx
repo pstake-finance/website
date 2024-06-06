@@ -38,7 +38,7 @@ const Investors = () => {
 
   const { t } = useTranslation("common");
   return (
-    <div className="aos-init aos-animate py-8" data-aos="fade-up">
+    <div className="aos-init aos-animate py-10" data-aos="fade-up">
       <div className="container">
         <p className="text-[20px] md:text-[18px] text-[#D5D5D5] text-center mb-8">
           {t("HOME_INVESTORS_TITLE")}

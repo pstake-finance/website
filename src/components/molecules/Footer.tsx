@@ -104,10 +104,10 @@ const Footer = () => {
       text: t("FOOTER_ITEM_TEXT_5"),
     },
     {
-      name: "Community Forum",
+      name: "Governance Forum",
       url: PSTAKE_FORUM_URL,
       image: "forum_full",
-      text: t("FOOTER_ITEM_TEXT_6"),
+      text: t("NAV_GOVERNANCE_1_TITLE"),
     },
   ];
 
@@ -116,12 +116,12 @@ const Footer = () => {
       {!router.pathname.includes("/validators") ? (
         <div className={`aos-init aos-animate ${router.pathname}`}>
           <div className="sectionContainer py-[80px] md:py-[40px]">
-            <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE]">
+            <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[50px]">
               {t("FOOTER_TITLE")}
             </p>
             <p
               className={
-                "text-[20px] md:text-[16px] text-center max-w-[700px] mx-auto text-[#D5D5D5] mb-8"
+                "text-[20px] md:text-[16px] text-center max-w-[700px] mx-auto text-[#D5D5D5]  hidden"
               }
             >
               {t("FOOTER_SUB_TITLE")}
@@ -134,7 +134,7 @@ const Footer = () => {
                       key={index}
                       href={item.url}
                       target="_blank"
-                      className={`md:block bg-[#1B1B1B] border border-[#1B1B1B] hover:border hover:border-[#C73238] flex items-center md:p-4 p-6 rounded-xl group`}
+                      className={`md:block bg-[#1B1B1B] border border-[#1B1B1B] hover:border hover:border-[#EE972C] flex items-center md:p-4 p-6 rounded-xl group`}
                       rel="noopener noreferrer"
                     >
                       <img
@@ -157,28 +157,20 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className={"py-[60px] bg-[#1B1B1B]"}>
+          <div
+            className={"py-[60px] bg-[#1B1B1B] bg-home_quote_bg bg-no-repeat"}
+          >
             <p
               className={
-                "text-[30px] md:text-[16px] text-[#FCFCFC] font-semibold max-w-[1140px] px-[20px] mx-auto text-center mb-6"
+                "text-[40px] md:text-[16px] text-[#FCFCFC] font-semibold max-w-[1120px] px-[20px] mx-auto text-center mb-6"
               }
             >
-              {t("HOME_QUOTE_CONTENT")}
+              {t("HOME_QUOTE_CONTENT")}{" "}
+              <span className={"text-[#EE972C]"}>
+                {t("HOME_QUOTE_CONTENT1")}{" "}
+              </span>
+              {t("HOME_QUOTE_CONTENT2")}
             </p>
-            <div className={"max-w-[1140px] px-[20px] mx-auto"}>
-              <ButtonLink
-                className={`hover:!bg-[#E509134D] dropDownButton py-3" md:text-sm !w-[293px] md:!w-[100%] md:!h-[40px] font-semibold !h-[48px] mx-auto`}
-                variant={"outline"}
-                href={PSTAKE_APP_URL}
-                scale="lg"
-                target={"_blank"}
-                isDisabled={false}
-              >
-                <span className="nav-link pophover tooltip-multiline app-btn">
-                  {t("LIQUID_STAKE_NOW")}
-                </span>
-              </ButtonLink>
-            </div>
           </div>
           <FooterBottom />
         </div>

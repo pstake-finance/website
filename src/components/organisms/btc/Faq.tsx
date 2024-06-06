@@ -4,7 +4,11 @@ import Icon from "../../molecules/Icon";
 import Accordion from "../../atoms/accordion/Accordion";
 import { useTranslation } from "next-export-i18n";
 
-const Faq = () => {
+interface Props {
+  bg: string;
+}
+
+const Faq = ({ bg }: Props) => {
   const { t } = useTranslation();
   const accordionItems = [
     {
@@ -34,7 +38,7 @@ const Faq = () => {
   ];
   return (
     <>
-      <div id="btcFaqs" className="bg-[#030200]">
+      <div id="btcFaqs" className={`bg-[${bg}]"`}>
         <div className="max-w-[1272px] mx-auto  md:mx-4 py-[65px] md:py-[35px]">
           <div className="sectionTitle mb-8">
             <p className="inline-flex relative">{t("BTC_FAQ_TITLE")}</p>

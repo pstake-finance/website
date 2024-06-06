@@ -418,7 +418,7 @@ const Header = () => {
               <Button
                 className={`${
                   router.pathname === "/"
-                    ? "[.is-sticky_&]:bg-red"
+                    ? "[.is-sticky_&]:bg-[#EE972C]"
                     : router.pathname === "/atom"
                     ? "[.is-sticky_&]:bg-atomPrimary"
                     : router.pathname === "/bnb"

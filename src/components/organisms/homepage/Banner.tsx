@@ -59,7 +59,7 @@ const Banner = () => {
             </ButtonLink>
           </div>
         </div>
-        <div className="">
+        <div className="mb-4">
           <div className={"flex flex-wrap pt-10 md:justify-start lg:block"}>
             <div
               className={
