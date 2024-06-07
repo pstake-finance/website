@@ -68,7 +68,7 @@ const BTCFeaturedBlogs = ({ bg }: Props) => {
         <div className={"md:ml-0"}>
           <Carousel
             ssr
-            className={`flex items-center ${
+            className={`flex items-center custom-arrow-slider ${
               list.length <= 2 ? "-md:justify-center" : ""
             }`}
             deviceType={"mobile"}

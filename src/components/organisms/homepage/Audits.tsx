@@ -131,7 +131,10 @@ const Audits = ({ deviceType }: any) => {
   const { isMobile } = useWindowSize();
   return (
     <div className="aos-init aos-animate" data-aos="fade-up">
-      <div className="container pt-[60px] py-[70px] md:py-[35px]">
+      <div
+        className="max-w-[1272px] mx-auto md:mx-4 py-[65px] py-[65px] md:py-[35px]"
+        data-aos="fade-up"
+      >
         <p className="text-[40px] md:text-[20px] text-center font-bold mb-0 text-[#FEFEFE] mb-[50px]">
           {t("HOME_SECURITY_TITLE")}
         </p>
@@ -145,7 +148,7 @@ const Audits = ({ deviceType }: any) => {
         <div className={"md:ml-0"}>
           <Carousel
             ssr
-            className={`flex items-center`}
+            className={`flex items-center custom-arrow-slider`}
             partialVisbile={!isMobile}
             deviceType={deviceType}
             responsive={responsive}

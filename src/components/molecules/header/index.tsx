@@ -190,7 +190,7 @@ const Header = () => {
       optionName: t("NAV_LEARN_1_TITLE"),
       subText: t("NAV_LEARN_1_SUB_TITLE"),
       icon: "btc-icon",
-      iconType: "",
+      iconType: "fill",
       optionLink: "https://blog.pstake.finance/category/bitcoin/",
     },
     {

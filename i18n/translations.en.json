@@ -52,9 +52,9 @@
     "INVESTORS": "Investors",
     "VALIDATORS": "Validators",
 
-    "ETH_TO_BSC_BRIDGE": "ETH to BSC bridge",
+    "ETH_TO_BSC_BRIDGE": "ETH to BSC Bridge",
     "ETH_TO_BSC_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to BSC Chain",
-    "ETH_TO_COSMOS_BRIDGE": "ETH to Cosmos bridge",
+    "ETH_TO_COSMOS_BRIDGE": "ETH to Cosmos Bridge",
     "ETH_TO_COSMOS_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Persistence One",
     "ETH_TO_BASE_BRIDGE": " ETH to Base Bridge",
     "ETH_TO_BASE_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Base L2",
@@ -111,7 +111,7 @@
 
 
     "HOME_INVESTORS_TITLE": "Trusted by the best in business and blockchain",
-    "HOME_FEATURES_TITLE": "Why Liquid Stake with pSTAKE?",
+    "HOME_FEATURES_TITLE": "Why Liquid Stake BTC with pSTAKE?",
     "HOME_FEATURES_FIRST_TITLE": "Decentralize your stake. Help the network state.",
     "HOME_FEATURES_FIRST_CONTENT": "Deposits on pSTAKE Finance get staked with multiple validators with the help of a transparent, on-chain data-driven algorithm focused on chain decentralization.",
     "HOME_FEATURES_SECOND_TITLE": "Safe, Secure, and Solid.",
@@ -194,7 +194,7 @@
     "FOOTER_VIEW_PRESS_KIT": "View Press Kit",
     "FOOTER_ITEM_TEXT_1": "Follow pSTAKE Finance",
     "FOOTER_ITEM_TEXT_2": "Join the Community Chat",
-    "FOOTER_ITEM_TEXT_3": "Join Our Community",
+    "FOOTER_ITEM_TEXT_3": "Join our Community",
     "FOOTER_ITEM_TEXT_4": "Learn about pSTAKE Finance",
     "FOOTER_ITEM_TEXT_5": "Contribute",
     "FOOTER_ITEM_TEXT_6": "Join Discussions",

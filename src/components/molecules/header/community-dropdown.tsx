@@ -66,7 +66,7 @@ export const communityDropdownContent = (communityList: any[]) => {
                 icon="chevroncolorchange"
               />
             </span>
-            <span className="text-[#D5D5D5] text-sm font-light">
+            <span className="text-[#D5D5D5] text-xsm font-light">
               {item.subText}
             </span>
           </span>
