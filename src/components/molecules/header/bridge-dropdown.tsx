@@ -40,7 +40,7 @@ export const bridgeDropdownContent = (list: any[]) => {
                 icon="chevroncolorchange"
               />
             </span>
-            <span className={"text-[#D5D5D5] text-[12px]"}>{item.subText}</span>
+            <span className={"text-[#D5D5D5] text-xsm"}>{item.subText}</span>
           </span>
         </a>
       ))}

@@ -120,7 +120,7 @@ const FeaturedBlogs = ({ bg }: Props) => {
         <div className={"md:ml-0"}>
           <Carousel
             ssr
-            className={`flex items-center ${
+            className={`custom-arrow-slider flex items-center ${
               list.length <= 2 ? "-md:justify-center" : ""
             }`}
             deviceType={"mobile"}

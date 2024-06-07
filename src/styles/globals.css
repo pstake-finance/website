@@ -450,3 +450,25 @@ background-image: linear-gradient(to right, #232334, #232334), linear-gradient(t
 .slick-prev, .slick-next{
   display: none !important;
 }
+
+.custom-arrow-slider.react-multi-carousel-list{
+  padding-bottom: 50px;
+}
+
+.custom-arrow-slider .react-multiple-carousel__arrow, .custom-arrow-slider .react-multiple-carousel__arrow:hover{
+  min-width: 22px;
+  background: #423f40d9;
+  min-height: 22px;
+}
+.custom-arrow-slider .react-multiple-carousel__arrow--left{
+  left: 10px;
+  bottom:5px
+}
+.custom-arrow-slider .react-multiple-carousel__arrow--right{
+  right: auto;
+  left:40px;
+  bottom: 4px;
+}
+.custom-arrow-slider .react-multiple-carousel__arrow::before{
+  font-size: 10px;
+}

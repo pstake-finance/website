@@ -157,9 +157,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div
-            className={"py-[60px] bg-[#1B1B1B] bg-home_quote_bg bg-no-repeat"}
-          >
+          <div className={"py-[60px] bg-[#1B1B1B]"}>
             <p
               className={
                 "text-[40px] md:text-[16px] text-[#FCFCFC] font-semibold max-w-[1120px] px-[20px] mx-auto text-center mb-6"
