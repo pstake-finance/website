@@ -1,6 +1,10 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 const Offering = () => {
+  const router = useRouter();
+
+  console.log(router, "router-ssss");
   return (
     <div>
       <div className="container pt-[60px] md:pt-[35px]">
@@ -9,7 +13,11 @@ const Offering = () => {
         </h3>
         <div className={"max-w-[1200px] mx-auto"}>
           <img
-            src={"/images/btc_offering.svg"}
+            src={
+              router.asPath.includes("cn")
+                ? "/images/btc_offering_cn.svg"
+                : "/images/btc_offering.svg"
+            }
             alt={"btc_stake"}
             className={"w-full mr-auto"}
           />
