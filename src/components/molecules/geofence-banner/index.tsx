@@ -90,7 +90,7 @@ const GeofenceNotice = () => {
         <a
           className="link flex items-center"
           href={
-            "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/"
+            "https://app.btc-testnet.pstake.finance/"
           }
           target="_blank"
           rel="noopener noreferrer"

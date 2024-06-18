@@ -45,18 +45,36 @@ const Banner = () => {
             <h6 className="text-[18px] md:text-[14px] text-[#D5D5D5] text-left mb-10 max-w-[600px] break-words">
               {t("HOME_HERO_SECTION_SUB_TITLE")}
             </h6>
-            <ButtonLink
-              className={`!bg-[#EE972C4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
-              variant={"outline"}
-              href={PSTAKE_APP_URL}
-              scale="lg"
-              target={"_blank"}
-              isDisabled={false}
-            >
+            <div className={"flex items-center gap-6"}>
+              <ButtonLink
+                className={`!bg-[#EE972C4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
+                variant={"outline"}
+                href={PSTAKE_APP_URL}
+                scale="lg"
+                target={"_blank"}
+                isDisabled={false}
+              >
               <span className="nav-link pophover tooltip-multiline app-btn">
                 {t("LIQUID_STAKE_NOW")}
               </span>
-            </ButtonLink>
+              </ButtonLink>
+              <ButtonLink
+                className={`!bg-transparent border-0 !text-[#FFFFFF] dropDownButton !px-0 py-3" md:text-sm !w-[293px] font-semibold !h-[48px] md:!w-[100%] group hover:!text-[#EE972C]`}
+                variant={"custom"}
+                href={"https://app.btc-testnet.pstake.finance/"}
+                scale="lg"
+                target={"_blank"}
+                isDisabled={false}
+              >
+                <span className="nav-link pophover tooltip-multiline app-btn">
+                  {t("EXPLORE_BTC_TESTNET")}
+                </span>
+                <Icon
+                  viewClass="arrow-right w-[14px] ml-2 stroke-[#FFFFFF] group-hover:stroke-[#EE972C] fill-transparent"
+                  icon="right-arrow2"
+                />
+              </ButtonLink>
+            </div>
           </div>
         </div>
         <div className="mb-4">
