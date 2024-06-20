@@ -176,7 +176,7 @@ const FooterBottom = () => {
                       "https://short-stool-639.notion.site/pSTAKE-Brand-Press-Kit-388bb93bd0c947d6a225d5058d3f9acc"
                     }
                     className={
-                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#C73238] group"
+                      "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#D5D5D5B2] group"
                     }
                     rel="noopener noreferrer"
                   >
