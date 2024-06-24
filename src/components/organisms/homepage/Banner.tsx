@@ -47,33 +47,30 @@ const Banner = () => {
             </h6>
             <div className={"flex items-center gap-6"}>
               <ButtonLink
-                className={`!bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
+                className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[240px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
                 variant={"outline"}
-                href={PSTAKE_APP_URL}
-                scale="lg"
-                target={"_blank"}
-                isDisabled={false}
-              >
-              <span className="nav-link pophover tooltip-multiline app-btn">
-                {t("LIQUID_STAKE_NOW")}
-              </span>
-              </ButtonLink>
-              <ButtonLink
-                className={`hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[293px] font-semibold !h-[48px] md:!w-[100%] group`}
-                variant={"custom"}
                 href={"https://app.btc-testnet.pstake.finance/"}
                 scale="lg"
                 target={"_blank"}
                 isDisabled={false}
               >
-                <span className="nav-link pophover tooltip-multiline app-btn">
-                  {t("EXPLORE_BTC_TESTNET")}
-                </span>
-                <Icon
-                  viewClass="arrow-right w-[14px] ml-2 stroke-[#FFFFFF] group-hover:stroke-[#EE972C] fill-transparent"
-                  icon="right-arrow2"
-                />
+              <span className="nav-link pophover tooltip-multiline app-btn">
+                {t("EXPLORE_BTC_TESTNET")}
+              </span>
               </ButtonLink>
+              <ButtonLink
+                className={`!rounded-[8px] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[240px] font-semibold !h-[48px] md:!w-[100%] group`}
+                variant={"custom"}
+                href={PSTAKE_APP_URL}
+                scale="lg"
+                target={"_blank"}
+                isDisabled={false}
+              >
+                <span className="nav-link pophover tooltip-multiline app-btn">
+                {t("LIQUID_STAKE_NOW")}
+                </span>
+              </ButtonLink>
+
             </div>
           </div>
         </div>
