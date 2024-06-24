@@ -45,7 +45,7 @@ const Banner = () => {
             <h6 className="text-[18px] md:text-[14px] text-[#D5D5D5] text-left mb-10 max-w-[600px] break-words">
               {t("HOME_HERO_SECTION_SUB_TITLE")}
             </h6>
-            <div className={"flex items-center gap-6"}>
+            <div className={"flex items-center gap-6 md:flex-col"}>
               <ButtonLink
                 className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[240px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
                 variant={"outline"}
