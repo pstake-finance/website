@@ -47,7 +47,7 @@ const Banner = () => {
             </h6>
             <div className={"flex items-center gap-6"}>
               <ButtonLink
-                className={`!bg-[#EE972C4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3" md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
+                className={`!bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[293px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
                 variant={"outline"}
                 href={PSTAKE_APP_URL}
                 scale="lg"
@@ -59,7 +59,7 @@ const Banner = () => {
               </span>
               </ButtonLink>
               <ButtonLink
-                className={`!bg-transparent border-0 !text-[#FFFFFF] dropDownButton !px-0 py-3" md:text-sm !w-[293px] font-semibold !h-[48px] md:!w-[100%] group hover:!text-[#EE972C]`}
+                className={`hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[293px] font-semibold !h-[48px] md:!w-[100%] group`}
                 variant={"custom"}
                 href={"https://app.btc-testnet.pstake.finance/"}
                 scale="lg"
