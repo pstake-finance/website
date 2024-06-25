@@ -354,13 +354,13 @@ const Header = () => {
               {router.pathname === "/" ? (
                 <LinkWithLocale
                   className="bg-logoLight
-                      [.is-sticky_&]:bg-logoLight bg-[length:150px] w-[150px] h-[36px] bg-no-repeat bg-center"
+                      [.is-sticky_&]:bg-logoLight bg-[length:200px] w-[200px] h-[36px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
                 <LinkWithLocale
                   className="bg-logoDark
-                      [.is-sticky_&]:bg-logoLight  bg-[length:150px] w-[150px] h-[36px]  bg-no-repeat bg-center"
+                      [.is-sticky_&]:bg-logoLight  bg-[length:200px] w-[200px] h-[36px]  bg-no-repeat bg-center"
                   href="/"
                 />
               )}
