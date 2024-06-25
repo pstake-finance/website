@@ -270,7 +270,7 @@ const Header = () => {
       icon: "download",
       iconType: "fill",
       optionLink:
-        "https://persistence.notion.site/pSTAKE-Media-Kit-a2190b24b1194a24934677c7272d1cf8",
+        "https://persistence.notion.site/pSTAKE-Brand-Press-Kit-97c357b1c5db4ca5b4e8429d25a9ab9d?pvs=4",
     },
   ];
 
@@ -355,13 +355,13 @@ const Header = () => {
               {router.pathname === "/" ? (
                 <LinkWithLocale
                   className="bg-logoLight
-                      [.is-sticky_&]:bg-logoLight bg-[length:200px] w-[200px] h-[36px] bg-no-repeat bg-center"
+                      [.is-sticky_&]:bg-logoLight bg-[length:160px] w-[200px] h-[40px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
                 <LinkWithLocale
                   className="bg-logoDark
-                      [.is-sticky_&]:bg-logoLight  bg-[length:200px] w-[200px] h-[36px]  bg-no-repeat bg-center"
+                      [.is-sticky_&]:bg-logoLight  bg-[length:160px] w-[200px] h-[40px]  bg-no-repeat bg-center"
                   href="/"
                 />
               )}
