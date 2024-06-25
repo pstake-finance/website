@@ -65,6 +65,7 @@ import MobileHeader from "./mobile-header";
 import LangDropdown from "./lang-dropdown";
 import AboutDropdown from "./about-dropdown";
 import GoveranaceDropdown from "./governanace-dropdown";
+import InfoModal from "../info-modal";
 
 const socialList = [
   {
@@ -555,6 +556,7 @@ const Header = () => {
       ) : (
         <OsmoHeader />
       )}
+      <InfoModal/>
     </React.Fragment>
   );
 };
