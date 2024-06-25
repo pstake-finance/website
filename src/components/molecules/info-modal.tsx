@@ -52,7 +52,7 @@ const InfoModal = () => {
           <ButtonLink
             className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[240px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
             variant={"outline"}
-            href={"https://app.btc-testnet.pstake.finance/"}
+            href={"https://blog.pstake.finance/2024/06/25/pstake-finance-the-orange-road-ahead-x-bitcoin-yields/"}
             scale="md"
             target={"_blank"}
             isDisabled={false}
