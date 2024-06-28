@@ -84,7 +84,7 @@ const FooterBottom = () => {
   const learnList = [
     {
       externLink: true,
-      link: "https://blog.pstake.finance/category/bitcoin/",
+      link: "https://blog.pstake.finance/category/bitcoin-liquid-staking/",
       text: t("NAV_LEARN_1_TITLE"),
     },
     {
