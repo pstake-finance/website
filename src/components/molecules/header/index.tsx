@@ -4,28 +4,19 @@ import { useRouter } from "next/router";
 import {
   PSTAKE_TWITTER_URL,
   STK_ATOM_TWITTER_URL,
-  PSTAKE_TELEGRAM_URL,
   SECURITY_AUDIT_URL,
   GUIDES_FAQ_URL,
   DOCS_URL,
-  SNANPSHOT_URL,
-  PSTAKE_FORUM_URL,
   PSTAKE_BRIDGE_URL,
   BSC_BRIDGE_URL,
-  GUIDES_URL,
   STK_FAQ_URL,
   STK_BNB_DOCS_URL,
-  DISCORD_URL,
   STK_BNB_SECURITY_AUDIT_URL,
   IMMUNEFI_WEB_URL,
   STK_BNB_TWITTER_URL,
   STK_ATOM_SECURITY_AUDIT_URL,
   STK_ATOM_DOCS_URL,
   STK_ATOM_FAQ_URL,
-  STKATOM_BLOG_URL,
-  PSTAKE_REDDIT_URL,
-  CREW3_URL,
-  COSMOS_URL,
   PSTAKE_APP_URL,
   BNB_URL,
   ATOM_URL,
@@ -35,19 +26,13 @@ import {
   STK_ETH_DOCS,
   STK_OSMO_FAQ_URL,
   STK_OSMO_SECURITY_AUDIT_URL,
-  OSMOSIS_URL,
   STK_ODMO_TWITTER_URL,
   OSMO_URL,
   STK_DYDX_FAQ_URL,
   DYDX,
-  PSTAKE_DISCORD,
-  PSTAKE_MEDIUM_URL,
-  GITHUB_URL,
-  GOV_URL,
 } from "../../../utils/config";
 import {
   useTranslation,
-  LanguageSwitcher,
   LinkWithLocale,
 } from "next-export-i18n";
 import Icon from "../Icon";
@@ -142,48 +127,21 @@ const Header = () => {
     setBanner(false);
   };
 
-  let auditURL;
-  let docsURL;
-  let faqURL;
-  let twitterUrl;
+
   let appURL = "https://app.pstake.finance/";
 
   if (router.pathname === "/") {
-    auditURL = SECURITY_AUDIT_URL;
-    docsURL = DOCS_URL;
-    faqURL = GUIDES_FAQ_URL;
-    twitterUrl = PSTAKE_TWITTER_URL;
     appURL = PSTAKE_APP_URL;
   } else if (router.pathname === "/bnb") {
-    auditURL = STK_BNB_SECURITY_AUDIT_URL;
-    docsURL = STK_BNB_DOCS_URL;
-    faqURL = STK_FAQ_URL;
-    twitterUrl = STK_BNB_TWITTER_URL;
     appURL = BNB_URL;
   } else if (router.pathname === "/atom") {
-    auditURL = STK_ATOM_SECURITY_AUDIT_URL;
-    docsURL = STK_ATOM_DOCS_URL;
-    faqURL = STK_ATOM_FAQ_URL;
     appURL = ATOM_URL;
-    twitterUrl = STK_ATOM_TWITTER_URL;
   } else if (router.pathname === "/osmo") {
-    auditURL = STK_OSMO_SECURITY_AUDIT_URL;
-    docsURL = STK_ATOM_DOCS_URL;
-    faqURL = STK_OSMO_FAQ_URL;
     appURL = OSMO_URL;
-    twitterUrl = STK_ODMO_TWITTER_URL;
   } else if (router.pathname === "/dydx") {
-    auditURL = STK_OSMO_SECURITY_AUDIT_URL;
-    docsURL = STK_ATOM_DOCS_URL;
-    faqURL = STK_DYDX_FAQ_URL;
     appURL = DYDX;
-    twitterUrl = STK_ODMO_TWITTER_URL;
   } else if (router.pathname === "/eth/testnet") {
-    auditURL = STK_ATOM_SECURITY_AUDIT_URL;
-    docsURL = STK_ETH_DOCS;
-    faqURL = STK_ATOM_FAQ_URL;
     appURL = ETH_URL;
-    twitterUrl = STK_ETH_TWITTER;
   }
 
   const learnList = [
@@ -192,7 +150,7 @@ const Header = () => {
       subText: t("NAV_LEARN_1_SUB_TITLE"),
       icon: "btc-icon",
       iconType: "fill",
-      optionLink: "https://blog.pstake.finance",
+      optionLink: "https://blog.pstake.finance/category/bitcoin-liquid-staking/",
     },
     {
       optionName: t("NAV_LEARN_2_TITLE"),
