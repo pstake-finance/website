@@ -56,8 +56,8 @@ export const Modal = ({
                 className={`absolute top-[30px] right-[30px] h-4 w-4`}
               >
                 <Icon
-                  iconName="close"
-                  viewClass={"fill-[#A6A6A6] hover:fill-[#ECECEC]"}
+                  icon="close"
+                  viewClass={" fill-[#A6A6A6] hover:fill-[#ECECEC] w-[14px] h-[14px]"}
                 />
               </button>
             ) : null}

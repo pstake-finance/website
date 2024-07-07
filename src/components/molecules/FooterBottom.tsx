@@ -173,7 +173,7 @@ const FooterBottom = () => {
                   />
                   <a
                     href={
-                      "https://persistence.notion.site/pSTAKE-Brand-Press-Kit-1f29c2c51e7f42a5855a89c0e70e882f"
+                      "https://persistence.notion.site/pSTAKE-Brand-Press-Kit-97c357b1c5db4ca5b4e8429d25a9ab9d?pvs=4"
                     }
                     className={
                       "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#D5D5D5B2] group"
