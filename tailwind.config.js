@@ -13,6 +13,7 @@ module.exports = {
       atomPrimary: "#595d7b",
       bnbPrimary: "#f0b90b",
       dydxPrimary: "#6966FF",
+      btcPrimary: "#F7931A",
       transparent: "transparent",
       dark: {
         full: "#000",
@@ -80,6 +81,9 @@ module.exports = {
         "url('/images/bg_images/btcBanner.svg'),  url('/images/bg_images/btc_hero_bg3.svg'), url('/images/bg_images/btcBanner2.svg') ",
       title_bg: "url('/images/bg_images/title_bg_grid.svg')",
       home_quote_bg: "url('/images/qoute_bg.svg')",
+      pstakeBanner:
+        "url('/images/bg_images/pstake_hero_bg.svg')",
+
     },
     backgroundColor: {
       none: "none",
@@ -186,6 +190,7 @@ module.exports = {
         btcBanner: "30%, 100%, cover",
         title_bg: "auto",
         home_quote_bg: "cover",
+        pstakeBanner: "66%",
       },
       backgroundPosition: {
         homeBannerBg: "100% 100%",
@@ -198,6 +203,7 @@ module.exports = {
         btcBanner: "100% 0,0 115%,100% 100%",
         title_bg: "0% -150px",
         home_quote_bg: "100%",
+        pstakeBanner: "center 100%",
       },
     },
     container: {

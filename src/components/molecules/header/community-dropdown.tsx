@@ -57,7 +57,7 @@ export const communityDropdownContent = (communityList: any[]) => {
             <span className={"flex items-center"}>
               <span
                 className="text-[#F5F5F5] text-base md:text-sm
-                        font-medium leading-normal md:text-xsm"
+                        font-medium leading-normal"
               >
                 {item.optionName}
               </span>
@@ -87,7 +87,7 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
     >
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
-          router.pathname === "/"
+          (router.pathname === "/" || router.pathname === "/pstake")
             ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
             : ""
         } ${

@@ -344,7 +344,8 @@ const Header = () => {
               router.pathname !== "/bnb" &&
               router.pathname !== "/eth" &&
               router.pathname !== "/eth/testnet" &&
-              router.pathname !== "/btc"
+              router.pathname !== "/btc" && 
+            router.pathname !== "/pstake"
                 ? "bg-white-emphasis"
                 : ""
             } ${router.pathname.split("/")[1]}
@@ -352,7 +353,7 @@ const Header = () => {
             id="nav-bar"
           >
             <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
-              {router.pathname === "/" ? (
+              {router.pathname === "/" || router.pathname === "/pstake" ? (
                 <LinkWithLocale
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:160px] w-[200px] h-[40px] bg-no-repeat bg-center"
