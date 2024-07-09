@@ -5,14 +5,14 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <title>pSTAKE | Bitcoin Liquid Staking and Yields</title>
+        <title>pSTAKE Finance | Bitcoin Yields and BTC Liquid Staking</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="shortcut icon" href="/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Bitcoin yields for all, backed by Binance Labs."
+          content="Leading information resource for all things BTCfi, Bitcoin Ecosystem, and BTC Liquid Staking."
         />
         <meta
           name="keywords"
@@ -21,12 +21,12 @@ export default function Document() {
 
         {/*Open Graph Tags*/}
         <meta
-          content="pSTAKE | Bitcoin Liquid Staking and Yields"
+          content="pSTAKE Finance | Bitcoin Yields and BTC Liquid Staking"
           property="og:title"
         />
         <meta property="og:image" content="/ogimage.jpeg" />
         <meta
-          content="pSTAKE | Bitcoin Liquid Staking and Yields"
+          content="pSTAKE Finance | Bitcoin Yields and BTC Liquid Staking"
           property="og:title"
         />
         <meta property="og:image" content="/ogimage.jpeg" />
@@ -34,15 +34,15 @@ export default function Document() {
         <meta property="og:url" content="https://pstake.finance" />
         <meta
           property="og:description"
-          content="Bitcoin yields for all, backed by Binance Labs."
+          content="Leading information resource for all things BTCfi, Bitcoin Ecosystem, and BTC Liquid Staking."
         />
         {/*Twitter Tags*/}
         <meta
-          content="pSTAKE | Bitcoin Liquid Staking and Yields"
+          content="pSTAKE Finance | Bitcoin Yields and BTC Liquid Staking"
           property="twitter:title"
         />
         <meta
-          content="Bitcoin yields for all, backed by Binance Labs."
+          content="Leading information resource for all things BTCfi, Bitcoin Ecosystem, and BTC Liquid Staking."
           property="twitter:description"
         />
         <meta content="/ogimage.jpeg" property="twitter:image" />
