@@ -9,25 +9,23 @@ const list = [
     name: "Celer",
     data:
       {
-        logoUrl: "/images/logo.svg",
+        logoUrl: "/images/bridges/blast.svg",
         link: "/",
         child:[
           {
-            networkLogo: "/images/logo.svg",
-            networkLink: "/images/logo.svg",
+            networkLogo: "/images/bridges/thruster.svg",
+            networkLink: "",
             poolComposition: "pstake/weth",
-            poolLogoOne: "/images/pstake_icon_light.svg",
-            poolLogoTwo: "/images/pstake_icon_light.svg",
-            logoUrl: "/images/logo.svg",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/weth.svg",
             link: "/",
           },
           {
-            networkLogo: "/images/logo.svg",
-            networkLink: "/images/logo.svg",
+            networkLogo: "/images/bridges/thruster.svg",
+            networkLink: "",
             poolComposition: "pstake/weth",
-            poolLogoOne: "/images/pstake_icon_light.svg",
-            poolLogoTwo: "/images/pstake_icon_light.svg",
-            logoUrl: "/images/logo.svg",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/weth.svg",
             link: "/",
           }
         ]
@@ -37,16 +35,15 @@ const list = [
     name: "SuperBridge",
     data:
       {
-        logoUrl: "/images/logo.svg",
+        logoUrl: "/images/bridges/base.svg",
         link: "/",
         child:[
           {
-            networkLogo: "/images/logo.svg",
-            networkLink: "/images/logo.svg",
-            poolComposition: "pstake/weth",
-            poolLogoOne: "/images/pstake_icon_light.svg",
-            poolLogoTwo: "/images/pstake_icon_light.svg",
-            logoUrl: "/images/logo.svg",
+            networkLogo: "/images/bridges/aerodrome.svg",
+            networkLink: "",
+            poolComposition: "pstake/USDT",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/usdt.svg",
             link: "/",
           },
         ]
@@ -56,16 +53,15 @@ const list = [
     name: "SuperBridge",
     data:
       {
-        logoUrl: "/images/logo.svg",
+        logoUrl: "/images/bridges/optimism.svg",
         link: "/",
         child:[
           {
-            networkLogo: "/images/logo.svg",
-            networkLink: "/images/logo.svg",
+            networkLogo: "/images/bridges/velodrome.svg",
+            networkLink: "",
             poolComposition: "pstake/weth",
-            poolLogoOne: "/images/pstake_icon_light.svg",
-            poolLogoTwo: "/images/pstake_icon_light.svg",
-            logoUrl: "/images/logo.svg",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/weth.svg",
             link: "/",
           },
         ]
@@ -75,7 +71,7 @@ const list = [
     name: "Celer",
     data:
       {
-        logoUrl: "/images/logo.svg",
+        logoUrl: "/images/bridges/sui.svg",
         link: "/",
         child:[
 
@@ -86,25 +82,23 @@ const list = [
     name: "Celer",
     data:
       {
-        logoUrl: "/images/logo.svg",
+        logoUrl: "/images/bridges/binance.svg",
         link: "/",
         child:[
           {
-            networkLogo: "/images/logo.svg",
-            networkLink: "/images/logo.svg",
-            poolComposition: "pstake/weth",
-            poolLogoOne: "/images/pstake_icon_light.svg",
-            poolLogoTwo: "/images/pstake_icon_light.svg",
-            logoUrl: "/images/logo.svg",
+            networkLogo: "/images/bridges/thena.svg",
+            networkLink: "",
+            poolComposition: "pstake/bnb",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/bnb.svg",
             link: "/",
           },
           {
-            networkLogo: "/images/logo.svg",
-            networkLink: "/images/logo.svg",
-            poolComposition: "pstake/weth",
-            poolLogoOne: "/images/pstake_icon_light.svg",
-            poolLogoTwo: "/images/pstake_icon_light.svg",
-            logoUrl: "/images/logo.svg",
+            networkLogo: "/images/bridges/pancake.svg",
+            networkLink: "/images/bridges/logo.svg",
+            poolComposition: "pstake/cake",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/cake.svg",
             link: "/",
           }
         ]
@@ -114,16 +108,15 @@ const list = [
     name: "Gravity Bridge",
     data:
       {
-        logoUrl: "/images/logo.svg",
+        logoUrl: "/images/bridges/cosmos.svg",
         link: "/",
         child:[
           {
-            networkLogo: "/images/logo.svg",
-            networkLink: "/images/logo.svg",
-            poolComposition: "pstake/weth",
-            poolLogoOne: "/images/pstake_icon_light.svg",
-            poolLogoTwo: "/images/pstake_icon_light.svg",
-            logoUrl: "/images/logo.svg",
+            networkLogo: "/images/bridges/osmosis.svg",
+            networkLink: "",
+            poolComposition: "pstake/osmo",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/weth.svg",
             link: "/",
           },
         ]
@@ -144,11 +137,14 @@ const EveryWhere = () => {
         </p>
           <div className={"h-[730px] flex mb-8"}>
             <div className={"flex flex-col justify-center items-center w-[200px] h-full border-r border-[#292929]"}>
-              <img
-                src={"/images/logo.svg"}
-                alt={"pstake-logo"}
-                className="w-[148px] h-[36px] mx-2 "
-              />
+              <div>
+                <img
+                  src={"/images/logo.svg"}
+                  alt={"pstake-logo"}
+                  className="w-[148px] h-[36px] mx-2 "
+                />
+                <p className={"font-bold text-[20px] text-[#ADADAD] text-center"}>ERC20</p>
+              </div>
             </div>
             <div className={"pl-4"}>
               {
@@ -188,7 +184,7 @@ const EveryWhere = () => {
                             <div key={nIndex} className={"flex items-center"}>
                               <div>
                                 <img
-                                  src={networkItem.logoUrl}
+                                  src={networkItem.networkLogo}
                                   alt={"pstake-logo"}
                                   className="w-[100px] h-[40px] mx-2 "
                                 />
@@ -222,19 +218,19 @@ const EveryWhere = () => {
         <div className={"flex w-full justify-between"}>
           <div className={"border border-[#292929] rounded-lg text-center px-[32px] flex flex-1 items-center max-w-[662px] just"}>
             <p className={"text-[#ADADAD]"}>Trade Route support</p>
-            <div className={"p-[14px] flex"}>
+            <div className={"p-[14px] flex h-[53px]"}>
               <img
-                src={"/images/cexs/bitget.png"}
+                src={"/images/bridges/jumper.svg"}
                 alt={"pstake-logo"}
                 className="w-[130px] mx-2"
               />
               <img
-                src={"/images/cexs/bitget.png"}
+                src={"/images/bridges/squid.svg"}
                 alt={"pstake-logo"}
                 className="w-[130px] px-[40px] border-x border-[#5B5B5B]"
               />
               <img
-                src={"/images/cexs/bitget.png"}
+                src={"/images/bridges/kyberswap.svg"}
                 alt={"pstake-logo"}
                 className="w-[106px] mx-2 "
               />

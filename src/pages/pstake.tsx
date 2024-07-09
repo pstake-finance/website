@@ -12,6 +12,7 @@ const PstakePage:NextPage = () => {
   return(
     <>
       <HeroSection/>
+      <Investors />
       <Uses/>
       <TokenSaleBanner/>
       <Cexs/>

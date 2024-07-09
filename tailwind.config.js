@@ -83,6 +83,7 @@ module.exports = {
       home_quote_bg: "url('/images/qoute_bg.svg')",
       pstakeBanner:
         "url('/images/bg_images/pstake_hero_bg.svg')",
+      tokenSaleBannerBg: "url('/images/bg_images/bg_grid.svg')",
 
     },
     backgroundColor: {
@@ -190,7 +191,8 @@ module.exports = {
         btcBanner: "30%, 100%, cover",
         title_bg: "auto",
         home_quote_bg: "cover",
-        pstakeBanner: "66%",
+        pstakeBanner: "59%",
+        tokenSaleBannerBg: "contain",
       },
       backgroundPosition: {
         homeBannerBg: "100% 100%",
@@ -204,6 +206,7 @@ module.exports = {
         title_bg: "0% -150px",
         home_quote_bg: "100%",
         pstakeBanner: "center 100%",
+        tokenSaleBannerBg: "100% 100%",
       },
     },
     container: {

@@ -10,7 +10,7 @@ const Uses = () => {
   const list = [
     {
       title: t("PSTAKE_WHY_USED1_TITLE"),
-      image: "/images/btc/building_asset1.svg",
+      image: "/images/protocol_governance.svg",
       content: t("PSTAKE_WHY_USED1_CONTENT"),
       sub_content: t("PSTAKE_WHY_USED1_CONTENT2"),
       buttonText: t("CONTRIBUTE"),
@@ -18,7 +18,7 @@ const Uses = () => {
     },
     {
       title: t("PSTAKE_WHY_USED2_TITLE"),
-      image: "/images/btc/building_asset1.svg",
+      image: "/images/btc_incentive.svg",
       content: t("PSTAKE_WHY_USED2_CONTENT"),
       sub_content: t("PSTAKE_WHY_USED2_CONTENT2"),
       buttonText:t("LIQUID_STAKE"),
@@ -32,7 +32,7 @@ const Uses = () => {
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1060px] mx-auto">
           {t("PSTAKE_WHY_USED_TITLE")}
         </h3>
-        <div className="flex flex-wrap gap-5 md:block">
+        <div className="flex flex-wrap gap-8 md:block">
           {list.map((item, index) => (
             <div
               className="flex-1 mt-4 pt-12 md:pt-4"
@@ -41,9 +41,9 @@ const Uses = () => {
             >
               <div
                 className="bg-[#1B1B1B] h-full
-              rounded-md shadow-md flex flex-col"
+              rounded-[16px] shadow-md border border-[#3A3A3A] flex flex-col"
               >
-                <div className="h-[240px] bg-[#1B1B1B]">
+                <div className="h-auto">
                   <img
                     src={item.image}
                     alt={item.title}

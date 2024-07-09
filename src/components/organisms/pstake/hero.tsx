@@ -12,20 +12,20 @@ const HeroSection = () => {
   return (
     <div className="text-center aos-init aos-animate">
       <div
-        className="sectionContainer pt-[170px] pb-[100px]"
+        className="sectionContainer pt-[170px] pb-[100px] lg:pb-[40px]"
         data-aos="fade-up"
       >
         <h1
           className="banner-heading font-medium text-[80px] leading-[100px]
-        text-light-full mt-6 md:text-[40px] sm:text-3xl max-w-[940px] mx-auto "
+        text-light-full mt-6 lg:text-[40px] lg:leading-normal sm:text-[28px] max-w-[940px] mx-auto "
         >
           <span className={"text-btcPrimary"}>{t("PSTAKE_HERO_TITLE_ONE")}</span>
           {t("PSTAKE_HERO_TITLE_TWO")}
           <span className={"text-btcPrimary"}>{t("PSTAKE_HERO_TITLE_THREE")}</span>
         </h1>
         <h6
-          className="max-w-[940px] mx-auto my-[32px]  font-light text-[32px]
-        text-[#ADADAD] leading-[40px] sm:text-sm"
+          className="max-w-[940px] mx-auto my-[32px] font-light text-[32px]
+        text-[#ADADAD] leading-[40px] lg:text-[18px] lg:leading-normal "
         >
           {t("PSTAKE_HERO_CONTENT")}
         </h6>
@@ -55,28 +55,40 @@ const HeroSection = () => {
                 </span>
           </ButtonLink>
         </div>
-        <div className={'bg-pstakeBanner bg-no-repeat pt-[370px]'}>
-          <div className={"pb-[80px]"}>
+        <div className={' bg-no-repeat pt-[60px]'}>
+          <div className={"flex items-center justify-center"}>
+            <img
+              src={"/images/pstake_hero.svg"}
+            />
+          </div>
+          <div className={""}>
             <div
-              className="w-[1220px] mx-auto px-6 py-8 bg-[#FAFAFA1A] border-[0.3px] border-[#FAFAFA] rounded-[24px] flex gap-[76px] items-center justify-between">
+              className="max-w-[1220px] mx-auto px-6 py-8 bg-[#FAFAFA1A] border-[0.3px] border-[#FAFAFA] rounded-[24px] flex gap-[76px] items-center justify-between
+              lg:flex-col lg:justify-start lg:items-start lg:gap-[30px]">
               <div className={"flex-1"}>
-                <p className={"text-[72px] leading-[90px] font-semibold text-light-full"}>$50M</p>
-                <p className={"text-[32px] leading-[40px] font-light text-light-full"}> {t("MARKET_CAP")}</p>
+                <p
+                  className={"text-[72px] leading-[90px] lg:text-[30px] lg:leading-normal font-semibold text-light-full lg:text-left"}>$50M</p>
+                <p
+                  className={"text-[32px] leading-[40px] lg:text-[20px] lg:leading-normal font-light text-light-full lg:text-left"}> {t("MARKET_CAP")}</p>
               </div>
               <div className={"flex-1"}>
-                <p className={"text-[72px] leading-[90px] font-semibold text-light-full"}>0%</p>
-                <p className={"text-[32px] leading-[40px] font-light text-light-full"}> {t("INFLATION")}</p>
+                <p
+                  className={"text-[72px] leading-[90px] lg:text-[30px] lg:leading-normal font-semibold text-light-full lg:text-left"}>0%</p>
+                <p
+                  className={"text-[32px] leading-[40px] lg:text-[20px] lg:leading-normal font-light text-light-full lg:text-left"}> {t("INFLATION")}</p>
               </div>
               <div className={"flex-1"}>
-                <p className={"text-[72px] leading-[90px] font-semibold text-light-full"}>$50M</p>
-                <p className={"text-[32px] leading-[40px] font-light text-light-full"}> {t("UNLOCKED_VESTED")}</p>
+                <p
+                  className={"text-[72px] leading-[90px] lg:text-[30px] lg:leading-normal font-semibold text-light-full lg:text-left"}>94%</p>
+                <p
+                  className={"text-[32px] leading-[40px] lg:text-[20px] lg:leading-normal font-light text-light-full lg:text-left"}> {t("UNLOCKED_VESTED")}</p>
               </div>
             </div>
           </div>
-          <Investors />
         </div>
 
       </div>
+
     </div>
   );
 };
