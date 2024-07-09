@@ -130,13 +130,6 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
   useEffect(() => {
     const fetchApy = async () => {
       const [
-        cosmosApyResponse,
-        osmoApyResponse,
-        starsApyResponse,
-        xprtApyResponse,
-        dydxApyResponse,
-        bldApyResponse,
-        huahuaApyResponse,
         cosmosTvlResponse,
         osmoTvlResponse,
         dydxTvlResponse,
@@ -144,17 +137,9 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         xprtTvlResponse,
         bldTvlResponse,
         huahuaTvlResponse,
-        bnbApyResponse,
         bnbTvlResponse,
         tokenPrices,
       ] = await Promise.all([
-        getCosmosAPY("cosmos"),
-        getCosmosAPY("osmo"),
-        getCosmosAPY("stars"),
-        getCosmosAPY("persistence"),
-        getCosmosAPY("dydx"),
-        getCosmosAPY("agoric"),
-        getCosmosAPY("chihuahua"),
         getCosmosTVL("cosmos"),
         getCosmosTVL("osmo"),
         getCosmosTVL("dydx"),
@@ -162,42 +147,41 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getCosmosTVL("persistence"),
         getCosmosTVL("agoric"),
         getCosmosTVL("chihuahua"),
-        getBnbApy(),
         getBnbTVL(),
         fetchTokenPrices(),
       ]);
       const list = await getValidatorLength("core-1");
       setChainValidators(list);
       setCosmosData({
-        apy: cosmosApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(cosmosTvlResponse)),
       });
       setOsmoData({
-        apy: osmoApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(osmoTvlResponse)),
       });
       setDydxData({
-        apy: dydxApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(dydxTvlResponse, 18)).toFixed(2),
       });
       setStarsData({
-        apy: starsApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(starsTvlResponse)),
       });
       setXprtData({
-        apy: xprtApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(xprtTvlResponse)),
       });
       setBldData({
-        apy: bldApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(bldTvlResponse)),
       });
       setHuahuaData({
-        apy: huahuaApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(huahuaTvlResponse)),
       });
       setBnbData({
-        apy: bnbApyResponse,
+        apy: 0,
         tvl: bnbTvlResponse,
       });
       setPrices(tokenPrices);

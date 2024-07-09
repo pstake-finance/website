@@ -32,28 +32,36 @@ const FeaturedBlogs = () => {
               className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
               key={index}
             >
-              <div className="bg-black-full hover:bg-black-emphasis">
-                <a
-                  href={item.blogLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="blog-image h-auto -md:max-h-[205px]">
-                    <img alt="blog2" src={item.imageLink} />
-                  </div>
+              <div className="md:w-auto w-full">
+                <div className={"bg-[#1B1B1B] rounded-[10px]"}>
+                  <a
+                    href={item.blogLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="blog-image h-auto">
+                      <img
+                        alt="blog2"
+                        src={item.imageLink}
+                        className={
+                          "rounded-tr-xl rounded-tl-xl max-h-[224px] w-full md:w-auto md:max-h-auto"
+                        }
+                      />
+                    </div>
 
-                  <div className="md:p-4 px-6 py-4">
-                    <p className="text-[#555] leading-normal font-semibold text-[12px]">
-                      {item.title}
-                    </p>
-                    <p
-                      className="inline-flex items-center border-b-2 border-[#5064FB]
-                    border-solid text-[12px] text-light-full pb-2"
-                    >
-                      Learn More
-                    </p>
-                  </div>
-                </a>
+                    <div className="md:p-4 px-6 py-4">
+                      <p className="text-[#D1D1D1] leading-normal text-[14px] mb-3">
+                        {item.title}
+                      </p>
+                      <p
+                        className="inline-flex items-center border-b-2 border-[#5064FB]
+                    border-solid text-[12px] text-light-full pb-1"
+                      >
+                        Learn More
+                      </p>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           ))}

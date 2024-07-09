@@ -47,30 +47,37 @@ const EcosystemSlider = ({ deviceType }) => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const [osmosis, crescent, dexter, umee, shade, shadeLending] =
-        await Promise.all([
-          fetchOsmosisPoolInfo(),
-          fetchCrescentPoolInfo(),
-          fetchDexterPoolInfo(),
-          fetchUmeeInfo(),
-          fetchShadeInfo(),
-          fetchShadeCollateral(),
-        ]);
-      setOsmosisInfo(osmosis);
-      setCrescentInfo(crescent);
-      setDexterInfo(dexter);
-      setUmeeInfo(umee);
-      setShadeLendingInfo(shadeLending),
-        setShadeInfo({
-          stkATOMSilk: {
-            apy: shade.stkATOMSilk.apy,
-            tvl: shade.stkATOMSilk.tvl,
-          },
-          atomStkAtom: {
-            apy: shade.atomStkAtom.apy,
-            tvl: shade.atomStkAtom.tvl,
-          },
-        });
+      fetchOsmosisPoolInfo().then((res) => {
+        setOsmosisInfo(res);
+      });
+
+      fetchCrescentPoolInfo().then((res) => {
+        setCrescentInfo(res);
+      });
+
+      fetchDexterPoolInfo().then((res) => {
+        setDexterInfo(res);
+      });
+      fetchUmeeInfo().then((res) => {
+        setUmeeInfo(res);
+      });
+
+      fetchShadeInfo().then((res) => {
+        setShadeLendingInfo(res);
+      });
+
+      fetchShadeCollateral().then((res) => {
+          setShadeInfo({
+            stkATOMSilk: {
+              apy: res.stkATOMSilk.apy,
+              tvl: res.stkATOMSilk.tvl,
+            },
+            atomStkAtom: {
+              apy: res.atomStkAtom.apy,
+              tvl: res.atomStkAtom.tvl,
+            },
+          });
+      });
     };
     fetchApi();
   }, []);
