@@ -19,10 +19,10 @@ import {
 import { useApp } from "../context/appContext/AppContext";
 
 const Binance = () => {
-  const [beefyInfo, setBeefyInfo] = useState({ tvl: 0, apy: 0 });
-  const [openLeverageInfo, setOpenLeverageInfo] = useState({ tvl: 0, apy: 0 });
-  const [wombatInfo, setWombatInfo] = useState({ tvl: 0, apy: 0 });
-  const [thenaInfo, setThenaInfo] = useState({ tvl: 0, apy: 0 });
+  const [beefyInfo, setBeefyInfo] = useState<any>({ tvl: 0, apy: 0 });
+  const [openLeverageInfo, setOpenLeverageInfo] = useState<any>({ tvl: 0, apy: 0 });
+  const [wombatInfo, setWombatInfo] = useState<any>({ tvl: 0, apy: 0 });
+  const [thenaInfo, setThenaInfo] = useState<any>({ tvl: 0, apy: 0 });
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -61,6 +61,7 @@ const Binance = () => {
           openLeverageInfo={openLeverageInfo}
           wombatInfo={wombatInfo}
           thenaInfo={thenaInfo}
+          deviceType={""}
         />
         <Guides />
         <Validators />

@@ -13,7 +13,7 @@ import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }:any) => {
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url:string) => {
       gtag.pageview(url);
     };
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -33,8 +33,9 @@ const App = ({ Component, pageProps }) => {
   }, [router.events]);
 
   useEffect(() => {
-    document.body.classList = "";
-    document.getElementById("nav-bar").classList.add("navbar-white");
+    // @ts-ignore
+    document.body.classList! = "";
+    document!.getElementById("nav-bar")!.classList.add("navbar-white");
   });
 
   return (

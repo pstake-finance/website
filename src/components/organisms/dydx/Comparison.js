@@ -21,7 +21,7 @@ const Comparison = () => {
       title: "APR (after fees)",
       staking: "Average ~18.5 %",
       liquidStake: `Up to ~${
-        cosmosData.apy === -1 ? APR_DEFAULT : cosmosData.apy
+        APR_DEFAULT
       } %`,
     },
     {

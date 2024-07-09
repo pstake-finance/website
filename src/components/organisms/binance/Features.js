@@ -7,7 +7,7 @@ const Features = () => {
   const { t } = useTranslation("common");
   const list = [
     {
-      title: t("WHY_PSTAKE_FOR_BNB_ONE_HEADING"),
+      title: "Say goodbye to illiquidity",
       icon: "usecase1",
       content:
         "Receive stkBNB to maintain liquidity of otherwise locked BNB\n" +
@@ -22,16 +22,16 @@ const Features = () => {
         "                    while securing the BNB chain network",
     },
     {
-      title: t("WHY_PSTAKE_FOR_BNB_THREE_HEADING"),
+      title: "Redemption Time who?",
       icon: "usecase3",
-      content: t("WHY_PSTAKE_FOR_BNB_THREE_CONTENT"),
+      content: "Skip unstaking and unbonding process of your $BNB by directly for swapping stkBNB from a liquidity pool ",
     },
   ];
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
         <h3 className="sectionTitle mb-12 md:mb-6">
-          {t("WHY_PSTAKE_FOR_BNB")}
+          Why pSTAKE for BNB?
         </h3>
         <div className="flex flex-wrap">
           {list.map((item, index) => (
