@@ -12,7 +12,7 @@ export default function Document() {
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
-          content="Leading information resource for all things BTCfi, Bitcoin Ecosystem, and BTC Liquid Staking."
+          content="Bitcoin yields for all, backed by Binance Labs"
         />
         <meta
           name="keywords"
@@ -34,7 +34,7 @@ export default function Document() {
         <meta property="og:url" content="https://pstake.finance" />
         <meta
           property="og:description"
-          content="Leading information resource for all things BTCfi, Bitcoin Ecosystem, and BTC Liquid Staking."
+          content="Bitcoin yields for all, backed by Binance Labs"
         />
         {/*Twitter Tags*/}
         <meta
@@ -42,7 +42,7 @@ export default function Document() {
           property="twitter:title"
         />
         <meta
-          content="Leading information resource for all things BTCfi, Bitcoin Ecosystem, and BTC Liquid Staking."
+          content="Bitcoin yields for all, backed by Binance Labs"
           property="twitter:description"
         />
         <meta content="/ogimage.jpeg" property="twitter:image" />
