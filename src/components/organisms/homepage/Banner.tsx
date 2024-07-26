@@ -37,7 +37,7 @@ const Banner = () => {
   return (
     <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414] tall:h-screen h-max bg-cover bg-center bg-no-repeat">
       <div className="pt-[200px] -2xl:pt-[300px] pb-[200px] relative h-full max-w-[1280px] container mx-auto">
-        <div className={"flex mb-[100px] md:mb-[40px] md:h-auto"}>
+        <div className={"flex mb-[20px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
             <h1 className="max-w-[630px] break-words text-[40px] md:text-[28px] md:leading-[40px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
               {t("HOME_HERO_SECTION_TITLE")}
@@ -54,9 +54,9 @@ const Banner = () => {
                 target={"_blank"}
                 isDisabled={false}
               >
-              <span className="nav-link pophover tooltip-multiline app-btn">
-                {t("EXPLORE_BTC_TESTNET")}
-              </span>
+                <span className="nav-link pophover tooltip-multiline app-btn">
+                  {t("EXPLORE_BTC_TESTNET")}
+                </span>
               </ButtonLink>
               <ButtonLink
                 className={`!rounded-[8px] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[240px] font-semibold !h-[48px] md:!w-[100%] group`}
@@ -67,10 +67,9 @@ const Banner = () => {
                 isDisabled={false}
               >
                 <span className="nav-link pophover tooltip-multiline app-btn">
-                {t("LIQUID_STAKE_NOW")}
+                  {t("LIQUID_STAKE_NOW")}
                 </span>
               </ButtonLink>
-
             </div>
           </div>
         </div>

@@ -188,7 +188,7 @@ module.exports = {
         home_quote_bg: "cover",
       },
       backgroundPosition: {
-        homeBannerBg: "100% 100%",
+        homeBannerBg: "100% 50%",
         bitcoinBannerBg: "100% 100%",
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",
