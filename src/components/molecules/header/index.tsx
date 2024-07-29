@@ -69,7 +69,7 @@ const socialList = [
   },
   {
     optionName: "Discord",
-    optionLink: "https://discord.com/invite/2ek5rUyT8x",
+    optionLink: "https://discord.pstake.finance/",
     icon: "discord",
     iconType: "fill",
     text: "Join Our Community",
