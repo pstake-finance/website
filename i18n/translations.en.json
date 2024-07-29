@@ -58,6 +58,10 @@
     "ETH_TO_COSMOS_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Persistence One",
     "ETH_TO_BASE_BRIDGE": " ETH to Base Bridge",
     "ETH_TO_BASE_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Base L2",
+    "ETH_TO_BLAST_BRIDGE": "ETH to Blast Bridge",
+    "ETH_TO_BLAST_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Blast Chain",
+    "ETH_TO_OPTIMISM_BRIDGE": "ETH to Optimism Bridge",
+    "ETH_TO_OPTIMISM_BRIDGE_HELPER_TEXT": "Bridge PSTAKE to Optimism",
 
 
 
@@ -87,7 +91,7 @@
     "NAV_GOVERNANCE_2_SUB_TITLE": "Explore how protocol decisions are made by pSTAKE governance",
     "NAV_GOVERNANCE_3_TITLE": "Snapshot Voting",
     "NAV_GOVERNANCE_3_SUB_TITLE": "Participate in protocol governance voting on pSTAKE Snapshot",
-    "HOME_HERO_SECTION_TITLE": "Access Bitcoin yields securely with BTC Liquid Staking",
+    "HOME_HERO_SECTION_TITLE": "Liquid Stake BTC to get rewards from Babylon's Trustless BTC staking and boosted pSats (points).",
     "HOME_HERO_SECTION_SUB_TITLE": "Liquid Stake BTC to get rewards from Babylon's Trustless BTC staking while maintaining your liquidity, powered by institutional custody providers.",
     "HOME_BITCOIN_TITLE": "Accessing Bitcoin yields should not be complex, risky, or unsafe",
     "HOME_BITCOIN_SUB_TITLE": "With our four years of liquid staking expertise and expert-curated yield strategies, we help individuals and institutions put their BTC to work in BTCfi.",
@@ -97,8 +101,8 @@
     "HOME_QUOTE_CONTENT1": "BTC yield-generating",
     "HOME_QUOTE_CONTENT2": "with a liquid staking solution for the $1T+ Bitcoin market.",
     "BTC_SERIES_BLOG_FOUR_TITLE": "What Are Bitcoin Layer-2s?",
-    "BTC_BLOG1_TITLE": "pSTAKE BTC Liquid Staking and Yield Thesis",
-    "BTC_BLOG2_TITLE": "pSTAKE Finance to Launch BTC Liquid Staking",
+    "BTC_BLOG1_TITLE": "Introducing Bitcoin Liquid Staking on Babylon",
+    "BTC_BLOG2_TITLE": "A New Identity and Roadmap for Bitcoin Yields",
     "BTC_BLOG3_TITLE": "Staking Sats with pSTAKE",
     "BTC_BLOG4_TITLE": "BTC Liquid Staking on Babylon",
     "BTC_BLOG5_TITLE": "The Genesis of Yield",
@@ -107,9 +111,12 @@
     "BTC_BLOG8_TITLE": "Bitcoin Capital Efficiency with Liquid Staking",
     "BTC_BLOG9_TITLE": "Bitcoin's OP_CAT proposal",
     "BTC_BLOG10_TITLE": "The untapped potential of Bitcoin defi",
+    "BTC_BLOG11_TITLE": "pSTAKE BTC Liquid Staking and Yield Thesis",
+    "BTC_BLOG12_TITLE": "pSTAKE Finance to Launch BTC Liquid Staking",
+
     "LISTEN_NOW":  "Listen Now",
     "EXPLORE_BTC_TESTNET" : "Explore BTC Testnet",
-
+    "STAKE_BITCOIN_NOW": "Stake Bitcoin Now",
 
     "HOME_INVESTORS_TITLE": "Trusted by the best in business and blockchain",
     "HOME_FEATURES_TITLE": "Why Liquid Stake BTC with pSTAKE?",
@@ -185,8 +192,9 @@
     "BTC_SERIES_BLOG_ONE_TITLE": "What is Bitcoin?",
     "BTC_SERIES_BLOG_TWO_TITLE": "What is Proof of Work (PoW)?",
     "BTC_SERIES_BLOG_THREE_TITLE": "What is Bitcoin Blockchain?",
+    "BTC_SERIES_BLOG_FIVE_TITLE": "What is Bitcoin Liquid Staking?",
 
-    "APP_BANNER_TEXT": "pSTAKE BTC Liquid Staking Testnet on Babylon is Now Live",
+    "APP_BANNER_TEXT": "pSTAKE Bitcoin Liquid Staking v1 on Babylon is Now Live with a 50 BTC deposit cap.",
     "BREAKING": "Breaking",
     "FOOTER_TITLE": "Explore the Community",
     "FOOTER_SUB_TITLE": "Learn more about pSTAKE Finance, chat with fellow pStakers, and have your say in the future of liquid staking everything.",

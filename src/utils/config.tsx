@@ -11,6 +11,8 @@ export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
 export const PSTAKE_BRIDGE_URL = "https://bridge.persistence.one/";
 export const BSC_BRIDGE_URL = "https://cbridge.celer.network/56/1/PSTAKE";
+export const BLAST_BRIDGE_URL = "https://cbridge.celer.network/1/81457/PSTAKE"
+export const OPTIMISM_BRIDGE_URL = "https://superbridge.app/optimism"
 export const PSTAKE_MEDIUM_URL =
   "https://blog.pstake.finance/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
@@ -220,13 +222,13 @@ export const STK_ATOM_BLOG_THREE_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2022/11/stkATOM-Exchange-rate-mechanics-3-1160x621.jpg";
 
 export const STK_BTC_BLOG_ONE_URL =
-  "https://blog.pstake.finance/2024/05/21/pstake-btc-liquid-staking-and-yield-thesis/";
+  "https://blog.pstake.finance/2024/07/11/introducing-bitcoin-liquid-staking-on-babylon-with-pstake/";
 export const STK_BTC_BLOG_ONE_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2024/05/PSTAKE-BTC-YIELD-THESIS01-18-17-min-1160x652.jpg";
+  "https://blog.pstake.finance/wp-content/uploads/2024/07/bitcoin-liquid-staking-09-09-min-2048x1152.jpg";
 export const STK_BTC_BLOG_TWO_URL =
-  "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/";
+  "https://blog.pstake.finance/2024/06/25/pstake-finance-a-new-identity-and-roadmap-for-bitcoin-yields/";
 export const STK_BTC_BLOG_TWO_IMAGE_URL =
-  "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC@1.5x-min-1160x650.png";
+  "https://blog.pstake.finance/wp-content/uploads/2024/06/New-logo-blg-01-01-min-2048x1152.jpg";
 export const STK_BTC_BLOG_THREE_URL =
   "https://www.youtube.com/watch?v=8zhejOADKTY";
 export const STK_BTC_BLOG_THREE_IMAGE_URL =
@@ -259,6 +261,14 @@ export const STK_BTC_BLOG_TEN_URL =
   "https://crypto.news/hitting-the-icebergs-tip-the-untapped-potential-of-bitcoin-defi-opinion/";
 export const STK_BTC_BLOG_TEN_IMAGE_URL =
   "https://crypto.news/app/uploads/2024/05/crypto-news-Hitting-the-icebergs-tip-option01.webp";
+export const STK_BTC_BLOG_11_URL =
+  "https://blog.pstake.finance/2024/05/21/pstake-btc-liquid-staking-and-yield-thesis/";
+export const STK_BTC_BLOG_11_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/PSTAKE-BTC-YIELD-THESIS01-18-17-min-1160x652.jpg";
+export const STK_BTC_BLOG_12_URL =
+  "https://blog.pstake.finance/2024/05/15/pstake-finance-to-launch-btc-liquid-staking-in-collaboration-with-babylon/";
+export const STK_BTC_BLOG_12_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/05/BTC@1.5x-min-1160x650.png";
 
 export const BTC_SERIES_BLOG_ONE_URL =
   "https://blog.pstake.finance/2024/05/20/bitcoin-101-series-1-what-is-bitcoin/";
@@ -279,6 +289,11 @@ export const BTC_SERIES_BLOG_FOUR_URL =
   "https://blog.pstake.finance/2024/06/04/what-are-bitcoin-layer-2s/";
 export const BTC_SERIES_BLOG_FOUR_IMAGE_URL =
   "https://blog.pstake.finance/wp-content/uploads/2024/06/Bitcoin-101-4-1160x653.jpg";
+
+export const BTC_SERIES_BLOG_FIVE_URL =
+  "https://blog.pstake.finance/2024/06/20/what-is-bitcoin-liquid-staking/";
+export const BTC_SERIES_BLOG_FIVE_IMAGE_URL =
+  "https://blog.pstake.finance/wp-content/uploads/2024/06/image2-1160x653.jpg";
 
 export const STK_ATOM_SUBSCRIBE_URL =
   "https://www.getrevue.co/profile/pSTAKE_Cosmos";
