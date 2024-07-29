@@ -14,7 +14,7 @@ const Terms = () => {
         <div className="pt-[200px] pb-[50px]">
           <h1 className={`${mainHeading} text-center`}> {t("TERMS_OF_USE")}</h1>
         </div>
-        <p className="text-red mb-4">{t("LAST_UPDATED")}: 3 November 2023</p>
+        <p className="text-red mb-4">{t("LAST_UPDATED")}: 25 July 2024</p>
         <div>
           <p className={contentClass}>
             {t("TERMS_SUB_HEADING")} <b>“{t("TERMS")}”</b>
