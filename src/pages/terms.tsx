@@ -197,8 +197,9 @@ const Terms = () => {
                   <li className={contentClass}>{t("TERMS_2_1_LIST_3_1")}</li>
                   <li className={contentClass}>{t("TERMS_2_1_LIST_3_2")}</li>
                   <li className={contentClass}>{t("TERMS_2_1_LIST_3_3")}</li>
+                  <li className={contentClass}>{t("TERMS_2_1_LIST_3_4")}</li>
                 </ul>
-                <b> {t("TERMS_2_1_LIST_3_4")}</b>
+                <b> {t("TERMS_2_1_LIST_3_5")}</b>
               </li>
             </ul>
           </div>
@@ -443,6 +444,8 @@ const Terms = () => {
             <p className={contentClass}>12.11 {t("TERMS_12_11")}</p>
             <p className={contentClass}>12.12 {t("TERMS_12_12")}</p>
             <p className={contentClass}>12.13 {t("TERMS_12_13")} </p>
+            <p className={contentClass}>12.14 {t("TERMS_12_14")} </p>
+            <p className={contentClass}>12.15 {t("TERMS_12_14")} </p>
           </div>
           <p className={subHeading}>
             <b>13. {t("TERMS_13")}</b>
