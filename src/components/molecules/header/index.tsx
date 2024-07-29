@@ -344,7 +344,7 @@ const Header = () => {
                     ? "[.is-sticky_&]:bg-atomPrimary"
                     : router.pathname === "/bnb"
                     ? "[.is-sticky_&]:bg-bnbPrimary"
-                    : "[.is-sticky_&]:bg-red"
+                    : "[.is-sticky_&]:bg-[#EE972C]"
                 } -lg:hidden md:py-2 !py-2.5 md:text-sm`}
                 variant={"custom"}
                 onClick={toggleMenu}
