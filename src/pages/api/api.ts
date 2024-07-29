@@ -530,7 +530,6 @@ export const getBTCTVL = async () => {
   try {
     const btcEndpoint = 'https://btc-orchestrator-mainnet.tail78aed.ts.net/api/cobo/total-amount'
     const res:any = await Axios.get(btcEndpoint);
-    console.log(res, "resres")
     if (res && res.data) {
       return Number((res.data.amount/1e8).toFixed(2));
     }

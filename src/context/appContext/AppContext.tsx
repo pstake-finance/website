@@ -8,9 +8,7 @@ import React, {
 import { AppProviderProps, AppState } from "./types";
 import {
   fetchTokenPrices,
-  getBnbApy,
   getBnbTVL, getBTCTVL,
-  getCosmosAPY,
   getCosmosTVL,
 } from "../../pages/api/api";
 import { decimalize, decimalizeRaw } from "../../utils/helpers";
