@@ -31,6 +31,10 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
+  btcData: {
+    apy: number;
+    tvl: number;
+  };
   tokenPrices: {
     BNB: number;
     ATOM: number;
@@ -38,8 +42,9 @@ export interface AppState {
     DYDX: number;
     STARS: number;
     XPRT: number;
-    BLD: 0;
-    HUAHUA: 0;
+    BLD: number;
+    HUAHUA: number;
+    BTC:number
   };
   validatorsList: {
     uatom: number;

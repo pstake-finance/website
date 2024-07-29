@@ -53,6 +53,10 @@
     "ETH_TO_COSMOS_BRIDGE_HELPER_TEXT": "将 PSTAKE 跨链到 Persistence One",
     "ETH_TO_BASE_BRIDGE": "ETH 到 Base ",
     "ETH_TO_BASE_BRIDGE_HELPER_TEXT": "将 PSTAKE 跨链到 Base L2",
+    "ETH_TO_BLAST_BRIDGE": "ETH 到 Blast Bridge",
+    "ETH_TO_BLAST_BRIDGE_HELPER_TEXT": "桥梁 PSTAKE 到爆炸链",
+    "ETH_TO_OPTIMISM_BRIDGE": "ETH 走向乐观之桥",
+    "ETH_TO_OPTIMISM_BRIDGE_HELPER_TEXT": "PSTAKE 桥梁向乐观",
 
     "EXPLORE_GOVERNANCE": "探索治理",
     "ABOUT" : "关于",
@@ -80,8 +84,8 @@
     "NAV_GOVERNANCE_2_SUB_TITLE": "了解 pSTAKE 治理如何做出协议决策",
     "NAV_GOVERNANCE_3_TITLE": "快照投票",
     "NAV_GOVERNANCE_3_SUB_TITLE": "参与 pSTAKE Snapshot 上的协议治理投票",
-    "HOME_HERO_SECTION_TITLE": "通过 BTC 流动性质押确保获取比特币收益",
-    "HOME_HERO_SECTION_SUB_TITLE": "通过 BTC 流动性质押，在保留流动性的同时，从 Babylon 的无信任 BTC 质押中获得奖励，并由机构托管服务提供支持。",
+    "HOME_HERO_SECTION_TITLE":"Access Bitcoin Yields Securely with BTC Liquid Staking",
+    "HOME_HERO_SECTION_SUB_TITLE": "流动股票比特币从巴比伦不信任的比特幣投注中获得奖励,并提高了pSats (points).",
     "HOME_BITCOIN_TITLE": "应简单、安全、无风险地获取比特币收益",
     "HOME_BITCOIN_SUB_TITLE": "凭借我们四年的流动性质押专长和专业的收益策略，我们帮助了个人和机构在BTCfi中有效利用他们的比特币。",
     "HOME_TOKEN_TITLE": "推动比特币收益与流动性质押",
@@ -90,8 +94,9 @@
     "HOME_QUOTE_CONTENT1": "BTC 产出收益",
     "HOME_QUOTE_CONTENT2": "与液体投注解决方案 $1T+ 比特币市场。",
     "BTC_SERIES_BLOG_FOUR_TITLE": "什么是Bitcoin Layer-2?",
-    "BTC_BLOG1_TITLE": "pSTAKE BTC液体投注和收益论文",
-    "BTC_BLOG2_TITLE": "pSTAKE 金融将启动BTC液体罢工",
+
+    "BTC_BLOG1_TITLE": "介绍比特币流体在巴比伦",
+    "BTC_BLOG2_TITLE": "比特币收益率的新身份和路线图",
     "BTC_BLOG3_TITLE": "与 pSTAKE 打赌 Sats",
     "BTC_BLOG4_TITLE": "BTC液体在巴比伦投注",
     "BTC_BLOG5_TITLE": "生產的創世記",
@@ -100,8 +105,12 @@
     "BTC_BLOG8_TITLE": "比特币资本效率与液体投注",
     "BTC_BLOG9_TITLE": "比特币的OP_CAT建议",
     "BTC_BLOG10_TITLE": "比特币挑战的未开发潜力",
+    "BTC_BLOG11_TITLE": "pSTAKE BTC液体投注和收益论文",
+    "BTC_BLOG12_TITLE": "pSTAKE 金融将启动BTC液体罢工",
+
     "LISTEN_NOW":  "听我说",
     "EXPLORE_BTC_TESTNET" : "Explore BTC Testnet",
+    "STAKE_BITCOIN_NOW": "现在赌博比特币",
 
     "HOME_INVESTORS_TITLE": "受到业界和区块链领域最佳企业的信赖",
     "HOME_FEATURES_TITLE": "为什么选择在 pSTAKE 进行 BTC 流动性质押？",
@@ -178,9 +187,9 @@
     "BTC_SERIES_BLOG_ONE_TITLE": "什么是比特币?",
     "BTC_SERIES_BLOG_TWO_TITLE": "什么是工作证明(PoW)?",
     "BTC_SERIES_BLOG_THREE_TITLE": "什么是比特币区块链?",
+    "BTC_SERIES_BLOG_FIVE_TITLE": "What is Bitcoin Liquid Staking?",
 
-
-    "APP_BANNER_TEXT": "pSTAKE BTC Liquid Staking Testnet on Babylon is Now Live",
+    "APP_BANNER_TEXT": "pSTAKE Bitcoin Liquid Staking v1 on Babylon 现在与50 BTC的存款上限。",
     "BREAKING": "重磅消息",
     "FOOTER_TITLE": "探索社区",
     "FOOTER_SUB_TITLE": "了解更多关于pSTAKE Finance的信息，与其他pStakers聊天，并在未来的流动性质押中发表您的意见。",

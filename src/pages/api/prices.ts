@@ -15,6 +15,7 @@ export default async function handler(
       "persistence",
       "agoric",
       "chihuahua-token",
+      "bitcoin"
     ];
 
     const data = await fetch(

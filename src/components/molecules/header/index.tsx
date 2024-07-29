@@ -29,7 +29,7 @@ import {
   STK_ODMO_TWITTER_URL,
   OSMO_URL,
   STK_DYDX_FAQ_URL,
-  DYDX,
+  DYDX, BLAST_BRIDGE_URL, OPTIMISM_BRIDGE_URL,
 } from "../../../utils/config";
 import {
   useTranslation,
@@ -251,6 +251,18 @@ const Header = () => {
       optionLink: BSC_BRIDGE_URL,
       subText: t("ETH_TO_BSC_BRIDGE_HELPER_TEXT"),
     },
+    {
+      imgUrl: "/images/networks/blast.svg",
+      optionName: t("ETH_TO_BLAST_BRIDGE"),
+      optionLink: BLAST_BRIDGE_URL,
+      subText: t("ETH_TO_BLAST_BRIDGE_HELPER_TEXT"),
+    },
+    {
+      imgUrl: "/images/networks/optimism.svg",
+      optionName: t("ETH_TO_OPTIMISM_BRIDGE"),
+      optionLink: OPTIMISM_BRIDGE_URL,
+      subText: t("ETH_TO_OPTIMISM_BRIDGE_HELPER_TEXT"),
+    },
   ];
 
   const langList = [
@@ -332,7 +344,7 @@ const Header = () => {
                     ? "[.is-sticky_&]:bg-atomPrimary"
                     : router.pathname === "/bnb"
                     ? "[.is-sticky_&]:bg-bnbPrimary"
-                    : "[.is-sticky_&]:bg-red"
+                    : "[.is-sticky_&]:bg-[#EE972C]"
                 } -lg:hidden md:py-2 !py-2.5 md:text-sm`}
                 variant={"custom"}
                 onClick={toggleMenu}
@@ -372,7 +384,7 @@ const Header = () => {
                   />
                 ) : (
                   <ul
-                    className={`flex gap-[24px] items-center md:flex-row -md:ml-auto md:flex-col 
+                    className={`flex gap-[16px] items-center md:flex-row -md:ml-auto md:flex-col 
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-2`}
                   >
                     <li className="nav-item nav__menu-item lg:hidden">
@@ -486,15 +498,15 @@ const Header = () => {
                         )
                       ) : (
                         <ButtonLink
-                          className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
+                          className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
                           variant={"outline"}
-                          href={appURL}
+                          href={'https://app.btc.pstake.finance/'}
                           scale="lg"
                           target={"_blank"}
                           isDisabled={false}
                         >
                           <span className="nav-link pophover tooltip-multiline app-btn">
-                            {t("LIQUID_STAKE_NOW")}
+                            {t("STAKE_BITCOIN_NOW")}
                           </span>
                         </ButtonLink>
                       )}

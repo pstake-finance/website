@@ -1,6 +1,8 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 import {
+  STK_BTC_BLOG_11_IMAGE_URL,
+  STK_BTC_BLOG_11_URL, STK_BTC_BLOG_12_IMAGE_URL, STK_BTC_BLOG_12_URL,
   STK_BTC_BLOG_EIGHT_IMAGE_URL,
   STK_BTC_BLOG_EIGHT_URL,
   STK_BTC_BLOG_FIVE_IMAGE_URL,
@@ -106,6 +108,18 @@ const FeaturedBlogs = ({ bg }: Props) => {
       title: t("BTC_BLOG10_TITLE"),
       blogLink: STK_BTC_BLOG_TEN_URL,
       imageLink: STK_BTC_BLOG_TEN_IMAGE_URL,
+      buttonText: t("READ_NOW"),
+    },
+    {
+      title: t("BTC_BLOG11_TITLE"),
+      blogLink: STK_BTC_BLOG_11_URL,
+      imageLink: STK_BTC_BLOG_11_IMAGE_URL,
+      buttonText: t("READ_NOW"),
+    },
+    {
+      title: t("BTC_BLOG12_TITLE"),
+      blogLink: STK_BTC_BLOG_12_URL,
+      imageLink: STK_BTC_BLOG_12_IMAGE_URL,
       buttonText: t("READ_NOW"),
     },
   ];

@@ -79,6 +79,7 @@ export const fetchTokenPrices = async () => {
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
+    BTC:0,
   };
   try {
     const response = await fetch(`/api/prices`);
@@ -91,6 +92,7 @@ export const fetchTokenPrices = async () => {
     data.XPRT = Number(pricesResponse.data["persistence"].usd);
     data.BLD = Number(pricesResponse.data["agoric"].usd);
     data.HUAHUA = Number(pricesResponse.data["chihuahua-token"].usd);
+    data.BTC = Number(pricesResponse.data["bitcoin"].usd);
     return data;
   } catch (e) {
     return data;
@@ -518,6 +520,20 @@ export const getBnbTVL = async () => {
   try {
     const tvl = await sdkInstance.getTvl();
     return Number(StkBNBWebSDK.format(tvl, 2));
+  } catch (e) {
+    console.log(e);
+    return 0;
+  }
+};
+
+export const getBTCTVL = async () => {
+  try {
+    const btcEndpoint = 'https://btc-orchestrator-mainnet.tail78aed.ts.net/api/cobo/total-amount'
+    const res:any = await Axios.get(btcEndpoint);
+    if (res && res.data) {
+      return Number((res.data.amount/1e8).toFixed(2));
+    }
+    return 0;
   } catch (e) {
     console.log(e);
     return 0;

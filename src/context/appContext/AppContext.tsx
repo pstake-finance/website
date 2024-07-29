@@ -8,9 +8,7 @@ import React, {
 import { AppProviderProps, AppState } from "./types";
 import {
   fetchTokenPrices,
-  getBnbApy,
-  getBnbTVL,
-  getCosmosAPY,
+  getBnbTVL, getBTCTVL,
   getCosmosTVL,
 } from "../../pages/api/api";
 import { decimalize, decimalizeRaw } from "../../utils/helpers";
@@ -49,6 +47,10 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
+  btcData:{
+    apy: 0,
+    tvl: 0,
+  },
   validatorsList: {
     uatom: 0,
     uosmo: 0,
@@ -67,6 +69,7 @@ const AppContext = createContext<AppState>({
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
+    BTC:0,
   },
 });
 
@@ -107,6 +110,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [btcData, setBtcData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
   const [chainValidators, setChainValidators] = useState<any>({
     uatom: 0,
     uosmo: 0,
@@ -125,6 +132,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
+    BTC: 0
   });
 
   useEffect(() => {
@@ -138,6 +146,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         bldTvlResponse,
         huahuaTvlResponse,
         bnbTvlResponse,
+        btcTVLResponse,
         tokenPrices,
       ] = await Promise.all([
         getCosmosTVL("cosmos"),
@@ -148,8 +157,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getCosmosTVL("agoric"),
         getCosmosTVL("chihuahua"),
         getBnbTVL(),
+        getBTCTVL(),
         fetchTokenPrices(),
       ]);
+      console.log(btcTVLResponse, tokenPrices, "tokenPrices-11")
       const list = await getValidatorLength("core-1");
       setChainValidators(list);
       setCosmosData({
@@ -184,6 +195,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         apy: 0,
         tvl: bnbTvlResponse,
       });
+      setBtcData({
+        apy: 0,
+        tvl: Number(btcTVLResponse),
+      });
       setPrices(tokenPrices);
     };
     fetchApy();
@@ -199,6 +214,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     xprtData,
     bldData,
     huahuaData,
+    btcData,
     validatorsList: chainValidators,
   };
 
