@@ -528,10 +528,11 @@ export const getBnbTVL = async () => {
 
 export const getBTCTVL = async () => {
   try {
-    const btcEndpoint = 'https://btc-orchestrator-mainnet.tail78aed.ts.net/api/cobo/total-amount'
+    const btcEndpoint = 'https://blockchain.info/rawaddr/bc1qajcp935tuvqakut95f0sc9qm09hxjj6egexl9d'
     const res:any = await Axios.get(btcEndpoint);
     if (res && res.data) {
-      return Number((res.data.amount/1e8).toFixed(2));
+      console.log(Number((res.data.final_balance/1e8).toFixed(2)), "total-btc")
+      return Number((res.data.final_balance/1e8).toFixed(2));
     }
     return 0;
   } catch (e) {
