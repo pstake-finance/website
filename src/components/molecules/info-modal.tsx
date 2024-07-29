@@ -46,7 +46,7 @@ const InfoModal = () => {
             <span className={"font-medium "}> pSTAKE Bitcoin Liquid Staking v1 on Babylon is Now Live with a 50 BTC deposit cap!</span>
           </p>
         </div>
-        <p className={" text-light-emphasis text-base mb-4"}>Deposit BTC (on Bitcoin Network) with pSTAKE to get boosted pSats when the SatDrop Campaign launches in August 2024 and any rewards/points from Babylon directly.
+        <p className={" text-light-emphasis text-base mb-4"}>Deposit BTC with pSTAKE now to get boosted pSats when the SatDrop Campaign launches in August 2024 and any rewards from Babylon directly.
         </p>
         <div className={"flex items-center gap-6 md:flex-col"}>
           <ButtonLink
