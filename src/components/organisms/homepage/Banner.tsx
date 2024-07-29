@@ -12,12 +12,12 @@ const netWorkList = [
   {
     logoUrl: "/images/networks/btc.svg",
     tooltip: "Bitcoin",
-    link: "/btc",
+    link: "https://app.pstake.finance/",
   },
   {
     logoUrl: "/images/more.svg",
     tooltip: "ATOM, OSMO, XPRT",
-    link: "",
+    link: "https://app.pstake.finance/",
   },
 ];
 const Banner = () => {
