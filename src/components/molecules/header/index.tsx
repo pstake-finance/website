@@ -293,6 +293,13 @@ const Header = () => {
     (state) => state.fetchXprtValidatorsData
   );
 
+
+  // let keys = [];
+  // for (const key in dummy) {
+  //   keys.push(dummy[key].replace(',', ''));
+  // }
+  // console.log(keys, "keys")
+
   useEffect(() => {
     fetchXprtValidatorsData("core-1", "Mainnet");
   }, []);
