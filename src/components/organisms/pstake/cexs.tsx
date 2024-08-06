@@ -6,107 +6,55 @@ const Cexs = () => {
   const { t } = useTranslation("common");
   const cexList = [
     {
-      logoUrl:"/images/cexs/bingx.svg",
+      logoUrl:"/images/cexs/thruster.svg",
       link:"/"
     },
     {
-      logoUrl:"/images/cexs/bitget.svg",
+      logoUrl:"/images/cexs/aerodrome.svg",
       link:"/"
     }, {
-      logoUrl:"/images/cexs/bitmart.svg",
+      logoUrl:"/images/cexs/velodrome.svg",
       link:"/"
     },
     {
-      logoUrl:"/images/cexs/bybit.svg",
+      logoUrl:"/images/cexs/pancake.svg",
       link:"/"
     }, {
-      logoUrl:"/images/cexs/coinex.svg",
+      logoUrl:"/images/cexs/thena.svg",
       link:"/"
     },
     {
-      logoUrl:"/images/cexs/coinw.svg",
+      logoUrl:"/images/cexs/osmosis.svg",
       link:"/"
     }, {
-      logoUrl:"/images/cexs/crypto.svg",
+      logoUrl:"/images/cexs/fenix.svg",
       link:"/"
     },
     {
-      logoUrl:"/images/cexs/gate.svg",
+      logoUrl:"/images/cexs/persistence.svg",
       link:"/"
     }, {
-      logoUrl:"/images/cexs/hotcoin.svg",
+      logoUrl:"/images/cexs/uniswap.svg",
       link:"/"
     },
-    {
-      logoUrl:"/images/cexs/htx.svg",
-      link:"/"
-    },
-    {
-      logoUrl:"/images/cexs/kraken.svg",
-      link:"/"
-    },
-    {
-      logoUrl:"/images/cexs/kucoin.svg",
-      link:"/"
-    }, {
-      logoUrl:"/images/cexs/mexc.svg",
-      link:"/"
-    },
-    {
-      logoUrl:"/images/cexs/okx.svg",
-      link:"/"
-    }, {
-      logoUrl:"/images/cexs/tapbit.svg",
-      link:"/"
-    },
-
   ]
+
   return (
     <div className="">
       <div className="container py-[60px] md:py-[35px]">
-        <h3 className="sectionTitle mb-[44px] md:mb-6 max-w-[1060px] mx-auto">
-          CEXs
+        <h3 className="text-[40px] leading-[60px] text-center text-light-high font-bold mb-[44px] md:mb-6 max-w-[1060px] mx-auto">
+          {t("EXCHANGES")}
         </h3>
-        <div
-          className={"flex gap-4 max-w-[1220px] mx-auto items-center flex-wrap lg:hidden"}
-        >
-          {
-            cexList.map((cex, index) => (
+        <div className="">
+          <Marquee className={"flex mb-4"}>
+            {cexList.map((item, index) => (
               <a
-                className={"cursor-pointer rounded-lg border border-[#292929] flex items-center justify-center w-[231px] h-[80px]"}
-                key={index}>
-                <img
-                  src={cex.logoUrl}
-                  alt={"pstake-logo"}
-                  className="w-auto h-auto mx-2 "
-                />
-              </a>
-            ))
-          }
-        </div>
-        <div className="hidden lg:block">
-          <Marquee className={"flex gap-4 mb-4"}>
-            {cexList.slice(0, cexList.length /2).map((item, index) => (
-              <a
-                className={"cursor-pointer mx-4 rounded-lg border border-[#292929] flex items-center justify-center w-[231px] h-[80px]"}
+                className={"cursor-pointer mx-3 rounded-[32px] bg-[#202020] flex items-center justify-center w-[207px] h-[70px]"}
                 key={index}>
 
                 <img
                   key={index}
-                  src={item.logoUrl}
-                  alt={item.logoUrl}
-                />
-              </a>
-            ))}
-          </Marquee>
-          <Marquee className={"flex gap-4"}>
-            {cexList.slice(cexList.length/2 , cexList.length).map((item, index) => (
-              <a
-                className={"cursor-pointer mx-4 rounded-lg border border-[#292929] flex items-center justify-center w-[231px] h-[80px]"}
-                key={index}>
-
-                <img
-                  key={index}
+                  className={"w-max"}
                   src={item.logoUrl}
                   alt={item.logoUrl}
                 />

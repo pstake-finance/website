@@ -3,13 +3,77 @@ import { useTranslation } from "next-export-i18n";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
 import * as net from "node:net";
+import Icon from "../../molecules/Icon";
+import Link from "next/link";
 
 const list = [
+  {
+    name: "",
+    data:
+      {
+        logoUrl: "/images/bridges/ethereum.svg",
+        icon:"ethereum",
+        viewBox:"0 0 122 29",
+        link: "/",
+        child:[
+          {
+            networkLogo: "/images/bridges/uniswap.svg",
+            networkLink: "",
+            poolComposition: "pstake/usdc",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/usdt.svg",
+            link: "/",
+          },
+        ]
+      }
+  },
+  {
+    name: "SuperBridge",
+    data:
+      {
+        logoUrl: "/images/bridges/base.svg",
+        icon:"base",
+        viewBox:"0 0 84 23",
+        link: "/",
+        child:[
+          {
+            networkLogo: "/images/bridges/aerodrome.svg",
+            networkLink: "",
+            poolComposition: "pstake/USDT",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/usdt.svg",
+            link: "/",
+          },
+        ]
+      }
+  },
+  {
+    name: "SuperBridge",
+    data:
+      {
+        logoUrl: "/images/bridges/optimism.svg",
+        icon:"optimism",
+        viewBox:"0 0 118 25",
+        link: "/",
+        child:[
+          {
+            networkLogo: "/images/bridges/velodrome.svg",
+            networkLink: "",
+            poolComposition: "pstake/weth",
+            poolLogoOne: "/images/bridges/pstake.svg",
+            poolLogoTwo: "/images/bridges/weth.svg",
+            link: "/",
+          },
+        ]
+      }
+  },
   {
     name: "Celer",
     data:
       {
         logoUrl: "/images/bridges/blast.svg",
+        icon:"blast",
+        viewBox:"0 0 104 23",
         link: "/",
         child:[
           {
@@ -32,57 +96,12 @@ const list = [
       }
   },
   {
-    name: "SuperBridge",
-    data:
-      {
-        logoUrl: "/images/bridges/base.svg",
-        link: "/",
-        child:[
-          {
-            networkLogo: "/images/bridges/aerodrome.svg",
-            networkLink: "",
-            poolComposition: "pstake/USDT",
-            poolLogoOne: "/images/bridges/pstake.svg",
-            poolLogoTwo: "/images/bridges/usdt.svg",
-            link: "/",
-          },
-        ]
-      }
-  },
-  {
-    name: "SuperBridge",
-    data:
-      {
-        logoUrl: "/images/bridges/optimism.svg",
-        link: "/",
-        child:[
-          {
-            networkLogo: "/images/bridges/velodrome.svg",
-            networkLink: "",
-            poolComposition: "pstake/weth",
-            poolLogoOne: "/images/bridges/pstake.svg",
-            poolLogoTwo: "/images/bridges/weth.svg",
-            link: "/",
-          },
-        ]
-      }
-  },
-  {
-    name: "Celer",
-    data:
-      {
-        logoUrl: "/images/bridges/sui.svg",
-        link: "/",
-        child:[
-
-        ]
-      }
-  },
-  {
     name: "Celer",
     data:
       {
         logoUrl: "/images/bridges/binance.svg",
+        icon:"binance",
+        viewBox: "0 0 112 31",
         link: "/",
         child:[
           {
@@ -109,6 +128,8 @@ const list = [
     data:
       {
         logoUrl: "/images/bridges/cosmos.svg",
+        icon:"cosmos-network",
+        viewBox:"0 0 122 29",
         link: "/",
         child:[
           {
@@ -122,20 +143,66 @@ const list = [
         ]
       }
   },
+  {
+    name: "Celer",
+    data:
+      {
+        logoUrl: "/images/bridges/sui.svg",
+        viewBox:"0 0 56 24",
+        icon:"sui",
+        link: "/",
+        child:[
+
+        ]
+      }
+  },
+]
+
+const bridges = [
+  {
+    icon:"jumpet",
+    link:"",
+    viewBox:"0 0 131 29"
+  },
+  {
+    icon:"squid",
+    link:"",
+    viewBox:"0 0 69 39"
+  },
+  {
+    icon:"kyberswap",
+    link:"",
+    viewBox:"0 0 107 36"
+  },
+  {
+    icon:"matcha",
+    link:"",
+    viewBox:"0 0 116 27"
+  },
+  {
+    icon:"1inch",
+    link:"",
+    viewBox:"0 0 95 45"
+  },
+   {
+    icon:"skip",
+     link:"",
+    viewBox:"0 0 114 34"
+  }
 ]
 const EveryWhere = () => {
   const { t } = useTranslation("common");
   return (
     <div className="bg-[#141414] aos-init aos-animate"  data-aos="zoom-in-right">
       <div className="max-w-[1220px] mx-auto  md:mx-4 py-[65px] md:py-[35px]">
-        <h3 className="text-[64px] leading-[80px] text-light-full mb-6 md:mb-4 text-center">
+        <h3 className="text-[40px] leading-[60px] text-light-high font-bold mb-3 md:mb-4 text-center">
           {t('PSTAKE_EVERYWHERE_TITLE1')} &nbsp;
           {t('PSTAKE_EVERYWHERE_TITLE2')}
         </h3>
         <p className="text-[20px] leading-[25px] text-[#ADADAD] mb-[60px] md:mb-[20px[ text-center">
           {t('PSTAKE_EVERYWHERE_CONTENT')}
         </p>
-          <div className={"h-[730px] flex mb-8"}>
+          <div className={"h-[820px] flex mb-8"}>
             <div className={"flex flex-col justify-center items-center w-[200px] h-full border-r border-[#292929]"}>
               <div>
                 <img
@@ -143,7 +210,7 @@ const EveryWhere = () => {
                   alt={"pstake-logo"}
                   className="w-[148px] h-[36px] mx-2 "
                 />
-                <p className={"font-bold text-[20px] text-[#ADADAD] text-center"}>ERC20</p>
+                <p className={"font-bold text-[20px] text-[#ADADAD] text-center"}>Ethereum</p>
               </div>
             </div>
             <div className={"pl-4"}>
@@ -151,22 +218,22 @@ const EveryWhere = () => {
                 list.map((item, index) => (
                   <div key={index} className={`flex items-center p-4 ${index + 1 !== list.length ? 'mb-5' : ''}`}>
                     <div className={"px-1 mx-2"}>
-                      <p className={"text-light-emphasis"}>{item.name}</p>
+                      <p className={"text-[#ADADAD]"}>{item.name}</p>
                       <img
                         src={"/images/single_arrow.svg"}
                         alt={"pstake-logo"}
-                        className="w-[160px]"
+                        className="w-[144px]"
                       />
                     </div>
                     <div>
-                      <div
-                        className={"px-1 rounded-[8px] bg-[#FFFFFF0D] w-[254px] h-[50px] mx-2 flex flex-col justify-center items-center"}>
-                        <img
-                          src={item.data.logoUrl}
-                          alt={"pstake-logo"}
-                          className="w-[102px] h-[36px] mx-2 "
-                        />
-                      </div>
+                      <Link
+                        key={index}
+                        href={item.data.link}
+                        className={"px-1 rounded-[8px] cursor-pointer bg-[#FFFFFF0D] hover:border hover:border-[#EE972C] w-[254px] h-[50px] mx-2 flex flex-col justify-center items-center group"}
+                        target="_blank">
+                        <Icon viewClass=" fill-[#a0a0a0] group-hover:fill-[#FFFFFF] !w-[102px] !h-[36px]" icon={item.data.icon} viewBox={item.data.viewBox}/>
+                      </Link>
+
                     </div>
                     {item.data.child.length > 0 ?
                       <div className={"px-1"}>
@@ -189,8 +256,12 @@ const EveryWhere = () => {
                                   className="w-[100px] h-[40px] mx-2 "
                                 />
                               </div>
-                              <div
-                                className={`${nIndex + 1 !== item.data.child.length ? 'mb-2 ' : ''} rounded-[8px] x-1 bg-[#FFFFFF0D] border border-[#292929] w-[254px] h-[50px] mx-2 flex justify-center items-center`}>
+                              <Link
+                                key={index}
+                                href={networkItem.link}
+                                target="_blank"
+                                className={`${nIndex + 1 !== item.data.child.length ? 'mb-2 ' : ''} rounded-[8px] x-1 bg-[#FFFFFF0D] 
+                                border border-[#292929] hover:border-[#EE972C] cursor-pointer group w-[254px] h-[50px] mx-2 flex justify-center items-center`}>
                                 <div className={"flex items-center mr-2"}>
                                   <img
                                     src={networkItem.poolLogoOne}
@@ -203,8 +274,8 @@ const EveryWhere = () => {
                                     className="w-[30px] h-[30px] -ml-2"
                                   />
                                 </div>
-                                <p className={"text-light-emphasis uppercase"}>{networkItem.poolComposition}</p>
-                              </div>
+                                <p className={"text-[#ADADAD] uppercase group-hover:text-[#FEFEFE]"}>{networkItem.poolComposition}</p>
+                              </Link>
                             </div>
                           ))
                           : null
@@ -216,28 +287,24 @@ const EveryWhere = () => {
             </div>
           </div>
         <div className={"flex w-full justify-between"}>
-          <div className={"border border-[#292929] rounded-lg text-center px-[32px] flex flex-1 items-center max-w-[662px] just"}>
+          <div className={"border border-[#292929] rounded-lg text-center px-[32px] flex justify-between flex-1 items-center max-w-[1220px] just"}>
             <p className={"text-[#ADADAD]"}>Trade Route support</p>
-            <div className={"p-[14px] flex h-[53px]"}>
-              <img
-                src={"/images/bridges/jumper.svg"}
-                alt={"pstake-logo"}
-                className="w-[130px] mx-2"
-              />
-              <img
-                src={"/images/bridges/squid.svg"}
-                alt={"pstake-logo"}
-                className="w-[130px] px-[40px] border-x border-[#5B5B5B]"
-              />
-              <img
-                src={"/images/bridges/kyberswap.svg"}
-                alt={"pstake-logo"}
-                className="w-[106px] mx-2 "
-              />
+            <div className={"py-[14px] flex h-[64px]"}>
+
+              {
+                bridges.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    className={`cursor-pointer group px-[32px]  ${index === 0 ? "pl-0" : ""}  ${index === bridges.length - 1 ? "pr-0" : ""} ${(index === bridges.length - 1 ) ? "" : "border-r border-[#5B5B5B]"}`}
+                  >
+                    <Icon viewClass=" fill-[#a0a0a0] group-hover:fill-[#EE972C] !w-[102px] !h-[36px]"
+                          icon={item.icon} viewBox={item.viewBox} />
+                  </Link>
+                ))
+              }
             </div>
-          </div>
-          <div className={"w-[426px] border border-[#292929] rounded-lg text-center flex justify-center items-center"}>
-            <p className={"text-[#ADADAD]"}>pstake.finance</p>
           </div>
         </div>
       </div>

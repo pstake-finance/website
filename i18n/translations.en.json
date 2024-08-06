@@ -212,7 +212,10 @@
     "PSTAKE_TOKEN_SALE_TEXT3": "in its public sale on CoinList.",
     "PSTAKE_EVERYWHERE_TITLE1": "$PSTAKE",
     "PSTAKE_EVERYWHERE_TITLE2": "Everywhere",
-    "PSTAKE_EVERYWHERE_CONTENT": "PSTAKE can be traded on the leading crypto ecosystems with deep liquidity and active users.",
+    "PSTAKE_EVERYWHERE_CONTENT": "$PSTAKE can be used in DeFi to provide liquidity on DEXs in leading crypto ecosystems.",
+    "STAKE_BTC": "Stake BTC",
+    "PARTICIPATE": "Participate",
+    "EXCHANGES": "Exchanges",
 
     "APP_BANNER_TEXT": "pSTAKE Bitcoin Liquid Staking v1 on Babylon is Now Live with a 50 BTC deposit cap.",
     "BREAKING": "Breaking",
