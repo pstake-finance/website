@@ -279,7 +279,7 @@ const Header = () => {
     process.env.NEXT_PUBLIC_DEPLOYMENT !== "production" && {
       imgUrl: "/images/lang/kr.png",
       code: "ko",
-      name: "한국어",
+      name: "KOREAN",
     },
   ];
 
