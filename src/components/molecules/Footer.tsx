@@ -194,14 +194,14 @@ const Footer = () => {
               </div>
               <div className="flex items-center justify-center flex-wrap sm:block sm:text-center">
                 <Link
-                  href="/privacy"
+                  href="/src/pages/privacy"
                   target="_blank"
                   className="text-[#787878] text-[11px] mx-4 sm:mb-4 block"
                 >
                   {t("PRIVACY_POLICY")}
                 </Link>
                 <Link
-                  href="/terms"
+                  href="/src/pages/terms"
                   target="_blank"
                   className="text-[#787878] text-[11px] mx-4 sm:mb-4 block"
                 >

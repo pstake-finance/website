@@ -181,7 +181,7 @@ module.exports = {
         "-sm": { min: "640px" },
       },
       backgroundSize: {
-        homeBannerBg: "60%",
+        homeBannerBg: "50%",
         atomBanner: "30%, cover",
         bitcoinBannerBg: "contain",
         bnbBanner: "30%, cover",
@@ -195,7 +195,7 @@ module.exports = {
         tokenSaleBannerBg: "contain",
       },
       backgroundPosition: {
-        homeBannerBg: "100% 100%",
+        homeBannerBg: "100% 200px",
         bitcoinBannerBg: "100% 100%",
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",

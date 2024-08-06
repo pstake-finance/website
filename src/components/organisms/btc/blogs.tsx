@@ -1,6 +1,8 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 import {
+  STK_BTC_BLOG_11_IMAGE_URL,
+  STK_BTC_BLOG_11_URL, STK_BTC_BLOG_12_IMAGE_URL, STK_BTC_BLOG_12_URL,
   STK_BTC_BLOG_EIGHT_IMAGE_URL,
   STK_BTC_BLOG_EIGHT_URL,
   STK_BTC_BLOG_FIVE_IMAGE_URL,
@@ -108,6 +110,18 @@ const FeaturedBlogs = ({ bg }: Props) => {
       imageLink: STK_BTC_BLOG_TEN_IMAGE_URL,
       buttonText: t("READ_NOW"),
     },
+    {
+      title: t("BTC_BLOG11_TITLE"),
+      blogLink: STK_BTC_BLOG_11_URL,
+      imageLink: STK_BTC_BLOG_11_IMAGE_URL,
+      buttonText: t("READ_NOW"),
+    },
+    {
+      title: t("BTC_BLOG12_TITLE"),
+      blogLink: STK_BTC_BLOG_12_URL,
+      imageLink: STK_BTC_BLOG_12_IMAGE_URL,
+      buttonText: t("READ_NOW"),
+    },
   ];
   const { isMobile } = useWindowSize();
   return (
@@ -170,39 +184,6 @@ const FeaturedBlogs = ({ bg }: Props) => {
             ))}
           </Carousel>
         </div>
-        {/*<div className="flex flex-wrap justify-center mb-4 gap-4 md:block">*/}
-        {/*  {list.map((item, index) => (*/}
-        {/*    <div className="flex-1 mt-4" key={index}>*/}
-        {/*      <div className="bg-[#1B1B1B] rounded-xl">*/}
-        {/*        <a*/}
-        {/*          href={item.blogLink}*/}
-        {/*          target="_blank"*/}
-        {/*          rel="noopener noreferrer"*/}
-        {/*        >*/}
-        {/*          <div className="blog-image h-auto">*/}
-        {/*            <img*/}
-        {/*              alt="blog2"*/}
-        {/*              src={item.imageLink}*/}
-        {/*              className={"rounded-tr-xl rounded-tl-xl"}*/}
-        {/*            />*/}
-        {/*          </div>*/}
-
-        {/*          <div className="md:p-4 px-6 py-4">*/}
-        {/*            <p className="text-[#D1D1D1] leading-normal text-[14px] mb-3">*/}
-        {/*              {item.title}*/}
-        {/*            </p>*/}
-        {/*            <p*/}
-        {/*              className="text-[#FFFFFF] inline-flex items-center border-b-2 border-[#EE972C]*/}
-        {/*            border-solid text-[12px] text-light-full pb-1"*/}
-        {/*            >*/}
-        {/*              {t("READ_NOW")}*/}
-        {/*            </p>*/}
-        {/*          </div>*/}
-        {/*        </a>*/}
-        {/*      </div>*/}
-        {/*    </div>*/}
-        {/*  ))}*/}
-        {/*</div>*/}
       </div>
     </div>
   );

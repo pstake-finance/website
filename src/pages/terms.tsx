@@ -14,7 +14,7 @@ const Terms = () => {
         <div className="pt-[200px] pb-[50px]">
           <h1 className={`${mainHeading} text-center`}> {t("TERMS_OF_USE")}</h1>
         </div>
-        <p className="text-red mb-4">{t("LAST_UPDATED")}: 3 November 2023</p>
+        <p className="text-red mb-4">{t("LAST_UPDATED")}: 25 July 2024</p>
         <div>
           <p className={contentClass}>
             {t("TERMS_SUB_HEADING")} <b>“{t("TERMS")}”</b>
@@ -197,8 +197,9 @@ const Terms = () => {
                   <li className={contentClass}>{t("TERMS_2_1_LIST_3_1")}</li>
                   <li className={contentClass}>{t("TERMS_2_1_LIST_3_2")}</li>
                   <li className={contentClass}>{t("TERMS_2_1_LIST_3_3")}</li>
+                  <li className={contentClass}>{t("TERMS_2_1_LIST_3_4")}</li>
                 </ul>
-                <b> {t("TERMS_2_1_LIST_3_4")}</b>
+                <b> {t("TERMS_2_1_LIST_3_5")}</b>
               </li>
             </ul>
           </div>
@@ -443,6 +444,8 @@ const Terms = () => {
             <p className={contentClass}>12.11 {t("TERMS_12_11")}</p>
             <p className={contentClass}>12.12 {t("TERMS_12_12")}</p>
             <p className={contentClass}>12.13 {t("TERMS_12_13")} </p>
+            <p className={contentClass}>12.14 {t("TERMS_12_14")} </p>
+            <p className={contentClass}>12.15 {t("TERMS_12_14")} </p>
           </div>
           <p className={subHeading}>
             <b>13. {t("TERMS_13")}</b>

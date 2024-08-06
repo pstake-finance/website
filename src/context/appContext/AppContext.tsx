@@ -8,9 +8,7 @@ import React, {
 import { AppProviderProps, AppState } from "./types";
 import {
   fetchTokenPrices,
-  getBnbApy,
-  getBnbTVL,
-  getCosmosAPY,
+  getBnbTVL, getBTCTVL,
   getCosmosTVL,
 } from "../../pages/api/api";
 import { decimalize, decimalizeRaw } from "../../utils/helpers";
@@ -49,6 +47,10 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
+  btcData:{
+    apy: 0,
+    tvl: 0,
+  },
   validatorsList: {
     uatom: 0,
     uosmo: 0,
@@ -67,6 +69,7 @@ const AppContext = createContext<AppState>({
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
+    BTC:0,
   },
 });
 
@@ -107,6 +110,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [btcData, setBtcData] = useState<any>({
+    apy: 0,
+    tvl: 0,
+  });
   const [chainValidators, setChainValidators] = useState<any>({
     uatom: 0,
     uosmo: 0,
@@ -125,18 +132,12 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
+    BTC: 0
   });
 
   useEffect(() => {
     const fetchApy = async () => {
       const [
-        cosmosApyResponse,
-        osmoApyResponse,
-        starsApyResponse,
-        xprtApyResponse,
-        dydxApyResponse,
-        bldApyResponse,
-        huahuaApyResponse,
         cosmosTvlResponse,
         osmoTvlResponse,
         dydxTvlResponse,
@@ -144,17 +145,10 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         xprtTvlResponse,
         bldTvlResponse,
         huahuaTvlResponse,
-        bnbApyResponse,
         bnbTvlResponse,
+        btcTVLResponse,
         tokenPrices,
       ] = await Promise.all([
-        getCosmosAPY("cosmos"),
-        getCosmosAPY("osmo"),
-        getCosmosAPY("stars"),
-        getCosmosAPY("persistence"),
-        getCosmosAPY("dydx"),
-        getCosmosAPY("agoric"),
-        getCosmosAPY("chihuahua"),
         getCosmosTVL("cosmos"),
         getCosmosTVL("osmo"),
         getCosmosTVL("dydx"),
@@ -162,43 +156,48 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getCosmosTVL("persistence"),
         getCosmosTVL("agoric"),
         getCosmosTVL("chihuahua"),
-        getBnbApy(),
         getBnbTVL(),
+        getBTCTVL(),
         fetchTokenPrices(),
       ]);
+      console.log(btcTVLResponse, tokenPrices, "tokenPrices-11")
       const list = await getValidatorLength("core-1");
       setChainValidators(list);
       setCosmosData({
-        apy: cosmosApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(cosmosTvlResponse)),
       });
       setOsmoData({
-        apy: osmoApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(osmoTvlResponse)),
       });
       setDydxData({
-        apy: dydxApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(dydxTvlResponse, 18)).toFixed(2),
       });
       setStarsData({
-        apy: starsApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(starsTvlResponse)),
       });
       setXprtData({
-        apy: xprtApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(xprtTvlResponse)),
       });
       setBldData({
-        apy: bldApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(bldTvlResponse)),
       });
       setHuahuaData({
-        apy: huahuaApyResponse,
+        apy: 0,
         tvl: Number(decimalizeRaw(huahuaTvlResponse)),
       });
       setBnbData({
-        apy: bnbApyResponse,
+        apy: 0,
         tvl: bnbTvlResponse,
+      });
+      setBtcData({
+        apy: 0,
+        tvl: Number(btcTVLResponse),
       });
       setPrices(tokenPrices);
     };
@@ -215,6 +214,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     xprtData,
     bldData,
     huahuaData,
+    btcData,
     validatorsList: chainValidators,
   };
 

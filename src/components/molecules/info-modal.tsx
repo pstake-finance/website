@@ -43,22 +43,22 @@ const InfoModal = () => {
         <div>
           <Image src={"/images/logo.svg"} className={"mb-4 "} alt={"dd"} width={140} height={24} />
           <p className={"mb-4 text-light-full text-lg"}>
-            <span className={"font-medium "}>pSTAKE&apos;s new logo was just unveiled</span>
+            <span className={"font-medium "}> pSTAKE Bitcoin Liquid Staking v1 on Babylon is Now Live with a 50 BTC deposit cap!</span>
           </p>
         </div>
-        <p className={" text-light-emphasis text-base mb-4"}>pSTAKE’s refreshed brand identity focuses on helping
-          individuals and institutions access reliable Bitcoin Yields securely.</p>
+        <p className={" text-light-emphasis text-base mb-4"}>Deposit BTC with pSTAKE now to get boosted pSats when the SatDrop Campaign launches in August 2024 and any rewards from Babylon directly.
+        </p>
         <div className={"flex items-center gap-6 md:flex-col"}>
           <ButtonLink
             className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[240px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
             variant={"outline"}
-            href={"https://blog.pstake.finance/2024/06/25/pstake-finance-the-orange-road-ahead-x-bitcoin-yields/"}
+            href={"https://app.btc.pstake.finance"}
             scale="md"
             target={"_blank"}
             isDisabled={false}
           >
               <span className="nav-link pophover tooltip-multiline app-btn">
-                Learn More
+                Stake Bitcoin Now
               </span>
           </ButtonLink>
         </div>

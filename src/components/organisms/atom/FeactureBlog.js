@@ -43,44 +43,48 @@ const FeaturedBlogs = () => {
         <div className="flex flex-wrap justify-center mb-8">
           {list.map((item, index) => (
             <div
-              className="-lg:basis-[33.3%] -lg:max-w-[33.3%] px-4 mt-4"
-              key={index}
-            >
-              <div className="bg-black-full hover:bg-black-emphasis">
-                <a
-                  href={item.blogLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="blog-image h-auto -md:max-h-[205px]">
-                    <img alt="blog2" src={item.imageLink} />
-                  </div>
+            className="flex-1 mt-4 px-2 flex h-full md:justify-center"
+            key={index}
+        >
+          <div className="md:w-auto w-full">
+            <div className={"bg-[#1B1B1B] rounded-[10px]"}>
+              <a
+                href={item.blogLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="blog-image h-auto">
+                  <img
+                    alt="blog2"
+                    src={item.imageLink}
+                    className={
+                      "rounded-tr-xl rounded-tl-xl max-h-[224px] w-full md:w-auto md:max-h-auto"
+                    }
+                  />
+                </div>
 
-                  <div className="md:p-4 px-6 py-4">
-                    <p className="text-[#555] leading-normal font-semibold text-[12px]">
-                      {item.title}
-                    </p>
-                    <p
-                      className="inline-flex items-center border-b-2 border-[#595d7b]
-                    border-solid text-[12px] text-light-full pb-2"
-                    >
-                      Learn More
-                      <Icon
-                        viewClass="arrow-right w-[14px] fill-[#fff] mx-2"
-                        icon="right-arrow"
-                      />
-                    </p>
-                  </div>
-                </a>
-              </div>
+                <div className="md:p-4 px-6 py-4">
+                  <p className="text-[#D1D1D1] leading-normal text-[14px] mb-3">
+                    {item.title}
+                  </p>
+                  <p
+                    className="text-[#FFFFFF] inline-flex items-center border-b-2 border-[#595d7b]
+                    border-solid text-[12px] text-light-full pb-1"
+                  >
+                    {t("READ_ALL")}
+                  </p>
+                </div>
+              </a>
             </div>
-          ))}
+          </div>
         </div>
-        <div className="">
-          <ButtonLink
-            className={`w-[200px] mx-auto md:py-2 md:text-sm`}
-            variant={"custom"}
-            customButtonClass={"bg-[#595d7b] text-light-high"}
+        ))}
+      </div>
+      <div className="">
+        <ButtonLink
+          className={`w-[200px] mx-auto md:py-2 md:text-sm`}
+          variant={"custom"}
+          customButtonClass={"bg-[#595d7b] text-light-high"}
             href={STK_ATOM_BLOG_URL}
             scale="lg"
             target={"_blank"}

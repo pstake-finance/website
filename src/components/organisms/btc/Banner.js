@@ -38,14 +38,14 @@ const Banner = () => {
           <ButtonLink
             className={`w-[200px] md:py-2 md:text-sm`}
             variant={"custom"}
-            href={"/"}
+            href={"https://app.btc.pstake.finance/"}
             scale="lg"
             customButtonClass="bg-btcPrimary text-light-high"
             target={"_blank"}
-            isDisabled={true}
+            isDisabled={false}
             focusEffect={false}
           >
-            {t("COMING_SOON")}
+            {t("STAKE_BITCOIN_NOW")}
           </ButtonLink>
         </div>
       </div>

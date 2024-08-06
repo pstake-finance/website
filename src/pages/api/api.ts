@@ -79,6 +79,7 @@ export const fetchTokenPrices = async () => {
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
+    BTC:0,
   };
   try {
     const response = await fetch(`/api/prices`);
@@ -91,6 +92,7 @@ export const fetchTokenPrices = async () => {
     data.XPRT = Number(pricesResponse.data["persistence"].usd);
     data.BLD = Number(pricesResponse.data["agoric"].usd);
     data.HUAHUA = Number(pricesResponse.data["chihuahua-token"].usd);
+    data.BTC = Number(pricesResponse.data["bitcoin"].usd);
     return data;
   } catch (e) {
     return data;
@@ -518,6 +520,21 @@ export const getBnbTVL = async () => {
   try {
     const tvl = await sdkInstance.getTvl();
     return Number(StkBNBWebSDK.format(tvl, 2));
+  } catch (e) {
+    console.log(e);
+    return 0;
+  }
+};
+
+export const getBTCTVL = async () => {
+  try {
+    const btcEndpoint = 'https://blockchain.info/rawaddr/bc1qajcp935tuvqakut95f0sc9qm09hxjj6egexl9d'
+    const res:any = await Axios.get(btcEndpoint);
+    if (res && res.data) {
+      console.log(Number((res.data.final_balance/1e8).toFixed(2)), "total-btc")
+      return Number((res.data.final_balance/1e8).toFixed(2));
+    }
+    return 0;
   } catch (e) {
     console.log(e);
     return 0;

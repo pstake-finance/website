@@ -8,7 +8,7 @@ import {
   BTC_SERIES_BLOG_THREE_URL,
   BTC_SERIES_BLOG_THREE_IMAGE_URL,
   BTC_SERIES_BLOG_FOUR_IMAGE_URL,
-  BTC_SERIES_BLOG_FOUR_URL,
+  BTC_SERIES_BLOG_FOUR_URL, BTC_SERIES_BLOG_FIVE_URL, BTC_SERIES_BLOG_FIVE_IMAGE_URL,
 } from "../../../utils/config";
 import Carousel from "react-multi-carousel";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
@@ -55,6 +55,11 @@ const BTCFeaturedBlogs = ({ bg }: Props) => {
       title: t("BTC_SERIES_BLOG_FOUR_TITLE"),
       blogLink: BTC_SERIES_BLOG_FOUR_URL,
       imageLink: BTC_SERIES_BLOG_FOUR_IMAGE_URL,
+    },
+    {
+      title: t("BTC_SERIES_BLOG_FIVE_TITLE"),
+      blogLink: BTC_SERIES_BLOG_FIVE_URL,
+      imageLink: BTC_SERIES_BLOG_FIVE_IMAGE_URL,
     },
   ];
   const { isMobile } = useWindowSize();
