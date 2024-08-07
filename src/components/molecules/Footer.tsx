@@ -107,7 +107,7 @@ const Footer = () => {
       name: "Governance Forum",
       url: PSTAKE_FORUM_URL,
       image: "forum_full",
-      text: "Join Discussions",
+      text: t("FOOTER_ITEM_TEXT_6"),
     },
   ];
 
