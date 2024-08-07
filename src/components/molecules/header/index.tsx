@@ -276,7 +276,7 @@ const Header = () => {
       code: "cn",
       name: "CHINESE",
     },
-    process.env.NEXT_PUBLIC_DEPLOYMENT !== "production" && {
+   {
       imgUrl: "/images/lang/kr.png",
       code: "ko",
       name: "KOREAN",
