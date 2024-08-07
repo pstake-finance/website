@@ -3,8 +3,10 @@ import ButtonLink from "../atoms/buttonLink/ButtonLink";
 import Modal from "../atoms/modal/Modal";
 import Button from "../atoms/button/Button";
 import Image from "next/image";
+import { useTranslation } from "next-export-i18n";
 
 const InfoModal = () => {
+  const { t } = useTranslation("common");
   const [show, setShow] = useState(false);
   const [checkBox1, setCheckBox1] = useState(false);
   const [checkBox2, setCheckBox2] = useState(false);
@@ -43,10 +45,13 @@ const InfoModal = () => {
         <div>
           <Image src={"/images/logo.svg"} className={"mb-4 "} alt={"dd"} width={140} height={24} />
           <p className={"mb-4 text-light-full text-lg"}>
-            <span className={"font-medium "}> pSTAKE Bitcoin Liquid Staking v1 on Babylon is Now Live with a 50 BTC deposit cap!</span>
-          </p>
+            <span className={"font-medium "}>
+              {t("INFO_MODAL_TITLE")}
+            </span>
+            </p>
         </div>
-        <p className={" text-light-emphasis text-base mb-4"}>Deposit BTC with pSTAKE now to get boosted pSats when the SatDrop Campaign launches in August 2024 and any rewards from Babylon directly.
+        <p className={" text-light-emphasis text-base mb-4"}>
+          {t("INFO_MODAL_CONTENT")}
         </p>
         <div className={"flex items-center gap-6 md:flex-col"}>
           <ButtonLink

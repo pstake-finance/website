@@ -276,10 +276,10 @@ const Header = () => {
       code: "cn",
       name: "CHINESE",
     },
-    process.env.NEXT_PUBLIC_DEPLOYMENT !== "production" && {
+   {
       imgUrl: "/images/lang/kr.png",
       code: "ko",
-      name: "한국어",
+      name: "KOREAN",
     },
   ];
 
@@ -292,6 +292,13 @@ const Header = () => {
   const fetchXprtValidatorsData = useAppStore(
     (state) => state.fetchXprtValidatorsData
   );
+
+
+  // let keys = [];
+  // for (const key in dummy) {
+  //   keys.push(dummy[key].replace(',', ''));
+  // }
+  // console.log(keys, "keys")
 
   useEffect(() => {
     fetchXprtValidatorsData("core-1", "Mainnet");
