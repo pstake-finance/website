@@ -472,3 +472,55 @@ background-image: linear-gradient(to right, #232334, #232334), linear-gradient(t
 .custom-arrow-slider .react-multiple-carousel__arrow::before{
   font-size: 10px;
 }
+
+/* custom timeline styles */
+.timeline .vertical-timeline::before{
+  width:8px;
+  border-radius: 50px;
+  background: #4a4949a8;
+}
+
+.timeline .vertical-timeline--two-columns .vertical-timeline-element-icon{
+  box-shadow: none;
+  background: none !important;
+  left: 3px;
+}
+
+.timeline .vertical-timeline-element-content{
+  box-shadow: none !important;
+}
+
+.timeline .vertical-timeline-element-content-arrow{
+  width: 42px;
+  height: 1px;
+  background: #E3983D;
+  top: 18px !important;
+  border: 1px solid #E3983D !important;
+}
+
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
+    top: 18px !important;
+  }
+  .timeline .vertical-timeline::before{
+    width:18px;
+  }
+  .timeline .vertical-timeline-element-content-arrow{
+    width: 72px !important;
+  }
+  .timeline .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    margin-left: -12px;
+    width: 38px;
+    height: 38px;
+    left: 50% !important;
+  }
+  .timeline  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow,
+  .timeline  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow {
+    top: 18px !important;
+    width: 60px !important;
+  }
+  .vertical-timeline--two-columns .vertical-timeline-element-content {
+    padding: 32px !important;
+  }
+}
