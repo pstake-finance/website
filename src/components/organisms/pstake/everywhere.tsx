@@ -1,8 +1,5 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
-import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
-import * as net from "node:net";
 import Icon from "../../molecules/Icon";
 import Link from "next/link";
 import Image from "next/image";
