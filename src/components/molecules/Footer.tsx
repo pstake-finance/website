@@ -113,7 +113,7 @@ const Footer = () => {
 
   return (
     <>
-      {!router.pathname.includes("/validators") ? (
+      {!router.pathname.includes("/validators") && router.pathname !== "/team" ? (
         <div className={`aos-init aos-animate ${router.pathname}`}>
           <div className="sectionContainer py-[80px] md:py-[40px]">
             <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[50px]">

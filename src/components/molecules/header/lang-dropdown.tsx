@@ -57,7 +57,7 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
       >
         <button
           className={` [.is-sticky_&]:text-[#D5D5D5] flex items-center ${
-            router.pathname === "/" || router.pathname === "/pstake"
+            router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team"
               ? "text-[#D5D5D5] hover:!bg-[#C732381A] hover:text-light-high"
               : ""
           } ${
@@ -76,7 +76,7 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
           {activeLang?.code}
           <Icon
             viewClass={` ${
-              (router.pathname === "/" || router.pathname === "/pstake")
+              (router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team")
                 ? "fill-[#fff] "
                 : "fill-[#181818]  [.is-sticky_&]:fill-[#fff]"
             } dropDownIcon !w-[13px] ml-[6px]  group-hover:fill-[#C73238] rotate-90`}
