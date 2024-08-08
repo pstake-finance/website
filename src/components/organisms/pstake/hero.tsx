@@ -24,14 +24,14 @@ const HeroSection = () => {
           <span className={"text-btcPrimary"}>{t("PSTAKE_HERO_TITLE_THREE")}</span>
         </h1>
         <h6
-          className="max-w-[840px] mx-auto mt-[18px] mb-[40px] font-light text-[24px]
+          className="max-w-[846px] mx-auto mt-[18px] mb-[40px] font-light text-[24px]
         text-[#ADADAD] leading-[36px] lg:text-[18px] lg:leading-normal "
         >
           {t("PSTAKE_HERO_CONTENT")}
         </h6>
         <div className={"flex items-center gap-6 md:flex-col justify-center"}>
           <ButtonLink
-            className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[240px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
+            className={`!rounded-[8px] !bg-[#F6931A4D] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton py-3 md:text-base !w-[240px] font-semibold md:!h-[42px] !h-[48px] md:!w-[100%]`}
             variant={"outline"}
             href={"https://app.btc-testnet.pstake.finance/"}
             scale="lg"
@@ -43,7 +43,7 @@ const HeroSection = () => {
               </span>
           </ButtonLink>
           <ButtonLink
-            className={`!rounded-[8px] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[240px] font-semibold !h-[48px] md:!w-[100%] group`}
+            className={`!rounded-[8px] bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[240px] font-semibold !h-[48px] md:!w-[100%] group`}
             variant={"custom"}
             href={PSTAKE_APP_URL}
             scale="lg"
@@ -64,7 +64,7 @@ const HeroSection = () => {
           </div>
           <div className={""}>
             <div
-              className="max-w-[1000px] mx-auto px-6 py-4 bg-[#FAFAFA0D] border-[0.3px] border-[#6F6F6F] rounded-[24px] flex gap-[76px] items-center justify-between
+              className="max-w-[1000px] mx-auto px-6 backdrop-blur-sm py-4 bg-[#FAFAFA0D] border-[0.3px] border-[#6F6F6F] rounded-[24px] flex gap-[76px] items-center justify-between
               lg:flex-col lg:justify-start lg:items-start lg:gap-[30px]">
               <div className={"flex-1"}>
                 <p

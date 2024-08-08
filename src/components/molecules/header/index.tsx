@@ -461,19 +461,19 @@ const Header = () => {
                     )}
 
                     <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                      {router.pathname !== "/" ? (
-                        router.pathname === "/btc" ? (
+                      {router.pathname === "/"  ||
+                        router.pathname === "/btc" || router.pathname === "/pstake" ? (
                           <ButtonLink
-                            className={`!rounded-[8px] [.is-sticky_&]:!text-light-high !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#181818] !w-[190px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
-                            variant={"solid"}
-                            href={appURL}
+                            className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
+                            variant={"outline"}
+                            href={'https://app.btc.pstake.finance/'}
                             scale="lg"
                             target={"_blank"}
                             isDisabled={false}
                           >
-                            <span className="nav-link pophover tooltip-multiline app-btn">
-                              {t("LIQUID_STAKE_NOW")}
-                            </span>
+                          <span className="nav-link pophover tooltip-multiline app-btn">
+                            {t("STAKE_BITCOIN_NOW")}
+                          </span>
                           </ButtonLink>
                         ) : (
                           <ButtonLink
@@ -503,21 +503,7 @@ const Header = () => {
                               {t("LIQUID_STAKE_NOW")}
                             </span>
                           </ButtonLink>
-                        )
-                      ) : (
-                        <ButtonLink
-                          className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
-                          variant={"outline"}
-                          href={'https://app.btc.pstake.finance/'}
-                          scale="lg"
-                          target={"_blank"}
-                          isDisabled={false}
-                        >
-                          <span className="nav-link pophover tooltip-multiline app-btn">
-                            {t("STAKE_BITCOIN_NOW")}
-                          </span>
-                        </ButtonLink>
-                      )}
+                        )}
                     </li>
                     <li className="nav-item nav__menu-item lg:hidden">
                       <LangDropdown

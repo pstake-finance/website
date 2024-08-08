@@ -57,7 +57,7 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
       >
         <button
           className={` [.is-sticky_&]:text-[#D5D5D5] flex items-center ${
-            router.pathname === "/"
+            router.pathname === "/" || router.pathname === "/pstake"
               ? "text-[#D5D5D5] hover:!bg-[#C732381A] hover:text-light-high"
               : ""
           } ${

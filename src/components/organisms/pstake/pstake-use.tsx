@@ -27,7 +27,7 @@ const Uses = () => {
   ];
   return (
     <div className="bg-[#141414]">
-      <div className="max-w-[1272px] mx-auto pt-[60px] pb-[100px]  md:mx-4 md:py-[35px]">
+      <div className="max-w-[1220px] mx-auto pt-[60px] pb-[100px]  md:mx-4 md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1060px] mx-auto">
           {t("PSTAKE_WHY_USED_TITLE")}
         </h3>
@@ -63,7 +63,7 @@ const Uses = () => {
                   </div>
                   <div>
                     <ButtonLink
-                      className={`!rounded-[8px] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[298px] font-semibold !h-[48px] md:!w-[100%] group`}
+                      className={`!rounded-[8px] bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[298px] font-semibold !h-[48px] md:!w-[100%] group`}
                       variant={"custom"}
                       href={item.buttonLink}
                       scale="lg"

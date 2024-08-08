@@ -161,32 +161,32 @@ const list = [
 const bridges = [
   {
     icon:"jumpet",
-    link:"",
+    link:"https://jumper.exchange/?fromChain=1&fromToken=0x0000000000000000000000000000000000000000&toChain=1&toToken=0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006",
     viewBox:"0 0 131 29"
   },
   {
     icon:"squid",
-    link:"",
+    link:"https://app.squidrouter.com/",
     viewBox:"0 0 69 39"
   },
   {
     icon:"kyberswap",
-    link:"",
+    link:"https://kyberswap.com/swap/optimism/eth-to-0x023550adde4fa2f90d63a41d9282bee0294c04cd",
     viewBox:"0 0 107 36"
   },
   {
     icon:"matcha",
-    link:"",
+    link:"https://matcha.xyz/tokens/ethereum/eth?buyChain=1&buyAddress=0xfb5c6815ca3ac72ce9f5006869ae67f18bf77006",
     viewBox:"0 0 116 27"
   },
   {
     icon:"1inch",
-    link:"",
+    link:"https://app.1inch.io/#/1/simple/swap/ETH/PSTAKE",
     viewBox:"0 0 95 45"
   },
    {
     icon:"skip",
-     link:"",
+     link:"https://go.skip.build/",
     viewBox:"0 0 114 34"
   }
 ]
