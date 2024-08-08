@@ -59,7 +59,7 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
     >
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
-          (router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team")
+          (router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team" || router.pathname === "/roadmap")
             ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
             : ""
         } ${

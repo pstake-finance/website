@@ -323,7 +323,7 @@ const Header = () => {
               router.pathname !== "/eth/testnet" &&
               router.pathname !== "/btc" && 
             router.pathname !== "/pstake" &&
-              router.pathname !== "/team"
+              router.pathname !== "/team" && router.pathname !== "/roadmap"
                 ? "bg-white-emphasis"
                 : ""
             } ${router.pathname.split("/")[1]}
@@ -331,7 +331,7 @@ const Header = () => {
             id="nav-bar"
           >
             <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
-              {router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team" ? (
+              {router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team" || router.pathname === "/roadmap" ? (
                 <LinkWithLocale
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:160px] w-[200px] h-[40px] bg-no-repeat bg-center"
@@ -463,7 +463,7 @@ const Header = () => {
 
                     <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
                       {router.pathname === "/"  ||
-                        router.pathname === "/btc" || router.pathname === "/pstake" ||  router.pathname === "/team" ? (
+                        router.pathname === "/btc" || router.pathname === "/pstake" ||  router.pathname === "/team" || router.pathname === "/roadmap" ? (
                           <ButtonLink
                             className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
                             variant={"outline"}

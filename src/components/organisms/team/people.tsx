@@ -18,7 +18,7 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/Tushar307",
+          link: "https://x.com/Tushar307",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
@@ -40,14 +40,14 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/dneorej",
+          link: "https://x.com/PandeyMikhil",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
         },
         {
           name: "Linkedin",
-          link: "https://www.linkedin.com/in/jeroendevelter/",
+          link: "https://www.linkedin.com/in/mikhilpandey/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2"
@@ -62,14 +62,14 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/loyzhihao",
+          link: "https://x.com/Bartjh1107",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
         },
         {
           name: "Linkedin",
-          link: "https://www.linkedin.com/in/loyzhihao/",
+          link: "https://www.linkedin.com/in/bartvandervoort/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2"
@@ -84,14 +84,14 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/Sukriti2108",
+          link: "https://x.com/m4rcpt",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
         },
         {
           name: "Linkedin",
-          link: "https://www.linkedin.com/in/sukriti-taneja-b624731a0/",
+          link: "https://www.linkedin.com/in/marcpt/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2"
@@ -106,14 +106,14 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/betterclever",
+          link: "https://x.com/VandkarAditya",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
         },
         {
           name: "Linkedin",
-          link: "https://www.linkedin.com/in/betterclever/",
+          link: "https://www.linkedin.com/in/aditya-vandkar-9a9675177/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2"
@@ -128,14 +128,14 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/betterclever",
+          link: "https://x.com/LNarayanIyer_",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
         },
         {
           name: "Linkedin",
-          link: "https://www.linkedin.com/in/betterclever/",
+          link: "https://www.linkedin.com/in/lnarayaniyer/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2"
@@ -150,14 +150,14 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/betterclever",
+          link: "https://x.com/puneet_m_",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
         },
         {
           name: "Linkedin",
-          link: "https://www.linkedin.com/in/betterclever/",
+          link: "https://www.linkedin.com/in/puneet-mahajan-/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2"
@@ -172,14 +172,14 @@ const People = () => {
       socialLinks: [
         {
           name: "Twitter",
-          link: "https://twitter.com/betterclever",
+          link: "https://x.com/rashi_web3",
           icon: "team-x",
           color: "#141414",
           iconBg: "#C9C9C9"
         },
         {
           name: "Linkedin",
-          link: "https://www.linkedin.com/in/betterclever/",
+          link: "https://www.linkedin.com/in/rashi-mittal-/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2"
@@ -192,7 +192,6 @@ const People = () => {
     <div className="bg-[#141414] aos-init aos-animate mb-[60px]"  data-aos="zoom-in-right">
       <div className="max-w-[1220px] mx-auto  md:mx-4 pt-[170px] pb-[30px] lg:pb-[40px]">
         <h3 className="text-[40px] leading-[60px] text-light-high font-bold mb-3 md:mb-4 text-center">
-          Meet the Team
           {t('TEAM_PAGE_TITLE')}
         </h3>
         <p className="text-[20px] leading-[25px] text-[#ADADAD] mb-[60px] md:mb-[20px[ text-center max-w-[620px] mx-auto">
