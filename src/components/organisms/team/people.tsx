@@ -1,4 +1,4 @@
-import TeamMemberCard, { TeamMemberCardInterface } from "./team-card";
+import { TeamMemberCardInterface } from "./team-card";
 import React from "react";
 import Icon from "../../molecules/Icon";
 import { useTranslation } from "next-export-i18n";
