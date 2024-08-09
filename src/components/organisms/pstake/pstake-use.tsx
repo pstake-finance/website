@@ -14,20 +14,20 @@ const Uses = () => {
       content: t("PSTAKE_WHY_USED1_CONTENT"),
       sub_content: t("PSTAKE_WHY_USED1_CONTENT2"),
       buttonText: t("PARTICIPATE"),
-      buttonLink:"https://forum.pstake.finance/"
+      buttonLink: "https://forum.pstake.finance/",
     },
     {
       title: t("PSTAKE_WHY_USED2_TITLE"),
       image: "/images/btc_incentive.svg",
       content: t("PSTAKE_WHY_USED2_CONTENT"),
       sub_content: t("PSTAKE_WHY_USED2_CONTENT2"),
-      buttonText:t("STAKE_BTC"),
-      buttonLink:"https://app.btc.pstake.finance/"
+      buttonText: t("STAKE_BTC"),
+      buttonLink: "https://app.btc.pstake.finance/",
     },
   ];
   return (
     <div className="bg-[#141414]">
-      <div className="max-w-[1220px] mx-auto pt-[60px] pb-[100px]  md:mx-4 md:py-[35px]">
+      <div className="max-w-[1280px] mx-auto pt-[60px] pb-[100px] px-[30px] md:px-[10px] md:mx-4 md:py-[35px]">
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1060px] mx-auto">
           {t("PSTAKE_WHY_USED_TITLE")}
         </h3>
@@ -54,7 +54,7 @@ const Uses = () => {
                     <p className="leading-[40px] text-[26px] text-light-high font-semibold mb-3 md:text-lg">
                       {item.title}
                     </p>
-                    <p className="text-[18px] leading-[27px] text-[#ADADAD] mb-6">
+                    <p className="text-[18px] leading-[27px] text-[#ADADAD] mb-6 -lg:h-[110px]">
                       {item.content}
                     </p>
                     <p className="font-bold leading-[30px] text-[20px] text-light-full mb-6">
@@ -71,7 +71,7 @@ const Uses = () => {
                       isDisabled={false}
                     >
                       <span className="nav-link pophover tooltip-multiline app-btn">
-                     {item.buttonText}
+                        {item.buttonText}
                       </span>
                     </ButtonLink>
                   </div>

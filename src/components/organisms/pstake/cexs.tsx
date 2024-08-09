@@ -6,6 +6,66 @@ const Cexs = () => {
   const { t } = useTranslation("common");
   const cexList = [
     {
+      logoUrl: "/images/cexs/bingx.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/bitget.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/bitmart.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/bybit.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/coinex.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/coinw.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/crypto.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/hotcoin.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/htx.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/kraken.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/kucoin.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/okx.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/tapbit.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/gate.svg",
+      link: "/",
+    },
+    {
+      logoUrl: "/images/cexs/uniswap.svg",
+      link: "https://app.uniswap.org/explore/tokens/ethereum/0xfb5c6815ca3ac72ce9f5006869ae67f18bf77006",
+    },
+    {
       logoUrl: "/images/cexs/thruster.svg",
       link: "https://app.thruster.finance/",
     },
@@ -22,6 +82,10 @@ const Cexs = () => {
       link: "https://pancakeswap.finance/info/v3/pairs/0xb9f47c14b945915badb1217af781aa7de6f6569f",
     },
     {
+      logoUrl: "/images/cexs/fenix.svg",
+      link: "https://www.fenixfinance.io/liquidity?query=PSTAKE",
+    },
+    {
       logoUrl: "/images/cexs/thena.svg",
       link: "https://thena.fi/pools/0x67e51f1de32318f3a27265287ed766839a62cf13",
     },
@@ -30,16 +94,8 @@ const Cexs = () => {
       link: "https://app.osmosis.zone/assets/PSTAKE",
     },
     {
-      logoUrl: "/images/cexs/fenix.svg",
-      link: "https://www.fenixfinance.io/liquidity?query=PSTAKE",
-    },
-    {
       logoUrl: "/images/cexs/persistence.svg",
       link: "https://app.persistence.one/pools/persistence1g3acw7aumaj3r348cqn4kazrehlmn822w9p46sqwztnke27h3lyshald7p",
-    },
-    {
-      logoUrl: "/images/cexs/uniswap.svg",
-      link: "https://app.uniswap.org/explore/tokens/ethereum/0xfb5c6815ca3ac72ce9f5006869ae67f18bf77006",
     },
   ];
 
@@ -51,13 +107,10 @@ const Cexs = () => {
         </h3>
         <div className="">
           <Marquee className={"flex mb-4"}>
-            {cexList.map((item, index) => (
-              <a
-                href={item.link}
-                target={"_blank"}
-                rel="noopener noreferrer"
+            {cexList.slice(0, 7).map((item, index) => (
+              <p
                 className={
-                  "cursor-pointer mx-3 rounded-[32px] bg-[#202020] flex items-center justify-center w-[207px] h-[70px]"
+                  "mx-3 rounded-[32px] bg-[#202020] flex items-center justify-center w-[207px] h-[70px]"
                 }
                 key={index}
               >
@@ -67,7 +120,41 @@ const Cexs = () => {
                   src={item.logoUrl}
                   alt={item.logoUrl}
                 />
-              </a>
+              </p>
+            ))}
+          </Marquee>
+          <Marquee className={"flex gap-4 mb-4"} direction={"right"}>
+            {cexList.slice(7, 15).map((item, index) => (
+              <p
+                className={
+                  "mx-3 rounded-[32px] bg-[#202020] flex items-center justify-center w-[207px] h-[70px]"
+                }
+                key={index}
+              >
+                <img
+                  key={index}
+                  className={"w-max"}
+                  src={item.logoUrl}
+                  alt={item.logoUrl}
+                />
+              </p>
+            ))}
+          </Marquee>
+          <Marquee className={"flex gap-4"} direction={"left"}>
+            {cexList.slice(15, cexList.length).map((item, index) => (
+              <p
+                className={
+                  "mx-3 rounded-[32px] bg-[#202020] flex items-center justify-center w-[207px] h-[70px]"
+                }
+                key={index}
+              >
+                <img
+                  key={index}
+                  className={"w-max"}
+                  src={item.logoUrl}
+                  alt={item.logoUrl}
+                />
+              </p>
             ))}
           </Marquee>
         </div>
