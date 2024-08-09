@@ -254,15 +254,19 @@ const EveryWhere = () => {
                     href={item.data.link}
                     className={`px-1 rounded-[8px] cursor-pointer bg-[#FFFFFF0D]
                      hover:border hover:border-[#EE972C] w-[254px] h-[50px] 
-                     mx-2 flex flex-col justify-center items-center group ${
+                     mx-2 flex justify-center items-center group ${
                        item.data.link === "/" ? "pointer-events-none" : ""
                      }`}
                     target="_blank"
                   >
                     <Icon
-                      viewClass={` fill-[#a0a0a0] group-hover:fill-[#FFFFFF] ${item.data.class} !h-[30px]`}
+                      viewClass={` fill-[#a0a0a0] group-hover:fill-[#FFFFFF] pr-2 ${item.data.class} !h-[30px]`}
                       icon={item.data.icon}
                       viewBox={item.data.viewBox}
+                    />
+                    <Icon
+                      viewClass="icon !w-[16px] stroke-trasparent fill-transparent group-hover:stroke-[#EE972C]"
+                      icon={"right-arrow2"}
                     />
                   </Link>
                 </div>
