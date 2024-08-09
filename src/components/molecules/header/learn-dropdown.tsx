@@ -3,8 +3,7 @@ import "rc-dropdown/assets/index.css";
 import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-export-i18n";
-import Link from "next/link";
+import { useTranslation, LinkWithLocale } from "next-export-i18n";
 
 interface Props {
   learnList: any[];
@@ -19,7 +18,7 @@ export const learnDropDownContent = (learnList: any[]) => {
       }
     >
       {learnList.map((item, index) => (
-        <Link
+        <LinkWithLocale
           className="mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A]"
           href={item.optionLink}
           key={index}
@@ -67,7 +66,7 @@ export const learnDropDownContent = (learnList: any[]) => {
               {item.subText}
             </span>
           </span>
-        </Link>
+        </LinkWithLocale>
       ))}
     </div>
   );
