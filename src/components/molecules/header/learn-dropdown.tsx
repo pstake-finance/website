@@ -4,6 +4,7 @@ import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-export-i18n";
+import Link from "next/link";
 
 interface Props {
   learnList: any[];
@@ -18,11 +19,11 @@ export const learnDropDownContent = (learnList: any[]) => {
       }
     >
       {learnList.map((item, index) => (
-        <a
+        <Link
           className="mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A]"
           href={item.optionLink}
           key={index}
-          target={"_blank"}
+          target={item.optionLink.includes("http") ? "_blank" : "_self"}
           rel="noreferrer"
         >
           <span
@@ -66,7 +67,7 @@ export const learnDropDownContent = (learnList: any[]) => {
               {item.subText}
             </span>
           </span>
-        </a>
+        </Link>
       ))}
     </div>
   );
@@ -84,7 +85,10 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
       >
         <button
           className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
-            (router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team" || router.pathname === "/roadmap")
+            router.pathname === "/" ||
+            router.pathname === "/pstake" ||
+            router.pathname === "/team" ||
+            router.pathname === "/roadmap"
               ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
               : ""
           } ${
