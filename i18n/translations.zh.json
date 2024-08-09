@@ -206,8 +206,9 @@
     "TERMS_OF_USE": "Terms of Use",
     "PRIVACY_POLiCY": "Privacy Policy",
 
-    "INFO_MODAL_TITLE": "pSTAKE Bitcoin Liquid Staking v1 on Babylon is Now Live with a 50 BTC deposit cap!",
-    "INFO_MODAL_CONTENT": "Deposit BTC with pSTAKE now to get boosted pSats when the SatDrop Campaign launches in August 2024 and any rewards from Babylon directly.",
+
+    "INFO_MODAL_TITLE": "Babylon 上的 pSTAKE Bitcoin Liquid Stake v1 现已上线，存款上限为 50 BTC！",
+    "INFO_MODAL_CONTENT": "立即将 BTC 存入 pSTAKE，即可在 2024 年 8 月 SatDrop 活动启动时获得提升的 pSats 以及直接来自 Babylon 的任何奖励。",
     "MARKET_CAP": "市值",
     "INFLATION": "通货膨胀",
     "UNLOCKED_VESTED": "解锁/既得",
