@@ -4,10 +4,11 @@ import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
 import { PSTAKE_APP_URL } from "../../../utils/config";
 import Investors from "../homepage/Investors";
+import { numberFormat } from "../../../utils/helpers";
 
 const HeroSection = () => {
   const { t } = useTranslation();
-  const { cosmosData } = useApp();
+  const { marketCap } = useApp();
 
   return (
     <div className="text-center aos-init aos-animate">
@@ -74,7 +75,7 @@ const HeroSection = () => {
                     "text-[40px] leading-[50px] lg:text-[30px] lg:leading-normal font-semibold text-light-full lg:text-left"
                   }
                 >
-                  $50M
+                  ${Number(marketCap) > 0 ? numberFormat(marketCap, 2) : 0}
                 </p>
                 <p
                   className={

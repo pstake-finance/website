@@ -66,6 +66,7 @@ export const SHADE_URL =
   "https://na36v10ce3.execute-api.us-east-1.amazonaws.com/API-mainnet-STAGE/shadeswap/pairs";
 export const SHADE_LCD = "https://lcd.secret.express";
 import { SecretNetworkClient } from "secretjs";
+import axios from "axios";
 
 const initialLiquidity = { [TVL]: 0 };
 
@@ -79,7 +80,7 @@ export const fetchTokenPrices = async () => {
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
-    BTC:0,
+    BTC: 0,
   };
   try {
     const response = await fetch(`/api/prices`);
@@ -528,11 +529,15 @@ export const getBnbTVL = async () => {
 
 export const getBTCTVL = async () => {
   try {
-    const btcEndpoint = 'https://blockchain.info/rawaddr/bc1qajcp935tuvqakut95f0sc9qm09hxjj6egexl9d'
-    const res:any = await Axios.get(btcEndpoint);
+    const btcEndpoint =
+      "https://blockchain.info/rawaddr/bc1qajcp935tuvqakut95f0sc9qm09hxjj6egexl9d";
+    const res: any = await Axios.get(btcEndpoint);
     if (res && res.data) {
-      console.log(Number((res.data.final_balance/1e8).toFixed(2)), "total-btc")
-      return Number((res.data.final_balance/1e8).toFixed(2));
+      console.log(
+        Number((res.data.final_balance / 1e8).toFixed(2)),
+        "total-btc"
+      );
+      return Number((res.data.final_balance / 1e8).toFixed(2));
     }
     return 0;
   } catch (e) {
@@ -580,5 +585,19 @@ export const getAvatar = async (identity: string) => {
     return ""; // return null icon if url not exists
   } catch (e) {
     return "";
+  }
+};
+
+export const getMarketCap = async () => {
+  try {
+    const MarketCap_API =
+      "https://api.coingecko.com/api/v3/coins/pstake-finance";
+    const res = await axios.get(MarketCap_API);
+    if (res && res.data) {
+      return Number(res.data.market_data?.market_cap.usd);
+    }
+    return 0;
+  } catch (e) {
+    return 0;
   }
 };

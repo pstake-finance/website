@@ -44,7 +44,7 @@ export interface AppState {
     XPRT: number;
     BLD: number;
     HUAHUA: number;
-    BTC:number
+    BTC: number;
   };
   validatorsList: {
     uatom: number;
@@ -55,6 +55,7 @@ export interface AppState {
     ubld: number;
     uxprt: number;
   };
+  marketCap: number;
 }
 
 export interface AppProviderProps {
