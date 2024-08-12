@@ -167,7 +167,7 @@ const Header = () => {
     },
     {
       optionName: t("NAV_LEARN_5_TITLE"),
-      subText: t("NAV_LEARN_5_TITLE"),
+      subText: t("NAV_LEARN_5_SUB_TITLE"),
       icon: "roadmap",
       optionLink: "/roadmap",
       iconType: "stroke",
