@@ -14,11 +14,7 @@ const Osmo = () => {
       <ScrollToTop />
       <Banner />
       <Features />
-      {/*<Comparison />*/}
       <LiquidStakingSteps />
-      {/*<EcosystemSlider />*/}
-      {/*<Guides />*/}
-      {/*<Validators />*/}
       <Audited />
       <FeaturedBlogs />
       <Faq />

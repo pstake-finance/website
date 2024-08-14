@@ -29,12 +29,11 @@ import {
   STK_ODMO_TWITTER_URL,
   OSMO_URL,
   STK_DYDX_FAQ_URL,
-  DYDX, BLAST_BRIDGE_URL, OPTIMISM_BRIDGE_URL,
+  DYDX,
+  BLAST_BRIDGE_URL,
+  OPTIMISM_BRIDGE_URL,
 } from "../../../utils/config";
-import {
-  useTranslation,
-  LinkWithLocale,
-} from "next-export-i18n";
+import { useTranslation, LinkWithLocale } from "next-export-i18n";
 import Icon from "../Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
@@ -127,7 +126,6 @@ const Header = () => {
     setBanner(false);
   };
 
-
   let appURL = "https://app.pstake.finance/";
 
   if (router.pathname === "/") {
@@ -150,7 +148,8 @@ const Header = () => {
       subText: t("NAV_LEARN_1_SUB_TITLE"),
       icon: "btc-icon",
       iconType: "fill",
-      optionLink: "https://blog.pstake.finance/category/bitcoin-liquid-staking/",
+      optionLink:
+        "https://blog.pstake.finance/category/bitcoin-liquid-staking/",
     },
     {
       optionName: t("NAV_LEARN_2_TITLE"),
@@ -164,6 +163,13 @@ const Header = () => {
       subText: t("NAV_LEARN_3_SUB_TITLE"),
       icon: "guides",
       optionLink: "https://blog.pstake.finance/category/guides/",
+      iconType: "stroke",
+    },
+    {
+      optionName: t("NAV_LEARN_5_TITLE"),
+      subText: t("NAV_LEARN_5_SUB_TITLE"),
+      icon: "roadmap",
+      optionLink: "/roadmap",
       iconType: "stroke",
     },
     {
@@ -201,6 +207,20 @@ const Header = () => {
   ];
 
   const aboutList = [
+    {
+      optionName: t("NAV_ABOUT_6_TITLE"),
+      subText: t("NAV_ABOUT_6_SUB_TITLE"),
+      icon: "team",
+      iconType: "stroke",
+      optionLink: "/team",
+    },
+    {
+      optionName: t("NAV_ABOUT_7_TITLE"),
+      subText: t("NAV_ABOUT_7_SUB_TITLE"),
+      icon: "pstake",
+      iconType: "stroke",
+      optionLink: "/pstake",
+    },
     {
       optionName: t("NAV_ABOUT_1_TITLE"),
       subText: t("NAV_ABOUT_1_SUB_TITLE"),
@@ -276,7 +296,7 @@ const Header = () => {
       code: "cn",
       name: "CHINESE",
     },
-   {
+    {
       imgUrl: "/images/lang/kr.png",
       code: "ko",
       name: "KOREAN",
@@ -292,7 +312,6 @@ const Header = () => {
   const fetchXprtValidatorsData = useAppStore(
     (state) => state.fetchXprtValidatorsData
   );
-
 
   // let keys = [];
   // for (const key in dummy) {
@@ -321,7 +340,10 @@ const Header = () => {
               router.pathname !== "/bnb" &&
               router.pathname !== "/eth" &&
               router.pathname !== "/eth/testnet" &&
-              router.pathname !== "/btc"
+              router.pathname !== "/btc" &&
+              router.pathname !== "/pstake" &&
+              router.pathname !== "/team" &&
+              router.pathname !== "/roadmap"
                 ? "bg-white-emphasis"
                 : ""
             } ${router.pathname.split("/")[1]}
@@ -329,7 +351,10 @@ const Header = () => {
             id="nav-bar"
           >
             <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
-              {router.pathname === "/" ? (
+              {router.pathname === "/" ||
+              router.pathname === "/pstake" ||
+              router.pathname === "/team" ||
+              router.pathname === "/roadmap" ? (
                 <LinkWithLocale
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:160px] w-[200px] h-[40px] bg-no-repeat bg-center"
@@ -460,60 +485,49 @@ const Header = () => {
                     )}
 
                     <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                      {router.pathname !== "/" ? (
-                        router.pathname === "/btc" ? (
-                          <ButtonLink
-                            className={`!rounded-[8px] [.is-sticky_&]:!text-light-high !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#181818] !w-[190px] !h-[44px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[12px] !font-semibold`}
-                            variant={"solid"}
-                            href={appURL}
-                            scale="lg"
-                            target={"_blank"}
-                            isDisabled={false}
-                          >
-                            <span className="nav-link pophover tooltip-multiline app-btn">
-                              {t("LIQUID_STAKE_NOW")}
-                            </span>
-                          </ButtonLink>
-                        ) : (
-                          <ButtonLink
-                            className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
-                            variant={"custom"}
-                            href={appURL}
-                            scale="lg"
-                            target={"_blank"}
-                            isDisabled={false}
-                            customButtonClass={`${
-                              router.pathname === "/bnb"
-                                ? "bg-bnbPrimary"
-                                : router.pathname === "/atom"
-                                ? "bg-atomPrimary"
-                                : router.pathname === "/osmo"
-                                ? "bg-osmoPrimaryButton text-light-high"
-                                : router.pathname === "/dydx"
-                                ? "bg-dydxPrimary text-light-high"
-                                : "bg-black-800 text-light-high"
-                            } ${
-                              router.pathname === "/bnb"
-                                ? "[.is-sticky_&]:text-dark-high"
-                                : router.pathname === "/"
-                            } text-[12px]`}
-                          >
-                            <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                              {t("LIQUID_STAKE_NOW")}
-                            </span>
-                          </ButtonLink>
-                        )
-                      ) : (
+                      {router.pathname === "/" ||
+                      router.pathname === "/btc" ||
+                      router.pathname === "/pstake" ||
+                      router.pathname === "/team" ||
+                      router.pathname === "/roadmap" ? (
                         <ButtonLink
                           className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
                           variant={"outline"}
-                          href={'https://app.btc.pstake.finance/'}
+                          href={"https://app.btc.pstake.finance/"}
                           scale="lg"
                           target={"_blank"}
                           isDisabled={false}
                         >
                           <span className="nav-link pophover tooltip-multiline app-btn">
                             {t("STAKE_BITCOIN_NOW")}
+                          </span>
+                        </ButtonLink>
+                      ) : (
+                        <ButtonLink
+                          className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
+                          variant={"custom"}
+                          href={appURL}
+                          scale="lg"
+                          target={"_blank"}
+                          isDisabled={false}
+                          customButtonClass={`${
+                            router.pathname === "/bnb"
+                              ? "bg-bnbPrimary"
+                              : router.pathname === "/atom"
+                              ? "bg-atomPrimary"
+                              : router.pathname === "/osmo"
+                              ? "bg-osmoPrimaryButton text-light-high"
+                              : router.pathname === "/dydx"
+                              ? "bg-dydxPrimary text-light-high"
+                              : "bg-black-800 text-light-high"
+                          } ${
+                            router.pathname === "/bnb"
+                              ? "[.is-sticky_&]:text-dark-high"
+                              : router.pathname === "/"
+                          } text-[12px]`}
+                        >
+                          <span className="nav-link pophover tooltip-multiline app-btn uppercase">
+                            {t("LIQUID_STAKE_NOW")}
                           </span>
                         </ButtonLink>
                       )}
@@ -533,7 +547,7 @@ const Header = () => {
       ) : (
         <OsmoHeader />
       )}
-      <InfoModal/>
+      <InfoModal />
     </React.Fragment>
   );
 };

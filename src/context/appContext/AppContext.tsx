@@ -8,8 +8,10 @@ import React, {
 import { AppProviderProps, AppState } from "./types";
 import {
   fetchTokenPrices,
-  getBnbTVL, getBTCTVL,
+  getBnbTVL,
+  getBTCTVL,
   getCosmosTVL,
+  getMarketCap,
 } from "../../pages/api/api";
 import { decimalize, decimalizeRaw } from "../../utils/helpers";
 import { getValidatorLength } from "../../pages/api/onChain";
@@ -47,7 +49,7 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
-  btcData:{
+  btcData: {
     apy: 0,
     tvl: 0,
   },
@@ -69,8 +71,9 @@ const AppContext = createContext<AppState>({
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
-    BTC:0,
+    BTC: 0,
   },
+  marketCap: 0,
 });
 
 export const useApp = (): AppState => {
@@ -114,6 +117,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     apy: 0,
     tvl: 0,
   });
+  const [marketCap, setMarketCap] = useState<any>(0);
   const [chainValidators, setChainValidators] = useState<any>({
     uatom: 0,
     uosmo: 0,
@@ -132,7 +136,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     XPRT: 0,
     BLD: 0,
     HUAHUA: 0,
-    BTC: 0
+    BTC: 0,
   });
 
   useEffect(() => {
@@ -160,7 +164,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         getBTCTVL(),
         fetchTokenPrices(),
       ]);
-      console.log(btcTVLResponse, tokenPrices, "tokenPrices-11")
+      console.log(btcTVLResponse, tokenPrices, "tokenPrices-11");
       const list = await getValidatorLength("core-1");
       setChainValidators(list);
       setCosmosData({
@@ -200,6 +204,9 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
         tvl: Number(btcTVLResponse),
       });
       setPrices(tokenPrices);
+      getMarketCap().then((response) => {
+        setMarketCap(response);
+      });
     };
     fetchApy();
   }, []);
@@ -216,6 +223,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     huahuaData,
     btcData,
     validatorsList: chainValidators,
+    marketCap,
   };
 
   return (

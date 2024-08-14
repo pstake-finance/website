@@ -24,6 +24,8 @@ import {
   DOCS_URL,
   PSTAKE_BRIDGE_URL,
   BSC_BRIDGE_URL,
+  BLAST_BRIDGE_URL,
+  OPTIMISM_BRIDGE_URL,
 } from "../../utils/config";
 
 const FooterBottom = () => {
@@ -98,6 +100,11 @@ const FooterBottom = () => {
       text: t("NAV_LEARN_3_TITLE"),
     },
     {
+      externLink: false,
+      link: "/roadmap",
+      text: t("NAV_LEARN_5_TITLE"),
+    },
+    {
       externLink: true,
       link: PSTAKE_AUDITS_URL,
       text: t("SECURITY_AUDITS"),
@@ -105,6 +112,17 @@ const FooterBottom = () => {
   ];
 
   const aboutList = [
+    {
+      externLink: false,
+      link: "/team",
+      text: t("NAV_ABOUT_6_TITLE"),
+    },
+
+    {
+      externLink: false,
+      link: "/pstake",
+      text: t("NAV_ABOUT_7_TITLE"),
+    },
     {
       externLink: true,
       link: "https://blog.pstake.finance/",
@@ -156,6 +174,16 @@ const FooterBottom = () => {
       externLink: true,
       link: BSC_BRIDGE_URL,
       text: t("ETH_TO_BSC_BRIDGE"),
+    },
+    {
+      externLink: true,
+      link: BLAST_BRIDGE_URL,
+      text: t("ETH_TO_BLAST_BRIDGE"),
+    },
+    {
+      externLink: true,
+      link: OPTIMISM_BRIDGE_URL,
+      text: t("ETH_TO_OPTIMISM_BRIDGE"),
     },
   ];
   return (

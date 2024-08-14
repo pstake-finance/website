@@ -3,7 +3,7 @@ import "rc-dropdown/assets/index.css";
 import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-export-i18n";
+import { useTranslation, LinkWithLocale } from "next-export-i18n";
 
 interface Props {
   list: any[];
@@ -18,7 +18,7 @@ export const bridgeDropdownContent = (list: any[]) => {
       }
     >
       {list.map((item, index) => (
-        <a
+        <LinkWithLocale
           className={`mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A] ${
             item.optionLink === "" ? "pointer-events-none" : ""
           }`}
@@ -42,7 +42,7 @@ export const bridgeDropdownContent = (list: any[]) => {
             </span>
             <span className={"text-[#D5D5D5] text-xsm"}>{item.subText}</span>
           </span>
-        </a>
+        </LinkWithLocale>
       ))}
     </div>
   );
@@ -59,7 +59,10 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
     >
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
-          router.pathname === "/"
+          router.pathname === "/" ||
+          router.pathname === "/pstake" ||
+          router.pathname === "/team" ||
+          router.pathname === "/roadmap"
             ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
             : ""
         } ${

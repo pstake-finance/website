@@ -3,7 +3,7 @@ import "rc-dropdown/assets/index.css";
 import React, { PureComponent } from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-export-i18n";
+import { LinkWithLocale, useTranslation } from "next-export-i18n";
 
 interface Props {
   aboutList: any[];
@@ -18,11 +18,11 @@ export const aboutDropdownContent = (aboutList: any[]) => {
       }
     >
       {aboutList.map((item, index) => (
-        <a
+        <LinkWithLocale
           className="mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A]"
           href={item.optionLink}
           key={index}
-          target={"_blank"}
+          target={item.optionLink.includes("http") ? "_blank" : "_self"}
           rel="noreferrer"
         >
           <span
@@ -66,7 +66,7 @@ export const aboutDropdownContent = (aboutList: any[]) => {
               {item.subText}
             </span>
           </span>
-        </a>
+        </LinkWithLocale>
       ))}
     </div>
   );
@@ -84,7 +84,10 @@ const AboutDropdown = ({ aboutList, isTablet }: Props) => {
       >
         <button
           className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
-            router.pathname === "/"
+            router.pathname === "/" ||
+            router.pathname === "/pstake" ||
+            router.pathname === "/team" ||
+            router.pathname === "/roadmap"
               ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
               : ""
           } ${
