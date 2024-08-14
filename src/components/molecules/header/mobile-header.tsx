@@ -41,21 +41,25 @@ const MobileHeader = ({
         items={[
           {
             title: "About",
-            content: aboutDropdownContent(aboutList),
+            content: aboutDropdownContent(aboutList, closeMenu, "mobile"),
             headerClass: "bg-transparent !mb-0 ",
             contentClass: "!px-0",
             hideIcon: true,
           },
           {
             title: "Learn",
-            content: learnDropDownContent(learnList),
+            content: learnDropDownContent(learnList, closeMenu, "mobile"),
             headerClass: "bg-transparent !mb-0",
             contentClass: "!px-0",
             hideIcon: true,
           },
           {
             title: "Governance",
-            content: governanceDropdownContent(governanceList),
+            content: governanceDropdownContent(
+              governanceList,
+              closeMenu,
+              "mobile"
+            ),
             headerClass: "bg-transparent !mb-0",
             contentClass: "!px-0",
             hideIcon: true,

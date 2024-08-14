@@ -10,7 +10,11 @@ interface Props {
   isTablet: boolean;
 }
 
-export const aboutDropdownContent = (aboutList: any[]) => {
+export const aboutDropdownContent = (
+  aboutList: any[],
+  closeMenu?: any,
+  type?: string
+) => {
   return (
     <div
       className={
@@ -21,6 +25,7 @@ export const aboutDropdownContent = (aboutList: any[]) => {
         <LinkWithLocale
           className="mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A]"
           href={item.optionLink}
+          onClick={type === "mobile" ? closeMenu : () => {}}
           key={index}
           target={item.optionLink.includes("http") ? "_blank" : "_self"}
           rel="noreferrer"

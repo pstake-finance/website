@@ -13,10 +13,6 @@ const GeofenceNotice = () => {
   const workerUrl = "https://worker-geofence.auditdev.workers.dev/";
   const [country, setCountry] = useState("");
   const [banner, setBanner] = useState(true);
-  const [validatorsInfo] = useAppStore(
-    (state) => [state.validatorsInfo],
-    shallow
-  );
   useEffect(() => {
     fetch(workerUrl)
       .then((response) => response.json())
@@ -89,9 +85,7 @@ const GeofenceNotice = () => {
         {/*/>*/}
         <a
           className="link flex items-center"
-          href={
-            "https://app.btc.pstake.finance/"
-          }
+          href={"https://app.btc.pstake.finance/"}
           target="_blank"
           rel="noopener noreferrer"
         >
