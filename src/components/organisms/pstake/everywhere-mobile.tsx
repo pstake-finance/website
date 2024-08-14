@@ -272,10 +272,6 @@ const EveryWhereMobile = () => {
                       icon={item.data.icon}
                       viewBox={item.data.mobileViewBox}
                     />
-                    <Icon
-                      viewClass="icon !w-[16px] stroke-trasparent fill-transparent group-hover:stroke-[#EE972C]"
-                      icon={"right-arrow2"}
-                    />
                   </Link>
                 </div>
                 {item.data.child.length > 0 ? (
@@ -342,10 +338,6 @@ const EveryWhereMobile = () => {
                             >
                               {networkItem.poolComposition}
                             </p>
-                            <Icon
-                              viewClass="icon !w-[8px] stroke-trasparent fill-transparent group-hover:stroke-[#EE972C]"
-                              icon={"right-arrow2"}
-                            />
                           </Link>
                         </div>
                       ))
