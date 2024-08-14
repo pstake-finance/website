@@ -183,31 +183,37 @@ const bridges = [
     icon: "jumpet",
     link: "https://jumper.exchange/?fromChain=1&fromToken=0x0000000000000000000000000000000000000000&toChain=1&toToken=0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006",
     viewBox: "0 0 58 22",
+    width: "58px",
   },
   {
     icon: "squid",
     link: "https://app.squidrouter.com/",
     viewBox: "0 0 30 16",
+    width: "30px",
   },
   {
     icon: "kyberswap",
     link: "https://kyberswap.com/swap/optimism/eth-to-0x023550adde4fa2f90d63a41d9282bee0294c04cd",
     viewBox: "0 0 46 16",
+    width: "46px",
   },
   {
     icon: "matcha",
     link: "https://matcha.xyz/tokens/ethereum/eth?buyChain=1&buyAddress=0xfb5c6815ca3ac72ce9f5006869ae67f18bf77006",
     viewBox: "0 0 50 11",
+    width: "50px",
   },
   {
     icon: "1inch",
     link: "https://app.1inch.io/#/1/simple/swap/ETH/PSTAKE",
     viewBox: "0 0 40 20",
+    width: "40px",
   },
   {
     icon: "skip",
     link: "https://go.skip.build/",
     viewBox: "0 0 50 14",
+    width: "50px",
   },
 ];
 const EveryWhereMobile = () => {
@@ -373,7 +379,7 @@ const EveryWhereMobile = () => {
                   }`}
                 >
                   <Icon
-                    viewClass=" fill-[#a0a0a0] group-hover:fill-[#EE972C] !w-[57px] !h-[16px]"
+                    viewClass={` fill-[#a0a0a0] group-hover:fill-[#EE972C] w-[${item.width}] !h-[16px]`}
                     icon={item.icon}
                     viewBox={item.viewBox}
                   />
