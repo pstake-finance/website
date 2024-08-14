@@ -7,19 +7,20 @@ import Uses from "../components/organisms/pstake/pstake-use";
 import TokenSaleBanner from "../components/organisms/pstake/token-sale-banner";
 import Cexs from "../components/organisms/pstake/cexs";
 import Footer from "../components/molecules/Footer";
+import EveryWhereMobile from "../components/organisms/pstake/everywhere-mobile";
 
-const PstakePage:NextPage = () => {
-  return(
+const PstakePage: NextPage = () => {
+  return (
     <>
-      <HeroSection/>
+      <HeroSection />
       <Investors />
-      <Uses/>
-      <TokenSaleBanner/>
-      <Cexs/>
-      <EveryWhere/>
+      <Uses />
+      <TokenSaleBanner />
+      <Cexs />
+      <EveryWhere />
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default PstakePage;

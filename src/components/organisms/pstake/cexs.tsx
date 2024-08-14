@@ -102,7 +102,7 @@ const Cexs = () => {
   return (
     <div className="">
       <div className="container py-[60px] md:py-[35px]">
-        <h3 className="text-[40px] leading-[60px] text-center text-light-high font-bold mb-[44px] md:mb-6 max-w-[1060px] mx-auto">
+        <h3 className="text-[40px] md:text-[24px] leading-[60px] text-center text-light-high font-bold mb-[44px] md:mb-6 max-w-[1060px] mx-auto">
           {t("EXCHANGES")}
         </h3>
         <div className="">
