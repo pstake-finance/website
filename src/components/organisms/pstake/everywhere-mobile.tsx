@@ -220,15 +220,15 @@ const EveryWhereMobile = () => {
   const { t } = useTranslation("common");
   return (
     <div className="bg-[#141414] aos-init aos-animate" data-aos="zoom-in-right">
-      <div className="max-w-[1220px] mx-auto  md:mx-4 py-[65px] md:py-[35px]">
-        <h3 className="text-[40px] md:text-[24px] leading-[60px] text-light-high font-bold mb-3 md:mb-4 text-center">
+      <div className="max-w-[1220px] mx-auto py-[65px] md:py-[35px]">
+        <h3 className="text-[30px]  leading-[50px] text-light-high font-bold mb-1 text-center">
           {t("PSTAKE_EVERYWHERE_TITLE1")} &nbsp;
           {t("PSTAKE_EVERYWHERE_TITLE2")}
         </h3>
-        <p className="text-[20px] leading-[25px] text-[#ADADAD] mb-[60px] md:mb-[20px[ text-center">
+        <p className="text-[12px] leading-[20px] text-[#ADADAD] mb-[30px] text-center">
           {t("PSTAKE_EVERYWHERE_CONTENT")}
         </p>
-        <div className={"mb-8 max-w-[364px] mx-auto"}>
+        <div className={"mb-8 max-w-[388px] mx-auto px-3"}>
           <div
             className={
               "flex flex-col justify-center items-center border-b pb-3 mb-[18px] border-[#292929]"
