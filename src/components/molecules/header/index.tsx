@@ -50,6 +50,7 @@ import LangDropdown from "./lang-dropdown";
 import AboutDropdown from "./about-dropdown";
 import GoveranaceDropdown from "./governanace-dropdown";
 import InfoModal from "../info-modal";
+import { shallow } from "zustand/shallow";
 
 const socialList = [
   {
@@ -309,8 +310,9 @@ const Header = () => {
     router.push(link);
   };
 
-  const fetchXprtValidatorsData = useAppStore(
-    (state) => state.fetchXprtValidatorsData
+  const [fetchXprtValidatorsData, fetchBTCTvl] = useAppStore(
+    (state) => [state.fetchXprtValidatorsData, state.fetchBTCTvl],
+    shallow
   );
 
   // let keys = [];
@@ -321,6 +323,7 @@ const Header = () => {
 
   useEffect(() => {
     fetchXprtValidatorsData("core-1", "Mainnet");
+    fetchBTCTvl();
   }, []);
 
   return (

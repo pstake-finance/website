@@ -2,7 +2,7 @@ import { ChainInfo } from "@keplr-wallet/types";
 interface ExternalChainData {
   [index: string]: ChainInfo[];
 }
-
+export const ENVIRONMENT = process.env.NEXT_PUBLIC_ENV || "testnet";
 export const UNSTAKEDTOKENS = "wTOKENs";
 export const STAKEDTOKENS = "pTOKENs";
 export const STAKEDTOKEN = "pTOKEN";
@@ -11,8 +11,8 @@ export const NETWORK_ID = "0x3";
 export const NETWORK_NAME = "Ropsten";
 export const PSTAKE_BRIDGE_URL = "https://bridge.persistence.one/";
 export const BSC_BRIDGE_URL = "https://cbridge.celer.network/56/1/PSTAKE";
-export const BLAST_BRIDGE_URL = "https://cbridge.celer.network/1/81457/PSTAKE"
-export const OPTIMISM_BRIDGE_URL = "https://superbridge.app/optimism"
+export const BLAST_BRIDGE_URL = "https://cbridge.celer.network/1/81457/PSTAKE";
+export const OPTIMISM_BRIDGE_URL = "https://superbridge.app/optimism";
 export const PSTAKE_MEDIUM_URL =
   "https://blog.pstake.finance/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const PSTAKE_AIRDROP_URL = "https://airdrop.pstake.finance";
@@ -348,6 +348,16 @@ export const TVL = "tvl";
 export const STK_ATOM_MINIMAL_DENOM = "stk/uatom";
 export const APR_BASE_RATE = 18.92;
 export const APR_DEFAULT = 22.14;
+
+export const API_URL =
+  ENVIRONMENT === "devnet"
+    ? "https://devnet-btc-orchestrator.tail78aed.ts.net"
+    : ENVIRONMENT === "mainnet"
+    ? "https://btc-orchestrator-mainnet.tail78aed.ts.net"
+    : "https://testnet-btc-orchestrator.tail78aed.ts.net";
+
+export const BABYLON_RUSH_END_DATE = "2024-08-21T23:59:59";
+
 //native blockchain
 export const CURRENCY = {
   solana: {

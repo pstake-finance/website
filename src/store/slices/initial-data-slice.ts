@@ -1,6 +1,7 @@
 import { StateCreator } from "zustand";
 import { getValidators, getXprtValidators } from "../../pages/api/onChain";
 import osmo from "../../pages/osmo";
+import { getBTCTvl } from "../../pages/api/api";
 
 export interface ValidatorInfo {
   identity: string;
@@ -38,6 +39,7 @@ export interface InitialDataSliceState {
     name: string;
     loader: boolean;
   };
+  btcTvl: number;
 }
 
 export interface InitialDataSliceActions {
@@ -72,6 +74,7 @@ export interface InitialDataSliceActions {
     chainID: string,
     env: string
   ) => Promise<void>;
+  fetchBTCTvl: () => Promise<void>;
   resetInitialDataSlice: () => void;
   setValidatorInfoLoader: (name: string, value: boolean) => void;
 }
@@ -102,6 +105,7 @@ const initialState: InitialDataSliceState = {
     name: "",
     loader: false,
   },
+  btcTvl: 0,
 };
 
 export type InitialDataSlice = InitialDataSliceState & InitialDataSliceActions;
@@ -255,6 +259,12 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
           loader: false,
         },
       },
+    }));
+  },
+  fetchBTCTvl: async () => {
+    const valResponse = await getBTCTvl();
+    set((state) => ({
+      btcTvl: valResponse,
     }));
   },
   fetchHuahuaValidatorsData: async (rpc, chainID, env) => {

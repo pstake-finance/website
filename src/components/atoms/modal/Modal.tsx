@@ -38,7 +38,7 @@ export const Modal = ({
         className={
           `${show ? "open" : "close"} ${
             animate ? "modalAnimate" : ""
-          } modal fade2 fixed top-0 right-0 left-0 w-full h-full z-20 overflow-auto ` +
+          } modal fade2 fixed top-0 right-0 left-0 w-full h-full z-[100] overflow-auto ` +
           ` ${className}`
         }
       >
@@ -53,11 +53,13 @@ export const Modal = ({
               <button
                 type="button"
                 onClick={onClose}
-                className={`absolute top-[30px] right-[30px] h-4 w-4`}
+                className={`absolute top-[24px] right-[24px] h-4 w-4`}
               >
                 <Icon
                   icon="close"
-                  viewClass={" fill-[#A6A6A6] hover:fill-[#ECECEC] w-[14px] h-[14px]"}
+                  viewClass={
+                    " fill-[#A6A6A6] hover:fill-[#ECECEC] w-[14px] h-[14px]"
+                  }
                 />
               </button>
             ) : null}
