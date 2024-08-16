@@ -1,16 +1,20 @@
 import Axios from "axios";
+import axios from "axios";
 import {
   bigNumberToEther,
   decimalize,
   decimalizeRaw,
+  satsToBtc,
   sdkInstance,
   shieldContractsAddress,
   SPEEDY_NODE_URL,
 } from "../../utils/helpers";
 import { ethers } from "ethers";
 import shield from "../../utils/ABIs/shield.json";
-import { CRESCENT_STK_ATOM_DENOM, IBC_DENOM, TVL } from "../../utils/config";
+import { CRESCENT_STK_ATOM_DENOM, TVL } from "../../utils/config";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
+import { SecretNetworkClient } from "secretjs";
+
 const ALPACA_API =
   "https://alpaca-static-api.alpacafinance.org/bsc/v1/landing/summary.json";
 const BEEFY_APY_API = "https://api.beefy.finance/apy";
@@ -65,8 +69,6 @@ export const UMEE_URL =
 export const SHADE_URL =
   "https://na36v10ce3.execute-api.us-east-1.amazonaws.com/API-mainnet-STAGE/shadeswap/pairs";
 export const SHADE_LCD = "https://lcd.secret.express";
-import { SecretNetworkClient } from "secretjs";
-import axios from "axios";
 
 const initialLiquidity = { [TVL]: 0 };
 
@@ -595,6 +597,23 @@ export const getMarketCap = async () => {
     const res = await axios.get(MarketCap_API);
     if (res && res.data) {
       return Number(res.data.market_data?.market_cap.usd);
+    }
+    return 0;
+  } catch (e) {
+    return 0;
+  }
+};
+
+export const getBTCTvl = async () => {
+  try {
+    const response = await fetch(`/api/get-tvl`);
+    const data = await response.json();
+    console.log(data.data.amount, "data-tvl");
+    if (!response.ok) {
+      throw new Error(data.error);
+    }
+    if (data && data.data.amount) {
+      return Number(satsToBtc(data.data.amount, 8));
     }
     return 0;
   } catch (e) {

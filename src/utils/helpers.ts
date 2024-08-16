@@ -1,3 +1,4 @@
+import { Dec, Int } from "@keplr-wallet/unit";
 import _ from "lodash";
 import { Decimal } from "@cosmjs/math";
 import stakepool from "../utils/ABIs/StakePool.json";
@@ -15,6 +16,15 @@ export async function RpcClient(rpc: string) {
   const tendermintClient = await Tendermint34Client.connect(rpc);
   const queryClient = new QueryClient(tendermintClient);
   return createProtobufRpcClient(queryClient);
+}
+
+export function satsToBtc(
+  value: number | string,
+  precision: number = 8
+): string {
+  const result = new Dec(Number(value)).mul(new Dec(10).pow(new Int(-8)));
+
+  return result.toString(precision);
 }
 
 export const stakePoolContractAddress =
