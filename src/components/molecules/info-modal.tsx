@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ButtonLink from "../atoms/buttonLink/ButtonLink";
 import Modal from "../atoms/modal/Modal";
-import Image from "next/image";
-import { useTranslation } from "next-export-i18n";
 import { useAppStore } from "../../store/store";
 import { shallow } from "zustand/shallow";
 import { BABYLON_RUSH_END_DATE } from "../../utils/config";
