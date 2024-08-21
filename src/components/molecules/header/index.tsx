@@ -2,33 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 
 import {
-  PSTAKE_TWITTER_URL,
-  STK_ATOM_TWITTER_URL,
-  SECURITY_AUDIT_URL,
-  GUIDES_FAQ_URL,
-  DOCS_URL,
   PSTAKE_BRIDGE_URL,
   BSC_BRIDGE_URL,
-  STK_FAQ_URL,
-  STK_BNB_DOCS_URL,
-  STK_BNB_SECURITY_AUDIT_URL,
   IMMUNEFI_WEB_URL,
-  STK_BNB_TWITTER_URL,
-  STK_ATOM_SECURITY_AUDIT_URL,
-  STK_ATOM_DOCS_URL,
-  STK_ATOM_FAQ_URL,
   PSTAKE_APP_URL,
   BNB_URL,
   ATOM_URL,
   IMMUNEFI_STK_ATOM_URL,
   ETH_URL,
-  STK_ETH_TWITTER,
-  STK_ETH_DOCS,
-  STK_OSMO_FAQ_URL,
-  STK_OSMO_SECURITY_AUDIT_URL,
-  STK_ODMO_TWITTER_URL,
   OSMO_URL,
-  STK_DYDX_FAQ_URL,
   DYDX,
   BLAST_BRIDGE_URL,
   OPTIMISM_BRIDGE_URL,
@@ -49,7 +31,6 @@ import MobileHeader from "./mobile-header";
 import LangDropdown from "./lang-dropdown";
 import AboutDropdown from "./about-dropdown";
 import GoveranaceDropdown from "./governanace-dropdown";
-import InfoModal from "../info-modal";
 import { shallow } from "zustand/shallow";
 
 const socialList = [
@@ -550,7 +531,6 @@ const Header = () => {
       ) : (
         <OsmoHeader />
       )}
-      <InfoModal />
     </React.Fragment>
   );
 };
