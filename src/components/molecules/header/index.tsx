@@ -23,7 +23,6 @@ import { useWindowSize } from "../../../customHooks/useWindowSize";
 import Button from "../../atoms/button/Button";
 import OsmoHeader from ".././osmo-header";
 import GeofenceNotice from ".././geofence-banner";
-import { useAppStore } from "../../../store/store";
 import LearnDropdown from "./learn-dropdown";
 import CommunityDropdown from "./community-dropdown";
 import BridgeDropdown from "./bridge-dropdown";
@@ -31,7 +30,6 @@ import MobileHeader from "./mobile-header";
 import LangDropdown from "./lang-dropdown";
 import AboutDropdown from "./about-dropdown";
 import GoveranaceDropdown from "./governanace-dropdown";
-import { shallow } from "zustand/shallow";
 
 const socialList = [
   {
@@ -286,26 +284,6 @@ const Header = () => {
   ];
 
   console.log(langList, "langList");
-
-  const handleRouter = (link: string) => {
-    router.push(link);
-  };
-
-  const [fetchXprtValidatorsData, fetchBTCTvl] = useAppStore(
-    (state) => [state.fetchXprtValidatorsData, state.fetchBTCTvl],
-    shallow
-  );
-
-  // let keys = [];
-  // for (const key in dummy) {
-  //   keys.push(dummy[key].replace(',', ''));
-  // }
-  // console.log(keys, "keys")
-
-  useEffect(() => {
-    fetchXprtValidatorsData("core-1", "Mainnet");
-    fetchBTCTvl();
-  }, []);
 
   return (
     <React.Fragment>
