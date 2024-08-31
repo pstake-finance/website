@@ -1,12 +1,9 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
-import { PSTAKE_APP_URL } from "../../../utils/config";
-import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useApp } from "../../../context/appContext/AppContext";
 import { numberFormat } from "../../../utils/helpers";
 import Tooltip from "rc-tooltip";
-import { keys } from "lodash";
 
 const netWorkList = [
   {
@@ -31,10 +28,9 @@ const Banner = () => {
     starsData,
     bldData,
     huahuaData,
-    btcData
+    btcData,
   } = useApp();
 
-  console.log(btcData.tvl , tokenPrices, "data-init")
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414]  bg-cover bg-center bg-no-repeat">
@@ -56,20 +52,22 @@ const Banner = () => {
                 target={"_blank"}
                 isDisabled={false}
               >
-              <span className="nav-link pophover tooltip-multiline app-btn">
-                {t("STAKE_BITCOIN_NOW")}
-              </span>
+                <span className="nav-link pophover tooltip-multiline app-btn">
+                  {t("STAKE_BITCOIN_NOW")}
+                </span>
               </ButtonLink>
               <ButtonLink
                 className={`!rounded-[8px] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[240px] font-semibold !h-[48px] md:!w-[100%] group`}
                 variant={"custom"}
-                href={'https://blog.pstake.finance/category/bitcoin-liquid-staking/'}
+                href={
+                  "https://blog.pstake.finance/category/bitcoin-liquid-staking/"
+                }
                 scale="lg"
                 target={"_blank"}
                 isDisabled={false}
               >
                 <span className="nav-link pophover tooltip-multiline app-btn">
-                {t("LEARN_MORE")}
+                  {t("LEARN_MORE")}
                 </span>
               </ButtonLink>
             </div>
@@ -93,7 +91,7 @@ const Banner = () => {
                     Number(dydxData.tvl * tokenPrices.DYDX) +
                     Number(bldData.tvl * tokenPrices.BLD) +
                     Number(huahuaData.tvl * tokenPrices.HUAHUA) +
-                  Number(btcData.tvl * tokenPrices.BTC),
+                    Number(btcData.tvl * tokenPrices.BTC),
                   3
                 )}
               </p>

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import { useTranslation } from "next-export-i18n";
 import Slider from "react-slick";
+import Image from "next/image";
 
 interface Props {
   bg: string;
@@ -62,7 +63,13 @@ const AssetSlider = ({ bg }: Props) => {
         </h3>
         <Slider {...settings} className={"btc-assets"}>
           {imgList.map((item, index) => (
-            <img src={item.path} alt={"ss"} key={index} />
+            <Image
+              src={item.path}
+              alt={"ss"}
+              key={index}
+              width={24}
+              height={24}
+            />
           ))}
         </Slider>
       </div>

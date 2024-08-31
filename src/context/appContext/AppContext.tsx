@@ -118,6 +118,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     tvl: 0,
   });
   const [marketCap, setMarketCap] = useState<any>(0);
+
   const [chainValidators, setChainValidators] = useState<any>({
     uatom: 0,
     uosmo: 0,
@@ -127,6 +128,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     ubld: 0,
     uxprt: 0,
   });
+
   const [prices, setPrices] = useState<any>({
     BNB: 0,
     ATOM: 0,
@@ -141,69 +143,57 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const fetchApy = async () => {
-      const [
-        cosmosTvlResponse,
-        osmoTvlResponse,
-        dydxTvlResponse,
-        starsTvlResponse,
-        xprtTvlResponse,
-        bldTvlResponse,
-        huahuaTvlResponse,
-        bnbTvlResponse,
-        btcTVLResponse,
-        tokenPrices,
-      ] = await Promise.all([
-        getCosmosTVL("cosmos"),
-        getCosmosTVL("osmo"),
-        getCosmosTVL("dydx"),
-        getCosmosTVL("stars"),
-        getCosmosTVL("persistence"),
-        getCosmosTVL("agoric"),
-        getCosmosTVL("chihuahua"),
-        getBnbTVL(),
-        getBTCTVL(),
-        fetchTokenPrices(),
-      ]);
-      console.log(btcTVLResponse, tokenPrices, "tokenPrices-11");
-      const list = await getValidatorLength("core-1");
-      setChainValidators(list);
-      setCosmosData({
-        apy: 0,
-        tvl: Number(decimalizeRaw(cosmosTvlResponse)),
+      getCosmosTVL("cosmos").then((response) => {
+        setCosmosData({
+          apy: 0,
+          tvl: Number(decimalizeRaw(response)),
+        });
       });
-      setOsmoData({
-        apy: 0,
-        tvl: Number(decimalizeRaw(osmoTvlResponse)),
+      getCosmosTVL("osmo").then((response) => {
+        setOsmoData({
+          apy: 0,
+          tvl: Number(decimalizeRaw(response)),
+        });
       });
-      setDydxData({
-        apy: 0,
-        tvl: Number(decimalizeRaw(dydxTvlResponse, 18)).toFixed(2),
+      getCosmosTVL("dydx").then((response) => {
+        setDydxData({
+          apy: 0,
+          tvl: Number(decimalizeRaw(response, 18)).toFixed(2),
+        });
       });
-      setStarsData({
-        apy: 0,
-        tvl: Number(decimalizeRaw(starsTvlResponse)),
+      getCosmosTVL("stars").then((response) => {
+        setStarsData({
+          apy: 0,
+          tvl: Number(decimalizeRaw(response)),
+        });
       });
-      setXprtData({
-        apy: 0,
-        tvl: Number(decimalizeRaw(xprtTvlResponse)),
+      getCosmosTVL("persistence").then((response) => {
+        setXprtData({
+          apy: 0,
+          tvl: Number(decimalizeRaw(response)),
+        });
       });
-      setBldData({
-        apy: 0,
-        tvl: Number(decimalizeRaw(bldTvlResponse)),
+      getCosmosTVL("chihuahua").then((response) => {
+        setHuahuaData({
+          apy: 0,
+          tvl: Number(decimalizeRaw(response)),
+        });
       });
-      setHuahuaData({
-        apy: 0,
-        tvl: Number(decimalizeRaw(huahuaTvlResponse)),
+      getBnbTVL().then((response) => {
+        setBnbData({
+          apy: 0,
+          tvl: response,
+        });
       });
-      setBnbData({
-        apy: 0,
-        tvl: bnbTvlResponse,
+      getBTCTVL().then((response) => {
+        setBtcData({
+          apy: 0,
+          tvl: Number(response),
+        });
       });
-      setBtcData({
-        apy: 0,
-        tvl: Number(btcTVLResponse),
+      fetchTokenPrices().then((response) => {
+        setPrices(response);
       });
-      setPrices(tokenPrices);
       getMarketCap().then((response) => {
         setMarketCap(response);
       });

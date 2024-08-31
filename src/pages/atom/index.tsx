@@ -9,7 +9,6 @@ import LiquidStakingSteps from "../../components/organisms/atom/LiquidStakingSte
 import Audited from "../../components/organisms/atom/Audited";
 import Faq from "../../components/organisms/atom/Faq";
 import ValidatorContainer from "../../components/organisms/atom/ValidatorContainer";
-import EcosystemSlider from "../../components/organisms/atom/EcosystemSilder";
 import MigrationCard from "../../components/organisms/atom/Migration";
 
 const Atom = () => {
@@ -20,7 +19,6 @@ const Atom = () => {
       <Features />
       <Comparison />
       <LiquidStakingSteps />
-      <EcosystemSlider deviceType={""} />
       {/*<Guides />*/}
       <ValidatorContainer deviceType={""} />
       <Audited />
