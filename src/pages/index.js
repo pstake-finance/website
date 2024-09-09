@@ -23,7 +23,6 @@ const homePage = () => {
       <BitcoinBanner />
       <AssetSlider bg={"#141414"} />
       <Features />
-      {/*<StakingSteps />*/}
       <Token />
       <FeaturedBlogs bg={"#141414"} />
       <BTCFeaturedBlogs bg={"#141414"} />

@@ -1,6 +1,5 @@
 import { StateCreator } from "zustand";
 import { getValidators, getXprtValidators } from "../../pages/api/onChain";
-import osmo from "../../pages/osmo";
 import { getBTCTvl } from "../../pages/api/api";
 
 export interface ValidatorInfo {
@@ -177,27 +176,6 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       },
     }));
   },
-  // fetchXprtValidatorsData: async (chainID, env) => {
-  //   set((state) => ({
-  //     validatorsInfoLoader: {
-  //       name: "xprt",
-  //       loader: true,
-  //     },
-  //   }));
-  //   const valResponse = await getXprtValidators(chainID, env);
-  //   set((state) => ({
-  //     validatorsInfo: {
-  //       ...state.validatorsInfo,
-  //       xprt: valResponse,
-  //     },
-  //   }));
-  //   set((state) => ({
-  //     validatorsInfoLoader: {
-  //       name: "",
-  //       loader: false,
-  //     },
-  //   }));
-  // },
   fetchCosmosValidatorsData: async (rpc, chainID, env) => {
     set((state) => ({
       validatorsInfo: {
