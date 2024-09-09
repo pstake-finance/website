@@ -31,7 +31,6 @@ const Banner = () => {
     btcData,
   } = useApp();
 
-  console.log(tokenPrices, "tokenPrices");
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414]  bg-cover bg-center bg-no-repeat">
