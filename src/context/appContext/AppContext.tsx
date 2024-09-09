@@ -9,12 +9,11 @@ import { AppProviderProps, AppState } from "./types";
 import {
   fetchTokenPrices,
   getBnbTVL,
-  getBTCTVL,
+  getBTCTvl,
   getCosmosTVL,
   getMarketCap,
 } from "../../pages/api/api";
-import { decimalize, decimalizeRaw } from "../../utils/helpers";
-import { getValidatorLength } from "../../pages/api/onChain";
+import { decimalizeRaw } from "../../utils/helpers";
 
 const AppContext = createContext<AppState>({
   cosmosData: {
@@ -185,7 +184,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
           tvl: response,
         });
       });
-      getBTCTVL().then((response) => {
+      getBTCTvl().then((response) => {
         setBtcData({
           apy: 0,
           tvl: Number(response),

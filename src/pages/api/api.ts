@@ -529,25 +529,6 @@ export const getBnbTVL = async () => {
   }
 };
 
-export const getBTCTVL = async () => {
-  try {
-    const btcEndpoint =
-      "https://blockchain.info/rawaddr/bc1qajcp935tuvqakut95f0sc9qm09hxjj6egexl9d";
-    const res: any = await Axios.get(btcEndpoint);
-    if (res && res.data) {
-      console.log(
-        Number((res.data.final_balance / 1e8).toFixed(2)),
-        "total-btc"
-      );
-      return Number((res.data.final_balance / 1e8).toFixed(2));
-    }
-    return 0;
-  } catch (e) {
-    console.log(e);
-    return 0;
-  }
-};
-
 export const getBnbApy = async () => {
   try {
     const res = await fetch(STK_BNB_SUBGRAPH_API, {
