@@ -26,7 +26,6 @@ const Banner = () => {
     dydxData,
     xprtData,
     starsData,
-    bldData,
     huahuaData,
     btcData,
   } = useApp();
@@ -89,7 +88,6 @@ const Banner = () => {
                     Number(osmoData.tvl * tokenPrices.OSMO) +
                     Number(xprtData.tvl * tokenPrices.XPRT) +
                     Number(dydxData.tvl * tokenPrices.DYDX) +
-                    Number(bldData.tvl * tokenPrices.BLD) +
                     Number(huahuaData.tvl * tokenPrices.HUAHUA) +
                     Number(btcData.tvl * tokenPrices.BTC),
                   3

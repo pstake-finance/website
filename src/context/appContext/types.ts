@@ -19,10 +19,6 @@ export interface AppState {
     apy: number;
     tvl: number;
   };
-  bldData: {
-    apy: number;
-    tvl: number;
-  };
   huahuaData: {
     apy: number;
     tvl: number;

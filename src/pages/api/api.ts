@@ -70,8 +70,6 @@ export const SHADE_URL =
   "https://na36v10ce3.execute-api.us-east-1.amazonaws.com/API-mainnet-STAGE/shadeswap/pairs";
 export const SHADE_LCD = "https://lcd.secret.express";
 
-const initialLiquidity = { [TVL]: 0 };
-
 export const fetchTokenPrices = async () => {
   let data = {
     BNB: 0,
@@ -93,7 +91,6 @@ export const fetchTokenPrices = async () => {
     data.DYDX = Number(pricesResponse.data["dydx-chain"].usd);
     data.STARS = Number(pricesResponse.data["stargaze"].usd);
     data.XPRT = Number(pricesResponse.data["persistence"].usd);
-    data.BLD = Number(pricesResponse.data["agoric"].usd);
     data.HUAHUA = Number(pricesResponse.data["chihuahua-token"].usd);
     data.BTC = Number(pricesResponse.data["bitcoin"].usd);
     return data;

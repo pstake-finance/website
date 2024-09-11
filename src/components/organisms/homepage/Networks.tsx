@@ -151,7 +151,6 @@ const Networks = () => {
     osmoData,
     dydxData,
     starsData,
-    bldData,
     huahuaData,
     validatorsList,
     xprtData,
@@ -267,16 +266,6 @@ const Networks = () => {
         "https://staging.app.pstake.finance/cosmos?token=STARS&chain=Stargaze",
       erc20: false,
     },
-    // {
-    //   asset: "BLD",
-    //   network: "agoric",
-    //   imageUrl: "/images/networks/bld.svg",
-    //   apy: bldData!.apy === -1 ? 11 : bldData.apy,
-    //   buttonText: "Start Staking",
-    //   buttonUrl:
-    //     "https://staging.app.pstake.finance/cosmos?token=BLD&chain=persistence",
-    //   erc20: false,
-    // },
     {
       asset: "CHIHUAHUA",
       symbol: "HUAHUA",

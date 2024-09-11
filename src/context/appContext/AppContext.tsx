@@ -36,10 +36,6 @@ const AppContext = createContext<AppState>({
     apy: 0,
     tvl: 0,
   },
-  bldData: {
-    apy: 0,
-    tvl: 0,
-  },
   huahuaData: {
     apy: 0,
     tvl: 0,
@@ -105,10 +101,6 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     tvl: 0,
   });
   const [huahuaData, setHuahuaData] = useState<any>({
-    apy: 0,
-    tvl: 0,
-  });
-  const [bldData, setBldData] = useState<any>({
     apy: 0,
     tvl: 0,
   });
@@ -208,7 +200,6 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
     dydxData,
     starsData,
     xprtData,
-    bldData,
     huahuaData,
     btcData,
     validatorsList: chainValidators,
