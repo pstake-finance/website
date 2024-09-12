@@ -2,14 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from "react";
 import { useState } from "react";
-import {
-  fetchCrescentPoolInfo,
-  fetchDexterPoolInfo,
-  fetchOsmosisPoolInfo,
-  fetchShadeCollateral,
-  fetchShadeInfo,
-  fetchUmeeInfo,
-} from "../../../pages/api/api";
+import { fetchOsmosisPoolInfo } from "../../../pages/api/api";
 import { useEffect } from "react";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 

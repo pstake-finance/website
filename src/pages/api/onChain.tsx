@@ -1,10 +1,9 @@
 import { QueryClientImpl as LiquidStakeQueryClient } from "persistenceonejs/pstake/liquidstakeibc/v1beta1/query";
-import { decimalize, decimalizeRaw, RpcClient } from "../../utils/helpers";
+import { decimalizeRaw, RpcClient } from "../../utils/helpers";
 import { QueryClientImpl as StakeQuery } from "cosmjs-types/cosmos/staking/v1beta1/query";
 import { ValidatorInfo } from "../../store/slices/initial-data-slice";
 import { ExternalChains } from "../../utils/config";
 import { QueryClientImpl as NativeLiquidStakeQueryClient } from "persistenceonejs/pstake/liquidstake/v1beta1/query";
-import { getAvatar } from "./api";
 
 export const getValidatorInfo = async (chainId: string, env: string) => {
   try {
@@ -133,62 +132,6 @@ export const getValidators = async (
   } catch (e) {
     console.log(e, "error-getValidators");
     return [];
-  }
-};
-
-export const getXprtValidatorsLength = async (rpc: string) => {
-  try {
-    let filteredList: any[] = [];
-    const rpcClient = await RpcClient(rpc);
-    const pstakeQueryService = new NativeLiquidStakeQueryClient(rpcClient);
-    const liquidValidatorsResponse =
-      await pstakeQueryService.LiquidValidators();
-    console.log(
-      liquidValidatorsResponse,
-      "-persistence cvalue in getExchangeRateFromRpc"
-    );
-    if (liquidValidatorsResponse && liquidValidatorsResponse.liquidValidators) {
-      liquidValidatorsResponse.liquidValidators?.forEach((item) => {
-        filteredList = liquidValidatorsResponse.liquidValidators.filter(
-          (item) => Number(item.liquidTokens) > 0 || Number(item.weight) > 0
-        );
-      });
-    }
-    return filteredList.length;
-  } catch (e) {
-    console.log(e, "error-");
-    return 0;
-  }
-};
-
-export const getValidatorLength = async (chainID: string): Promise<any> => {
-  const chainInfo = ExternalChains["Mainnet"].find(
-    (item) => item.chainId === chainID
-  );
-  let list: any = {
-    uatom: 0,
-    uosmo: 0,
-    adydx: 0,
-    ustars: 0,
-    uhuahua: 0,
-    ubld: 0,
-    uxprt: 0,
-  };
-  try {
-    const rpcClient = await RpcClient(chainInfo!.rpc);
-    const pstakeQueryService = new LiquidStakeQueryClient(rpcClient);
-    const chainParamsResponse = await pstakeQueryService.HostChains();
-    chainParamsResponse.hostChains.forEach((item) => {
-      const filteredList = item.validators.filter(
-        (item) => Number(item.delegatedAmount) > 0 || Number(item.weight) > 0
-      );
-      list[item.hostDenom] = filteredList.length;
-    });
-    const xprtValsetLength = await getXprtValidatorsLength(chainInfo!.rpc);
-    list["uxprt"] = xprtValsetLength;
-    return list;
-  } catch (e) {
-    return list;
   }
 };
 

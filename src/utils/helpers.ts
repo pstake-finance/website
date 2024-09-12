@@ -1,7 +1,6 @@
 import { Dec, Int } from "@keplr-wallet/unit";
 import _ from "lodash";
 import { Decimal } from "@cosmjs/math";
-import stakepool from "../utils/ABIs/StakePool.json";
 import { ethers, utils } from "ethers";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
@@ -27,10 +26,6 @@ export function satsToBtc(
   return result.toString(precision);
 }
 
-export const stakePoolContractAddress =
-  process.env.NEXT_PUBLIC_STAKE_POOL_CONTRACT_ADDRESS;
-
-export const stakePoolContractABI = stakepool.abi;
 export const SPEEDY_NODE_URL = process.env.NEXT_PUBLIC_BNB_CHAIN_RPC_URL;
 
 export const shieldContractsAddress =
