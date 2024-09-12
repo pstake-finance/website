@@ -312,14 +312,14 @@ const Header = () => {
                 <LinkWithLocale
                   aria-label="logo"
                   className="bg-logoLight
-                      [.is-sticky_&]:bg-logoLight bg-[length:160px] w-[200px] h-[40px] bg-no-repeat bg-center"
+                      [.is-sticky_&]:bg-logoLight bg-[length:160px] md:bg-[length:140px] w-[200px] md:w-[140px] h-[40px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
                 <LinkWithLocale
                   aria-label="logo"
                   className="bg-logoDark
-                      [.is-sticky_&]:bg-logoLight  bg-[length:160px] w-[200px] h-[40px]  bg-no-repeat bg-center"
+                      [.is-sticky_&]:bg-logoLight  bg-[length:160px]  md:bg-[length:140px] w-[200px] md:w-[140px] h-[40px]  bg-no-repeat bg-center"
                   href="/"
                 />
               )}
