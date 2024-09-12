@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import { useTranslation } from "next-export-i18n";
 import Slider from "react-slick";
@@ -11,8 +11,6 @@ const AssetSlider = ({ bg }: Props) => {
   const { t } = useTranslation();
 
   const imgList = [
-    // { path: "/images/btc/btc_asset1.png" },
-    // { path: "/images/btc/btc_asset2.svg" },
     { path: "/images/btc/btc_asset3.png" },
     { path: "/images/btc/btc_asset4.png" },
     { path: "/images/btc/btc_asset5.png" },

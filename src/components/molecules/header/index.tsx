@@ -65,15 +65,13 @@ const socialList = [
 const Header = () => {
   const { t } = useTranslation();
   const router = useRouter();
-  const [banner, setBanner] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [chevronChange, setChevronChange] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(true);
   };
 
-  const { isMobile, isLandScape } = useWindowSize();
+  const { isLandScape } = useWindowSize();
 
   const sideBarRef = useRef<HTMLUListElement>(null);
   useOnClickOutside(sideBarRef, () => {
@@ -92,18 +90,12 @@ const Header = () => {
     let topbar = document.getElementById("is-sticky") as HTMLElement;
     let navBar = document.getElementById("nav-bar") as HTMLElement;
     if (top > 50) {
-      setChevronChange(true);
       topbar.classList.add("topBar");
       navBar.classList.add("is-sticky");
     } else {
-      setChevronChange(false);
       topbar.classList.remove("topBar");
       navBar.classList.remove("is-sticky");
     }
-  };
-
-  const closeBanner = () => {
-    setBanner(false);
   };
 
   let appURL = "https://app.pstake.finance/";
@@ -318,12 +310,14 @@ const Header = () => {
               router.pathname === "/team" ||
               router.pathname === "/roadmap" ? (
                 <LinkWithLocale
+                  aria-label="logo"
                   className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:160px] w-[200px] h-[40px] bg-no-repeat bg-center"
                   href="/"
                 />
               ) : (
                 <LinkWithLocale
+                  aria-label="logo"
                   className="bg-logoDark
                       [.is-sticky_&]:bg-logoLight  bg-[length:160px] w-[200px] h-[40px]  bg-no-repeat bg-center"
                   href="/"
@@ -331,6 +325,7 @@ const Header = () => {
               )}
 
               <Button
+                aria-label="menu"
                 className={`${
                   router.pathname === "/"
                     ? "[.is-sticky_&]:bg-[#EE972C]"

@@ -7,19 +7,15 @@ import {
   PSTAKE_TWITTER_URL,
   PSTAKE_TELEGRAM_URL,
   PSTAKE_YOUTUBE_URL,
-  PERSISTENCE_ONE_URL,
   PSTAKE_MEDIUM_URL,
   STK_BNB_TWITTER_URL,
   STK_ATOM_TWITTER_URL,
-  STK_ETH_TWITTER,
   pstake_cosmos_twitter_url,
   PSTAKE_DISCORD,
   GITHUB_URL,
   PSTAKE_FORUM_URL,
-  PSTAKE_APP_URL,
 } from "../../utils/config";
 import FooterBottom from "./FooterBottom";
-import ButtonLink from "../atoms/buttonLink/ButtonLink";
 import { useTranslation } from "next-export-i18n";
 
 const getLogoUrl = (logoName: string) => {
@@ -115,7 +111,7 @@ const Footer = () => {
     <>
       {!router.pathname.includes("/validators") ? (
         <div className={`aos-init aos-animate ${router.pathname}`}>
-          {router.pathname !== "/team" && router.pathname !== "/roadmap" ?
+          {router.pathname !== "/team" && router.pathname !== "/roadmap" ? (
             <>
               <div className="sectionContainer py-[80px] md:py-[40px]">
                 <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[50px]">
@@ -167,19 +163,19 @@ const Footer = () => {
                 >
                   {t("HOME_QUOTE_CONTENT")}{" "}
                   <span className={"text-[#EE972C]"}>
-                {t("HOME_QUOTE_CONTENT1")}{" "}
-              </span>
+                    {t("HOME_QUOTE_CONTENT1")}{" "}
+                  </span>
                   {t("HOME_QUOTE_CONTENT2")}
                 </p>
               </div>
               <FooterBottom />
             </>
-            :
+          ) : (
             <FooterBottom />
-          }
-            </div>
-            ) : (
-            <div className={"bg-[#030303] py-[30px]"}>
+          )}
+        </div>
+      ) : (
+        <div className={"bg-[#030303] py-[30px]"}>
           <div className="flex items-center justify-center flex-wrap sm:block sm:text-center">
             <div>
               <div className={`socialLinks flex py-3 px-8 justify-between`}>
