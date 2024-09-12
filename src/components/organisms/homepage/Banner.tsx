@@ -41,8 +41,8 @@ const Banner = () => {
 
   const { t } = useTranslation("common");
   return (
-    <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414]  bg-cover bg-center bg-no-repeat">
-      <div className="pt-[200px] -2xl:pt-[300px] pb-40px] relative h-full max-w-[1280px] container mx-auto">
+    <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414]  bg-cover bg-center bg-no-repeat ">
+      <div className="pt-[200px] -2xl:pt-[300px] pb-40px] relative h-screen max-w-[1280px] container mx-auto">
         <div className={"flex mb-[40px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
             <h1 className="max-w-[640px] break-words text-[40px] md:text-[28px] md:leading-[40px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
