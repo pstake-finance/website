@@ -1,5 +1,4 @@
 import React from "react";
-import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useTranslation } from "next-export-i18n";
 
 const BitcoinBanner = () => {
