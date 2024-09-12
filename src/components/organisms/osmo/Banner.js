@@ -4,11 +4,12 @@ import Icon from "../../molecules/Icon";
 import { ATOM_URL, OSMO_URL } from "../../../utils/config";
 import { decimalize, formatNumber } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
+import { useAppStore } from "../../../store/store";
+import { shallow } from "zustand/shallow";
 
 const Banner = () => {
   const { t } = useTranslation("common");
-  const { osmoData } = useApp();
+  const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
 
   return (
     <div className="text-center aos-init aos-animate bg-osmoBanner bg-no-repeat bg-[#FCFBFE]">
@@ -56,7 +57,7 @@ const Banner = () => {
         </div>
         <div className="my-6">
           <h6 className="font-bold text-[36px] sm:text-2xl text-dark-black-high leading-snug">
-            {formatNumber(Number(osmoData.tvl), 3, 2)} OSMO
+            {formatNumber(Number(tvlList.osmo), 3, 2)} OSMO
           </h6>
           <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">
             {t("TOTAL_VALUE_UNLOCKED")}

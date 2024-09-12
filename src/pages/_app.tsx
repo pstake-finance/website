@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "../components/molecules/header";
-import AppProvider from "../context/appContext/AppContext";
 import * as gtag from "../utils/gtag";
 import "../styles/globals.css";
 import "rc-tooltip/assets/bootstrap.css";
@@ -39,9 +38,7 @@ const App = ({ Component, pageProps }: any) => {
   return (
     <>
       <Header />
-      <AppProvider>
-        <Component {...pageProps} />
-      </AppProvider>
+      <Component {...pageProps} />
     </>
   );
 };

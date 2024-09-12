@@ -7,7 +7,6 @@ import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
 import moment from "moment";
-import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
 import ValidatorCriteria from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
@@ -57,7 +56,8 @@ const criteriaList = [
 ];
 
 const ValidatorsList = () => {
-  const { osmoData } = useApp();
+  const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
+
   const [baseList, setBaseList] = useState<ValidatorInfo[]>([]);
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [searchKey, setSearchKey] = useState<string>("");
@@ -150,7 +150,7 @@ const ValidatorsList = () => {
                 {" "}
                 Total Value Unlocked(TVU)
               </span>
-              {formatNumber(Number(osmoData.tvl), 3, 2)} OSMO
+              {formatNumber(Number(tvlList.osmo), 3, 2)} OSMO
             </p>
           </div>
         </div>

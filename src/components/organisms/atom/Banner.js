@@ -2,13 +2,14 @@ import React from "react";
 import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
 import { ATOM_URL } from "../../../utils/config";
-import { decimalize, formatNumber } from "../../../utils/helpers";
+import { formatNumber } from "../../../utils/helpers";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
+import { useAppStore } from "../../../store/store";
+import { shallow } from "zustand/shallow";
 
 const Banner = () => {
   const { t } = useTranslation("common");
-  const { cosmosData } = useApp();
+  const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
 
   return (
     <div className="text-center aos-init aos-animate bg-atomBanner bg-no-repeat">
@@ -64,7 +65,7 @@ const Banner = () => {
         </div>
         <div className="my-6">
           <h6 className="font-bold text-[36px] sm:text-2xl text-dark-black-high leading-snug">
-            {formatNumber(Number(cosmosData.tvl), 3, 2)} ATOM
+            {formatNumber(Number(tvlList.cosmos), 3, 2)} ATOM
           </h6>
           <h6 className="text-lg sm:text-base text-[#838c9f] leading-snug">
             {t("TOTAL_VALUE_UNLOCKED")}

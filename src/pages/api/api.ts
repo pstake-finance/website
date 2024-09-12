@@ -70,7 +70,7 @@ export const SHADE_URL =
   "https://na36v10ce3.execute-api.us-east-1.amazonaws.com/API-mainnet-STAGE/shadeswap/pairs";
 export const SHADE_LCD = "https://lcd.secret.express";
 
-export const fetchTokenPrices = async () => {
+export const getTokenPrices = async () => {
   let data = {
     BNB: 0,
     ATOM: 0,

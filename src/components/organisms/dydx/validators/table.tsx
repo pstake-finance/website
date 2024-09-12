@@ -5,10 +5,11 @@ import { TableProps } from "../../../molecules/table/types";
 import { useSortableTable } from "../../../../customHooks/useSortableTable";
 import TableHead from "../../../molecules/table/table-head";
 import TableBody from "../../../molecules/table/table-body";
-import { useApp } from "../../../../context/appContext/AppContext";
+import { useAppStore } from "../../../../store/store";
+import { shallow } from "zustand/shallow";
 
 const ValidatorTable = ({ data, columns }: TableProps) => {
-  const { dydxData } = useApp();
+  const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
   const [tableData, handleSorting] = useSortableTable(data, columns);
   const updateData: any[] = [];
   tableData.length
@@ -46,7 +47,7 @@ const ValidatorTable = ({ data, columns }: TableProps) => {
           ),
           targetDelegation: (
             <p key={index} className={"px-1.5 py-1"}>
-              {(Number(data.targetDelegation) * Number(dydxData.tvl)).toFixed(
+              {(Number(data.targetDelegation) * Number(tvlList.dydx)).toFixed(
                 2
               )}
               &nbsp;

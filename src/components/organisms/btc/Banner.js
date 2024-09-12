@@ -1,12 +1,9 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
 
 const Banner = () => {
   const { t } = useTranslation();
-  const { cosmosData } = useApp();
-
   return (
     <div className="text-center aos-init aos-animate bg-btcBanner bg-no-repeat">
       <div

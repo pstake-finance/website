@@ -16,11 +16,15 @@ import {
   fetchThenaInfo,
   fetchWombat,
 } from "./api/api";
-import { useApp } from "../context/appContext/AppContext";
+import { useAppStore } from "../store/store";
+import { shallow } from "zustand/shallow";
 
 const Binance = () => {
   const [beefyInfo, setBeefyInfo] = useState<any>({ tvl: 0, apy: 0 });
-  const [openLeverageInfo, setOpenLeverageInfo] = useState<any>({ tvl: 0, apy: 0 });
+  const [openLeverageInfo, setOpenLeverageInfo] = useState<any>({
+    tvl: 0,
+    apy: 0,
+  });
   const [wombatInfo, setWombatInfo] = useState<any>({ tvl: 0, apy: 0 });
   const [thenaInfo, setThenaInfo] = useState<any>({ tvl: 0, apy: 0 });
 
@@ -40,7 +44,7 @@ const Binance = () => {
     fetchApi();
   }, []);
 
-  const { bnbData } = useApp();
+  const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
 
   const maxApy = Math.max(
     Number(beefyInfo.apy),
@@ -53,9 +57,9 @@ const Binance = () => {
     <React.Fragment>
       <ScrollToTop />
       <div className="container-fluid p-0 binance">
-        <Banner maxApy={maxApy} tvl={bnbData.tvl} />
+        <Banner maxApy={maxApy} tvl={tvlList.bnb} />
         <Features />
-        <Comparison bnbData={bnbData} />
+        <Comparison />
         <EcosystemSlider
           beefyInfo={beefyInfo}
           openLeverageInfo={openLeverageInfo}

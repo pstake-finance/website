@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { APR_DEFAULT, ATOM_URL } from "../../../utils/config";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
 
 const Comparison = () => {
-  const { cosmosData } = useApp();
-
   const tableData = [
     {
       title: "What is it?",
@@ -20,9 +17,7 @@ const Comparison = () => {
     {
       title: "APR (after fees)",
       staking: "Average ~18.5 %",
-      liquidStake: `Up to ~${
-        APR_DEFAULT
-      } %`,
+      liquidStake: `Up to ~${APR_DEFAULT} %`,
     },
     {
       title: "Auto-compounding rewards",

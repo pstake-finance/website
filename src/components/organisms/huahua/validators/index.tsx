@@ -7,7 +7,6 @@ import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
 import moment from "moment";
-import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
 import ValidatorCriteria, { CriteriaList } from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
@@ -51,7 +50,8 @@ const criteriaList: CriteriaList[] = [
 ];
 
 const ValidatorsList = () => {
-  const { huahuaData } = useApp();
+  const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
+
   const [baseList, setBaseList] = useState<ValidatorInfo[]>([]);
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [searchKey, setSearchKey] = useState<string>("");
@@ -148,7 +148,7 @@ const ValidatorsList = () => {
                 {" "}
                 Total Value Unlocked(TVU)
               </span>
-              {formatNumber(Number(huahuaData.tvl), 3, 2)} HUAHUA
+              {formatNumber(Number(tvlList.huahua), 3, 2)} HUAHUA
             </p>
           </div>
         </div>

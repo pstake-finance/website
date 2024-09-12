@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "next-export-i18n";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
 import { numberFormat } from "../../../utils/helpers";
 import Tooltip from "rc-tooltip";
+import { shallow } from "zustand/shallow";
+import { useAppStore } from "../../../store/store";
 
 const netWorkList = [
   {
@@ -17,18 +18,26 @@ const netWorkList = [
     link: "https://app.pstake.finance/",
   },
 ];
+
 const Banner = () => {
-  const {
-    cosmosData,
-    bnbData,
-    tokenPrices,
-    osmoData,
-    dydxData,
-    xprtData,
-    starsData,
-    huahuaData,
-    btcData,
-  } = useApp();
+  const [fetchTokenPrices, fetchTVLList, tvlList, tokenPrices] = useAppStore(
+    (state) => [
+      state.fetchTokenPrices,
+      state.fetchTVLList,
+      state.tvlList,
+      state.tokenPrices,
+    ],
+    shallow
+  );
+
+  //fetching pstake info
+  useEffect(() => {
+    const fetch = async () => {
+      fetchTVLList();
+      fetchTokenPrices();
+    };
+    fetch();
+  }, []);
 
   const { t } = useTranslation("common");
   return (
@@ -82,14 +91,14 @@ const Banner = () => {
               <p className="text-light-high font-bold text-[44px] md:text-[24px] text-left">
                 $
                 {numberFormat(
-                  Number(cosmosData.tvl * tokenPrices.ATOM) +
-                    Number(bnbData.tvl * tokenPrices.BNB) +
-                    Number(starsData.tvl * tokenPrices.STARS) +
-                    Number(osmoData.tvl * tokenPrices.OSMO) +
-                    Number(xprtData.tvl * tokenPrices.XPRT) +
-                    Number(dydxData.tvl * tokenPrices.DYDX) +
-                    Number(huahuaData.tvl * tokenPrices.HUAHUA) +
-                    Number(btcData.tvl * tokenPrices.BTC),
+                  Number(tvlList.cosmos * tokenPrices.ATOM) +
+                    Number(tvlList.bnb * tokenPrices.BNB) +
+                    Number(tvlList.stars * tokenPrices.STARS) +
+                    Number(tvlList.osmo * tokenPrices.OSMO) +
+                    Number(tvlList.xprt * tokenPrices.XPRT) +
+                    Number(tvlList.dydx * tokenPrices.DYDX) +
+                    Number(tvlList.huahua * tokenPrices.HUAHUA) +
+                    Number(tvlList.btc * tokenPrices.BTC),
                   3
                 )}
               </p>

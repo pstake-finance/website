@@ -7,7 +7,6 @@ import { EmptyTable } from "../../../molecules/table/empty-table";
 import { ValidatorInfo } from "../../../../store/slices/initial-data-slice";
 import { Spinner } from "../../../molecules/spinner";
 import moment from "moment";
-import { useApp } from "../../../../context/appContext/AppContext";
 import { formatNumber } from "../../../../utils/helpers";
 import ValidatorCriteria, { CriteriaList } from "../../common/criteria-table";
 import Icon from "../../../molecules/Icon";
@@ -59,7 +58,7 @@ const criteriaList: CriteriaList[] = [
 ];
 
 const ValidatorsList = () => {
-  const { cosmosData } = useApp();
+  const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
   const [baseList, setBaseList] = useState<ValidatorInfo[]>([]);
   const [dataList, setDataList] = useState<ValidatorInfo[]>([]);
   const [searchKey, setSearchKey] = useState<string>("");
@@ -152,7 +151,7 @@ const ValidatorsList = () => {
                 {" "}
                 Total Value Unlocked(TVU)
               </span>
-              {formatNumber(Number(cosmosData.tvl), 3, 2)} ATOM
+              {formatNumber(Number(tvlList.cosmos), 3, 2)} ATOM
             </p>
           </div>
         </div>
