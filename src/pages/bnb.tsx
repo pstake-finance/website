@@ -8,14 +8,12 @@ import Guides from "../components/organisms/binance/Guides";
 import Audited from "../components/organisms/binance/Audited";
 import Validators from "../components/organisms/binance/Validators";
 import Faq from "../components/organisms/binance/Faq";
-import ScrollToTop from "../components/ScrollToTop";
 import { useAppStore } from "../store/store";
 import { shallow } from "zustand/shallow";
 const Binance = () => {
   const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
   return (
     <React.Fragment>
-      <ScrollToTop />
       <div className="container-fluid p-0 binance">
         <Banner maxApy={"15"} tvl={tvlList.bnb} />
         <Features />

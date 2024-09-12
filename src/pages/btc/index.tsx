@@ -5,14 +5,12 @@ import Features from "../../components/organisms/btc/Features";
 import Reasons from "../../components/organisms/btc/why-build";
 import FeaturedBlogs from "../../components/organisms/btc/blogs";
 import Faq from "../../components/organisms/btc/Faq";
-import ScrollToTop from "../../components/ScrollToTop";
 import AssetSlider from "../../components/organisms/btc/asset-slider";
 import BTCFeaturedBlogs from "../../components/organisms/btc/btc-blogs";
 
 const Atom = () => {
   return (
     <>
-      <ScrollToTop />
       <Banner />
       <Reasons />
       <Features />

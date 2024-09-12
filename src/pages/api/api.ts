@@ -10,9 +10,6 @@ import { CRESCENT_STK_ATOM_DENOM, TVL } from "../../utils/config";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
 import { SecretNetworkClient } from "secretjs";
 
-const STK_BNB_SUBGRAPH_API =
-  "https://api.thegraph.com/subgraphs/name/persistenceone/stkbnb";
-
 export const OSMOSIS_POOL_URL = "https://api-osmosis.imperator.co/pools/v2/886";
 export const OSMOSIS_POOL_APR_URL = "https://api.osmosis.zone/apr/v2/886";
 export const APY_API = "https://api.persistence.one/pstake/stkatom/apy";

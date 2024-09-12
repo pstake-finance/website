@@ -293,13 +293,6 @@ body {
   text-align: right;
 }
 
-/*.custom-table thead tr th:last-child{*/
-/*  text-align: center;*/
-/*  padding:12px 32px 12px 16px;*/
-/*  !*border-top-right-radius: 6px;*!*/
-/*  !*border-bottom-right-radius: 6px;*!*/
-/*}*/
-
 .custom-table tbody{
   @apply bg-black-600;
 }
@@ -442,11 +435,6 @@ background-image: linear-gradient(to right, #232334, #232334), linear-gradient(t
 .accordion-mobile-header .accordion.active .accordion-item-title{
     background:#EE972C4D;
 }
-
-.accordion-mobile-header .accordion.active .accordion-item-title{
-
-}
-
 
 .btc-assets .slick-slide {
   height:500px !important;
