@@ -1,35 +1,18 @@
 import { Dec, Int } from "@keplr-wallet/unit";
 import _ from "lodash";
 import { Decimal } from "@cosmjs/math";
-import { ethers, utils } from "ethers";
+import { ethers } from "ethers";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
-import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
-
-import {
-  createProtobufRpcClient,
-  QueryClient,
-  setupIbcExtension,
-} from "@cosmjs/stargate";
-
-export async function RpcClient(rpc: string) {
-  const tendermintClient = await Tendermint34Client.connect(rpc);
-  const queryClient = new QueryClient(tendermintClient);
-  return createProtobufRpcClient(queryClient);
-}
 
 export function satsToBtc(
   value: number | string,
   precision: number = 8
 ): string {
   const result = new Dec(Number(value)).mul(new Dec(10).pow(new Int(-8)));
-
   return result.toString(precision);
 }
 
 export const SPEEDY_NODE_URL = process.env.NEXT_PUBLIC_BNB_CHAIN_RPC_URL;
-
-export const shieldContractsAddress =
-  process.env.NEXT_PUBLIC_SHIELD_CONTRACT_ADDRESS;
 
 export const APP_ETHERS_PROVIDER = new ethers.providers.JsonRpcProvider(
   SPEEDY_NODE_URL
@@ -42,10 +25,6 @@ export const sdkInstance = StkBNBWebSDK.getInstance({
   signerOrProvider: APP_ETHERS_PROVIDER,
   env: SDK_ENV,
 });
-
-export const bigNumberToEther = (bigNumber: any) => {
-  return utils.formatEther(bigNumber);
-};
 
 export const removeCommas = (str: any) =>
   _.replace(str, new RegExp(",", "g"), "");
