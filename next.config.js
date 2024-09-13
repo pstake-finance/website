@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: false,
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false };
-    return config;
-  },
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: ["raw.githubusercontent.com"],
     unoptimized: true,
@@ -20,9 +16,6 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  },
-  generateBuildId: async () => {
-    return `${new Date().getTime()}`;
   },
 };
 

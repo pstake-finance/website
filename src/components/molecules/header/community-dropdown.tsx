@@ -1,13 +1,9 @@
 import Dropdown from "rc-dropdown";
 import "rc-dropdown/assets/index.css";
-import React, { PureComponent } from "react";
+import React from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-export-i18n";
-
-const getLogoUrl = (logoName: string) => {
-  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
-};
 
 interface Props {
   communityList: any[];
@@ -87,7 +83,10 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
     >
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
-          (router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team" || router.pathname === "/roadmap")
+          router.pathname === "/" ||
+          router.pathname === "/pstake" ||
+          router.pathname === "/team" ||
+          router.pathname === "/roadmap"
             ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
             : ""
         } ${
