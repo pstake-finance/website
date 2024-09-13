@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Features from "../components/organisms/binance/Features";
 import FeaturedBlogs from "../components/organisms/binance/FeactureBlog";
 import Footer from "../components/molecules/Footer";
@@ -13,19 +13,17 @@ import { shallow } from "zustand/shallow";
 const Binance = () => {
   const [tvlList] = useAppStore((state) => [state.tvlList], shallow);
   return (
-    <React.Fragment>
-      <div className="container-fluid p-0 binance">
-        <Banner maxApy={"15"} tvl={tvlList.bnb} />
-        <Features />
-        <Comparison />
-        <Guides />
-        <Validators />
-        <Audited />
-        <FeaturedBlogs />
-        <Faq />
-        <Footer />
-      </div>
-    </React.Fragment>
+    <div className="container-fluid p-0 binance">
+      <Banner maxApy={"15"} tvl={tvlList.bnb} />
+      <Features />
+      <Comparison />
+      <Guides />
+      <Validators />
+      <Audited />
+      <FeaturedBlogs />
+      <Faq />
+      <Footer />
+    </div>
   );
 };
 

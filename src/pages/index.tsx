@@ -1,7 +1,6 @@
 import React from "react";
 import Banner from "../components/organisms/homepage/Banner";
 import Features from "../components/organisms/homepage/Features";
-import Audits from "../components/organisms/homepage/Audits";
 import Footer from "../components/molecules/Footer";
 import Investors from "../components/organisms/homepage/Investors";
 import Token from "../components/organisms/homepage/Token";
@@ -26,7 +25,6 @@ const homePage = () => {
       <Token />
       <FeaturedBlogs bg={"#141414"} />
       <BTCFeaturedBlogs bg={"#141414"} />
-      <Audits />
       <Faq bg={"#141414"} />
       <Footer />
     </div>
