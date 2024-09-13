@@ -43,48 +43,12 @@ module.exports = {
       "red-light": "#cb575bfa",
     },
     backgroundImage: {
-      osmoPrimaryButton: "linear-gradient(90deg, #8C84FD 0%, #CA2EBD 91.74%)",
       homeBannerBg: "url('/images/bg_images/home_hero_bg.svg')",
       bitcoinBannerBg: "url('/images/bg_images/bitcoin_banner_bg.svg')",
-      immunefiWhite: "url('/images/audits/immunefi_header.svg')",
-      immunifyBlack: "url('/images/audits/immunefi_black.svg')",
-      "body-bg":
-        "radial-gradient(112.6% 112.6% at 50% -12.6%,#372627 0,#030303 44.79%)",
-      topBanner: `linear-gradient(90.03deg, #B7E2F7 2.08%, #873BA2 99.98%)`,
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
-      homePageBanner: `url('/images/bg_images/bg.svg'),
-      radial-gradient(100% 311.1% at 97.81% 0,#fff8f8 0,#f0fdff 100%,#f0fdff 0)`,
-      homePageBg2: `url('/images/bg_images/bg_lane.png')`,
-      homePageBg3: `url('/images/bg_images/home_bg2.svg')`,
-      cosmosCard: "linear-gradient(287.41deg,#2f3148 4.63%,#5c4243 98.79%)",
-      osmoCard:
-        "linear-gradient(80.17deg, #7268FD -4.31%, #CA2EBD 111.08%, #CA2EBD 127.68%)",
-      bnbCard: "linear-gradient(287.41deg,#efb90b 4.63%,#5c4243 98.79%)",
-      ethCard: "linear-gradient(287.41deg,#20335b 4.63%,#5c4243 98.79%)",
-      xprtCard: "linear-gradient(287.41deg,#e50913 4.63%,#5c4243 98.79%)",
-      ethBanner:
-        "url('/images/bg_images/eth_banner_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0%, #FFFFFF 0%, #F5F5F5 50.14%, #D3D3D3 100%)",
-      atomBanner:
-        "url('/images/bg_images/atomBanner2.svg'), url('/images/bg_images/atomBanner1.svg') ",
-      osmoBanner:
-        "url('/images/bg_images/osmoBanner2.svg'), radial-gradient(87.58% 251.27% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(215, 199, 245, 0.3) 100%) ",
       bnbBanner:
         "url('/images/bg_images/binance_bg.svg'), radial-gradient(100% 311.1% at 97.81% 0,#fff 0,#fffef8 45.83%,#fffffd 100%)",
-      dydxBanner:
-        "url('/images/bg_images/dydxBanner2.svg'), radial-gradient(87.58% 251.27% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(215, 199, 245, 0.3) 100%) ",
-      lsmTag:
-        "linear-gradient(91deg, rgba(196, 3, 11, 0.60) -15.72%, rgba(30, 0, 3, 0.60) 125.37%)",
-      lsmHighlight:
-        "linear-gradient(rgba(140, 2, 8, 1), rgba(211, 73, 79, 1), rgba(140, 2, 8, 1))",
-      btcBanner:
-        "url('/images/bg_images/btcBanner.svg'),  url('/images/bg_images/btc_hero_bg3.svg'), url('/images/bg_images/btcBanner2.svg') ",
-      title_bg: "url('/images/bg_images/title_bg_grid.svg')",
-      home_quote_bg: "url('/images/qoute_bg.svg')",
-      pstakeBanner:
-        "url('/images/bg_images/pstake_hero_bg.svg')",
-      tokenSaleBannerBg: "url('/images/bg_images/bg_grid.svg')",
-
     },
     backgroundColor: {
       none: "none",
@@ -226,7 +190,3 @@ module.exports = {
   },
   plugins: [],
 };
-//
-// background-size: auto;
-// background-position: 50% -75%;
-// background-repeat: no-repeat;
