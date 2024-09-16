@@ -14,7 +14,7 @@ import Faq from "../components/organisms/homepage/Faq";
 
 const homePage = () => {
   return (
-    <div>
+    <>
       <Banner />
       <Investors />
       <Reasons />
@@ -27,7 +27,7 @@ const homePage = () => {
       <BTCFeaturedBlogs bg={"#141414"} />
       <Faq bg={"#141414"} />
       <Footer />
-    </div>
+    </>
   );
 };
 

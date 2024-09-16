@@ -41,11 +41,11 @@ const Banner = () => {
 
   const { t } = useTranslation("common");
   return (
-    <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414]  bg-cover bg-center bg-no-repeat ">
-      <div className="pt-[200px] -2xl:pt-[300px] pb-40px] relative h-screen max-w-[1280px] container mx-auto">
+    <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414] -2xl:h-full h-[100vh] md:h-[90vh] bg-cover bg-center bg-no-repeat ">
+      <div className="pt-[200px] -2xl:pt-[300px] pb-40px] relative max-w-[1280px] container mx-auto">
         <div className={"flex mb-[40px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
-            <h1 className="max-w-[640px] break-words text-[40px] md:text-[18px] md:leading-[30px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
+            <h1 className="max-w-[640px] break-words text-[40px] md:text-[20px] md:leading-[32px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
               {t("HOME_HERO_SECTION_TITLE")}
             </h1>
             <h6 className="text-[18px] md:text-[14px] text-[#D5D5D5] text-left mb-10 max-w-[600px] break-words">
