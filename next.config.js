@@ -11,6 +11,19 @@ const nextConfig = {
     domains: ["raw.githubusercontent.com"],
     unoptimized: true,
   },
+  async headers() {
+    return [
+      {
+        source: "/(.*)?", // Matches all pages
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
