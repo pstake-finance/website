@@ -8,6 +8,7 @@ import { governanceDropdownContent } from "./governanace-dropdown";
 import { bridgeDropdownContent } from "./bridge-dropdown";
 import Icon from "../Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
+import Image from "next/image";
 
 interface Props {
   learnList: any[];
@@ -31,7 +32,7 @@ const MobileHeader = ({
   return (
     <div className={`${className} accordion-mobile-header px-4`} id="mySidenav">
       <div className={"flex items-center justify-between p-4 mb-6"}>
-        <img src={"/images/logo.svg"} className="w-[120px]" alt="logo" />
+        <Image src={"/images/logo.svg"} width={120} height={30} alt="logo" />
         <button onClick={closeMenu}>
           {" "}
           <Icon viewClass=" fill-[#fff] !w-[17px] !h-[17px]" icon={"close"} />

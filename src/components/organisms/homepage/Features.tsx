@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
+import Image from "next/image";
 
 const Features = () => {
   const { t } = useTranslation("common");
@@ -8,23 +9,31 @@ const Features = () => {
       title: t("BTC_FEATURES_TITLE_1"),
       icon: "liquidity",
       image: "/images/galaxy.svg",
+      width: 606,
+      height: 326,
       content: t("BTC_FEATURES_CONTENT_1"),
     },
     {
       title: t("HOME_FEATURES_THIRD_TITLE"),
       icon: "cash",
+      width: 606,
+      height: 165,
       image: "/images/pstake_yields.svg",
       content: t("HOME_FEATURES_THIRD_CONTENT"),
     },
     {
       title: t("BTC_FEATURES_TITLE_3"),
       icon: "redemption",
+      width: 606,
+      height: 203,
       image: "/images/pstake_shield.svg",
       content: t("BTC_FEATURES_CONTENT_3"),
     },
     {
       title: t("BTC_FEATURES_TITLE_2"),
       icon: "cash",
+      width: 606,
+      height: 261,
       image: "/images/pstake_web.svg",
       content: t("BTC_FEATURES_CONTENT_2"),
     },
@@ -45,9 +54,11 @@ const Features = () => {
                 key={index}
               >
                 <div className="icon-box">
-                  <img
+                  <Image
                     className="rounded-tl-lg rounded-tr-lg"
                     src={item.image}
+                    width={item.width}
+                    height={item.height}
                     title="Asset"
                     alt="Asset"
                   />

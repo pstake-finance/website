@@ -63,7 +63,7 @@ const AssetSlider = ({ bg }: Props) => {
           {imgList.map((item, index) => (
             <Image
               src={item.path}
-              alt={"ss"}
+              alt={item.path}
               key={index}
               width={24}
               height={24}

@@ -1,10 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Offering = () => {
   const router = useRouter();
 
-  console.log(router, "router-ssss");
   return (
     <div>
       <div className="container pt-[60px] md:pt-[35px]">
@@ -12,7 +12,9 @@ const Offering = () => {
           pSTAKE’s <span className={"text-[#F7931A]"}>Bitcoin</span> Offering
         </h3>
         <div className={"max-w-[1200px] mx-auto"}>
-          <img
+          <Image
+            width={1200}
+            height={360}
             src={
               router.asPath.includes("cn")
                 ? "/images/btc_offering_cn.svg"
