@@ -9,7 +9,58 @@
 
   <url>
     <loc>https://pstake.finance/</loc>
-    <lastmod>2023-01-12T18:05:00+00:00</lastmod>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/?lang=en</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/roadmap?lang=en</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/team?lang=en</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/pstake?lang=en</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/roadmap</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/team</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/pstake</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/terms?lang=en</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/privacy?lang=en</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pstake.finance/privacy</loc>
+    <lastmod>2024-09-20T05:09:13+00:00</lastmod>
+    <priority>0.64</priority>
   </url>
 
 
