@@ -28,6 +28,7 @@ import {
 } from "../../../utils/config";
 import Carousel from "react-multi-carousel";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
+import Image from "next/image";
 
 const responsive = {
   desktop: {
@@ -159,7 +160,9 @@ const FeaturedBlogs = ({ bg }: Props) => {
                       rel="noopener noreferrer"
                     >
                       <div className="blog-image h-auto">
-                        <img
+                        <Image
+                          width={398}
+                          height={223}
                           alt="blog2"
                           src={item.imageLink}
                           className={
@@ -174,7 +177,7 @@ const FeaturedBlogs = ({ bg }: Props) => {
                         </p>
                         <p
                           className="text-[#FFFFFF] inline-flex items-center border-b-2 border-[#EE972C]
-                    border-solid text-[12px] text-light-full pb-1"
+                    border-solid text-[12px] pb-1"
                         >
                           {item.buttonText}
                         </p>
