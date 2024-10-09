@@ -187,7 +187,7 @@ export const AppProvider: FC<AppProviderProps> = ({ children }) => {
       getBTCTvl().then((response) => {
         setBtcData({
           apy: 0,
-          tvl: Number(response),
+          tvl: Number(response) + Number(100), // Institutional TVL
         });
       });
       fetchTokenPrices().then((response) => {
