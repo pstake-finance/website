@@ -1,10 +1,8 @@
 import React from "react";
-import { useTranslation } from "next-export-i18n";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { BNB_URL } from "../../../utils/config";
 
-const Comparison = ({ bnbData }) => {
-  const { t } = useTranslation("common");
+const Comparison = () => {
   const tableData = [
     {
       title: "What is it?",
@@ -18,7 +16,7 @@ const Comparison = ({ bnbData }) => {
     {
       title: "APR (after fees)",
       staking: "Upto ~3.5%",
-      liquidStake: bnbData.apy + `%`,
+      liquidStake: "2.33%",
     },
     {
       title: "Minimum BNB Requirement",

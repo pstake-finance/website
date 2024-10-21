@@ -27,6 +27,7 @@ import {
   BLAST_BRIDGE_URL,
   OPTIMISM_BRIDGE_URL,
 } from "../../utils/config";
+import Image from "next/image";
 
 const FooterBottom = () => {
   const { t } = useTranslation();
@@ -194,9 +195,11 @@ const FooterBottom = () => {
             <div className="max-w-[1240px] mx-auto flex items-center md:block">
               <div className="flex flex-wrap justify-between w-full">
                 <div className={"w-[300px] md:mb-4"}>
-                  <img
+                  <Image
                     src={"/images/logo.svg"}
                     alt={"logo"}
+                    width={168}
+                    height={38}
                     className="w-[172px] md:w-[160px] mb-2"
                   />
                   <a
@@ -220,6 +223,7 @@ const FooterBottom = () => {
                         key={index}
                         href={item.url}
                         target="_blank"
+                        aria-label={item.name}
                         className={`flex items-center rounded-full group`}
                         rel="noopener noreferrer"
                       >

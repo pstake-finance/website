@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "next-export-i18n";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
 import { numberFormat } from "../../../utils/helpers";
 import Tooltip from "rc-tooltip";
+import { shallow } from "zustand/shallow";
+import { useAppStore } from "../../../store/store";
 
 const netWorkList = [
   {
@@ -17,27 +18,34 @@ const netWorkList = [
     link: "https://app.pstake.finance/",
   },
 ];
+
 const Banner = () => {
-  const {
-    cosmosData,
-    bnbData,
-    tokenPrices,
-    osmoData,
-    dydxData,
-    xprtData,
-    starsData,
-    bldData,
-    huahuaData,
-    btcData,
-  } = useApp();
+  const [fetchTokenPrices, fetchTVLList, tvlList, tokenPrices] = useAppStore(
+    (state) => [
+      state.fetchTokenPrices,
+      state.fetchTVLList,
+      state.tvlList,
+      state.tokenPrices,
+    ],
+    shallow
+  );
+
+  //fetching pstake info
+  useEffect(() => {
+    const fetch = async () => {
+      fetchTVLList();
+      fetchTokenPrices();
+    };
+    fetch();
+  }, []);
 
   const { t } = useTranslation("common");
   return (
-    <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414]  bg-cover bg-center bg-no-repeat">
-      <div className="pt-[200px] -2xl:pt-[300px] pb-40px] relative h-full max-w-[1280px] container mx-auto">
+    <div className="text-center aos-init aos-animate -lg:bg-homeBannerBg bg-[#141414] -2xl:h-full h-[100vh] md:h-[90vh] bg-cover bg-center bg-no-repeat ">
+      <div className="pt-[200px] -2xl:pt-[300px] pb-40px] relative max-w-[1280px] container mx-auto">
         <div className={"flex mb-[40px] md:mb-[40px] md:h-auto"}>
           <div className={"flex-1"}>
-            <h1 className="max-w-[640px] break-words text-[40px] md:text-[28px] md:leading-[40px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
+            <h1 className="max-w-[640px] break-words text-[40px] md:text-[20px] md:leading-[32px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
               {t("HOME_HERO_SECTION_TITLE")}
             </h1>
             <h6 className="text-[18px] md:text-[14px] text-[#D5D5D5] text-left mb-10 max-w-[600px] break-words">
@@ -83,15 +91,14 @@ const Banner = () => {
               <p className="text-light-high font-bold text-[44px] md:text-[24px] text-left">
                 $
                 {numberFormat(
-                  Number(cosmosData.tvl * tokenPrices.ATOM) +
-                    Number(bnbData.tvl * tokenPrices.BNB) +
-                    Number(starsData.tvl * tokenPrices.STARS) +
-                    Number(osmoData.tvl * tokenPrices.OSMO) +
-                    Number(xprtData.tvl * tokenPrices.XPRT) +
-                    Number(dydxData.tvl * tokenPrices.DYDX) +
-                    Number(bldData.tvl * tokenPrices.BLD) +
-                    Number(huahuaData.tvl * tokenPrices.HUAHUA) +
-                    Number(btcData.tvl * tokenPrices.BTC),
+                  Number(tvlList.cosmos * tokenPrices.ATOM) +
+                    Number(tvlList.bnb * tokenPrices.BNB) +
+                    Number(tvlList.stars * tokenPrices.STARS) +
+                    Number(tvlList.osmo * tokenPrices.OSMO) +
+                    Number(tvlList.xprt * tokenPrices.XPRT) +
+                    Number(tvlList.dydx * tokenPrices.DYDX) +
+                    Number(tvlList.huahua * tokenPrices.HUAHUA) +
+                    Number(tvlList.btc * tokenPrices.BTC),
                   3
                 )}
               </p>

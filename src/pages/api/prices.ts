@@ -1,6 +1,4 @@
 import { NextApiRequest, NextApiResponse } from "next";
-
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -15,7 +13,7 @@ export default async function handler(
       "persistence",
       "agoric",
       "chihuahua-token",
-      "bitcoin"
+      "bitcoin",
     ];
 
     const data = await fetch(
@@ -24,8 +22,8 @@ export default async function handler(
       )}&vs_currencies=usd`,
       {
         headers: {
-          "x-cg-pro-api-key": process.env.COINGECKO_API_KEY!
-        }
+          "x-cg-pro-api-key": process.env.COINGECKO_API_KEY!,
+        },
       }
     );
     res.status(200).json({ data: await data.json(), error: null });

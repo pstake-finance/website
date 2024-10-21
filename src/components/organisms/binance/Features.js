@@ -1,10 +1,7 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
 
 const Features = () => {
-  const { t } = useTranslation("common");
   const list = [
     {
       title: "Say goodbye to illiquidity",
@@ -24,15 +21,14 @@ const Features = () => {
     {
       title: "Redemption Time who?",
       icon: "usecase3",
-      content: "Skip unstaking and unbonding process of your $BNB by directly for swapping stkBNB from a liquidity pool ",
+      content:
+        "Skip unstaking and unbonding process of your $BNB by directly for swapping stkBNB from a liquidity pool ",
     },
   ];
   return (
     <div className="bg-black-high aos-init aos-animate" data-aos="fade-up">
       <div className="sectionContainer py-[65px] md:py-[35px]">
-        <h3 className="sectionTitle mb-12 md:mb-6">
-          Why pSTAKE for BNB?
-        </h3>
+        <h3 className="sectionTitle mb-12 md:mb-6">Why pSTAKE for BNB?</h3>
         <div className="flex flex-wrap">
           {list.map((item, index) => (
             <div

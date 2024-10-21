@@ -2,8 +2,27 @@ import React, { useEffect, useState } from "react";
 import Icon from "../../molecules/Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { ATOM_URL, BNB_URL } from "../../../utils/config";
+import { useAppStore } from "../../../store/store";
+import { shallow } from "zustand/shallow";
 
 const Banner = ({ maxApy, tvl }) => {
+  const [fetchTokenPrices, fetchTVLList, tvlList, tokenPrices] = useAppStore(
+    (state) => [
+      state.fetchTokenPrices,
+      state.fetchTVLList,
+      state.tvlList,
+      state.tokenPrices,
+    ],
+    shallow
+  );
+  //fetching pstake info
+  useEffect(() => {
+    const fetch = async () => {
+      fetchTVLList();
+      fetchTokenPrices();
+    };
+    fetch();
+  }, []);
   return (
     <div className="text-center aos-init aos-animate bg-bnbBanner bg-no-repeat">
       <div

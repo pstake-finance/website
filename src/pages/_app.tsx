@@ -3,13 +3,12 @@ import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "../components/molecules/header";
-import AppProvider from "../context/appContext/AppContext";
 import * as gtag from "../utils/gtag";
 import "../styles/globals.css";
-import "rc-tooltip/assets/bootstrap.css";
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Head from "next/head";
 
 const App = ({ Component, pageProps }: any) => {
   useEffect(() => {
@@ -38,10 +37,27 @@ const App = ({ Component, pageProps }: any) => {
 
   return (
     <>
+      <Head>
+        <meta charSet="utf-8" />
+        <title>pSTAKE Finance | Bitcoin Yields and BTC Liquid Staking</title>
+        <meta
+          content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+          name="viewport"
+        />
+        <meta name="theme-color" content="#000000" />
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta
+          name="description"
+          content="Bitcoin yields for all, backed by Binance Labs"
+        />
+        <meta
+          name="keywords"
+          content="liquid staking, pstake, bitcoin, stkBTC, btc, stkbtc, cosmos, persistence, stkBNB, stkATOM"
+        />
+      </Head>
       <Header />
-      <AppProvider>
-        <Component {...pageProps} />
-      </AppProvider>
+      <Component {...pageProps} />
     </>
   );
 };

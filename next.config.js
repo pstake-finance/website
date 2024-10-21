@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: false,
+  reactStrictMode: true,
+  swcMinify: true,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
     return config;
@@ -10,6 +10,19 @@ const nextConfig = {
   images: {
     domains: ["raw.githubusercontent.com"],
     unoptimized: true,
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)?", // Matches all pages
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+        ],
+      },
+    ];
   },
   async redirects() {
     return [
@@ -20,9 +33,6 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  },
-  generateBuildId: async () => {
-    return `${new Date().getTime()}`;
   },
 };
 

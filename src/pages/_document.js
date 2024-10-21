@@ -7,21 +7,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta charSet="utf-8" />
-        <title>pSTAKE Finance | Bitcoin Yields and BTC Liquid Staking</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="shortcut icon" href="/favicon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="Bitcoin yields for all, backed by Binance Labs"
-        />
-        <meta
-          name="keywords"
-          content="liquid staking, pstake, bitcoin, stkBTC, btc, stkbtc, cosmos, persistence, stkBNB, stkATOM"
-        />
-
         {/*Open Graph Tags*/}
         <meta
           content="pSTAKE Finance | Bitcoin Yields and BTC Liquid Staking"
@@ -53,10 +38,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${ANALYTICS}`}
-        />
         {/* eslint-disable-next-line @next/next/inline-script-id */}
         <Script
           strategy="afterInteractive"

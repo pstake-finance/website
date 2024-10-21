@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "next-export-i18n";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
-import { useApp } from "../../../context/appContext/AppContext";
-import { PSTAKE_APP_URL } from "../../../utils/config";
-import Investors from "../homepage/Investors";
 import { numberFormat } from "../../../utils/helpers";
+import { useAppStore } from "../../../store/store";
+import { shallow } from "zustand/shallow";
 
 const HeroSection = () => {
   const { t } = useTranslation();
-  const { marketCap } = useApp();
+  const [marketCap, fetchMarketCap] = useAppStore(
+    (state) => [state.marketCap, state.fetchMarketCap],
+    shallow
+  );
 
+  useEffect(() => {
+    const fetch = async () => {
+      fetchMarketCap();
+    };
+    fetch();
+  }, []);
   return (
     <div className="text-center aos-init aos-animate">
       <div

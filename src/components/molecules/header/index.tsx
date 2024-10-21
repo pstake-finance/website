@@ -4,11 +4,9 @@ import { useRouter } from "next/router";
 import {
   PSTAKE_BRIDGE_URL,
   BSC_BRIDGE_URL,
-  IMMUNEFI_WEB_URL,
   PSTAKE_APP_URL,
   BNB_URL,
   ATOM_URL,
-  IMMUNEFI_STK_ATOM_URL,
   ETH_URL,
   OSMO_URL,
   DYDX,
@@ -21,7 +19,6 @@ import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useOnClickOutside } from "../../../customHooks/useOnClickOutside";
 import { useWindowSize } from "../../../customHooks/useWindowSize";
 import Button from "../../atoms/button/Button";
-import OsmoHeader from ".././osmo-header";
 import GeofenceNotice from ".././geofence-banner";
 import LearnDropdown from "./learn-dropdown";
 import CommunityDropdown from "./community-dropdown";
@@ -65,15 +62,13 @@ const socialList = [
 const Header = () => {
   const { t } = useTranslation();
   const router = useRouter();
-  const [banner, setBanner] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [chevronChange, setChevronChange] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(true);
   };
 
-  const { isMobile, isLandScape } = useWindowSize();
+  const { isLandScape } = useWindowSize();
 
   const sideBarRef = useRef<HTMLUListElement>(null);
   useOnClickOutside(sideBarRef, () => {
@@ -92,18 +87,12 @@ const Header = () => {
     let topbar = document.getElementById("is-sticky") as HTMLElement;
     let navBar = document.getElementById("nav-bar") as HTMLElement;
     if (top > 50) {
-      setChevronChange(true);
       topbar.classList.add("topBar");
       navBar.classList.add("is-sticky");
     } else {
-      setChevronChange(false);
       topbar.classList.remove("topBar");
       navBar.classList.remove("is-sticky");
     }
-  };
-
-  const closeBanner = () => {
-    setBanner(false);
   };
 
   let appURL = "https://app.pstake.finance/";
@@ -287,22 +276,14 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      {!router.pathname.includes("/validators") ? (
-        <div id="is-sticky" className="top-bar w-full fixed z-[100]">
-          <GeofenceNotice />
-          <nav
-            className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
+      <div id="is-sticky" className="top-bar w-full fixed z-[100]">
+        <GeofenceNotice />
+        <nav
+          className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
             md:flex-wrap justify-start ${
-              router.pathname !== "/dydx" &&
-              router.pathname !== "/stars" &&
-              router.pathname !== "/osmo" &&
               router.pathname !== "/" &&
-              router.pathname !== "/atom" &&
               router.pathname !== "/bnb" &&
-              router.pathname !== "/eth" &&
-              router.pathname !== "/eth/testnet" &&
-              router.pathname !== "/btc" &&
               router.pathname !== "/pstake" &&
               router.pathname !== "/team" &&
               router.pathname !== "/roadmap"
@@ -310,205 +291,157 @@ const Header = () => {
                 : ""
             } ${router.pathname.split("/")[1]}
           `}
-            id="nav-bar"
-          >
-            <div className="container max-w-[1280px] mx-auto px-4 flex flex-wrap items-center justify-between ">
-              {router.pathname === "/" ||
-              router.pathname === "/pstake" ||
-              router.pathname === "/team" ||
-              router.pathname === "/roadmap" ? (
-                <LinkWithLocale
-                  className="bg-logoLight
-                      [.is-sticky_&]:bg-logoLight bg-[length:160px] w-[200px] h-[40px] bg-no-repeat bg-center"
-                  href="/"
-                />
-              ) : (
-                <LinkWithLocale
-                  className="bg-logoDark
-                      [.is-sticky_&]:bg-logoLight  bg-[length:160px] w-[200px] h-[40px]  bg-no-repeat bg-center"
-                  href="/"
-                />
-              )}
+          id="nav-bar"
+        >
+          <div className="container max-w-[1280px] mx-auto flex flex-wrap items-center justify-between ">
+            {router.pathname === "/" ||
+            router.pathname === "/pstake" ||
+            router.pathname === "/team" ||
+            router.pathname === "/roadmap" ? (
+              <LinkWithLocale
+                aria-label="logo"
+                className="bg-logoLight
+                      [.is-sticky_&]:bg-logoLight bg-[length:160px] md:bg-[length:140px] w-[160px] md:w-[140px] h-[40px] bg-no-repeat bg-center"
+                href="/"
+              />
+            ) : (
+              <LinkWithLocale
+                aria-label="logo"
+                className="bg-logoDark
+                      [.is-sticky_&]:bg-logoLight  bg-[length:160px]  md:bg-[length:140px] w-[160px] md:w-[140px] h-[40px]  bg-no-repeat bg-center"
+                href="/"
+              />
+            )}
 
-              <Button
-                className={`${
-                  router.pathname === "/"
-                    ? "[.is-sticky_&]:bg-[#EE972C]"
-                    : router.pathname === "/atom"
-                    ? "[.is-sticky_&]:bg-atomPrimary"
-                    : router.pathname === "/bnb"
-                    ? "[.is-sticky_&]:bg-bnbPrimary"
-                    : "[.is-sticky_&]:bg-[#EE972C]"
-                } -lg:hidden md:py-2 !py-2.5 md:text-sm`}
-                variant={"custom"}
-                onClick={toggleMenu}
-                id={"toggleButton"}
-                scale="lg"
-                isDisabled={false}
-                customButtonClass={`bg-black-800 text-light-high ${
-                  router.pathname === "/bnb"
-                    ? "[.is-sticky_&]:text-dark-high"
-                    : router.pathname === "/"
-                } text-[12px]`}
-              >
-                <Icon
-                  viewClass="w-[14px] h-[14px] fill-[#fff]"
-                  icon="hamberger"
-                />
-              </Button>
-              <div
-                className={`${
-                  isOpen ? "lg:transform-none" : "lg:-translate-x-full"
-                } lg:fixed lg:top-0 lg:left-0 md:z-40 lg:w-[100%] lg:h-screen lg:transition-transform lg:bg-[#141414]
+            <Button
+              aria-label="menu"
+              className={`${
+                router.pathname === "/"
+                  ? "[.is-sticky_&]:bg-[#EE972C]"
+                  : "[.is-sticky_&]:bg-[#EE972C]"
+              } -lg:hidden md:py-2 !py-2.5 md:text-sm`}
+              variant={"custom"}
+              onClick={toggleMenu}
+              id={"toggleButton"}
+              scale="lg"
+              isDisabled={false}
+              customButtonClass={`bg-black-800 text-light-high ${
+                router.pathname === "/bnb"
+                  ? "[.is-sticky_&]:text-dark-high"
+                  : router.pathname === "/"
+              } text-[12px]`}
+            >
+              <Icon
+                viewClass="w-[14px] h-[14px] fill-[#fff]"
+                icon="hamberger"
+              />
+            </Button>
+            <div
+              className={`${
+                isOpen ? "lg:transform-none" : "lg:-translate-x-full"
+              } lg:fixed lg:top-0 lg:left-0 md:z-40 lg:w-[100%] lg:h-screen lg:transition-transform lg:bg-[#141414]
                lg:basis-auto lg:basis-full lg:grow menu-open
                `}
-                id="navbarCollapse"
-              >
-                {isLandScape ? (
-                  <MobileHeader
-                    aboutList={aboutList}
-                    learnList={learnList}
-                    governanceList={governanceList}
-                    communityList={socialList}
-                    bridgeList={bridgeList}
-                    closeMenu={() => {
-                      setIsOpen(false);
-                    }}
-                    className={"-lg:hidden"}
-                  />
-                ) : (
-                  <ul
-                    className={`flex gap-[16px] items-center md:flex-row -md:ml-auto md:flex-col 
+              id="navbarCollapse"
+            >
+              {isLandScape ? (
+                <MobileHeader
+                  aboutList={aboutList}
+                  learnList={learnList}
+                  governanceList={governanceList}
+                  communityList={socialList}
+                  bridgeList={bridgeList}
+                  closeMenu={() => {
+                    setIsOpen(false);
+                  }}
+                  className={"-lg:hidden"}
+                />
+              ) : (
+                <ul
+                  className={`flex gap-[16px] items-center md:flex-row -md:ml-auto md:flex-col 
                 md:items-baseline md:fixed md:h-full md:left-0 md:bottom-0 md:p-2`}
-                  >
-                    <li className="nav-item nav__menu-item lg:hidden">
-                      <LearnDropdown
-                        learnList={learnList}
-                        isTablet={isLandScape}
-                      />
-                    </li>
-                    <li className="nav-item nav__menu-item lg:hidden">
-                      <AboutDropdown
-                        aboutList={aboutList}
-                        isTablet={isLandScape}
-                      />
-                    </li>
-                    <li className="nav-item nav__menu-item lg:hidden">
-                      <GoveranaceDropdown
-                        govList={governanceList}
-                        isTablet={isLandScape}
-                      />
-                    </li>
-                    <li className="nav-item nav__menu-item lg:hidden">
-                      <CommunityDropdown
-                        communityList={socialList}
-                        isTablet={isLandScape}
-                      />
-                    </li>
-                    {router.pathname === "/" ? (
-                      <li className="nav-item nav__menu-item lg:hidden">
-                        <BridgeDropdown
-                          list={bridgeList}
-                          isTablet={isLandScape}
-                        />
-                      </li>
-                    ) : null}
-                    {router.pathname === "/bnb" ||
-                    router.pathname === "/atom" ? (
-                      <li className="nav-item md:w-full md:mb-2">
-                        <ButtonLink
-                          className={`${
-                            router.pathname === "/bnb"
-                              ? "[.is-sticky_&]:bg-bnbPrimary"
-                              : " [.is-sticky_&]:bg-atomPrimary"
-                          } dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
-                          variant={"custom"}
-                          href={
-                            router.pathname === "/bnb"
-                              ? IMMUNEFI_WEB_URL
-                              : IMMUNEFI_STK_ATOM_URL
-                          }
-                          scale="lg"
-                          target={"_blank"}
-                          isDisabled={false}
-                          customButtonClass={"bg-black-800 text-light-high"}
-                        >
-                          <div
-                            className={`${
-                              router.pathname === "/bnb"
-                                ? "[.is-sticky_&]:bg-immunifyBlack"
-                                : ""
-                            } bg-immunefiWhite w-[90px] h-[18px] bg-no-repeat bg-center`}
-                          />
-                        </ButtonLink>
-                      </li>
-                    ) : (
-                      ""
-                    )}
+                >
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <LearnDropdown
+                      learnList={learnList}
+                      isTablet={isLandScape}
+                    />
+                  </li>
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <AboutDropdown
+                      aboutList={aboutList}
+                      isTablet={isLandScape}
+                    />
+                  </li>
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <GoveranaceDropdown
+                      govList={governanceList}
+                      isTablet={isLandScape}
+                    />
+                  </li>
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <CommunityDropdown
+                      communityList={socialList}
+                      isTablet={isLandScape}
+                    />
+                  </li>
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <BridgeDropdown list={bridgeList} isTablet={isLandScape} />
+                  </li>
 
-                    <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                      {router.pathname === "/" ||
-                      router.pathname === "/btc" ||
-                      router.pathname === "/pstake" ||
-                      router.pathname === "/team" ||
-                      router.pathname === "/roadmap" ? (
-                        <ButtonLink
-                          className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
-                          variant={"outline"}
-                          href={"https://app.btc.pstake.finance/"}
-                          scale="lg"
-                          target={"_blank"}
-                          isDisabled={false}
-                        >
-                          <span className="nav-link pophover tooltip-multiline app-btn">
-                            {t("STAKE_BITCOIN_NOW")}
-                          </span>
-                        </ButtonLink>
-                      ) : (
-                        <ButtonLink
-                          className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
-                          variant={"custom"}
-                          href={appURL}
-                          scale="lg"
-                          target={"_blank"}
-                          isDisabled={false}
-                          customButtonClass={`${
-                            router.pathname === "/bnb"
-                              ? "bg-bnbPrimary"
-                              : router.pathname === "/atom"
-                              ? "bg-atomPrimary"
-                              : router.pathname === "/osmo"
-                              ? "bg-osmoPrimaryButton text-light-high"
-                              : router.pathname === "/dydx"
-                              ? "bg-dydxPrimary text-light-high"
-                              : "bg-black-800 text-light-high"
-                          } ${
-                            router.pathname === "/bnb"
-                              ? "[.is-sticky_&]:text-dark-high"
-                              : router.pathname === "/"
-                          } text-[12px]`}
-                        >
-                          <span className="nav-link pophover tooltip-multiline app-btn uppercase">
-                            {t("LIQUID_STAKE_NOW")}
-                          </span>
-                        </ButtonLink>
-                      )}
-                    </li>
-                    <li className="nav-item nav__menu-item lg:hidden">
-                      <LangDropdown
-                        langList={langList.filter((item) => item)}
-                        isTablet={isLandScape}
-                      />
-                    </li>
-                  </ul>
-                )}
-              </div>
+                  <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
+                    {router.pathname === "/" ||
+                    router.pathname === "/pstake" ||
+                    router.pathname === "/team" ||
+                    router.pathname === "/roadmap" ? (
+                      <ButtonLink
+                        className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
+                        variant={"outline"}
+                        href={"https://app.btc.pstake.finance/"}
+                        scale="lg"
+                        target={"_blank"}
+                        isDisabled={false}
+                      >
+                        <span className="nav-link pophover tooltip-multiline app-btn">
+                          {t("STAKE_BITCOIN_NOW")}
+                        </span>
+                      </ButtonLink>
+                    ) : (
+                      <ButtonLink
+                        className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
+                        variant={"custom"}
+                        href={appURL}
+                        scale="lg"
+                        target={"_blank"}
+                        isDisabled={false}
+                        customButtonClass={`${
+                          router.pathname === "/bnb"
+                            ? "bg-bnbPrimary"
+                            : "bg-black-800 text-light-high"
+                        } ${
+                          router.pathname === "/bnb"
+                            ? "[.is-sticky_&]:text-dark-high"
+                            : router.pathname === "/"
+                        } text-[12px]`}
+                      >
+                        <span className="nav-link pophover tooltip-multiline app-btn uppercase">
+                          {t("LIQUID_STAKE_NOW")}
+                        </span>
+                      </ButtonLink>
+                    )}
+                  </li>
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <LangDropdown
+                      langList={langList.filter((item) => item)}
+                      isTablet={isLandScape}
+                    />
+                  </li>
+                </ul>
+              )}
             </div>
-          </nav>
-        </div>
-      ) : (
-        <OsmoHeader />
-      )}
+          </div>
+        </nav>
+      </div>
     </React.Fragment>
   );
 };
