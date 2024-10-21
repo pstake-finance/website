@@ -65,7 +65,6 @@ export interface InitialDataSliceState {
 }
 
 export interface InitialDataSliceActions {
-  fetchBTCTvl: () => Promise<void>;
   fetchTVLList: () => Promise<void>;
   fetchTokenPrices: () => Promise<void>;
   fetchMarketCap: () => Promise<void>;
@@ -104,12 +103,6 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
   set
 ) => ({
   ...initialState,
-  fetchBTCTvl: async () => {
-    const valResponse = await getBTCTvl();
-    set((state) => ({
-      btcTvl: valResponse,
-    }));
-  },
   fetchTVLList: async () => {
     console.log("fetch-tvl");
     getCosmosTVL("cosmos").then((response) => {
@@ -172,7 +165,7 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       set((state) => ({
         tvlList: {
           ...state.tvlList,
-          btc: response,
+          btc: Number(response) + Number(100), // Institutional TVL,
         },
       }));
     });
