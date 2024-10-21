@@ -111,6 +111,7 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
     }));
   },
   fetchTVLList: async () => {
+    console.log("fetch-tvl");
     getCosmosTVL("cosmos").then((response) => {
       set((state) => ({
         tvlList: {

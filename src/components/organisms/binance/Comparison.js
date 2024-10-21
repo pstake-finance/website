@@ -16,7 +16,7 @@ const Comparison = () => {
     {
       title: "APR (after fees)",
       staking: "Upto ~3.5%",
-      liquidStake: "--",
+      liquidStake: "2.33%",
     },
     {
       title: "Minimum BNB Requirement",

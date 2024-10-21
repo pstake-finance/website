@@ -76,6 +76,7 @@ export const getCosmosTVL = async (prefix: string) => {
 export const getBnbTVL = async () => {
   try {
     const tvl = await sdkInstance.getTvl();
+    console.log(tvl, "tvl-bnb");
     return Number(StkBNBWebSDK.format(tvl, 2));
   } catch (e) {
     console.log(e);
