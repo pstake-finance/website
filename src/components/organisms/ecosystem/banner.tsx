@@ -43,13 +43,15 @@ const Banner = () => {
   const { t } = useTranslation("common");
   return (
     <div className="text-center aos-init aos-animate bg-[#141414] bg-cover bg-center bg-no-repeat ">
-      <div className="pt-[150px] -2xl:pt-[300px] pb-[80px] max-w-[1280px] container mx-auto">
+      <div className="pt-[140px] -2xl:pt-[200px] pb-[80px] max-w-[1200px] container mx-auto">
         <div className={"flex items-center"}>
           <div className={"flex-1"}>
-            <h1 className="max-w-[640px] break-words text-[40px] md:text-[20px] md:leading-[32px] lg:text-4xl font-bold leading-[60px] text-left text-[#FCFCFC] mb-3">
-              Democraticizing Bitcoin Yields
+            <h1 className="max-w-[616px] break-words text-[60px] leading-[74px] md:text-[20px] md:leading-[34px] lg:text-[72px] font-bold  text-left text-[#FCFCFC] mb-3">
+              Democraticizing
+              <br />
+              Bitcoin Yields
             </h1>
-            <h6 className="text-[18px] md:text-[14px] text-[#D5D5D5] text-left mb-10 max-w-[600px] break-words">
+            <h6 className="text-[16px] md:text-[14px] text-[#ADADAD] text-left mb-10 max-w-[600px] break-words">
               pSTAKE offers a secure and reliable BTC yield experience by
               partnering with the leading teams in the Bitcoin landscape.
             </h6>

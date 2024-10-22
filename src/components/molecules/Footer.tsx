@@ -110,69 +110,8 @@ const Footer = () => {
   return (
     <>
       {!router.pathname.includes("/validators") ? (
-        <div className={`aos-init aos-animate ${router.pathname}`}>
-          {router.pathname !== "/team" && router.pathname !== "/roadmap" ? (
-            <>
-              <div className="sectionContainer py-[80px] md:py-[40px]">
-                <p className="text-[40px] md:text-[32px] text-center font-bold mb-0 text-[#FEFEFE] mb-[50px]">
-                  {t("FOOTER_TITLE")}
-                </p>
-                <p
-                  className={
-                    "text-[20px] md:text-[16px] text-center max-w-[700px] mx-auto text-[#D5D5D5]  hidden"
-                  }
-                >
-                  {t("FOOTER_SUB_TITLE")}
-                </p>
-                <div>
-                  <div className="max-w-[1000px] mx-auto mb-12">
-                    <div className="grid grid-cols-2 gap-4">
-                      {list.map((item, index) => (
-                        <a
-                          key={index}
-                          href={item.url}
-                          target="_blank"
-                          className={`md:block bg-[#1B1B1B] border border-[#1B1B1B] hover:border hover:border-[#EE972C] flex items-center md:p-4 p-6 rounded-xl group`}
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={getLogoUrl(item.image)}
-                            title={item.image}
-                            alt={item.image}
-                            className="w-[46px] h-[46px] mx-2  md:mb-3 "
-                          />
-                          <div className="">
-                            <p className="font-semibold text-base leading-normal text-light-full">
-                              {item.name}
-                            </p>
-                            <p className="font-medium text-sm md:text-xsm leading-normal text-[#D1D1D1]">
-                              {item.text}
-                            </p>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={"py-[60px] bg-[#1B1B1B]"}>
-                <p
-                  className={
-                    "text-[40px] md:text-[16px] text-[#FCFCFC] font-semibold max-w-[1140px] px-[20px] mx-auto text-center mb-6"
-                  }
-                >
-                  {t("HOME_QUOTE_CONTENT")}{" "}
-                  <span className={"text-[#EE972C]"}>
-                    {t("HOME_QUOTE_CONTENT1")}{" "}
-                  </span>
-                  {t("HOME_QUOTE_CONTENT2")}
-                </p>
-              </div>
-              <FooterBottom />
-            </>
-          ) : (
-            <FooterBottom />
-          )}
+        <div className={`aos-init aos-animate pt-[40px] ${router.pathname}`}>
+          <FooterBottom />
         </div>
       ) : (
         <div className={"bg-[#030303] py-[30px]"}>

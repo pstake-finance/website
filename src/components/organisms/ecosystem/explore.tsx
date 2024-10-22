@@ -43,13 +43,13 @@ const Explore = () => {
   const [activeFilterList, setActiveFilterList] = useState<{
     [key in string]: boolean;
   }>({
-    data_tooling: false,
+    data_tooling: true,
     security: false,
     institutions: false,
     exchanges: false,
     wallets: false,
     interoperability: false,
-    bitcoin_yields: true,
+    bitcoin_yields: false,
   });
   const [totalData, setTotalData] = useState<any>([]);
 
@@ -100,23 +100,24 @@ const Explore = () => {
   };
   return (
     <div
-      className="max-w-[1200px] mx-auto aos-init aos-animate"
+      className="max-w-[1240px] mx-auto aos-init aos-animate"
       data-aos="fade-up"
     >
-      <div className="container t">
+      <div className="container">
         <h3 className="sectionTitle mb-[60px] md:mb-6 max-w-[1060px] mx-auto">
           Explore the pSTAKE Bitcoin Ecosystem
         </h3>
-        <div className={"flex gap-[40px] items-star"}>
+        <div className={"flex gap-[40px] items-star lg:block"}>
           <FilterList
             activeFilterList={activeFilterList}
             setActiveFilterList={setActiveFilterList}
             dropDownList={dropDownList}
           />
           <div className={"flex-1"}>
-            <div className={"flex items-center gap-4 flex-wrap mb-4"}>
+            <div className={"flex items-center gap-4 flex-wrap mb-[40px]"}>
               <Button
-                className={`!rounded-[8px] w-[120px] !bg-[#202020] border-0 !text-[#FEFEFE] md:py-2 !py-2 md:text-sm !text-[18px] !font-normal`}
+                className={`!rounded-[8px] w-[120px] !bg-[#202020] border-0
+                 !text-[#FEFEFE] md:py-2 !py-2 md:text-sm !text-[16px] !font-medium`}
                 variant={"custom"}
                 scale="lg"
                 isDisabled={false}
@@ -129,7 +130,7 @@ const Explore = () => {
                   <div
                     key={key}
                     className={
-                      "w-fit flex items-center !rounded-[8px] !bg-[#F6931A] border-0 !text-[#FEFEFE] md:py-2 !py-2 md:text-sm px-4 !text-[18px] !font-normal"
+                      "w-fit flex items-center !rounded-[8px] !bg-[#F6931A] border-0 !text-[#FEFEFE] md:py-2 !py-2 md:text-sm px-4 text-[16px] !font-semibold"
                     }
                   >
                     {item.name}
@@ -146,18 +147,20 @@ const Explore = () => {
                 ) : null
               )}
               <div
-                className={`cursor-pointer !text-[#FEFEFE] md:!text-[12px] !p-0 !text-[18px] !font-normal`}
+                className={`cursor-pointer !text-[#FEFEFE] md:!text-[12px] !p-0 !text-[16px] !font-semibold`}
                 onClick={clearAllHandler}
               >
                 Clear All
               </div>
             </div>
-            <div className={"flex-1 flex flex-wrap gap-[24px]"}>
+            <div
+              className={"flex-1 flex flex-wrap gap-[24px] lg:justify-center"}
+            >
               {totalData.map((item: any, key: number) => (
                 <div
                   key={key}
                   className={
-                    "w-[280px] p-6 rounded-[10px] bg-[#1B1B1B] border-[1px] border-transparent hover:border-[#EE972C]"
+                    "w-[290px] h-[200px] p-6 rounded-[10px] bg-[#1B1B1B] border-[1px] border-transparent hover:border-[#EE972C]"
                   }
                 >
                   <div className={"flex items-center mb-5"}>
