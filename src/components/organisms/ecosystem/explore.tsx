@@ -40,7 +40,6 @@ const dropDownList = [
 
 const Explore = () => {
   const { t } = useTranslation();
-  const list: any = getList(t);
   const [activeFilterList, setActiveFilterList] = useState<{
     [key in string]: boolean;
   }>({
@@ -55,6 +54,8 @@ const Explore = () => {
   const [totalData, setTotalData] = useState<any>([]);
 
   useEffect(() => {
+    const list: any = getList(t);
+
     const filteredData: any[] = [];
     const activeCountKeys = Object.keys(activeFilterList);
     let initialActiveList = [];
@@ -66,7 +67,7 @@ const Explore = () => {
     });
     console.log(filteredData, "filteredData");
     setTotalData(filteredData);
-  }, [list, activeFilterList]);
+  }, [activeFilterList]);
 
   const clearAllHandler = () => {
     setActiveFilterList({
