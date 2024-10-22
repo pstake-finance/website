@@ -3,7 +3,7 @@ import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import { useTranslation } from "next-export-i18n";
 import Icon from "../../molecules/Icon";
 import FilterList from "./filter-list";
-import { list } from "./list";
+import { getList } from "./list";
 import Image from "next/image";
 import Button from "../../atoms/button/Button";
 
@@ -40,6 +40,7 @@ const dropDownList = [
 
 const Explore = () => {
   const { t } = useTranslation();
+  const list: any = getList(t);
   const [activeFilterList, setActiveFilterList] = useState<{
     [key in string]: boolean;
   }>({

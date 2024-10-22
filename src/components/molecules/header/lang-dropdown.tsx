@@ -56,11 +56,7 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
         trigger={isTablet ? "click" : "hover"}
       >
         <button
-          className={` [.is-sticky_&]:text-[#D5D5D5] flex items-center ${
-            router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team" || router.pathname === "/roadmap"
-              ? "text-[#D5D5D5] hover:!bg-[#C732381A] hover:text-light-high"
-              : ""
-          } ${
+          className={` [.is-sticky_&]:text-[#D5D5D5] flex items-center text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high ${
             router.pathname === "/btc"
               ? "text-[#000] hover:!bg-[#EE972C33]"
               : ""
@@ -76,7 +72,10 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
           {activeLang?.code}
           <Icon
             viewClass={` ${
-              (router.pathname === "/" || router.pathname === "/pstake" ||  router.pathname === "/team" || router.pathname === "/roadmap")
+              router.pathname === "/" ||
+              router.pathname === "/pstake" ||
+              router.pathname === "/team" ||
+              router.pathname === "/roadmap"
                 ? "fill-[#fff] "
                 : "fill-[#181818]  [.is-sticky_&]:fill-[#fff]"
             } dropDownIcon !w-[13px] ml-[6px]  group-hover:fill-[#C73238] rotate-90`}

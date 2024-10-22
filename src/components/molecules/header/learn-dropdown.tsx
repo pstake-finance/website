@@ -88,14 +88,7 @@ const LearnDropdown = ({ learnList, isTablet }: Props) => {
         trigger={isTablet ? "click" : "hover"}
       >
         <button
-          className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
-            router.pathname === "/" ||
-            router.pathname === "/pstake" ||
-            router.pathname === "/team" ||
-            router.pathname === "/roadmap"
-              ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
-              : ""
-          } ${
+          className={` [.is-sticky_&]:text-[#D5D5D5] !block text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high ${
             router.pathname === "/btc"
               ? "text-[#000] hover:!bg-[#EE972C33]"
               : ""

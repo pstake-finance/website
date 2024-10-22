@@ -281,37 +281,17 @@ const Header = () => {
         <nav
           className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
-            md:flex-wrap justify-start ${
-              router.pathname !== "/" &&
-              router.pathname !== "/bnb" &&
-              router.pathname !== "/pstake" &&
-              router.pathname !== "/team" &&
-              router.pathname !== "/roadmap"
-                ? "bg-white-emphasis"
-                : ""
-            } ${router.pathname.split("/")[1]}
+            md:flex-wrap justify-start  ${router.pathname.split("/")[1]}
           `}
           id="nav-bar"
         >
           <div className="container max-w-[1280px] mx-auto flex flex-wrap items-center justify-between ">
-            {router.pathname === "/" ||
-            router.pathname === "/pstake" ||
-            router.pathname === "/team" ||
-            router.pathname === "/roadmap" ? (
-              <LinkWithLocale
-                aria-label="logo"
-                className="bg-logoLight
+            <LinkWithLocale
+              aria-label="logo"
+              className="bg-logoLight
                       [.is-sticky_&]:bg-logoLight bg-[length:160px] md:bg-[length:140px] w-[160px] md:w-[140px] h-[40px] bg-no-repeat bg-center"
-                href="/"
-              />
-            ) : (
-              <LinkWithLocale
-                aria-label="logo"
-                className="bg-logoDark
-                      [.is-sticky_&]:bg-logoLight  bg-[length:160px]  md:bg-[length:140px] w-[160px] md:w-[140px] h-[40px]  bg-no-repeat bg-center"
-                href="/"
-              />
-            )}
+              href="/"
+            />
 
             <Button
               aria-label="menu"
