@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import Header from "../components/molecules/header";
 import * as gtag from "../utils/gtag";
 import "../styles/globals.css";
+import "rc-tooltip/assets/bootstrap.css";
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
