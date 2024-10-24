@@ -57,6 +57,8 @@
     "ETH_TO_BLAST_BRIDGE_HELPER_TEXT": "PSTAKE를 Blast Chain으로 브리지",
     "ETH_TO_OPTIMISM_BRIDGE": "ETH -> Optimism 브리지",
     "ETH_TO_OPTIMISM_BRIDGE_HELPER_TEXT": "PSTAKE를 Optimism으로 브리지",
+    "ETH_TO_SUI_BRIDGE": "ETH to Sui Bridge",
+    "ETH_TO_SUI_BRIDGE_HELPER_TEXT": "Bridge PtSTAKE to Sui Network",
     "EXPLORE_GOVERNANCE": "거버넌스 살펴보기",
     "ABOUT": "알아보기",
     "NAV_LEARN_1_TITLE": "비트코인 유동성 스테이킹",
@@ -197,6 +199,8 @@
 
     "NAV_LEARN_5_TITLE": "로드맵",
     "NAV_LEARN_5_SUB_TITLE": "pSTAKE가 어떻게 비트코인 ​​리퀴드 스테이킹 수익을 모든 사람에게 제공하는지 알아보세요.",
+    "NAV_LEARN_6_TITLE": "Ecosystem",
+    "NAV_LEARN_6_SUB_TITLE": "Explore pSTAKE’s BTCfi Ecosystem",
     "NAV_ABOUT_6_TITLE": "팀",
     "NAV_ABOUT_6_SUB_TITLE": "pSTAKE를 통해 Bitcoin Liquid Stake에 기여한 사람들에 대해 알아보세요",
     "NAV_ABOUT_7_TITLE": "$PSTAKE 토큰 ",

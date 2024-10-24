@@ -57,6 +57,9 @@
     "ETH_TO_BLAST_BRIDGE_HELPER_TEXT": "桥梁 PSTAKE 到爆炸链",
     "ETH_TO_OPTIMISM_BRIDGE": "ETH 走向乐观之桥",
     "ETH_TO_OPTIMISM_BRIDGE_HELPER_TEXT": "PSTAKE 桥梁向乐观",
+    "ETH_TO_SUI_BRIDGE": "ETH to Sui Bridge",
+    "ETH_TO_SUI_BRIDGE_HELPER_TEXT": "Bridge PtSTAKE to Sui Network",
+
 
     "EXPLORE_GOVERNANCE": "探索治理",
     "ABOUT": "关于",
@@ -207,6 +210,8 @@
     "PRIVACY_POLiCY": "Privacy Policy",
     "NAV_LEARN_5_TITLE": "路线图",
     "NAV_LEARN_5_SUB_TITLE": "了解 pSTAKE 如何为每个人带来比特币流动性质押收益",
+    "NAV_LEARN_6_TITLE": "Ecosystem",
+    "NAV_LEARN_6_SUB_TITLE": "Explore pSTAKE’s BTCfi Ecosystem",
     "NAV_ABOUT_6_TITLE": "团队",
     "NAV_ABOUT_6_SUB_TITLE": "通过 pSTAKE 了解比特币流动性质押的贡献者",
     "NAV_ABOUT_7_TITLE": "$PSTAKE 代币 ",

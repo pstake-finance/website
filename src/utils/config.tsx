@@ -4,6 +4,7 @@ export const PSTAKE_BRIDGE_URL = "https://bridge.persistence.one/";
 export const BSC_BRIDGE_URL = "https://cbridge.celer.network/56/1/PSTAKE";
 export const BLAST_BRIDGE_URL = "https://cbridge.celer.network/1/81457/PSTAKE";
 export const OPTIMISM_BRIDGE_URL = "https://superbridge.app/optimism";
+export const SUI_BRIDGE_URL = "https://superbridge.app/optimism";
 export const PSTAKE_MEDIUM_URL =
   "https://blog.pstake.finance/?utm_source=pstake_website&utm_medium=pstake&utm_campaign=pstake_liquid_staking";
 export const DISCORD_URL = "https://discord.gg/2ek5rUyT8x";

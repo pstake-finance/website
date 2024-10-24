@@ -12,6 +12,7 @@ import {
   DYDX,
   BLAST_BRIDGE_URL,
   OPTIMISM_BRIDGE_URL,
+  SUI_BRIDGE_URL,
 } from "../../../utils/config";
 import { useTranslation, LinkWithLocale } from "next-export-i18n";
 import Icon from "../Icon";
@@ -229,10 +230,10 @@ const Header = () => {
       subText: t("ETH_TO_BASE_BRIDGE_HELPER_TEXT"),
     },
     {
-      imgUrl: "/images/networks/atom.svg",
-      optionName: t("ETH_TO_COSMOS_BRIDGE"),
-      optionLink: PSTAKE_BRIDGE_URL,
-      subText: t("ETH_TO_COSMOS_BRIDGE_HELPER_TEXT"),
+      imgUrl: "/images/networks/sui.svg",
+      optionName: t("ETH_TO_SUI_BRIDGE"),
+      optionLink: SUI_BRIDGE_URL,
+      subText: t("ETH_TO_SUI_BRIDGE_HELPER_TEXT"),
     },
     {
       imgUrl: "/images/networks/bnb.svg",
@@ -251,6 +252,12 @@ const Header = () => {
       optionName: t("ETH_TO_OPTIMISM_BRIDGE"),
       optionLink: OPTIMISM_BRIDGE_URL,
       subText: t("ETH_TO_OPTIMISM_BRIDGE_HELPER_TEXT"),
+    },
+    {
+      imgUrl: "/images/networks/atom.svg",
+      optionName: t("ETH_TO_COSMOS_BRIDGE"),
+      optionLink: PSTAKE_BRIDGE_URL,
+      subText: t("ETH_TO_COSMOS_BRIDGE_HELPER_TEXT"),
     },
   ];
 

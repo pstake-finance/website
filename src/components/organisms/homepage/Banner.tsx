@@ -85,7 +85,7 @@ const Banner = () => {
           <div className={"flex flex-wrap pt-4 md:justify-start lg:block"}>
             <div
               className={
-                "pr-8 lg:border-r-0 lg:border-b-[0.5px] border-r border-[#FCFCFC] lg:border-[#fcfcfc59] md:flex-1 lg:pb-4"
+                "pr-8 lg:border-r-0 lg:border-b-[0.5px] lg:border-[#fcfcfc59] md:flex-1 lg:pb-4"
               }
             >
               <p className="text-light-high font-bold text-[44px] md:text-[24px] text-left">
@@ -108,61 +108,6 @@ const Banner = () => {
                 }
               >
                 {t("TOTAL_VALUE_UNLOCKED")}
-              </p>
-            </div>
-            <div
-              className={
-                "pl-8 md:pl-0 lg:border-0 border-l border-[#FCFCFC] pt-4"
-              }
-            >
-              <div className="flex items-center justify-start pb-3 lg:justify-start">
-                {netWorkList.map((item, index) => (
-                  <Tooltip
-                    key={index}
-                    placement="top"
-                    showArrow
-                    overlayStyle={{
-                      opacity: 1,
-                    }}
-                    overlay={
-                      <span className={"text-sm text-light-high font-light"}>
-                        {item.tooltip}
-                      </span>
-                    }
-                  >
-                    {item.link === "" ? (
-                      <img
-                        src={item.logoUrl}
-                        alt={"atom"}
-                        width={36}
-                        height={36}
-                        className={`${index !== 0 ? "mx-2" : "mr-2"}`}
-                      />
-                    ) : (
-                      <a
-                        className={`hover:cursor-pointer `}
-                        href={item.link}
-                        target={"_blank"}
-                        rel="noreferrer"
-                      >
-                        <img
-                          src={item.logoUrl}
-                          alt={"atom"}
-                          width={36}
-                          height={36}
-                          className={`${index !== 0 ? "mx-2" : "mr-2"}`}
-                        />
-                      </a>
-                    )}
-                  </Tooltip>
-                ))}
-              </div>
-              <p
-                className={
-                  "text-[#D5D5D5] text-[18px] md:text-[14px] text-left"
-                }
-              >
-                {t("SUPPORTED_Assets")}
               </p>
             </div>
           </div>
