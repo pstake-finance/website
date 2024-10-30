@@ -605,5 +605,8 @@
         <symbol fill="none" viewBox="0 0 14 14" id="icon-check">
             <path d="M2.9165 7.00016L5.83317 9.91683L11.6665 4.0835" stroke="#F6931A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </symbol>
+        <symbol fill="none"  viewBox="0 0 40 12" id="icon-reverse_arrow">
+            <path d="M0 6.12012L10 11.8936V0.346614L0 6.12012ZM40 5.12012L9 5.12012V7.12012L40 7.12012V5.12012Z" fill="#F7931A"></path>
+        </symbol>
     </defs>
 </svg>

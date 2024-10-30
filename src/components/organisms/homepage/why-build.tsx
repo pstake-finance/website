@@ -15,16 +15,22 @@ const Reasons = () => {
       ),
       image: "/images/btc/building_asset1.svg",
       content: t("BTC_WHY_BUILD_CONTENT_1"),
+      highlight: t("BTC_WHY_BUILD_CONTENT_1_HIGHLIGHT"),
+      direction: "normal",
     },
     {
       title: t("BTC_WHY_BUILD_TITLE_2"),
       image: "/images/btc/building_asset2.svg",
       content: t("BTC_WHY_BUILD_CONTENT_2"),
+      highlight: t("BTC_WHY_BUILD_CONTENT_2_HIGHLIGHT"),
+      direction: "reverse",
     },
     {
       title: t("BTC_WHY_BUILD_TITLE_3"),
       image: "/images/btc/building_asset3.svg",
       content: t("BTC_WHY_BUILD_CONTENT_3"),
+      highlight: t("BTC_WHY_BUILD_CONTENT_3_HIGHLIGHT"),
+      direction: "normal",
     },
   ];
   return (
@@ -33,7 +39,7 @@ const Reasons = () => {
         <h3 className="sectionTitle mb-8 md:mb-6 max-w-[1060px] mx-auto">
           {t("BTC_WHY_BUILD_HEADING")}
         </h3>
-        <div className="flex flex-wrap gap-5 md:block">
+        <div className="">
           {list.map((item, index) => (
             <div
               className="flex-1 mt-4 pt-12 md:pt-4"
@@ -41,22 +47,23 @@ const Reasons = () => {
               key={index}
             >
               <div
-                className="bg-[#1B1B1B] h-full
-              rounded-md shadow-md"
+                className={` h-full flex gap-[30px]
+              rounded-md ${
+                item.direction === "reverse" ? "flex-row-reverse" : "flex-row"
+              }`}
               >
-                <div className="h-auto">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className={"w-full h-full"}
-                  />
+                <div className="w-[481px] h-[360px] relative">
+                  <Image src={item.image} alt={item.title} fill />
                 </div>
-                <div className="content md:p-4 px-8 py-4">
-                  <p className="font-semibold leading-snug text-[26px] text-light-high mb-6 md:text-lg">
+                <div className="content flex-1 pt-[32px]">
+                  <p className="font-semibold leading-snug text-[40px] text-light-high mb-6 md:text-lg">
                     {item.title}
                   </p>
                   <p className="font-normal text-[18px] leading-loose text-[#E0E0E0]">
                     {item.content}
+                  </p>
+                  <p className="font-bold text-[24px] leading-loose text-[#EE972C]">
+                    {item.highlight}
                   </p>
                 </div>
               </div>
