@@ -96,6 +96,11 @@ const ValidatorsList = () => {
       }
       setUpdatedTime(dd!);
       setBaseList(validatorsInfo.xprt.list);
+      console.log(
+        validatorsInfo,
+        "validatorsInfo-validatorsInfo",
+        typeof validatorsInfo.xprt.list
+      );
       setDataList(validatorsInfo.xprt.list);
     }
   }, [validatorsInfo]);
@@ -239,7 +244,9 @@ const ValidatorsList = () => {
               </div>
             </div>
           </div>
-          {!validatorsInfo.xprt.loader && dataList.length > 0 ? (
+          {!validatorsInfo.xprt.loader &&
+          dataList.length > 0 &&
+          Array.isArray(dataList) ? (
             <ValidatorTable data={dataList} columns={columns} />
           ) : (
             <EmptyTable
