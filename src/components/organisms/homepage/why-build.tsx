@@ -7,12 +7,7 @@ const Reasons = () => {
   const { t } = useTranslation();
   const list = [
     {
-      title: (
-        <>
-          {t("BTC_WHY_BUILD_TITLE_1")}{" "}
-          <span className={"invisible"}>BTC_WHY_BUILD_TITLE_1 </span>
-        </>
-      ),
+      title: <>{t("BTC_WHY_BUILD_TITLE_1")} </>,
       image: "/images/btc/building_asset1.svg",
       content: t("BTC_WHY_BUILD_CONTENT_1"),
       highlight: t("BTC_WHY_BUILD_CONTENT_1_HIGHLIGHT"),
