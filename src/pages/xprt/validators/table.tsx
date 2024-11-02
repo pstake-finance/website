@@ -7,7 +7,7 @@ import { TableProps } from "../../../components/molecules/table/types";
 import { useSortableTable } from "../../../customHooks/useSortableTable";
 import { useApp } from "../../../context/appContext";
 
-const ValidatorTable = ({ data, columns }: TableProps) => {
+const ValidatorTable = ({ data = [], columns = [] }: TableProps) => {
   const { xprtData } = useApp();
   const [tableData, handleSorting] = useSortableTable(data, columns);
   const updateData: any[] = [];
