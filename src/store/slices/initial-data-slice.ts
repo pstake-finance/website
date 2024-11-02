@@ -7,6 +7,7 @@ import {
   getTokenPrices,
 } from "../../pages/api/api";
 import { decimalizeRaw } from "../../utils/helpers";
+import { getXprtValidators } from "../../pages/api/onChain";
 
 export interface ValidatorInfo {
   identity: string;
@@ -62,12 +63,18 @@ export interface InitialDataSliceState {
     HUAHUA: number;
     BTC: number;
   };
+  validatorsInfo: ValidatorsInfo;
+  validatorsInfoLoader: {
+    name: string;
+    loader: boolean;
+  };
 }
 
 export interface InitialDataSliceActions {
   fetchTVLList: () => Promise<void>;
   fetchTokenPrices: () => Promise<void>;
   fetchMarketCap: () => Promise<void>;
+  fetchXprtValidatorsData: (chainID: string, env: string) => Promise<void>;
   resetInitialDataSlice: () => void;
 }
 
@@ -83,6 +90,31 @@ const initialState: InitialDataSliceState = {
     stars: 0,
     btc: 0,
     bnb: 0,
+  },
+  validatorsInfo: {
+    osmo: [],
+    dydx: [],
+    cosmos: {
+      list: [],
+      loader: false,
+    },
+    stars: [],
+    xprt: {
+      list: [],
+      loader: false,
+    },
+    bld: {
+      list: [],
+      loader: false,
+    },
+    huahua: {
+      list: [],
+      loader: false,
+    },
+  },
+  validatorsInfoLoader: {
+    name: "",
+    loader: false,
   },
   tokenPrices: {
     BNB: 0,
@@ -174,6 +206,27 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
     const valResponse = await getTokenPrices();
     set((state) => ({
       tokenPrices: valResponse,
+    }));
+  },
+  fetchXprtValidatorsData: async (chainID, env) => {
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        xprt: {
+          ...state.validatorsInfo.xprt,
+          loader: true,
+        },
+      },
+    }));
+    const valResponse = await getXprtValidators(chainID, env);
+    set((state) => ({
+      validatorsInfo: {
+        ...state.validatorsInfo,
+        xprt: {
+          list: valResponse,
+          loader: false,
+        },
+      },
     }));
   },
   fetchMarketCap: async () => {

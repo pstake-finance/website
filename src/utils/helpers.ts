@@ -3,6 +3,8 @@ import _ from "lodash";
 import { Decimal } from "@cosmjs/math";
 import { ethers } from "ethers";
 import { StkBNBWebSDK } from "@persistenceone/stkbnb-web-sdk";
+import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 
 export function satsToBtc(
   value: number | string,
@@ -84,6 +86,12 @@ export const decimalize = (valueString: any, decimals = 6) => {
     decimals
   ).toString();
 };
+
+export async function RpcClient(rpc: string) {
+  const tendermintClient = await Tendermint34Client.connect(rpc);
+  const queryClient = new QueryClient(tendermintClient);
+  return createProtobufRpcClient(queryClient);
+}
 
 export const decimalizeRaw = (valueString: any, decimals = 6) => {
   return Decimal.fromAtomics(valueString, decimals).toString();
