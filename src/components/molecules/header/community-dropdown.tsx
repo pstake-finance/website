@@ -84,6 +84,7 @@ const CommunityDropdown = ({ communityList, isTablet }: Props) => {
       <button
         className={` [.is-sticky_&]:text-[#D5D5D5] !block  ${
           router.pathname === "/" ||
+          router.pathname.includes("validators") ||
           router.pathname === "/pstake" ||
           router.pathname === "/team" ||
           router.pathname === "/roadmap"

@@ -47,6 +47,36 @@ export const getTokenPrices = async () => {
   }
 };
 
+export const fetchTokenPrices = async () => {
+  let data = {
+    BNB: 0,
+    ATOM: 0,
+    OSMO: 0,
+    DYDX: 0,
+    STARS: 0,
+    XPRT: 0,
+    BLD: 0,
+    HUAHUA: 0,
+    BTC: 0,
+  };
+  try {
+    const response = await fetch(`/api/prices`);
+    const pricesResponse = await response.json();
+    data.BNB = Number(pricesResponse.data["binancecoin"].usd);
+    data.ATOM = Number(pricesResponse.data["cosmos"].usd);
+    data.OSMO = Number(pricesResponse.data["osmosis"].usd);
+    data.DYDX = Number(pricesResponse.data["dydx-chain"].usd);
+    data.STARS = Number(pricesResponse.data["stargaze"].usd);
+    data.XPRT = Number(pricesResponse.data["persistence"].usd);
+    data.BLD = Number(pricesResponse.data["agoric"].usd);
+    data.HUAHUA = Number(pricesResponse.data["chihuahua-token"].usd);
+    data.BTC = Number(pricesResponse.data["bitcoin"].usd);
+    return data;
+  } catch (e) {
+    return data;
+  }
+};
+
 export const getCosmosTVL = async (prefix: string) => {
   try {
     const res = await Axios.get(

@@ -282,6 +282,7 @@ const Header = () => {
           className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
             md:flex-wrap justify-start ${
+              router.pathname !== "/xprt/validators" &&
               router.pathname !== "/" &&
               router.pathname !== "/bnb" &&
               router.pathname !== "/pstake" &&
@@ -295,6 +296,7 @@ const Header = () => {
         >
           <div className="container max-w-[1280px] mx-auto flex flex-wrap items-center justify-between ">
             {router.pathname === "/" ||
+            router.pathname.includes("validators") ||
             router.pathname === "/pstake" ||
             router.pathname === "/team" ||
             router.pathname === "/roadmap" ? (

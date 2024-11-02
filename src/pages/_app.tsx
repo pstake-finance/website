@@ -10,6 +10,7 @@ import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Head from "next/head";
+import AppProvider from "../context/appContext";
 
 const App = ({ Component, pageProps }: any) => {
   useEffect(() => {
@@ -58,7 +59,9 @@ const App = ({ Component, pageProps }: any) => {
         />
       </Head>
       <Header />
-      <Component {...pageProps} />
+      <AppProvider>
+        <Component {...pageProps} />
+      </AppProvider>
     </>
   );
 };
