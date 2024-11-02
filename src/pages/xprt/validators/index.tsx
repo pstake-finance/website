@@ -96,11 +96,6 @@ const ValidatorsList = () => {
       }
       setUpdatedTime(dd!);
       setBaseList(validatorsInfo.xprt.list);
-      console.log(
-        validatorsInfo,
-        "validatorsInfo-validatorsInfo",
-        typeof validatorsInfo.xprt.list
-      );
       setDataList(validatorsInfo.xprt.list);
     }
   }, [validatorsInfo]);

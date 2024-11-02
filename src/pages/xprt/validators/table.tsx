@@ -9,7 +9,6 @@ import { useApp } from "../../../context/appContext";
 
 const ValidatorTable = ({ data = [], columns = [] }: TableProps) => {
   const { xprtData } = useApp();
-  console.log(data, "data--s", typeof data);
   const [tableData, handleSorting] = useSortableTable(data, columns);
   const updateData: any[] = [];
   tableData.length
