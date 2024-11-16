@@ -132,12 +132,11 @@ export const getBTCTvl = async () => {
   try {
     const response = await fetch(`/api/get-tvl`);
     const data = await response.json();
-    console.log(data.data.amount, "data-tvl");
     if (!response.ok) {
       throw new Error(data.error);
     }
-    if (data && data.data.amount) {
-      return Number(satsToBtc(data.data.amount, 8));
+    if (data && data.data.data.amount) {
+      return Number(satsToBtc(data.data.data.amount, 8));
     }
     return 0;
   } catch (e) {
