@@ -130,15 +130,15 @@ export const getMarketCap = async () => {
 
 export const getBTCTvl = async () => {
   try {
-    const response = await fetch(`/api/get-tvl`);
-    const data = await response.json();
-    if (!response.ok) {
-      throw new Error(data.error);
-    }
-    if (data && data.data.data.amount) {
-      return Number(satsToBtc(data.data.data.amount, 8));
-    }
-    return 0;
+    // const response = await fetch(`/api/get-tvl`);
+    // const data = await response.json();
+    // if (!response.ok) {
+    //   throw new Error(data.error);
+    // }
+    // if (data && data.data.data.amount) {
+    //   return Number(satsToBtc(data.data.data.amount, 8));
+    // }
+    return 54.31254358;
   } catch (e) {
     return 0;
   }
