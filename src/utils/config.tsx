@@ -224,8 +224,8 @@ export const API_URL =
   ENVIRONMENT === "devnet"
     ? "https://devnet-btc-orchestrator.tail78aed.ts.net"
     : ENVIRONMENT === "mainnet"
-    ? "https://btc-orchestrator-mainnet.tail78aed.ts.net"
-    : "https://testnet-btc-orchestrator.tail78aed.ts.net";
+    ? "https://byp-btc-orchestrator-mainnet.tail78aed.ts.net"
+    : "https://testnet-byp-btc-orchestrator.tail78aed.ts.net";
 
 export const BABYLON_RUSH_END_DATE = "2024-08-21T23:59:59";
 
