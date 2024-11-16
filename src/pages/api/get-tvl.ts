@@ -7,7 +7,10 @@ export default async function handler(
 ) {
   if (req.method === "GET") {
     try {
-      const response = await fetch(`${API_URL}/api/cobo/total-amount`);
+      const response = await fetch(
+        `https://app.btc.pstake.finance/api/get-tvl`
+      );
+      console.log(response, "response", API_URL);
       const data = await response.json();
       if (response.ok) {
         return res.status(200).json({ data, error: null });
