@@ -19,11 +19,11 @@ const GeofenceNotice = () => {
       <p className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center">
         <a
           className="link flex items-center"
-          href={"https://app.btc.pstake.finance/"}
+          href={"https://x.com/pStakeFinance/status/1856952033787744632"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {t("BREAKING")}: {t("APP_BANNER_TEXT")}
+          {t("APP_BANNER_TEXT")}
           <Icon
             viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"
             icon="right-arrow-bold"
