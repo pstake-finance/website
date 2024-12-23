@@ -197,7 +197,7 @@ export const createInitialDataSlice: StateCreator<InitialDataSlice> = (
       set((state) => ({
         tvlList: {
           ...state.tvlList,
-          btc: Number(response) + Number(100), // Institutional TVL,
+          btc: Number(response),
         },
       }));
     });
