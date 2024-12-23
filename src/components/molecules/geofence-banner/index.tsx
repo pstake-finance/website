@@ -19,7 +19,7 @@ const GeofenceNotice = () => {
       <p className="text-[#1D1D22] text-[12px] font-semibold flex items-center flex-wrap text-center justify-center">
         <a
           className="link flex items-center"
-          href={"https://x.com/pStakeFinance/status/1856952033787744632"}
+          href={"https://x.com/pStakeFinance/status/1870098381475127671"}
           target="_blank"
           rel="noopener noreferrer"
         >
