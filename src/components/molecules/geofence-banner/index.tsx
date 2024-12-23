@@ -23,7 +23,7 @@ const GeofenceNotice = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {t("BREAKING")}: {t("APP_BANNER_TEXT")}
+          {t("APP_BANNER_TEXT")}
           <Icon
             viewClass="close w-[17px] h-[14px] ml-2 fill-[#000]"
             icon="right-arrow-bold"
