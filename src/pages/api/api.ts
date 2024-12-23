@@ -138,7 +138,7 @@ export const getBTCTvl = async () => {
     // if (data && data.data.data.amount) {
     //   return Number(satsToBtc(data.data.data.amount, 8));
     // }
-    return 54.31254358;
+    return 228;
   } catch (e) {
     return 0;
   }
