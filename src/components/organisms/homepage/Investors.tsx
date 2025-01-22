@@ -25,12 +25,8 @@ const Investors = () => {
       image: "mraken",
     },
     {
-      image: "coinbase",
-    },
-    {
       image: "galaxy",
     },
-
     {
       image: "lattice",
     },
