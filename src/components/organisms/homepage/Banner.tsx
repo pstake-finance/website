@@ -67,15 +67,13 @@ const Banner = () => {
               <ButtonLink
                 className={`!rounded-[8px] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton !px-0 py-3" md:text-sm !w-[240px] font-semibold !h-[48px] md:!w-[100%] group`}
                 variant={"custom"}
-                href={
-                  "https://blog.pstake.finance/category/bitcoin-liquid-staking/"
-                }
+                href={"https://app.btc.pstake.finance/pstake/staking"}
                 scale="lg"
                 target={"_blank"}
                 isDisabled={false}
               >
                 <span className="nav-link pophover tooltip-multiline app-btn">
-                  {t("LEARN_MORE")}
+                  {t("PSTAKE_STAKING")}
                 </span>
               </ButtonLink>
             </div>

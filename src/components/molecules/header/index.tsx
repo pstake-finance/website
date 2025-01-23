@@ -399,13 +399,13 @@ const Header = () => {
                       <ButtonLink
                         className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
                         variant={"outline"}
-                        href={"https://app.btc.pstake.finance/"}
+                        href={"https://app.btc.pstake.finance/pstake/staking"}
                         scale="lg"
                         target={"_blank"}
                         isDisabled={false}
                       >
                         <span className="nav-link pophover tooltip-multiline app-btn">
-                          {t("STAKE_BITCOIN_NOW")}
+                          {t("PSTAKE_STAKING")}
                         </span>
                       </ButtonLink>
                     ) : (
