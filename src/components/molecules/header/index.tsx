@@ -216,8 +216,7 @@ const Header = () => {
       subText: t("NAV_ABOUT_5_SUB_TITLE"),
       icon: "download",
       iconType: "fill",
-      optionLink:
-        "https://persistence.notion.site/pSTAKE-Brand-Press-Kit-97c357b1c5db4ca5b4e8429d25a9ab9d?pvs=4",
+      optionLink: "https://docs.pstake.finance/media-kit/brand-guidelines",
     },
   ];
 

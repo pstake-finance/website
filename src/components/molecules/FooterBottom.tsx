@@ -204,7 +204,7 @@ const FooterBottom = () => {
                   />
                   <a
                     href={
-                      "https://persistence.notion.site/pSTAKE-Brand-Press-Kit-97c357b1c5db4ca5b4e8429d25a9ab9d?pvs=4"
+                      "https://docs.pstake.finance/media-kit/brand-guidelines"
                     }
                     className={
                       "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#D5D5D5B2] group"
