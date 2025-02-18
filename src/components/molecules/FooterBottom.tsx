@@ -245,7 +245,7 @@ const FooterBottom = () => {
                     "flex-1 flex justify-end md:justify-start md:flex-wrap"
                   }
                 >
-                  <div className={"mr-[60px] md:mr-0 md:mb-3"}>
+                  <div className={"mr-[60px] md:mr-10 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -313,7 +313,7 @@ const FooterBottom = () => {
                       );
                     })}
                   </div>
-                  <div className={"mr-[60px] md:mr-0 md:mb-3"}>
+                  <div className={"mr-[60px] md:mr-10 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -408,8 +408,8 @@ const FooterBottom = () => {
         pb-[60px] md:px-4 pt-[20px] border-t border-[#D5D5D533] md:pb-4"
         >
           <p className="text-[#70747c] text-[12px] sm:mb-4 md:text-center">
-            © Copyright
-            {new Date().getFullYear()} PSTAKE Finance. {t("RIGHTS_RESERVE")}
+            © Copyright {new Date().getFullYear()} PSTAKE Finance.{" "}
+            {t("RIGHTS_RESERVE")}
           </p>
           <div className={"flex items-center md:justify-between md:px-4"}>
             <LinkWithLocale

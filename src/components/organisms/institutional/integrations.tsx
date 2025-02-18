@@ -8,6 +8,8 @@ const integrationsList = [
       "A BTC restaking network offering an omnichain decentralized validated service (DVS) network, enabling businesses to secure decentralized applications via Proof of Stake without creating their own validator networks.",
     image: "/images/institutions/integrations/pell.svg",
     link: "https://pell.network/",
+    width: "130px",
+    height: "42px",
   },
   {
     name: "SATLAYER",
@@ -15,6 +17,8 @@ const integrationsList = [
       "A Bitcoin Validated Service (BVS) solution built on Babylon, leveraging Bitcoin's economic collateral to secure decentralized applications and protocols, enhancing security across the crypto ecosystem.",
     image: "/images/institutions/integrations/satlayer.svg",
     link: "https://satlayer.xyz/",
+    width: "220px",
+    height: "44px",
   },
   {
     name: "Binance Smart Chain",
@@ -22,6 +26,8 @@ const integrationsList = [
       "A parallel blockchain to Binance Chain, enabling smart contracts and EVM compatibility for dApps and token creation.",
     image: "/images/institutions/integrations/binance.svg",
     link: "https://www.bnbchain.org/",
+    width: "336px",
+    height: "32px",
   },
   {
     name: "BASE",
@@ -29,6 +35,8 @@ const integrationsList = [
       "A secure, low-cost Ethereum Layer 2 network enhancing accessibility and affordability for on-chain transactions.",
     image: "/images/institutions/integrations/base.svg",
     link: "https://base.org",
+    width: "109px",
+    height: "29px",
   },
   {
     name: "Corn",
@@ -36,6 +44,8 @@ const integrationsList = [
       "A DeFi project focused on yield farming and liquidity provision, rewarding users for staking tokens.",
     image: "/images/institutions/integrations/corn.svg",
     link: "https://usecorn.com/",
+    width: "300px",
+    height: "32px",
   },
   {
     name: "Ethereum",
@@ -43,6 +53,8 @@ const integrationsList = [
       "A decentralized, open-source blockchain featuring smart contract functionality, enabling developers to build and deploy decentralized applications (dApps) across various industries.",
     image: "/images/institutions/integrations/ethereum.svg",
     link: "https://ethereum.org",
+    width: "138px",
+    height: "34px",
   },
   {
     name: "Soneium",
@@ -50,6 +62,8 @@ const integrationsList = [
       "A blockchain-based platform aiming to revolutionize the entertainment industry by providing decentralized solutions for content creators and consumers, enhancing transparency and monetization.",
     image: "/images/institutions/integrations/soneium.svg",
     link: "https://soneium.org",
+    width: "147px",
+    height: "32px",
   },
 ];
 
@@ -73,11 +87,13 @@ const Integrations = () => {
         isLargeCard ? "p-8" : "p-6"
       } flex flex-col hover:border hover:border-[#EE972C] border border-[#1B1B1B] transition-all cursor-pointer`}
     >
-      <div className={`mb-6 ${isLargeCard ? "h-[60px]" : "h-[40px]"}`}>
+      <div className={`mb-6`}>
         <img
           src={integration.image}
           alt={integration.name}
-          className="h-full object-contain"
+          // className="h-full object-contain"
+          width={integration.width}
+          height={integration.height}
         />
       </div>
       <p className={`${"text-[14px]"} text-[#D5D5D5] font-light`}>

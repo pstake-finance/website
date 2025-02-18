@@ -5,7 +5,7 @@ const featuresList = [
   {
     title: `Minimize Risk, Maximize Returns`,
     description:
-      "YBTC is staked directly on the Bitcoin Network, helping institutions reduce trust assumptions and smart contract risks.",
+      "BTC is staked directly on the Bitcoin Network, helping institutions reduce trust assumptions and smart contract risks.",
     image: "/images/institutions/minimize-risks.svg",
   },
   {
@@ -40,7 +40,7 @@ const Features = () => {
         {featuresList.map((feature, index) => (
           <div
             key={index}
-            className="bg-[#1B1B1B] rounded-xl flex flex-col hover:border hover:border-[#EE972C] border border-[#1B1B1B] transition-all overflow-hidden"
+            className="bg-[#1B1B1B] rounded-xl flex flex-col cursor-pointer border border-[#1B1B1B] transition-all overflow-hidden"
           >
             <div className="w-full h-[240px] bg-[#0F0F0F]">
               <img
