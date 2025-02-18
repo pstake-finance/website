@@ -379,6 +379,7 @@ const Header = () => {
                   governanceList={governanceList}
                   communityList={socialList}
                   bridgeList={bridgeList}
+                  stakingList={stakingList}
                   closeMenu={() => {
                     setIsOpen(false);
                   }}

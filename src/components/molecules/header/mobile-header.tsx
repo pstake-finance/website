@@ -9,6 +9,7 @@ import { bridgeDropdownContent } from "./bridge-dropdown";
 import Icon from "../Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import Image from "next/image";
+import { stakingDropdownContent } from "./staking-dropdown";
 
 interface Props {
   learnList: any[];
@@ -16,6 +17,7 @@ interface Props {
   governanceList: any[];
   communityList: any[];
   bridgeList: any[];
+  stakingList: any[];
   className?: string;
   closeMenu: () => void;
 }
@@ -26,6 +28,7 @@ const MobileHeader = ({
   communityList,
   governanceList,
   bridgeList,
+  stakingList,
   className,
   closeMenu,
 }: Props) => {
@@ -75,6 +78,13 @@ const MobileHeader = ({
           {
             title: "Bridges",
             content: bridgeDropdownContent(bridgeList),
+            headerClass: "bg-transparent !mb-0",
+            contentClass: "!px-0",
+            hideIcon: true,
+          },
+          {
+            title: "Staking",
+            content: stakingDropdownContent(stakingList),
             headerClass: "bg-transparent !mb-0",
             contentClass: "!px-0",
             hideIcon: true,
