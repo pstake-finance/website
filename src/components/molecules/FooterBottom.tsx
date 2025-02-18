@@ -258,7 +258,7 @@ const FooterBottom = () => {
                         <div
                           key={index}
                           className={
-                            "text-[#D5D5D5B0] mb-[6px] flex items-center"
+                            "text-[#D5D5D5B0] mb-[12px] flex items-center"
                           }
                         >
                           <Link
@@ -292,7 +292,7 @@ const FooterBottom = () => {
                         <div
                           key={index}
                           className={
-                            "text-[#D5D5D5B0] mb-[6px] flex items-center"
+                            "text-[#D5D5D5B0] mb-[12px] flex items-center"
                           }
                         >
                           <Link
@@ -325,7 +325,7 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={"text-[#D5D5D5B0]  mb-[6px]  "}
+                          className={"text-[#D5D5D5B0]  mb-[12px]  "}
                         >
                           <Link
                             href={item.link}
@@ -357,7 +357,7 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={"text-[#D5D5D5B0]  mb-[6px]  "}
+                          className={"text-[#D5D5D5B0]  mb-[12px]  "}
                         >
                           <Link
                             href={item.link}

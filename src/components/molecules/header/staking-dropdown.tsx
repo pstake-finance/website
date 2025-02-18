@@ -1,17 +1,17 @@
 import Dropdown from "rc-dropdown";
 import "rc-dropdown/assets/index.css";
-import React, { PureComponent } from "react";
+import React from "react";
 import Icon from "../Icon";
 import { useRouter } from "next/router";
-import { LinkWithLocale, useTranslation } from "next-export-i18n";
+import { useTranslation, LinkWithLocale } from "next-export-i18n";
 
 interface Props {
-  aboutList: any[];
+  stakingList: any[];
   isTablet: boolean;
 }
 
-export const aboutDropdownContent = (
-  aboutList: any[],
+export const stakingDropdownContent = (
+  stakingList: any[],
   closeMenu?: any,
   type?: string
 ) => {
@@ -21,7 +21,7 @@ export const aboutDropdownContent = (
         "!bg-[#1B1B1B] md:!block drop-shadow-md rounded-md py-2 w-[340px]"
       }
     >
-      {aboutList.map((item, index) => (
+      {stakingList.map((item, index) => (
         <LinkWithLocale
           className="mx-[16px] my-2 p-3 rounded-md flex items-center md:py-3 hover:cursor-pointer text-light-high group hover:bg-[#F6931A1A]"
           href={item.optionLink}
@@ -77,13 +77,13 @@ export const aboutDropdownContent = (
   );
 };
 
-const AboutDropdown = ({ aboutList, isTablet }: Props) => {
+const StakingDropdown = ({ stakingList, isTablet }: Props) => {
   const router = useRouter();
   const { t } = useTranslation();
   return (
     <>
       <Dropdown
-        overlay={aboutDropdownContent(aboutList)}
+        overlay={stakingDropdownContent(stakingList)}
         placement={isTablet ? "bottomRight" : "bottom"}
         trigger={isTablet ? "click" : "hover"}
       >
@@ -103,13 +103,14 @@ const AboutDropdown = ({ aboutList, isTablet }: Props) => {
               : ""
           } !py-2 !px-3 rounded-md text-[18px] !font-normal md:!hidden`}
         >
-          {t("ABOUT")}
+          {"Staking"}
         </button>
       </Dropdown>
       <div className={"hidden md:!block "}>
-        {aboutDropdownContent(aboutList)}
+        {stakingDropdownContent(stakingList)}
       </div>
     </>
   );
 };
-export default AboutDropdown;
+
+export default StakingDropdown;

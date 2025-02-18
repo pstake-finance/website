@@ -18,7 +18,7 @@ const Offering = () => {
             src={
               router.asPath.includes("cn")
                 ? "/images/btc_offering_cn.svg"
-                : "/images/btc_offering.svg"
+                : "/images/btc-offering.svg"
             }
             alt={"btc_stake"}
             className={"w-full mr-auto"}
