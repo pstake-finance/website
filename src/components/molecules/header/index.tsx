@@ -27,6 +27,7 @@ import MobileHeader from "./mobile-header";
 import LangDropdown from "./lang-dropdown";
 import AboutDropdown from "./about-dropdown";
 import GoveranaceDropdown from "./governanace-dropdown";
+import StakingDropdown from "./staking-dropdown";
 
 const socialList = [
   {
@@ -271,6 +272,30 @@ const Header = () => {
     },
   ];
 
+  const stakingList = [
+    {
+      optionName: "Bitcoin Liquid Staking",
+      subText: "Learn about pSTAKE's Bitcoin Yield and Liquid Staking solution",
+      icon: "btc-icon",
+      iconType: "fill",
+      optionLink: "https://app.btc.pstake.finance/",
+    },
+    {
+      optionName: "pSTAKE Staking",
+      subText: "Learn how the $PSTAKE token fuels BTCfi",
+      icon: "pstake",
+      iconType: "",
+      optionLink: "https://app.btc.pstake.finance/pstake/staking",
+    },
+    {
+      optionName: "Institutional Staking",
+      subText: "Learn more about institutional staking with pSTAKE",
+      icon: "guides",
+      iconType: "stroke",
+      optionLink: "/institutional",
+    },
+  ];
+
   console.log(langList, "langList");
 
   return (
@@ -286,7 +311,8 @@ const Header = () => {
               router.pathname !== "/bnb" &&
               router.pathname !== "/pstake" &&
               router.pathname !== "/team" &&
-              router.pathname !== "/roadmap"
+              router.pathname !== "/roadmap" &&
+              router.pathname !== "/institutional"
                 ? "bg-white-emphasis"
                 : ""
             } ${router.pathname.split("/")[1]}
@@ -298,7 +324,8 @@ const Header = () => {
             router.pathname.includes("validators") ||
             router.pathname === "/pstake" ||
             router.pathname === "/team" ||
-            router.pathname === "/roadmap" ? (
+            router.pathname === "/roadmap" ||
+            router.pathname === "/institutional" ? (
               <LinkWithLocale
                 aria-label="logo"
                 className="bg-logoLight
@@ -352,6 +379,7 @@ const Header = () => {
                   governanceList={governanceList}
                   communityList={socialList}
                   bridgeList={bridgeList}
+                  stakingList={stakingList}
                   closeMenu={() => {
                     setIsOpen(false);
                   }}
@@ -389,25 +417,14 @@ const Header = () => {
                   <li className="nav-item nav__menu-item lg:hidden">
                     <BridgeDropdown list={bridgeList} isTablet={isLandScape} />
                   </li>
-
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <StakingDropdown
+                      stakingList={stakingList}
+                      isTablet={isLandScape}
+                    />
+                  </li>
                   <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                    {router.pathname === "/" ||
-                    router.pathname === "/pstake" ||
-                    router.pathname === "/team" ||
-                    router.pathname === "/roadmap" ? (
-                      <ButtonLink
-                        className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
-                        variant={"outline"}
-                        href={"https://app.btc.pstake.finance/pstake/staking"}
-                        scale="lg"
-                        target={"_blank"}
-                        isDisabled={false}
-                      >
-                        <span className="nav-link pophover tooltip-multiline app-btn">
-                          {t("PSTAKE_STAKING")}
-                        </span>
-                      </ButtonLink>
-                    ) : (
+                    {router.pathname === "/bnb" ? (
                       <ButtonLink
                         className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
                         variant={"custom"}
@@ -429,7 +446,7 @@ const Header = () => {
                           {t("LIQUID_STAKE_NOW")}
                         </span>
                       </ButtonLink>
-                    )}
+                    ) : null}
                   </li>
                   <li className="nav-item nav__menu-item lg:hidden">
                     <LangDropdown

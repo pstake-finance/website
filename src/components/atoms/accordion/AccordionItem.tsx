@@ -9,15 +9,19 @@ export function getRefValue<C>(ref: RefObject<C>) {
   return ref.current as C;
 }
 
+interface Props {
+  data: AccordionData;
+  isOpen: boolean;
+  btnOnClick: () => void;
+  showChevron?: boolean;
+}
+
 function AccordionItem({
   data,
   isOpen,
   btnOnClick,
-}: {
-  data: AccordionData;
-  isOpen: boolean;
-  btnOnClick: () => void;
-}) {
+  showChevron = false,
+}: Props) {
   const router = useRouter();
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -47,13 +51,27 @@ function AccordionItem({
         }`}
       >
         <button className={`flex justify-between w-full`} onClick={btnOnClick}>
-          <span className="">{data.title}</span>
-          {!data.hideIcon ? (
-            <Icon
-              viewClass="icon !w-[16px] fill-[#70747C]"
-              icon={isOpen ? "minus" : "plus"}
-            />
-          ) : null}
+          {showChevron ? (
+            <div className="flex items-center gap-2">
+              <span className="">{data.title}</span>
+              <Icon
+                viewClass={`!w-[20px] !h-[20px] transition-transform duration-200 ${
+                  isOpen ? "rotate-180" : "rotate-0"
+                } fill-[#FFFFFF]`}
+                icon="chevron-down"
+              />
+            </div>
+          ) : (
+            <>
+              <span className="">{data.title}</span>
+              {!data.hideIcon ? (
+                <Icon
+                  viewClass="icon !w-[16px] fill-[#70747C]"
+                  icon={isOpen ? "minus" : "plus"}
+                />
+              ) : null}
+            </>
+          )}
         </button>
       </h2>
       <div
