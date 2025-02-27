@@ -103,7 +103,7 @@ const StakingDropdown = ({ stakingList, isTablet }: Props) => {
               : ""
           } !py-2 !px-3 rounded-md text-[18px] !font-normal md:!hidden`}
         >
-          {"Staking"}
+          {t("HEADER_STAKING_TITLE")}
         </button>
       </Dropdown>
       <div className={"hidden md:!block "}>

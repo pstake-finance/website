@@ -14,12 +14,10 @@ const ReadyToStake = () => {
         >
           <div className={"flex-1 max-w-[705px]"}>
             <p className="text-[40px] lg:text-[28px] lg:leading-[40px] leading-[60px] font-semibold mb-0 text-[#FCFCFC] mb-[12px]">
-              {"Ready to Stake?"}
+              {t("INSTITUTIONAL_READY_TO_STAKE_TITLE")}
             </p>
             <p className="text-[18px] md:text-[14px] font-light text-[#D5D5D5] leading-[32px]">
-              {
-                "Secure your Bitcoin, earn yield, and tap into the multi-billion-dollar potential of institutional BTC staking custom tailored as per your needs."
-              }
+              {t("INSTITUTIONAL_READY_TO_STAKE_DESCRIPTION")}
             </p>
             <ButtonLink
               className={`!rounded-[8px] mt-4 !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-3 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
@@ -30,7 +28,7 @@ const ReadyToStake = () => {
               isDisabled={false}
             >
               <span className="nav-link pophover tooltip-multiline app-btn text-[16px] font-semibold flex gap-2 items-center">
-                Contact Us
+                {t("INSTITUTIONAL_READY_TO_STAKE_BUTTON")}
                 <Icon viewClass="!w-[17px] !h-[17px]" icon={"email"} />
               </span>
             </ButtonLink>

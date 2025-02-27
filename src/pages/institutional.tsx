@@ -13,8 +13,11 @@ const Institutional = () => {
   return (
     <>
       <Head>
-        <title>pSTAKE Institutional BTC Staking</title>
-        <meta name="description" content="pSTAKE Institutional BTC Staking" />
+        <title>pSTAKE {t("INSTITUTIONAL_FEATURES_TITLE")}</title>
+        <meta
+          name="description"
+          content={t("INSTITUTIONAL_FEATURES_DESCRIPTION")}
+        />
       </Head>
       <div className="bg-[#030303] md:pt-28">
         <Hero />
