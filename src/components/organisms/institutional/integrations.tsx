@@ -1,74 +1,67 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 
-const integrationsList = [
-  {
-    name: "PELL",
-    description:
-      "A BTC restaking network offering an omnichain decentralized validated service (DVS) network, enabling businesses to secure decentralized applications via Proof of Stake without creating their own validator networks.",
-    image: "/images/institutions/integrations/pell.svg",
-    link: "https://pell.network/",
-    width: "130px",
-    height: "42px",
-  },
-  {
-    name: "SATLAYER",
-    description:
-      "A Bitcoin Validated Service (BVS) solution built on Babylon, leveraging Bitcoin's economic collateral to secure decentralized applications and protocols, enhancing security across the crypto ecosystem.",
-    image: "/images/institutions/integrations/satlayer.svg",
-    link: "https://satlayer.xyz/",
-    width: "220px",
-    height: "44px",
-  },
-  {
-    name: "Binance Smart Chain",
-    description:
-      "A parallel blockchain to Binance Chain, enabling smart contracts and EVM compatibility for dApps and token creation.",
-    image: "/images/institutions/integrations/binance.svg",
-    link: "https://www.bnbchain.org/",
-    width: "336px",
-    height: "32px",
-  },
-  {
-    name: "BASE",
-    description:
-      "A secure, low-cost Ethereum Layer 2 network enhancing accessibility and affordability for on-chain transactions.",
-    image: "/images/institutions/integrations/base.svg",
-    link: "https://base.org",
-    width: "109px",
-    height: "29px",
-  },
-  {
-    name: "Corn",
-    description:
-      "A DeFi project focused on yield farming and liquidity provision, rewarding users for staking tokens.",
-    image: "/images/institutions/integrations/corn.svg",
-    link: "https://usecorn.com/",
-    width: "300px",
-    height: "32px",
-  },
-  {
-    name: "Ethereum",
-    description:
-      "A decentralized, open-source blockchain featuring smart contract functionality, enabling developers to build and deploy decentralized applications (dApps) across various industries.",
-    image: "/images/institutions/integrations/ethereum.svg",
-    link: "https://ethereum.org",
-    width: "138px",
-    height: "34px",
-  },
-  {
-    name: "Soneium",
-    description:
-      "A blockchain-based platform aiming to revolutionize the entertainment industry by providing decentralized solutions for content creators and consumers, enhancing transparency and monetization.",
-    image: "/images/institutions/integrations/soneium.svg",
-    link: "https://soneium.org",
-    width: "147px",
-    height: "32px",
-  },
-];
-
 const Integrations = () => {
   const { t } = useTranslation();
+
+  const integrationsList = [
+    {
+      name: "PELL",
+      description: t("INSTITUTIONAL_INTEGRATIONS_PELL_DESCRIPTION"),
+      image: "/images/institutions/integrations/pell.svg",
+      link: "https://pell.network/",
+      width: "130px",
+      height: "42px",
+    },
+    {
+      name: "SATLAYER",
+      description: t("INSTITUTIONAL_INTEGRATIONS_SATLAYER_DESCRIPTION"),
+      image: "/images/institutions/integrations/satlayer.svg",
+      link: "https://satlayer.xyz/",
+      width: "220px",
+      height: "44px",
+    },
+    {
+      name: "Binance Smart Chain",
+      description: t("INSTITUTIONAL_INTEGRATIONS_BINANCE_DESCRIPTION"),
+      image: "/images/institutions/integrations/binance.svg",
+      link: "https://www.bnbchain.org/",
+      width: "336px",
+      height: "32px",
+    },
+    {
+      name: "BASE",
+      description: t("INSTITUTIONAL_INTEGRATIONS_BASE_DESCRIPTION"),
+      image: "/images/institutions/integrations/base.svg",
+      link: "https://base.org",
+      width: "109px",
+      height: "29px",
+    },
+    {
+      name: "Corn",
+      description: t("INSTITUTIONAL_INTEGRATIONS_CORN_DESCRIPTION"),
+      image: "/images/institutions/integrations/corn.svg",
+      link: "https://usecorn.com/",
+      width: "300px",
+      height: "32px",
+    },
+    {
+      name: "Ethereum",
+      description: t("INSTITUTIONAL_INTEGRATIONS_ETHEREUM_DESCRIPTION"),
+      image: "/images/institutions/integrations/ethereum.svg",
+      link: "https://ethereum.org",
+      width: "138px",
+      height: "34px",
+    },
+    {
+      name: "Soneium",
+      description: t("INSTITUTIONAL_INTEGRATIONS_SONEIUM_DESCRIPTION"),
+      image: "/images/institutions/integrations/soneium.svg",
+      link: "https://soneium.org",
+      width: "147px",
+      height: "32px",
+    },
+  ];
 
   // Split the list into rows
   const firstRow = integrationsList.slice(0, 2);
@@ -105,7 +98,7 @@ const Integrations = () => {
   return (
     <div className="sectionContainer py-[80px] md:py-[40px]">
       <h2 className="text-[40px] md:text-[32px] text-center font-bold mb-[60px] md:mb-[40px] text-[#FEFEFE]">
-        Integrations with YBTC
+        {t("INSTITUTIONAL_INTEGRATIONS_TITLE")}
       </h2>
       <div className="flex flex-col gap-6">
         {/* First row - 2 cards */}
@@ -124,7 +117,7 @@ const Integrations = () => {
         </div>
       </div>
       <p className="text-center text-[#D5D5D5] mt-8 text-[18px] italic">
-        More Coming Soon
+        {t("INSTITUTIONAL_INTEGRATIONS_MORE_COMING_SOON")}
       </p>
     </div>
   );

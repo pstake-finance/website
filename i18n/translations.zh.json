@@ -757,6 +757,35 @@
     "PRIVACY_10_1_LIST_6": "Objection: where we are processing your personal data based on a legitimate interest (or those of a third party) you may object to processing on this ground.",
     "PRIVACY_10_2": "If you wish to exercise any of your rights, you may contact us in accordance with paragraph 1.7. We may require that you submit certain forms or provide certain information to process your request. Where permitted by law, we may also charge you a fee to process your request.",
     "PRIVACY_10_3": "Limitations",
-    "PRIVACY_10_3_CONTINUE": "We may be permitted under applicable laws to refuse a request, for example, we may refuse (a) a request for erasure where the personal data is required for in connection with claims; or (b) an objection request and continue processing your personal data based on compelling legitimate grounds for the processing."
+    "PRIVACY_10_3_CONTINUE": "We may be permitted under applicable laws to refuse a request, for example, we may refuse (a) a request for erasure where the personal data is required for in connection with claims; or (b) an objection request and continue processing your personal data based on compelling legitimate grounds for the processing.",
+
+    "INSTITUTIONAL_HERO_TITLE": "通过pSTAKE解锁机构级比特币质押",
+    "INSTITUTIONAL_HERO_DESCRIPTION": "通过YBTC赚取可持续收益——YBTC是一个安全的、1:1比特币支持的ERC-20代币，建立在Babylon上，并由LayerZero提供支持。",
+    "INSTITUTIONAL_HERO_BUTTON": "联系我们",
+
+    "INSTITUTIONAL_FEATURES_TITLE": "机构比特币质押",
+    "INSTITUTIONAL_FEATURE_1_TITLE": "降低风险，最大化回报",
+    "INSTITUTIONAL_FEATURE_1_DESCRIPTION": "BTC 直接在比特币网络上进行质押，帮助机构减少信任假设和智能合约风险。",
+    "INSTITUTIONAL_FEATURE_2_TITLE": "保留全部监护权",
+    "INSTITUTIONAL_FEATURE_2_DESCRIPTION": "我们的自我保管解决方案旨在减少摩擦并实现无缝采用，让您能够掌握自己的密钥。",
+    "INSTITUTIONAL_FEATURE_3_TITLE": "跨链互操作",
+    "INSTITUTIONAL_FEATURE_3_DESCRIPTION": "轻松在兼容EVM的区块链、以太坊Layer 2和比特币Layer 2之间移动YBTC——由LayerZero的跨链基础设施提供支持。",
+    "INSTITUTIONAL_FEATURE_4_TITLE": "利用BTCFI机会",
+    "INSTITUTIONAL_FEATURE_4_DESCRIPTION": "通过重新质押、流动性挖矿以及与像Pell和Satlayer这样的合作伙伴进行DeFi集成来产生额外收益。",
+
+    "INSTITUTIONAL_READY_TO_STAKE_TITLE": "准备好质押了吗？",
+    "INSTITUTIONAL_READY_TO_STAKE_DESCRIPTION": "保护你的比特币，赚取收益，并利用量身定制的机构比特币质押的数十亿美元潜力。",
+    "INSTITUTIONAL_READY_TO_STAKE_BUTTON": "联系我们",
+
+    "INSTITUTIONAL_INTEGRATIONS_TITLE": "与YBTC的集成",
+    "INSTITUTIONAL_INTEGRATIONS_PELL_DESCRIPTION": "一个BTC重质押网络，提供全链去中心化验证服务（DVS）网络，使企业能够通过权益证明（PoS）来保护去中心化应用，而无需创建自己的验证者网络。",
+    "INSTITUTIONAL_INTEGRATIONS_SATLAYER_DESCRIPTION": "一个基于Babylon构建的比特币验证服务（BVS）解决方案，利用比特币的经济担保来保护去中心化应用程序和协议，增强整个加密生态系统的安全性。",
+    "INSTITUTIONAL_INTEGRATIONS_BINANCE_DESCRIPTION": "一个与币安链平行的区块链，支持智能合约和EVM兼容性，用于去中心化应用和代币创建。",
+    "INSTITUTIONAL_INTEGRATIONS_BASE_DESCRIPTION": "一个安全、低成本的以太坊二层网络，提高链上交易的可访问性和负担能力。",
+    "INSTITUTIONAL_INTEGRATIONS_CORN_DESCRIPTION": "一个专注于收益农业和流动性提供的DeFi项目，通过质押代币奖励用户。",
+    "INSTITUTIONAL_INTEGRATIONS_ETHEREUM_DESCRIPTION": "一个去中心化的开源区块链，具有智能合约功能，使开发者能够在各个行业构建和部署去中心化应用程序（dApps）。",
+    "INSTITUTIONAL_INTEGRATIONS_SONEIUM_DESCRIPTION": "一个基于区块链的平台，旨在通过为内容创作者和消费者提供去中心化的解决方案，革新娱乐行业，提升透明度和货币化。",
+
+    "INSTITUTIONAL_INTEGRATIONS_MORE_COMING_SOON": "更多内容即将推出"
   }
 }

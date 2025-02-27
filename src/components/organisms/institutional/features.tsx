@@ -1,40 +1,36 @@
 import React from "react";
 import { useTranslation } from "next-export-i18n";
 
-const featuresList = [
-  {
-    title: `Minimize Risk, Maximize Returns`,
-    description:
-      "BTC is staked directly on the Bitcoin Network, helping institutions reduce trust assumptions and smart contract risks.",
-    image: "/images/institutions/minimize-risks.svg",
-  },
-  {
-    title: "Retain Full Custody",
-    description:
-      "Our self-custody solution is designed for minimal friction and seamless adoption, allowing you to hold your own keys",
-    image: "/images/institutions/retain-full-custody.svg",
-  },
-  {
-    title: "Interoperable Across Chains",
-    description:
-      "Easily move YBTC across EVM-compatible blockchains, Ethereum Layer 2s, and Bitcoin Layer 2s — powered by LayerZero’s cross-chain infrastructure.",
-    image: "/images/institutions/interoperable.svg",
-  },
-  {
-    title: "Leverage BTCFI Opportunities",
-    description:
-      "Generate additional yields through re-staking, liquidity farming, and DeFi integrations with partners like Pell and Satlayer.",
-    image: "/images/institutions/leverage-btcfi-opportunities.svg",
-  },
-];
-
 const Features = () => {
   const { t } = useTranslation();
+
+  const featuresList = [
+    {
+      title: t("INSTITUTIONAL_FEATURE_1_TITLE"),
+      description: t("INSTITUTIONAL_FEATURE_1_DESCRIPTION"),
+      image: "/images/institutions/minimize-risks.svg",
+    },
+    {
+      title: t("INSTITUTIONAL_FEATURE_2_TITLE"),
+      description: t("INSTITUTIONAL_FEATURE_2_DESCRIPTION"),
+      image: "/images/institutions/retain-full-custody.svg",
+    },
+    {
+      title: t("INSTITUTIONAL_FEATURE_3_TITLE"),
+      description: t("INSTITUTIONAL_FEATURE_3_DESCRIPTION"),
+      image: "/images/institutions/interoperable.svg",
+    },
+    {
+      title: t("INSTITUTIONAL_FEATURE_4_TITLE"),
+      description: t("INSTITUTIONAL_FEATURE_4_DESCRIPTION"),
+      image: "/images/institutions/leverage-btcfi-opportunities.svg",
+    },
+  ];
 
   return (
     <div className="sectionContainer py-[40px] md:py-[40px]">
       <h2 className="text-[40px] md:text-[32px] text-center font-bold mb-[60px] md:mb-[40px] text-[#FEFEFE]">
-        Institutional Bitcoin Staking
+        {t("INSTITUTIONAL_FEATURES_TITLE")}
       </h2>
       <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6">
         {featuresList.map((feature, index) => (

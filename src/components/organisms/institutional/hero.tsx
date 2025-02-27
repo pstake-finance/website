@@ -13,11 +13,10 @@ const Hero = () => {
       <div className="grid grid-cols-2 md:grid-cols-1 gap-8 items-center">
         <div>
           <h1 className="text-[48px] md:text-[32px] font-bold text-[#FEFEFE] mb-6">
-            Unlock Institutional-Grade Bitcoin Staking with pSTAKE
+            {t("INSTITUTIONAL_HERO_TITLE")}
           </h1>
           <p className="text-[18px] md:text-[16px] !text-[#D5D5D5] font-light mb-8 leading-[32px]">
-            Earn sustainable yields on your BTC with YBTC – a secure, 1:1
-            BTC-backed ERC-20 token built on Babylon and powered by LayerZero.
+            {t("INSTITUTIONAL_HERO_DESCRIPTION")}
           </p>
           <ButtonLink
             className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-3 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
@@ -28,7 +27,7 @@ const Hero = () => {
             isDisabled={false}
           >
             <span className="nav-link pophover tooltip-multiline app-btn text-[16px] font-semibold flex gap-2 items-center">
-              Contact Us
+              {t("INSTITUTIONAL_HERO_BUTTON")}
               <Icon viewClass="!w-[17px] !h-[17px]" icon={"email"} />
             </span>
           </ButtonLink>
