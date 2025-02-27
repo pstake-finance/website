@@ -274,29 +274,27 @@ const Header = () => {
 
   const stakingList = [
     {
-      optionName: "Bitcoin Liquid Staking",
-      subText: "Learn about pSTAKE's Bitcoin Yield and Liquid Staking solution",
+      optionName: t("NAV_STAKING_1_TITLE"),
+      subText: t("NAV_STAKING_1_SUB_TITLE"),
       icon: "btc-icon",
       iconType: "fill",
       optionLink: "https://app.btc.pstake.finance/",
     },
     {
-      optionName: "pSTAKE Staking",
-      subText: "Learn how the $PSTAKE token fuels BTCfi",
+      optionName: t("NAV_STAKING_2_TITLE"),
+      subText: t("NAV_STAKING_2_SUB_TITLE"),
       icon: "pstake",
       iconType: "",
       optionLink: "https://app.btc.pstake.finance/pstake/staking",
     },
     {
-      optionName: "Institutional Staking",
-      subText: "Learn more about institutional staking with pSTAKE",
+      optionName: t("NAV_STAKING_3_TITLE"),
+      subText: t("NAV_STAKING_3_SUB_TITLE"),
       icon: "guides",
       iconType: "stroke",
       optionLink: "/institutional",
     },
   ];
-
-  console.log(langList, "langList");
 
   return (
     <React.Fragment>

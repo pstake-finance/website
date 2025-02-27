@@ -85,6 +85,12 @@
     "NAV_GOVERNANCE_2_SUB_TITLE": "了解 pSTAKE 治理如何做出协议决策",
     "NAV_GOVERNANCE_3_TITLE": "快照投票",
     "NAV_GOVERNANCE_3_SUB_TITLE": "参与 pSTAKE Snapshot 上的协议治理投票",
+    "NAV_STAKING_1_TITLE": "比特币流动性质押",
+    "NAV_STAKING_1_SUB_TITLE": "了解 pSTAKE 的比特币收益与流动质押解决方案",
+    "NAV_STAKING_2_TITLE": "pSTAKE 质押",
+    "NAV_STAKING_2_SUB_TITLE": "了解 $PSTAKE 代币如何推动 BTCfi",
+    "NAV_STAKING_3_TITLE": "机构质押",
+    "NAV_STAKING_3_SUB_TITLE": "了解如何通过pSTAKE进行机构质押",
     "HOME_HERO_SECTION_TITLE": "BTC 액체 스택으로 비트코인 수익률을 안전하게 액세스",
     "HOME_HERO_SECTION_SUB_TITLE": "流动股票比特币从巴比伦不信任的比特幣投注中获得奖励,并提高了pSats (points).",
     "HOME_BITCOIN_TITLE": "应简单、安全、无风险地获取比特币收益",
@@ -786,6 +792,8 @@
     "INSTITUTIONAL_INTEGRATIONS_ETHEREUM_DESCRIPTION": "一个去中心化的开源区块链，具有智能合约功能，使开发者能够在各个行业构建和部署去中心化应用程序（dApps）。",
     "INSTITUTIONAL_INTEGRATIONS_SONEIUM_DESCRIPTION": "一个基于区块链的平台，旨在通过为内容创作者和消费者提供去中心化的解决方案，革新娱乐行业，提升透明度和货币化。",
 
-    "INSTITUTIONAL_INTEGRATIONS_MORE_COMING_SOON": "更多内容即将推出"
+    "INSTITUTIONAL_INTEGRATIONS_MORE_COMING_SOON": "更多内容即将推出",
+
+    "HEADER_STAKING_TITLE": "质押"
   }
 }

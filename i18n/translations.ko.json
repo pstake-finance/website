@@ -84,6 +84,12 @@
     "NAV_GOVERNANCE_2_SUB_TITLE": "pSTAKE 거버넌스에서 프로토콜 결정이 어떻게 이루어지는지 살펴보세요.",
     "NAV_GOVERNANCE_3_TITLE": "스냅샷 투표",
     "NAV_GOVERNANCE_3_SUB_TITLE": "pSTAKE Snapshot에서 프로토콜 거버넌스 투표에 참여하세요.",
+    "NAV_STAKING_1_TITLE": "비트코인 유동 스테이킹",
+    "NAV_STAKING_1_SUB_TITLE": "pSTAKE의 비트코인 수익 및 유동 스테이킹 솔루션에 대해 알아보세요.",
+    "NAV_STAKING_2_TITLE": "pSTAKE 스테이킹",
+    "NAV_STAKING_2_SUB_TITLE": "$PSTAKE 토큰이 BTCfi를 어떻게 지원하는지 알아보세요.",
+    "NAV_STAKING_3_TITLE": "기관 스테이킹",
+    "NAV_STAKING_3_SUB_TITLE": "pSTAKE와 함께하는 기관 스테이킹에 대해 더 알아보세요.",
     "HOME_HERO_SECTION_TITLE": "BTC Liquid Stake를 통해 안전하게 비트코인 \u200B\u200B수익에 액세스하세요",
     "HOME_HERO_SECTION_SUB_TITLE": "BTC Liquid Stake를 통해 바빌론의 Trustless BTC 스테이킹으로부터 보상을 받고 pSat(포인트)를 높일 수 있습니다.",
     "HOME_BITCOIN_TITLE": "비트코인 수익에 접근하는 것은 복잡하거나 위험하거나 블안전하지 않아야 합니다.",
@@ -776,6 +782,8 @@
     "INSTITUTIONAL_INTEGRATIONS_ETHEREUM_DESCRIPTION": "탈중앙화된 오픈 소스 블록체인으로, 스마트 계약 기능을 갖추고 있어 개발자들이 다양한 산업 분야에서 탈중앙화 애플리케이션(dApp)을 구축하고 배포할 수 있습니다.",
     "INSTITUTIONAL_INTEGRATIONS_SONEIUM_DESCRIPTION": "블록체인 기반 플랫폼으로, 콘텐츠 제작자와 소비자에게 분산형 솔루션을 제공하여 투명성과 수익화를 향상시키며 엔터테인먼트 산업을 혁신하는 것을 목표로 합니다.",
 
-    "INSTITUTIONAL_INTEGRATIONS_MORE_COMING_SOON": "곧 더 많은 소식이 있습니다"
+    "INSTITUTIONAL_INTEGRATIONS_MORE_COMING_SOON": "곧 더 많은 소식이 있습니다",
+
+    "HEADER_STAKING_TITLE": "스테이킹"
   }
 }
