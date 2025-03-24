@@ -288,6 +288,13 @@ const Header = () => {
       optionLink: "https://app.btc.pstake.finance/pstake/staking",
     },
     {
+      optionName: t("NAV_STAKING_4_TITLE"),
+      subText: t("NAV_STAKING_4_SUB_TITLE"),
+      icon: "cosmos",
+      iconType: "stroke",
+      optionLink: "https://app.pstake.finance/",
+    },
+    {
       optionName: t("NAV_STAKING_3_TITLE"),
       subText: t("NAV_STAKING_3_SUB_TITLE"),
       icon: "guides",
