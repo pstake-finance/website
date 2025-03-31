@@ -30,28 +30,6 @@ const People = () => {
       ],
     },
     {
-      image: "/images/team/mikhil-pandey.png",
-      name: "Mikhil Pandey",
-      role: "Co-Founder",
-      info: t("MIKHIL_DESCRIPTION"),
-      socialLinks: [
-        {
-          name: "Twitter",
-          link: "https://x.com/PandeyMikhil",
-          icon: "team-x",
-          color: "#141414",
-          iconBg: "#C9C9C9",
-        },
-        {
-          name: "Linkedin",
-          link: "https://www.linkedin.com/in/mikhilpandey/",
-          icon: "team-linkedin",
-          color: "#FFFFFF",
-          iconBg: "#0A66C2",
-        },
-      ],
-    },
-    {
       image: "/images/team/bart.png",
       name: "Bart Van Der Voort",
       role: "Chief Strategy Officer",
@@ -155,28 +133,6 @@ const People = () => {
         {
           name: "Linkedin",
           link: "https://www.linkedin.com/in/puneet-mahajan-/",
-          icon: "team-linkedin",
-          color: "#FFFFFF",
-          iconBg: "#0A66C2",
-        },
-      ],
-    },
-    {
-      image: "/images/team/rashi.png",
-      name: "Rashi Mittal",
-      info: t("RASHI_DESCRIPTION"),
-      role: "Marketing",
-      socialLinks: [
-        {
-          name: "Twitter",
-          link: "https://x.com/rashi_web3",
-          icon: "team-x",
-          color: "#141414",
-          iconBg: "#C9C9C9",
-        },
-        {
-          name: "Linkedin",
-          link: "https://www.linkedin.com/in/rashi-mittal-/",
           icon: "team-linkedin",
           color: "#FFFFFF",
           iconBg: "#0A66C2",
