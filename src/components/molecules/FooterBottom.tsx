@@ -204,7 +204,7 @@ const FooterBottom = () => {
                   />
                   <a
                     href={
-                      "https://persistence.notion.site/pSTAKE-Brand-Press-Kit-97c357b1c5db4ca5b4e8429d25a9ab9d?pvs=4"
+                      "https://docs.pstake.finance/media-kit/brand-guidelines"
                     }
                     className={
                       "font-semibold text-[#FCFCFC] flex items-center mb-8 md:mb-3 hover:text-[#D5D5D5B2] group"
@@ -245,7 +245,7 @@ const FooterBottom = () => {
                     "flex-1 flex justify-end md:justify-start md:flex-wrap"
                   }
                 >
-                  <div className={"mr-[60px] md:mr-0 md:mb-3"}>
+                  <div className={"mr-[60px] md:mr-10 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -258,7 +258,7 @@ const FooterBottom = () => {
                         <div
                           key={index}
                           className={
-                            "text-[#D5D5D5B0] mb-[6px] flex items-center"
+                            "text-[#D5D5D5B0] mb-[12px] flex items-center"
                           }
                         >
                           <Link
@@ -292,7 +292,7 @@ const FooterBottom = () => {
                         <div
                           key={index}
                           className={
-                            "text-[#D5D5D5B0] mb-[6px] flex items-center"
+                            "text-[#D5D5D5B0] mb-[12px] flex items-center"
                           }
                         >
                           <Link
@@ -313,7 +313,7 @@ const FooterBottom = () => {
                       );
                     })}
                   </div>
-                  <div className={"mr-[60px] md:mr-0 md:mb-3"}>
+                  <div className={"mr-[60px] md:mr-10 md:mb-3"}>
                     <p
                       className={
                         "font-semibold text-[#FCFCFCE3] text-[20px] mb-4"
@@ -325,7 +325,7 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={"text-[#D5D5D5B0]  mb-[6px]  "}
+                          className={"text-[#D5D5D5B0]  mb-[12px]  "}
                         >
                           <Link
                             href={item.link}
@@ -357,7 +357,7 @@ const FooterBottom = () => {
                       return (
                         <div
                           key={index}
-                          className={"text-[#D5D5D5B0]  mb-[6px]  "}
+                          className={"text-[#D5D5D5B0]  mb-[12px]  "}
                         >
                           <Link
                             href={item.link}
@@ -408,8 +408,8 @@ const FooterBottom = () => {
         pb-[60px] md:px-4 pt-[20px] border-t border-[#D5D5D533] md:pb-4"
         >
           <p className="text-[#70747c] text-[12px] sm:mb-4 md:text-center">
-            © Copyright
-            {new Date().getFullYear()} PSTAKE Finance. {t("RIGHTS_RESERVE")}
+            © Copyright {new Date().getFullYear()} PSTAKE Finance.{" "}
+            {t("RIGHTS_RESERVE")}
           </p>
           <div className={"flex items-center md:justify-between md:px-4"}>
             <LinkWithLocale

@@ -9,6 +9,7 @@ import { bridgeDropdownContent } from "./bridge-dropdown";
 import Icon from "../Icon";
 import ButtonLink from "../../atoms/buttonLink/ButtonLink";
 import Image from "next/image";
+import { stakingDropdownContent } from "./staking-dropdown";
 
 interface Props {
   learnList: any[];
@@ -16,6 +17,7 @@ interface Props {
   governanceList: any[];
   communityList: any[];
   bridgeList: any[];
+  stakingList: any[];
   className?: string;
   closeMenu: () => void;
 }
@@ -26,6 +28,7 @@ const MobileHeader = ({
   communityList,
   governanceList,
   bridgeList,
+  stakingList,
   className,
   closeMenu,
 }: Props) => {
@@ -79,20 +82,16 @@ const MobileHeader = ({
             contentClass: "!px-0",
             hideIcon: true,
           },
+          {
+            title: "Staking",
+            content: stakingDropdownContent(stakingList),
+            headerClass: "bg-transparent !mb-0",
+            contentClass: "!px-0",
+            hideIcon: true,
+          },
         ]}
+        showChevron={true}
       />
-      <ButtonLink
-        className={`mt-8 !bg-[#EE972C4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[100%] -lg:!w-[193px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
-        variant={"outline"}
-        href={"https://app.pstake.finance/"}
-        scale="lg"
-        target={"_blank"}
-        isDisabled={false}
-      >
-        <span className="nav-link pophover tooltip-multiline app-btn">
-          Liquid Stake Now
-        </span>
-      </ButtonLink>
     </div>
   );
 };

@@ -45,6 +45,7 @@ module.exports = {
     backgroundImage: {
       homeBannerBg: "url('/images/bg_images/home_hero_bg.svg')",
       bitcoinBannerBg: "url('/images/bg_images/bitcoin_banner_bg.svg')",
+      readyToStakeBannerBg: "url('/images/bg_images/bitcoin_banner_bg.svg')",
       logoDark: "url('/images/darklogo.svg')",
       logoLight: "url('/images/logo.svg')",
       bnbBanner:
@@ -147,6 +148,7 @@ module.exports = {
       backgroundSize: {
         homeBannerBg: "50%",
         atomBanner: "30%, cover",
+        readyToStakeBannerBg: "contain",
         bitcoinBannerBg: "contain",
         bnbBanner: "30%, cover",
         ethBanner: "30%, cover",
@@ -161,6 +163,7 @@ module.exports = {
       backgroundPosition: {
         homeBannerBg: "100% 200px",
         bitcoinBannerBg: "100% 100%",
+        readyToStakeBannerBg: "100% 100%",
         atomBanner: "100% 0,100% 100%",
         bnbBanner: "100% 0,100% 100%",
         ethBanner: "100% 0,100% 100%",

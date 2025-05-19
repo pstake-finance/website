@@ -61,7 +61,8 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
             router.pathname.includes("validators") ||
             router.pathname === "/pstake" ||
             router.pathname === "/team" ||
-            router.pathname === "/roadmap"
+            router.pathname === "/roadmap" ||
+            router.pathname === "/institutional"
               ? "text-[#D5D5D5] hover:!bg-[#C732381A] hover:text-light-high"
               : ""
           } ${
@@ -84,7 +85,8 @@ const LangDropdown = ({ langList, isTablet }: Props) => {
               router.pathname.includes("validators") ||
               router.pathname === "/pstake" ||
               router.pathname === "/team" ||
-              router.pathname === "/roadmap"
+              router.pathname === "/roadmap" ||
+              router.pathname === "/institutional"
                 ? "fill-[#fff] "
                 : "fill-[#181818]  [.is-sticky_&]:fill-[#fff]"
             } dropDownIcon !w-[13px] ml-[6px]  group-hover:fill-[#C73238] rotate-90`}

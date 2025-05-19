@@ -219,6 +219,7 @@ export const PECKSHIELD_ETHEREUM =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/pSTAKE%20Smart%20Contract%20Audit%20-%20PeckShield%20%5B09.07.2021%5D.pdf";
 export const SOLIDIFIED =
   "https://github.com/persistenceOne/pStake-auditReports/blob/main/pSTAKE%20Smart%20Contract%20Audit%20-%20Solidified%20%5B02.08.2021%5D.pdf";
+export const INSTITUTIONAL_CONTACT_US = "mailto:hello@pstake.finance";
 
 export const API_URL =
   ENVIRONMENT === "devnet"

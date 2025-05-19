@@ -63,7 +63,8 @@ const BridgeDropdown = ({ list, isTablet }: Props) => {
           router.pathname.includes("validators") ||
           router.pathname === "/pstake" ||
           router.pathname === "/team" ||
-          router.pathname === "/roadmap"
+          router.pathname === "/roadmap" ||
+          router.pathname === "/institutional"
             ? "text-[#D5D5D5] hover:!bg-[#EE972C4D] hover:text-light-high"
             : ""
         } ${

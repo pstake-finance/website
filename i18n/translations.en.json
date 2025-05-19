@@ -85,6 +85,15 @@
     "NAV_GOVERNANCE_2_SUB_TITLE": "Explore how protocol decisions are made by pSTAKE governance",
     "NAV_GOVERNANCE_3_TITLE": "Snapshot Voting",
     "NAV_GOVERNANCE_3_SUB_TITLE": "Participate in protocol governance voting on pSTAKE Snapshot",
+    "NAV_STAKING_1_TITLE": "Bitcoin Liquid Staking",
+    "NAV_STAKING_1_SUB_TITLE": "Learn about pSTAKE's Bitcoin Yield and Liquid Staking solution",
+    "NAV_STAKING_2_TITLE": "pSTAKE Staking",
+    "NAV_STAKING_2_SUB_TITLE": "Learn how the $PSTAKE token fuels BTCfi",
+    "NAV_STAKING_3_TITLE": "Institutional Staking",
+    "NAV_STAKING_3_SUB_TITLE": "Learn more about institutional staking with pSTAKE",
+    "NAV_STAKING_4_TITLE": "stkAssets Deprecation",
+    "NAV_STAKING_4_SUB_TITLE": "Reclaim your assets as we phase out the Cosmos stkAssets",
+
     "HOME_HERO_SECTION_TITLE": "Access Bitcoin Yields Securely with BTC Liquid Staking",
     "HOME_HERO_SECTION_SUB_TITLE": "Liquid Stake BTC to get rewards from Babylon's Trustless BTC staking and boosted pSats (points).",
     "HOME_BITCOIN_TITLE": "Accessing Bitcoin yields should not be complex, risky, or unsafe",
@@ -187,7 +196,7 @@
     "BTC_SERIES_BLOG_TWO_TITLE": "What is Proof of Work (PoW)?",
     "BTC_SERIES_BLOG_THREE_TITLE": "What is Bitcoin Blockchain?",
     "BTC_SERIES_BLOG_FIVE_TITLE": "What is Bitcoin Liquid Staking?",
-    "APP_BANNER_TEXT": "$PSTAKE is the first BTCfi token to go live on Binance Alpha.",
+    "APP_BANNER_TEXT": "pSTAKE has partnered with BNB Chain. $YBTC (pSTAKE's Institutional Bitcoin LST on Babylon) is now live on BNB Chain.",
     "BREAKING": "Breaking",
     "FOOTER_TITLE": "Explore the Community",
     "FOOTER_SUB_TITLE": "Learn more about pSTAKE Finance, chat with fellow pStakers, and have your say in the future of liquid staking everything.",
@@ -758,6 +767,37 @@
     "PRIVACY_10_1_LIST_6": "Objection: where we are processing your personal data based on a legitimate interest (or those of a third party) you may object to processing on this ground.",
     "PRIVACY_10_2": "If you wish to exercise any of your rights, you may contact us in accordance with paragraph 1.7. We may require that you submit certain forms or provide certain information to process your request. Where permitted by law, we may also charge you a fee to process your request.",
     "PRIVACY_10_3": "Limitations",
-    "PRIVACY_10_3_CONTINUE": "We may be permitted under applicable laws to refuse a request, for example, we may refuse (a) a request for erasure where the personal data is required for in connection with claims; or (b) an objection request and continue processing your personal data based on compelling legitimate grounds for the processing."
+    "PRIVACY_10_3_CONTINUE": "We may be permitted under applicable laws to refuse a request, for example, we may refuse (a) a request for erasure where the personal data is required for in connection with claims; or (b) an objection request and continue processing your personal data based on compelling legitimate grounds for the processing.",
+
+    "INSTITUTIONAL_HERO_TITLE": "Unlock Institutional-Grade Bitcoin Staking with pSTAKE",
+    "INSTITUTIONAL_HERO_DESCRIPTION": "Earn sustainable yields on your BTC with YBTC – a secure, 1:1 BTC-backed ERC-20 token built on Babylon and powered by LayerZero.",
+    "INSTITUTIONAL_HERO_BUTTON": "Contact Us",
+
+    "INSTITUTIONAL_FEATURES_TITLE": "Institutional Bitcoin Staking",
+    "INSTITUTIONAL_FEATURE_1_TITLE": "Minimize Risk, Maximize Returns",
+    "INSTITUTIONAL_FEATURE_1_DESCRIPTION": "BTC is staked directly on the Bitcoin Network, helping institutions reduce trust assumptions and smart contract risks.",
+    "INSTITUTIONAL_FEATURE_2_TITLE": "Retain Full Custody",
+    "INSTITUTIONAL_FEATURE_2_DESCRIPTION": "Our self-custody solution is designed for minimal friction and seamless adoption, allowing you to hold your own keys",
+    "INSTITUTIONAL_FEATURE_3_TITLE": "Interoperable Across Chains",
+    "INSTITUTIONAL_FEATURE_3_DESCRIPTION": "Easily move YBTC across EVM-compatible blockchains, Ethereum Layer 2s, and Bitcoin Layer 2s — powered by LayerZero’s cross-chain infrastructure.",
+    "INSTITUTIONAL_FEATURE_4_TITLE": "Leverage BTCFI Opportunities",
+    "INSTITUTIONAL_FEATURE_4_DESCRIPTION": "Generate additional yields through re-staking, liquidity farming, and DeFi integrations with partners like Pell and Satlayer.",
+
+    "INSTITUTIONAL_READY_TO_STAKE_TITLE": "Ready to Stake?",
+    "INSTITUTIONAL_READY_TO_STAKE_DESCRIPTION": "Secure your Bitcoin, earn yield, and tap into the multi-billion-dollar potential of institutional BTC staking custom tailored as per your needs.",
+    "INSTITUTIONAL_READY_TO_STAKE_BUTTON": "Contact Us",
+
+    "INSTITUTIONAL_INTEGRATIONS_TITLE": "Integrations with YBTC",
+    "INSTITUTIONAL_INTEGRATIONS_PELL_DESCRIPTION": "A BTC restaking network offering an omnichain decentralized validated service (DVS) network, enabling businesses to secure decentralized applications via Proof of Stake without creating their own validator networks.",
+    "INSTITUTIONAL_INTEGRATIONS_SATLAYER_DESCRIPTION": "A Bitcoin Validated Service (BVS) solution built on Babylon, leveraging Bitcoin's economic collateral to secure decentralized applications and protocols, enhancing security across the crypto ecosystem.",
+    "INSTITUTIONAL_INTEGRATIONS_BINANCE_DESCRIPTION": "A parallel blockchain to Binance Chain, enabling smart contracts and EVM compatibility for dApps and token creation.",
+    "INSTITUTIONAL_INTEGRATIONS_BASE_DESCRIPTION": "A secure, low-cost Ethereum Layer 2 network enhancing accessibility and affordability for on-chain transactions.",
+    "INSTITUTIONAL_INTEGRATIONS_CORN_DESCRIPTION": "A DeFi project focused on yield farming and liquidity provision, rewarding users for staking tokens.",
+    "INSTITUTIONAL_INTEGRATIONS_ETHEREUM_DESCRIPTION": "A decentralized, open-source blockchain featuring smart contract functionality, enabling developers to build and deploy decentralized applications (dApps) across various industries.",
+    "INSTITUTIONAL_INTEGRATIONS_SONEIUM_DESCRIPTION": "A blockchain-based platform aiming to revolutionize the entertainment industry by providing decentralized solutions for content creators and consumers, enhancing transparency and monetization.",
+
+    "INSTITUTIONAL_INTEGRATIONS_MORE_COMING_SOON": "More Coming Soon",
+
+    "HEADER_STAKING_TITLE": "Staking"
   }
 }

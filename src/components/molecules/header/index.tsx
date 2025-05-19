@@ -27,6 +27,7 @@ import MobileHeader from "./mobile-header";
 import LangDropdown from "./lang-dropdown";
 import AboutDropdown from "./about-dropdown";
 import GoveranaceDropdown from "./governanace-dropdown";
+import StakingDropdown from "./staking-dropdown";
 
 const socialList = [
   {
@@ -216,8 +217,7 @@ const Header = () => {
       subText: t("NAV_ABOUT_5_SUB_TITLE"),
       icon: "download",
       iconType: "fill",
-      optionLink:
-        "https://persistence.notion.site/pSTAKE-Brand-Press-Kit-97c357b1c5db4ca5b4e8429d25a9ab9d?pvs=4",
+      optionLink: "https://docs.pstake.finance/media-kit/brand-guidelines",
     },
   ];
 
@@ -272,7 +272,36 @@ const Header = () => {
     },
   ];
 
-  console.log(langList, "langList");
+  const stakingList = [
+    {
+      optionName: t("NAV_STAKING_1_TITLE"),
+      subText: t("NAV_STAKING_1_SUB_TITLE"),
+      icon: "btc-icon",
+      iconType: "fill",
+      optionLink: "https://app.btc.pstake.finance/",
+    },
+    {
+      optionName: t("NAV_STAKING_2_TITLE"),
+      subText: t("NAV_STAKING_2_SUB_TITLE"),
+      icon: "pstake",
+      iconType: "",
+      optionLink: "https://app.btc.pstake.finance/pstake/staking",
+    },
+    {
+      optionName: t("NAV_STAKING_4_TITLE"),
+      subText: t("NAV_STAKING_4_SUB_TITLE"),
+      icon: "cosmos",
+      iconType: "stroke",
+      optionLink: "https://app.pstake.finance/",
+    },
+    {
+      optionName: t("NAV_STAKING_3_TITLE"),
+      subText: t("NAV_STAKING_3_SUB_TITLE"),
+      icon: "guides",
+      iconType: "stroke",
+      optionLink: "/institutional",
+    },
+  ];
 
   return (
     <React.Fragment>
@@ -287,7 +316,8 @@ const Header = () => {
               router.pathname !== "/bnb" &&
               router.pathname !== "/pstake" &&
               router.pathname !== "/team" &&
-              router.pathname !== "/roadmap"
+              router.pathname !== "/roadmap" &&
+              router.pathname !== "/institutional"
                 ? "bg-white-emphasis"
                 : ""
             } ${router.pathname.split("/")[1]}
@@ -299,7 +329,8 @@ const Header = () => {
             router.pathname.includes("validators") ||
             router.pathname === "/pstake" ||
             router.pathname === "/team" ||
-            router.pathname === "/roadmap" ? (
+            router.pathname === "/roadmap" ||
+            router.pathname === "/institutional" ? (
               <LinkWithLocale
                 aria-label="logo"
                 className="bg-logoLight
@@ -353,6 +384,7 @@ const Header = () => {
                   governanceList={governanceList}
                   communityList={socialList}
                   bridgeList={bridgeList}
+                  stakingList={stakingList}
                   closeMenu={() => {
                     setIsOpen(false);
                   }}
@@ -390,25 +422,14 @@ const Header = () => {
                   <li className="nav-item nav__menu-item lg:hidden">
                     <BridgeDropdown list={bridgeList} isTablet={isLandScape} />
                   </li>
-
+                  <li className="nav-item nav__menu-item lg:hidden">
+                    <StakingDropdown
+                      stakingList={stakingList}
+                      isTablet={isLandScape}
+                    />
+                  </li>
                   <li className="nav-item md:w-full ml-2.5 md:ml-0 md:mb-2">
-                    {router.pathname === "/" ||
-                    router.pathname === "/pstake" ||
-                    router.pathname === "/team" ||
-                    router.pathname === "/roadmap" ? (
-                      <ButtonLink
-                        className={`!rounded-[8px] !bg-[#F6931A1A] hover:!bg-[#F6931A4D] border !border-[#EE972C] !text-[#FEFEFE] dropDownButton md:!w-[170px] -md:!w-[220px] md:py-2 !py-2 md:text-sm md:!text-[12px] !text-[18px] !font-normal`}
-                        variant={"outline"}
-                        href={"https://app.btc.pstake.finance/pstake/staking"}
-                        scale="lg"
-                        target={"_blank"}
-                        isDisabled={false}
-                      >
-                        <span className="nav-link pophover tooltip-multiline app-btn">
-                          {t("PSTAKE_STAKING")}
-                        </span>
-                      </ButtonLink>
-                    ) : (
+                    {router.pathname === "/bnb" ? (
                       <ButtonLink
                         className={`dropDownButton w-full md:py-2 !py-2.5 md:text-sm`}
                         variant={"custom"}
@@ -430,7 +451,7 @@ const Header = () => {
                           {t("LIQUID_STAKE_NOW")}
                         </span>
                       </ButtonLink>
-                    )}
+                    ) : null}
                   </li>
                   <li className="nav-item nav__menu-item lg:hidden">
                     <LangDropdown
