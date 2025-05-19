@@ -2,33 +2,36 @@ import React from "react";
 import { useTranslation } from "next-export-i18n";
 import Marquee from "react-fast-marquee";
 
-const getLogoUrl = (logoName: string) => {
-  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/investors/${logoName}.svg`;
-};
-
 const Investors = () => {
   const investorList = [
     {
       image: "spartan",
+      url:"/images/investors/spartan.svg",
     },
     {
       image: "coinbase_ventures",
+      url: "/images/investors/coinbase_ventures.svg",
     },
     {
       image: "bnb_labs",
+      url: "/images/investors/bnb_labs.svg",
     },
     {
       image: "defi_capital",
+      url: "/images/investors/defi_capital.svg",
     },
 
     {
       image: "mraken",
+      url: "/images/investors/mraken.svg",
     },
     {
       image: "galaxy",
+      url: "/images/investors/galaxy.svg",
     },
     {
       image: "lattice",
+      url: "/images/investors/lattice.svg",
     },
   ];
 
@@ -45,7 +48,7 @@ const Investors = () => {
               <div key={index}>
                 <img
                   key={index}
-                  src={getLogoUrl(item.image)}
+                  src={item.url}
                   title={item.image}
                   className="w-[207px] h-[70px] sm:w-[160px] md:w-[180px] mr-[25px]"
                   alt={item.image}

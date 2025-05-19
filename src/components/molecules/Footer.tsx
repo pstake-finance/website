@@ -18,10 +18,6 @@ import {
 import FooterBottom from "./FooterBottom";
 import { useTranslation } from "next-export-i18n";
 
-const getLogoUrl = (logoName: string) => {
-  return `https://raw.githubusercontent.com/persistenceOne/frontend-images/main/pstake-website/social_icons/${logoName}.svg`;
-};
-
 const Footer = () => {
   const router = useRouter();
   const { t } = useTranslation();
@@ -136,7 +132,7 @@ const Footer = () => {
                           rel="noopener noreferrer"
                         >
                           <img
-                            src={getLogoUrl(item.image)}
+                            src={'/images/social_icons/' + item.image + ".svg"}
                             title={item.image}
                             alt={item.image}
                             className="w-[46px] h-[46px] mx-2  md:mb-3 "
