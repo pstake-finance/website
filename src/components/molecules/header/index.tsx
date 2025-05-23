@@ -306,7 +306,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <div id="is-sticky" className="top-bar w-full fixed z-[100]">
-        <GeofenceNotice />
+        {/*<GeofenceNotice />*/}
         <nav
           className={`[.topBar_&]:bg-black-900 py-6 px-0 flex relative 
             items-center navbar navbar-expand-lg navbar-custom flex-column 
